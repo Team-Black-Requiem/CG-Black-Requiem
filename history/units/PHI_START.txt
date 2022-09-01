@@ -1,0 +1,238 @@
+﻿division_template = {
+	name = "Philippine Light Infantry"	
+
+	division_names_group = "Chinese Garrison"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+	division_template = {
+	name = "Philippine Artillery Support"	
+
+	division_names_group = "Chinese Garrison"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		artillery_brigade = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+
+	}
+}
+
+
+units = {
+
+
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Artillery Support"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Artillery Support"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10265
+		division_template = "Philippine Artillery Support"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12213
+		division_template = "Philippine Artillery Support"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	    division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1415
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4241
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1415
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1415
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4241
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4241
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4241
+		division_template = "Philippine Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+    	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+	}
+     
+	add_equipment_production = {
+		equipment = {
+			type = eu_war_artillery
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+	}
+	
+}

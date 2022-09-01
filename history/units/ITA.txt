@@ -1,0 +1,259 @@
+﻿division_template = {
+	name = "Italian Light Infantry"	
+
+	division_names_group = "ITA_INF_02"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+    }
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+	
+}
+
+
+division_template = {
+	name = "Italian Garrison"	
+
+	division_names_group = "ITA_COL_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}	
+
+}
+
+
+division_template = {
+	name = "Italian Infantry Division" 		
+
+	division_names_group = "ITA_INF_01"
+
+    regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		artillery_brigade = { x = 4 y = 0 }
+		artillery_brigade = { x = 4 y = 1 }
+		artillery_brigade = { x = 4 y = 2 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }	
+	}
+
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 819
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10074
+		division_template = "Italian Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10074
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6606
+		division_template = "Italian Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 925
+		division_template = "Italian Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11837
+		division_template = "Italian Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4159
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11584
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11598
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6626
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3780
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9924
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3958
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11773
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6891
+		division_template = "Italian Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+    	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+	}
+     
+	add_equipment_production = {
+		equipment = {
+			type = eu_war_artillery
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 50
+    }
+}

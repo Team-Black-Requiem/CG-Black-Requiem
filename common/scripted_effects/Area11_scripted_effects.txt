@@ -1,0 +1,547 @@
+A11_resistance_setup = {
+	
+	### 7 military regions ###----> 0-9%: very low/ 10-30% low resistance/ 31-65% medium reistance/ 66-100% high resistance
+	set_variable = { Hokkaido_Resistance = 0.70 }
+	set_variable = { Kansai_Resistance = 0.45 }
+	set_variable = { Kanto_Resistance = 0.17 }
+	set_variable = { Chuguko_Resistance = 0.24 }
+	set_variable = { kyushu_Resistance = 0.84 }
+	set_variable = { Chubu_Resistance = 0.69 }
+	set_variable = { tohoku_Resistance = 0.52 }
+
+
+	set_variable = { tot_cleared_regions = 0 }
+	set_variable = { A11_doing_Actions = 0 }
+
+	#Kirihara Thing
+	set_variable = { kirihara_buddy = 0 }
+
+	
+}
+
+A11_decadence_setup = {
+	set_variable = { tokyo_bombings = 0 }
+	
+    set_variable = { Army_Decadence = 0.50 }
+	set_variable = {  Gov_Decadence = 0.50 }
+	set_variable = {  Civil_Decadence = 0.50 }	
+
+	set_variable = { A11_Chosen_Field = 1 }	
+	
+	set_variable = { A11_doing_Actions_2 = 0 }
+}
+
+A11_geass_research_setup = {
+	
+    set_variable = { geass_understand = 0.0 }
+	set_variable = { searching_material = 0.0 }
+	set_variable = { infrastructure_building = 0.0 }	
+	set_variable = { controlling_geass = 0.0 }		
+	set_variable = { geass_weapons = 0.0 }
+}
+
+A11_Army_Decadence_Medium = {
+	
+	custom_effect_tooltip = A11_army_decadence_increase_medium
+	if = {
+		limit = { check_variable = { Army_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = 0.10 }
+		}
+	}
+}
+
+A11_Army_Decadence_Low = {
+	
+	custom_effect_tooltip = A11_army_decadence_increase_low
+	if = {
+		limit = { check_variable = { Army_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = 0.05 }
+		}
+	}
+}
+
+A11_Army_Decadence_High = {
+	
+	custom_effect_tooltip = A11_army_decadence_increase_high
+	if = {
+		limit = { check_variable = { Army_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = 0.15 }
+		}
+	}
+}
+A11_Army_Improve_Medium = {
+	
+	custom_effect_tooltip = A11_army_decadence_decrease_medium
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = -0.10 }
+		}
+}
+
+A11_Army_Improve_Low = {
+	
+	custom_effect_tooltip = A11_army_decadence_decrease_low
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = -0.05 }
+		}
+	
+}
+
+A11_Army_Improve_High = {
+	
+	custom_effect_tooltip = A11_army_decadence_decrease_high
+
+		hidden_effect = {
+			add_to_variable = { Army_Decadence = -0.15 }
+		}
+}
+A11_Gov_Decadence_Medium = {
+	
+	custom_effect_tooltip = A11_gov_decadence_increase_medium	
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = 0.10 }
+		}
+}
+A11_Gov_Decadence_Low = {
+	
+	custom_effect_tooltip = A11_gov_decadence_increase_low
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = 0.05 }
+		}
+}
+A11_Gov_Decadence_High = {
+	
+	custom_effect_tooltip = A11_gov_decadence_increase_high	
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = 0.15 }
+		}
+}
+
+A11_Gov_Improve_Medium = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_medium
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = -0.10 }
+		}
+}
+
+A11_Gov_Improve_Low = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_low
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = -0.05 }
+		}
+	
+}
+
+A11_Gov_Improve_High = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_high
+
+		hidden_effect = {
+			add_to_variable = { Gov_Decadence = -0.15 }
+		}
+}
+
+
+A11_Civil_Decadence_Medium = {
+	
+	custom_effect_tooltip = A11_civil_decadence_increase_medium		
+	if = {
+		limit = { check_variable = { Civil_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = 0.10 }
+		}
+	}
+}
+
+A11_Civil_Decadence_Low = {
+	
+	custom_effect_tooltip = A11_civil_decadence_increase_low	
+	if = {
+		limit = { check_variable = { Civil_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = 0.05 }
+		}
+	}
+}
+
+
+A11_Civil_Decadence_High = {
+	
+	custom_effect_tooltip = A11_civil_decadence_increase_high	
+	if = {
+		limit = { check_variable = { Civil_Decadence < 1.0 } }
+
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = 0.15 }
+		}
+	}
+}
+
+A11_Civil_Improve_Medium = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_medium
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = -0.10 }
+		}
+}
+
+A11_Civil_Improve_Low = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_low
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = -0.05 }
+		}
+	
+}
+
+A11_Civil_Improve_High = {
+	
+	custom_effect_tooltip = A11_gov_decadence_decrease_high
+
+		hidden_effect = {
+			add_to_variable = { Civil_Decadence = -0.15 }
+		}
+}
+
+
+
+
+A11_modifiers_setup = {
+	
+
+	set_variable = { economic_slump_1 = -0.40 }
+	set_variable = { economic_slump_2 = 0.30 }
+	set_variable = { economic_slump_3 = -0.20 }
+	set_variable = { economic_slump_4 = -0.20 }
+	set_variable = { economic_slump_5 = -0.15 }
+
+	set_variable = { post_war_chaos_1 = -0.005 }
+	set_variable = { post_war_chaos_2 = -0.50 }
+	set_variable = { post_war_chaos_3 = 0.30 }
+	set_variable = { post_war_chaos_4 = -1000 }
+
+	
+	set_variable = { demographic_chaos_1 = -0.50 }
+	set_variable = { demographic_chaos_2 = -0.20 }
+	set_variable = { demographic_chaos_3 = -0.35 }
+	set_variable = { demographic_chaos_4 = -0.35 }
+
+	
+}
+
+A11_demographic_chaos_worse = {
+	
+
+	add_to_variable = { demographic_chaos_1 = -0.03 }
+	add_to_variable = { demographic_chaos_2 = -0.03 }
+	add_to_variable = { demographic_chaos_3 = -0.03 }
+	add_to_variable = { demographic_chaos_4 = -0.03 }
+}
+
+
+A11_demographic_chaos_better = {
+	
+
+	add_to_variable = { demographic_chaos_1 = 0.04 }
+	add_to_variable = { demographic_chaos_2 = 0.04 }
+	add_to_variable = { demographic_chaos_3 = 0.04 }
+	add_to_variable = { demographic_chaos_4 = 0.04 }
+}
+
+A11_economic_slump_worse = {
+	
+
+	add_to_variable = { economic_slump_1 = -0.03 }
+	add_to_variable = { economic_slump_2 = 0.02 }
+	add_to_variable = { economic_slump_3 = -0.03 }
+	add_to_variable = { economic_slump_4 = -0.03 }
+	add_to_variable = { economic_slump_5 = -0.02 }
+
+	
+}
+
+A11_economic_slump_better = {
+	
+
+	add_to_variable = { economic_slump_1 = 0.04 }
+	add_to_variable = { economic_slump_2 = -0.03 }
+	add_to_variable = { economic_slump_3 = 0.04 }
+	add_to_variable = { economic_slump_4 = 0.04 }
+	add_to_variable = { economic_slump_5 = 0.03 }
+
+	
+}
+
+A11_post_war_chaos_worse = {
+	
+
+	add_to_variable = { post_war_chaos_1 = -0.002 }
+	add_to_variable = { post_war_chaos_2 = -0.02 }
+	add_to_variable = { post_war_chaos_3 = 0.03 }
+	add_to_variable = { post_war_chaos_4 = -500 }
+
+	
+}
+
+A11_post_war_chaos_better = {
+	
+
+	add_to_variable = { post_war_chaos_1 = 0.002 }
+	add_to_variable = { post_war_chaos_2 = 0.002 }
+	add_to_variable = { post_war_chaos_3 = -0.05 }
+	add_to_variable = { post_war_chaos_4 = 250 }
+
+	
+}
+
+
+
+
+
+A11_reinforce_control_hokkaido = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { Hokkaido_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { Hokkaido_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { Hokkaido_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+
+A11_reinforce_control_tohoku = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { tohoku_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { tohoku_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { tohoku_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+A11_reinforce_control_chubu = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { Chubu_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { Chubu_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { Chubu_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+A11_reinforce_control_kansai = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { Kansai_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { Kansai_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { Kansai_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+A11_reinforce_control_kanto = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { Kanto_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { Kanto_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { Kanto_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+A11_reinforce_control_kyushu = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { kyushu_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { kyushu_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { kyushu_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+
+A11_reinforce_control_chuguko = {
+
+	effect_tooltip = {
+			random_list = {
+				30 = { custom_effect_tooltip = A11_increase_support_small  }
+				40 = { custom_effect_tooltip = A11_increase_support_medium  }
+				30 = { custom_effect_tooltip = A11_increase_support_large   }
+			}
+		
+	}
+	hidden_effect = { 
+			random_list = {
+
+				30 = {	
+					#custom_effect_tooltip = A11_increase_support_small 
+	             	add_to_variable = { Chuguko_Resistance = -0.08 }
+				  
+				}
+				40 = { 
+					#custom_effect_tooltip = A11_increase_support_medium 
+					add_to_variable = { Chuguko_Resistance = -0.13 }
+				  
+				}
+			    30 = { 
+					#custom_effect_tooltip = A11_increase_support_large 
+					add_to_variable = { Chuguko_Resistance = -0.18 }
+			    }
+			}
+
+		}
+	
+}
+
+
+
+
+
+

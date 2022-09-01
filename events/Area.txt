@@ -1,0 +1,131 @@
+﻿
+add_namespace = area
+
+
+country_event = {  
+	id = area.1
+	title = area.1.t
+	desc = area.1.d
+	picture = GFX_Areas_term
+	fire_only_once = no
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area.1.a
+
+				add_popularity = {
+    ideology = authoritarian_democracy
+    popularity = 0.05
+}
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+			add_ideas = {
+				BRT_VV_idea
+				BRT_odysseus_idea
+				BRT_generic_noble_1_idea
+				BRT_generic_general_1_idea
+				BRT_generic_minister_1_idea
+			}	
+         set_variable = {
+	     var = area
+	     value = 1
+         }
+        }
+    }
+
+
+	option = {
+		name = area.1.b
+
+				add_popularity = {
+    ideology = autocracy
+    popularity = 0.05
+}
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+         set_variable = {
+	     var = area
+	     value = 2
+         }
+        }
+    }
+
+
+	option = {
+		name = area.1.c
+
+
+													add_popularity = {
+    ideology = ultra_nationalism
+    popularity = 0.03
+}
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+         country_event = { id = area.2 days = 10 }
+        }
+    }	
+}
+
+
+country_event = {  
+	id = area.2
+	title = area.2.t
+	desc = area.2.d
+	picture = GFX_Areas_purists
+	fire_only_once = no
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area.2.a
+
+set_politics = {
+	ruling_party = ultra_nationalism
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+
+													add_popularity = {
+    ideology = ultra_nationalism
+    popularity = 0.30
+}
+		
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+         set_variable = {
+	     var = area
+	     value = 3
+         }
+        }
+    }
+
+
+
+}
+
+	
+
+
+
+
+ 
+
+
+

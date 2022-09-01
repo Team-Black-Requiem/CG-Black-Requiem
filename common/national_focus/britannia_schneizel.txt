@@ -1,0 +1,3688 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = britannia_schneizel
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = BRT
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = BRT_white_prince_foreign_policy
+		icon = GFX_BRT_white_prince_foreign_policy
+		x = 35
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			country_exists = BRT
+			has_completed_focus =  BRT_national_security_prog
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.37
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_great_homecoming
+		icon = GFX_BRT_great_homecoming
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_white_prince_foreign_policy }
+		relative_position_id = BRT_white_prince_foreign_policy
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = BRT.38
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_phase_one
+		icon = GFX_BRT_phase_one
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_great_homecoming }
+		relative_position_id = BRT_great_homecoming
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = The_Great_Homecoming_Phase_1
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_influence_EU_colonies
+		icon = GFX_BRT_influence_EU_colonies
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_phase_one }
+		relative_position_id = BRT_phase_one
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.43
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_fund_russian_loyalists
+		icon = GFX_BRT_fund_russian_loyalists
+		x = 5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_phase_one }
+		relative_position_id = BRT_phase_one
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.39
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_send_monica
+		icon = GFX_BRT_send_monica
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_fund_russian_loyalists }
+		relative_position_id = BRT_fund_russian_loyalists
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.40
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_stir_up_separatists
+		icon = GFX_BRT_stir_up_separatists
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_send_monica }
+		relative_position_id = BRT_send_monica
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.41
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_operation_white_bear
+		icon = GFX_BRT_operation_white_bear
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_stir_up_separatists }
+		relative_position_id = BRT_stir_up_separatists
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.42
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_phase_two
+		icon = GFX_BRT_phase_two
+		x = -5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_operation_white_bear }
+		prerequisite = { focus = BRT_proposal_china }
+		prerequisite = { focus = BRT_joeannesburg_meeting }
+		prerequisite = { focus = BRT_horse_troy }
+
+		relative_position_id = BRT_operation_white_bear
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_reveal_our_horses
+		icon = GFX_BRT_reveal_our_horses
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_phase_two }
+	relative_position_id = BRT_phase_two
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_african_blitz
+		icon = GFX_BRT_african_blitz
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_reveal_our_horses }
+	relative_position_id = BRT_reveal_our_horses
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_send_cornelia
+		icon = GFX_BRT_send_cornelia
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_african_blitz }
+	relative_position_id = BRT_african_blitz
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_disturb_eu_supplies
+		icon = GFX_BRT_disturb_eu_supplies
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_send_cornelia }
+	relative_position_id = BRT_send_cornelia
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_rush_colonies
+		icon = GFX_BRT_rush_colonies
+
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_disturb_eu_supplies }
+	relative_position_id = BRT_disturb_eu_supplies
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_supply_euro_britannia
+		icon = GFX_BRT_supply_euro_britannia
+		x = -3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_phase_two }
+	relative_position_id = BRT_phase_two
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	
+	focus = {
+		id = BRT_undefined_soldiers
+		icon = GFX_BRT_undefined_soldiers
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_supply_euro_britannia }
+	relative_position_id = BRT_supply_euro_britannia
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_secure_supply_lines
+		icon = GFX_BRT_secure_supply_lines
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_undefined_soldiers }
+	relative_position_id = BRT_undefined_soldiers
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_winter_kn
+		icon = GFX_BRT_winter_kn
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_secure_supply_lines }
+	relative_position_id = BRT_secure_supply_lines
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_goal_urals
+		icon = GFX_BRT_goal_urals
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_winter_kn }
+	relative_position_id = BRT_winter_kn
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_green_light_china
+		icon = GFX_BRT_green_light_china
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_phase_two }
+	relative_position_id = BRT_phase_two
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_finalise_spartition_plans
+		icon = GFX_BRT_finalise_spartition_plans
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+	prerequisite = { focus = BRT_green_light_china }
+	relative_position_id = BRT_green_light_china
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_exploit_EU_divisions
+		icon = GFX_BRT_exploit_EU_divisions
+		x = -5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_phase_one }
+		relative_position_id = BRT_phase_one
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_phase_three
+		icon = GFX_BRT_phase_three
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_goal_urals }
+		prerequisite = { focus = BRT_finalise_spartition_plans }
+		prerequisite = { focus = BRT_rush_colonies }
+
+		relative_position_id = BRT_finalise_spartition_plans
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_buy_iceland
+		icon = GFX_BRT_buy_iceland
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_exploit_EU_divisions }
+		relative_position_id = BRT_exploit_EU_divisions
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_military_buildup_iceland
+		icon = GFX_BRT_military_buildup_iceland
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_buy_iceland }
+		relative_position_id = BRT_buy_iceland
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_proposal_china
+		icon = GFX_BRT_proposal_china
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_military_buildup_iceland }
+		relative_position_id = BRT_military_buildup_iceland
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+
+	focus = {
+		id = BRT_operation_dark_anvil
+		icon = GFX_BRT_operation_dark_anvil
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_influence_EU_colonies }
+		relative_position_id = BRT_influence_EU_colonies
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LBA = {
+				add_popularity = {
+					ideology = autocracy
+					popularity = 0.20
+				}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_infiltrate_bureucracy
+		icon = GFX_BRT_infiltrate_bureucracy
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_operation_dark_anvil }
+		relative_position_id = BRT_operation_dark_anvil
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_influence_pied_noirs
+		icon = GFX_BRT_influence_pied_noirs
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_operation_dark_anvil }
+		relative_position_id = BRT_operation_dark_anvil
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_pull_in_companies
+		icon = GFX_BRT_pull_in_companies
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_influence_pied_noirs }
+		prerequisite = { focus = BRT_infiltrate_bureucracy }
+
+		relative_position_id = BRT_infiltrate_bureucracy
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_horse_troy
+		icon = GFX_BRT_horse_troy
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_pull_in_companies }
+
+		relative_position_id = BRT_pull_in_companies
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LBA = {
+				give_military_access = BRT
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_operation_orange
+		icon = GFX_BRT_operation_orange
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_influence_EU_colonies }
+		relative_position_id = BRT_influence_EU_colonies
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			SAF = {
+				add_popularity = {
+					ideology = autocracy
+					popularity = 0.20
+				}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_reach_out_boers
+		icon = GFX_BRT_reach_out_boers
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_operation_orange }
+		relative_position_id = BRT_operation_orange
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 5000
+				target = SAF
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_promises_greatness
+		icon = GFX_BRT_promises_greatness
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_operation_orange }
+		relative_position_id = BRT_operation_orange
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			SAF = {
+				add_war_support = 0.2
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_declare_apartheid_compatible
+		icon = GFX_BRT_declare_apartheid_compatible
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_reach_out_boers }
+		prerequisite = { focus = BRT_promises_greatness }
+
+		relative_position_id = BRT_reach_out_boers
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SAF
+				modifier = brittanian_support
+			}
+			SAF = {
+				add_opinion_modifier = {
+					target = BRT
+					modifier = brittanian_support
+				}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_joeannesburg_meeting
+		icon = GFX_BRT_joeannesburg_meeting
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_declare_apartheid_compatible }
+		relative_position_id = BRT_declare_apartheid_compatible
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			SAF = {
+				give_military_access = BRT
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+
+	focus = {
+		id = BRT_white_prince_wins
+		icon = GFX_BRT_white_prince_wins
+		x = 14
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.30
+		  hidden_effect = {
+		}
+		}
+	}
+	focus = {
+		id = BRT_support_knights_rounds
+		icon = GFX_BRT_support_knights_rounds
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_white_prince_wins }
+		relative_position_id = BRT_white_prince_wins
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.31
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_talk_charles
+		icon = GFX_BRT_talk_charles
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_support_knights_rounds }
+		relative_position_id = BRT_support_knights_rounds
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.32
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_deal_guinevere
+		icon = GFX_BRT_deal_guinevere
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_white_prince_wins }
+		relative_position_id = BRT_white_prince_wins
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.33
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_endorsment_odysseus
+		icon = GFX_BRT_endorsment_odysseus
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_deal_guinevere }
+		relative_position_id = BRT_deal_guinevere
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.34
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_appeal_young_nobles
+		icon = GFX_BRT_appeal_young_nobles
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_white_prince_wins }
+		relative_position_id = BRT_white_prince_wins
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.1
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_image_pop
+		icon = GFX_BRT_image_pop
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_appeal_young_nobles }
+		relative_position_id = BRT_appeal_young_nobles
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_lobby_senate
+		icon = GFX_BRT_lobby_senate
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_endorsment_odysseus }
+		prerequisite = { focus = BRT_talk_charles }
+		prerequisite = { focus = BRT_image_pop }
+		relative_position_id = BRT_endorsment_odysseus
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_rule_supreme
+		icon = GFX_BRT_rule_supreme
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_lobby_senate }
+		relative_position_id = BRT_lobby_senate
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.35
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_national_security_prog
+		icon = GFX_BRT_national_security_prog
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_rule_supreme }
+		relative_position_id = BRT_rule_supreme
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.36
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_take_down_purists
+		icon = GFX_BRT_take_down_purists
+		x = 7
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_national_security_prog }
+		relative_position_id = BRT_national_security_prog
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_2
+				remove_idea = brown_purists_part_1
+			}
+			}
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_2
+				remove_idea = red_purists_part_1
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_red_purists
+		icon = GFX_BRT_red_purists
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_take_down_purists }
+		relative_position_id = BRT_take_down_purists
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_3
+				remove_idea = red_purists_part_2
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_police_universities
+		icon = GFX_BRT_police_universities
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_red_purists }
+		relative_position_id = BRT_red_purists
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_4
+				remove_idea = red_purists_part_3
+			}
+			}			
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_counter_propaganda
+		icon = GFX_BRT_counter_propaganda
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_police_universities }
+		relative_position_id = BRT_police_universities
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_5
+				remove_idea = red_purists_part_4
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_biased_academia
+		icon = GFX_BRT_biased_academia
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_counter_propaganda }
+		relative_position_id = BRT_counter_propaganda
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_6
+				remove_idea = red_purists_part_5
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_clean_intelligentsia
+		icon = GFX_BRT_clean_intelligentsia
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_biased_academia }
+		relative_position_id = BRT_biased_academia
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = red_purists_part_7
+				remove_idea = red_purists_part_6
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_brown_purists
+		icon = GFX_BRT_brown_purists
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_take_down_purists }
+		relative_position_id = BRT_take_down_purists
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_3
+				remove_idea = brown_purists_part_2
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_investigate_prev_minister
+		icon = GFX_BRT_investigate_prev_minister
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_brown_purists }
+		relative_position_id = BRT_brown_purists
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_false_allegations
+		icon = GFX_BRT_false_allegations
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_investigate_prev_minister }
+		relative_position_id = BRT_investigate_prev_minister
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_legal_purge
+		icon = GFX_BRT_legal_purge
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_false_allegations }
+		relative_position_id = BRT_false_allegations
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_until_the_end
+		icon = GFX_BRT_until_the_end
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_legal_purge }
+		relative_position_id = BRT_legal_purge
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_pol_commissars
+		icon = GFX_BRT_pol_commissars
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_brown_purists }
+		relative_position_id = BRT_brown_purists
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_4
+				remove_idea = brown_purists_part_3
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_daily_checks
+		icon = GFX_BRT_daily_checks
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_pol_commissars }
+		relative_position_id = BRT_pol_commissars
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_5
+				remove_idea = brown_purists_part_4
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_disband_worst_units
+		icon = GFX_BRT_disband_worst_units
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_daily_checks }
+		relative_position_id = BRT_daily_checks
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_6
+				remove_idea = brown_purists_part_5
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_demote_radical_off
+		icon = GFX_BRT_demote_radical_off
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_disband_worst_units }
+		relative_position_id = BRT_disband_worst_units
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_7
+				remove_idea = brown_purists_part_6
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_revise_recruit_standards
+		icon = GFX_BRT_revise_recruit_standards
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_demote_radical_off }
+		prerequisite = { focus = BRT_until_the_end }
+
+		relative_position_id = BRT_demote_radical_off
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = brown_purists_part_8
+				remove_idea = brown_purists_part_7
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+	
+	focus = {
+		id = BRT_wipe_them_out
+		icon = GFX_BRT_wipe_them_out
+		x = -2
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_revise_recruit_standards }
+		prerequisite = { focus = BRT_clean_intelligentsia }
+
+
+		relative_position_id = BRT_revise_recruit_standards
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				add_ideas = clean_administration
+				remove_ideas = brown_purists_part_8
+				remove_ideas = red_purists_part_7
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_take_down_cult
+		icon = GFX_BRT_take_down_cult
+		x = -7
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_national_security_prog }
+		relative_position_id = BRT_national_security_prog
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_counter_influence
+		icon = GFX_BRT_counter_influence
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_take_down_cult }
+		relative_position_id = BRT_take_down_cult
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_reach_out_jupiter
+		icon = GFX_BRT_reach_out_jupiter
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_counter_influence }
+		relative_position_id = BRT_counter_influence
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_restrict_priests_recruit
+		icon = GFX_BRT_restrict_priests_recruit
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_reach_out_jupiter }
+		relative_position_id = BRT_reach_out_jupiter
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_isolate_pontiff
+		icon = GFX_BRT_isolate_pontiff
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_restrict_priests_recruit }
+		relative_position_id = BRT_restrict_priests_recruit
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_mantain_pendragon_priests
+		icon = GFX_BRT_mantain_pendragon_priests
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_isolate_pontiff }
+		relative_position_id = BRT_isolate_pontiff
+
+		mutually_exclusive = { focus = BRT_send_abroad_high_clergy }
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_mantain_thought_elevetors
+		icon = GFX_BRT_mantain_thought_elevetors
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_mantain_pendragon_priests }
+		relative_position_id = BRT_mantain_pendragon_priests
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_partial_clean_up
+		icon = GFX_BRT_partial_clean_up
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_mantain_thought_elevetors }
+		relative_position_id = BRT_mantain_thought_elevetors
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_esoterism_no_more
+		icon = GFX_BRT_esoterism_no_more
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { 
+			focus = BRT_leave_them	    }
+
+		prerequisite = { 
+			focus = BRT_partial_clean_up
+			focus = BRT_total_clean_up
+	    }
+		relative_position_id = BRT_partial_clean_up
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_send_abroad_high_clergy
+		icon = GFX_BRT_send_abroad_high_clergy
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_isolate_pontiff }
+		relative_position_id = BRT_isolate_pontiff
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_formally_ban_cult
+		icon = GFX_BRT_formally_ban_cult
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_send_abroad_high_clergy }
+		relative_position_id = BRT_send_abroad_high_clergy
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_total_clean_up
+		icon = GFX_BRT_total_clean_up
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_formally_ban_cult }
+		relative_position_id = BRT_formally_ban_cult
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_special_territory
+		icon = GFX_BRT_special_territory
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_take_down_cult }
+		relative_position_id = BRT_take_down_cult
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_deport_remnants
+		icon = GFX_BRT_deport_remnants
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_special_territory }
+		relative_position_id = BRT_special_territory
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_token_defense
+		icon = GFX_BRT_token_defense
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_deport_remnants }
+		relative_position_id = BRT_deport_remnants
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_small_industry
+		icon = GFX_BRT_small_industry
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_improve_ports }
+		prerequisite = { focus = BRT_token_defense }
+
+		relative_position_id = BRT_token_defense
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_research_facilities
+		icon = GFX_BRT_research_facilities
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_small_industry }
+		relative_position_id = BRT_small_industry
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_leave_them
+		icon = GFX_BRT_leave_them
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_research_facilities }
+		relative_position_id = BRT_research_facilities
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_send_supplies
+		icon = GFX_BRT_special_territory
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_special_territory }
+		relative_position_id = BRT_special_territory
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_improve_ports
+		icon = GFX_BRT_improve_ports
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_send_supplies }
+		relative_position_id = BRT_send_supplies
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_secret_police
+		icon = GFX_BRT_secret_police
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_national_security_prog }
+		relative_position_id = BRT_national_security_prog
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			BRT = {
+				add_political_power = 100
+				add_ideas = osi_phase_1
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_dump_rsi
+		icon = GFX_BRT_dump_osi
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_secret_police }
+		relative_position_id = BRT_secret_police
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = rsi_phase_2
+				remove_idea = rsi_phase_1
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_forced_retirements
+		icon = GFX_BRT_forced_retirements
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_dump_rsi }
+		relative_position_id = BRT_dump_rsi
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			BRT = {
+				swap_ideas = {
+				add_idea = rsi_phase_3
+				remove_idea = rsi_phase_2
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_integrate_remnants
+		icon = GFX_BRT_integrate_remnants
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_forced_retirements }
+		relative_position_id = BRT_forced_retirements
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				remove_ideas = rsi_phase_3
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_create_OSI
+		icon = GFX_BRT_create_RSI
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_integrate_remnants }
+		prerequisite = { focus = BRT_increase_authority }
+		relative_position_id = BRT_integrate_remnants
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = osi_phase_5
+				remove_idea = osi_phase_4
+			}
+			}
+			BRT = {
+			create_intelligence_agency = {
+				name = "OSI"
+				icon = GFX_intelligence_agency_logo_pol
+			}
+		    }	
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_control_rogue_areas
+		icon = GFX_BRT_control_rogue_areas
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_create_OSI }
+		relative_position_id = BRT_create_OSI
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				add_political_power = 100
+				swap_ideas = {
+				add_idea = osi_phase_6
+				remove_idea = osi_phase_5
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_clovis_work
+		icon = GFX_BRT_clovis_work
+		x = -3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_control_rogue_areas }
+		relative_position_id = BRT_control_rogue_areas
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11 = {
+				A11_Gov_improve_Low = yes
+				A11_army_improve_Low = yes
+				A11_civil_improve_Low = yes
+            }
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_northen_tribes
+		icon = GFX_BRT_northen_tribes
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_control_rogue_areas }
+		relative_position_id = BRT_control_rogue_areas
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			AR2 = {
+                remove_ideas = wild_tribes
+            } 
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_order_stability
+		icon = GFX_BRT_order_stability
+		x = 3
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_clovis_work }
+		prerequisite = { focus = BRT_luciano_playground }
+		prerequisite = { focus = BRT_wild_admirals }
+		prerequisite = { focus = BRT_northen_tribes }
+		relative_position_id = BRT_clovis_work
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				add_political_power = 100
+				swap_ideas = {
+				add_idea = osi_phase_7
+				remove_idea = osi_phase_6
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_luciano_playground
+		icon = GFX_BRT_luciano_playground
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_control_rogue_areas }
+		relative_position_id = BRT_control_rogue_areas
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_wild_admirals
+		icon = GFX_BRT_wild_admirals
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_control_rogue_areas }
+		relative_position_id = BRT_control_rogue_areas
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A10 = {
+                remove_ideas = admirals_fiefdom
+            } 
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_increase_quality
+		icon = GFX_BRT_increase_quality
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_secret_police }
+		relative_position_id = BRT_secret_police
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			BRT = {
+				swap_ideas = {
+				add_idea = osi_phase_2
+				remove_idea = osi_phase_1
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_swear_to_schneizel
+		icon = GFX_BRT_swear_to_schneizel
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_increase_quality }
+		relative_position_id = BRT_increase_quality
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			BRT = {
+				swap_ideas = {
+				add_idea = osi_phase_3
+				remove_idea = osi_phase_2
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_increase_authority
+		icon = GFX_BRT_increase_authority
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_swear_to_schneizel  }
+		relative_position_id = BRT_swear_to_schneizel
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			BRT = {
+				swap_ideas = {
+				add_idea = osi_phase_4
+				remove_idea = osi_phase_3
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+
+
+}
+
+

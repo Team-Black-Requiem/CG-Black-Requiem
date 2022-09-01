@@ -1,0 +1,400 @@
+characters={
+
+	JAP_Anarchy={
+		name = "Collapsed Authority"
+		portraits={
+			civilian={
+				large=GFX_portrait_Portrait_Anarchy
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_COLLAPSE_DESC"
+			ideology=social_conservatism
+			traits={ chaos }
+			expire = "2020.1.1"
+			id=14
+		}
+	}
+
+
+	JAP_Kururugi_1={
+		name = "Genbu Kururugi"
+		portraits={
+			civilian={
+				large=GFX_portrait_Portrait_Kururugi
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_KURURUGI_DESC"
+			ideology=social_conservatism
+			traits={ }
+			expire = "2020.1.1"
+			id=12
+		}
+	}
+
+	JAP_Kururugi_2={
+		name = "Genbu Kururugi"
+		portraits={
+			civilian={
+				large=GFX_portrait_Portrait_Kururugi
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_KURURUGI_DESC"
+			ideology=genbuism
+			traits={ }
+			expire = "2020.1.1"
+			id=13
+		}
+	}
+
+    ##GENERALS & COMMANDERS
+	Erwin_Yokoyama={
+		name="Erwin Yokoyama"
+		portraits={
+			army={
+				large="GFX_portrait_Erwin_Yokoyama"
+			}
+		}
+		field_marshal={
+			traits={ inspirational_leader trickster trait_reckless }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	tatewaki_darius={
+		name="Tatewaki <Darius> Katase"
+		portraits={
+			army={
+				large="GFX_portrait_tatewaki_darius"
+			}
+		}
+		field_marshal={
+			traits={ old_guard expert_delegator }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	
+	Josui_Kusakabe={
+		name="Josui Kusakabe"
+		portraits={
+			army={
+				large="GFX_portrait_Josui_Kusakabe"
+			}
+		}
+		corps_commander={
+			traits={ war_hero career_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+
+	Fumihiro_Ogawa={
+		name="Fumihiro Ogawa"
+		portraits={
+			army={
+				large="GFX_portrait_Fumihiro_Ogawa"
+			}
+		}
+		corps_commander={
+			traits={ media_personality brilliant_strategist }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	Hideshi_Arai={
+		name="Hideshi Arai"
+		portraits={
+			army={
+				large="GFX_portrait_Hideshi_Arai"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+
+	Kyoshiro_Tohdoh = {
+		name = "Kyoshiro Tohdoh"
+		portraits={
+			army={
+				large="GFX_portrait_General_Tohdoh"
+			}
+		}
+		corps_commander={
+		traits = { trickster brilliant_strategist adaptable }
+		skill = 4
+		attack_skill = 6
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 3
+	    }
+	}
+    
+
+	##HIGH COMMAND/ ADMIRALS/ MILITARY ADVISORS
+	JAP_katase={
+		name=JAP_katase
+		portraits={
+			army={
+				small="GFX_idea_JAP_katase"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = JAP_katase_idea
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				static_defence_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+	JAP_generic_air={
+		name=JAP_generic_air 
+		portraits={
+			army={
+				small="GFX_idea_JAP_generic_air"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = JAP_generic_air_idea
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
+	}
+
+
+	JAP_generic_navy={
+		name=JAP_generic_navy
+		portraits={
+			army={
+				small="GFX_idea_JAP_generic_navy"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = JAP_generic_navy_idea
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	JAP_tohdoh={
+		name=JAP_tohdoh
+		portraits={
+			army={
+				small="GFX_idea_JAP_tohdoh"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = JAP_tohdoh
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				armoured_spearhead_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	### POLITICAL ADVISORS ###
+
+
+	
+	JAP_sawasaki={
+		name=JAP_sawasaki
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_sawasaki"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = JAP_sawasaki_idea
+			allowed  = {
+				original_tag  = JAP
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = JAP
+			}
+			cancel_if_invalid = no
+			traits  = {
+				conservative_guy short_sighted_bureaucrat
+			}
+		}
+	}
+	
+	JAP_kururugi ={
+		name = JAP_kururugi
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_kururugi"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = JAP_kururugi_idea
+			allowed  = {
+				original_tag  = JAP
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = JAP
+			}
+			cancel_if_invalid = no
+			traits  = {
+				conservative_guy never_surrender
+			}
+		}
+	}
+	
+	JAP_kyoto_kirihara ={
+		name=JAP_kyoto_kirihara
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_kyoto_kirihara"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = JAP_kyoto_kirihara_idea
+			allowed  = {
+				original_tag  = JAP
+			}
+						available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = JAP
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy kyoto_house
+			}
+		}
+	}
+	
+	JAP_generic_minister_1 ={
+		name=JAP_generic_minister_1
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_generic_minister_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = JAP_generic_minister_1_idea
+			allowed  = {
+				original_tag  = JAP
+			}
+						available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = JAP
+			}
+			cancel_if_invalid = no
+			traits  = {
+				liberal_guy great_compromiser
+			}
+		}
+	}
+	
+	JAP_generic_intelligence ={
+		name=JAP_generic_intelligence
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_generic_intelligence"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = JAP_generic_intelligence_idea
+			allowed  = {
+				original_tag  = JAP
+			}
+			traits  = {
+				careless_agent
+			}
+						available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = JAP
+			
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+
+}

@@ -1,0 +1,622 @@
+BRT_pacific = {		#Name of category that decisions will appear under, decisions MUST have a category to work properly.
+
+
+		conquest_phi = {		#ID of the mission, must not contain spaces!
+
+		icon = GFX_first_BRT_war		#The left side icon to show for this mission.
+		days_mission_timeout = 60	#The amount of days remaining until the mission is removed.
+		is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+		
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		NOT = {
+			country_exists = PHI
+			}
+		}
+		activation = {
+			has_war_with = PHI 
+			NOT = { 
+			BRT = {
+				is_ai = yes
+			}  
+		    }                   
+          }
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+		allowed = { tag = BRT }  
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		has_war_with = PHI 
+		NOT = { 
+		BRT = {
+			is_ai = yes
+		}  
+		} 			
+		}
+
+		# EFFECTS OF THIS DECISION/MISSION
+
+		timeout_effect = {
+         add_stability = -0.05
+		 add_war_support = -0.10
+		 country_event = { id = BRT.6 }
+		 		 						hidden_effect = {
+		   set_variable = { 
+			   var = oriental_incident 
+			   value = 1 
+			}
+		   JAP = {
+		   country_event = { id = JAP.1 }
+            }
+        }
+		}
+		
+		complete_effect  = {
+		add_stability = 0.05
+		 add_war_support = 0.05
+		 						hidden_effect = {
+	     A10 = {
+			transfer_state = 628
+			transfer_state = 624
+			transfer_state  = 623
+			transfer_state  = 627
+			transfer_state  = 327
+			transfer_state  = 625
+			transfer_state  = 626
+           }
+		set_variable = { 
+			var = oriental_incident 
+			value = 1 
+		 }
+		   		   JAP = {
+		   country_event = { id = JAP.1 }
+            }
+
+        }
+		}
+		
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+			factor = 10
+		}
+	}
+
+
+	conquest_phi_ai = {		#ID of the mission, must not contain spaces!
+
+	icon = GFX_first_BRT_war		#The left side icon to show for this mission.
+	days_mission_timeout = 56	#The amount of days remaining until the mission is removed.
+	is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+	
+	# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+	
+	available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		PHI = {
+			surrender_progress > 0.95
+		}
+	}
+	activation = {    
+		BRT = {
+			is_ai = yes
+			has_war_with = PHI
+		}                               
+	  }
+	
+	fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+	allowed = { tag = BRT }  
+
+	visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+	BRT = {
+		is_ai = yes
+		has_war_with = PHI
+	}  			
+	}
+
+	# EFFECTS OF THIS DECISION/MISSION
+
+	timeout_effect = {
+	 add_stability = -0.05
+	 add_war_support = -0.10
+	 country_event = { id = BRT.6 }
+									  hidden_effect = {
+	   set_variable = { 
+		   var = oriental_incident 
+		   value = 1 
+		}
+	   JAP = {
+	   country_event = { id = JAP.1 }
+		}
+	}
+	}
+	
+	complete_effect  = {
+	add_stability = 0.05
+	 add_war_support = 0.05
+	 white_peace = PHI
+	 A10 = {
+	 transfer_state = 628
+	 transfer_state = 624
+	 transfer_state  = 623
+	 transfer_state  = 627
+	 transfer_state  = 327
+	 transfer_state  = 625
+	 transfer_state  = 626
+	   }
+	set_variable = { 
+		var = oriental_incident 
+		value = 1 
+	}
+	 JAP = {
+	   country_event = { id = JAP.1 }
+	}
+	}
+	
+	# AI LOGIC FOR THIS DECISION/MISSION
+
+	ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+		factor = 10
+	}
+}
+
+
+	
+
+	conquest_jap = {		#ID of the mission, must not contain spaces!
+
+		icon = GFX_first_BRT_war		#The left side icon to show for this mission.
+		days_mission_timeout = 120	#The amount of days remaining until the mission is removed.
+		is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+		
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+			NOT = {
+            country_exists = JAP
+			}
+		}
+		activation = {    
+				original_tag = BRT
+				
+              has_war_with = JAP                     
+          }
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+		allowed = { tag = BRT }  
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+			tag = BRT
+			AND = {
+			has_war_with = JAP
+            }			
+		}
+
+		# EFFECTS OF THIS DECISION/MISSION
+
+		timeout_effect = {
+         add_stability = -0.15
+		 add_war_support = -0.15
+		 country_event = { id = BRT.11 }
+
+		}
+		
+		complete_effect  = {
+		   country_event = { id = BRT.10 }
+            
+
+        }
+		
+		
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+			factor = 10
+		}
+	}
+
+	conquest_jap_ai = {		#ID of the mission, must not contain spaces!
+
+	icon = GFX_first_BRT_war		#The left side icon to show for this mission.
+	days_mission_timeout = 65	#The amount of days remaining until the mission is removed.
+	is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+	
+	# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+	
+	available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+	JAP = {
+		surrender_progress > 80
+	}
+	}
+	activation = {    
+		NOT  = { 
+			original_tag = BRT
+		}	
+		  has_war_with = JAP                        
+	  }
+	
+	fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+	allowed = { tag = BRT }  
+
+	visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		tag = BRT
+		AND = {
+		has_war_with = JAP
+		}			
+	}
+
+	# EFFECTS OF THIS DECISION/MISSION
+
+	timeout_effect = {
+	 add_stability = -0.10
+	 add_war_support = -0.10
+	 country_event = { id = BRT.11 }
+
+	}
+	
+	complete_effect  = {
+	   country_event = { id = BRT.10 }
+		
+
+	}
+	
+	
+	# AI LOGIC FOR THIS DECISION/MISSION
+
+	ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+		factor = 10
+	}
+}
+
+	pacific_war_escalating = {
+		icon = GFX_decision_category_generic_crisis
+
+		days_mission_timeout = 20	#The amount of days remaining until the mission is removed.
+		is_good = no
+        
+
+	available = {
+		check_variable = {
+			jap_continue_war = 2
+		} 
+	}
+
+
+	activation = {                
+		check_variable = {
+			jap_continue_war = 1
+		}                   
+	}
+
+	fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+	allowed = { tag = BRT } 
+
+	visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+	tag = JAP
+	AND = {
+		check_variable = {
+			genbu_death = 1
+		}     
+	}			
+}   
+timeout_effect = {
+	JAP = {
+		country_event = {
+			id = JAP.15
+		}
+	}
+   }
+	}
+	
+	
+	military_build_up = {		#ID of the decision, must not contain spaces!
+
+		icon = GFX_military_build		#The left side icon to show for this decision.
+		
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {	
+		tag = BRT
+		AND = {
+		A10 = {
+		owns_state = 327
+		}
+		}
+		}
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+		days_re_enable = 5	#The amount of days of days it will take for the decision to reappear. Not valid if fire_only_once is set to yes
+
+		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
+			tag = BRT
+		}		
+
+		cost = 25		#The cost to execute the decision, by default its political power.
+
+		# EFFECTS OF THIS DECISION/MISSION
+
+		remove_effect = {
+			327 = {
+			add_building_construction = {
+            type = infrastructure  
+            level = 3
+            instant_build = yes
+            }
+			}
+			638 = {
+			add_building_construction = {
+            type = infrastructure  
+            level = 3
+            instant_build = yes
+            }
+			}
+			647 = {
+			add_building_construction = {
+            type = infrastructure  
+            level = 3
+            instant_build = yes
+            }
+			}
+			645 = {
+			add_building_construction = {
+            type = infrastructure  
+            level = 4
+            instant_build = yes
+            }
+			}
+			650 = {
+			add_building_construction = {
+            type = infrastructure  
+            level = 4
+            instant_build = yes
+            }
+			}
+		}
+		
+		modifier = {
+               consumer_goods_factor = 0.10 
+        }
+          
+		
+		days_remove = 45
+		
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 10			
+		}
+}
+
+}
+
+
+
+
+BRT_manage_area_quotas = {
+	BRT_low_area_quota = {
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = BRT
+				has_country_flag = hbe_administrative_area
+			}
+		}
+
+		available = {
+		}
+
+		visible = {
+			FROM = {
+				OR = {
+					has_idea = quota_level_2
+					has_idea = quota_level_3
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+
+		complete_effect = {
+			IF = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_2
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_2
+						add_idea = quota_level_1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_3
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_3
+						add_idea = quota_level_1
+					}
+				}
+			}
+		}
+	}
+
+	BRT_medium_area_quota = {
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = BRT
+				has_country_flag = hbe_administrative_area
+			}
+		}
+
+		available = {
+		}
+
+		visible = {
+			FROM = {
+				OR = {
+					has_idea = quota_level_1
+					has_idea = quota_level_3
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_1
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_1
+						add_idea = quota_level_2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_3
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_3
+						add_idea = quota_level_2
+					}
+				}
+			}
+		}
+	}
+
+	BRT_high_area_quota = {
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = BRT
+				has_country_flag = hbe_administrative_area
+			}
+		}
+
+		available = {
+		}
+
+		visible = {
+			FROM = {
+				OR = {
+					has_idea = quota_level_1
+					has_idea = quota_level_2
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_2
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_2
+						add_idea = quota_level_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_idea = quota_level_1
+					}
+				}
+
+				FROM = {
+					swap_ideas = {
+						remove_idea = quota_level_1
+						add_idea = quota_level_3
+					}
+				}
+			}
+		}
+	}
+}
+
+BRT_post_war_struggle = {
+
+	BRT_increase_Schneizel_support = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { Schneizel_power < 100 }
+		}
+
+		available = {
+			tag = BRT
+		}
+		cost = 20
+
+		days_remove = 15
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			BRT_Schneizel_influence = yes
+		}
+
+
+	}
+	BRT_increase_Guinevere_support = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { Guinevere_power < 100 }
+		}
+
+		available = {
+			tag = BRT
+		}
+		cost = 20
+
+		days_remove = 15
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			BRT_Guinevere_influence = yes
+		}
+
+
+	}
+}

@@ -1,0 +1,162 @@
+﻿division_template = {
+	name = "Kazakh Light Infantry"	
+
+	division_names_group = "KAZ_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+
+	
+}
+
+
+division_template = {
+	name = "Kazakh Cavalry"	
+
+	division_names_group = "KAZ_CAV_01"
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 1 y = 0 }
+		Cavalry = { x = 1 y = 1 }
+	}	
+
+}
+
+
+division_template = {
+	name = "Kazakh Cavalry Division" 		
+
+	division_names_group = "KAZ_CAV_01"
+
+    regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 1 y = 0 }
+		Cavalry = { x = 1 y = 1 }
+		Cavalry = { x = 1 y = 2 }
+    }
+
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1591
+		division_template = "Kazakh Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10312
+		division_template = "Kazakh Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3618
+		division_template = "Kazakh Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12594
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1668
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7597
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1517
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7341
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11537
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4333
+		division_template = "Kazakh Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+}

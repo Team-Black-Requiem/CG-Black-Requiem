@@ -1,0 +1,143 @@
+equipments = {
+
+	mechanized_equipment = {
+		year = 2009
+
+		is_archetype = yes
+		picture = archetype_motorized_equipment
+		is_buildable = no
+		type = {
+			#infantry #Removing inf type
+			mechanized
+		}
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			mech_cost_upgrade
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		#Misc Abilities
+		maximum_speed = 8
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 16
+		hardness = 0.60
+		armor_value = 30
+
+		#Offensive Abilities
+		ap_attack = 40
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+
+		build_cost_ic = 8
+		resources = {
+			steel = 2
+			#oil = 1
+			rubber = 1
+		}
+
+		fuel_consumption = 2.4
+		supply_truck = no
+	}
+
+	# ~1941
+	mechanized_equipment_1 = {
+		year = 2013
+
+		archetype = mechanized_equipment
+		priority = 40
+		visual_level = 0
+	}
+
+	# ~1943
+	mechanized_equipment_2 = {
+		year = 2015
+
+		archetype = mechanized_equipment
+		parent = mechanized_equipment_1
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 14
+
+		#Defensive Abilities
+		defense = 30
+		breakthrough = 28
+		hardness = 0.70
+		armor_value = 45
+
+		#Offensive Abilities
+		ap_attack = 52
+
+		build_cost_ic = 12
+		resources = {
+			steel = 3
+			rubber = 1
+			#oil = 1
+		}
+	}
+
+	# ~1945
+	mechanized_equipment_3 = {
+		year = 2017
+
+		archetype = mechanized_equipment
+		parent = mechanized_equipment_2
+		priority = 40
+		visual_level = 2
+
+		maximum_speed = 20
+
+		#Defensive Abilities
+		defense = 34
+		breakthrough = 36
+		hardness = 0.75
+		armor_value = 60
+
+		#Offensive Abilities
+		ap_attack = 68
+
+		build_cost_ic = 16
+		resources = {
+			steel = 3
+			rubber = 1
+			#oil = 2
+		}
+	}
+
+	mechanized_equipment_4 = {
+		year = 2018
+
+		archetype = mechanized_equipment
+		parent = mechanized_equipment_3
+		priority = 40
+		visual_level = 2
+
+		maximum_speed = 32
+
+		#Defensive Abilities
+		defense = 37
+		breakthrough = 60
+		hardness = 0.85
+		armor_value = 85
+
+		#Offensive Abilities
+		ap_attack = 98
+
+		build_cost_ic = 24
+		resources = {
+			steel = 4
+			rubber = 1
+			#oil = 2
+		}
+	}
+}

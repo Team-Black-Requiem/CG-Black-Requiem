@@ -1,0 +1,137 @@
+add_namespace = suzaku
+
+
+ #the different levels could affect Suzaku's level of trauma later and how likely he will be to join Zero
+								  
+country_event = {
+	id = suzaku.1
+	title = suzaku.1.t
+	desc = suzaku.1.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #good
+		name = suzaku.1.a
+		add_stability = 0.01
+		add_war_support = -0.01
+		country_event = { id = suzaku.2 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+	option = { #bad
+		name = suzaku.1.b
+		add_stability = -0.01
+		add_war_support = 0.01
+		hidden_effect = {
+			add_to_variable = {
+				var = suzaku_var
+				value = 1
+			}
+		}
+		country_event = { id = suzaku.2 days = 4 }
+
+		ai_chance = {
+			factor = 80
+		}
+	}
+}
+
+country_event = {
+	id = suzaku.2
+	title = suzaku.2.t
+	desc = suzaku.2.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #bad
+		name = suzaku.2.a
+		add_stability = -0.01
+		add_war_support = 0.01
+		hidden_effect = {
+			add_to_variable = {
+				var = suzaku_var
+				value = 1
+			}
+		}
+		country_event = { id = suzaku.3 days = 3 }
+
+		ai_chance = {
+			factor = 80
+		}
+	}	
+
+	option = { #good
+		name = suzaku.2.b
+		add_stability = 0.01
+		add_war_support = -0.01
+		country_event = { id = suzaku.3 days = 3 }
+
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = suzaku.3
+	title = suzaku.3.t
+	desc = suzaku.3.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #bad
+		name = suzaku.3.a
+		add_stability = -0.01
+		add_war_support = 0.01
+		hidden_effect = {
+			add_to_variable = {
+				var = suzaku_var
+				value = 1
+			}
+		}
+		country_event = { id = suzaku.4 days = 3 }
+
+		ai_chance = {
+			factor = 80
+		}
+	}	
+	
+	option = { #good
+		name = suzaku.3.b
+		add_stability = 0.01
+		add_war_support = -0.01
+		country_event = { id = suzaku.4 days = 3 }
+
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = suzaku.4
+	title = suzaku.4.t
+	desc = suzaku.4.d
+	#picture = GFX_event_picture
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		if = {
+			limit = {
+				check_variable = { suzaku_var > 1 }
+			}
+			country_event = {id = JAP.14}
+		}
+	}
+}

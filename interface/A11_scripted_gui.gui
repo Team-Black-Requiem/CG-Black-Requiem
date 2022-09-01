@@ -1,0 +1,284 @@
+@SENATE_TEXT_X = 105
+@HOG_TEXT_X = 20
+@HEADERS_Y = 160
+@STATUS_Y = 180
+@GOV_STATUS_Y = 200
+@HOG_Y = 260 
+@HOG_STATUS_Y = 280
+@PARTIES_STATUS_Y = 270
+@PM_STATUS_Y = 330
+@PM_Y = 350
+@PRESIDENT_STATUS_Y = 370
+@PRESIDENT_Y = 390
+@SENATE_STATUS_Y = 220
+@SENATE_Y = 240
+@COL_STATUS_X = 290
+@GOV_STATUS_X = 250
+@COL_STATUS_Y = 240
+guiTypes = {
+	containerWindowType = {
+		name = "a11_decadence_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 275 height = 275 }
+		
+		iconType = {
+			name = "A11_decadence_container"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+		}
+
+		buttonType = {
+			name = "Army_Decadence"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_decision_A11_Army_Decadence"
+			pdx_tooltip = "A11_Army_Decadence_desc"
+
+		}
+
+		instantTextboxType = {
+			name = "A11_Army_Decadence_text_title"
+			position = { x = 10 y = 10 }
+			font = "hoi_30header"
+			text = "A11_Army_Decadence_tt"
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Army_Decadence_text_high"
+			position = { x = 10 y = 70 }
+			font = "hoi_30header"
+			text = Army_Decadence_High
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Army_Decadence_text_medium"
+			position = { x = 10 y = 70 }
+			font = "hoi_30header"
+			text = Army_Decadence_Medium
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Army_Decadence_text_low"
+			position = { x = 10 y = 70 }
+			font = "hoi_30header"
+			text = Army_Decadence_Low
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+
+
+		buttonType = {
+			name = "Civil_Decadence"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_decision_A11_Civil_Decadence"
+			pdx_tooltip = "A11_Civil_Decadence_desc"
+
+		}
+
+		instantTextboxType = {
+			name = "A11_Civil_Decadence_text_title"
+			position = { x = 200 y = 10 }
+			font = "hoi_30header"
+			text = "A11_Civil_Decadence_tt"
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+
+		instantTextboxType = {
+			name = "A11_Civil_Decadence_text_high"
+			position = { x = 200 y = 70 }
+			font = "hoi_30header"
+			text = Civil_Decadence_High
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Civil_Decadence_text_medium"
+			position = { x = 200 y = 70 }
+			font = "hoi_30header"
+			text = Civil_Decadence_Medium
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Civil_Decadence_text_low"
+			position = { x = 200 y = 70 }
+			font = "hoi_30header"
+			text = Civil_Decadence_Low
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+
+		buttonType = {
+			name = "Gov_Decadence"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_decision_A11_Gov_Decadence"
+			pdx_tooltip = "A11_Gov_Decadence_desc"
+
+		}
+
+		instantTextboxType = {
+			name = "A11_Gov_Decadence_text_title"
+			position = { x = 350 y = 10 }
+			font = "hoi_30header"
+			text = "A11_Gov_Decadence_tt"
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+
+		instantTextboxType = {
+			name = "A11_Gov_Decadence_text_high"
+			position = { x = 350 y = 70 }
+			font = "hoi_30header"
+			text = Gov_Decadence_High
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Gov_Decadence_text_medium"
+			position = { x = 350 y = 70 }
+			font = "hoi_30header"
+			text = Gov_Decadence_Medium
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+		instantTextboxType = {
+			name = "A11_Gov_Decadence_text_low"
+			position = { x = 350 y = 70 }
+			font = "hoi_30header"
+			text = Gov_Decadence_Low
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 100
+		}
+
+
+	}
+
+	containerWindowType = {
+			name = "a11_regime_decision_ui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 275 height = 275 }
+			
+			iconType = {
+				name = "A11_map"
+				orientation = upper_left
+				position = { x = 0 y = 0 }
+
+			}
+
+			buttonType = {
+				name = "Hokkaido_Map"
+				orientation = upper_left
+				position = { x = 350 y = 9 }
+				spriteType = "GFX_decision_A11_hokkaido"
+				pdx_tooltip_delayed = "A11_percentage_hokkaido"
+				pdx_tooltip = "A11_region_Hokkaido"
+
+			}
+			
+			buttonType = {
+				name = "Kyushu_Map"
+				orientation = center
+				position = { x = -140 y = 40 }
+				spriteType = "GFX_decision_A11_Kyushu"
+				pdx_tooltip = "A11_region_Kyushu"
+				pdx_tooltip_delayed = "A11_percentage_kyushu"
+
+			}
+	
+			buttonType = {
+				name = "Kanto_Map"
+				orientation = center
+				position = { x = 106 y = 27 }
+				spriteType = "GFX_decision_A11_Kanto"
+				pdx_tooltip = "A11_region_Kanto"
+				pdx_tooltip_delayed = "A11_percentage_kanto"
+	
+			}
+	
+			buttonType = {
+				name = "Kansai_Map"
+				orientation = center
+				position = { x = -22 y = 26 }
+				spriteType = "GFX_decision_A11_Kansai"
+				pdx_tooltip = "A11_region_Kansai"
+				pdx_tooltip_delayed = "A11_percentage_kansai"
+
+			}
+
+			buttonType = {
+				name = "Chuguko_Map"
+				orientation = center
+				position = { x = -78 y = 22 }
+				spriteType = "GFX_decision_A11_Chuguko"
+				pdx_tooltip = "A11_region_Chuguko"
+				pdx_tooltip_delayed = "A11_percentage_chuguko"
+	
+			}
+
+			buttonType = {
+				name = "Tohoku_Map"
+				orientation = center
+				position = { x = 138 y = -90 }
+				spriteType = "GFX_decision_A11_Tohoku"
+				pdx_tooltip = "A11_region_Tohoku"
+				pdx_tooltip_delayed = "A11_percentage_tohoku"
+
+			}
+
+			buttonType = {
+				name = "Chubu_Map"
+				orientation = center
+				position = { x = 33 y = -9 }
+				spriteType = "GFX_decision_A11_Chubu"
+				pdx_tooltip = "A11_region_Chubu"
+				pdx_tooltip_delayed = "A11_percentage_chubu"
+
+			}
+	
+		}
+
+		containerWindowType = {
+			name = "a11_geass_research_decision_ui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 275 height = 275 }
+			
+			iconType = {
+				name = "A11_geass_research_picture"
+				orientation = upper_left
+				position = { x = 0 y = 0 }
+
+			}
+	
+		}
+}

@@ -1,0 +1,52 @@
+autonomy_state = {
+	id = eu_outer_sphere
+	
+	default = no
+	is_puppet = no
+	
+	min_freedom_level = 0.2
+	
+	manpower_influence = 0.1
+	use_overlord_color = no
+
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = yes
+		units_deployed_to_overlord = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		stability_factor = 0.02
+		production_speed_buildings_factor = 0.04
+		monthly_population = 0.05
+		subjects_autonomy_gain = -0.100
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		is_in_faction_with = FRA
+
+	}
+	
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

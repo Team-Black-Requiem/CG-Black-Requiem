@@ -1,0 +1,531 @@
+﻿focus_tree = {
+id = japan_focus_junta_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = JAP_sapporo_declaration
+		icon = GFX_JAP_sapporo_declaration
+		cost = 2
+		x = 15
+		y = 0
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_subdue_kirihara
+		icon = GFX_JAP_subdue_kirihara
+		relative_position_id = JAP_sapporo_declaration
+		prerequisite = {
+			focus = JAP_sapporo_declaration
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		id = JAP_establish_military_council
+		icon = GFX_JAP_establish_military_council
+		relative_position_id = JAP_subdue_kirihara
+		prerequisite = {
+			focus = JAP_subdue_kirihara
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_fightings_begin
+		icon = GFX_JAP_fightings_begin
+		relative_position_id = JAP_militarize_police
+		prerequisite = {
+			focus = JAP_militarize_police
+		}
+		prerequisite = {
+			focus = JAP_establish_military_council
+		}
+		prerequisite = {
+			focus = JAP_purge_kururugi
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_question_economy
+		icon = GFX_JAP_question_economy
+		relative_position_id = JAP_fightings_begin
+
+		prerequisite = {
+			focus = JAP_fightings_begin
+		}
+		cost = 2
+		x = -4
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_britannian_pow
+		icon = GFX_JAP_britannian_pow
+		relative_position_id = JAP_fightings_begin
+
+		prerequisite = {
+			focus = JAP_fightings_begin
+		}
+		cost = 2
+		x = 4
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_kururugi_family
+		icon = GFX_JAP_kururugi_family
+		relative_position_id = JAP_fightings_begin
+
+		prerequisite = {
+			focus = JAP_fightings_begin
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_return_civilian_gov
+		icon = GFX_JAP_return_civilian_gov
+		relative_position_id = JAP_fightings_begin
+
+		prerequisite = {
+			focus = JAP_fightings_begin
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_relations_china
+		icon = GFX_JAP_relations_china
+		relative_position_id = JAP_fightings_begin
+
+		prerequisite = {
+			focus = JAP_fightings_begin
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_votations_begin
+		icon = GFX_JAP_votations_begin
+		relative_position_id = JAP_relations_china
+
+		prerequisite = {
+			focus = JAP_relations_china
+		}
+		prerequisite = {
+			focus = JAP_question_economy
+		}
+		prerequisite = {
+			focus = JAP_kururugi_family
+		}
+		prerequisite = {
+			focus = JAP_britannian_pow
+		}
+		prerequisite = {
+			focus = JAP_return_civilian_gov
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_katase_wins
+		icon = GFX_JAP_votations_begin
+		relative_position_id = JAP_relations_china
+
+		prerequisite = {
+			focus = JAP_votations_begin
+		}
+
+		cost = 2
+		x = -2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_civilians_win
+		icon = GFX_JAP_civilians_win
+		relative_position_id = JAP_relations_china
+
+		prerequisite = {
+			focus = JAP_votations_begin
+		}
+
+		cost = 2
+		x = 2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_tohdoh_wins
+		icon = GFX_JAP_tohdoh_wins
+		relative_position_id = JAP_relations_china
+
+		prerequisite = {
+			focus = JAP_votations_begin
+		}
+
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_crush_strike
+		icon = GFX_JAP_crush_strike
+		relative_position_id = JAP_sapporo_declaration
+		prerequisite = {
+			focus = JAP_sapporo_declaration
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = JAP_militarize_police
+		icon = GFX_JAP_militarize_police
+		relative_position_id = JAP_crush_strike
+		prerequisite = {
+			focus = JAP_crush_strike
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = JAP_purge_kururugi
+		icon = GFX_JAP_purge_kururugi
+		relative_position_id = JAP_sapporo_declaration
+		prerequisite = {
+			focus = JAP_sapporo_declaration
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+}	

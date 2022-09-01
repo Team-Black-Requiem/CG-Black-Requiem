@@ -1,0 +1,1007 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = britannia_focus_2
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRT
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+
+	focus = {
+		id = BRT_piece_empire
+		icon = GFX_BRT_piece_empire
+		x = 14
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {		
+		country_exists = BRT
+		country_exists = A11
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+
+
+
+	focus = {
+		id = BRT_odysseus_resign
+		icon = GFX_BRT_odysseus_resign
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_piece_empire }
+		relative_position_id = BRT_piece_empire
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.15
+			
+		}
+	}
+
+
+	focus = {
+		id = BRT_struggle_begins
+		icon = GFX_BRT_struggle_begins
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_odysseus_resign }
+		relative_position_id = BRT_odysseus_resign
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = BRT_struggle_begin_tt
+			country_event = BRT.16
+		}
+	}
+
+	focus = {
+		id = BRT_economic_field
+		icon = GFX_BRT_economic_field
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_struggle_begins }
+		relative_position_id = BRT_struggle_begins
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			country_event = BRT.18
+		}
+	}
+
+	focus = {
+		id = BRT_favour_corporatism
+		icon = GFX_BRT_favour_corporatism
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		mutually_exclusive = {
+			focus = BRT_mantain_balance
+			focus = BRT_favour_technocracy
+		}
+		prerequisite = { focus = BRT_economic_field }
+		relative_position_id = BRT_economic_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT_guinevere_influence = yes
+			add_ideas = corporatism_favoured
+		}
+	}
+
+	focus = {
+		id = BRT_protectionism_thesis
+		icon = GFX_BRT_protectionism_thesis
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_favour_corporatism }
+		relative_position_id = BRT_favour_corporatism
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = corporatism_favoured
+				add_idea = corporatism_favoured_2
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_buy_britannian
+		icon = GFX_BRT_buy_britannian
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { 
+			focus = BRT_protectionism_thesis
+			focus = BRT_discuss_state_role
+	   }
+
+		relative_position_id = BRT_protectionism_thesis
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.25
+		}
+	}
+
+	focus = {
+		id = BRT_favour_technocracy
+		icon = GFX_BRT_favour_technocracy
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_economic_field }
+		relative_position_id = BRT_economic_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+		
+		mutually_exclusive = {
+			focus = BRT_mantain_balance
+			focus = BRT_favour_corporatism
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = technocracy_favoured
+			BRT_schneizel_influence = yes
+		}
+	}
+
+	focus = {
+		id = BRT_take_key_positions
+		icon = GFX_BRT_take_key_positions
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_favour_technocracy }
+		relative_position_id = BRT_favour_technocracy
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = technocracy_favoured
+				add_idea = technocracy_favoured_2
+			}
+		}
+	}
+
+
+	focus = {
+		id = BRT_mantain_balance
+		icon = GFX_BRT_mantain_balance
+		x = 0
+		y = 1
+
+		cost = 3
+
+		mutually_exclusive = {
+			focus = BRT_favour_corporatism
+		}
+
+		mutually_exclusive = {
+			focus = BRT_favour_technocracy
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_economic_field }
+		relative_position_id = BRT_economic_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT_guinevere_influence_low = yes
+			BRT_schneizel_influence_low = yes
+			add_ideas = economic_balance
+		}
+	}
+
+	focus = {
+		id = BRT_discuss_state_role
+		icon = GFX_BRT_discuss_state_role
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_mantain_balance }
+		relative_position_id = BRT_mantain_balance
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = economic_balance
+				add_idea = economic_balance_2
+			}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_economy_science
+		icon = GFX_BRT_economy_science
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { 
+			focus = BRT_take_key_positions
+			focus = BRT_discuss_state_role
+	   }
+
+		relative_position_id = BRT_take_key_positions
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 1
+				category = industry
+			}
+			country_event = BRT.26
+		}
+	}
+
+	focus = {
+		id = BRT_shuffle_economic_minister
+		icon = GFX_BRT_shuffle_economic_minister
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { 
+			focus = BRT_economy_science
+			focus = BRT_buy_britannian
+	   }
+
+		relative_position_id = BRT_buy_britannian
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				retire_character = BRT_exotic_noble_1
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_diplomatic_field
+		icon = GFX_BRT_diplomatic_field
+		x = -5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_struggle_begins }
+		relative_position_id = BRT_struggle_begins
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			country_event = BRT.17
+		}
+	}
+
+	focus = {
+		id = BRT_new_frontier
+		icon = GFX_BRT_new_frontier
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		mutually_exclusive = {
+			focus = BRT_lost_homeland
+		}
+		prerequisite = { focus = BRT_diplomatic_field }
+		relative_position_id = BRT_diplomatic_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT_guinevere_influence = yes
+			add_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_reinforce_new_areas
+		icon = GFX_BRT_reinforce_new_areas
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_new_frontier }
+		relative_position_id = BRT_new_frontier
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		A11 = {
+			add_stability = 0.03
+			add_war_support = 0.04
+			add_manpower = 5000
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_paris_conference
+		icon = GFX_BRT_paris_conference
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_reinforce_new_areas }
+		relative_position_id = BRT_reinforce_new_areas
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.20
+		}
+	}
+
+	focus = {
+		id = BRT_shuffle_foreign_minister
+		icon = GFX_BRT_shuffle_foreign_minister
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { 
+			focus = BRT_paris_conference 
+			focus = BRT_china_detente
+	    }
+		relative_position_id = BRT_china_detente
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				retire_character = BRT_Exotic_minister_1
+			}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_lost_homeland
+		icon = GFX_BRT_lost_homeland
+		x = 1
+		y = 1
+
+		mutually_exclusive = {
+			focus = BRT_new_frontier
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_diplomatic_field }
+		relative_position_id = BRT_diplomatic_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT_schneizel_influence = yes
+			add_opinion_modifier = {
+				target = FRA
+				modifier = hostile_status
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_reinforce_atlantic_fleet
+		icon = GFX_BRT_reinforce_atlantic_fleet
+		x = 0
+		y = 1
+
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_lost_homeland }
+		relative_position_id = BRT_lost_homeland
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+           navy_experience = 50
+		   366 = {
+		   add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+		}
+	 }
+		357 = {
+			add_building_construction = {
+			 type = dockyard
+			 level = 1
+			 instant_build = yes
+		 }
+		}
+		 358 = {
+			add_building_construction = {
+			 type = dockyard
+			 level = 1
+			 instant_build = yes
+		 }
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_china_detente
+		icon = GFX_BRT_china_detente
+		x = 0
+		y = 1
+
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_reinforce_atlantic_fleet }
+		relative_position_id = BRT_reinforce_atlantic_fleet
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.21
+		}
+	}
+
+	focus = {
+		id = BRT_political_field
+		icon = GFX_BRT_political_field
+		x = 5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_struggle_begins }
+		relative_position_id = BRT_struggle_begins
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			country_event = BRT.19
+		}
+	}
+
+	focus = {
+		id = BRT_purist_question
+		icon = GFX_BRT_purist_question
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_political_field }
+		relative_position_id = BRT_political_field
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.22
+		}
+	}
+
+	
+	focus = {
+		id = BRT_areas_question
+		icon = GFX_BRT_areas_question
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_purist_question }
+		relative_position_id = BRT_purist_question
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.23
+		}
+	}
+
+	focus = {
+		id = BRT_cult_question
+		icon = GFX_BRT_cult_question
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_areas_question }
+		relative_position_id = BRT_areas_question
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.24
+		}
+	}
+
+	focus = {
+		id = BRT_shuffle_remaining_ministers
+		icon = GFX_BRT_shuffle_remaining_ministers
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_cult_question }
+		relative_position_id = BRT_cult_question
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				retire_character = BRT_exotic_interior_1
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_see_results
+		icon = GFX_BRT_see_results
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = BRT_shuffle_remaining_ministers }
+		prerequisite = { focus = BRT_shuffle_foreign_minister }
+		prerequisite = { focus = BRT_shuffle_economic_minister }
+		relative_position_id = BRT_shuffle_economic_minister
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.27
+		}
+	}
+
+
+
+
+}
+
+

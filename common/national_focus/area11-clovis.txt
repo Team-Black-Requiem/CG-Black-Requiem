@@ -1,0 +1,1938 @@
+﻿
+
+focus_tree = {
+	id = area11_focus_2
+		
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = A11
+		}
+	}
+	
+	
+	
+	default = no
+	
+	continuous_focus_position = { x = 20 y = 2000 }
+
+	focus = {
+		id = A11_diarchy
+		icon = GFX_A11_diarchy
+
+		x = 18
+		y = 0
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		has_completed_focus = A11_clovis_decision
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+            country_event = area11.25
+			add_political_power = 300
+			swap_ideas = {
+				remove_idea = neglected_government_5
+				add_idea = neglected_government_4
+			}
+			 
+		}
+	}
+
+	focus = {
+		id = A11_interior_minister
+		icon = GFX_A11_interior_minister
+		relative_position_id = A11_diarchy
+
+		prerequisite = {
+			focus = A11_diarchy
+		}
+
+		x = -3
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = A11_generic_general_1_idea	
+			}
+			add_ideas = A11_generic_general_2_idea
+			add_political_power = 20
+			 
+		}
+	}
+
+	focus = {
+		id = A11_war_minister
+		icon = GFX_A11_war_minister
+		relative_position_id = A11_diarchy
+
+		prerequisite = {
+			focus = A11_diarchy
+		}
+
+		x = 3
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				A11_geass_research_setup = yes
+				remove_ideas = a11_vv_idea
+			}
+			add_ideas = A11_Aspirius_idea
+			add_political_power = 20
+
+
+
+			 
+		}
+	}
+
+	
+	focus = {
+		id = A11_geass_reserch
+		icon = GFX_A11_geass_reserch
+		relative_position_id = A11_war_minister
+
+		prerequisite = {
+			focus = A11_war_minister
+		}
+
+		x = -2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_geass_research_adv_high
+			add_to_variable = { geass_understand = 30 }
+			add_political_power = 50
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_rebuild_army
+		icon = GFX_A11_rebuild_army
+		relative_position_id = A11_war_minister
+
+		prerequisite = {
+			focus = A11_war_minister
+		}
+
+		x = 2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+             army_experience = 50
+			 add_command_power = 100
+			 add_war_support = 0.04
+			 
+		}
+	}
+
+	focus = {
+		id = A11_no_restrictions
+		icon = GFX_A11_no_restrictions
+		relative_position_id = A11_rebuild_army
+
+		prerequisite = {
+			focus = A11_rebuild_army
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = knightmare_all
+			}
+			hidden_effect = {
+				load_oob = A11_KN
+			}
+			custom_effect_tooltip = A11_KN
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_native_navy
+		icon = GFX_A11_native_navy
+		relative_position_id = A11_war_minister
+
+		prerequisite = {
+			focus = A11_war_minister
+		}
+
+		x = 0
+		y = 2
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = marine_tech
+			}
+		hidden_effect = {
+			load_oob = A11_NAVAL
+		}
+      
+			 
+		}
+	}
+
+	focus = {
+		id = A11_upgrade_area_status
+		icon = GFX_A11_upgrade_area_status
+		relative_position_id = A11_honorary_brt
+
+		prerequisite = {
+			focus = A11_honorary_brt
+		}
+		prerequisite = {
+			focus = A11_secret_bases
+		}
+
+		x = 3
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id=area11.32
+					days = 20
+				}
+				#news_event = {
+					#id=news.7
+					#days = 20
+				#}	
+			}
+		}
+	
+		available = {
+			NOT = {
+				check_variable = {
+					tokyo_bombings = 1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = A11_decadence_low_all
+			}
+			check_variable = {
+				Gov_Decadence < 20
+			}
+			check_variable = {
+				Civil_Decadence < 20
+			}
+			check_variable = {
+				Army_Decadence < 20
+			}
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+			add_war_support = 0.10
+			BRT = {
+			set_autonomy = {
+				target = A11
+				autonomy_state = area_developing
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+			 
+		}
+	}
+
+	focus = {
+		id = A11_knight_police
+		icon = GFX_A11_knight_police
+		relative_position_id = A11_no_restrictions
+
+		prerequisite = {
+			focus = A11_no_restrictions
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = knightmare_pol_1
+				amount = 400
+				producer = BRT
+			}
+			A11_Army_Improve_Low = yes
+			 
+		}
+	}
+
+	
+	focus = {
+		id = A11_funds
+		icon = GFX_A11_funds
+		relative_position_id = A11_knight_police
+
+		prerequisite = {
+			focus = A11_knight_police
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+
+			A11_Army_Improve_Medium = yes
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_geass_cult
+		icon = GFX_A11_geass_cult
+		relative_position_id = A11_geass_reserch
+
+		prerequisite = {
+			focus = A11_geass_reserch
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_geass_research_adv_high
+
+              A11_Gov_Decadence_Medium = yes
+			  add_to_variable = { infrastructure_building = 30 }
+			  add_to_variable = { searching_material = 30 }
+              
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_project_green_witch
+		icon = GFX_A11_project_green_witch
+		relative_position_id = A11_geass_cult
+
+		prerequisite = {
+			focus = A11_geass_cult
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.29
+			add_political_power = 10
+			 
+		}
+	}
+
+	focus = {
+		id = A11_project_green_witch_2
+		icon = GFX_A11_project_green_witch_2
+		relative_position_id = A11_project_green_witch
+
+		prerequisite = {
+			focus = A11_project_green_witch
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.30
+			add_political_power = 20
+			add_to_variable = { controlling_geass = 40 }
+			add_to_variable = { geass_weapons = 40 }
+			custom_effect_tooltip = A11_geass_research_adv_high
+
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_secret_bases
+		icon = GFX_A11_secret_bases
+		relative_position_id = A11_project_green_witch_2
+
+		prerequisite = {
+			focus = A11_project_green_witch_2
+		}
+		prerequisite = {
+			focus = A11_funds
+		}
+
+		x = 2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.31
+			A11_Army_Improve_Low = yes
+			add_to_variable = { geass_weapons = 50 }
+			custom_effect_tooltip = A11_geass_research_adv_high
+
+			 
+		}
+	}
+
+
+
+	focus = {  #A Place of Leisure...
+	id = A11_duties_2
+	icon = GFX_A11_duties_2
+	relative_position_id = A11_interior_minister
+
+	prerequisite = {
+		focus = A11_interior_minister
+	}
+
+	x = 2
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		if = {
+			limit = { has_idea = neglected_government_3 }
+			swap_ideas = {
+				remove_idea = neglected_government_3
+				add_idea = neglected_government_2
+			}
+		}
+		if = {
+			limit = { has_idea = neglected_government_4 }
+			swap_ideas = {
+				remove_idea = neglected_government_4
+				add_idea = neglected_government_3
+			}
+		}
+
+
+
+		 
+	}
+}
+
+
+focus = {  #A Place of Leisure...
+id = A11_remove_martial_law
+icon = GFX_A11_remove_martial_law
+relative_position_id = A11_duties_2
+
+prerequisite = {
+	focus = A11_duties_2
+}
+
+x = 0
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	swap_ideas = {
+		remove_idea = A11_martial_law_idea_2
+		add_idea = A11_martial_law_idea_1
+	}
+	A11_post_war_chaos_worse = yes
+	custom_effect_tooltip = A11_post_war_chaos_worse
+
+
+	 
+}
+}
+
+focus = {  #A Place of Leisure...
+id = A11_abolish_mil_regions
+icon = GFX_A11_abolish_mil_regions
+relative_position_id = A11_remove_martial_law
+
+prerequisite = {
+	focus = A11_remove_martial_law
+}
+
+x = 0
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+		custom_effect_tooltip = A11_post_war_chaos_worse
+
+	A11_post_war_chaos_worse = yes
+	add_stability = 0.05
+	add_war_support = 0.05
+
+	 
+}
+}
+
+focus = {  #A Place of Leisure...
+id = A11_minor_crackdowns
+icon = GFX_A11_minor_crackdowns
+relative_position_id = A11_abolish_mil_regions
+
+prerequisite = {
+	focus = A11_abolish_mil_regions
+}
+
+x = 0
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	custom_effect_tooltip = A11_post_war_chaos_better
+
+	A11_post_war_chaos_better = yes
+	add_manpower = -1000
+
+	 
+}
+}
+
+	focus = {  #A Place of Leisure...
+		id = A11_leisure_place
+		icon = GFX_A11_leisure_place
+		relative_position_id = A11_interior_minister
+
+		prerequisite = {
+			focus = A11_interior_minister
+		}
+
+		x = -2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { has_idea = neglected_government_3 }
+				swap_ideas = {
+					remove_idea = neglected_government_3
+					add_idea = neglected_government_2
+				}
+			}
+			if = {
+				limit = { has_idea = neglected_government_4 }
+				swap_ideas = {
+					remove_idea = neglected_government_4
+					add_idea = neglected_government_3
+				}
+			}
+
+			 
+		}
+	}
+
+	focus = {  #A Place of Leisure...
+	id = A11_promote_culture
+	icon = GFX_A11_promote_culture
+	relative_position_id = A11_leisure_place
+
+	prerequisite = {
+		focus = A11_leisure_place
+	}
+
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		country_event = area11.26
+		A11_Civil_Improve_Low = yes
+		add_war_support = 0.05
+
+		 
+	}
+}
+
+focus = {  #A Place of Leisure...
+id = A11_art_contests
+icon = GFX_A11_art_contests
+relative_position_id = A11_promote_culture
+
+prerequisite = {
+	focus = A11_promote_culture
+}
+
+x = -2
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+   add_political_power = 20
+   add_stability = 0.02
+	 
+}
+} 
+
+focus = {  #A Place of Leisure...
+id = A11_housing
+icon = GFX_A11_housing
+relative_position_id = A11_promote_culture
+
+prerequisite = {
+	focus = A11_promote_culture
+}
+
+x = 0
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	add_manpower = 50000
+	A11_Civil_Improve_Low = yes
+536 = {
+	add_extra_state_shared_building_slots = 2
+}
+533 = {
+	add_extra_state_shared_building_slots = 2
+}
+534 = {
+	add_extra_state_shared_building_slots = 2
+}
+535 = {
+	add_extra_state_shared_building_slots = 2
+}
+
+
+
+	 
+}
+} 
+
+focus = {
+	id = A11_slow_ethnic_cleansing
+	icon = GFX_A11_slow_ethnic_cleansing
+	relative_position_id = A11_housing
+	prerequisite = {
+		focus = A11_housing
+	}
+	prerequisite = {
+		focus = A11_art_contests
+	}
+	prerequisite = {
+		focus = A11_new_universities
+	}
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+        swap_ideas = {
+			remove_idea = cultural_repression_2
+			add_idea = cultural_repression
+		}
+		add_popularity = {
+			ideology = moderate_conservatism
+			popularity = 0.05
+		}
+		 
+	}
+}
+
+
+focus = {  #A Place of Leisure...
+id = A11_honorary_brt
+icon = GFX_A11_honorary_brt
+relative_position_id = A11_slow_ethnic_cleansing
+
+prerequisite = {
+	focus = A11_slow_ethnic_cleansing
+}
+prerequisite = {
+	focus = A11_minor_crackdowns
+}
+
+x = 2
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	country_event = area11.27
+	add_stability = 0.02
+	add_popularity = {
+		ideology =  ultra_nationalism
+		popularity = 0.05
+	}
+
+	 
+}
+}
+
+focus = {  #A Place of Leisure...
+id = A11_new_universities
+icon = GFX_A11_new_universities
+relative_position_id = A11_promote_culture
+
+prerequisite = {
+	focus = A11_promote_culture
+}
+
+x = 2
+y = 1
+
+cost = 5
+
+ai_will_do = {
+	factor = 100
+}
+
+available = {
+country_exists = A11
+A11 = { is_puppet_of = BRT }
+
+}
+
+bypass = {
+
+}
+
+cancel_if_invalid = yes
+continue_if_invalid = no
+available_if_capitulated = no
+
+search_filters = { FOCUS_FILTER_POLITICAL }
+completion_reward = {
+	A11_Civil_Improve_Low = yes
+	add_ideas = research_funds	 
+}
+} 
+
+
+
+	
+
+
+
+	
+	
+	focus = {
+		id = A11_clovis_gov
+		icon = GFX_A11_clovis_gov
+		x = 6
+		y = 0
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.20	
+			add_political_power = 50	 
+		}
+	}
+
+	focus = {
+		id = A11_smile_cam
+		icon = GFX_A11_smile_cam
+		relative_position_id = A11_clovis_gov
+		prerequisite = {
+			focus = A11_clovis_gov
+		}
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.21
+			A11_Gov_Decadence_Low = yes
+			 
+		}
+	}
+
+	focus = {
+		id = A11_bismark_legacy
+		icon = GFX_A11_bismark_legacy
+		relative_position_id = A11_clovis_gov
+		prerequisite = {
+			focus =A11_clovis_gov
+		}
+		x = -1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.22
+			add_war_support = -0.05
+			remove_ideas = economic_stagnation_A1
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_duties
+		icon = GFX_A11_duties
+		relative_position_id = A11_bismark_legacy
+		prerequisite = {
+			focus = A11_smile_cam
+		}
+		prerequisite = {
+			focus = A11_bismark_legacy
+		}
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = -50
+
+			 
+		}
+	}
+
+	
+	focus = {
+		id = A11_growing_boredom
+		icon = GFX_A11_growing_boredom
+		relative_position_id = A11_duties
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = A11_duties
+		}
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+            add_ideas = neglected_government	
+			add_stability = -0.10		 
+		}
+	}
+
+	focus = {
+		id = A11_tolerate_purists
+		icon = GFX_A11_tolerate_purists
+		relative_position_id = A11_growing_boredom
+		prerequisite = {
+			focus = A11_growing_boredom
+		}
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		has_completed_focus = A11_organised_crime
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.10
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = neglected_government_2
+					add_idea = neglected_government_3
+				}
+			}
+			A11_Army_Decadence_Medium = yes
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_corruption
+		icon = GFX_A11_corruption
+		relative_position_id = A11_growing_boredom
+		prerequisite = {
+			focus = A11_growing_boredom
+		}
+		x = 2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		has_completed_focus = A11_organised_crime
+		has_completed_focus = A11_tolerate_purists
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_post_war_chaos_worse
+			hidden_effect = {
+				A11_post_war_chaos_worse = yes
+				swap_ideas = {
+					remove_idea = neglected_government_3
+					add_idea = neglected_government_4
+				}
+			}
+			A11_Gov_Decadence_Medium = yes
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_organised_crime
+		icon = GFX_A11_organised_crime
+		relative_position_id = A11_growing_boredom
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = A11_growing_boredom
+		}
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_post_war_chaos_worse
+			hidden_effect = {
+				A11_post_war_chaos_worse = yes
+				swap_ideas = {
+					remove_idea = neglected_government
+					add_idea = neglected_government_2
+				}
+			}
+			A11_Civil_Decadence_Medium = yes
+             
+			 
+		}
+	}
+
+	focus = {
+		id = A11_partying
+		icon = GFX_A11_partying
+		relative_position_id = A11_tolerate_purists
+		prerequisite = {
+			focus = A11_organised_crime
+		}
+		prerequisite = {
+			focus = A11_corruption
+		}
+		prerequisite = {
+			focus = A11_tolerate_purists
+		}
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+    
+		   swap_ideas = {
+			remove_idea = neglected_government_4
+			add_idea = neglected_government_5
+		   }
+			 
+		}
+	}
+
+
+	focus = {
+		id = A11_pen_message
+		icon = GFX_A11_pen_message
+		relative_position_id = A11_partying
+		prerequisite = {
+			focus = A11_partying
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.23
+			 
+		}
+	}
+
+	focus = {
+		id = A11_clovis_decision
+		icon = GFX_A11_clovis_decision
+		relative_position_id = A11_pen_message
+		prerequisite = {
+			focus = A11_pen_message
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+            country_event = area11.24
+			add_political_power = 70
+			 
+		}
+	}
+
+
+
+	focus = {
+		id = A11_tokyo_bombings
+		icon = GFX_A11_tokyo_bombings
+		relative_position_id = A11_clovis_decision
+
+
+		x = 5
+		y = 4
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+			has_idea = neglected_government_end
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+			has_idea = neglected_government_end
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           custom_effect_tooltip = tokyo_bombings_tt
+			 
+		}
+	}
+
+	focus = {
+		id = A11_organise
+		icon = GFX_A11_organise
+		relative_position_id = A11_tokyo_bombings
+		prerequisite = {
+			focus = A11_tokyo_bombings
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+			check_variable = {
+				tokyo_bombings = 2
+			}
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.34
+			swap_ideas = {
+				remove_idea = neglected_government_end
+				add_idea = neglected_government_4
+			}
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+
+			 
+		}
+	}
+
+	
+	focus = {
+		id = A11_ghetto_battle_1
+		icon = GFX_A11_ghetto_battle_1
+		relative_position_id = A11_organise
+		prerequisite = {
+			focus = A11_organise
+		}
+
+		x = -2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.35
+			add_manpower = -2000
+			add_war_support = 0.04
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_ghetto_battle_2
+		icon = GFX_A11_ghetto_battle_2
+		relative_position_id = A11_organise
+		prerequisite = {
+			focus = A11_organise
+		}
+
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+			has_completed_focus = A11_ghetto_battle_1
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.36
+			add_manpower = -2500
+			add_war_support = 0.03
+
+			 
+		}
+	}
+
+	focus = {
+		id = A11_ghetto_battle_3
+		icon = GFX_A11_ghetto_battle_3
+		relative_position_id = A11_organise
+		prerequisite = {
+			focus = A11_organise
+		}
+
+		x = 2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+			has_completed_focus = A11_ghetto_battle_1
+			has_completed_focus = A11_ghetto_battle_2
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			country_event = area11.37
+			add_manpower = -5000
+			add_war_support = 0.01
+
+			 
+		}
+	}
+
+	
+	focus = {
+		id = A11_clovis_death
+		icon = GFX_A11_clovis_death
+		relative_position_id = A11_ghetto_battle_2
+		prerequisite = {
+			focus = A11_ghetto_battle_2
+		}
+		prerequisite = {
+			focus = A11_ghetto_battle_1
+		}
+		prerequisite = {
+			focus = A11_ghetto_battle_3
+		}
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			country_event = area11.38
+
+			 
+		}
+	}
+
+}	

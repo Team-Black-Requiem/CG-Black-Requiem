@@ -1,0 +1,407 @@
+sub_units = {
+
+	knightmare_mass_prod_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 2
+
+		need = {
+			knightmare_mass_prod = 50
+			landspinner_equip = 50
+			factspheres_equip = 50
+		}
+		manpower = 300
+		max_organisation = 100
+		max_strength = 4
+		default_morale = 0.4
+		training_time = 150
+		weight = 1
+		supply_consumption = 0.4
+		initiative = 0.30
+		maximum_speed = 0.4
+		soft_attack = 0.6
+
+		forest = {
+		}
+		mountain = 	{
+			movement = -0.2
+		}
+		jungle = {
+			movement = -0.3
+		}
+		marsh = {
+			movement = -0.2
+		}
+		urban = {
+			attack = 0.5
+			defence = 0.5
+		}
+		river = { 
+			attack = -0.5
+			movement = -0.5
+		}
+		plains = {
+			attack = 0.05
+			movement = 0.05
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+	}
+
+	knightmare_pol_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 2
+
+		need = {
+			knightmare_pol = 50
+			landspinner_equip = 20
+			factspheres_equip = 20
+		}
+		suppression_factor = 0.8
+		manpower = 200
+		max_organisation = 60
+		max_strength = 4
+		default_morale = 0.4
+		training_time = 100
+		weight = 1
+		supply_consumption = 0.4
+		initiative = 0.10
+		maximum_speed = 0.2
+		soft_attack = 0.5
+
+		forest = {
+		}
+		mountain = 	{
+			movement = -0.4
+		}
+		jungle = {
+			movement = -0.5
+		}
+		marsh = {
+			movement = -0.4
+		}
+		urban = {
+			attack = 0.1
+			defence = 0.1
+		}
+		river = { 
+			attack = -0.2
+			movement = -0.2
+		}
+		plains = {
+			attack = 0.03
+			movement = 0.03
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+	}
+
+
+
+	knightmare_all_pur_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 3
+
+		need = {
+			knightmare_all_pur = 100
+			landspinner_equip = 100
+			factspheres_equip = 100
+		}
+		manpower = 500
+		max_organisation = 100
+		max_strength = 5
+		default_morale = 0.4
+		training_time = 150
+		weight = 1
+		supply_consumption = 0.4
+		initiative = 0.60
+		maximum_speed = 0.5
+		soft_attack = 0.8
+
+		forest = {
+		}
+		mountain = 	{
+			movement = 0.2
+		}
+		jungle = {
+			movement = 0.3
+		}
+		marsh = {
+			movement = 0.2
+		}
+		urban = {
+			attack = 0.5
+			defence = 0.5
+		}
+		river = { 
+			attack = 0.5
+			movement = 0.5
+		}
+		plains = {
+			attack = 0.05
+			movement = 0.05
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+	}
+
+
+
+
+	knightmare_fortress_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 2
+
+		need = {
+			knightmare_fortress = 50
+			landspinner_equip = 50
+			factspheres_equip = 50
+		}
+		manpower = 300
+		max_organisation = 100
+		max_strength = 4
+		default_morale = 0.4
+		training_time = 150
+		weight = 2
+		supply_consumption = 0.6
+		initiative = 0.30
+		maximum_speed = 0.4
+		soft_attack = 0.6
+
+		forest = {
+		}
+		mountain = 	{
+			movement = -0.2
+		}
+		jungle = {
+			movement = -0.3
+		}
+		marsh = {
+			movement = -0.2
+		}
+		urban = {
+			defence = 0.5
+		}
+		river = { 
+			movement = -0.5
+		}
+		plains = {
+			movement = 0.05
+		}
+		forest = {
+			movement = -0.1
+		}
+	}
+
+	knightmare_artillery_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 2
+
+		need = {
+			knightmare_artillery = 50
+			landspinner_equip = 50
+			factspheres_equip = 50
+		}
+		manpower = 300
+		max_organisation = 100
+		max_strength = 4
+		default_morale = 0.4
+		training_time = 150
+		weight = 1
+		supply_consumption = 0.4
+		initiative = 0.30
+		maximum_speed = 0.3
+		soft_attack = 0.5
+
+		forest = {
+		}
+		mountain = 	{
+			movement = -0.5
+		}
+		jungle = {
+			movement = -0.5
+		}
+		marsh = {
+			movement = -0.5
+		}
+		urban = {
+			attack = 0.5
+			defence = 0.5
+		}
+		river = { 
+			attack = -0.5
+			movement = -0.5
+		}
+		plains = {
+			attack = 0.05
+			movement = 0.05
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+	}
+
+	knightmare_melee_unit = {
+		sprite = "knightmare_entity"
+		map_icon_category = armored
+		priority = 2510
+		ai_priority = 3510
+		active = no
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+		
+		
+
+		combat_width = 2
+
+		need = {
+			knightmare_melee = 50
+			landspinner_equip = 50
+			factspheres_equip = 50
+		}
+		manpower = 300
+		max_organisation = 100
+		max_strength = 4
+		default_morale = 0.4
+		training_time = 150
+		weight = 1
+		supply_consumption = 0.5
+		initiative = 0.40
+		maximum_speed = 0.5
+		soft_attack = 0.6
+
+		forest = {
+		}
+		mountain = 	{
+			movement = -0.2
+		}
+		jungle = {
+			movement = -0.3
+		}
+		marsh = {
+			movement = -0.2
+		}
+		urban = {
+			attack = 0.5
+			defence = 0.5
+		}
+		river = { 
+			attack = -0.5
+			movement = -0.5
+		}
+		plains = {
+			attack = 0.05
+			movement = 0.05
+		}
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+	}
+}
+

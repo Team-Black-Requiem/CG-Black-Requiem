@@ -1,0 +1,309 @@
+﻿division_template = {
+	name = "English Light Infantry"	
+
+	division_names_group = "ENG_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}	
+	support = {
+		artillery = { x = 0 y = 0 } 		
+	}
+}
+
+
+division_template = {
+	name = "English Garrison"
+
+	division_names_group = "ENG_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}	
+    support = {
+		artillery = { x = 0 y = 0 } 
+        engineer = { x = 0 y = 1 }		
+	}
+}
+
+
+division_template = {
+	name = "English Infantry Division" 		
+
+	division_names_group = "ENG_INF_01"
+
+    regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+    }
+	support = {
+		artillery = { x = 0 y = 0 } 
+	}
+}
+
+division_template = {
+	name = "English Tank Division" 		
+
+	division_names_group = "ENG_ARM_01"
+
+    regiments = {
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 1 y = 0 }
+		modern_armor = { x = 1 y = 1 }
+		Motorized = { x = 2 y = 0 }
+		Motorized = { x = 2 y = 1 }
+    }
+    
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9297
+		division_template = "English Tank Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9297
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9297
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11297
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11297
+		division_template = "English Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11297
+		division_template = "English Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6103
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6103
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6103
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 377
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 377
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 377
+		division_template = "English Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9458
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9458
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9458
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9392
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9392
+		division_template = "English Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9392
+		division_template = "English Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 5
+		progress = 0.73
+		efficiency = 50
+	}
+    	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 3
+		progress = 0.85
+		efficiency = 50
+	}
+     
+	add_equipment_production = {
+		equipment = {
+			type = eu_war_artillery
+			creator = "CHI"
+		}
+		requested_factories = 6
+		progress = 0.85
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+    }
+	
+	add_equipment_production = {
+		equipment = {
+			type = cold_war_tank_2
+			creator = "CHI"
+		}
+		requested_factories = 3
+		progress = 0.85
+		efficiency = 50
+    }
+}

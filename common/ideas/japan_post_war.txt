@@ -1,0 +1,331 @@
+ideas = {
+    country = {
+	
+		stagnant_population_6 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.50
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.10
+			stability_factor = -0.15
+			}
+		}
+
+			
+		pacific_war_scars = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.20
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		pacific_war_scars_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		pacific_war_scars_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.25
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		military_anarchy = {
+			
+			allowed = {
+				always = no
+			}
+
+			on_add = {
+                country_lock_all_division_template = yes
+            }
+
+            on_remove = {
+                country_lock_all_division_template = no
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -50
+				planning_speed = -0.15
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				custom_modifier_tooltip = JAP_Rule_no_disband_and_cant_justify_war_goal_tt
+		         
+			}
+		}
+
+		
+		military_anarchy_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			on_add = {
+                country_lock_all_division_template = yes
+            }
+
+            on_remove = {
+                country_lock_all_division_template = no
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -25
+				planning_speed = -0.1
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				custom_modifier_tooltip = JAP_Rule_no_disband_and_cant_justify_war_goal_tt
+		         
+			}
+		}
+
+		military_anarchy_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			on_add = {
+                country_lock_all_division_template = yes
+            }
+
+            on_remove = {
+                country_lock_all_division_template = no
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = -15
+				planning_speed = -0.1
+				custom_modifier_tooltip = JAP_Rule_no_disband_and_cant_justify_war_goal_tt
+		         
+			}
+		}
+
+		JAP_reconstruction_1 = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			repair_speed_industrial_complex_factor = 0.05
+			industry_free_repair_factor	= 0.05			
+            industry_repair_factor = 0.05
+
+		   }
+	   }
+
+	   
+		JAP_reconstruction_2 = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			repair_speed_industrial_complex_factor = 0.10
+			industry_free_repair_factor	= 0.10
+            industry_repair_factor = 0.10
+
+		   }
+	   }
+
+		democratic_bastion_3 = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+		   stability_factor = 0.05
+		   political_power_gain = 0.05
+		   drift_defence_factor = 0.05
+		   }
+	   }
+
+	   industrial_corporations_2 = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+		consumer_goods_factor = 0.07
+		industrial_capacity_factory = 0.15
+		production_factory_efficiency_gain_factor = -0.15
+		production_factory_max_efficiency_factor = -0.15
+		political_power_factor = -0.10
+
+		}
+	}
+
+	
+	JAP_protests_1 = {
+		
+		allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+	   stability_factor = -0.05
+	   war_support_factor = -0.05
+	   political_power_factor = -0.05
+	   }
+   }
+   JAP_protests_2 = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   stability_factor = -0.10
+   war_support_factor = -0.10
+   political_power_factor = -0.15
+   }
+}
+JAP_protests_3 = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   stability_factor = -0.15
+   war_support_factor = -0.15
+   political_power_factor = -0.15
+   }
+}
+JAP_protests_4 = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   stability_factor = -0.20
+   war_support_factor = -0.20
+   political_power_factor = -0.20
+   }
+}
+    }
+}	

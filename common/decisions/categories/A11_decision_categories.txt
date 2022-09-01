@@ -1,0 +1,60 @@
+A11_Suppression_Campaign = {
+	icon = GFX_decision_category_A11_Suppression_Campaign
+	priority = 100
+	allowed = {
+		tag = A11
+	}
+	visible_when_empty = yes
+	visible = {
+		OR = {
+
+			has_country_leader = {
+				ruling_only = yes
+				name = "Bismark Waldstein"
+			}
+
+			has_country_leader = {
+				ruling_only = yes
+				name = "Britannian Viceroy" #Temporary
+			}
+
+		}	
+	}
+	scripted_gui = a11_regime_ui
+}
+
+A11_Decadence = {
+	icon = GFX_decision_category_A11_Decadence
+	priority = 100
+	allowed = {
+		tag = A11
+	}
+	visible_when_empty = yes
+	visible = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "Clovis La Britannia" #Temporary
+			}
+	}
+	scripted_gui = a11_decadence_gui
+}
+
+A11_Geass_Research = {
+	icon = GFX_decision_category_A11_Geass_Research
+	priority = 80
+	allowed = {
+		tag = A11
+	}
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = A11_war_minister
+			has_country_leader = {
+				ruling_only = yes
+				name = "Clovis La Britannia" #Temporary
+			}
+	}
+
+	scripted_gui = a11_geass_research_gui
+}
+
+

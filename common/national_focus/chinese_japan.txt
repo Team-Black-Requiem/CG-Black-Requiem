@@ -1,0 +1,467 @@
+﻿focus_tree = {
+	id = chinese_jap_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MJA
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+
+
+	focus = {
+		id = MJA_shattered_nation
+		icon = GFX_MJA_shattered_nation
+		x = 15
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_under_boot
+		icon = GFX_MJA_under_boot
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_shattered_nation
+		prerequisite = { focus = MJA_shattered_nation }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+
+	
+	focus = {
+		id = MJA_picking_pieces
+		icon = GFX_MJA_picking_pieces
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_under_boot
+		prerequisite = { focus = MJA_under_boot }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_count_deaths
+		icon = GFX_MJA_count_deaths
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_under_boot
+		prerequisite = { focus = MJA_under_boot }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_sawasaki_republic
+		icon = GFX_MJA_sawasaki_republic
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_count_deaths
+		prerequisite = { focus = MJA_count_deaths }
+		prerequisite = { focus = MJA_picking_pieces }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_visit_china
+		icon = GFX_MJA_visit_china
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_sawasaki_republic
+		prerequisite = { focus = MJA_sawasaki_republic }
+	
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_visit_japan
+		icon = GFX_MJA_visit_japan
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_sawasaki_republic
+		prerequisite = { focus = MJA_sawasaki_republic }
+	
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_smile_tv
+		icon = GFX_MJA_smile_tv
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_sawasaki_republic
+		prerequisite = { focus = MJA_sawasaki_republic }
+	
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_national_rehabilitation_plan
+		icon = GFX_MJA_national_rehabilitation_plan
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_visit_china
+		prerequisite = { focus = MJA_visit_china }
+	    prerequisite = { focus = MJA_visit_japan }
+        prerequisite = { focus = MJA_smile_tv }
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_unification
+		icon = GFX_MJA_unification
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_national_rehabilitation_plan
+		prerequisite = { focus = MJA_national_rehabilitation_plan }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_administrative_merging
+		icon = GFX_MJA_administrative_merging
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_unification
+		prerequisite = { focus = MJA_unification }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MJA_economic_merging
+		icon = GFX_MJA_economic_merging
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = MJA
+			MJA = {
+				is_subject_of = CHI
+			}
+		}
+
+			
+		relative_position_id = MJA_unification
+		prerequisite = { focus = MJA_unification }
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+	
+
+
+
+}	

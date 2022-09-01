@@ -1,0 +1,755 @@
+ideas = {
+    country = {
+	
+	    democratic_bastion = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.15
+			political_power_gain = 0.25
+			drift_defence_factor = 0.20
+			}
+		}
+
+		democratic_bastion_2 = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+		   stability_factor = 0.10
+		   political_power_gain = 0.10
+		   drift_defence_factor = 0.05
+		   }
+	   }
+		
+		diplomacy_neutrality = {
+		
+		 	allowed = {
+				always = yes
+			}
+			
+					rule = {
+			can_join_factions = no
+			can_not_declare_war = yes
+			
+		
+		}
+		
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			war_support_factor = -0.10
+			stability_factor = 0.07
+			training_time_factor = 0.10
+			}
+		}
+		
+				
+		resource_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+            trade_opinion_factor = 0.30
+			consumer_goods_factor = -0.15
+			local_resources_factor = 0.20
+
+			}
+		}
+
+		resource_economy_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+            trade_opinion_factor = 0.20
+			consumer_goods_factor = -0.10
+			local_resources_factor = 0.20
+
+			}
+		}
+
+
+		china_advisors = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.10
+				max_planning_factor = 0.10
+			}
+		}
+
+		
+		eu_advisors = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.10
+				army_speed_factor = 0.05
+				army_attack_factor = 0.10
+			}
+		}
+		
+		
+		industrial_corporations = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = 0.15
+			production_factory_efficiency_gain_factor = -0.15
+			production_factory_max_efficiency_factor = -0.15
+			political_power_factor = -0.15
+
+			}
+		}
+		
+		stagnant_population = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.35
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = -0.05
+			}
+		}
+
+		stagnant_population_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.33
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.12
+			industrial_capacity_factory = -0.05
+			}
+		}
+
+		stagnant_population_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.30
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.13
+			industrial_capacity_factory = -0.04
+			}
+		}
+
+		
+		stagnant_population_4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.25
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.04
+			stability_factor = -0.03
+			}
+		}
+
+		stagnant_population_5 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = -0.20
+			stability_weekly_factor = -0.0010
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.10
+			stability_factor = -0.10
+			}
+		}
+
+
+		#Sakuradite Standoff
+		minerary_industry_funds = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.03
+				production_speed_sakuradite_refinery_factor = 0.05
+			}
+		}
+
+		minerary_industry_funds_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.02
+				consumer_goods_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_sakuradite_refinery_factor = 0.07
+			}
+		}
+
+		
+		minerary_industry_funds_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.07
+				production_speed_sakuradite_refinery_factor = 0.10
+			}
+		}
+
+		minerary_industry_funds_4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.10
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_sakuradite_refinery_factor = 0.15
+			}
+		}
+
+		minerary_industry_funds_5 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		minerary_industry_funds_fail = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -1.00
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		minerary_industry_funds_fail_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.50
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_speed_buildings_factor = -0.10
+			}
+		}
+
+
+		surprise_attack_jap = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.50
+				army_attack_factor = -0.20
+				army_morale_factor = -0.20
+				army_speed_factor = -0.15
+			}
+		}
+
+		surprise_attack_jap_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.25
+				army_attack_factor = -0.15
+				army_morale_factor = -0.15
+				army_speed_factor = -0.10
+			}
+		}
+
+		political_shock = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				
+			}
+		}
+
+		total_war = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				war_support_weekly = 0.01
+				army_morale_factor = 0.35
+				army_defence_factor = 0.20
+				
+			}
+		}
+
+		total_war_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				war_support_weekly = 0.05
+				army_morale_factor = 0.55
+				army_defence_factor = 0.30
+				
+			}
+		}
+
+		total_war_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+				war_support_weekly = 0.05
+				army_morale_factor = 0.45
+				army_attack_factor = 0.10
+				army_defence_factor = 0.30
+				
+			}
+		}
+
+		total_war_4 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				war_support_weekly = 0.05
+				army_morale_factor = 0.45
+				army_attack_factor = 0.10
+				army_defence_factor = 0.30
+				
+			}
+		}
+
+		total_war_5 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				army_morale_factor = 0.25
+				army_attack_factor = 0.10
+				army_defence_factor = 0.30
+				
+			}
+		}
+
+
+
+		
+	}
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+naval_manufacturer = { 
+		
+	designer = yes
+	
+	JAP_osakabe_shipyard = {
+		picture = JAP_shipyard_1
+
+		
+				
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_idea = industrial_corporations
+		}
+		
+		research_bonus = {
+			naval_equipment = 0.10
+		}
+		
+
+					
+		traits = { capital_ship_producer_offense_2 kyoto_family_5 }
+		
+	}
+
+}
+
+materiel_manufacturer = { 
+		
+	designer = yes
+	
+	JAP_kubouin_group = {
+		picture = JAP_kubouin_group
+
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_idea = industrial_corporations
+		}
+		
+		research_bonus = {
+			artillery = 0.10
+		}
+		
+	
+					
+		traits = { artillery_producer_defense_2 kyoto_family_4 }
+		
+	}
+
+}
+
+aircraft_manufacturer = { 
+		
+	designer = yes
+	
+	JAP_yoshino = {
+		picture = JAP_yoshino
+
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_idea = industrial_corporations
+		}
+		
+		research_bonus = {
+			heavy_air = 0.10
+		}
+		
+	
+					
+		traits = { bomber_producer_offense_2 kyoto_family_3 }
+		
+	}
+
+}
+
+industrial_concern = { 
+		
+	designer = yes
+	
+	JAP_munakata_dev = {
+		picture = JAP_munakata_dev
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_idea = industrial_corporations
+		}
+		
+		research_bonus = {
+			industry = 0.10
+		}
+		
+	
+					
+		traits = { industrial_manufacturer kyoto_family_2 }
+		
+	}
+
+}
+
+
+tank_manufacturer = { 
+		
+	designer = yes
+	
+	JAP_kirihara_ind = {
+		picture = JAP_kirihara_ind
+
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_idea = industrial_corporations
+		}
+		
+		research_bonus = {
+			sakuradite = 0.05
+			armor = 0.10
+		}
+		
+	
+					
+		traits = { modern_tank_manufacturer kyoto_family_1 }
+		
+	}
+
+}
+
+
+}	

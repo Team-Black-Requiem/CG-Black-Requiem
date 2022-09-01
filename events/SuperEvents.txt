@@ -1,0 +1,30 @@
+﻿##################
+# SUPER EVENTS 
+##################
+
+add_namespace = super
+
+
+country_event = {
+	id = super.1
+	title = super.1.t
+	desc = super.1.d
+	picture = GFX_report_event_diplomatic_message
+
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	timeout_days = 1
+
+	fire_only_once = yes
+
+
+	option = {
+		name = super.1.a
+		all_country = {
+       		set_country_flag = Super_Event_Visible
+        	set_country_flag = JAP_invasion
+		}
+	}
+}

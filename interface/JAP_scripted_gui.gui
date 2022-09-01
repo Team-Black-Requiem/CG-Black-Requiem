@@ -1,0 +1,85 @@
+@SENATE_TEXT_X = 105
+@HOG_TEXT_X = 20
+@HEADERS_Y = 160
+@STATUS_Y = 180
+@GOV_STATUS_Y = 200
+@HOG_Y = 260 
+@HOG_STATUS_Y = 280
+@PARTIES_STATUS_Y = 270
+@PM_STATUS_Y = 330
+@PM_Y = 350
+@PRESIDENT_STATUS_Y = 370
+@PRESIDENT_Y = 390
+@SENATE_STATUS_Y = 220
+@SENATE_Y = 240
+@COL_STATUS_X = 290
+@GOV_STATUS_X = 250
+@COL_STATUS_Y = 240
+guiTypes = {
+	containerWindowType = {
+			name = "JAP_post_war_struggle_gui_decision_ui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 275 height = 550 }
+			
+			iconType = {
+				name = "JAP_post_war_struggle_gui_competitors"
+				orientation = upper_left
+				position = { x = 0 y = 0 }
+
+			}
+
+			iconType = {
+				name = "JAP_post_war_struggle_gui_datas"
+				orientation = upper_left
+				position = { x = 0 y = 270 }
+
+			}
+
+			instantTextboxType = {
+				name = "JAP_Kururugi_influence_big"
+				position = { x = 30 y = 300 }
+				font = "hoi_30header"
+				text = JAP_Kururugi_influence_big_tt
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "JAP_Kirihara_influence_big"
+				position = { x = 270 y = 300 }
+				font = "hoi_30header"
+				text = JAP_Kirihara_influence_big_tt
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "JAP_tohdoh_influence_big"
+				position = { x = 30 y = 400 }
+				font = "hoi_30header"
+				text = JAP_tohdoh_influence_big_tt
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "JAP_pop_approval_big"
+				position = { x = 270 y = 400 }
+				font = "hoi_30header"
+				text = JAP_pop_approval_big_tt
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+	
+		}
+
+}

@@ -1,0 +1,258 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = china_fed_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+
+
+	focus = {
+		id = CHI_eunuchs_rule
+		icon = GFX_CHI_eunuchs_rule
+		x = 10
+		y = 1
+
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			country_exists = CHI
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = -0.02
+			add_ideas = {
+	CHI_Chang_idea
+	CHI_black_guy_idea
+	CHI_short_guy_idea
+	CHI_gen_eunuch_idea
+	CHI_fat_guy_idea
+}
+
+	    }
+
+	}
+		focus = {
+		id = CHI_annual_report
+		icon = GFX_CHI_annual_report
+		prerequisite = { focus = CHI_eunuchs_rule }
+		relative_position_id = CHI_eunuchs_rule 
+		x = 0
+		y = 1
+
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			country_exists = CHI
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		select_effect = {
+			country_event = { id = china_fed.1 }
+			add_political_power = 50	
+		}
+
+		completion_reward = {
+
+			custom_effect_tooltip = chi_report	
+		}
+	}
+	
+			focus = {
+		id = CHI_ignore_li
+		icon = GFX_CHI_ignore_li
+		prerequisite = { focus = CHI_annual_report }
+		relative_position_id = CHI_annual_report
+		x = 0
+		y = 1
+
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			country_exists = CHI
+			has_completed_focus = CHI_celebrate_year
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 30
+            swap_ideas = {
+				remove_idea = discontent_army
+				add_idea = discontent_army_2
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = CHI_celebrate_year
+		icon = GFX_CHI_celebrate_year
+		prerequisite = { focus = CHI_annual_report }
+		relative_position_id = CHI_annual_report
+		x = 2
+		y = 1
+
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			country_exists = CHI
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = { id = china_fed.7 }
+			add_stability = -0.02
+		}
+	}
+	
+	focus = {
+		id = CHI_annex_tinies
+		icon = GFX_CHI_annex_tinies
+		prerequisite = { focus = CHI_annual_report }
+		relative_position_id = CHI_annual_report
+		x = -2
+		y = 1
+
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			country_exists = CHI
+			has_completed_focus = CHI_ignore_li
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -0.04
+			add_political_power = 60
+			annex_country = {
+				target = BHU
+			}
+			annex_country = {
+				target = NEP
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = CHI_vacation
+		icon = GFX_CHI_vacation
+		prerequisite = { focus = CHI_annex_tinies }
+		prerequisite = { focus = CHI_celebrate_year }
+		prerequisite = { focus = CHI_ignore_li }
+		relative_position_id = CHI_ignore_li
+		x = 0
+		y = 1
+
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			country_exists = CHI
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = chi_vacation
+		}
+	}
+	
+	
+
+
+}

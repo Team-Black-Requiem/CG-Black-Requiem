@@ -1,0 +1,289 @@
+﻿capital = 483
+
+oob = "BRITANNIA"
+
+
+set_research_slots = 4
+set_stability = 0.58
+set_war_support = 0.40
+
+
+set_technology = {
+	eu_war_anti_air = 1
+	modern_spaa_1 = 1
+	infantry_weapons = 1
+	support_equip = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	armored_car1 = 1
+	mechanised_infantry = 1
+	marines = 1
+	mbt_1 = 1
+	early_frigate = 1
+	tank_design = 1
+	cold_war_tank = 1
+	eu_war_artillery = 1
+	modern_artillery_90 = 1
+	early_submarine = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_jet_design = 1
+	early_jet_design_2 = 1
+	fighter1 = 1
+	g_support1 = 1
+	bomber1 = 1
+	transport = 1
+}
+
+
+set_naval_oob = "BRITANNIA_NAVAL"
+
+
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Darwin Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Edward Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+
+	create_equipment_variant = {
+		name = "Charles Class"
+		type = carrier_1
+		upgrades = {
+			ship_deckspace_upgrade = 1
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
+
+
+
+
+create_faction = Holy_Britannian_Empire
+add_to_faction = NAN
+add_opinion_modifier = {
+    target = NAN
+    modifier = puppet_britannia
+}
+NAN = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+NAN = {
+    add_popularity = { ideology = autocracy popularity = 0.80 }
+    add_popularity = { ideology = authoritarian_democracy popularity = 0.25 }
+	add_popularity = { ideology = ultra_nationalism popularity = 0.10 }
+	add_popularity = { ideology = moderate_liberalism popularity = 0.03 }
+	add_popularity = { ideology = moderate_socialism popularity = 0.02 }
+
+    set_politics = {
+        ruling_party = autocracy
+        last_election = "1936.5.16"
+        election_frequency = 48
+        elections_allowed = no
+    }
+}
+
+
+add_opinion_modifier = {
+    target = AR2
+    modifier = puppet_britannia
+}
+
+
+add_opinion_modifier = {
+    target = A10
+    modifier = puppet_britannia
+}
+A10 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+
+add_opinion_modifier = {
+    target = AR9
+    modifier = puppet_britannia
+}
+AR9 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+add_opinion_modifier = {
+    target = AR3
+    modifier = puppet_britannia
+}
+AR3 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+
+add_opinion_modifier = {
+    target = AR7
+    modifier = puppet_britannia
+}
+AR7 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+
+add_opinion_modifier = {
+    target = AR6
+    modifier = puppet_britannia
+}
+AR6 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+add_opinion_modifier = {
+    target = AR5
+    modifier = puppet_britannia
+}
+AR5 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+
+add_opinion_modifier = {
+    target = AR8
+    modifier = puppet_britannia
+}
+AR8 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+add_opinion_modifier = {
+    target = AR4
+    modifier = puppet_britannia
+}
+AR4 = {
+add_opinion_modifier = {
+    target = BRT
+    modifier = puppet_britannia
+}
+}
+
+
+
+set_convoys = 500
+
+
+set_politics = {
+	ruling_party = autocracy
+	last_election = "1990.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	autocracy = 41
+	ultra_nationalism = 18
+	authoritarian_democracy = 22
+	moderate_conservatism = 10
+	moderate_liberalism = 2
+	moderate_socialism = 1
+	hardline_socialism = 0
+	totalitarian_socialism = 6
+}
+
+add_ideas = {
+	extreme_stratocracy
+	efficient_administration
+	legal_segregation
+	militarized_academia
+	aristocratic_families
+	army_primacy
+	financial_conglomerates
+	extensive_conscription
+	export_focus
+	partial_economic_mobilisation
+	ai_brt_war
+	rsi_phase_1
+}
+recruit_character = charles_brt
+recruit_character = aristocrats_brt
+recruit_character = brt_senior_officers
+recruit_character = brt_left_officers
+recruit_character = null_brt_far_left
+recruit_character = null_brt_left
+recruit_character = null_brt_2
+recruit_character = null_brt_1
+recruit_character = brt_bismark
+recruit_character = brt_arthur
+recruit_character = brt_esdeath
+recruit_character = Andreas_Darlton
+recruit_character = Seira_Barton
+recruit_character = Dot_Worsley
+recruit_character = Bartley_Asprius
+recruit_character = BRT_odysseus_Exotic
+recruit_character = BRT_exotic_interior_1
+recruit_character = BRT_schneizel
+recruit_character = BRT_guinevere
+recruit_character = BRT_exotic_noble_1
+recruit_character = BRT_Exotic_minister_1
+recruit_character = BRT_VV_Exotic
+recruit_character = BRT_generic_air
+recruit_character = BRT_generic_navy
+recruit_character = BRT_bismark
+recruit_character = BRT_generic_army_1
+recruit_character = BRT_monica
+recruit_character = BRT_luciano
+recruit_character = BRT_ernst
+
+
+create_navy_leader = {
+	name = "Regis Kitchener"
+	picture = "Portrait_Kitchener.dds"
+	traits = { hunter_killer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+
+
+
+

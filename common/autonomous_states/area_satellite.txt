@@ -1,0 +1,70 @@
+autonomy_state = {
+	id = area_satellite
+
+	
+	default = no
+	is_puppet = yes
+	
+	min_freedom_level = 0.7
+	
+	manpower_influence = 0.5
+	use_overlord_color = yes
+
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		units_deployed_to_overlord = yes
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+		can_be_called_to_war = yes
+		can_boost_other_ideologies = yes
+		can_create_factions = no
+		can_declare_war_on_same_ideology = yes
+		can_join_opposite_factions = no
+		can_guarantee_other_ideologies = yes
+		can_join_factions = yes
+		can_force_government = yes
+		can_lower_tension = yes
+		can_only_justify_war_on_threat_country = no
+	}
+
+
+	
+	modifier = {
+
+		stability_factor = 0.05
+		political_power_factor = 0.10
+		extra_trade_to_overlord_factor = 0.25
+		autonomy_manpower_share = 0.30
+		overlord_trade_cost_factor = -0.5
+		cic_to_overlord_factor = 0.20
+		mic_to_overlord_factor = 0.20
+		subjects_autonomy_gain = -0.100
+		can_master_build_for_us = 1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		is_in_faction_with = BRT
+	}
+	
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

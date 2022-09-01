@@ -1,0 +1,163 @@
+characters={
+	CHI_tianzi={
+		name = "Empress Tianzi"
+		portraits={
+			civilian={
+				large=GFX_portrait_Portrait_Tianzi
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_EMPRESS_TIENZI_DESC"
+			ideology=oligarchic_government
+			traits={ puppet_empress }
+			expire = "2020.1.1"
+			id=-1
+		}
+	}
+
+	
+
+
+
+	### POLITICAL ADVISORS ###
+
+
+	
+	CHI_fat_guy={
+		name=CHI_fat_guy
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_fat_guy"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = CHI_fat_guy_idea
+			allowed  = {
+				original_tag  = CHI
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = CHI
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy head_snake
+			}
+		}
+	}
+	
+	CHI_gen_eunuch ={
+		name = CHI_gen_eunuch
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_gen_eunuch"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = CHI_gen_eunuch_idea
+			allowed  = {
+				original_tag  = CHI
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = CHI
+			}
+			
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy brit_simp
+			}
+		}
+	}
+	
+		CHI_short_guy ={
+		name=CHI_short_guy
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_short_guy"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = CHI_short_guy_idea
+			allowed  = {
+				original_tag  = CHI
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = CHI
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy iron_fist
+			}
+		}
+	}
+	
+	CHI_black_guy ={
+		name=CHI_black_guy
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_black_guy"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = CHI_black_guy_idea
+			allowed  = {
+				original_tag  = CHI
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = CHI
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy corrupt_kleptocrat
+			}
+		}
+	}
+	
+	CHI_Chang ={
+		name=CHI_Chang
+		portraits={
+			civilian={
+				small="GFX_idea_CHI_Chang"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = CHI_Chang_idea
+			allowed  = {
+				original_tag  = CHI
+			}
+			traits  = {
+				triads_boss
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = CHI
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+
+}

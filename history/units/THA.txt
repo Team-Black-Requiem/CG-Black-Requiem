@@ -1,0 +1,206 @@
+﻿division_template = {
+	name = "Thai Light Infantry"	
+
+	division_names_group = "CHI_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}	
+	
+}
+
+
+division_template = {
+	name = "Thai Garrison"	
+
+	division_names_group = "CHI_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+
+}
+
+
+division_template = {
+	name = "Thai Infantry Division" 		
+
+	division_names_group = "CHI_GAR_01"
+
+    regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+    }
+
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10438
+		division_template = "Thai Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10438
+		division_template = "Thai Light Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7408
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7329
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7329
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10297
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10297
+		division_template = "Thai Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+}

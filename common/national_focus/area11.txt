@@ -1,0 +1,2777 @@
+﻿#Modifiers Variables:   demographic_chaos       economic_slump       post_war_chaos
+
+
+
+focus_tree = {
+id = area11_focus
+	
+country = {
+	factor = 0
+	modifier = {
+		add = 10
+		tag = A11
+	}
+}
+
+
+
+default = no
+
+continuous_focus_position = { x = 20 y = 2000 }
+
+
+focus = {
+	id = A11_bismark
+	icon = GFX_A11_bismark_1
+	x = 15
+	y = 0
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+         add_political_power = 100
+		 add_stability = 0.03
+
+
+		 hidden_effect = {
+			 retire_country_leader = yes
+			 add_ideas = A11_generic_minister_1_idea
+			 add_ideas = A11_generic_general_1_idea
+			 add_ideas = a11_vv_idea
+			 add_ideas = a11_bismark_idea
+		 }
+		 add_country_leader_role = {
+			character = a11_bismark
+			promote_leader = yes
+			country_leader = {
+			  ideology = paternal_autocracy
+			  expire = 2020.1.1.1
+			  traits = {  }
+			}
+		  }
+		 
+	}
+}
+
+focus = {
+	id = A11_gov_reconstruction
+	icon = GFX_A11_gov_reconstruction
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_bismark
+	prerequisite = { focus = A11_bismark }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.03
+		add_popularity = {
+			ideology = autocracy
+			popularity = 0.10
+		}
+		custom_effect_tooltip = A11_recon
+		hidden_effect = {
+			set_party_name = { 
+				ideology = ultra_nationalism
+				long_name = "Supreme Reconstruction Authority- Purists"
+				name = "SRA- Purists"
+			}
+			set_party_name = { 
+				ideology = authoritarian_democracy
+				long_name = "Supreme Reconstruction Authority- Aristocrats"
+				name = "SRA- Aristocrats"
+			}
+			set_party_name = { 
+				ideology = autocracy
+				long_name = "Supreme Reconstruction Authority- Bismark"
+				name = "SRA- Bismark"
+			}	
+		}
+
+	}
+}
+
+focus = {
+	id = A11_military_prov
+	icon = GFX_A11_military_prov
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_gov_reconstruction
+	prerequisite = { focus = A11_gov_reconstruction }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+
+		custom_effect_tooltip = A11_increase_support_medium
+		add_command_power = 100
+
+		if = {
+			limit = { has_idea = administrative_strain }
+
+			swap_ideas = {
+				remove_idea = administrative_strain
+				add_idea = administrative_strain_2 
+			}
+
+			else_if = {
+				limit = { has_idea = administrative_strain_2 }
+
+				
+			swap_ideas = {
+				remove_idea = administrative_strain_2
+				add_idea = administrative_strain_3
+			}
+			}
+		}
+
+		hidden_effect = {
+			add_to_variable = { Hokkaido_Resistance = -0.10 }
+			add_to_variable = { Kanto_Resistance = -0.10 }
+			add_to_variable = { Kansai_Resistance = -0.10 }
+		}
+
+	}
+} 
+
+focus = {
+	id = A11_brt_laws
+	icon = GFX_A11_brt_laws
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_gov_reconstruction
+	prerequisite = { focus = A11_gov_reconstruction }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+
+		country_event = {
+			id = Area11.1
+		}
+
+		if = {
+			limit = { has_idea = administrative_strain }
+
+			swap_ideas = {
+				remove_idea = administrative_strain
+				add_idea = administrative_strain_2 
+			}
+
+			else_if = {
+				limit = { has_idea = administrative_strain_2 }
+
+				
+			swap_ideas = {
+				remove_idea = administrative_strain_2
+				add_idea = administrative_strain_3
+			}
+			}
+		}
+
+	}
+} 
+
+
+focus = {
+	id = A11_ban_jap
+	icon = GFX_A11_ban_jap
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_brt_laws
+	prerequisite = { focus = A11_brt_laws }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+            add_stability = -0.15
+			add_command_power = 200
+			custom_effect_tooltip = A11_post_war_chaos_worse
+			hidden_effect = {
+				A11_post_war_chaos_worse = yes
+			}
+	}
+} 
+
+
+focus = {
+	id = A11_start_cultural_repres
+	icon = GFX_A11_start_cultural_repres
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_ban_jap
+	prerequisite = { focus = A11_ban_jap }
+	prerequisite = { focus = A11_food_supply }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          add_ideas = cultural_repression
+		  country_event = {
+	id = area11.2
+}
+	}
+
+
+} 
+
+
+focus = {
+	id = A11_police_force
+	icon = GFX_A11_police_force
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_military_prov
+	prerequisite = { focus = A11_military_prov }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+            add_manpower = 200000
+			add_stability = 0.03
+	}
+}
+
+focus = {
+	id = A11_support_brt
+	icon = GFX_A11_support_brt
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_police_force
+	prerequisite = { focus = A11_police_force }
+	prerequisite = { focus = A11_food_supply }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+           add_war_support = 0.07
+		   add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 8000
+			producer = BRT
+		}
+		add_equipment_to_stockpile = {
+			type = sp_artillery_1
+			amount = 1000
+			producer = BRT
+		}
+		add_equipment_to_stockpile = {
+			type = knightmare_mass_prod_2
+			amount = 1000
+			producer = BRT
+		}
+
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1000
+			producer = BRT
+		}
+	}
+} 
+
+
+focus = {
+	id = A11_food_supply
+	icon = GFX_A11_food_supply
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_brt_laws
+	prerequisite = { focus = A11_brt_laws }
+	prerequisite = { focus = A11_military_prov }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_demographic_chaos_better
+		hidden_effect = {
+			A11_demographic_chaos_better = yes
+		}
+           add_timed_idea = {
+			   idea = food_imports
+			   days = 120
+		   }
+	}
+} 
+
+focus = {
+	id = A11_country
+	icon = GFX_A11_country
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_support_brt
+	prerequisite = { focus = A11_start_cultural_repres }
+	prerequisite = { focus = A11_support_brt }
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+         remove_ideas = administrative_strain_3
+
+		 add_stability = 0.05
+	}
+
+}
+
+##Second Part
+
+focus = {
+	id = A11_stab_sit
+	icon = GFX_A11_stab_sit
+	x = -8
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_country
+	prerequisite = { focus = A11_country }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		A11_demographic_chaos_better = yes
+		custom_effect_tooltip = A11_demographic_chaos_better
+		country_event = {
+			id = area11.3
+		}
+	}
+}
+
+focus = {
+	id = A11_new_build_division
+	icon = GFX_A11_new_build_division
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_stab_sit
+	prerequisite = { focus = A11_stab_sit }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          swap_ideas = {
+			  remove_idea = destroyed_infratructures
+			  add_idea = destroyed_infratructures_2
+		  }
+
+		  531 = {
+			add_extra_state_shared_building_slots = 1
+		  }
+		  530 = {
+			add_extra_state_shared_building_slots = 1
+		  }
+		  282 = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		  533 = {
+			add_extra_state_shared_building_slots = 1
+		  }
+		  532 = {
+			add_extra_state_shared_building_slots = 2
+		  }
+		}
+
+}
+
+focus = {
+	id = A11_repair_infr
+	icon = GFX_A11_repair_infr
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_new_build_division
+	prerequisite = { focus = A11_new_build_division }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = destroyed_infratructures_2
+			add_idea = destroyed_infratructures_3
+		}
+		531 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		  }
+		  282 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		  }
+		  533 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		  }
+		  532 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		  }
+	}
+}
+
+focus = {
+	id = A11_ease_supplies
+	icon = GFX_A11_ease_supplies
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_repair_infr
+	prerequisite = { focus = A11_repair_infr }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+        remove_ideas = destroyed_infratructures_3
+		add_political_power = 25
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = export_focus
+		}
+	}
+	
+}
+
+focus = {
+	id = A11_open_ghettos
+	icon = GFX_A11_open_ghettos
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_new_build_division
+	prerequisite = { focus = A11_new_build_division }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		A11_demographic_chaos_better = yes
+		custom_effect_tooltip = A11_demographic_chaos_better
+		set_province_name = { id = 10444 name = "Sapporo Ruins"}
+		set_province_name = { id = 7110 name = "Fukuoka Ruins"}
+		set_province_name = { id = 9998 name = "Yokohama Ruins"}
+		add_political_power = 70
+	}
+}
+
+focus = {
+	id = A11_immigration
+	icon = GFX_A11_immigration
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_open_ghettos
+	prerequisite = { focus = A11_open_ghettos }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          add_stability = -0.10
+		  A11_demographic_chaos_better = yes
+		  A11_demographic_chaos_better = yes
+		  custom_effect_tooltip = A11_demographic_chaos_better
+		  282 = {
+			  add_manpower = 100000
+		  }
+
+		  529 = {
+			add_manpower = 50000
+		}
+	}
+}
+
+focus = {
+	id = A11_continue_repress
+	icon = GFX_A11_continue_repress
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_immigration
+	prerequisite = { focus = A11_immigration }
+	prerequisite = { focus = A11_ease_supplies }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          swap_ideas = {
+			  remove_idea = cultural_repression
+			  add_idea = cultural_repression_2
+		  }
+
+		  country_event = {
+			  id = area11.4
+		  }
+	}
+}
+
+focus = {
+	id = A11_great_sep
+	icon = GFX_A11_great_sep
+	x = 0
+	y = 3
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_continue_repress
+	prerequisite = { focus = A11_continue_repress }
+
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		hidden_effect = {
+			country_event = {
+				id = area11.5
+			}
+		}
+
+		A11_demographic_chaos_better = yes
+		A11_demographic_chaos_better = yes		  
+		A11_demographic_chaos_better = yes
+		A11_demographic_chaos_better = yes
+		custom_effect_tooltip = A11_demographic_chaos_better
+		add_stability = 0.03
+		add_war_support = 0.03
+		set_province_name = { id = 1182 name = "Tokyo Settlement"}
+	}
+}
+
+
+#Industry
+focus = {
+	id = A11_economy_ress
+	icon = GFX_A11_economy_ress
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+	has_completed_focus = A11_stab_sit
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_country
+	prerequisite = { focus = A11_country }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		A11_economic_slump_better = yes
+		custom_effect_tooltip = A11_economic_slump_better
+		country_event = {
+			id = area11.6
+		}
+	}
+}
+
+
+focus = {
+	id = A11_work_kirihara
+	icon = GFX_A11_work_kirihara
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	historical_ai = {
+		is_historical_focus_on = yes
+	}
+
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = A11_kirihara_yes
+		}	
+
+		check_variable = {
+			kirihara_buddy = 1
+		}
+
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_economy_ress
+	prerequisite = { focus = A11_economy_ress }
+
+	mutually_exclusive  = { focus = A11_brit_corp }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		A11_economic_slump_better = yes
+		custom_effect_tooltip = A11_economic_slump_better
+
+			add_ideas = a11_kirihara_idea
+		    
+	}
+
+	
+}
+
+focus = {
+	id = A11_fuji_deal
+	icon = GFX_A11_fuji_deal
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_work_kirihara
+	prerequisite = { focus = A11_work_kirihara }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+      country_event = {
+		  id = area11.7
+	  }
+	  A11_post_war_chaos_better = yes
+	  custom_effect_tooltip = A11_post_war_chaos_better
+	  add_political_power = -150
+          
+	}
+}
+
+focus = {
+	id = A11_concessions
+	icon = GFX_A11_concessions
+	x = -2
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_fuji_deal
+	prerequisite = { focus = A11_fuji_deal }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          add_ideas = jap_brit_corporations
+		  A11_economic_slump_better = yes
+		  custom_effect_tooltip = A11_economic_slump_better
+	}
+}
+
+focus = {
+	id = A11_allow_zaibatsu
+	icon = GFX_A11_allow_zaibatsu
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_fuji_deal
+	prerequisite = { focus = A11_fuji_deal }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          custom_effect_tooltip = A11_zaibatsu
+		  A11_economic_slump_better = yes
+		  custom_effect_tooltip = A11_economic_slump_better
+		  add_political_power = -20
+			  add_ideas = A11_munakata_dev
+			  add_ideas = A11_kubouin_group
+			  add_ideas = A11_kirihara_ind
+		  
+	}
+}
+
+focus = {
+	id = A11__mines
+	icon = GFX_A11__mines
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_allow_zaibatsu
+	prerequisite = { focus = A11_allow_zaibatsu }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.03
+           532 = {
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		   }
+
+		   531 = {
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 2
+				instant_build = yes
+			}
+		   }
+
+		   528 = {
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 2
+				instant_build = yes
+			}
+		   }
+	}
+}
+
+focus = {
+	id = A11_funds_brt
+	icon = GFX_A11_funds_brt
+	x = -1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11__mines
+	prerequisite = { focus = A11__mines }
+	prerequisite = { focus = A11_new_railways }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_economic_slump_better
+		A11_economic_slump_better = yes
+		add_political_power = 75
+		country_event = {
+			id = area11.8
+		}
+
+	}
+}
+
+focus = {
+	id = A11_integrate_bureau
+	icon = GFX_A11_integrate_bureau
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_funds_brt
+
+	prerequisite = { focus = A11_funds_brt }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_economic_slump_better
+		A11_economic_slump_better = yes
+		A11_economic_slump_better = yes
+		A11_economic_slump_better = yes
+		custom_effect_tooltip = A11_post_war_chaos_better
+
+			A11_post_war_chaos_better = yes
+		add_stability = 0.10
+		add_war_support = -0.05
+		
+
+	}
+}
+
+focus = {
+	id = A11_new_railways
+	icon = GFX_A11_new_railways
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_concessions
+	prerequisite = { focus = A11_concessions }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+         add_stability = 0.03
+		            532 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		   }
+
+		   531 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		   }
+
+		   528 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		   }
+	}
+}
+
+focus = {
+	id = A11_brit_corp
+	icon = GFX_A11_brit_corp
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = A11_kirihara_no
+		}
+
+		
+		check_variable = {
+			kirihara_buddy = 0
+		}
+			
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_economy_ress
+	prerequisite = { focus = A11_economy_ress }
+	mutually_exclusive = {
+		focus = A11_work_kirihara
+	}
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		A11_economic_slump_worse = yes
+		add_ideas =	a11_gen_noble_idea
+		custom_effect_tooltip = A11_economic_slump_worse
+		
+
+	}
+}
+
+focus = {
+	id = A11_nobles
+	icon = GFX_A11_nobles
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_work_kirihara
+	prerequisite = { focus = A11_work_kirihara focus = A11_brit_corp }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+        add_ideas = extreme_stratocracy_A11
+		custom_effect_tooltip = A11_generals
+	    hidden_effect = {
+			create_corps_commander = {
+				name = "Darwin Ansley"
+				portrait_path = "gfx/leaders/A11/A11_general_1.dds"
+				traits = { career_officer bearer_of_artillery }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Strudwick Barclay"
+				portrait_path = "gfx/leaders/A11/A11_general_2.dds"
+				traits = { bearer_of_artillery }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Crawford Marlow"
+				portrait_path = "gfx/leaders/A11/A11_general_3.dds"
+				traits = { inflexible_strategist }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Bradford Penley"
+				portrait_path = "gfx/leaders/A11/A11_general_4.dds"
+				traits = { media_personality infantry_officer }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			
+		}
+	}
+}
+
+focus = {
+	id = A11_crackdown_black_market
+	icon = GFX_A11_crackdown_black_market
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_nobles
+	prerequisite = { focus = A11_nobles }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+           add_stability = 0.07
+		   A11_economic_slump_worse = yes
+		   custom_effect_tooltip = A11_economic_slump_worse
+		   country_event = {
+			   id = area11.9
+		   }
+	}
+}
+
+focus = {
+	id = A11_labour_pyramid
+	icon = GFX_A11_labour_pyramid
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_crackdown_black_market
+	prerequisite = { focus = A11_crackdown_black_market }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		country_event = {
+			id = area11.10
+		}
+            swap_ideas = {
+				remove_idea = extreme_stratocracy_A11
+				add_idea = extreme_stratocracy_A11_2
+			}
+	}
+}
+
+focus = {
+	id = A11_fuji_mine
+	icon = GFX_A11_fuji_mine
+	x = 0
+	y = 2
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_labour_pyramid
+	prerequisite = { focus = A11_labour_pyramid }
+	prerequisite = { focus = A11_purge_bureau focus = A11_integrate_bureau }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		country_event = {
+			id = area11.11
+		}
+
+		532 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 5
+					instant_build = yes
+				}
+		}
+
+	}
+}
+
+focus = {
+	id = A11_no_deal
+	icon = GFX_A11_no_deal
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_brit_corp
+	prerequisite = { focus = A11_brit_corp }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_economic_slump_better
+		A11_economic_slump_better = yes
+		add_political_power = 150
+		custom_effect_tooltip = A11_brit_zaibatsu
+		country_event = {
+			id = area11.14
+		}
+
+		hidden_effect = {
+			add_ideas = A11_beswick_ind 
+			add_ideas = A11_darwin_ass
+		}
+	}
+
+}
+
+focus = {
+	id = A11_crush_kirihara
+	icon = GFX_A11_crush_kirihara
+	x = 2
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_no_deal
+	prerequisite = { focus = A11_no_deal }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_post_war_chaos_better
+		A11_post_war_chaos_better = yes
+		add_ideas = brit_corporations
+	}
+}
+
+focus = {
+	id = A11_seize_assets
+	icon = GFX_A11_seize_assets
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_crush_kirihara
+	prerequisite = { focus = A11_crush_kirihara }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+        add_manpower = -5000
+		add_stability = -0.07
+		282 = {
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+
+530 = {
+add_building_construction = {
+	type = arms_factory
+	level = 2
+	instant_build = yes
+}
+}
+
+536 = {
+add_building_construction = {
+	type = arms_factory
+	level = 2
+	instant_build = yes
+}
+}
+
+534 = {
+	add_building_construction = {
+		type = arms_factory
+		level = 3
+		instant_build = yes
+	}
+	}
+
+	}
+}
+
+focus = {
+	id = A11_forced_labour
+	icon = GFX_A11_forced_labour
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_no_deal
+	prerequisite = { focus = A11_no_deal }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		custom_effect_tooltip = A11_economic_slump_better
+		A11_economic_slump_better = yes
+		add_manpower = 70000
+		add_stability = -0.03
+		country_event = {
+			id = area11.13
+		}
+	}
+}
+
+focus = {
+	id = A11_civil_industry
+	icon = GFX_A11_civil_industry
+	x = 0
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	
+	country_exists = A11
+	A11 = { is_puppet_of = BRT }
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	relative_position_id = A11_forced_labour
+	prerequisite = { focus = A11_forced_labour }
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+          add_stability = 0.02
+		  532 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		   }
+
+		   531 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		   }
+
+		   528 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		   }
+	}
+
+}
+
+
+	focus = {
+		id = A11_force_kaguya_underground
+		icon = GFX_A11_force_kaguya_underground
+		x = -1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_seize_assets
+		prerequisite = { focus = A11_seize_assets }
+		prerequisite = { focus = A11_civil_industry }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_post_war_chaos_better
+			A11_post_war_chaos_better = yes
+			country_event = {
+				id = area11.12
+			}
+		}
+    }
+
+	focus = {
+		id = A11_purge_bureau
+		icon = GFX_A11_purge_bureau
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_force_kaguya_underground
+
+		prerequisite = { focus = A11_force_kaguya_underground }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = A11_economic_slump_better
+			A11_economic_slump_better = yes
+			A11_economic_slump_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+	
+				A11_post_war_chaos_better = yes
+
+				add_stability = -0.10
+				add_war_support = 0.05
+		}
+    }
+
+	##Third Part
+
+	focus = {
+		id = A11_order
+		icon = GFX_A11_order
+		x = 8
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+		has_completed_focus = A11_stab_sit
+		has_completed_focus = A11_economy_ress
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_country
+		prerequisite = { focus = A11_country }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.16
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+		}
+	}
+
+	focus = {
+		id = A11_secret_police
+		icon = GFX_A11_secret_police
+		x = -1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_order
+		prerequisite = { focus = A11_order }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+            add_war_support = -0.05
+	       282 = {
+			add_resistance = -10    
+		   }
+
+		   563 = {
+			add_resistance = -10    
+		   }
+
+		   528 = {
+			add_resistance = -10    
+		   }
+
+		   531 = {
+			add_resistance = -10    
+		   }
+		}
+	}
+
+	focus = {
+		id = A11_martial_law
+		icon = GFX_A11_martial_law
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_order
+		prerequisite = { focus = A11_order }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			add_ideas = A11_martial_law_idea_1
+
+			282 = {
+				add_resistance = -20   
+			   }
+	
+			   563 = {
+				add_resistance = -20    
+			   }
+	
+		}
+	}
+
+	focus = {
+		id = A11_cleansing
+		icon = GFX_A11_cleansing
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_secret_police
+		prerequisite = { focus = A11_secret_police }
+		prerequisite = { focus = A11_martial_law }
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+
+
+			add_manpower = 50000
+			country_event = area11.17
+			hidden_effect = { load_oob = "A11_GARRISON"}
+			custom_effect_tooltip = A11_new_garrisons
+			
+	
+		}
+	}
+
+	focus = {
+		id = A11_chaos_south
+		icon = GFX_A11_chaos_south
+		x = -2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_cleansing
+		prerequisite = { focus = A11_cleansing }
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_reinforce_control_kyushu = yes   
+			add_war_support = 0.03
+			528 = {
+                add_resistance = -5
+			}	
+		}
+	}
+
+	focus = {
+		id = A11_chaos_north
+		icon = GFX_A11_chaos_north
+		x = 2
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_cleansing
+		prerequisite = { focus = A11_cleansing }
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_reinforce_control_hokkaido = yes   
+			add_war_support = 0.03
+			536 = {
+                add_resistance = -5
+			}
+		}
+	}
+
+	focus = {
+		id = A11_chaos_cities
+		icon = GFX_A11_chaos_cities
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_cleansing
+		prerequisite = { focus = A11_cleansing }
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_reinforce_control_kanto = yes   
+			add_war_support = 0.03
+			282 = {
+                add_resistance = -5
+			}
+		}
+	}
+
+
+	focus = {
+		id = A11_starve_them
+		icon = GFX_A11_starve_them
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_chaos_south
+		prerequisite = { focus = A11_chaos_south }
+		prerequisite = { focus = A11_chaos_cities }
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = area11.18
+			532 = {
+                add_manpower = -10000
+				set_garrison_strength = 10
+			}
+			530 = {
+                add_manpower = -15000
+				set_garrison_strength = 10
+			}
+			533 = {
+                add_manpower = -10000
+				set_garrison_strength = 10
+			}
+			528 = {
+                add_manpower = -10000
+				set_garrison_strength = 10
+			}
+	
+		}
+	}
+
+
+	focus = {
+		id = A11_repulse_guard
+		icon = GFX_A11_repulse_guard
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_starve_them
+		prerequisite = { focus = A11_starve_them }
+
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+
+			add_political_power = 50
+			add_war_support = 0.05
+	
+		}
+	}
+
+	focus = {
+		id = A11_death_penalties
+		icon = GFX_A11_death_penalties
+		x = 3
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_chaos_south
+		prerequisite = { focus = A11_chaos_north }
+		prerequisite = { focus = A11_chaos_cities }
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 200
+	          swap_ideas = {
+				remove_idea = A11_martial_law_idea_1
+				add_idea = A11_martial_law_idea_2
+			  }
+		}
+	}
+
+	
+	focus = {
+		id = A11_raze_campaigns 
+		icon = GFX_A11_raze_campaigns 
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_death_penalties
+		prerequisite = { focus = A11_death_penalties }
+
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			535 = {
+                remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			534 = {
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			943 = {
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			536 = {
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+	
+		}
+	}
+
+	focus = {
+		id = A11_oper_lazarus
+		icon = GFX_A11_oper_lazarus
+		x = 1
+		y = 2
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = A11_cleared_regions
+			}
+		check_variable = { tot_cleared_regions > 5 }
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_repulse_guard
+		prerequisite = { focus = A11_repulse_guard }
+		prerequisite = { focus = A11_raze_campaigns }
+
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_mission = A11_Suppression_Campaign
+			A11_post_war_chaos_better = yes
+			custom_effect_tooltip = A11_post_war_chaos_better
+
+	          country_event = area11.19
+			  add_stability = 0.15
+			  add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = A11_retirement_bismark
+		icon = GFX_A11_retirement_bismark
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_fuji_mine
+		prerequisite = { focus = A11_great_sep }
+		prerequisite = { focus = A11_fuji_mine }
+		prerequisite = { focus = A11_oper_lazarus }
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_dynamic_modifier = {
+				modifier = economic_collapse_area_11
+			}
+			add_ideas = economic_stagnation_A11
+		}
+
+	}
+
+	focus = {
+		id = A11_open_civ_govern
+		icon = GFX_A11_open_civ_govern
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_retirement_bismark
+		prerequisite = { focus = A11_retirement_bismark }
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = {
+			  id = area11.15
+			}
+			add_stability = 0.025
+			add_command_power = 50
+		}
+	}
+
+	focus = {
+		id = A11_nominate_clovis
+		icon = GFX_A11_nominate_clovis
+		x = 0
+		y = 1
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		available = {
+		
+		country_exists = A11
+		A11 = { is_puppet_of = BRT }
+	
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		relative_position_id = A11_open_civ_govern
+		prerequisite = { focus = A11_open_civ_govern }
+
+
+	
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			load_focus_tree = area11_focus_2
+	        retire_country_leader = yes
+			hidden_effect = {
+				A11_decadence_setup = yes
+				remove_dynamic_modifier = {
+					modifier = demographic_death_area_11
+				}
+				add_ideas = a11_clovis_idea
+				remove_ideas = a11_bismark_idea
+				A11 = {
+				555 = {
+				add_compliance = 80 
+			    }
+				536 = {
+					add_compliance = 80 
+				}
+				533 = {
+						add_compliance = 80 
+				}
+				534 = {
+					add_compliance = 80 
+				}
+				535 = {
+					add_compliance = 80 
+				}
+				532 = {
+					add_compliance = 80 
+				}
+				531 = {
+					add_compliance = 80 
+				}
+				529 = {
+					add_compliance = 80 
+				}
+				530 = {
+					add_compliance = 80 
+				}
+				528 = {
+					add_compliance = 80 
+				}
+				526 = {
+					add_compliance = 80 
+				}
+				282 = {
+					add_compliance = 80 
+				}
+				944 = {
+					add_compliance = 80 
+				}
+				943 = {
+					add_compliance = 80 
+				}
+				942 = {
+					add_compliance = 80 
+				}
+			    }
+
+				set_party_name = { 
+					ideology = ultra_nationalism
+					long_name = "Britannian Governorship-Radicals"
+					name = "Britannian Governorship-Radicals"
+				}
+				set_party_name = { 
+					ideology = authoritarian_democracy
+					long_name = "Britannian Governorship-Aristocrats"
+					name = "Britannian Governorship-Aristocrats"
+				}
+				set_party_name = { 
+					ideology = autocracy
+					long_name = "Britannian Governorship"
+					name = "Britannian Governorship"
+				}
+				set_party_name = { 
+					ideology = moderate_conservatism
+					long_name = "Britannian Governorship-Kyoto House"
+					name = "Britannian Governorship-Kyoto House"
+				}	
+			}
+			add_country_leader_role = {
+				character = a11_clovis
+				promote_leader = yes
+				country_leader = {
+				  ideology = paternal_autocracy
+				  expire = 2020.1.1.1
+				  traits = {  }
+				}
+			  }
+		
+		}
+	}
+
+
+
+
+}
+

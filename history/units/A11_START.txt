@@ -1,0 +1,241 @@
+﻿air_wings = {
+	282 = { 
+		CAS_equipment_1 = { 
+			owner = "BRT" 
+			amount = 100
+			start_experience_factor = 0.2 #optional, otherwise starts with 0 expereince
+		}
+	}
+	282 = {
+		fighter_equipment_0 = { 
+			owner = "BRT"  
+			amount = 50	
+			start_experience_factor = 0.5	
+		}		
+	}
+}
+
+
+
+
+division_template = {
+	name = "Britannian Garrison"	
+
+	division_names_group = BRT_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+
+	}
+
+	support = {
+		military_police = {
+			x = 0
+			y = 0
+		}
+	}
+}
+
+
+units = {
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10125
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7072
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7110
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1092
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6994
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10444
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10125
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7072
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7110
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1092
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6994
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+	division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10444
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+		division= {	
+		#name = "1st Britannian Garrison"
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1182
+		division_template = "Britannian Garrison"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+
+
+	
+
+
+	
+	
+	
+
+
+
+}
+
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BRT"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 100
+	}
+
+}

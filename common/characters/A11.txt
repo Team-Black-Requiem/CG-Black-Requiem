@@ -1,0 +1,557 @@
+characters={
+    ##GOVERNORS
+	
+	local_clique_1={
+		name = "Local Cliques"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=marxist_lincolnism
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+	
+
+	local_clique_2={
+		name = "Local Cliques"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=left_libertarianism
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	local_clique_3={
+		name = "Local Cliques"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=social_democracy
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	local_clique_4={
+		name = "Local Cliques"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=social_democracy
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	local_clique_5={
+		name = "Local Cliques"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=social_liberalism
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	ind_groups={
+		name = "Industrial Groups"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=national_conservatism
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+
+	brt_army={
+		name = "Senior Officers"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=purist_aristocracy
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	A11_aristocrats={
+		name = "Aristocrats"
+		portraits={
+			civilian={
+				large=GFX_idea_A11_viceroy
+			}
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=oligarchic_government
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+
+
+	A11_clovis={
+		name = "Clovis La Britannia"
+		portraits={
+			civilian={
+				large="GFX_portrait_A11_clovis"
+				small="GFX_idea_A11_clovis"
+			}
+		}
+		advisor={
+			cost=2000
+			slot = head_of_government
+			idea_token = a11_clovis_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy artist_prince
+			}
+		}
+	}
+
+	A11_viceroy_2={
+		name = "Emergency Government"
+		portraits={
+			civilian={
+				large="GFX_portrait_A11_viceroy"
+
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_AREA_DESC"
+			ideology=paternal_autocracy
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+
+	A11_viceroy={
+		name = "Britannian Viceroy"
+		portraits={
+			civilian={
+				large="GFX_portrait_A11_viceroy"
+
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_AREA_DESC"
+			ideology=paternal_autocracy
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+
+
+	#GENERALS
+	a11_bismark={
+		name=a11_bismark
+		portraits={
+			army={
+				large="GFX_portrait_A11_bismark"		
+			}
+			civilian={
+				small="GFX_idea_a11_bismark"	
+				large="GFX_portrait_A11_bismark"
+			}
+		}
+		field_marshal={
+			traits={ absolute_prediction brilliant_strategist aggressive_assaulter }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=-1
+		}
+
+		advisor={
+				cost = 2000
+			slot = head_of_government
+			idea_token = a11_bismark_idea
+			allowed = {
+				original_tag = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			traits = {
+				autocracy_guy knight_one
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+
+
+
+	### POLITICAL ADVISORS ###
+
+
+	a11_vv={
+		name=a11_vv
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_VV"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = a11_vv_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				geass_connections
+			}
+		}
+	}
+
+	a11_gen_noble={
+		name=a11_gen_noble
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_noble_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = a11_gen_noble_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy corrupt_kleptocrat
+			}
+		}
+	}
+	a11_kirihara={
+		name=a11_kirihara
+		portraits={
+			civilian={
+				small="GFX_idea_A11_kirihara"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = a11_kirihara_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy kyoto_house
+			}
+		}
+	}
+
+	A11_generic_general_1={
+		name=A11_generic_general_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_general_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = A11_generic_general_1_idea
+			allowed  = {
+				original_tag =A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy iron_fist
+			}
+		}
+	}
+
+	A11_generic_general_2={
+		name=A11_generic_general_2
+		portraits={
+			civilian={
+				small="GFX_idea_A11_generic_general_2"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = A11_generic_general_2_idea
+			allowed  = {
+				original_tag =A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy balanced_fist
+			}
+		}
+	}
+
+	A11_generic_minister_1 ={
+		name=A11_generic_minister_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_minister_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = A11_generic_minister_1_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy purist_simpaty
+			}
+		}
+	}
+
+	A11_Aspirius ={
+		name=A11_Aspirius
+		portraits={
+			civilian={
+				small="GFX_idea_A11_Aspirius"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = A11_Aspirius_idea
+			allowed  = {
+				original_tag  = A11
+			}
+			traits  = {
+			     autocracy_guy geass_connections
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = A11
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+
+
+	#Military Advisors
+	
+	A11_generic_air={
+		name=A11_generic_air 
+		portraits={
+			army={
+				small="GFX_idea_A11_generic_air"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = A11_generic_air_idea
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
+	}
+
+
+	A11_generic_navy={
+		name=A11_generic_navy
+		portraits={
+			army={
+				small="GFX_idea_A11_generic_navy"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = A11_generic_navy_idea
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	A11_gen_general_1={
+		name=A11_gen_general_1
+		portraits={
+			army={
+				small="GFX_idea_A11_gen_general_1"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = A11_gen_general_1_idea
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+				army_chief_old_guard
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	A11_gen_general_2={
+		name=A11_gen_general_2
+		portraits={
+			army={
+				small="GFX_idea_A11_gen_general_2"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = A11_gen_general_2_idea
+			ledger = army
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+				army_chief_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	A11_gen_general_3={
+		name=A11_gen_general_3
+		portraits={
+			army={
+				small="GFX_idea_A11_gen_general_3"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = A11_gen_general_3_idea
+			ledger = army
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	A11_gen_general_4={
+		name=A11_gen_general_4
+		portraits={
+			army={
+				small="GFX_idea_A11_gen_general_4"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = A11_gen_general_4_idea
+			ledger = army
+			allowed = {
+				original_tag = A11
+			}
+			traits = {
+			    army_logistics_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+
+}

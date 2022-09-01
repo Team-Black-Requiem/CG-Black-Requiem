@@ -1,0 +1,2594 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = britannia_guinevere
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = BRT
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = BRT_guinevere_triumph
+		icon = GFX_BRT_guinevere_triumph
+		x = 10
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.44
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_expel_schneizel
+		icon = GFX_BRT_expel_schneizel
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_guinevere_triumph }
+		relative_position_id = BRT_guinevere_triumph
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				retire_character = BRT_schneizel
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_reward_purists
+		icon = GFX_BRT_reward_purists
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_guinevere_triumph }
+		relative_position_id = BRT_guinevere_triumph
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_push_back_knights
+		icon = GFX_BRT_push_back_knights
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_reward_purists }
+		relative_position_id = BRT_reward_purists
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_compromise_cult
+		icon = GFX_BRT_compromise_cult
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_guinevere_triumph }
+		relative_position_id = BRT_guinevere_triumph
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.46
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_fuck_odysseus
+		icon = GFX_BRT_fuck_odysseus
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_compromise_cult }
+		relative_position_id = BRT_compromise_cult
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.47
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+	focus = {
+		id = BRT_ignore_charles
+		icon = GFX_BRT_ignore_charles
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+		prerequisite = { focus = BRT_expel_schneizel }
+		prerequisite = { focus = BRT_push_back_knights }
+
+		prerequisite = { focus = BRT_fuck_odysseus }
+
+		relative_position_id = BRT_expel_schneizel
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.48
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_many_enemies
+		icon = GFX_BRT_many_enemies
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_ignore_charles }
+
+		relative_position_id = BRT_ignore_charles
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity{
+				ideology = ultra_nationalism
+				popularity = 0.20
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_few_friends
+		icon = GFX_BRT_few_friends
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_ignore_charles }
+
+		relative_position_id = BRT_ignore_charles
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				retire_character = brt_bismark
+				retire_character = Bartley_Asprius
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		#I changed the name of this focus, since I thought it was
+		#incompatible with Guinevere's style. This rapresents now 
+		#an attempt by the lady to subjugate the military to her
+		#personal rule and strip the Knights of their command
+		#Hence, it will lead to the coup attempt.
+		id = BRT_pass_anti_rebellion_laws
+		icon = GFX_BRT_pass_anti_rebellion_laws
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_many_enemies }
+		prerequisite = { focus = BRT_few_friends }
+
+
+		relative_position_id = BRT_many_enemies
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_something_bad_coming
+		icon = GFX_BRT_something_bad_coming
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_pass_anti_rebellion_laws }
+
+
+		relative_position_id = BRT_pass_anti_rebellion_laws
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.49
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {    
+		id = BRT_battle_for_pendragon
+		icon = GFX_BRT_battle_for_pendragon
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_something_bad_coming }
+
+
+		relative_position_id = BRT_something_bad_coming
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.50
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	
+	focus = {
+		id = BRT_arm_citizens
+		icon = GFX_BRT_arm_citizens
+		x = -3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_battle_for_pendragon }
+
+
+		relative_position_id = BRT_battle_for_pendragon
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.51
+		  hidden_effect = {
+		}
+		}
+	}
+
+		
+	focus = {
+		id = BRT_loyal_units
+		icon = GFX_BRT_loyal_units
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_battle_for_pendragon }
+
+
+		relative_position_id = BRT_battle_for_pendragon
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.52
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_blind_royal_palace
+		icon = GFX_BRT_blind_royal_palace
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_battle_for_pendragon }
+
+
+		relative_position_id = BRT_battle_for_pendragon
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.53
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+		
+	focus = {
+		id = BRT_call_governor
+		icon = GFX_BRT_call_governor
+		x = 3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_battle_for_pendragon }
+
+
+		relative_position_id = BRT_battle_for_pendragon
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.54
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_dustle_settles
+		icon = GFX_BRT_dustle_settles
+		x = -3
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+		prerequisite = { focus = BRT_arm_citizens }
+		prerequisite = { focus = BRT_loyal_units }
+		prerequisite = { focus = BRT_blind_royal_palace }
+		prerequisite = { focus = BRT_call_governor }
+
+
+
+		relative_position_id = BRT_call_governor
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.55
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+
+	focus = {
+		id = BRT_internal_war
+		icon = GFX_BRT_internal_war
+		x = 23
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		
+
+
+		available = {		
+		country_exists = BRT
+		has_completed_focus = BRT_dustle_settles
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.40
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_speech_nation
+		icon = GFX_BRT_speech_nation
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_internal_war }
+
+
+
+		relative_position_id = BRT_internal_war
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.45
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_indoctrinate_osi
+		icon = GFX_BRT_indoctrinate_osi
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_internal_war }
+
+
+
+		relative_position_id = BRT_internal_war
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity{
+				ideology = autocracy
+				popularity = 0.1
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_people_militia
+		icon = GFX_BRT_people_militia
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_internal_war }
+
+
+
+		relative_position_id = BRT_internal_war
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = G_Youth_Militias
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_declare_witch_hunt
+		icon = GFX_BRT_declare_witch_hunt
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = BRT_speech_nation }
+		prerequisite = { focus = BRT_people_militia }
+
+		prerequisite = { focus = BRT_indoctrinate_osi }
+
+
+
+
+		relative_position_id = BRT_speech_nation
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity{
+				ideology = ultra_nationalism
+				popularity = -0.05
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	
+	focus = {
+		id = BRT_enemy_everywhere
+		icon = GFX_BRT_enemy_everywhere
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_declare_witch_hunt }
+
+
+
+
+		relative_position_id = BRT_declare_witch_hunt
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.56
+		  hidden_effect = {
+			BRT = {
+				add_ideas = BRT_Purge_Army
+				add_ideas = BRT_Purge_Navy
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_purge_navy
+		icon = GFX_BRT_purge_navy
+		x = 2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_enemy_everywhere }
+
+
+
+
+		relative_position_id = BRT_enemy_everywhere
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = BRT_Purge_Navy_Phase_2
+				remove_idea = BRT_Purge_Navy
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_favour_young_cadres
+		icon = GFX_BRT_favour_young_cadres
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_navy }
+
+
+
+
+		relative_position_id = BRT_purge_navy
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = BRT_Purge_Navy_Phase_3
+				remove_idea = BRT_Purge_Navy_Phase_2
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_control_ports
+		icon = GFX_BRT_control_ports
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_favour_young_cadres }
+
+
+
+
+		relative_position_id = BRT_favour_young_cadres
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = BRT_Purge_Navy_Phase_4
+				remove_idea = BRT_Purge_Navy_Phase_3
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_compromise_rogue_admirals
+		icon = GFX_BRT_compromise_rogue_admirals
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_control_ports }
+
+
+
+
+		relative_position_id = BRT_control_ports
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			retire_character = BRT_generic_navy
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_limit_navy_authority
+		icon = GFX_BRT_limit_navy_authority
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_compromise_rogue_admirals }
+
+
+
+
+		relative_position_id = BRT_compromise_rogue_admirals
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = BRT_Purge_Navy_Phase_5
+				remove_idea = BRT_Purge_Navy_Phase_4
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_navy_conquered
+		icon = GFX_BRT_navy_conquered
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_limit_navy_authority }
+
+
+
+
+		relative_position_id = BRT_limit_navy_authority
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				add_stability = 0.05
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_purge_government
+		icon = GFX_BRT_purge_government
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_enemy_everywhere }
+
+
+
+
+		relative_position_id = BRT_enemy_everywhere
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_charles_house_arrest
+		icon = GFX_BRT_charles_house_arrest
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_government }
+
+
+
+
+		relative_position_id = BRT_purge_government
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.57
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		
+		id = BRT_guinevere_deal_cult
+		icon = GFX_BRT_guinevere_deal_cult
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_government }
+
+
+
+
+		relative_position_id = BRT_purge_government
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.58
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_intimidate_senate
+		icon = GFX_BRT_intimidate_senate
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_guinevere_deal_cult }
+		prerequisite = { focus = BRT_charles_house_arrest }
+
+
+
+
+
+		relative_position_id = BRT_guinevere_deal_cult
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = -100
+			BRT = {
+				add_popularity = {
+					ideology = autocracy
+					popularity = 0.20
+				}
+			}
+			
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_hunt_down_schneizel_supp
+		icon = GFX_BRT_hunt_down_schneizel_supp
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_intimidate_senate }
+
+
+
+
+
+		relative_position_id = BRT_intimidate_senate
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.30
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_loyalty_not_meritocracy
+		icon = GFX_BRT_loyalty_not_meritocracy
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_hunt_down_schneizel_supp }
+
+
+
+
+
+		relative_position_id = BRT_hunt_down_schneizel_supp
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_pendragon_conquered
+		icon = GFX_BRT_pendragon_conquered
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_loyalty_not_meritocracy }
+
+
+
+
+
+		relative_position_id = BRT_loyalty_not_meritocracy
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.30
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_purge_army
+		icon = GFX_BRT_purge_army
+		x = 5
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_enemy_everywhere }
+
+
+
+
+		relative_position_id = BRT_enemy_everywhere
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				swap_ideas = {
+				add_idea = BRT_Purge_Army_Phase_2
+				remove_idea = BRT_Purge_Army
+			}
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_execute_knights
+		icon = GFX_BRT_execute_knights
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_army }
+
+
+
+
+		relative_position_id = BRT_purge_army
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_bribe_luciano
+		icon = GFX_BRT_bribe_luciano
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_army }
+
+
+
+
+		relative_position_id = BRT_purge_army
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_shuffle_high_command
+		icon = GFX_BRT_shuffle_high_command
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_execute_knights }
+		prerequisite = { focus = BRT_bribe_luciano }
+
+
+
+
+
+		relative_position_id = BRT_execute_knights
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = BRT_Purge_Army_Phase_3
+				remove_idea = BRT_Purge_Army_Phase_2
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+	focus = {
+		id = BRT_purge_officer_corp
+		icon = GFX_BRT_purge_officer_corp
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_shuffle_high_command }
+
+
+
+
+
+		relative_position_id = BRT_shuffle_high_command
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_hunt_left_purists
+		icon = GFX_BRT_hunt_left_purists
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_shuffle_high_command }
+
+
+
+
+
+		relative_position_id = BRT_shuffle_high_command
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_brown_purist_dominance
+		icon = GFX_BRT_brown_purist_dominance
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_hunt_left_purists }
+
+		prerequisite = { focus = BRT_purge_officer_corp }
+
+
+
+
+		relative_position_id = BRT_hunt_left_purists
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				add_idea = BRT_Purge_Army_Phase_4
+				remove_idea = BRT_Purge_Army_Phase_3
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_deport_honorary_brit
+		icon = GFX_BRT_deport_honorary_brit
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_brown_purist_dominance }
+
+
+
+
+		relative_position_id = BRT_brown_purist_dominance
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				remove_ideas = legal_segregation
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_army_conquered
+		icon = GFX_BRT_army_conquered
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_deport_honorary_brit }
+
+
+
+
+		relative_position_id = BRT_deport_honorary_brit
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			BRT = {
+				add_war_support = 0.3
+			}
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	
+	focus = {
+		id = BRT_declare_internal_war_end
+		icon = GFX_BRT_declare_internal_war_end
+		x = -5
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_army_conquered }
+		prerequisite = { focus = BRT_navy_conquered }
+
+		prerequisite = { focus = BRT_pendragon_conquered }
+
+		prerequisite = { focus = BRT_empire_consolidated }
+
+
+
+
+
+		relative_position_id = BRT_army_conquered
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = BRT.59
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+	focus = {
+		id = BRT_purge_bureucracy
+		icon = GFX_BRT_purge_bureucracy
+		x = -4
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_enemy_everywhere }
+
+
+
+
+		relative_position_id = BRT_enemy_everywhere
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+	
+	focus = {
+		id = BRT_brazil_problem
+		icon = GFX_BRT_brazil_problem
+		x = -2
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_bureucracy }
+
+
+
+
+		relative_position_id = BRT_purge_bureucracy
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_rely_other_areas
+		icon = GFX_BRT_rely_other_areas
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_brazil_problem }
+
+
+
+
+		relative_position_id = BRT_brazil_problem
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_expeditionary_corp
+		icon = GFX_BRT_expeditionary_corp
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_rely_other_areas }
+
+
+
+
+		relative_position_id = BRT_rely_other_areas
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_atlantic_blockade
+		icon = GFX_BRT_atlantic_blockade
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_expeditionary_corp }
+
+
+
+
+		relative_position_id = BRT_expeditionary_corp
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_attack_brazil
+		icon = GFX_BRT_attack_brazil
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_atlantic_blockade }
+
+
+
+
+		relative_position_id = BRT_atlantic_blockade
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_empire_consolidated
+		icon = GFX_BRT_empire_consolidated
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_northen_campaign }
+		prerequisite = { focus = BRT_attack_brazil }
+
+
+
+
+
+		relative_position_id = BRT_attack_brazil
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_governors_loyalty
+		icon = GFX_BRT_governors_loyalty
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_purge_bureucracy }
+
+
+
+
+		relative_position_id = BRT_purge_bureucracy
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_break_resistance
+		icon = GFX_BRT_break_resistance
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_governors_loyalty }
+
+
+
+
+		relative_position_id = BRT_governors_loyalty
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_crush_east_coast
+		icon = GFX_BRT_crush_east_coast
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_break_resistance }
+
+
+
+
+		relative_position_id = BRT_break_resistance
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+	focus = {
+		id = BRT_great_lake_campaign
+		icon = GFX_BRT_great_lake_campaign
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_crush_east_coast }
+
+
+
+
+		relative_position_id = BRT_crush_east_coast
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+	focus = {
+		id = BRT_northen_campaign
+		icon = GFX_BRT_northen_campaign
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		prerequisite = { focus = BRT_great_lake_campaign }
+
+
+
+
+		relative_position_id = BRT_great_lake_campaign
+
+
+		
+
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  hidden_effect = {
+		}
+		}
+	}
+
+
+
+
+
+
+
+
+}
+
+

@@ -1,0 +1,1239 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = britannia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRT
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+
+	focus = {
+		id = VV_situation
+		icon = GFX_VV_situation
+		x = 15
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			          country_event = BRT.13
+		  hidden_effect = {
+			BRT = {
+				activate_advisor = BRT_VV_
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = court_intrigues
+		icon = GFX_court_intrigues
+		x = 13
+		y = 0
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+            country_event = BRT.14
+			hidden_effect = {
+		}
+		}
+	}
+
+    	focus = {
+		id = BRT_assassination
+		icon = GFX_BRT_assassination
+		x = 14
+		y = 1
+
+		prerequisite = { focus = court_intrigues }
+		prerequisite = { focus = VV_situation }
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+		check_variable = { mar_dead > mar_alive }
+
+		}
+
+		bypass = {
+		check_variable = { mar_dead > mar_alive }
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+		}
+	}
+	
+				focus = {
+		id = BRT_evidence
+		icon = GFX_BRT_evidence
+		prerequisite = { focus = BRT_assassination }
+		relative_position_id = BRT_assassination
+		
+		x = -1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				hidden_effect = {
+		news_event = { id = news.1 days = 45 }
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_evidence"
+		add_command_power = 75
+		add_stability = 0.02
+		}
+	}
+	
+	
+					focus = {
+		id = BRT_investigating
+		icon = GFX_BRT_investigating
+		prerequisite = { 
+		focus = BRT_assassination 
+		}
+		relative_position_id = BRT_assassination
+		x = 1
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		country_event = { id = BRT.2 }
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_investigating"
+		}
+	}
+	
+						focus = {
+		id = BRT_case_unsolved
+		icon = GFX_BRT_case_unsolved
+		prerequisite = { focus = BRT_investigating }
+		prerequisite = { focus = BRT_evidence }
+		relative_position_id = BRT_assassination
+
+
+		
+		x = 0
+		y = 2
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_case_unsolved"
+		add_political_power = -100
+		country_event = { id = BRT.3 }
+		}
+	}
+	
+	
+		focus = {
+		id = BRT_continue_plan
+		icon = GFX_BRT_continue_plan
+		prerequisite = { focus = BRT_case_unsolved }
+		relative_position_id = BRT_assassination
+
+		x = 0
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+		country_event = { id = BRT.4 }
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_continue_plan"
+		}
+	}
+
+	focus = {
+		id = BRT_KN_dev
+		icon = GFX_BRT_KN_dev
+		prerequisite = { focus = BRT_continue_plan }
+		relative_position_id = BRT_assassination
+
+		x = 4
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.01
+			add_tech_bonus = {
+				bonus = 0.9
+				uses = 2
+				category = knightmare_mass_production
+			}
+
+		}
+	}
+
+	focus = {
+		id = BRT_KN_module_1
+		icon = GFX_BRT_KN_module_1
+		prerequisite = { focus = BRT_KN_dev }
+		relative_position_id = BRT_assassination
+
+		x = 2
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.01
+			add_tech_bonus = {
+				bonus = 0.9
+				uses = 1
+				category = knightmare_mass_production
+			}
+
+		}
+	}
+
+	focus = {
+		id = BRT_KN_module_2
+		icon = GFX_BRT_KN_module_2
+		prerequisite = { focus = BRT_KN_dev }
+		relative_position_id = BRT_assassination
+
+		x = 4
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		has_completed_focus = BRT_KN_module_1
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.01
+			add_tech_bonus = {
+				bonus = 0.9
+				uses = 1
+				category = knightmare_mass_production
+			}
+
+		}
+	}
+
+	focus = {
+		id = BRT_KN_ashford
+		icon = GFX_BRT_KN_ashford
+		prerequisite = { focus = BRT_KN_module_1 }
+		prerequisite = { focus = BRT_KN_module_2 }
+		prerequisite = { focus = BRT_KN_module_3 }
+		relative_position_id = BRT_assassination
+
+		x = 4
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+		has_tech = knightmare_frame_3
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = BRT_gen_tank_man_2
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = BRT_KN_old_guard
+		icon = GFX_BRT_KN_old_guard
+		prerequisite = { focus = BRT_KN_ashford }
+
+		relative_position_id = BRT_assassination
+
+		x = 4
+		y = 8
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				add_ideas = BRT_bismark_idea
+				hidden_effect = {
+                        remove_ideas = BRT_generic_army_1_idea
+				}	
+			   
+
+			   add_command_power = -50
+			   add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = BRT_KN_glasgow
+		icon = GFX_BRT_KN_glasgow
+		prerequisite = { focus = BRT_KN_old_guard }
+
+		relative_position_id = BRT_assassination
+
+		x = 4
+		y = 10
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+			country_exists = BRT
+			has_tech = knightmare_frame_4
+	
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = kn_template
+			custom_effect_tooltip = kn_deploy
+			hidden_effect = {
+				load_oob = "deploy_knightmares"
+			}
+		}
+	}
+
+	focus = {
+		id = BRT_KN_module_3
+		icon = GFX_BRT_KN_module_3
+		prerequisite = { focus = BRT_KN_dev }
+		relative_position_id = BRT_assassination
+
+		x = 6
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_completed_focus = BRT_KN_module_2
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.01
+			add_tech_bonus = {
+				bonus = 0.9
+				uses = 1
+				category = knightmare_mass_production
+			}
+
+		}
+	}
+	
+		focus = {
+		id = BRT_foreign_situation
+		icon = GFX_BRT_foreign_situation
+		prerequisite = { focus = BRT_continue_plan }
+		relative_position_id = BRT_assassination
+
+		x = -4
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		check_variable = { diplomacy = 1 }
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+	     log = "[GetDateText]: [Root.GetName]: Focus BRT_foreign_situation"
+		add_political_power = 10
+		}
+	}
+	
+			focus = {
+		id = BRT_troops
+		icon = GFX_BRT_troops
+		prerequisite = { focus = BRT_foreign_situation }
+		relative_position_id = BRT_assassination
+
+		x = -3
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 log = "[GetDateText]: [Root.GetName]: Focus BRT_troops"
+		navy_experience = 50
+		
+		JAP = {
+			  add_opinion_modifier = {
+    target = BRT
+    modifier = aggressive
+	}
+}
+		
+	}
+	}
+
+	
+	
+	
+					focus = {
+		id = BRT_bombings
+		icon = GFX_BRT_bombings
+		prerequisite = { focus = BRT_foreign_situation }
+        relative_position_id = BRT_assassination
+
+		x = -5
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+						hidden_effect = {
+		news_event = { id = news.2 days = 5 }
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_bombings"
+		air_experience = 50
+		add_political_power = 35
+		
+		damage_building = {
+    type = infrastructure
+    damage = 4
+	province = 10265
+      }
+	 
+	 CHI = {
+	  add_opinion_modifier = {
+    target = BRT
+    modifier = surprise_attack
+}
+		}
+		}
+	}
+	
+	focus = {
+		id = BRT_army
+		icon = GFX_BRT_army
+		prerequisite = { focus = BRT_bombings }
+		prerequisite = { focus = BRT_troops }
+		relative_position_id = BRT_assassination
+
+		x = -4
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+		
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		custom_effect_tooltip = philippine_mission
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_army"
+		country_event = { id = BRT.5 }
+						hidden_effect = {
+	     CHI = {
+         end_puppet = PHI
+           }
+		   
+		    PHI = {
+         leave_faction = yes
+           }
+        }
+		}
+	}
+	
+		focus = {
+		id = BRT_oriental
+		icon = GFX_BRT_oriental
+		relative_position_id = BRT_assassination
+
+		prerequisite = { focus = BRT_army }
+
+		x = -4
+		y = 8
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+        check_variable = { blockade = 1 }
+		}
+
+		bypass = {
+         check_variable = { blockade = 1 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_oriental"
+		add_stability = -0.03
+		add_war_support = 0.02
+		}
+	}
+	
+			focus = {
+		id = BRT_diplomacy
+		icon = GFX_BRT_diplomacy
+		prerequisite = { focus = BRT_oriental }
+		relative_position_id = BRT_assassination
+
+		x = -4
+		y = 9
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_diplomacy"
+		country_event = { id = BRT.8 }
+		}
+	}
+	
+				focus = {
+		id = BRT_protectionism
+		icon = GFX_BRT_protectionism
+		prerequisite = { focus = BRT_oriental }
+		relative_position_id = BRT_assassination
+
+		x = -6
+		y = 9
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = export_focus
+				add_idea = limited_exports
+			}
+			add_stability = -0.03
+		
+		}
+	}
+	
+					focus = {
+		id = BRT_aid_MON_rebels
+		icon = GFX_BRT_aid_MON_rebels
+		prerequisite = { focus = BRT_oriental }
+		relative_position_id = BRT_assassination
+
+		x = -2
+		y = 9
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = BRT
+			}
+			CHI = {
+              add_stability = -0.05
+			  add_popularity = {
+				ideology = moderate_socialism
+				popularity = 0.04
+			}
+
+			}
+		
+		}
+	}
+	
+						focus = {
+		id = BRT_block_sup
+		icon = GFX_BRT_block_sup
+		prerequisite = { focus = BRT_protectionism }
+		prerequisite = { focus = BRT_diplomacy }
+		prerequisite = { focus = BRT_aid_MON_rebels }
+		relative_position_id = BRT_assassination
+
+		x = -4
+		y = 10
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {	
+		country_exists = BRT
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_threat = 5
+			add_command_power = 50
+		}
+	}
+	
+	focus = {
+		id = BRT_war
+		icon = GFX_BRT_war
+		prerequisite = { focus = BRT_block_sup }
+		prerequisite = { focus = BRT_laziness_odysseus }
+		prerequisite = { focus = BRT_KN_glasgow }
+        relative_position_id = BRT_assassination
+
+		x = -0
+		y = 11
+
+		cost = 6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {	
+		country_exists = BRT
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				load_focus_tree = britannia_focus_2
+				set_country_flag = JAP_invasion
+				set_country_flag = Super_Event_Visible
+			}	
+	        declare_war_on = {
+             target = JAP
+	        type = annex_everything
+            }
+            JAP = {
+		      country_event = {
+			   id = JAP.11
+		       }
+            }
+	    }
+	}
+	
+		
+							focus = {
+		id = BRT_domestic_front
+		icon = GFX_BRT_domestic_front
+		prerequisite = { focus = BRT_continue_plan }
+		relative_position_id = BRT_assassination
+
+
+		x = 0
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+         check_variable = { home = 1 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_domestic_front"
+		add_political_power = 10
+		}
+	}
+	
+	
+								focus = {
+		id = BRT_reassure_family
+		icon = GFX_BRT_reassure_family
+		prerequisite = { focus = BRT_domestic_front }
+		relative_position_id = BRT_assassination
+
+
+		x = 0
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_reassure_family"
+		add_manpower = -2
+		custom_effect_tooltip = lelouch_exiled
+								hidden_effect = {
+	     country_event = { id = BRT.9 }
+        }
+
+		}
+	}
+	
+
+		
+	
+	
+									focus = {
+		id = BRT_control_purists
+		icon = GFX_BRT_control_purists
+		prerequisite = { focus = BRT_reassure_family }
+		relative_position_id = BRT_assassination
+
+
+		x = 0
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_control_purists"
+		add_political_power = -50
+				 add_popularity = {
+    ideology = ultra_nationalism
+    popularity = -0.04
+}
+add_popularity = {
+    ideology = totalitarian_socialism
+    popularity = -0.04
+}
+		}
+	}
+	
+									focus = {
+		id = BRT_nobility_ties
+		icon = GFX_BRT_nobility_ties
+		prerequisite = { focus = BRT_control_purists }
+		relative_position_id = BRT_assassination
+
+
+		x = 0
+		y = 8
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRT_nobility_ties"
+		add_offsite_building = { type = arms_factory level = 2 }
+		add_offsite_building = { type = industrial_complex level = 2 }
+				 add_popularity = {
+    ideology = authoritarian_democracy
+    popularity = 0.02
+}
+		}
+	}
+
+	focus = {
+		id = BRT_laziness_odysseus
+		icon = GFX_BRT_laziness_odysseus
+		prerequisite = { focus = BRT_nobility_ties }
+		relative_position_id = BRT_assassination
+
+
+		x = 0
+		y = 9
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		
+		country_exists = BRT
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.01
+			add_stability = 0.01
+			add_political_power = 10
+
+		}
+	}
+	
+	
+
+
+
+
+}
+
+
+
+focus_tree = {
+	id = britannia_proper
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRT
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+}

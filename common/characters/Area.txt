@@ -1,0 +1,239 @@
+characters={
+    ##GOVERNORS
+	
+	aristocrats_brt={
+		name = "Aristocrats"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=oligarchic_government
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	right_officers_brt={
+		name = "Senior Officers"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=iper-nationalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	null_brt_1={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=social_conservatism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	null_brt_2={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=social_liberalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	null_brt_3={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=social-capitalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	null_brt_4={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=orthodox_socialism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	officers_brt_5={
+		name = "Young Officers"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=hardline_communism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+
+
+
+	### POLITICAL ADVISORS ###
+
+
+	
+	BRT_generic_general_1={
+		name=BRT_generic_general_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_general_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = BRT_generic_general_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy iron_fist
+			}
+		}
+	}
+	
+	BRT_odysseus ={
+		name = BRT_odysseus
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_odysseus"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = BRT_odysseus_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy mediocre_prince
+			}
+		}
+	}
+
+	
+	BRT_generic_noble_1 ={
+		name=BRT_generic_noble_1 
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_noble_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = BRT_generic_noble_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy corrupt_kleptocrat
+			}
+		}
+	}
+	
+	BRT_generic_minister_1 ={
+		name=BRT_generic_minister_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_minister_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = BRT_generic_minister_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy purist_simpaty
+			}
+		}
+	}
+	
+	BRT_VV ={
+		name=BRT_VV
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_VV"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = BRT_VV_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			traits  = {
+				geass_connections
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+
+}

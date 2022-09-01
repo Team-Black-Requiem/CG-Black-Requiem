@@ -1,0 +1,1774 @@
+﻿
+add_namespace = BRT
+
+country_event = {
+	id = BRT.100
+	title = BRT.100.t
+	desc = BRT.100.d
+	fire_only_once = yes
+	trigger = {
+		tag = BRT
+		BRT = {
+			is_ai = yes
+			has_war_with = JAP
+		}
+	}
+	hidden = yes
+    mean_time_to_happen = { days = 16 }
+
+	
+	option = {
+		name = BRT.100.a
+		load_oob = "Britannia_take_japan"
+    }
+}
+
+country_event = {
+	id = BRT.101
+	title = BRT.101.t
+	desc = BRT.101.d
+	fire_only_once = yes
+	trigger = {
+		tag = BRT
+		BRT = {
+			is_ai = yes
+			has_war_with = PHI
+		}
+	}
+	hidden = yes
+    mean_time_to_happen = { days = 16 }
+
+	
+	option = {
+		set_technology = {
+			knightmare_frame_4 = 1
+		}
+		set_technology = {
+			knightmare_frame_3 = 1
+		}
+		set_technology = {
+			landspinner = 1
+		}
+		set_technology = {
+			factspheres = 1
+		}
+		name = BRT.101.a
+		load_oob = "Britannia_take_philippines"
+    }
+}
+
+country_event = {  #death of Marianne
+	id = BRT.1
+	title = BRT.1.t
+	desc = BRT.1.d
+	picture = GFX_BRT_marianne_dead
+	fire_only_once = yes
+	trigger = { 
+		has_completed_focus = court_intrigues
+		has_completed_focus = VV_situation
+     }
+    mean_time_to_happen = { days = 5 }
+	
+	
+	option = {
+		name = BRT.1.a
+		add_political_power = -50
+		add_manpower = -1
+				add_popularity = {
+    ideology = ultra_nationalism
+    popularity = 0.03
+	}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		hidden_effect = {
+	     set_variable = {
+	     var = mar_dead
+	     value = 10
+         }
+         set_variable = {
+	     var = mar_alive
+	     value = 5
+         }
+        }
+    }     
+}
+
+country_event = {  
+	id = BRT.2
+	title = BRT.2.t
+	desc = BRT.2.d
+	picture = GFX_BRT_geass
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	
+	
+	option = {
+	   
+		name = BRT.2.a
+         
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+}      
+
+country_event = {  
+	id = BRT.3
+	title = BRT.3.t
+	desc = BRT.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	
+	
+	option = {
+	    
+		
+		name = BRT.3.a
+        
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+	
+}
+
+country_event = {  #case closed
+	id = BRT.4
+	title = BRT.4.t
+	desc = BRT.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	
+	
+	option = {
+	    
+		name = BRT.4.a
+        
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		hidden_effect = {
+	    	set_variable = {
+	    	var = home
+	    	value = 1
+        	}
+		}
+	}
+	
+	option = {
+	    
+		name = BRT.4.b
+        
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		hidden_effect = {
+			set_variable = {
+			var = diplomacy
+			value = 1
+			}
+
+        }
+	} 
+} 
+
+country_event = {  
+	id = BRT.5
+	title = BRT.5.t
+	desc = BRT.5.d
+	picture = GFX_BRT_invasion
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	
+	
+	option = {
+		
+		name = BRT.5.a
+		add_war_support = 0.10
+		add_political_power = 35
+		declare_war_on = {
+			target = PHI
+			type = annex_everything
+		}
+		
+		set_country_flag = BRT_PHI_WAR
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		
+    } 
+	
+}
+
+country_event = {  
+	id = BRT.6
+	title = BRT.6.t
+	desc = BRT.6.d
+	picture = GFX_BRT_chi_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	 
+	
+	
+		option = {	
+		name = BRT.6.b
+		add_political_power = -50
+		add_popularity = {
+    ideology = autocracy
+    popularity = -0.10
+	}
+		white_peace = PHI
+				 						hidden_effect = {
+	     CHI = {
+         puppet = PHI
+          }
+		  PHI = {
+    add_popularity = { ideology = autocracy popularity = 0.80 }
+    add_popularity = { ideology = authoritarian_democracy popularity = 0.25 }
+	add_popularity = { ideology = ultra_nationalism popularity = 0.10 }
+	add_popularity = { ideology = moderate_liberalism popularity = 0.03 }
+	add_popularity = { ideology = moderate_socialism popularity = 0.02 }
+
+    set_politics = {
+        ruling_party = autocracy
+        last_election = "1936.5.16"
+        election_frequency = 48
+        elections_allowed = no
+    }
+ }
+
+        }
+		
+		ai_chance = {
+			factor = 80
+		}
+		
+		
+    }
+
+	option = {	
+		name = BRT.6.a
+		add_political_power = 50
+		add_popularity = {
+    ideology = autocracy
+    popularity = 0.05
+	}
+	declare_war_on = {
+		target = CHI
+		type = annex_everything
+	}
+		
+		ai_chance = {
+			factor = 0
+		}
+		
+		
+    }
+	
+}
+
+country_event = {  
+	id = BRT.7
+	title = BRT.7.t
+	desc = BRT.7.d
+
+	fire_only_once = yes
+
+	trigger = { 
+
+	check_variable = { oriental_incident = 1 }
+    
+	}
+    mean_time_to_happen = { days = 1 }
+	
+	
+	option = {
+		name = BRT.7.a
+		add_timed_idea = {
+    idea = economic_isolation
+    days = 200
+ }
+
+	CHI = {
+			add_opinion_modifier = {
+		target = BRT
+		modifier = total_blockade
+	}
+	}
+
+
+	JAP = {
+			add_opinion_modifier = {
+		target = BRT
+		modifier = total_blockade
+	}
+	}
+
+	FRA = {
+			add_opinion_modifier = {
+		target = BRT
+		modifier = total_blockade
+	}
+	}
+
+					hidden_effect = {
+
+			news_event = { id = news.3 days = 5 }
+			
+			set_variable = {
+			var = blockade
+			value = 1
+			}
+
+			}
+			
+			ai_chance = {
+				factor = 100
+			}
+
+		}     
+}
+
+country_event = {  
+	id = BRT.8
+	title = BRT.8.t
+	desc = BRT.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	 
+	
+	
+		option = {	
+		name = BRT.8.a
+		add_political_power = -50
+        RUS = {	
+         transfer_state = 650
+
+		}
+		
+		swap_ideas = {
+    remove_idea = economic_isolation
+    add_idea = economic_isolation_2
+ }
+		ai_chance = {
+			factor = 80
+		}
+		
+		
+    }
+	
+	
+			option = {	
+		name = BRT.8.b
+		add_political_power = 50
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+	
+}
+
+country_event = {  #exile the Vi Britannias
+	id = BRT.9
+	title = BRT.9.t
+	desc = BRT.9.d
+	picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	 
+	
+	
+		option = {	
+		name = BRT.9.a
+
+		ai_chance = {
+			factor = 100
+		}
+		
+		
+    }
+	
+	
+}
+
+country_event = {  #Total victory against Japan - Establish Area
+	id = BRT.10
+	title = BRT.10.t
+	desc = BRT.10.d
+	picture = GFX_BRT_area_11
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    mean_time_to_happen = { days = 1 }
+	 
+	
+	
+		option = {
+		name = BRT.10.a
+		load_focus_tree = britannia_focus_2
+
+	
+		
+
+		ai_chance = {
+			factor = 50
+		}
+		
+		hidden_effect = { 
+			BRT_post_war_struggle = yes
+
+
+		A11 = {
+			inherit_technology = BRT
+			set_variable = { A11_Chosen_State = 1 }
+			BRT = {
+	set_autonomy = {
+		target = A11
+		autonomous_state = area_reformation
+	}
+	}
+		##Dynamic Initial Modifiers
+		set_variable = {
+			var = post_war_chaos
+			value = 0
+		}
+
+		A11_resistance_setup = yes
+		
+		set_variable = {
+			var = economic_slump
+			value = 0
+		}	
+
+		set_variable = {
+			var = demographic_chaos
+			value = 0
+		}	
+		add_dynamic_modifier = { modifier = rampant_chaos_area_11 scope = A11 }
+		add_dynamic_modifier = { modifier = economic_collapse_area_11 scope = A11 }
+		add_dynamic_modifier = { modifier = demographic_death_area_11 scope = A11 }
+
+		########
+		transfer_state = 555
+		transfer_state = 536
+		transfer_state = 533
+		transfer_state = 534
+		transfer_state = 535
+		transfer_state = 532
+		transfer_state = 531
+		transfer_state = 529
+		transfer_state = 530
+		transfer_state = 528
+		transfer_state = 526
+		transfer_state = 282
+		transfer_state = 944
+		transfer_state = 943
+		transfer_state = 942
+		load_oob = "A11_START"
+		load_oob = "A11_NAVAL"
+		}
+		
+	}	
+
+    }
+	option = {	
+		name = BRT.10.b
+		load_focus_tree = britannia_focus_2
+
+		ai_chance = {
+			factor = 0
+		}
+		
+		hidden_effect = {
+			BRT_post_war_struggle = yes 
+	
+		A11 = {
+			BRT = {
+				set_autonomy = {
+					target = A11
+					autonomous_state = area_reformation
+				}
+			}
+			inherit_technology = BRT
+			set_variable = { A11_Chosen_State = 1 }
+			A11_resistance_setup = yes
+				##Dynamic Initial Modifiers
+				set_variable = {
+					var = post_war_chaos
+					value = 0
+				}
+				
+				set_variable = {
+					var = economic_slump
+					value = 0
+				}	
+		
+				set_variable = {
+					var = demographic_chaos
+					value = 0
+				}	
+		
+				add_dynamic_modifier = { modifier = rampant_chaos_area_11 scope = A11 }
+				add_dynamic_modifier = { modifier = economic_collapse_area_11 scope = A11 }
+				add_dynamic_modifier = { modifier = demographic_death_area_11 scope = A11 }
+				########
+
+		transfer_state = 555
+		transfer_state = 536
+		transfer_state = 533
+		transfer_state = 534
+		transfer_state = 535
+		transfer_state = 532
+		transfer_state = 531
+		transfer_state = 529
+		transfer_state = 530
+		transfer_state = 528
+		transfer_state = 526
+		transfer_state = 282
+		transfer_state = 944
+		transfer_state = 943
+		transfer_state = 942
+		load_oob = "A11_START"
+		load_oob = "A11_NAVAL"
+		}
+		
+		
+
+		 A11 = { change_tag_from = BRT }
+		}	
+    }
+}
+
+country_event = { #War has exceeded time limit.
+	id = BRT.11
+	title = BRT.11.t
+	desc = BRT.11.d
+
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {days = 1}
+
+	option = {
+		name = BRT.11.a
+		hidden_effect = {
+			custom_effect_tooltip = war_continue_brt	
+			set_variable = {
+				jap_continue_war = 1
+			}
+		}
+	}
+
+	option = {
+		name = BRT.11.b
+		
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			JAP = {country_event = {id = JAP.13 days = 1}}	
+
+		}
+	}
+}
+
+country_event = { #Post-Truce Effects on Britannia
+	id = BRT.12
+	title = BRT.12.t
+	desc = BRT.12.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRT.12.a
+	}
+}
+
+country_event = { #VV Things
+	id = BRT.13
+	title = BRT.13.t
+	desc = BRT.13.d
+
+	picture = GFX_BRT_VV_things
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRT.13.a
+		BRT = {
+			activate_advisor = BRT_VV_Exotic
+		}
+	}
+}
+
+country_event = { #Pendragon's Intrigues
+id = BRT.14
+title = BRT.14.t
+desc = BRT.14.d
+
+is_triggered_only = yes
+fire_only_once = yes
+
+option = {
+	name = BRT.14.a
+	BRT = {
+		activate_advisor = BRT_exotic_interior_1
+	}
+	BRT = {
+		activate_advisor = BRT_odysseus_Exotic
+	}
+}
+}
+
+
+country_event = {  #Odysseus is no more
+	id = BRT.15
+	title = BRT.15.t
+	desc = BRT.15.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+		name = BRT.15.a
+		completion_reward = {
+			BRT = {
+				retire_character = BRT_odysseus_Exotic
+			}
+		add_stability = -0.05
+		add_political_power = -30
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	}	
+	
+}
+
+
+country_event = {  #Struggle Begins
+	id = BRT.16
+	title = BRT.16.t
+	desc = BRT.16.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+		name = BRT.16.a
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	
+	
+}
+
+
+country_event = {  #Diplomatic Field
+	id = BRT.17
+	title = BRT.17.t
+	desc = BRT.17.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+		name = BRT.17.a
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	
+	
+}
+
+country_event = {  #Political Field
+	id = BRT.19
+	title = BRT.19.t
+	desc = BRT.19.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+		name = BRT.19.a
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	
+	
+}
+country_event = {  #Economic Field
+	id = BRT.18
+	title = BRT.18.t
+	desc = BRT.18.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+		name = BRT.18.a
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	
+	
+}
+
+
+country_event = {  #Paris Meeting
+	id = BRT.20
+	title = BRT.20.t
+	desc = BRT.20.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+	
+		name = BRT.20.a
+		add_command_power = 50	
+		add_popularity = {
+			ideology = moderate_conservatism
+			popularity = 0.02
+		}
+
+		BRT = {	
+		diplomatic_relation = {
+			country = FRA
+			relation = non_aggression_pact
+			active = yes
+		}
+	    }
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+	
+	
+}
+
+
+country_event = {  #Luoyang Meeting
+	id = BRT.21
+	title = BRT.21.t
+	desc = BRT.21.d
+	#picture = GFX_BRT_lelouch_exiled
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	 
+	
+	
+		option = {	
+
+		add_command_power = 50	
+		name = BRT.21.a
+
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = 0.02
+		}
+   
+
+		BRT = {	
+		diplomatic_relation = {
+			country = CHI
+			relation = non_aggression_pact
+			active = yes
+		}
+	    }
+
+		ai_chance = {
+			factor = 20
+		}
+		
+		
+    }
+
+}
+
+	
+country_event = {  #Purist Discussions
+id = BRT.22
+title = BRT.22.t
+desc = BRT.22.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.22.a
+
+	BRT_schneizel_influence_low = yes
+	add_popularity = {
+		ideology = ultra_nationalism
+		popularity = -0.02
+	}
+	add_stability = 0.01
+
+	ai_chance = {
+		factor = 80
+	}
+	
+	
+}
+
+option = {	
+
+	
+	name = BRT.22.b
+
+	BRT_guinevere_influence_low = yes
+
+	add_popularity = {
+		ideology = ultra_nationalism
+		popularity = 0.02
+	}
+	add_war_support = 0.01
+
+	ai_chance = {
+		factor = 20
+	}
+	
+	
+}
+
+
+	
+	
+}
+
+
+country_event = {  #Area Discussion
+id = BRT.23
+title = BRT.23.t
+desc = BRT.23.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.23.a
+
+	BRT_schneizel_influence_low = yes
+	AR4 = {
+		add_stability = 0.02
+	}
+	AR5 = {
+		add_stability = 0.02
+	}
+	AR6 = {
+		add_stability = 0.02
+	}
+
+	ai_chance = {
+		factor = 80
+	}
+	
+	
+}
+
+option = {	
+
+	
+	name = BRT.23.b
+
+	BRT_guinevere_influence_low = yes
+	AR4 = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = BRT
+		}
+	}
+	AR5 = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = BRT
+		}
+	}
+	AR6 = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = BRT
+		}
+	}
+
+	ai_chance = {
+		factor = 20
+	}
+	
+	
+}
+
+
+	
+	
+}
+
+
+	
+country_event = {  #Purist Discussions
+id = BRT.24
+title = BRT.24.t
+desc = BRT.24.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.24.a
+
+	BRT_schneizel_influence_low = yes
+	add_political_power = -20
+
+	ai_chance = {
+		factor = 70
+	}
+	
+	
+}
+
+option = {	
+
+	
+	name = BRT.24.b
+
+	BRT_guinevere_influence_low = yes
+
+	add_political_power = 20
+
+	ai_chance = {
+		factor = 20
+	}
+	
+	
+}
+
+
+	
+	
+}
+
+
+
+country_event = {  #Buy Britannian!
+id = BRT.25
+title = BRT.25.t
+desc = BRT.25.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.25.a
+
+	ai_chance = {
+		factor = 70
+	}
+	
+	
+}
+
+	
+	
+}
+
+
+country_event = {  #Science and Economics
+id = BRT.26
+title = BRT.26.t
+desc = BRT.26.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.26.a
+
+	ai_chance = {
+		factor = 70
+	}
+	
+	
+}
+
+	
+	
+}
+
+
+
+country_event = {  
+id = BRT.27
+title = BRT.27.t
+desc = BRT.27.d
+#picture = GFX_BRT_lelouch_exiled
+
+fire_only_once = yes
+is_triggered_only = yes
+
+ 
+
+
+	option = {	
+
+	
+	name = BRT.27.a
+
+	if = {
+		limit = { check_variable = {
+			schneizel_power > guinevere_power
+		} }
+
+		country_event = BRT.28
+	}
+
+
+	if = {
+		limit = { check_variable = {
+			schneizel_power < guinevere_power
+		} }
+
+		country_event = BRT.29
+	}
+
+
+
+	ai_chance = {
+		factor = 70
+	}
+	
+	
+	}
+
+}
+
+
+country_event = {   #Schneizel Wins
+	id = BRT.28
+	title = BRT.28.t
+	desc = BRT.28.d
+	#picture = GFX_BRT_lelouch_exiled
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	 
+	
+	
+		option = {	
+	
+		
+		name = BRT.28.a
+		hidden_effect = {
+			load_focus_tree = britannia_schneizel
+			add_ideas = brown_purists_part_1
+			add_ideas = red_purists_part_1
+		}
+
+	
+		
+	
+		ai_chance = {
+			factor = 70
+		}
+		
+		
+	}
+	
+		
+		
+	}
+
+
+	country_event = {   #Guinevere Wins
+	id = BRT.29
+	title = BRT.29.t
+	desc = BRT.29.d
+	#picture = GFX_BRT_lelouch_exiled
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	 
+	
+	
+		option = {	
+	
+		
+		name = BRT.29.a
+		hidden_effect = {
+			load_focus_tree = britannia_guinevere
+		}
+
+	
+		
+	
+		ai_chance = {
+			factor = 70
+		}
+		
+		
+	}
+}
+
+
+    country_event = {   #Schnizel's Assension
+    id = BRT.30
+    title = BRT.30.t
+    desc = BRT.30.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRT.30.a	
+
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+country_event = {   #Support Knights
+id = BRT.31
+title = BRT.31.t
+desc = BRT.31.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.31.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Charles Talk
+id = BRT.32
+title = BRT.32.t
+desc = BRT.32.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.32.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Deal Guinevere
+id = BRT.33
+title = BRT.33.t
+desc = BRT.33.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.33.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Endorsment Odysseus
+id = BRT.34
+title = BRT.34.t
+desc = BRT.34.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.34.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Rule Supreme
+id = BRT.35
+title = BRT.35.t
+desc = BRT.35.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.35.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #National Security
+id = BRT.36
+title = BRT.36.t
+desc = BRT.36.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.36.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Forign Policy
+id = BRT.37
+title = BRT.37.t
+desc = BRT.37.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.37.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Prep for Great Homecoming
+id = BRT.38
+title = BRT.38.t
+desc = BRT.38.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.38.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Funding Russian Loyalists
+id = BRT.39
+title = BRT.39.t
+desc = BRT.39.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.39.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Send Monica
+id = BRT.40
+title = BRT.40.t
+desc = BRT.40.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.40.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Stir up Separatists
+id = BRT.41
+title = BRT.41.t
+desc = BRT.41.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.41.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+
+country_event = {   #Operation White Bear
+id = BRT.42
+title = BRT.42.t
+desc = BRT.42.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.42.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {   #Influence EU Colonies
+id = BRT.43
+title = BRT.43.t
+desc = BRT.43.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.43.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Guinevere Wins
+id = BRT.44
+title = BRT.44.t
+desc = BRT.44.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.44.a	
+	BRT = {
+		activate_advisor = BRT_guinevere_idea
+	}
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Guinevere's Speech
+id = BRT.45
+title = BRT.45.t
+desc = BRT.45.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.45.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Compromise Cult
+id = BRT.46
+title = BRT.46.t
+desc = BRT.46.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.46.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Fuck Odysseus
+id = BRT.47
+title = BRT.47.t
+desc = BRT.47.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.47.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Ignore Charles
+id = BRT.48
+title = BRT.48.t
+desc = BRT.48.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.48.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+
+country_event = {  #Something Bad Is Coming
+id = BRT.49
+title = BRT.49.t
+desc = BRT.49.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.49.a
+	BRT = {
+		add_stability = -0.1
+	}	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Battle For Pendragon
+id = BRT.50
+title = BRT.50.t
+desc = BRT.50.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.50.a
+	BRT = {
+		add_war_support = -0.30
+	}	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Arm Citizens
+id = BRT.51
+title = BRT.51.t
+desc = BRT.51.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.51.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Loyal Units
+id = BRT.52
+title = BRT.52.t
+desc = BRT.52.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.52.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Blind Royal Palace
+id = BRT.53
+title = BRT.53.t
+desc = BRT.53.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.53.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Call Governor
+id = BRT.54
+title = BRT.54.t
+desc = BRT.54.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.54.a
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Dust Settles
+id = BRT.55
+title = BRT.55.t
+desc = BRT.55.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.55.a
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Enemy Everywhere
+id = BRT.56
+title = BRT.56.t
+desc = BRT.56.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.56.a
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Charles Under House Arrest
+id = BRT.57
+title = BRT.57.t
+desc = BRT.57.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.57.a
+	BRT = {
+		retire_character = charles_brt
+	add_country_leader_role = {
+  character = BRT_guinevere
+  promote_leader = yes
+  country_leader = {
+    ideology = britannian_con
+    expire = "2033.1.1.1"
+    traits = {}
+  }
+}
+	}
+
+	ai_chance = {
+		factor = 70
+	}
+}
+
+}
+
+country_event = {  #Guinevere Deal With the Cult
+id = BRT.58
+title = BRT.58.t
+desc = BRT.58.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.58.a
+	BRT = {
+		retire_character = BRT_VV_Exotic
+	}
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+country_event = {  #Declare internal war end
+id = BRT.59
+title = BRT.59.t
+desc = BRT.59.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.59.a
+	BRT = {
+		remove_idea = BRT_Purge_Navy_Phase_5
+		remove_idea = BRT_Purge_Army_Phase_4
+	}
+	ai_chance = {
+		factor = 70
+	}
+}
+}

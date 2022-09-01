@@ -1,0 +1,65 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### PACIFIC FLEET #####
+	### BATTLE FLEET ###
+	### Split between San Pedro (Los Angeles) and San Diego ###
+	fleet = {
+		name = "Garrison Force"			
+		naval_base = 9998 # San Diego
+									
+		task_force = {					
+			name = "Destroyer"
+			location = 9998 # Los Angeles
+			# Cruiser Division 2 #			
+			ship = { name = "HMS Omaha" definition = destroyer equipment = { light_cruiser_1 = { amount = 1 owner = A11 } } }				
+			ship = { name = "HMS Milwaukee" definition = destroyer equipment = { light_cruiser_1 = { amount = 1 owner = A11 } } }				
+			ship = { name = "HMS Cincinnati" definition = destroyer equipment = { light_cruiser_1 = { amount = 1 owner = A11 } } }				
+		}						
+		task_force = {					
+			name = "Submarine"				
+			location = 9998
+			ship = { name = "HMS Raleigh" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = A11  } } }	
+			ship = { name = "HMS Farragut" definition = submarine equipment = { submarine_1 = { amount = 1 owner = A11 } } }
+			ship = { name = "HMS Dale" definition = submarine equipment = { submarine_1 = { amount = 1 owner = A11  } } }
+			ship = { name = "HMS Monaghan" definition = submarine equipment = { submarine_1 = { amount = 1 owner = A11 } } }
+			ship = { name = "HMS Aylwin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = A11} } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Construction Notes ###
+	# DD: Mahan class (x13) ("HMS Porter" "HMS Phelps" "HMS Clark" "HMS Moffett" "HMS Mahan" "HMS Cummings" "HMS FlHMSer" "HMS Case" "HMS Conyngham" "HMS Cassin" "HMS Shaw" "HMS Cushing" "HMS Perkins")
+	add_equipment_production = {
+		equipment = {
+			type = convoy_1
+			creator = "BRT"
+			version_name = "Northcape Class"
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "BRT"
+			version_name = "Salomon Class"
+		}
+		requested_factories = 1
+		progress = 0.60
+		amount = 2
+	}
+
+
+}
+
+#####################

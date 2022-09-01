@@ -1,0 +1,2918 @@
+A11_Decadence = { 
+
+	A11_selected_field = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = no
+		}
+		cost = freedec?0
+		fire_only_once = yes
+		
+
+		
+	}
+
+	A11_increase_training = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+		
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 1 }
+            check_variable = { Army_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			army_experience = 30
+			navy_experience = 30
+			air_experience = 30
+			A11_Army_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+	
+	A11_routine_check_up = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 1 }
+            check_variable = { Army_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 15
+
+		days_remove = 20
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_war_support = -0.02
+			A11_Army_Improve_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_shuffle_officers = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 1 }
+            check_variable = { Army_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_stability = -0.05
+			add_political_power = -50
+			A11_Army_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_bribe_high_command = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 1 }
+            check_variable = { Army_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 15
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_war_support = -0.05
+			add_political_power = 50
+			A11_Army_Decadence_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+
+
+	A11_promote_moral_values = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 2 }
+            check_variable = { Civil_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+
+		remove_effect = {
+			add_stability = 0.02
+			A11_Civil_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+	
+	A11_propaganda = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 2 }
+            check_variable = { Civil_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 15
+
+		days_remove = 20
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_war_support = 0.02
+			A11_Civil_Improve_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_improve_education = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 2 }
+            check_variable = { Civil_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+		modifier = {
+			research_speed_factor = 0.03
+			consumer_goods_factor = 0.02
+		}
+
+
+		remove_effect = {
+			add_political_power = -50
+			A11_Civil_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_iron_fist = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 2 }
+            check_variable = { Civil_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 15
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_stability = -0.05
+			add_political_power = 50
+			A11_Civil_Decadence_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+
+	
+	A11_bismark_advice = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 3 }
+            check_variable = { Gov_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+
+		remove_effect = {
+			add_stability = 0.02
+			A11_Gov_Improve_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+	
+	A11_keep_purists_bay = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 3 }
+            check_variable = { Gov_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 15
+
+		days_remove = 20
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_war_support = -0.02
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.02
+			}
+			A11_Gov_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_improve_bureaucracy = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 3 }
+            check_variable = { Gov_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 40
+
+		days_remove = 30
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+
+
+		remove_effect = {
+			add_political_power = -50
+			A11_Gov_Improve_Medium = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+	A11_loyalty_tests = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_Field = 3 }
+            check_variable = { Gov_Decadence > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions_2 > 1} }
+		}
+		cost = 30
+
+		days_remove = 15
+		days_re_enable = 20
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions_2 = 1 }
+		}
+
+
+		remove_effect = {
+			add_command_power = -50
+			add_political_power = 50
+			A11_Gov_Decadence_Low = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions_2 = -1 }
+			}
+
+
+		}
+
+
+	}
+
+
+
+
+
+
+	A11_general_increase_decadence = {
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+		cancel_if_not_visible = yes
+
+		allowed = { 
+			tag = A11 	
+		} 
+
+		available = {
+			always = no
+		}
+
+
+		activation = {                
+			tag = A11     
+			OR = {
+
+				has_country_leader = {
+					ruling_only = yes
+					name = "Clovis La Britannia"
+				}
+	
+			} 
+			AND = {
+				check_variable = { Gov_Decadence < 95 }
+				check_variable = { Army_Decadence < 95 }
+				check_variable = { Civil_Decadence < 95 }
+
+			}    
+		}
+
+		visible = {
+			AND = {
+				check_variable = { Gov_Decadence < 95 }
+				check_variable = { Army_Decadence < 95 }
+				check_variable = { Civil_Decadence < 95 }
+
+			} 
+			OR = {
+					check_variable = { A11_Chosen_Field = 1 }
+					check_variable = { A11_Chosen_Field = 2 }
+					check_variable = { A11_Chosen_Field = 3 }
+
+			}
+	
+	    }
+
+		timeout_effect = {
+			A11_Army_Decadence_Low = yes
+			A11_Gov_Decadence_Low = yes
+			A11_Civil_Decadence_Low = yes
+		}
+    }
+
+
+}	
+A11_Suppression_Campaign = {
+
+	
+	#Selection
+	A11_selected_state = {
+		visible = {
+			OR = {
+				check_variable = { A11_Chosen_State = 1 }
+				check_variable = { A11_Chosen_State = 2 }
+				check_variable = { A11_Chosen_State = 3 }
+				check_variable = { A11_Chosen_State = 4 }
+				check_variable = { A11_Chosen_State = 5 }
+				check_variable = { A11_Chosen_State = 6 }
+				check_variable = { A11_Chosen_State = 7 }
+			}
+		}
+		available = {
+			always = no
+		}
+		cost = freedec?0
+		fire_only_once = yes
+		
+		complete_effect = {
+			custom_effect_tooltip = A11_selected_state_dec
+		}
+		
+	}
+
+   #Hokkaido Section
+	A11_military_crackdown_hokkaido = {
+
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 1 }
+            check_variable = { Hokkaido_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 15
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_hokkaido = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+
+
+	}	
+
+	A11_targeted_assassinations_hokkaido = {
+
+
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 1 }
+            check_variable = { Hokkaido_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+	        
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Hokkaido_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+
+	A11_gas_countryside_hokkaido = {
+
+	
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 1 }
+            check_variable = { Hokkaido_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			536 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Hokkaido_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+
+	A11_bribes_hokkaido = {
+
+		
+	
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 1 }
+            check_variable = { Hokkaido_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Hokkaido_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+
+	A11_force_them_underground_hokkaido = {
+
+	
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 1 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { Hokkaido_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			
+		   A11 = {
+			add_state_core = 536
+		   }
+		   A11 = {
+			add_state_core = 555
+		   }
+
+            add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}
+	}
+
+
+
+	#Kanto Section
+	A11_military_crackdown_kanto = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 3 }
+            check_variable = { Kanto_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_kanto = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+		}
+
+	}	
+
+	A11_targeted_assassinations_kanto = {
+
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 3 }
+            check_variable = { Kanto_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+	        
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kanto_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+
+	A11_gas_countryside_kanto = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 3 }
+            check_variable = { Kanto_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			282 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kanto_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+
+	A11_bribes_kanto = {
+
+	
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 3 }
+            check_variable = { Kanto_Resistance > 0 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kanto_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+
+	A11_force_them_underground_kanto = {
+
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 3 }
+		    }
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { Kanto_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			A11 = {
+				add_state_core = 282
+		    }
+            add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}
+	}
+
+
+
+
+
+	#Tohoku Section
+	A11_military_crackdown_tohoku = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 7 }
+			check_variable = { tohoku_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_tohoku = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+	
+	
+	}	
+	
+	A11_targeted_assassinations_tohoku = {
+
+
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 7 }
+			check_variable = { tohoku_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { tohoku_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+	
+	A11_gas_countryside_tohoku = {
+
+	
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 7 }
+			check_variable = { tohoku_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			533 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { tohoku_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+	
+	A11_bribes_tohoku = {
+
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 7 }
+			check_variable = { tohoku_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { tohoku_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+	
+	A11_force_them_underground_tohoku = {
+
+
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 7 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { tohoku_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+			A11 = {
+				add_state_core = 533
+			}
+			A11 = {
+				add_state_core = 943
+			}
+			A11 = {
+				add_state_core = 942
+			}
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+	#Chubu Section
+	A11_military_crackdown_chubu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 6 }
+			check_variable = { Chubu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_chubu = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+
+
+	}	
+		
+	A11_targeted_assassinations_chubu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 6 }
+			check_variable = { Chubu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chubu_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+		
+	A11_gas_countryside_chubu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 6 }
+			check_variable = { Chubu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			532 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		   535 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chubu_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+		
+	A11_bribes_chubu = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 6 }
+			check_variable = { Chubu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chubu_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+		
+	A11_force_them_underground_chubu = {
+
+
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 6 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { Chubu_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			A11 = {
+				add_state_core = 535
+			}
+			A11 = {
+				add_state_core = 534
+			}
+			A11 = {
+				add_state_core = 532
+		    }
+			add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}
+	}	
+
+
+	
+
+	#Kansai Section
+	A11_military_crackdown_kansai = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 2 }
+			check_variable = { Kansai_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_kansai = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+
+
+	}	
+		
+	A11_targeted_assassinations_kansai = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 2 }
+			check_variable = { Kansai_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kansai_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+		
+	A11_gas_countryside_kansai = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 2 }
+			check_variable = { Kansai_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			944 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		   531 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kansai_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+		
+	A11_bribes_kansai = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 2 }
+			check_variable = { Kansai_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Kansai_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+		
+	A11_force_them_underground_kansai = {
+
+
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 2 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { Kansai_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			A11 = {
+				add_state_core = 531
+			}
+			A11 = {
+				add_state_core = 944
+			}
+			add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}		
+	}
+    
+
+
+
+	#Chuguko Section
+	A11_military_crackdown_chuguko = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 4 }
+			check_variable = { Chuguko_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_chuguko = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+
+
+	}	
+		
+	A11_targeted_assassinations_chuguko = {
+
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 4 }
+			check_variable = { Chuguko_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chuguko_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+		
+	A11_gas_countryside_chuguko = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 4 }
+			check_variable = { Chuguko_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			529 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		   530 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chuguko_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+		
+	A11_bribes_chuguko = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 4 }
+			check_variable = { Chuguko_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { Chuguko_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+		
+	A11_force_them_underground_chuguko = {
+
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 4 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { Chuguko_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			A11 = {
+				add_state_core = 530
+			}
+			A11 = {
+				add_state_core = 529
+			}
+			add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}		
+	}
+
+
+
+
+	
+	#kyushu Section
+	 A11_military_crackdown_kyushu = {
+
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 5 }
+			check_variable = { kyushu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 40
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		
+		modifier = {
+			stability_weekly_factor = -0.0010
+	   }
+
+		remove_effect = {
+			A11_reinforce_control_kyushu = yes
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+			}
+
+
+		}
+
+
+	}	
+		
+	A11_targeted_assassinations_kyushu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+				check_variable = { A11_Chosen_State = 5 }
+			check_variable = { kyushu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			
+		}
+		cost = 35
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_small
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { kyushu_Resistance = -0.08 }
+			}
+
+
+		}
+	}
+		
+	A11_gas_countryside_kyushu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 5 }
+			check_variable = { kyushu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_large
+			custom_effect_tooltip = toxic_zone
+			528 = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		   }
+
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { kyushu_Resistance = -0.18 }
+			}
+
+
+		}
+	}
+		
+	A11_bribes_kyushu = {
+
+		fire_only_once = no
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 5 }
+			check_variable = { kyushu_Resistance > 0 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+		}
+		cost = 25
+
+		days_remove = 20
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+			custom_effect_tooltip = A11_increase_support_medium
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+	   }
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = { kyushu_Resistance = -0.13 }
+				
+			}
+
+
+		}
+	}
+		
+	A11_force_them_underground_kyushu = {
+
+		fire_only_once = yes
+		
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			AND = {
+			check_variable = { A11_Chosen_State = 5 }
+			}
+		}
+
+		available = {
+			NOT = { check_variable = { A11_doing_Actions > 1} }
+			check_variable = { kyushu_Resistance < 0.10 }
+		}
+		cost = 50
+
+		days_remove = 50
+		days_re_enable = 30
+
+		complete_effect = {
+			add_to_variable = { A11_doing_Actions = 1 }
+		}
+
+		remove_effect = {
+	
+			hidden_effect = {
+				add_to_variable = { A11_doing_Actions = -1 }
+				add_to_variable = {
+					var = tot_cleared_regions
+					value = 1
+				}
+			}
+			A11 = {
+				add_state_core = 526
+			}
+			A11 = {
+				add_state_core = 528
+			}
+			add_political_power = 100
+			add_stability = 0.03
+			add_war_support = 0.03
+
+		}		
+	}		
+    
+
+
+	#Daily Generaal Increase
+	A11_daily_general_increase_1 = {
+
+ 
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+		cancel_if_not_visible = yes
+
+		allowed = { 
+			tag = A11 
+		
+		
+		} 
+
+		available = {
+			always = no
+		}
+
+
+		activation = {                
+			tag = A11     
+			OR = {
+
+				has_country_leader = {
+					ruling_only = yes
+					name = "Bismark Waldstein"
+				}
+	
+				has_country_leader = {
+					ruling_only = yes
+					name = "Britannian Viceroy" #Temporary
+				}
+	
+			}     
+		}
+
+		visible = {
+			OR = {
+
+				has_country_leader = {
+					ruling_only = yes
+					name = "Bismark Waldstein"
+				}
+	
+				has_country_leader = {
+					ruling_only = yes
+					name = "Britannian Viceroy" #Temporary
+				}
+	
+			}
+			OR = {
+				check_variable = { A11_Chosen_State = 1 }
+				check_variable = { A11_Chosen_State = 2 }
+				check_variable = { A11_Chosen_State = 3 }
+				check_variable = { A11_Chosen_State = 4 }
+				check_variable = { A11_Chosen_State = 5 }
+				check_variable = { A11_Chosen_State = 6 }
+				check_variable = { A11_Chosen_State = 7 }
+			}
+	    }
+
+
+	
+	timeout_effect = {
+		custom_effect_tooltip = A11_decrease_support_small
+		if = {
+			limit = { check_variable = { Hokkaido_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { Hokkaido_Resistance = 0.05 }
+			}
+
+			else_if = {
+				limit = { check_variable = { Kansai_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { Kansai_Resistance = 0.05 }
+			}
+			}
+
+			else_if = {
+				limit = { check_variable = { Kanto_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { Kanto_Resistance = 0.05 }
+			}
+			}
+
+			else_if = {
+				limit = { check_variable = { Chuguko_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { Chuguko_Resistance = 0.05 }
+			}
+			}
+
+			else_if = {
+				limit = { check_variable = { kyushu_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { kyushu_Resistance = 0.05 }
+			}
+			}
+
+			else_if = {
+				limit = { check_variable = { Chubu_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { Chubu_Resistance = 0.05 }
+			}
+			}
+
+			else_if = {
+				limit = { check_variable = { tohoku_Resistance > 0.10 } }
+
+			hidden_effect = {
+				add_to_variable = { tohoku_Resistance = 0.05 }
+			}
+			}
+		}
+
+    }
+
+		
+	}
+}
+	#set_variable = { geass_understand = 0.0 }
+	#set_variable = { searching_material = 0.0 }
+	#set_variable = { infrastructure_building = 0.0 }	
+	#set_variable = { controlling_geass = 0.0 }		
+	#set_variable = { geass_weapons = 0.0 }
+
+	A11_Geass_Research = { 
+
+		A11_fund_research_1 = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand < 100 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { geass_understand = 10 }
+				custom_effect_tooltip = A11_geass_research_adv_low
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+			
+		A11_ancient_references = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand < 100 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { geass_understand = 20 }
+				custom_effect_tooltip = A11_geass_research_adv_medium
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+		A11_more_accurate_studies = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand < 100 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 30
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { geass_understand = 30 }
+				custom_effect_tooltip = A11_geass_research_adv_high
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+
+
+
+
+
+
+
+		A11_fund_research_2 = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { searching_material = 10 }
+				custom_effect_tooltip = A11_geass_research_adv_low
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+			
+		A11_black_market = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 50
+	
+			days_remove = 15
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { searching_material = 20 }
+				custom_effect_tooltip = A11_geass_research_adv_medium
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+		A11_establish_concessions = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material = 0 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 30
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { searching_material = 30 }
+				custom_effect_tooltip = A11_geass_research_adv_high
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	           add_stability = -0.02
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		A11_fund_research_3 = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material > 99 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { infrastructure_building = 10 }
+				custom_effect_tooltip = A11_geass_research_adv_low
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+
+
+
+
+		A11_use_royal_connections = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material > 99 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 30
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { infrastructure_building = 30 }
+				custom_effect_tooltip = A11_geass_research_adv_high
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	           add_stability = -0.02
+			}
+		}
+
+		A11_divert_resources = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material  > 99  }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building = 0 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 50
+	
+			days_remove = 15
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { infrastructure_building = 20 }
+				custom_effect_tooltip = A11_geass_research_adv_medium
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+		
+		A11_fund_research_5 = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material > 99 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass > 99 }
+				check_variable = { infrastructure_building > 99 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { geass_weapons = 10 }
+				custom_effect_tooltip = A11_geass_research_adv_low
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+
+
+		A11_fund_research_4 = {
+						
+			fire_only_once = yes
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material > 99 }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building > 99 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 25
+	
+			days_remove = 20
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { controlling_geass = 10 }
+				custom_effect_tooltip = A11_geass_research_adv_low
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+
+		A11_geass_experiments = {
+						
+			fire_only_once = no
+	
+			visible = {
+				AND = {
+				check_variable = { geass_understand > 99 }
+				check_variable = { searching_material  > 99  }
+				check_variable = { geass_weapons = 0 }
+				check_variable = { controlling_geass = 0 }
+				check_variable = { infrastructure_building > 99 }
+				check_variable = { tokyo_bombings = 0 }
+			    }
+				
+			}
+	
+			available = {
+				always = yes
+			}
+			cost = 50
+	
+			days_remove = 15
+			days_re_enable = 30
+	
+			complete_effect = {
+				add_to_variable = { controlling_geass = 20 }
+				custom_effect_tooltip = A11_geass_research_adv_medium
+			}
+	
+			modifier = {
+				consumer_goods_factor = 0.03
+		    }
+	
+			remove_effect = {
+	
+			}
+		}
+
+
+	}	
+
+}
+
+
+
+
+
+
+
+
+
+
+

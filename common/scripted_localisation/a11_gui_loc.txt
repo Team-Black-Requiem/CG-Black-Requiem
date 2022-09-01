@@ -1,0 +1,690 @@
+
+
+
+#State Selection
+
+defined_text = {
+	name = selected_state
+	text = {
+		trigger = {
+			check_variable = { A11_Chosen_State = 1 }
+		}
+		localization_key = "Current Selection: Hokkaido"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 2 }
+		}
+		localization_key = "Current Selection: Kansai"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 3 }
+		}
+		localization_key = "Current Selection: Kanto"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 4 }
+		}
+		localization_key = "Current Selection: Chuguko"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 5 }
+		}
+		localization_key = "Current Selection: Kyushu"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 6 }
+		}
+		localization_key = "Current Selection: Kansai"
+	}
+	text = {
+		trigger = {
+            check_variable = { A11_Chosen_State = 7 }
+		}
+		localization_key = "Current Selection: Tohoku"
+	}
+
+}
+
+
+
+
+
+
+
+
+
+#Hokkaido GFX
+defined_text = {
+	name = get_Hokkaido_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { Hokkaido_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_hokkaido_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Hokkaido_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Hokkaido_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_hokkaido_2"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Hokkaido_Resistance > 0.29 	
+            }
+            check_variable = { 
+                Hokkaido_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_hokkaido_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Hokkaido_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_hokkaido"
+	}
+
+}
+
+defined_text = {
+	name = A11_region
+	text = {
+		trigger = {
+			check_variable = { Hokkaido_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Hokkaido_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Hokkaido_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Hokkaido_Resistance > 0.29 	
+            }
+            check_variable = { 
+				Hokkaido_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Hokkaido_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+#Kyushu GFX
+defined_text = {
+	name = get_Kyushu_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { kyushu_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Kyushu_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                kyushu_Resistance > 0.09 	
+            }
+            check_variable = { 
+                kyushu_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kyushu_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                kyushu_Resistance > 0.29 	
+            }
+            check_variable = { 
+                kyushu_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kyushu_2"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                kyushu_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Kyushu"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_2
+	text = {
+		trigger = {
+			check_variable = { Kansai_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kansai_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Kansai_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kansai_Resistance > 0.29 	
+            }
+            check_variable = { 
+				Kansai_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kansai_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+#Kanto GFX
+defined_text = {
+	name = get_Kanto_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { Kanto_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Kanto_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kanto_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Kanto_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kanto"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kanto_Resistance > 0.29 	
+            }
+            check_variable = { 
+                Kanto_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kanto_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kanto_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Kanto_2"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_3
+	text = {
+		trigger = {
+			check_variable = { Kanto_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kanto_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Kanto_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kanto_Resistance > 0.29 	
+            }
+            check_variable = { 
+				Kanto_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Kanto_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+#Kansai GFX
+defined_text = {
+	name = get_Kansai_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { Kansai_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Kansai_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kansai_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Kansai_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kansai_2"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kansai_Resistance > 0.29 	
+            }
+            check_variable = { 
+                Kansai_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Kansai"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Kansai_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Kansai_3"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_4
+	text = {
+		trigger = {
+			check_variable = { Chuguko_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chuguko_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Chuguko_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chuguko_Resistance > 0.29 	
+            }
+            check_variable = { 
+				Chuguko_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chuguko_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+#Chuguko GFX
+defined_text = {
+	name = get_Chuguko_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { Chuguko_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Chuguko_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chuguko_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Chuguko_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Chuguko"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chuguko_Resistance > 0.29 	
+            }
+            check_variable = { 
+                Chuguko_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Chuguko_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chuguko_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Chuguko_2"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_5
+	text = {
+		trigger = {
+			check_variable = { kyushu_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                kyushu_Resistance > 0.09 	
+            }
+            check_variable = { 
+                kyushu_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                kyushu_Resistance > 0.29 	
+            }
+            check_variable = { 
+				kyushu_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                kyushu_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+#Tohoku GFX
+defined_text = {
+	name = get_Tohoku_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { tohoku_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Tohoku_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                tohoku_Resistance > 0.09 	
+            }
+            check_variable = { 
+                tohoku_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Tohoku_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                tohoku_Resistance > 0.29 	
+            }
+            check_variable = { 
+                tohoku_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Tohoku"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                tohoku_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Tohoku_2"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_6
+	text = {
+		trigger = {
+			check_variable = { Chubu_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chubu_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Chubu_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chubu_Resistance > 0.29 	
+            }
+            check_variable = { 
+				Chubu_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                Chubu_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+#Chubu GFX
+defined_text = {
+	name = get_Chubu_Map_gfx
+	text = {
+		trigger = {
+			check_variable = { Chubu_Resistance < 0.10 }
+		}
+		localization_key = "GFX_decision_A11_Chubu_4"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chubu_Resistance > 0.09 	
+            }
+            check_variable = { 
+                Chubu_Resistance < 0.30	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Chubu_2"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chubu_Resistance > 0.29 	
+            }
+            check_variable = { 
+                Chubu_Resistance < 0.65	
+
+            }
+		}
+		localization_key = "GFX_decision_A11_Chubu_3"
+	}
+	text = {
+		trigger = {
+            check_variable = { 
+                Chubu_Resistance > 0.64	
+            }
+		}
+		localization_key = "GFX_decision_A11_Chubu"
+	}
+
+}
+
+defined_text = {
+	name = A11_region_7
+	text = {
+		trigger = {
+			check_variable = { tohoku_Resistance < 0.10 }
+		}
+		localization_key = ver_low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                tohoku_Resistance > 0.09 	
+            }
+            check_variable = { 
+                tohoku_Resistance < 0.30	
+
+            }
+		}
+		localization_key = low
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                tohoku_Resistance > 0.29 	
+            }
+            check_variable = { 
+				tohoku_Resistance < 0.65	
+
+            }
+		}
+		localization_key = medium
+	}
+
+	text = {
+		trigger = {
+			check_variable = { 
+                tohoku_Resistance > 0.64	
+            }
+		}
+		localization_key = large
+	}
+}
+
+
+

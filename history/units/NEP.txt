@@ -1,0 +1,111 @@
+﻿division_template = {
+	name = "Nepalese Light Infantry"	
+
+	division_names_group = "NEP_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}	
+	
+}
+
+
+division_template = {
+	name = "Nepalese Garrison"	
+
+	division_names_group = "NEP_INF_01"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}	
+
+}
+
+
+division_template = {
+	name = "Nepalese Infantry Division" 		
+
+	division_names_group = "NEP_INF_01"
+
+    regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 2 }
+    }
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4987
+		division_template = "Nepalese Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4987
+		division_template = "Nepalese Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4987
+		division_template = "Nepalese Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4987
+		division_template = "Nepalese Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4987
+		division_template = "Nepalese Garrison"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+}

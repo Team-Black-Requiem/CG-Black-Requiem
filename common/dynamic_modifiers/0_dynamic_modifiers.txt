@@ -1,0 +1,83 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+economic_collapse_area_11 = {
+	enable = { always = yes }
+
+	
+	icon = GFX_economic_collapse_area_11
+	
+	remove_trigger = {
+		NOT = {
+			has_variable = economic_slump
+		}
+	}
+
+	production_speed_buildings_factor = economic_slump_1
+	consumer_goods_factor = economic_slump_2
+	production_factory_max_efficiency_factor = economic_slump_3
+	production_factory_efficiency_gain_factor = economic_slump_4
+	local_resources_factor = economic_slump_5
+}
+
+
+rampant_chaos_area_11 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_area11_chaos
+
+	remove_trigger = {
+		NOT = {
+			has_variable = post_war_chaos
+		}
+	}
+	
+	stability_weekly_factor = post_war_chaos_1
+	political_power_gain = post_war_chaos_2
+	resistance_growth = post_war_chaos_3
+	weekly_manpower = post_war_chaos_4
+}
+
+demographic_death_area_11 = {
+	enable = { always = yes }
+
+	icon = GFX_demographic_death_area_11
+
+	remove_trigger = {
+		NOT = {
+			has_variable = demographic_chaos
+		}
+	}
+	
+	monthly_population = demographic_chaos_1
+	conscription_factor = demographic_chaos_2
+	industrial_capacity_factory = demographic_chaos_3
+	industrial_capacity_dockyard = demographic_chaos_4
+}
+
+
+
+

@@ -1,0 +1,599 @@
+characters={
+
+	charles_brt={
+		name = "Charles Zi Britannia"
+		portraits={
+			civilian={
+				large=GFX_portrait_Portrait_charles_brt
+			}
+		}
+		country_leader={
+		     desc = "POLITICS_CHARLES_BRTT_DESC"
+			ideology=britannian_con
+			traits={ darwinist }
+			expire = "2020.1.1"
+			id=15
+		}
+	}
+
+	aristocrats_brt={
+		name = "Aristocrats"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=oligarchic_government
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	brt_senior_officers={
+		name = "Senior Officers"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=purist_aristocracy
+			traits={ }
+			expire = "2020.1.1"
+			id=17
+		}
+	}
+
+	null_brt_1={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = social_conservatism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	null_brt_2={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = social_liberalism
+			traits={ }
+			expire = "2020.1.1"
+			id=19
+		}
+	}
+
+	null_brt_left={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = social_democracy
+			traits={ }
+			expire = "2020.1.1"
+			id=18
+		}
+	}
+
+	null_brt_far_left={
+		name = "-"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = lincolnite_socialism
+			traits={ }
+			expire = "2020.1.1"
+			id=20
+		}
+	}
+
+	brt_left_officers={
+		name = "Young Officers"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = marxist_lincolnism
+			traits={ }
+			expire = "2020.1.1"
+			id=21
+		}
+	}
+
+
+
+
+    ##GENERALS & COMMANDERS
+	brt_bismark={
+		name="Bismarck Waldstein"
+		portraits={
+			army={
+				large="GFX_portrait_brt_bismark"
+		    	small="GFX_idea_BRT_bismark"
+				
+			}
+		}
+		field_marshal={
+			traits={ absolute_prediction brilliant_strategist aggressive_assaulter }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=-1
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = BRT_bismark_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				army_CombinedArms_3
+			}
+			cost = 600
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	brt_arthur={
+		name="Arthur Kingsley"
+		portraits={
+			army={
+				large="GFX_portrait_brt_arthur"
+			}
+		}
+		field_marshal={
+			traits={ old_guard politically_connected organisational_leader }
+			skill = 2
+	        attack_skill = 2
+	        defense_skill = 3
+	        planning_skill = 3
+	        logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	brt_esdeath={
+		name="Esdeath Heroux"
+		portraits={
+			army={
+				large="GFX_portrait_brt_esdeath"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless aggressive_assaulter harsh_leader }
+			skill = 3
+			attack_skill = 7
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	
+	Andreas_Darlton={
+		name="Andreas Darlton"
+		portraits={
+			army={
+				large="GFX_portrait_Andreas_Darlton"
+			}
+		}
+		corps_commander={
+			traits={ career_officer bearer_of_artillery }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id=-1
+		}
+	}
+
+	Seira_Barton={
+		name="Seira Barton"
+		portraits={
+			army={
+				large="GFX_portrait_Seira_Barton"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+
+	Dot_Worsley={
+		name="Dot Worsley"
+		portraits={
+			army={
+				large="GFX_portrait_Dot_Worsley"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected media_personality }
+			skill = 3
+	        attack_skill = 3
+	        defense_skill = 1
+	        planning_skill = 2
+	        logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+
+	Bartley_Asprius={
+		name="Bartley Asprius"
+		portraits={
+			army={
+				large="GFX_portrait_Bartley_Asprius"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trait_cautious }
+			skill = 2
+	        attack_skill = 2
+	        defense_skill = 3
+	        planning_skill = 1
+         	logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+    
+
+	##HIGH COMMAND/ ADMIRALS/ MILITARY ADVISORS
+
+
+	BRT_generic_air={
+		name=BRT_generic_air 
+		portraits={
+			army={
+				small="GFX_idea_BRT_generic_air"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BRT_generic_air_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
+	}
+
+
+	BRT_generic_navy={
+		name=BRT_generic_navy
+		portraits={
+			army={
+				small="GFX_idea_BRT_generic_navy"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = BRT_generic_navy_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	BRT_generic_army_1={
+		name=BRT_generic_army_1
+		portraits={
+			army={
+				small="GFX_idea_BRT_generic_army_1"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = BRT_generic_army_1_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				army_chief_old_guard
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+		BRT_luciano={
+		name=BRT_luciano
+		portraits={
+			army={
+				small="GFX_idea_BRT_luciano"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = BRT_luciano_idea
+			ledger = army
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				army_chief_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	BRT_monica={
+		name=BRT_monica
+		portraits={
+			army={
+				small="GFX_idea_BRT_monica"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = BRT_monica_idea
+			ledger = army
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	BRT_ernst={
+		name=BRT_ernst
+		portraits={
+			army={
+				small="GFX_idea_BRT_ernst"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = BRT_ernst_idea
+			ledger = army
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+			    army_logistics_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+
+
+	### POLITICAL ADVISORS ###
+
+
+	
+	BRT_exotic_interior_1={
+		name=BRT_generic_general_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_general_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = minister_of_interior
+			idea_token = BRT_generic_general_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy iron_fist
+			}
+		}
+	}
+	
+	BRT_odysseus_Exotic ={
+		name = BRT_odysseus
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_odysseus"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = BRT_odysseus_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				autocracy_guy mediocre_prince
+			}
+		}
+	}
+
+	BRT_schneizel ={
+		name = BRT_schneizel
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_schneizel"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = BRT_schneizel_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				conservative_guy white_prince
+			}
+		}
+	}
+
+	BRT_guinevere ={
+		name = BRT_guinevere
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_guinevere"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = BRT_guinevere_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				nationalist_guy marie_antoniette
+			}
+		}
+	}
+	
+	BRT_exotic_noble_1 ={
+		name = BRT_generic_noble_1 
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BRT_generic_noble_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = BRT_generic_noble_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy corrupt_kleptocrat
+			}
+		}
+	}
+	
+	BRT_Exotic_minister_1 ={
+		name = BRT_generic_minister_1
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_generic_minister_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = BRT_generic_minister_1_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+			traits  = {
+				oligarchy_guy purist_simpaty
+			}
+		}
+	}
+
+	
+	
+	BRT_VV_Exotic ={
+		name = BRT_VV
+		portraits={
+			civilian={
+				small="GFX_idea_BRT_VV"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = intelligence
+			idea_token = BRT_VV_idea
+			allowed  = {
+				original_tag  = BRT
+			}
+			traits  = {
+				geass_connections
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BRT
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

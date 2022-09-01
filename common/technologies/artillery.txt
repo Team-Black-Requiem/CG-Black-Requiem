@@ -1,0 +1,1097 @@
+technologies = {
+
+	#Artillery
+	eu_war_artillery = {
+
+		enable_equipments = {
+			eu_war_artillery
+        }
+
+		enable_subunits = {
+			artillery_brigade
+			artillery
+		}
+
+		path = {
+			leads_to_tech = modern_artillery_90
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.7
+		start_year = 1985
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 0 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "1985.1.1"
+			}
+		}
+	}
+
+	modern_artillery_90 = {
+
+		enable_equipments = {
+			modern_artillery 
+        }
+
+
+
+		path = {
+			leads_to_tech = fire_control_system
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = varied_propellant_artillery
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = anti_kn_features
+			research_cost_coeff = 1
+		}
+
+		
+		
+		research_cost = 1.5
+		start_year = 2007
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 2 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "1995.1.1"
+			}
+		}
+	}
+
+
+	fire_control_system = {
+
+		artillery = {
+			defense = 0.05	
+		} 
+
+		sp_artillery = {
+			defense = 0.05	
+		} 
+
+		sp_artillery_brigade = {
+			defense = 0.05	
+		} 
+
+		artillery_brigade = {
+			defense = 0.05	
+		}
+
+
+
+
+
+		path = {
+			leads_to_tech = multiple_rounds_simultaneous_impact_1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 2010
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 2.5 y = 4 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2007.1.1"
+			}
+		}
+	}
+
+	sp_artillery_1 = {
+
+		enable_equipments = {
+			sp_artillery_1
+        }
+
+	
+
+		
+		research_cost = 1.5
+		start_year = 2012
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -4.5 y = 6 }
+		}
+		
+		categories = {
+			artillery
+			cat_sp_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2008.1.1"
+			}
+		}
+	}
+
+	varied_propellant_artillery = {
+
+		artillery = {
+			breakthrough = 0.05	
+		} 
+
+		sp_artillery = {
+			breakthrough = 0.05	
+		} 
+
+		sp_artillery_brigade = {
+			breakthrough = 0.05	
+		} 
+
+		artillery_brigade = {
+			breakthrough = 0.05	
+		}
+
+
+		path = {
+			leads_to_tech = multiple_rounds_simultaneous_impact_1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 2010
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -2.5 y = 4 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2007.1.1"
+			}
+		}
+	}
+
+	modern_artillery_1 = {
+
+		enable_equipments = {
+			modern_artillery_1
+        }
+
+		enable_subunits = {
+			rocket_artillery 
+        }
+
+
+		
+		research_cost = 1.5
+		start_year = 2012
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3.5 y = 6 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2008.1.1"
+			}
+		}
+	}
+
+	multiple_rounds_simultaneous_impact_1 = {
+
+		artillery = {
+			reliability = 0.05	
+		} 
+
+		sp_artillery = {
+			reliability = 0.05
+		} 
+
+		sp_artillery_brigade = {
+			reliability = 0.05
+		} 
+
+		artillery_brigade = {
+			reliability = 0.05
+		}
+		path = {
+			leads_to_tech = modern_artillery_1
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_artillery_1
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = knightmare_coilgun_deployment
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 2012
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 6 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
+		}
+	}
+
+	modern_artillery_2 = {
+		enable_equipments = {
+			modern_artillery_2
+        }
+		
+		research_cost = 1.5
+		start_year = 2014
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3.5 y = 8 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2010.1.1"
+			}
+		}
+	}
+
+	sp_artillery_2 = {
+
+		enable_equipments = {
+			sp_artillery_2
+        }
+		
+		research_cost = 1.5
+		start_year = 2014
+
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -4.5 y = 8 }
+		}
+		
+		categories = {
+			artillery
+			cat_sp_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2010.1.1"
+			}
+		}
+	}
+
+	knightmare_coilgun_deployment = {
+
+		
+		artillery = {
+			defense = 0.03	
+		} 
+
+		sp_artillery = {
+			defense = 0.03
+		} 
+
+		sp_artillery_brigade = {
+			defense = 0.03
+		} 
+
+		artillery_brigade = {
+			defense = 0.03
+		}
+
+		sp_artillery = {
+			weight = 0.05
+		} 
+
+		sp_artillery_brigade = {
+			weight = 0.05
+		}  
+		
+		research_cost = 2
+		start_year = 2014
+
+		path = {
+			leads_to_tech = modern_artillery_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_artillery_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sakuradite_engine
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 8 }
+		}
+		
+		categories = {
+			artillery
+			cat_raiko_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+	}
+	high_explosives_tearing_projectiles = {
+		artillery = {
+			hard_attack = 0.05
+		} 
+
+		
+		sp_artillery = {
+			hard_attack = 0.05
+		} 
+
+		sp_artillery_brigade = {
+			hard_attack = 0.05
+		} 
+
+		artillery_brigade = {
+			hard_attack = 0.05
+		}
+
+		
+		research_cost = 2
+		start_year = 2014
+
+		path = {
+			leads_to_tech = raiko_artillery
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -8 y = 8 }
+		}
+		
+		categories = {
+			artillery
+			cat_raiko_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+	}
+
+	raiko_artillery = {
+
+		dependencies = {
+            high_explosives_tearing_projectiles = 1
+			bulk_loaded_liquid_propellant = 1
+        }
+
+		enable_equipments = {
+			raiko_artillery
+        }
+
+		enable_subunits = {
+			raiko_artillery_unit
+        }
+		
+		research_cost = 2
+		start_year = 2015
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 10 }
+		}
+		
+		categories = {
+			artillery
+			cat_raiko_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2015.1.1"
+			}
+		}
+	}
+	anti_kn_features = {
+
+		on_research_complete = {
+			custom_effect_tooltip = UNLOCK_KN_ART
+		}
+	
+
+
+		path = {
+			leads_to_tech = high_explosives_tearing_projectiles
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = bulk_loaded_liquid_propellant
+			research_cost_coeff = 1
+		}
+
+		
+		research_cost = 1.0
+		start_year = 2012
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 6 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+	}
+
+
+	bulk_loaded_liquid_propellant = {
+
+		artillery = {
+			soft_attack = 0.05
+		} 
+
+		sp_artillery = {
+			soft_attack = 0.05
+		} 
+
+		sp_artillery_brigade = {
+			soft_attack = 0.05
+		} 
+
+		artillery_brigade = {
+			soft_attack = 0.05
+		}
+
+
+		path = {
+			leads_to_tech = raiko_artillery
+			research_cost_coeff = 1
+		}
+
+		
+		research_cost = 1.5
+		start_year = 2014
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -10 y = 8 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+	}
+
+	modern_artillery_3 = {
+
+		enable_equipments = {
+			modern_artillery_3
+        }
+		
+		research_cost = 1.5
+		start_year = 2015
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3.5 y = 10 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2012.1.1"
+			}
+		}
+	}
+
+	sp_artillery_3 = {
+
+		enable_equipments = {
+			sp_artillery_3
+        }
+		
+		research_cost = 1.5
+		start_year = 2015
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -4.5 y = 10 }
+		}
+		
+		categories = {
+			artillery
+			cat_sp_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2012.1.1"
+			}
+		}
+	}
+
+	
+	sakuradite_engine = {
+
+        artillery_brigade = {
+		movement = -0.10
+		reliability_factor = -0.10 
+		soft_attack = 0.10
+		hard_attack = 0.10
+	    }
+
+		path = {
+			leads_to_tech = modern_artillery_3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = sp_artillery_3
+			research_cost_coeff = 1
+		}
+
+		
+		research_cost = 1.5
+		start_year = 2015
+
+		path = {
+			leads_to_tech = super_heavy_artillery
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 10 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2013.1.1"
+			}
+		}
+	}
+
+	multiple_rounds_simultaneous_impact_2 = {
+		
+		research_cost = 1.5
+		start_year = 2014
+
+		artillery = {
+			soft_attack = 0.05	
+		} 
+
+		sp_artillery = {
+			soft_attack = 0.05
+		} 
+
+		sp_artillery_brigade = {
+			soft_attack = 0.05
+		} 
+
+		artillery_brigade = {
+			soft_attack = 0.05
+		}
+
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 12 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2014.1.1"
+			}
+		}
+	}
+
+	super_heavy_artillery = {
+
+		enable_equipments = {
+			super_heavy_artillery
+        }
+
+		enable_subunits = {
+			super_heavy_artillery_brigade 
+		}
+		
+		research_cost = 1.5
+		start_year = 2016
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -0.5 y = 12 }
+		}
+		
+		categories = {
+			artillery
+			cat_modern_artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2015.1.1"
+			}
+		}
+	}
+
+
+	#Anti Air
+	eu_war_anti_air = {
+
+		enable_equipments = {
+			eu_war_anti_air
+        }
+
+		
+		enable_subunits = {
+			anti_air
+		}
+
+		enable_equipment_modules = { 
+			ship_anti_air_1
+		}
+
+		enable_building = {
+			building = anti_air
+			level = 5
+		}
+
+		path = {
+			leads_to_tech = modern_spaa_1
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 1.7
+		start_year = 1985
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 0 }
+		}
+		
+		categories = {
+			anti_air
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "1985.1.1"
+			}
+		}
+	}
+
+	modern_spaa_1 = {
+
+		enable_equipments = {
+			modern_spaa_1
+        }
+
+				
+		enable_subunits = {
+			anti_air_brigade
+		}
+
+		enable_equipment_modules = { 
+			ship_anti_air_2
+		}
+		
+		research_cost = 1.7
+		start_year = 2007
+
+
+		path = {
+			leads_to_tech = modern_spaa_1_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 2 }
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "1995.1.1"
+			}
+		}
+	}
+
+	modern_spaa_1_upgrade_1 = {
+
+		anti_air = {
+			armor_value= 0.03
+		}
+
+		anti_air_brigade = {
+			armor_value= 0.03
+		}
+
+		anti_air = {
+			air_attack= 0.03
+		}
+
+		anti_air_brigade = {
+			air_attack= 0.03
+		}
+
+		path = {
+			leads_to_tech = modern_spaa_2
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 2
+		start_year = 2010
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 4 }
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2007.1.1"
+			}
+		}
+	}
+
+	modern_spaa_2 = {
+
+		enable_equipments = {
+			modern_spaa_2
+        }
+
+		enable_equipment_modules = { 
+			ship_anti_air_3
+		}
+		
+		research_cost = 1.5
+		start_year = 2012
+
+
+		path = {
+			leads_to_tech = modern_spaa_2_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 6 }
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
+		}
+	}
+
+	modern_spaa_2_upgrade_1 = {
+
+		anti_air = {
+			air_attack = 0.03
+		}
+
+		anti_air_brigade = {
+			air_attack = 0.03
+		}
+
+		anti_air = {
+			air_attack= 0.03
+		}
+
+		anti_air_brigade = {
+			air_attack= 0.03
+		}
+
+		
+		path = {
+			leads_to_tech = modern_spaa_3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 2014
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 8 }
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+	}
+
+	modern_spaa_3 = {
+
+		enable_equipments = {
+			modern_spaa_3
+        }
+
+		enable_equipment_modules = { 
+			ship_anti_air_4
+		}
+		
+		research_cost = 1.5
+		start_year = 2015
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 10 }
+		}
+
+
+		path = {
+			leads_to_tech = modern_spaa_3_upgrade_1
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2013.1.1"
+			}
+		}
+	}
+
+	modern_spaa_3_upgrade_1 = {
+
+		anti_air = {
+			air_attack = 0.03
+		}
+
+		anti_air_brigade = {
+			air_attack = 0.03
+		}
+
+		anti_air = {
+			air_attack= 0.03
+		}
+
+		anti_air_brigade = {
+			air_attack= 0.03
+		}
+		
+		research_cost = 2
+		start_year = 2016
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 8 y = 12 }
+		}
+		
+		categories = {
+			anti_air
+			cat_modern_spaa
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 5
+				date > "2015.1.1"
+			}
+		}
+	}
+}

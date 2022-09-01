@@ -1,0 +1,1961 @@
+﻿focus_tree = {
+	id = japan_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = second_kururugi_term
+		icon = GFX_second_kururugi_term
+		cost = 2
+		x = 15
+		y = 0
+		available = {
+			country_exists = JAP
+			has_government = moderate_conservatism
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+			add_ideas = {
+				JAP_generic_intelligence_idea
+				JAP_generic_minister_1_idea
+				JAP_kyoto_kirihara_idea
+				JAP_kururugi_idea
+				JAP_sawasaki_idea
+
+			}
+		    }
+
+			add_political_power = -50
+			custom_effect_tooltip = JAP_form_gov
+			
+		}
+
+
+	}
+
+	focus = {
+		id = parliament_supremacy
+		icon = GFX_parliament_supremacy
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+			
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = second_kururugi_term
+		prerequisite = { focus = second_kururugi_term }
+	
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = authoritarian_democracy
+				popularity = 0.03
+			}
+
+			add_popularity = {
+				ideology = moderate_liberalism 
+				popularity = 0.02
+			}
+		}
+
+	}
+
+	focus = {
+		id = press_influence
+		icon = GFX_press_influence
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = parliament_supremacy
+		prerequisite = { focus = parliament_supremacy }
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = moderate_conservatism
+				popularity = 0.04
+			}
+			add_stability = -0.02
+			
+		}
+	}
+
+	focus = {
+		id = foreign_problems
+		icon =  GFX_foreign_problems
+		cost = 2
+		x = -5
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = press_influence
+		prerequisite = { focus = press_influence }
+	
+		completion_reward = {
+			country_event = { id = JAP.3 }	
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = sakuradite_power
+		icon =  GFX_sakuradite_power
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = foreign_problems
+		prerequisite = { focus = foreign_problems }
+	
+		completion_reward = {
+			country_event = {
+				id = JAP.7
+			}
+			add_ideas = minerary_industry_funds
+			
+		}
+	}
+
+	focus = {
+		id = brit_treaty
+		icon =  GFX_brit_treaty
+		cost = 4
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = sakuradite_power
+		prerequisite = { focus = sakuradite_power }
+	
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			custom_effect_tooltip = stake_jap_higher
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = minerary_industry_funds
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds
+						add_idea = minerary_industry_funds_2
+					}
+				
+				}
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_2
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_2
+						add_idea = minerary_industry_funds_3
+					}
+				}
+	
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_3
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_3
+						add_idea = minerary_industry_funds_4
+					}
+				}
+				
+			}
+		
+		}
+	}
+
+	focus = {
+		id = china_treaty
+		icon =  GFX_china_treaty
+		cost = 4
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = sakuradite_power
+		prerequisite = { focus = sakuradite_power }
+	
+		completion_reward = {
+			528 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}	
+			custom_effect_tooltip = stake_jap_higher
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = minerary_industry_funds
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds
+						add_idea = minerary_industry_funds_2
+					}
+				
+				}
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_2
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_2
+						add_idea = minerary_industry_funds_3
+					}
+				}
+	
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_3
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_3
+						add_idea = minerary_industry_funds_4
+					}
+				}
+				
+			}
+			
+		}
+	}
+
+	focus = {
+		id = eu_treaty
+		icon =  GFX_eu_treaty
+		cost = 4
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = sakuradite_power
+		prerequisite = { focus = sakuradite_power }
+	
+		completion_reward = {
+			536 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = stake_jap_higher
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = minerary_industry_funds
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds
+						add_idea = minerary_industry_funds_2
+					}
+				
+				}
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_2
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_2
+						add_idea = minerary_industry_funds_3
+					}
+				}
+	
+				else_if = {
+					limit = {
+						has_idea = minerary_industry_funds_3
+					}
+					swap_ideas = {
+						remove_idea = minerary_industry_funds_3
+						add_idea = minerary_industry_funds_4
+					}
+				}
+				
+			}
+			
+		}
+	}
+
+	focus = {
+		id = great_gamble
+		icon =  GFX_great_gamble
+		cost = 6
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = china_treaty
+		prerequisite = { focus = china_treaty }
+		prerequisite = { focus = brit_treaty }
+		prerequisite = { focus = eu_treaty }
+
+		
+	
+		completion_reward = {
+			country_event = {
+				id = JAP.6
+			}
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = house_always_win
+		icon =  GFX_house_always_win
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+		
+	
+			check_variable = { bet_won = 1 }	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+			focus = we_are_screwed
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = great_gamble
+		prerequisite = { focus = great_gamble }
+
+	
+		completion_reward = {
+			add_stability = 0.10
+			custom_effect_tooltip = jap_succ
+		}
+	}
+
+	focus = {
+		id = we_are_screwed
+		icon =  GFX_we_are_screwed
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+				check_variable = { bet_won = 2 }
+	
+		}
+		bypass = { has_idea = minerary_industry_funds_fail }
+	
+
+		mutually_exclusive = {
+			focus = house_always_win
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = great_gamble
+		prerequisite = { focus = great_gamble }
+
+	
+		completion_reward = {
+			add_political_power = -100
+			custom_effect_tooltip = jap_failure
+		}
+	}
+
+	focus = {
+		id = fixing_our_mistakes
+		icon =  GFX_fixing_our_mistakes
+		cost = 4
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = we_are_screwed
+		prerequisite = { focus = we_are_screwed }
+
+	
+		completion_reward = {
+	       swap_ideas = {
+			   remove_idea = minerary_industry_funds_fail
+			   add_idea = minerary_industry_funds_fail_2
+		   }
+		   282 = {
+		   remove_building = {
+			type = industrial_complex
+			level = 2
+		    }
+	      }
+		  
+		  530 = {
+			remove_building = {
+			 type = industrial_complex
+			 level = 2
+			 }
+		   }
+		   
+		   536 = {
+			remove_building = {
+			 type = industrial_complex
+			 level = 1
+			 }
+		   }  
+		}
+	}
+
+	focus = {
+		id = good_start
+		icon =  GFX_good_start
+		cost = 8
+		x = 4
+		y = 1
+		available = {
+			country_exists = JAP
+		
+		
+		}
+		bypass = {}
+	
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = house_always_win
+		prerequisite = { focus = house_always_win }
+		prerequisite = { focus = nationalist_support }
+
+	
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.10
+			add_political_power = 100
+			
+		}
+	}
+
+	focus = {
+		id = brit_madness
+		icon =  GFX_brit_madness
+		cost = 2
+		x = -3
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+			BRT = {
+				
+				OR = {
+					has_idea = economic_isolation
+					has_idea = economic_isolation_2
+				}	
+			}
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = foreign_problems
+		prerequisite = { focus = foreign_problems }
+	
+		completion_reward = {
+			remove_ideas = diplomacy_neutrality
+			CHI  = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = small_increase
+			}
+		    }
+			
+			FRA  = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = small_increase
+				}
+				}	
+			
+		}
+	}
+
+	focus = {
+		id = enforce_blockade
+		icon =  GFX_enforce_blockade
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = brit_madness
+		prerequisite = { focus = brit_madness }
+	
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = resource_economy
+				add_idea = resource_economy_2
+			}
+		}
+	}
+
+	focus = {
+		id = close_embassy
+		icon =  GFX_close_embassy
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = brit_madness
+		prerequisite = { focus = brit_madness }
+	
+		completion_reward = {
+			diplomatic_relation = {
+				country = BRT
+				relation = non_aggression_pact
+				active = no
+			}
+			add_political_power = 50
+			BRT = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = aggressive
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = sawasaki_call
+		icon = GFX_sawasaki_call
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = enforce_blockade
+		prerequisite = { focus = enforce_blockade }
+		prerequisite = { focus = close_embassy }
+	
+		completion_reward = {
+			add_command_power = 30
+			country_event = { id = JAP.4 }	
+		}
+	}
+
+
+	focus = {
+		id = chinese_advisors
+		icon = GFX_chinese_advisors
+		cost = 2
+
+		mutually_exclusive = {
+			focus = EU_advisors
+		}
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = sawasaki_call
+		prerequisite = { focus = sawasaki_call }
+
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = china_advisors
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = import_guns
+		icon = GFX_import_guns
+		cost = 2
+
+	
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = chinese_advisors
+		prerequisite = { focus = chinese_advisors focus = EU_advisors }
+
+	
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = -3 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = CHI
+			}
+			add_equipment_to_stockpile = {
+				type = mbt_1
+				amount = 1000
+				producer = CHI
+			}
+
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 800
+				producer = CHI
+			}
+		}
+	}
+
+	focus = {
+		id = EU_advisors
+		icon = GFX_EU_advisors
+		cost = 2
+
+		mutually_exclusive = {
+			focus = chinese_advisors
+		}
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = sawasaki_call
+		prerequisite = { focus = sawasaki_call }
+
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = eu_advisors
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = emergency_laws
+		icon = GFX_emergency_laws
+		cost = 2
+
+
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = import_guns
+		prerequisite = { focus = import_guns }
+
+	
+		completion_reward = {
+			add_war_support = 0.03
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = partial_economic_mobilisation
+			}
+		}
+	}
+
+	focus = {
+		id = deploy_fleet
+		icon = GFX_deploy_fleet
+		cost = 2
+
+
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = import_guns
+		prerequisite = { focus = import_guns }
+
+	
+		completion_reward = {
+			add_war_support = 0.03
+			add_ideas = JAP_generic_navy_idea
+		}
+	}
+
+	focus = {
+		id = conscription_laws
+		icon = GFX_conscription_laws
+		cost = 2
+
+
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = import_guns
+		prerequisite = { focus = import_guns }
+
+	
+		completion_reward = {
+			add_war_support = 0.03
+			swap_ideas = {
+				remove_idea = volunteer_only
+				add_idea = limited_conscription
+			}
+		}
+	}
+
+	focus = {
+		id = will_it_be_enough
+		icon = GFX_will_it_be_enough
+		cost = 2
+
+
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = deploy_fleet
+		prerequisite = { focus = conscription_laws }
+		prerequisite = { focus = deploy_fleet }
+		prerequisite = { focus = emergency_laws }
+
+	
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = domestic_things
+		icon =  GFX_domestic_things
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = JAP
+		
+
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = press_influence
+		prerequisite = { focus = press_influence }
+	
+		completion_reward = {
+			add_political_power = 10
+			country_event = { id = JAP.1 }		
+		}
+	}
+
+	focus = {
+		id = family_funds
+		icon =  GFX_family_funds
+		cost = 4
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+			has_completed_focus = promote_datings
+		
+
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = domestic_things
+		prerequisite = { focus = domestic_things }
+	
+		completion_reward = {
+			custom_effect_tooltip = JAP_consumer_goods_up
+			swap_ideas = {
+				remove_idea = stagnant_population_2
+				add_idea = stagnant_population_3
+			}
+		}
+	}
+
+	focus = {
+		id = promote_datings
+		icon =  GFX_promote_datings
+		cost = 4
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = domestic_things
+		prerequisite = { focus = domestic_things }
+	
+		completion_reward = {
+			custom_effect_tooltip = JAP_consumer_goods_up
+			swap_ideas = {
+				remove_idea = stagnant_population
+				add_idea = stagnant_population_2
+			}
+			
+		}
+	}
+
+	focus = {
+		id = nationalist_support
+		icon =  GFX_nationalist_support
+		cost = 4
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = promote_datings
+		prerequisite = { focus = family_funds }
+		prerequisite = { focus = promote_datings }
+	
+		completion_reward = {
+			country_event = { id = JAP.2 }		
+			
+		}
+	}
+
+	focus = {
+		id = ban_abortion
+		icon =  GFX_ban_abortion
+		cost = 4
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		
+	
+			check_variable = { JAP_abortion = 1 }	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = nationalist_support
+		prerequisite = { focus = nationalist_support }
+	
+	
+		completion_reward = {
+			custom_effect_tooltip = JAP_controversial
+			swap_ideas = {
+				remove_idea = stagnant_population_3
+				add_idea = stagnant_population_4
+			}
+
+			add_political_power = -35
+			
+		}
+	}
+
+
+	focus = {
+		id = no_birth_control
+		icon =  GFX_no_birth_control
+		cost = 4
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+			has_completed_focus = ban_abortion
+		
+	
+			check_variable = { JAP_abortion = 1 }	
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+        
+
+		relative_position_id = nationalist_support
+		prerequisite = { focus = nationalist_support }
+	
+	
+		completion_reward = {
+			custom_effect_tooltip = JAP_controversial
+			swap_ideas = {
+				remove_idea = stagnant_population_4
+				add_idea = stagnant_population_5
+			}
+			add_political_power = -35
+			
+		}
+	}
+
+
+	focus = {
+		id = suprise_invasion
+		icon = GFX_suprise_invasion
+		cost = 0.5
+		x = 27
+		y = 0
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = timing_is_everything
+		icon = GFX_timing_is_everything
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = suprise_invasion
+		prerequisite = { focus = suprise_invasion }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = surprise_attack_jap
+				add_idea = surprise_attack_jap_2
+			}
+		}
+	}
+
+	focus = {
+		id = war_committee
+		icon = GFX_war_committee
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = timing_is_everything
+		prerequisite = { focus = timing_is_everything }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_political_power = 200
+			add_war_support = 0.05
+			remove_ideas = political_shock
+			custom_effect_tooltip = jap_salvation_council_1
+			hidden_effect = {
+				set_party_name = { 
+					ideology = moderate_conservatism
+					long_name = "National Salvation Commiteee-Right"
+					name = "NSC-R"
+				}
+
+				set_party_name = { 
+					ideology = moderate_liberalism
+					long_name = "National Salvation Commiteee-Left"
+					name = "NSC-L"
+				}
+
+				set_party_name = { 
+					ideology = moderate_socialism
+					long_name = "National Salvation Commiteee-Far Left"
+					name = "NSC-FL"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = call_all_reservists
+		icon = GFX_call_all_reservists
+		cost = 0.5
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = war_committee
+		prerequisite = { focus = war_committee }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = extensive_conscription
+			}
+			custom_effect_tooltip = new_decision
+		}
+	}
+
+	focus = {
+		id = factory_conversion
+		icon = GFX_factory_conversion
+		cost = 0.5
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = war_committee
+		prerequisite = { focus = war_committee }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			custom_effect_tooltip = new_decision
+			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = bunkers_building
+		icon = GFX_bunkers_building
+		cost = 1
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = factory_conversion
+		prerequisite = { focus = factory_conversion }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				prioritize = {
+					282 528 531
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = 9998
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = 1182
+				}
+			}
+			custom_effect_tooltip = new_decision
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = bring_todoh
+		icon = GFX_bring_todoh
+		cost = 1
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT			
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = call_all_reservists
+		prerequisite = { focus = call_all_reservists }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_command_power = 70
+			add_ideas = JAP_tohdoh
+
+		}
+	}
+
+	focus = {
+		id = this_is_not_working
+		icon = GFX_this_is_not_working
+		cost = 0.5
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT
+			casualties > 50000
+		    				
+		}
+
+		select_effect = {
+			country_event = { id = suzaku.1 }
+			set_variable = { suzaku_var = 0 }  #starts at zero, if it advances suzaku_var > 1 - P.M. Kurugi is murderized
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = bring_todoh
+		prerequisite = { focus = bring_todoh }
+		prerequisite = { focus = bunkers_building }
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = -0.10
+			add_war_support = 0.10
+			custom_effect_tooltip = nation_crumbling
+		}
+	}
+
+	focus = {
+		id = great_speech
+		icon = GFX_great_speech
+		cost = 1
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT
+			check_variable = {
+				suzaku_var < 2
+			}				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = this_is_not_working
+		prerequisite = { focus = this_is_not_working }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = {
+				id = JAP.12
+			}
+
+		}
+	}
+
+	focus = {
+		id = reasserting_control
+		icon = GFX_reasserting_control
+		cost = 0.5
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = great_speech
+		prerequisite = { focus = great_speech }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = democratic_bastion
+				add_idea = democratic_bastion_2
+			}	
+			add_stability = 0.15
+			hidden_effect = {
+
+				add_popularity = {
+					ideology = autocracy
+					popularity = 0.40
+				}
+	
+				set_party_name = { 
+					ideology = autocracy
+					long_name = "National Salvation Commiteee-Kururugi"
+					name = "NSC-K"
+				}
+				
+			}
+			set_politics = {
+				ruling_party = autocracy
+				last_election = "2008.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = extreme_bushido
+		icon = GFX_extreme_bushido
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = reasserting_control
+		prerequisite = { focus = reasserting_control }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_manpower = -150000
+			swap_ideas = {
+				remove_idea = total_war
+				add_idea = total_war_2
+			}	
+		}
+	}
+
+	focus = {
+		id = extreme_conscription
+		icon = GFX_extreme_conscription
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT
+			has_completed_focus = extreme_bushido				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = great_speech
+		prerequisite = { focus = great_speech }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = all_adults_serve
+			}
+			add_command_power = 100	
+			
+		}
+	}
+
+	focus = {
+		id = people_militia
+		icon = GFX_people_militia
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP			
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = extreme_conscription
+		prerequisite = { focus = extreme_conscription }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = new_decision
+			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = infrastructure_obliteration
+		icon = GFX_infrastructure_obliteration
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = people_militia
+		prerequisite = { focus = people_militia }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_political_power = -70
+			add_manpower = -2000
+			custom_effect_tooltip = new_decision
+		}
+	}
+
+	focus = {
+		id = chemical_warfare
+		icon = GFX_chemical_warfare
+		cost = 0.5
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT	
+			has_completed_focus = people_militia			
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = great_speech
+		prerequisite = { focus = great_speech }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_command_power = -75
+			swap_ideas = {
+				remove_idea = total_war_2
+				add_idea = total_war_3
+			}
+		}
+	}
+
+	focus = {
+		id = pouring_mercenaries
+		icon = GFX_pouring_mercenaries
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = chemical_warfare
+		prerequisite = { focus = chemical_warfare }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = new_decision
+			add_war_support = -0.04
+			hidden_effect = {
+			  load_oob = MERCENARY_TEMPLATE_JAP	
+			}
+		}
+	}
+
+	focus = {
+		id = yakuza_friends
+		icon = GFX_yakuza_friends
+		cost = 0.5
+		x = 0
+		y = 1
+		available = {
+			has_completed_focus = pouring_mercenaries
+			country_exists = JAP
+            has_war_with = BRT				
+		}
+
+
+		bypass = {}
+	
+
+		mutually_exclusive = {
+		}
+
+		relative_position_id = infrastructure_obliteration
+		prerequisite = { focus = infrastructure_obliteration }
+
+
+		
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = -0.04
+            add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 6000
+				producer = KOR
+			}
+
+			swap_ideas = {
+				remove_idea = total_war_3
+				add_idea = total_war_4
+			}
+		}
+	}
+}	

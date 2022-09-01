@@ -1,0 +1,62 @@
+﻿capital = 266
+
+oob = "PER"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+set_convoys = 10
+set_politics = {
+	ruling_party = autocracy
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+set_popularities = {
+	authoritarian_democracy = 22
+	autocracy = 45
+	hardline_socialism = 13
+	totalitarian_socialism = 10
+	moderate_conservatism = 5
+	ultra_nationalism = 5
+}
+
+add_ideas = {
+	oil_crisis
+	east_west
+	sultan_democracy
+	volunterr_only
+	export_focus
+	civilian_economy
+}
+
+create_country_leader = {
+	name = "Sultans' Oligarchy"
+	desc = "POLITICS_ARAB_COUNCIL_DESC"
+	picture = "Portrait_Arab_Council.dds"
+	expire = "2010.1.1"
+	ideology = absolute_monarchy
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+	name = "Hasan Arfa"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = {  desert_fox }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}

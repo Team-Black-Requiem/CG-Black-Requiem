@@ -1,0 +1,196 @@
+﻿division_template = {
+	name = "Portuguese Cavalry Division"
+
+	division_names_group = "POR_CAV_01"
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }	
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 1 y = 0 }
+		Cavalry = { x = 1 y = 1 }
+		Cavalry = { x = 1 y = 2 }
+		Cavalry = { x = 2 y = 0 }
+		Cavalry = { x = 2 y = 1 }
+		Cavalry = { x = 2 y = 2 }
+	}	
+
+}
+
+
+division_template = {
+	name = "Portuguese Infantry Division" 		
+
+	division_names_group = "POR_INF_01"
+
+    regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+    }
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+
+}
+
+units = {
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 970
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11673
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9787
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3798
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6996
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6880
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9817
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9817
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11805
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11805
+		division_template = "Portuguese Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9817
+		division_template = "Portuguese Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11805
+		division_template = "Portuguese Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 50
+	}
+    	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 2
+		progress = 0.85
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 50
+    }
+}

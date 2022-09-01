@@ -1,0 +1,215 @@
+scripted_gui = {
+
+	a11_regime_ui = {
+		context_type = decision_category
+		window_name = "a11_regime_decision_ui_window"
+        visible = {
+            always = yes
+        }
+		effects = {
+			Hokkaido_Map_click = {
+				set_variable = { A11_Chosen_State = 1 }		
+			}
+			Kansai_Map_click = {
+				set_variable = { A11_Chosen_State = 2 }		
+			}
+			Kanto_Map_click = {
+				set_variable = { A11_Chosen_State = 3 }		
+			}
+			Chuguko_Map_click = {
+				set_variable = { A11_Chosen_State = 4 }		
+			}
+			Kyushu_Map_click = {
+				set_variable = { A11_Chosen_State = 5 }		
+			}
+			Chubu_Map_click = {
+				set_variable = { A11_Chosen_State = 6 }		
+			}
+			Tohoku_Map_click = {
+				set_variable = { A11_Chosen_State = 7 }		
+			}		
+		}
+		triggers = {
+			Hokkaido_Map_visible = {
+				536 = { is_owned_and_controlled_by = A11 }
+			}
+			Kyushu_Map_visible = {
+				528 = { is_owned_and_controlled_by = A11 }	
+			}
+			Kanto_Map_visible = {
+				282 = { is_owned_and_controlled_by = A11 }	
+			}
+			Kansai_Map_visible = {
+				531 = { is_owned_and_controlled_by = A11 }
+			}
+			Chuguko_Map_visible = {
+				529 = { is_owned_and_controlled_by = A11 }
+				530 = { is_owned_and_controlled_by = A11 }
+			}
+			Tohoku_Map_visible = {
+				533 = { is_owned_and_controlled_by = A11 }
+			}
+			Chubu_Map_visible = {
+				532 = { is_owned_and_controlled_by = A11 }	
+				535 = { is_owned_and_controlled_by = A11 }	
+				534 = { is_owned_and_controlled_by = A11 }	
+			}			
+		}
+
+		properties = { 
+			A11_map = {
+				image = "GFX_decision_A11_main_map"
+			}			
+			Hokkaido_Map = {
+				image = "[get_Hokkaido_Map_gfx]"
+			}
+			Kyushu_Map = {
+				image = "[get_Kyushu_Map_gfx]"
+			}
+			Kanto_Map = {
+				image = "[get_Kanto_Map_gfx]"
+			}
+			Kansai_Map = {
+				image = "[get_Kansai_Map_gfx]"
+			}
+			Chuguko_Map = {
+				image = "[get_Chuguko_Map_gfx]"
+			}
+			Tohoku_Map = {
+				image = "[get_Tohoku_Map_gfx]"
+			}
+			Chubu_Map = {
+				image = "[get_Chubu_Map_gfx]"
+			}
+		}
+
+		ai_enabled = {
+			is_ai = yes
+		}
+		
+		ai_weights = {
+			Hokkaido_Map_click = {
+				ai_will_do = {
+					base = 0
+				}
+			}
+			Kansai_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+			Kanto_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+			Chuguko_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+			Kyushu_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+			Chubu_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+			Tohoku_Map_click = {
+				ai_will_do = {
+					
+				}
+			}
+		}
+	}
+
+	a11_decadence_gui = {
+		context_type = decision_category
+		window_name = "a11_decadence_decision_ui_window"
+		 
+        visible = {
+            always = yes
+        }
+		effects = {
+			Army_Decadence_click = {
+				set_variable = { A11_Chosen_Field = 1 }		
+			}
+			Gov_Decadence_click = {
+				set_variable = { A11_Chosen_Field = 2 }		
+			}
+			Civil_Decadence_click = {
+				set_variable = { A11_Chosen_Field = 3 }		
+			}
+	
+		}
+		triggers = {	
+			A11_Army_Decadence_text_high_visible = {
+				check_variable = { Army_Decadence > 0.50 }
+            }			
+			A11_Army_Decadence_text_medium_visible = {
+				check_variable = { Army_Decadence = 0.50 }
+            }	
+			A11_Army_Decadence_text_low_visible = {
+				check_variable = { Army_Decadence < 0.50 }
+            }
+			
+			A11_Gov_Decadence_text_high_visible = {
+				check_variable = { Gov_Decadence > 0.50 }
+            }			
+			A11_Gov_Decadence_text_medium_visible = {
+				check_variable = { Gov_Decadence = 0.50 }
+            }	
+			A11_Gov_Decadence_text_low_visible = {
+				check_variable = { Gov_Decadence < 0.50 }
+            }
+
+			A11_Civil_Decadence_text_high_visible = {
+				check_variable = { Civil_Decadence > 0.50 }
+            }			
+			A11_Civil_Decadence_text_medium_visible = {
+				check_variable = { Civil_Decadence = 0.50 }
+            }	
+			A11_Civil_Decadence_text_low_visible = {
+				check_variable = { Civil_Decadence < 0.50 }
+            }
+		}
+		properties = { 
+			A11_decadence_container = {
+				image = "GFX_decision_A11_decadence_container"
+			}
+
+			Army_Decadence = {
+				image = "[get_Army_Decadence_gfx]"
+			}
+			Gov_Decadence = {
+				image = "[get_Gov_Decadence_gfx]"
+			}
+			Civil_Decadence = {
+				image = "[get_Civil_Decadence_gfx]"
+			}
+		}
+	    }
+		
+		
+		a11_geass_research_gui = {
+			context_type = decision_category
+			window_name = "a11_geass_research_decision_ui_window"
+	
+			visible = {
+				always = yes
+			}
+			properties = { 
+			A11_geass_research_picture = {
+				image = "GFX_decision_A11_geass_research_picture"
+			}
+		    }
+		}
+}
+
+
+
+			
+	

@@ -1,0 +1,938 @@
+﻿
+add_namespace = area11
+
+
+
+
+country_event = {  
+	id = area11.1
+	title = area11.1.t
+	desc = area11.1.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.1.a
+		add_stability = -0.05
+		add_political_power = -50
+		custom_effect_tooltip = A11_decrease_support_medium
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+			add_to_variable = { Chuguko_Resistance = 0.10 }
+			add_to_variable = { Tohoku_Resistance = 0.10 }
+			add_to_variable = { Kanto_Resistance = 0.05 }
+        }
+    }
+
+	option = {
+		name = area11.1.b
+        add_stability = -0.15
+		add_political_power = 50
+		custom_effect_tooltip = A11_increase_support_medium
+		
+		ai_chance = {
+			factor = 70
+		}
+		
+		hidden_effect = {
+			hidden_effect = {
+				add_to_variable = { Chuguko_Resistance = -0.10 }
+				add_to_variable = { Tohoku_Resistance = -0.10 }
+				add_to_variable = { Kanto_Resistance = -0.05 }
+			}
+        }
+    }
+
+}
+
+
+country_event = {  
+	id = area11.2
+	title = area11.2.t
+	desc = area11.2.d
+	picture = GFX_A11_event_3_4
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.2.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = autocracy
+			popularity = -0.05
+		}
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+    }
+
+}
+
+
+country_event = {  
+	id = area11.3
+	title = area11.3.t
+	desc = area11.3.d
+	picture = GFX_A11_event_2
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.3.a
+		add_political_power = -50
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+    }
+
+}
+
+country_event = {  
+	id = area11.4
+	title = area11.4.t
+	desc = area11.4.d
+	picture = GFX_A11_event_3_4
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.4.a
+		add_stability = -0.07
+		add_popularity = {
+			ideology = autocracy
+			popularity = -0.10
+		}
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+    }
+
+}
+
+country_event = {  
+	id = area11.5
+	title = area11.5.t
+	desc = area11.5.d
+	picture = GFX_A11_event_1
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.5.a
+
+		282 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+
+}
+
+ country_event = {  
+	id = area11.6
+	title = area11.6.t
+	desc = area11.6.d
+	picture = GFX_A11_event_6
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.6.a
+        add_political_power = 50
+		add_stability = -0.03
+
+		set_variable = {
+			var = kirihara_buddy
+			value = 0
+		}
+
+
+		
+		ai_chance = {
+			factor = 30
+		}
+	}
+	
+	option = {
+		name = area11.6.b
+		add_political_power = -50
+		add_stability = 0.03
+
+		set_variable = {
+			var = kirihara_buddy
+			value = 1
+		}
+
+		
+		ai_chance = {
+			factor = 70
+		}
+	}	
+}
+
+ country_event = {  
+	id = area11.7
+	title = area11.7.t
+	desc = area11.7.d
+	picture = GFX_A11_event_7
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.7.a
+
+		set_party_name = { 
+			ideology = moderate_conservatism
+			long_name = "Supreme Reconstruction Authority- Kirihara"
+			name = "SRA- Kirihara"
+		}	
+
+		add_popularity = {
+			ideology = moderate_conservatism
+			popularity = 0.10
+		}
+		
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.8
+	title = area11.8.t
+	desc = area11.8.d
+	picture = GFX_A11_event_1
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.8.a
+
+		add_popularity = {
+			ideology = autocracy
+			popularity = 0.05
+		}	
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.9
+	title = area11.9.t
+	desc = area11.9.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.9.a
+        A11_post_war_chaos_better = yes
+		custom_effect_tooltip = A11_post_war_chaos_better
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.10
+	title = area11.10.t
+	desc = area11.10.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.10.a
+        add_political_power = 70
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.11
+	title = area11.11.t
+	desc = area11.11.d
+	picture = GFX_A11_event_11
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.11.a
+		custom_effect_tooltip = A11_economic_slump_better
+		A11_economic_slump_better = yes
+		add_political_power = 100
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.12
+	title = area11.12.t
+	desc = area11.12.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.11.a
+		add_political_power = 10
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.13
+	title = area11.13.t
+	desc = area11.13.d
+	picture = GFX_A11_event_13
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.13.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.14
+	title = area11.14.t
+	desc = area11.14.d
+	picture = GFX_A11_event_7
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.14.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+
+ 
+ country_event = {  
+	id = area11.15
+	title = area11.15.t
+	desc = area11.15.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.15.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.16
+	title = area11.16.t
+	desc = area11.16.d
+	picture = GFX_A11_event_16
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.16.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.17
+	title = area11.17.t
+	desc = area11.17.d
+	picture = GFX_A11_event_17
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.17.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.18
+	title = area11.18.t
+	desc = area11.18.d
+	picture = GFX_A11_event_18
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.18.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.19
+	title = area11.19.t
+	desc = area11.19.d
+	picture = GFX_A11_event_19
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.19.a
+		custom_effect_tooltip = A11_cliques_weakened
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+
+ country_event = {  
+	id = area11.20
+	title = area11.20.t
+	desc = area11.20.d
+	picture = GFX_A11_event_20
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.20.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+ country_event = {  
+	id = area11.21
+	title = area11.21.t
+	desc = area11.21.d
+	picture = GFX_A11_event_21
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.21.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+ country_event = {  
+	id = area11.22
+	title = area11.22.t
+	desc = area11.22.d
+	picture = GFX_A11_event_22
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.22.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+ country_event = {  
+	id = area11.23
+	title = area11.23.t
+	desc = area11.23.d
+	#picture = GFX_A11_event_23
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.23.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+  country_event = {  
+	id = area11.24
+	title = area11.24.t
+	desc = area11.24.d
+	picture = GFX_A11_event_24
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.24.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+  country_event = {  
+	id = area11.25
+	title = area11.25.t
+	desc = area11.25.d
+	#picture = GFX_A11_event_25
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.25.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+  country_event = {  
+	id = area11.26
+	title = area11.26.t
+	desc = area11.26.d
+	picture = GFX_A11_event_26
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.26.a
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+ country_event = {  
+	id = area11.27
+	title = area11.27.t
+	desc = area11.27.d
+	picture = GFX_A11_event_27
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.27.a
+		add_ideas = A11_honorary_britannians
+		custom_effect_tooltip = A11_honorary_britannians_tt
+		hidden_effect = {
+			division_template = {
+				name = "Honorary Britannians"
+				is_locked = yes
+				division_names_group = BRT_INF_02
+				priority = 0
+				template_counter = 0
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+				}
+			}
+			country_event = { 
+				id = area11.28 
+				days = 15
+		    }
+		}
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = { #Formation of the Japanese Liberation Front 
+	id = area11.28
+	title = area11.28.t
+	desc = area11.28.d
+	picture = GFX_A11_event_28
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.28.a
+		hidden_effect = {
+			
+			set_party_name = { 
+				ideology = moderate_socialism
+				long_name = "Japanese Liberation Front-Left"
+				name = "JLF-Left"
+			}
+			set_party_name = { 
+				ideology = moderate_liberalism
+				long_name = "Japanese Liberation Front-Centre"
+				name = "JLF-Centre"
+			}
+			set_party_name = { 
+				ideology = hardline_socialism
+				long_name = "Japanese Liberation Front-Far Left"
+				name = "JLF-Far Left"
+			}
+			set_party_name = { 
+				ideology = totalitarian_socialism
+				long_name = "Japanese Liberation Front-Marxist/Lincolnites"
+				name = "JLF-M/L"
+			}
+		}
+
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.29
+	title = area11.29.t
+	desc = area11.29.d
+	picture = GFX_A11_event_29
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.29.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  
+	id = area11.30
+	title = area11.30.t
+	desc = area11.30.d
+	picture = GFX_A11_event_30
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.30.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+
+ country_event = {  #Tokyo Bombings
+	id = area11.32
+	title = area11.32.t
+	desc = area11.32.d
+	picture = GFX_A11_event_32
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.32.a
+
+		hidden_effect = {
+			country_event = {
+				id=area11.33
+				days = 5
+			}
+		}
+
+		set_variable = {
+			tokyo_bombings = 1
+		}
+		swap_ideas = {
+			remove_idea = neglected_government_2
+			add_idea = neglected_government_end
+		}
+		add_political_power = -100
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  #Britannians Rioting
+	id = area11.33
+	title = area11.33.t
+	desc = area11.33.d
+	picture = GFX_A11_event_33
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.33.a
+		set_variable = {
+			tokyo_bombings = 2
+		}
+
+		add_stability = -0.05
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.15
+		}
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {   #Clovis Decides To Fix Everything
+	id = area11.34
+	title = area11.34.t
+	desc = area11.34.d
+	picture = GFX_A11_event_34
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.34.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {  #Ghetto Battles
+	id = area11.35
+	title = area11.35.t
+	desc = area11.35.d
+	picture = GFX_A11_event_35
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.35.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {   #Ghetto Battles
+	id = area11.36
+	title = area11.36.t
+	desc = area11.36.d
+	picture = GFX_A11_event_36
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.36.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+ }
+
+ country_event = {   #Ghetto Battles
+ id = area11.37
+ title = area11.37.t
+ desc = area11.37.d
+ picture = GFX_A11_event_37
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ 
+ option = {
+	 name = area11.37.a
+	 
+	 
+	 ai_chance = {
+		 factor = 30
+	 }
+ }	
+}
+
+country_event = {   #Clovis Dies
+id = area11.38
+title = area11.38.t
+desc = area11.38.d
+picture = GFX_A11_event_38
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+	name = area11.38.a
+	add_stability = -0.10
+	add_war_support = -0.10
+	kill_country_leader = yes
+	hidden_effect = {
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = 0.07
+		}
+		remove_ideas = a11_clovis_idea
+	}
+	
+	
+	ai_chance = {
+		factor = 30
+	}
+}	
+}
+
+
+
+ country_event = {  
+	id = area11.31
+	title = area11.31.t
+	desc = area11.31.d
+	#picture = GFX_A11_event_31
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+		name = area11.31.a
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}	
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

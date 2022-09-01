@@ -1,0 +1,563 @@
+JAP_post_war_struggle = {
+	JAP_increase_kirihara_support = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { kirihara_influence < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 20
+
+		days_remove = 15
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_political_power = 20
+			JAP_kirihara_influence_up_2 = yes
+			JAP_pop_approval_down_2 = yes
+		}
+
+
+	}
+	JAP_increase_kururugi_support = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { kururugi_influence < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 20
+
+		days_remove = 15
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_political_power = 20
+			JAP_kururugi_influence_up_2 = yes
+			JAP_pop_approval_down_2 = yes
+		}
+
+
+	}
+	JAP_increase_tohdoh_support = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { tohdoh_influence < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 20
+
+		days_remove = 15
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_political_power = 20
+			JAP_tohdoh_influence_up_2 = yes
+			JAP_pop_approval_down_2 = yes
+		}
+
+
+	}
+	JAP_future_promises = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { population_approval < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 30
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_political_power = 20
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.01
+			}
+			JAP_pop_approval_up_2 = yes
+		}
+
+
+	}
+
+	JAP_future_promises_2 = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { population_approval < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 50
+
+		days_remove = 40
+		days_re_enable = 30
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_political_power = 40
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.03
+			}
+			JAP_pop_approval_up = yes
+		}
+
+
+	}
+
+	JAP_hide_divisions = {
+
+		fire_only_once = no
+
+		visible = {
+			check_variable = { population_approval < 100 }
+		}
+
+		available = {
+			tag = JAP
+		}
+		cost = 40
+
+		days_remove = 30
+		days_re_enable = 15
+
+		complete_effect = {
+		}
+
+
+		remove_effect = {
+			add_stability =  0.02
+			JAP_pop_approval_up = yes
+		}
+
+
+	}
+
+
+	JAP_public_approval = {
+
+		days_mission_timeout = 20
+		is_good = no
+		fire_only_once = no
+		cancel_if_not_visible = yes
+
+		allowed = { 
+			tag = JAP 	
+		} 
+
+		available = {
+			always = no
+		}
+
+
+		activation = {  
+			check_variable = { population_approval > 0 }              
+			tag = JAP  
+			check_variable = {
+				JAP_struggle_begins = 1
+			}
+		}
+
+		visible = {
+			always = yes
+	
+	    }
+
+		timeout_effect = {
+			JAP_pop_approval_down = yes
+			add_war_support = -0.02
+			add_stability = -0.02
+		}
+    }
+}
+
+
+
+pacific_war_JAP = {
+
+
+	recruit_troops = {
+		icon = GFX_decision_generic_military
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = call_all_reservists
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		AND = {
+		has_war_with = BRT
+		tag = JAP
+		has_completed_focus = call_all_reservists
+		}			
+	}
+
+		fire_only_once = no
+		days_re_enable = 5
+		days_remove = 15
+
+		cost = 25
+
+		complete_effect = {
+			add_manpower = 50000
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+
+	
+	factory_conversion_decision = {
+		icon = GFX_decision_generic_industry
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = factory_conversion
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+
+		AND = {
+		tag = JAP
+		has_war_with = BRT
+		has_completed_focus = factory_conversion
+		}			
+	}
+
+		fire_only_once = no
+		days_re_enable = 5
+		days_remove = 20
+
+		cost = 25
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.10
+	   }
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+
+	new_bunkers = {
+		icon = GFX_decision_generic_construction
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = bunkers_building
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		AND = {
+		has_war_with = BRT
+		has_completed_focus = bunkers_building
+		tag = JAP
+		}			
+	}
+
+		fire_only_once = no
+		days_re_enable = 5
+		days_remove = 20
+
+		cost = 35
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				prioritize = {
+					528 531 282
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+				    
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+
+	surrender = {
+		icon = GFX_decision_category_generic_crisis
+
+		days_mission_timeout = 3	#The amount of days remaining until the mission is removed.
+		is_good = no
+        
+
+	available = {
+		check_variable = {
+			genbu_death = 2
+		} 
+	}
+
+
+	activation = {                
+		check_variable = {
+			genbu_death = 1
+		}                   
+	}
+
+	fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+	allowed = { tag = JAP } 
+
+	visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+	tag = JAP
+	AND = {
+		check_variable = {
+			genbu_death = 1
+		}     
+	}			
+}   
+timeout_effect = {
+	BRT = {
+		annex_country = {
+			target = JAP
+		}
+	}
+   }
+	}
+
+
+
+	people_militia_dec = {
+		icon = GFX_decision_category_army_reform
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = people_militia
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		AND = {
+		has_war_with = BRT
+		has_completed_focus = people_militia
+		tag = JAP
+		}			
+	}
+
+		fire_only_once = no
+		days_re_enable = 5
+		days_remove = 3
+
+		cost = 35
+
+		complete_effect = {
+		        hidden_effect = {
+					load_oob = PEOPLE_MILITIA_JAP	
+				}
+				add_manpower = -5000
+		        custom_effect_tooltip = spawn_militia
+			
+	
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	raise_mercenaries_dec = {
+		icon = GFX_decision_category_infiltration
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = pouring_mercenaries
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		AND = {
+		has_war_with = BRT
+		has_completed_focus = pouring_mercenaries
+		tag = JAP
+		}			
+	}
+
+		fire_only_once = no
+		days_re_enable = 5
+		days_remove = 3
+
+		cost = 50
+
+		complete_effect = {
+		        hidden_effect = {
+					load_oob = MERCENARY_JAP
+				}
+				add_war_support = -0.02
+		        custom_effect_tooltip = spawn_mercenaries
+			
+	
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	plan_SID = {
+		icon = GFX_decision_generic_nationalism
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+		has_completed_focus = infrastructure_obliteration
+	    }
+		allowed = { tag = JAP } 
+
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+		AND = {
+		has_war_with = BRT
+		tag = JAP
+		has_completed_focus = infrastructure_obliteration	
+		}
+				
+	}
+
+		fire_only_once = yes
+
+
+		cost = 50
+
+		complete_effect = {
+			hidden_effect = {
+				random_owned_controlled_state = {
+					remove_building = {
+						type = arms_factory
+						level = 3
+					}
+	
+					remove_building = {
+						type = industrial_complex
+						level = 5
+					}
+				}
+			}
+           add_manpower = -300000
+
+			528 = {
+			damage_building = {
+				
+				type = infrastructure
+				damage = 10
+			}
+
+		} 
+		
+		
+		533 = {
+			damage_building = {
+				
+				type = infrastructure
+				damage = 10
+			}
+
+		} 
+
+		
+		282 = {
+			damage_building = {
+				
+				type = infrastructure
+				damage = 15
+			}
+
+		} 
+		
+		532 = {
+			damage_building = {
+				
+				type = infrastructure
+				damage = 10
+			}
+
+		} 
+		
+		531 = {
+			damage_building = {
+				
+				type = infrastructure
+				damage = 15
+			}
+
+		} 
+		}   
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+
+
+
+}

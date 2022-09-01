@@ -1,0 +1,597 @@
+﻿focus_tree = {
+id = japan_focus_2
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = unexpected_victory
+		icon = GFX_unexpected_victory
+		cost = 2
+		x = 15
+		y = 0
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = rubber_stamp_gov
+		icon = GFX_rubber_stamp_gov
+		relative_position_id = unexpected_victory
+		prerequisite = {
+			focus = unexpected_victory
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = adress_mil_anarchy
+		icon = GFX_adress_mil_anarchy
+		relative_position_id = rubber_stamp_gov
+		prerequisite = {
+			focus = rubber_stamp_gov
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = peace_pres_act
+		icon = GFX_peace_pres_act
+		relative_position_id = adress_mil_anarchy
+		prerequisite = {
+			focus = adress_mil_anarchy
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = democracy_question
+		icon = GFX_democracy_question
+		relative_position_id = peace_pres_act
+		prerequisite = {
+			focus = peace_pres_act
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = confront_kirihara
+		icon = GFX_confront_kirihara
+		relative_position_id = democracy_question
+		prerequisite = {
+			focus = democracy_question
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		id = uniformity_act
+		icon = GFX_uniformity_act
+		relative_position_id = adress_mil_anarchy
+		prerequisite = {
+			focus = adress_mil_anarchy
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+		
+	focus = {
+		id = tohdoh_position
+		icon = GFX_tohdoh_position
+		relative_position_id = uniformity_act
+		prerequisite = {
+			focus = uniformity_act
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = population_question
+		icon = GFX_population_question
+		relative_position_id = tohdoh_position
+		prerequisite = {
+			focus = tohdoh_position
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = international_aid
+		icon = GFX_international_aid
+		relative_position_id = population_question
+		prerequisite = {
+			focus = population_question
+		}
+		prerequisite = {
+			focus = confront_kirihara
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = reassure_chinese
+		icon = GFX_reassure_chinese
+		relative_position_id = international_aid
+		prerequisite = {
+			focus = international_aid
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = partial_dem
+		icon = GFX_partial_dem
+		relative_position_id = international_aid
+		prerequisite = {
+			focus = international_aid
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = growing_violence
+		icon = GFX_growing_violence
+		relative_position_id = reassure_chinese
+		prerequisite = {
+			focus = reassure_chinese
+		}
+		prerequisite = {
+			focus = partial_dem
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = tokyo_strike
+		icon = GFX_tokyo_strike
+		relative_position_id = growing_violence
+		prerequisite = {
+			focus = growing_violence
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = back_in_control
+		icon = GFX_back_in_control
+		relative_position_id = tokyo_strike
+		prerequisite = {
+			focus = tokyo_strike
+		}
+
+		cost = 2
+		x = -2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = chaos_expand
+		icon = GFX_chaos_expand
+		relative_position_id = tokyo_strike
+		prerequisite = {
+			focus = tokyo_strike
+		}
+
+		cost = 2
+		x = 2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = it_falls_down
+		icon = GFX_it_falls_down
+		relative_position_id = chaos_expand
+		prerequisite = {
+			focus = chaos_expand
+		}
+
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = military_rule
+		icon = GFX_military_rule
+		relative_position_id = chaos_expand
+		prerequisite = {
+			focus = chaos_expand
+		}
+
+		cost = 2
+		x = 2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = kirihara_steps_in
+		icon = GFX_kirihara_steps_in
+		relative_position_id = chaos_expand
+		prerequisite = {
+			focus = chaos_expand
+		}
+
+		cost = 2
+		x = -2
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+}	
