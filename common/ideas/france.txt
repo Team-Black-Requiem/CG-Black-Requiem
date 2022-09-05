@@ -1,8 +1,27 @@
 ideas = {
     country = {
 	
-	    bureaucratic_nightmare = {
-		
+	    mother_of_the_revolution = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.5
+			    stability_factor = 0.60
+			    political_power_gain = 0.5
+			}
+		}
+
+		mother_of_the_revolution_swap = {
+
 		 	allowed = {
 				always = no
 			}
@@ -12,13 +31,57 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
+				drift_defence_factor = 0.5
+			    stability_factor = 0.60
+			    political_power_gain = 0.5
+				moderate_liberalism_drift = 0.05
 			}
 		}
-		
-		pervasive_corruption = {
-		
+
+		guardian_of_europia = {
+
+			allowed = {
+				always = yes 
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.10
+				army_org_Factor = 0.15
+				max_command_power = 20
+
+			}
+		}
+
+		corrupt_bureaucracy = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.25
+				stability_weekly = -0.05
+				war_support_weekly = -0.07
+				consumer_goods_factor = 0.60
+			}
+		}
+
+		corrupt_bureaucracy_swap_1 = {
+
 		 	allowed = {
 				always = no
 			}
@@ -28,13 +91,38 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
+				stability_factor = -0.00
+				stability_weekly = -0.05
+				war_support_weekly = -0.07
+				consumer_goods_factor = 0.10
 			}
 		}
-		
-		chronic_inefficiency = {
-		
+
+		the_new_aristocracy = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			    political_power_gain = -0.70
+			    stability_factor = -0.40
+			    war_support_weekly = -0.005
+				max_command_power = -30
+				army_org_Factor = -0.40
+			}
+		}
+
+		the_new_aristocracy_swap_1 = {
+
 		 	allowed = {
 				always = no
 			}
@@ -44,16 +132,56 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
+			    political_power_gain = -0.70
+			    stability_factor = -0.10
+			    war_support_weekly = -0.005
+				max_command_power = -30
+				army_org_Factor = -0.40
+			}
+		}
+
+		sluggish_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.30
+				production_factory_efficiency_gain_factor = -0.25 
+			}
+		}
+
+		technological_pride = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.15
 			}
 		}
 		
-				
-		economic_juggernaut = {
-			
+		memories_of_the_great_war = {
+
 			allowed = {
-				original_tag = CHI
+				always = yes 
 			}
 
 			allowed_civil_war = {
@@ -61,58 +189,126 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
+				conscription_factor = -0.40
+				war_support_factor = -0.55
+				offence = -0.50
+				defence = -0.50
+				army_speed_factor = -0.40
+				mobilization_speed = -0.30
+				army_morale_factor = -0.15
 			}
 		}
-
-		french_dominated_military = {
-			
-			allowed = {
-				original_tag = CHI
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			}
-		}
-
-		colonial_mess = {
-			
-			allowed = {
-				original_tag = CHI
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			}
-		}
-
-		general_discontent = {
-			
-			allowed = {
-				original_tag = CHI
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			}
-		}
-		
     }
+
+
+	######## FOCUS IDEAS ########
+
+		special_military_school_of_saint_cyr = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				offence = 0.20
+				defence = 0.20
+				army_speed_factor = 0.10
+				army_morale_factor = 0.20
+				army_org_factor = 0.3
+				max_dig_in_factor = 0.10
+				max_planning_factor = 0.10
+			}
+		}
+
+		repayments_to_the_ecb = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+		}
+
+		riots_across_europia = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.60
+				war_support_factor = -0.80
+				stability_weekly = -0.05
+			}
+		}
+
+		recovering_from_the_riots = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				consumer_goods_factor = 0.20
+				stability_factor = 0.10
+				war_support_factor = 0.15
+			}
+
+			add_dynamic_modifier = {
+                          days = 180
+			}
+		}
+
+		leader_of_europia = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.20
+				stability_factor= 0.20
+				moderate_liberalism_drift = 0.05
+				can_master_build_for_us = 1
+				mic_to_overlord_factor = 0.2
+			}
+		}
+
+
+	####### IDEA COPIES #######
 }	

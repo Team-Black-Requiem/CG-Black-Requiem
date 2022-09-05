@@ -1,0 +1,259 @@
+characters={
+	FRA_edouard_herriot={
+		name="Edouard Herriot"
+		portraits={
+			civilian={
+				large="GFX_portrait_FRA_edouard_herriot"
+			}
+		}
+		country_leader={
+			desc = "	"
+			ideology=social_liberalism
+			traits={ FRA_edouard_herriot_trait }
+			expire="2020.1.1.1"
+			id = -1
+		}
+	}
+
+	FRA_frederica_de_cleves={
+		advisor={				
+			slot = high_command
+			idea_token = FRA_frederica_de_cleves
+			ledger = army
+				allowed = {
+					original_tag = FRA
+				}
+				traits = {
+					army_logistics_3
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		corps_commander={
+			traits={ expert_improviser brilliant_strategist ranger }
+			skill = 3
+	        attack_skill = 5
+	        defense_skill = 4
+	        planning_skill = 3
+	        logistics_skill = 5
+			legacy_id=-1
+		}
+		name="Frederica de Clèves"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Frederica_de_Cleves"
+				small="gfx/interface/ideas/FRA/FRA_Frederica_advisor_portrait.dds"
+			}
+		}
+	}
+	FRA_gilles_durand={
+		advisor={
+					
+			slot = high_command
+			idea_token = FRA_gilles_durand
+			ledger = army
+			allowed = {
+					original_tag = FRA
+				}
+				traits = {
+					army_chief_entrenchment_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Gilles Durand"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Officier_2"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist panzer_expert }
+			skill = 3
+	        attack_skill = 4
+	        defense_skill = 5
+	        planning_skill = 5
+	        logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+	FRA_carver_smith={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = FRA_carver_smith
+			ledger = army
+			allowed = {
+					original_tag = FRA
+				}
+				traits = {
+					army_regrouping_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Carver Smith"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Officier_1"
+			}
+		}
+		corps_commander={
+			traits={ combined_arms_expert trait_reckless }
+			skill = 3
+	        attack_skill = 3
+	        defense_skill = 3
+	        planning_skill = 4
+	        logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+	FRA_oscar_hamel ={
+		advisor={
+			cost = 2000
+			
+			slot = intelligence
+			idea_token = FRA_oscar_hamel 
+			ledger = army
+				allowed = {
+					original_tag = FRA
+				}
+				
+				traits = {
+					military_police
+				}
+		}
+		name="Oscar Hamel"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Oscar_Hamel"
+			}
+		}
+		corps_commander={
+			traits={ ambusher politically_connected }
+			skill = 4
+	        attack_skill = 4
+	        defense_skill = 4
+	        planning_skill = 1
+	        logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+	FRA_daniel_malcal={
+		advisor={
+			cost = 2000
+			
+			slot = economy_minister
+			idea_token = FRA_daniel_malcal
+				allowed = {
+					original_tag = FRA
+				}
+				
+				traits = {
+					economic_minister_daniel_malcal
+				}
+		}
+		name="Daniel Malcal"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Officier_1"
+			}
+		}
+	}
+	FRA_gene_smilas={
+		advisor={
+			cost = 2000
+			
+			slot = minister_of_interior
+			idea_token = FRA_gene_smilas
+			allowed = {
+					original_tag = FRA
+				}
+				traits = {
+					interior_minister_gene_smilas
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Gene Smilas"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Gene_Smilas"
+			}
+		}
+		field_marshal={
+			traits={ career_officer organisational_leader }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+	FRA_bradow_von_breisgau={
+		advisor={
+			cost = 2000
+			
+			slot = head_of_government
+			idea_token = FRA_bradow_von_breisgau
+			allowed = {
+					original_tag = FRA
+				}
+				traits = {
+					bradow_von_breisgau_prime_minister
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Bradow Von Breisgau"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Officier_1"
+			}
+		}
+	}
+	FRA_claus_warwick={
+		name="Claus Warwick"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_Claus_Warwick"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer scavenger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	FRA_pierre_anou={
+		name="Pierre Anou"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_pierre_anou"
+			}
+		}
+		corps_commander={
+			traits={ bearer_of_artillery }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+scripted_gui = {	
+	RUS_regions_reform_gui_decision_gui = {
+			context_type = decision_category
+			window_name = "RUS_regions_reform_gui_decision_gui_window"
+	
+			visible = {
+				always = yes
+			}
+			effects = {
+				Western_Russia_click = {
+					set_variable = { RUS_Chosen_Region = 1 }		
+				}
+				Central_Russia_click = {
+					set_variable = { RUS_Chosen_Region = 2 }		
+				}
+				Eastern_Russia_click = {
+					set_variable = { RUS_Chosen_Region = 3 }		
+				}	
+			}
+			properties = {
+			BRT_post_war_struggle_gui_competitors = {
+				image = "GFX_decision_BRT_post_war_struggle_gui_competitors"
+			}
+			BRT_post_war_struggle_gui_datas = {
+				image = "GFX_decision_BRT_post_war_struggle_gui_datas"
+			}
+		    }
+		}
+}

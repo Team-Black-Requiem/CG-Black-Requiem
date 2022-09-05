@@ -1,0 +1,1576 @@
+﻿focus_tree = {
+	id = britannia_cult
+		
+		country = {
+			factor = 0
+			modifier = {
+				add = 2
+				tag = BRT
+			}
+		}
+		
+	
+		default = no
+	
+		continuous_focus_position = { x = 20 y = 2500 }
+	
+		focus = {
+			id = BRT_shadow_government
+			icon = GFX_BRT_shadow_government
+			cost = 2
+			x = 7
+			y = 0
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+	
+		focus = {
+	
+			id = BRT_force_charles_collaborate
+			icon = GFX_BRT_force_charles_collaborate
+	
+			relative_position_id = BRT_shadow_government
+			prerequisite = {
+				focus = BRT_shadow_government
+			}
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_silence_imperial_family
+			icon = GFX_BRT_silence_imperial_family
+	
+			relative_position_id = BRT_force_charles_collaborate
+			prerequisite = {
+				focus = BRT_force_charles_collaborate
+			}	
+			cost = 2
+			x = -2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+		focus = {
+	
+			id = BRT_puppet_aristocracy
+			icon = GFX_BRT_puppet_aristocracy
+	
+			relative_position_id = BRT_force_charles_collaborate
+			prerequisite = {
+				focus = BRT_force_charles_collaborate
+			}	
+			cost = 2
+			x = 2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+	
+			id = BRT_purge_schneizel
+			icon = GFX_BRT_purge_schneizel
+	
+			relative_position_id = BRT_force_charles_collaborate
+			prerequisite = {
+				focus = BRT_force_charles_collaborate
+			}	
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+	
+			id = BRT_recall_aspirius
+			icon = GFX_BRT_recall_aspirius
+	
+			relative_position_id = BRT_silence_imperial_family
+			prerequisite = {
+				focus = BRT_silence_imperial_family
+			}
+			prerequisite = {
+				focus = BRT_purge_schneizel
+			}	
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_welcome_guinevere
+			icon = GFX_BRT_welcome_guinevere
+	
+			relative_position_id = BRT_silence_imperial_family
+			prerequisite = {
+				focus = BRT_puppet_aristocracy
+			}
+			prerequisite = {
+				focus = BRT_purge_schneizel
+			}	
+			cost = 2
+			x = 3
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#VV Puts His Administration
+	
+			id = BRT_VV_personal_team
+			icon = GFX_BRT_VV_personal_team
+	
+			relative_position_id = BRT_welcome_guinevere
+			prerequisite = {
+				focus = BRT_welcome_guinevere
+			}
+			prerequisite = {
+				focus = BRT_recall_aspirius
+			}	
+			cost = 2
+			x = -1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#Spoiler:the Geass
+	
+			id = BRT_VV_his_precious_tool
+			icon = GFX_BRT_VV_his_precious_tool
+	
+			relative_position_id = BRT_VV_personal_team
+
+			prerequisite = {
+				focus = BRT_VV_personal_team
+			}	
+			cost = 2
+			x = 0
+			y = 2
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_ignore_population
+			icon = GFX_BRT_ignore_population
+	
+			relative_position_id = BRT_VV_his_precious_tool
+
+			prerequisite = {
+				focus = BRT_VV_his_precious_tool
+			}	
+			cost = 2
+			x = -5
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_everything_is_fine
+			icon = GFX_BRT_everything_is_fine
+	
+			relative_position_id = BRT_ignore_population
+
+			prerequisite = {
+				focus = BRT_ignore_population
+			}	
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_apparent_status_quo
+			icon = GFX_BRT_apparent_status_quo
+	
+			relative_position_id = BRT_everything_is_fine
+
+			prerequisite = {
+				focus = BRT_everything_is_fine
+			}	
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+	        #Foreign Policy Ones, Of course
+			#Certainly Not Political
+			id = BRT_take_schneizel_plans
+			icon = GFX_BRT_take_schneizel_plans
+	
+			relative_position_id = BRT_VV_his_precious_tool
+
+			prerequisite = {
+				focus = BRT_VV_his_precious_tool
+			}	
+			cost = 2
+			x = 5
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_prepare_elevator_rush
+			icon = GFX_BRT_prepare_elevator_rush
+	
+			relative_position_id = BRT_take_schneizel_plans
+
+			prerequisite = {
+				focus = BRT_take_schneizel_plans
+			}	
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_isolate_britannia
+			icon = GFX_BRT_isolate_britannia
+	
+			relative_position_id = BRT_prepare_elevator_rush
+
+			prerequisite = {
+				focus = BRT_prepare_elevator_rush
+			}	
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_geass_government
+			icon = GFX_BRT_geass_government
+	
+			relative_position_id = BRT_VV_his_precious_tool
+
+			prerequisite = {
+				focus = BRT_VV_his_precious_tool
+			}	
+			cost = 2
+			x = 2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+		focus = {
+
+	
+			id = BRT_geass_army
+			icon = GFX_BRT_geass_army
+	
+			relative_position_id = BRT_VV_his_precious_tool
+
+			prerequisite = {
+				focus = BRT_VV_his_precious_tool
+			}	
+			cost = 2
+			x = -2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_more_conscription
+			icon = GFX_BRT_more_conscription
+	
+			relative_position_id = BRT_geass_army
+
+			prerequisite = {
+				focus = BRT_geass_army
+			}	
+			cost = 2
+			x = -1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_deal_knights
+			icon = GFX_BRT_deal_knights
+	
+			relative_position_id = BRT_geass_army
+
+			prerequisite = {
+				focus = BRT_geass_army
+			}	
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_funds_cult
+			icon = GFX_BRT_funds_cult
+	
+			relative_position_id = BRT_geass_government
+
+			prerequisite = {
+				focus = BRT_geass_government
+			}	
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_research_centres
+			icon = GFX_BRT_research_centres
+	
+			relative_position_id = BRT_geass_government
+
+			prerequisite = {
+				focus = BRT_geass_government
+			}	
+			cost = 2
+			x = -1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_fanatic_base
+			icon = GFX_BRT_fanatic_base
+	
+			relative_position_id = BRT_more_conscription
+
+			prerequisite = {
+				focus = BRT_more_conscription
+			}	
+			prerequisite = {
+				focus = BRT_deal_knights
+			}
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		
+		focus = {
+
+	
+			id = BRT_cult_conglomerates
+			icon = GFX_BRT_cult_conglomerates
+	
+			relative_position_id = BRT_research_centres
+
+			prerequisite = {
+				focus = BRT_research_centres
+			}	
+			prerequisite = {
+				focus = BRT_funds_cult
+			}
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_everything_for_ragnarock
+			icon = GFX_BRT_everything_for_ragnarock
+	
+			relative_position_id = BRT_cult_conglomerates
+
+			prerequisite = {
+				focus = BRT_cult_conglomerates
+			}	
+			prerequisite = {
+				focus = BRT_apparent_status_quo
+			}
+			prerequisite = {
+				focus = BRT_isolate_britannia
+			}
+			prerequisite = {
+				focus = BRT_fanatic_base
+			}
+			cost = 2
+			x = -2
+			y = 2
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+
+		focus = {
+			id = BRT_ragnarock_committee
+			icon = GFX_BRT_ragnarock_committee
+			cost = 2
+			x = 23
+			y = 0
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+	
+		focus = {
+	
+			id = BRT_discover_caribbean_elevator
+			icon = GFX_BRT_discover_caribbean_elevator
+	
+			relative_position_id = BRT_reinforce_local_ports
+			prerequisite = {
+				focus = BRT_reinforce_local_ports
+			}
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_discover_area_two_elevator
+			icon = GFX_BRT_discover_area_two_elevator
+	
+			relative_position_id = BRT_winter_task_force
+			prerequisite = {
+				focus = BRT_winter_task_force
+			}
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_discover_area_eleven_elevator
+			icon = GFX_BRT_discover_area_eleven_elevator
+	
+			relative_position_id = BRT_contain_japan_insurgency
+			prerequisite = {
+				focus = BRT_contain_japan_insurgency
+			}
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+			
+		focus = {
+	
+			id = BRT_reinforce_local_ports
+			icon = GFX_BRT_reinforce_local_ports
+	
+			relative_position_id = BRT_ragnarock_committee
+			prerequisite = {
+				focus = BRT_ragnarock_committee
+			}
+			cost = 2
+			x = -2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+	
+			id = BRT_winter_task_force
+			icon = GFX_BRT_winter_task_force
+	
+			relative_position_id = BRT_ragnarock_committee
+			prerequisite = {
+				focus = BRT_ragnarock_committee
+			}
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+	
+			id = BRT_contain_japan_insurgency
+			icon = GFX_BRT_contain_japan_insurgency
+	
+			relative_position_id = BRT_ragnarock_committee
+			prerequisite = {
+				focus = BRT_ragnarock_committee
+			}
+			cost = 2
+			x = 2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+	
+			id = BRT_link_britannia_elevators
+			icon = GFX_BRT_link_britannia_elevators
+	
+			relative_position_id = BRT_discover_area_eleven_elevator
+			prerequisite = {
+				focus = BRT_discover_area_eleven_elevator
+			}
+			prerequisite = {
+				focus = BRT_discover_area_two_elevator
+			}			
+			prerequisite = {
+				focus = BRT_discover_caribbean_elevator
+			}
+			cost = 2
+			x = -2
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+			#Military Operations To Take England's Elevator
+	
+			id = BRT_buy_up_iceland
+			icon = GFX_BRT_buy_up_iceland
+	
+			relative_position_id = BRT_link_britannia_elevators
+			prerequisite = {
+				focus = BRT_link_britannia_elevators
+			}
+
+			cost = 2
+			x = -3
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_cult_exploit_EU_divisions
+			icon = GFX_BRT_cult_exploit_EU_divisions
+	
+			relative_position_id = BRT_buy_up_iceland
+			prerequisite = {
+				focus = BRT_buy_up_iceland
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_arctic_development
+			icon = GFX_BRT_arctic_development
+	
+			relative_position_id = BRT_cult_exploit_EU_divisions
+			prerequisite = {
+				focus = BRT_cult_exploit_EU_divisions
+			}
+
+			cost = 2
+			x = -1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+	
+			id = BRT_bring_in_winter_KN
+			icon = GFX_BRT_bring_in_winter_KN
+	
+			relative_position_id = BRT_cult_exploit_EU_divisions
+			prerequisite = {
+				focus = BRT_cult_exploit_EU_divisions
+			}
+
+			cost = 2
+			x = 1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+	
+			id = BRT_begin_england_invasion
+			icon = GFX_BRT_begin_england_invasion
+	
+			relative_position_id = BRT_bring_in_winter_KN
+			prerequisite = {
+				focus = BRT_bring_in_winter_KN
+			}
+			prerequisite = {
+				focus = BRT_arctic_development
+			}
+
+			cost = 2
+			x = -1
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+			#Peace Treaty With EU:Britannia Takes England
+
+	
+			id = BRT_reach_the_channel
+			icon = GFX_BRT_reach_the_channel
+	
+			relative_position_id = BRT_begin_england_invasion
+
+			prerequisite = {
+				focus = BRT_begin_england_invasion
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#Military Operations To Take Africa's Elevator
+	
+			id = BRT_african_campaign
+			icon = GFX_BRT_african_campaign
+	
+			relative_position_id = BRT_link_britannia_elevators
+			prerequisite = {
+				focus = BRT_link_britannia_elevators
+			}
+
+			cost = 2
+			x = 3
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#Military Operations To Take Russia's Elevator
+			#Bypass if Euro Britannia doesn't exist
+	
+			id = BRT_fund_russian_loyalist
+			icon = GFX_BRT_fund_russian_loyalist
+	
+			relative_position_id = BRT_link_britannia_elevators
+			prerequisite = {
+				focus = BRT_link_britannia_elevators
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		
+		focus = {
+
+			#Military Operations To Take Russia's Elevator
+			#Bypass if Euro Britannia doesn't exist
+	
+			id = BRT_send_knight_monica
+			icon = GFX_BRT_send_knight_monica
+	
+			relative_position_id = BRT_fund_russian_loyalist
+			prerequisite = {
+				focus = BRT_fund_russian_loyalist
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#Declare War On Russia If Euro Britannia doesn't exist
+			#Euro Britannia invades other warlords if it exists
+	
+			id = BRT_operation_black_bear
+			icon = GFX_BRT_operation_black_bear
+	
+			relative_position_id = BRT_send_knight_monica
+			prerequisite = {
+				focus = BRT_send_knight_monica
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+		focus = {
+
+			#Creates Euro Britannia puppet if it doesn't exist
+			#Puppetize Euro Britannia 
+	
+			id = BRT_total_take_over
+			icon = GFX_BRT_total_take_over
+	
+			relative_position_id = BRT_operation_black_bear
+			prerequisite = {
+				focus = BRT_operation_black_bear
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+
+
+
+		focus = {
+
+			#Peace treaty:Euro Britannia takes territory
+			#Up until the Urals
+	
+			id = BRT_treaty_russia
+			icon = GFX_BRT_treaty_russia
+	
+			relative_position_id = BRT_total_take_over
+			prerequisite = {
+				focus = BRT_total_take_over
+			}
+
+			cost = 2
+			x = 0
+			y = 1
+			available = {
+				country_exists = BRT
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+			}
+	
+	
+		}
+}
+
+
+

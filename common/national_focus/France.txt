@@ -1,1 +1,1885 @@
-﻿
+focus_tree = {
+	id = FRANCE.1ST
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+	#Focus for Liberty, Equality and Fraternity....
+	focus = {
+		id = FRA_liberty_equality_and_fraternity
+		icon = GFX_FRA_liberty_equality_and_fraternity
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 150
+		}
+	}
+	#Focus for ...But not for everyone
+	focus = {
+		id = FRA_but_not_for_everyone
+		icon = GFX_FRA_but_not_for_everyone
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_liberty_equality_and_fraternity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -100
+		}
+	}
+	#Focus for Our Europia
+	focus = {
+		id = FRA_our_europia
+		icon = GFX_FRA_our_europia
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_but_not_for_everyone }
+		ai_will_do = {
+			factor = 1
+		}
+
+
+				
+		completion_reward = {
+            if = {
+				limit = {
+					has_idea = mother_of_the_revolution
+				}
+				swap_ideas = {
+					remove_idea = mother_of_the_revolution
+					add_idea = mother_of_the_revolution_swap
+				}
+			}
+		}
+	
+	}
+	#Focus for Crisis of Denial
+	focus = {
+		id = FRA_crisis_of_denial
+		icon = GFX_FRA_crisis_of_denial
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_our_europia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -50
+		}
+	}
+	#Focus for The New Aristocracy
+	focus = {
+		id = FRA_the_new_aristocracy
+		icon = GFX_FRA_the_new_aristocracy
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_crisis_of_denial }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = corrupt_bureaucracy
+				}
+				swap_ideas = {
+					remove_idea = corrupt_bureaucracy
+					add_idea = corrupt_bureaucracy_swap_1
+				}
+			}
+		}
+	}
+	#Focus for My Dear Colonies
+	focus = {
+		id = FRA_my_dear_colonies
+		icon = GFX_FRA_my_dear_colonies
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_crisis_of_denial }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            add_opinion_modifier = { target = WAF modifier = friendship_treaty }
+			add_opinion_modifier = { target = NGA modifier = friendship_treaty }
+			add_opinion_modifier = { target = EGY modifier = friendship_treaty }
+			add_opinion_modifier = { target = COG modifier = friendship_treaty }
+			add_opinion_modifier = { target = PAL modifier = friendship_treaty }
+		}
+	}
+	#Focus for Cleansing the Bureaucracy
+	focus = {
+		id = FRA_cleansing_the_bureaucracy
+		icon = GFX_FRA_cleansing_the_bureaucracy
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_new_aristocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Fortunate Sons
+	focus = {
+		id = FRA_fortunate_sons
+		icon = GFX_FRA_fortunate_sons
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_new_aristocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for La Défense Unions
+	focus = {
+		id = FRA_la_dfense_unions
+		icon = GFX_FRA_la_dfense_unions
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_cleansing_the_bureaucracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = the_new_aristocracy_swap_1
+				}
+				swap_ideas = {
+					remove_idea = the_new_aristocracy_swap_1
+					add_idea = the_new_aristocracy_swap_2
+				}
+			}
+			division_template= { 
+              name = "National Militias" 
+              regiments = { 
+              infantry = { 
+              x = 0 
+              y = 0 
+            }
+ 
+            infantry = { 
+             x = 1 
+             y = 0 
+            }
+		}
+        }
+	    }
+	}
+	#Focus for Better Saint Cyr
+	focus = {
+		id = FRA_better_saint_cyr
+		icon = GFX_FRA_better_saint_cyr
+		x = 11
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_fortunate_sons }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            add_ideas= special_military_school_of_saint_cyr
+			army_experience = 100
+		}
+	}
+	#Focus for Gene Smilas
+	focus = {
+		id = FRA_gene_smilas
+		icon = GFX_FRA_gene_smilas
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_better_saint_cyr 
+		}
+		prerequisite = { 
+			focus = FRA_la_dfense_unions 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for French Colonial Empire
+	focus = {
+		id = FRA_french_colonial_empire
+		icon = GFX_FRA_french_colonial_empire
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_my_dear_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Gibraltar Summit
+	focus = {
+		id = FRA_gibraltar_summit
+		icon = GFX_FRA_gibraltar_summit
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_french_colonial_empire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = { country_event = { id = FRA.event.2 } }
+		}
+	}
+	#Focus for European Colonial Empire
+	focus = {
+		id = FRA_european_colonial_empire
+		icon = GFX_FRA_european_colonial_empire
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_my_dear_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Loan Repayments to the ECB
+	focus = {
+		id = FRA_loan_repayments_to_the_ecb
+		icon = GFX_FRA_loan_repayments_to_the_ecb
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_european_colonial_empire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea = repayments_to_the_ecb  days = 200 }	
+		}
+	}
+	#Focus for Bradow Von Breisgau
+	focus = {
+		id = FRA_bradow_von_breisgau
+		icon = GFX_FRA_bradow_von_breisgau
+		x = 16
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_loan_repayments_to_the_ecb 
+		}
+		prerequisite = { 
+			focus = FRA_gibraltar_summit 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Social Warming
+	focus = {
+		id = FRA_social_warming
+		icon = GFX_FRA_social_warming
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_bradow_von_breisgau 
+		}
+		prerequisite = { 
+			focus = FRA_gene_smilas 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Befriend the Malcals
+	focus = {
+		id = FRA_befriend_the_malcals
+		icon = GFX_FRA_befriend_the_malcals
+		x = 14
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_social_warming }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Industrial Planification
+	focus = {
+		id = FRA_industrial_planification
+		icon = GFX_FRA_industrial_planification
+		x = 14
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_befriend_the_malcals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Mobilize the Gendarmes!
+	focus = {
+		id = FRA_mobilize_the_gendarmes
+		icon = GFX_FRA_mobilize_the_gendarmes
+		x = 12
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_social_warming }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Public Arrests
+	focus = {
+		id = FRA_public_arrests
+		icon = GFX_FRA_public_arrests
+		x = 12
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_mobilize_the_gendarmes }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Social Status Quo
+	focus = {
+		id = FRA_social_status_quo
+		icon = GFX_FRA_social_status_quo
+		x = 13
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_industrial_planification 
+		}
+		prerequisite = { 
+			focus = FRA_public_arrests 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Crisis of Grudges
+	focus = {
+		id = FRA_crisis_of_grudges
+		icon = GFX_FRA_crisis_of_grudges
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_our_europia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -50
+		}
+	}
+	#Focus for Ungrateful Allies
+	focus = {
+		id = FRA_ungrateful_allies
+		icon = GFX_FRA_ungrateful_allies
+		x = 24
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_crisis_of_grudges }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+	#Focus for Return of the Colonies
+	focus = {
+		id = FRA_return_of_the_colonies
+		icon = GFX_FRA_return_of_the_colonies
+		x = 23
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_ungrateful_allies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Germanic Privilege
+	focus = {
+		id = FRA_germanic_privilege
+		icon = GFX_FRA_germanic_privilege
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_ungrateful_allies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = GER modifer = huge_increase }
+		}
+	}
+	#Focus for Old Entente
+	focus = {
+		id = FRA_old_entente
+		icon = GFX_FRA_old_entente
+		x = 24
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_return_of_the_colonies 
+		}
+		prerequisite = { 
+			focus = FRA_germanic_privilege 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for The Eastern Question
+	focus = {
+		id = FRA_the_eastern_question
+		icon = GFX_FRA_the_eastern_question
+		x = 30
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_crisis_of_grudges }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Favour the Danube
+	focus = {
+		id = FRA_favour_the_danube
+		icon = GFX_FRA_favour_the_danube
+		x = 29
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_eastern_question }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Soft Power
+	focus = {
+		id = FRA_soft_power
+		icon = GFX_FRA_soft_power
+		x = 31
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_eastern_question }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for My Bear Friend
+	focus = {
+		id = FRA_my_bear_friend
+		icon = GFX_FRA_my_bear_friend
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_soft_power 
+		}
+		prerequisite = { 
+			focus = FRA_favour_the_danube 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Gandolfi
+	focus = {
+		id = FRA_gandolfi
+		icon = GFX_FRA_gandolfi
+		x = 27
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_my_bear_friend 
+		}
+		prerequisite = { 
+			focus = FRA_old_entente 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for French Europia
+	focus = {
+		id = FRA_french_europia
+		icon = GFX_FRA_french_europia
+		x = 27
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_gandolfi }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Promote Gandolfi
+	focus = {
+		id = FRA_promote_gandolfi
+		icon = GFX_FRA_promote_gandolfi
+		x = 27
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_french_europia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Remake Peace
+	focus = {
+		id = FRA_remake_peace
+		icon = GFX_FRA_remake_peace
+		x = 27
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_promote_gandolfi }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Memories of the Great War
+	focus = {
+		id = FRA_memories_of_the_great_war
+		icon = GFX_FRA_memories_of_the_great_war
+		x = 27
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_remake_peace }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            remove_ideas= memories_of_the_great_war
+		}
+	}
+	#Focus for Terra Cognita
+	focus = {
+		id = FRA_terra_cognita
+		icon = GFX_FRA_terra_cognita
+		x = 20
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_social_status_quo 
+		}
+		prerequisite = { 
+			focus = FRA_memories_of_the_great_war 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            remove_ideas= sluggish_industry
+		}
+	}
+	#Focus for Legislative Cohabitation
+	focus = {
+		id = FRA_legislative_cohabitation
+		icon = GFX_FRA_legislative_cohabitation
+		x = 20
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_gandolfi 
+		}
+		prerequisite = { 
+			focus = FRA_bradow_von_breisgau 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            add_event= FRA.event.3
+			add_political_power= -50
+		}
+	}
+	#Focus for Smilos Advisors
+	focus = {
+		id = FRA_smilos_advisors
+		icon = GFX_FRA_smilos_advisors
+		x = 19
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_legislative_cohabitation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Breisgou Advisors
+	focus = {
+		id = FRA_breisgou_advisors
+		icon = GFX_FRA_breisgou_advisors
+		x = 21
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_legislative_cohabitation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			stability_factor = -0.15
+			add_political_power= -50
+		}
+	}
+	#Focus for Inconsistent Policy
+	focus = {
+		id = FRA_inconsistent_policy
+		icon = GFX_FRA_inconsistent_policy
+		x = 20
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_breisgou_advisors 
+		}
+		prerequisite = { 
+			focus = FRA_smilos_advisors 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Purple Gold
+	focus = {
+		id = FRA_purple_gold
+		icon = GFX_FRA_purple_gold
+		x = 45
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = { country_event = { id = FRA.event.5 } }
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 558
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 275
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 735
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 131
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 60
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 65
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 58
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 644
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 581
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 213
+			}
+		}
+	
+	}
+	#Focus for Knightmares
+	focus = {
+		id = FRA_knightmares
+		icon = GFX_FRA_knightmares
+		x = 40
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_purple_gold }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Gigantic Weapons
+	focus = {
+		id = FRA_gigantic_weapons
+		icon = GFX_FRA_gigantic_weapons
+		x = 37
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Factspheres
+	focus = {
+		id = FRA_factspheres
+		icon = GFX_FRA_factspheres
+		x = 40
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Landspinners
+	focus = {
+		id = FRA_landspinners
+		icon = GFX_FRA_landspinners
+		x = 43
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Design a Frame
+	focus = {
+		id = FRA_design_a_frame
+		icon = GFX_FRA_design_a_frame
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_landspinners 
+		}
+		prerequisite = { 
+			focus = FRA_factspheres 
+		}
+		prerequisite = { 
+			focus = FRA_gigantic_weapons 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Sophie Randle
+	focus = {
+		id = FRA_sophie_randle
+		icon = GFX_FRA_sophie_randle
+		x = 38
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_design_a_frame }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Panzer Hummel
+	focus = {
+		id = FRA_panzer_hummel
+		icon = GFX_FRA_panzer_hummel
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_sophie_randle }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Anna Clément
+	focus = {
+		id = FRA_anna_clment
+		icon = GFX_FRA_anna_clment
+		x = 42
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_design_a_frame }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Alexander
+	focus = {
+		id = FRA_alexander
+		icon = GFX_FRA_alexander
+		x = 42
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_anna_clment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Army of Steel
+	focus = {
+		id = FRA_army_of_steel
+		icon = GFX_FRA_army_of_steel
+		x = 40
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_alexander 
+		}
+		prerequisite = { 
+			focus = FRA_panzer_hummel 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Space
+	focus = {
+		id = FRA_space
+		icon = GFX_FRA_space
+		x = 50
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_purple_gold }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Paris Conference
+	focus = {
+		id = FRA_paris_conference
+		icon = GFX_FRA_paris_conference
+		x = 50
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_space }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Joe Wise
+	focus = {
+		id = FRA_joe_wise
+		icon = GFX_FRA_joe_wise
+		x = 50
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_paris_conference }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Orbital Program
+	focus = {
+		id = FRA_orbital_program
+		icon = GFX_FRA_orbital_program
+		x = 50
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_joe_wise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			  name = rocketry_bonus
+			  bonus = 0.5
+			  ahead_reduction = 1
+			  uses = 1
+			  category = rocketry
+			}
+	   }
+	}
+	#Focus for Weisswolf Space Centre
+	focus = {
+		id = FRA_weisswolf_space_centre
+		icon = GFX_FRA_weisswolf_space_centre
+		x = 50
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_orbital_program }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			  name = rocketry_bonus
+			  bonus = 1.00
+			  ahead_reduction = 1
+			  uses = 1
+			  category = rocketry
+			}
+	   }
+	  
+	}
+	#Focus for Scientific Enthusiasm
+	focus = {
+		id = FRA_scientific_enthusiasm
+		icon = GFX_FRA_scientific_enthusiasm
+		x = 50
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_weisswolf_space_centre }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	#Focus for Britannias' Revenge
+	focus = {
+		id = FRA_britannias_revenge
+		icon = GFX_FRA_britannias_revenge
+		x = 79
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Africa is under Attack!
+	focus = {
+		id = FRA_africa_is_under_attack
+		icon = GFX_FRA_africa_is_under_attack
+		x = 75
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_britannias_revenge }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Russian Civil War
+	focus = {
+		id = FRA_russian_civil_war
+		icon = GFX_FRA_russian_civil_war
+		x = 79
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_britannias_revenge }
+		mutually_exclusive = { focus = FRA_russia_is_under_attack }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Emergency Meeting
+	focus = {
+		id = FRA_emergency_meeting
+		icon = GFX_FRA_emergency_meeting
+		x = 79
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_africa_is_under_attack 
+		}
+		prerequisite = { 
+			focus = FRA_russia_is_under_attack 
+		}
+		prerequisite = { 
+			focus = FRA_russian_civil_war 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for See to the African Front
+	focus = {
+		id = FRA_see_to_the_african_front
+		icon = GFX_FRA_see_to_the_african_front
+		x = 64
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_emergency_meeting }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for South African Report
+	focus = {
+		id = FRA_south_african_report
+		icon = GFX_FRA_south_african_report
+		x = 66
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_see_to_the_african_front }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Nigerian Report
+	focus = {
+		id = FRA_nigerian_report
+		icon = GFX_FRA_nigerian_report
+		x = 62
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_see_to_the_african_front }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send Smilas!
+	focus = {
+		id = FRA_send_smilas
+		icon = GFX_FRA_send_smilas
+		x = 64
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_south_african_report 
+		}
+		prerequisite = { 
+			focus = FRA_nigerian_report 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Consign Africans
+	focus = {
+		id = FRA_consign_africans
+		icon = GFX_FRA_consign_africans
+		x = 61
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_send_smilas }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for European Requisitions
+	focus = {
+		id = FRA_european_requisitions
+		icon = GFX_FRA_european_requisitions
+		x = 64
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_send_smilas }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for French Volunteers
+	focus = {
+		id = FRA_french_volunteers
+		icon = GFX_FRA_french_volunteers
+		x = 67
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_send_smilas }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expeditionary Force
+	focus = {
+		id = FRA_expeditionary_force
+		icon = GFX_FRA_expeditionary_force
+		x = 64
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_french_volunteers 
+		}
+		prerequisite = { 
+			focus = FRA_consign_africans 
+		}
+		prerequisite = { 
+			focus = FRA_european_requisitions 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for HQ of Nigeria
+	focus = {
+		id = FRA_hq_of_nigeria
+		icon = GFX_FRA_hq_of_nigeria
+		x = 59
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_expeditionary_force }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Jungle War
+	focus = {
+		id = FRA_jungle_war
+		icon = GFX_FRA_jungle_war
+		x = 57
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_nigeria }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroy the Railways
+	focus = {
+		id = FRA_destroy_the_railways
+		icon = GFX_FRA_destroy_the_railways
+		x = 61
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_nigeria }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fortify the Cities
+	focus = {
+		id = FRA_fortify_the_cities
+		icon = GFX_FRA_fortify_the_cities
+		x = 59
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_jungle_war 
+		}
+		prerequisite = { 
+			focus = FRA_destroy_the_railways 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Foreign Legion
+	focus = {
+		id = FRA_foreign_legion
+		icon = GFX_FRA_foreign_legion
+		x = 64
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_expeditionary_force }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for HQ of South Africa
+	focus = {
+		id = FRA_hq_of_south_africa
+		icon = GFX_FRA_hq_of_south_africa
+		x = 69
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_expeditionary_force }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroy the Ports
+	focus = {
+		id = FRA_destroy_the_ports
+		icon = GFX_FRA_destroy_the_ports
+		x = 67
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_south_africa }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Frontal War
+	focus = {
+		id = FRA_frontal_war
+		icon = GFX_FRA_frontal_war
+		x = 71
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_south_africa }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Smilas Line
+	focus = {
+		id = FRA_smilas_line
+		icon = GFX_FRA_smilas_line
+		x = 69
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_destroy_the_ports 
+		}
+		prerequisite = { 
+			focus = FRA_frontal_war 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mobilize Africa
+	focus = {
+		id = FRA_mobilize_africa
+		icon = GFX_FRA_mobilize_africa
+		x = 64
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_smilas_line 
+		}
+		prerequisite = { 
+			focus = FRA_fortify_the_cities 
+		}
+		prerequisite = { 
+			focus = FRA_foreign_legion 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Five Russias?!
+	focus = {
+		id = FRA_five_russias
+		icon = GFX_FRA_five_russias
+		x = 79
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_emergency_meeting }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Real Republic
+	focus = {
+		id = FRA_the_real_republic
+		icon = GFX_FRA_the_real_republic
+		x = 79
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_five_russias }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Promote Frederica
+	focus = {
+		id = FRA_promote_frederica
+		icon = GFX_FRA_promote_frederica
+		x = 81
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_real_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Peace Army
+	focus = {
+		id = FRA_the_peace_army
+		icon = GFX_FRA_the_peace_army
+		x = 77
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_real_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Strike Anarchism
+	focus = {
+		id = FRA_strike_anarchism
+		icon = GFX_FRA_strike_anarchism
+		x = 79
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_the_peace_army 
+		}
+		prerequisite = { 
+			focus = FRA_promote_frederica 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for HQ of Tsaritsyn
+	focus = {
+		id = FRA_hq_of_tsaritsyn
+		icon = GFX_FRA_hq_of_tsaritsyn
+		x = 79
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_strike_anarchism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Wrong Socialism!
+	focus = {
+		id = FRA_the_wrong_socialism
+		icon = GFX_FRA_the_wrong_socialism
+		x = 74
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_tsaritsyn }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Respect P.O.W.s
+	focus = {
+		id = FRA_respect_pows
+		icon = GFX_FRA_respect_pows
+		x = 72
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_wrong_socialism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Humanitarian Aid
+	focus = {
+		id = FRA_humanitarian_aid
+		icon = GFX_FRA_humanitarian_aid
+		x = 76
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_wrong_socialism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Charity of Democracy
+	focus = {
+		id = FRA_the_charity_of_democracy
+		icon = GFX_FRA_the_charity_of_democracy
+		x = 74
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_respect_pows 
+		}
+		prerequisite = { 
+			focus = FRA_humanitarian_aid 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The New Great Army
+	focus = {
+		id = FRA_the_new_great_army
+		icon = GFX_FRA_the_new_great_army
+		x = 79
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_tsaritsyn }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Evil Authoritarianism!
+	focus = {
+		id = FRA_the_evil_authoritarianism
+		icon = GFX_FRA_the_evil_authoritarianism
+		x = 84
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_tsaritsyn }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for No Mercy for Collaborators
+	focus = {
+		id = FRA_no_mercy_for_collaborators
+		icon = GFX_FRA_no_mercy_for_collaborators
+		x = 82
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_evil_authoritarianism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Execute Officers
+	focus = {
+		id = FRA_execute_officers
+		icon = GFX_FRA_execute_officers
+		x = 86
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_evil_authoritarianism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Strong Democracy
+	focus = {
+		id = FRA_a_strong_democracy
+		icon = GFX_FRA_a_strong_democracy
+		x = 84
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_no_mercy_for_collaborators 
+		}
+		prerequisite = { 
+			focus = FRA_execute_officers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Good Job Frederica!
+	focus = {
+		id = FRA_good_job_frederica
+		icon = GFX_FRA_good_job_frederica
+		x = 79
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_a_strong_democracy 
+		}
+		prerequisite = { 
+			focus = FRA_the_new_great_army 
+		}
+		prerequisite = { 
+			focus = FRA_the_charity_of_democracy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Euro-Britannia?!
+	focus = {
+		id = FRA_eurobritannia
+		icon = GFX_FRA_eurobritannia
+		x = 79
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_good_job_frederica }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Real Enemy
+	focus = {
+		id = FRA_the_real_enemy
+		icon = GFX_FRA_the_real_enemy
+		x = 79
+		y = 17
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_eurobritannia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for HQ of Novosibirsk
+	focus = {
+		id = FRA_hq_of_novosibirsk
+		icon = GFX_FRA_hq_of_novosibirsk
+		x = 79
+		y = 18
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_the_real_enemy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Frederica's Lina
+	focus = {
+		id = FRA_fredericas_lina
+		icon = GFX_FRA_fredericas_lina
+		x = 77
+		y = 19
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_novosibirsk }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mobilize Russia
+	focus = {
+		id = FRA_mobilize_russia
+		icon = GFX_FRA_mobilize_russia
+		x = 81
+		y = 19
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_hq_of_novosibirsk }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prepare for a Long War
+	focus = {
+		id = FRA_prepare_for_a_long_war
+		icon = GFX_FRA_prepare_for_a_long_war
+		x = 79
+		y = 20
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_mobilize_russia 
+		}
+		prerequisite = { 
+			focus = FRA_fredericas_lina 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Russia is under Attack!
+	focus = {
+		id = FRA_russia_is_under_attack
+		icon = GFX_FRA_russia_is_under_attack
+		x = 83
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_britannias_revenge }
+		mutually_exclusive = { focus = FRA_russian_civil_war }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pacific Coast Invasion
+	focus = {
+		id = FRA_pacific_coast_invasion
+		icon = GFX_FRA_pacific_coast_invasion
+		x = 94
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_russia_is_under_attack }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Condemn the Invasion of Russia
+	focus = {
+		id = FRA_condemn_the_invasion_of_russia
+		icon = GFX_FRA_condemn_the_invasion_of_russia
+		x = 94
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_pacific_coast_invasion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support the Russian Army
+	focus = {
+		id = FRA_support_the_russian_army
+		icon = GFX_FRA_support_the_russian_army
+		x = 94
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_condemn_the_invasion_of_russia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for More Vehicle Shipments
+	focus = {
+		id = FRA_more_vehicle_shipments
+		icon = GFX_FRA_more_vehicle_shipments
+		x = 91
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_support_the_russian_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for More Gun Shipments
+	focus = {
+		id = FRA_more_gun_shipments
+		icon = GFX_FRA_more_gun_shipments
+		x = 94
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_support_the_russian_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for More Logistical Support
+	focus = {
+		id = FRA_more_logistical_support
+		icon = GFX_FRA_more_logistical_support
+		x = 97
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_support_the_russian_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send Volunteers
+	focus = {
+		id = FRA_send_volunteers
+		icon = GFX_FRA_send_volunteers
+		x = 94
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_more_logistical_support 
+		}
+		prerequisite = { 
+			focus = FRA_more_vehicle_shipments 
+		}
+		prerequisite = { 
+			focus = FRA_more_gun_shipments 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for It's a Real War?
+	focus = {
+		id = FRA_its_a_real_war
+		icon = GFX_FRA_its_a_real_war
+		x = 94
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_send_volunteers }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Facing the Blitzkrieg
+	focus = {
+		id = FRA_facing_the_blitzkrieg
+		icon = GFX_FRA_facing_the_blitzkrieg
+		x = 94
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_its_a_real_war }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Scorched Earth
+	focus = {
+		id = FRA_scorched_earth
+		icon = FRA_scorched_earth
+		x = 92
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_facing_the_blitzkrieg }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroy the Knightmares!
+	focus = {
+		id = FRA_destroy_the_knightmares
+		icon = GFX_FRA_destroy_the_knightmares
+		x = 96
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_facing_the_blitzkrieg }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Damn Schneizel!
+	focus = {
+		id = FRA_damn_schneizel
+		icon = GFX_FRA_damn_schneizel
+		x = 94
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_destroy_the_knightmares 
+		}
+		prerequisite = { 
+			focus = FRA_scorched_earth 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
+
+

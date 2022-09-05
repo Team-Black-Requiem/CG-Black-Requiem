@@ -1,0 +1,267 @@
+characters={
+	RUS_julien_blanchet={
+		name="Julien Blanchet"
+		portraits={
+			civilian={
+				large="GFX_portrait_RUS_julien_blanchet"
+				small="gfx/interface/ideas/RUS/RUS_julien_blanchet_idea.dds"
+			}
+		}
+		advisor={				
+			slot = head_of_government
+			idea_token = RUS_julien_blanchet
+			ledger = civilian
+				allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					oligarchy_guy appointed_general
+				}
+				cost = 2000
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		country_leader={
+			desc = "	"
+			ideology=military_dictatorship
+			traits={  }
+			expire="2020.1.1.1"
+			id = -1
+		}
+	}
+
+	RUS_generic_general_1={
+		advisor={				
+			slot = high_command
+			idea_token = RUS_generic_general_1_idea
+			ledger = army
+				allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					army_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+				available = {
+					has_completed_focus = RUS_Invitation_of_European_colleagues
+				}
+			}
+
+		
+		corps_commander={
+			traits={ expert_improviser brilliant_strategist }
+			skill = 3
+	        attack_skill = 4
+	        defense_skill = 3
+	        planning_skill = 4
+	        logistics_skill = 2
+			legacy_id=-1
+		}
+		name="Kliment Ivanov"
+		portraits={
+			army={
+				large="GFX_portrait_RUS_generic_general_1"
+				small="gfx/interface/ideas/RUS/RUS_generic_general_1_idea.dds"
+			}
+		}
+	}
+	RUS_generic_general_2={
+		advisor={
+					
+			slot = high_command
+			idea_token = RUS_generic_general_2_idea
+			ledger = army
+			allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					army_chief_entrenchment_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Yakov Petrov"
+		portraits={
+			army={
+				large="GFX_portrait_RUS_generic_general_2"
+				small="gfx/interface/ideas/RUS/RUS_generic_general_2_idea.dds"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist panzer_expert }
+			skill = 3
+	        attack_skill = 2
+	        defense_skill = 3
+	        planning_skill = 4
+	        logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+	RUS_generic_general_3={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = RUS_generic_general_3_idea
+			ledger = army
+			allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					army_regrouping_3
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Yaroslav Sidorov"
+		portraits={
+			army={
+				large="GFX_portrait_RUS_generic_general_3"
+				small="gfx/interface/ideas/RUS/RUS_generic_general_3_idea.dds"
+			}
+		}
+		corps_commander={
+			traits={ combined_arms_expert }
+			skill = 3
+	        attack_skill = 5
+	        defense_skill = 2
+	        planning_skill = 4
+	        logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+	RUS_gen_intelligence ={
+		advisor={
+			cost = 2000
+			
+			slot = intelligence
+			idea_token = RUS_gen_intelligence_idea
+			ledger = army
+				allowed = {
+					original_tag = RUS
+				}
+				
+				traits = {
+					conservative_guy military_police
+				}
+		}
+		name="Lavrentiy Smirnoff"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_gen_intelligence_idea.dds"
+			}
+		}
+	}
+	RUS_Conovalovs={
+		advisor={
+			cost = 2000
+			
+			slot = economy_minister
+			idea_token = RUS_Conovalovs
+				allowed = {
+					original_tag = RUS
+				}
+				
+				traits = {
+					conservative_guy balanced_budget
+				}
+		}
+		name="Matvei Conovalov"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_Conovalovs_idea.dds"
+			}
+		}
+	}
+	RUS_Bulganin={
+		advisor={
+			cost = 2000
+			
+			slot = foreign_minister
+			idea_token = RUS_Bulganin_idea
+			allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					oligarchy_guy expert_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Grigory Bulganin"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_Bulganin_idea.dds"
+			}
+		}
+	}
+
+
+	RUS_Chernov={
+		advisor={
+			cost = 2000
+			
+			slot = minister_of_interior
+			idea_token = RUS_Chernov_idea
+			allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					conservative_guy balanced_fist
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Timofey Chernov"
+		portraits={
+		civilian={
+			small="gfx/interface/ideas/RUS/RUS_Chernov_idea.dds"
+		}
+		}
+	}
+
+	RUS_officer_1={
+		name="Vsevolod Fedorov"
+		portraits={
+			army={
+				large="GFX_portrait_RUS_officer_1"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer scavenger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	RUS_officer_2={
+		name="Genrikh Volkov"
+		portraits={
+			army={
+				large="GFX_portrait_RUS_officer_2"
+			}
+		}
+		corps_commander={
+			traits={ bearer_of_artillery }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+}

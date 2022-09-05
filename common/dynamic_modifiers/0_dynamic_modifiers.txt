@@ -23,6 +23,20 @@
 #
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
+FRA_mother_of_the_revolution_focus_dynamic_modifier = { #NATIONAL SPIRIT - Same version as the previous one, but with a custom tooltip to communicate aircraft production bonuses
+	enable = { always = yes }
+
+	icon = GFX_FRA_mother_of_the_revolution
+
+	#INITIAL
+	stability_factor = FRA_mother_of_the_revolution_stability_factor #0.60
+	drift_defence_factor = FRA_mother_of_the_revolution_drift_defence_factor #0.5
+	political_power_gain = FRA_mother_of_the_revolution_political_power_gain_penalty #0.3
+	custom_modifier_tooltip = SOV_soviet_airforce_aircraft_production_focus_tt 
+
+	#FUTURE
+	moderate_liberalism_drift = FRA_mother_of_the_revolution_moderate_liberalism_drift #0.5
+}
 
 economic_collapse_area_11 = {
 	enable = { always = yes }

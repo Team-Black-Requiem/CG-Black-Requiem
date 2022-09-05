@@ -1,0 +1,75 @@
+
+guiTypes = {
+	containerWindowType = {
+			name = "RUS_regions_reform_gui_decision_gui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 275 height = 450 }
+			
+			iconType = {
+				name = "RUS_map"
+				spriteType = "GFX_decision_RUS_map"
+				orientation = upper_left
+				position = { x = 0 y = 0 }
+
+			}
+
+
+			
+			instantTextboxType = {
+				name = "Western_Russia_title"
+				position = { x = 15 y = 270 }
+				font = "hoi_25header"
+				text = Western_Russia_percentage
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "Central_Russia_title"
+				position = { x = 250 y = 270 }
+				font = "hoi_25header"
+				text = Central_Russia_percentage
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "Eastern_Russia_title"
+				position = { x = 15 y = 330 }
+				font = "hoi_25header"
+				text = Eastern_Russia_percentage
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			buttonType = {
+				name = "Western_Russia"
+				orientation = center
+				position = { x = -150 y = -220 }
+				spriteType = "GFX_decision_Western_Russia"
+	
+			}
+
+			buttonType = {
+				name = "Central_Russia"
+				orientation = center
+				position = { x = -147 y = -215 }
+				spriteType = "GFX_decision_Central_Russia"
+			}
+
+			buttonType = {
+				name = "Eastern_Russia"
+				orientation = center
+				position = { x = -143 y = -215 }
+				spriteType = "GFX_decision_Eastern_Russia"
+			}
+
+		}
+
+}

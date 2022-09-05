@@ -39,9 +39,7 @@ BRT_post_war_struggle = {
 	visible_when_empty = yes
 	visible = {
 		tag = BRT
-		check_variable = {
-			BRT_struggle_begins = 1
-		}
+		has_completed_focus = BRT_struggle_begins
 	}
 
 	scripted_gui = BRT_post_war_struggle_gui

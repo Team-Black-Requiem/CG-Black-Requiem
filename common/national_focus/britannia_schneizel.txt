@@ -985,7 +985,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LBA = {
+			NGA = {
 				add_popularity = {
 					ideology = autocracy
 					popularity = 0.20
@@ -1098,6 +1098,20 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			NGA = {
+				every_core_state = {
+					add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
 		  hidden_effect = {
 		}
 		}
@@ -1134,7 +1148,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LBA = {
+			NGA = {
 				give_military_access = BRT
 			}
 		  hidden_effect = {
@@ -3150,7 +3164,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRT_dump_rsi
+		id = BRT_dump_osi
 		icon = GFX_BRT_dump_osi
 		x = -2
 		y = 1
@@ -3202,8 +3216,8 @@ focus_tree = {
 			factor = 100
 		}
 
-		prerequisite = { focus = BRT_dump_rsi }
-		relative_position_id = BRT_dump_rsi
+		prerequisite = { focus = BRT_dump_osi }
+		relative_position_id = BRT_dump_osi
 
 
 		available = {		
@@ -3270,7 +3284,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRT_create_OSI
+		id = BRT_create_RSI
 		icon = GFX_BRT_create_RSI
 		x = 2
 		y = 1
@@ -3329,8 +3343,8 @@ focus_tree = {
 			factor = 100
 		}
 
-		prerequisite = { focus = BRT_create_OSI }
-		relative_position_id = BRT_create_OSI
+		prerequisite = { focus = BRT_create_RSI }
+		relative_position_id = BRT_create_RSI
 
 
 		available = {		
@@ -3431,6 +3445,9 @@ focus_tree = {
 		completion_reward = {
 			AR2 = {
                 remove_ideas = wild_tribes
+            } 
+			466 = {
+                set_demilitarized_zone = no
             } 
 		  hidden_effect = {
 		}
@@ -3549,7 +3566,14 @@ focus_tree = {
 		completion_reward = {
 			A10 = {
                 remove_ideas = admirals_fiefdom
+				add_war_support = -0.07
+				add_stability = 0.05
             } 
+			AR9 = {
+				add_war_support = -0.07
+				add_stability = 0.05
+                remove_ideas = admirals_fiefdom
+            }
 		  hidden_effect = {
 		}
 		}

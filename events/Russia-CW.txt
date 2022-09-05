@@ -14,7 +14,28 @@ country_event = {
 	option = { #Euro-Britannia Pops Up
 		name = russiaCW.1.a
 		hidden_effect = {
+			delete_unit = {
+				state = 637
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 574
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state =  644
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 562
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 822
+				disband = no #will refund equipment and manpower
+			}
 			EUR = {
+			load_oob = "EURO-BRITANNIA"
             transfer_state = 637
 			transfer_state = 822
 			transfer_state = 562
@@ -44,7 +65,64 @@ country_event = {
 	option = { #Socialists Pops Up
 		name = russiaCW.2.a
 		hidden_effect = {
+			delete_unit = {
+				state = 569
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 654
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state =  578
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 570
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 40
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 516
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 575
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 576
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 568
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 567
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 566
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 564
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state =  565
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 563
+				disband = no #will refund equipment and manpower
+			}
 			SRU = {
+			load_oob = "SOCIALIST_RUSSIA"
             transfer_state = 563
 			transfer_state = 565
 			transfer_state = 564
@@ -82,8 +160,25 @@ country_event = {
 
 	option = { #Legitismists Pops Up
 		name = russiaCW.3.a
+		delete_unit = {
+			state = 824
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 577
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state =  571
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 403
+			disband = no #will refund equipment and manpower
+		}
 		hidden_effect = {
 			LRU = {
+				load_oob = "LEGITIMIST_RUSSIA"
             transfer_state = 824
 			transfer_state = 577
 			transfer_state = 571
@@ -111,7 +206,28 @@ country_event = {
 	option = { #Monarchists Pops Up
 		name = russiaCW.4.a
 		hidden_effect = {
+			delete_unit = {
+				state = 651
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 398
+				disband = no #will refund equipment and manpower
+			}
+					delete_unit = {
+			state = 653
+			disband = no #will refund equipment and manpower
+		}
+				delete_unit = {
+			state = 580
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 579
+			disband = no #will refund equipment and manpower
+		}
 			MRU = {
+				load_oob = "IMPERIAL_RUSSIA"
             transfer_state = 579
 			transfer_state = 580
 			transfer_state = 653
@@ -148,6 +264,34 @@ country_event = {
 	option = { #West Russia Blows Up
 		name = russiaCW.6.a
 		hidden_effect = {
+			delete_unit = {
+				state = 825
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 397
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 833
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 217
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 228
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 235
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit = {
+				state = 231
+				disband = no #will refund equipment and manpower
+			}
 			WR1 = {
             transfer_state = 825
 			transfer_state = 262
@@ -225,6 +369,7 @@ country_event = {
 
 	option = { #Kaukasus Blows Up
 		name = russiaCW.5.a
+		set_cosmetic_tag = RUS_CW
 		hidden_effect = {
 			KW1 = {
 				transfer_state = 217

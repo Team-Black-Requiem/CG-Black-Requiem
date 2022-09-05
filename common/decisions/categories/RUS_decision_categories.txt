@@ -1,0 +1,16 @@
+
+
+RUS_region_reform_category = {
+	icon = GFX_decision_category_RUS_region_reform_category
+	priority = 80
+	allowed = {
+		tag = RUS
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = RUS
+		has_completed_focus = RUS_need_for_reforms
+	}
+
+	scripted_gui = RUS_regions_reform_gui_decision_gui
+}

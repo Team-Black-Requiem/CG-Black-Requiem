@@ -1,0 +1,2682 @@
+﻿focus_tree = {
+id = britannia_junta
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = BRT
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = BRT_bismark_foreign_policy
+		icon = GFX_BRT_bismark_foreign_policy
+		cost = 2
+		x = 33
+		y = 0
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_chamber_of_war
+		icon = GFX_BRT_chamber_of_war
+
+		relative_position_id = BRT_bismark_foreign_policy
+		prerequisite = {
+			focus = BRT_bismark_foreign_policy
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_colonise_australia
+		icon = GFX_BRT_colonise_australia
+
+		relative_position_id = BRT_chamber_of_war
+		prerequisite = {
+			focus = BRT_chamber_of_war
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_send_in_prisoners
+		icon = GFX_BRT_send_in_prisoners
+
+		relative_position_id = BRT_colonise_australia
+		prerequisite = {
+			focus = BRT_colonise_australia
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_encircle_island
+		icon = GFX_BRT_encircle_island
+
+		relative_position_id = BRT_colonise_australia
+		prerequisite = {
+			focus = BRT_colonise_australia
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_send_colonisers
+		icon = GFX_BRT_send_colonisers
+
+		relative_position_id = BRT_encircle_island
+		prerequisite = {
+			focus = BRT_encircle_island
+		}
+		prerequisite = {
+			focus = BRT_send_in_prisoners
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		#Australia's Colony Will Gain Coastal States
+
+		id = BRT_establish_coastal_presence
+		icon = GFX_BRT_establish_coastal_presence
+
+		relative_position_id = BRT_send_colonisers
+		prerequisite = {
+			focus = BRT_send_colonisers
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Australia's Colony Will Gain Internal States
+
+		id = BRT_push_into_desert
+		icon = GFX_BRT_push_into_desert
+
+		relative_position_id = BRT_establish_coastal_presence
+		prerequisite = {
+			focus = BRT_establish_coastal_presence
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#New Anglia And Australia Will Be United
+
+		id = BRT_merge_two_colonies
+		icon = GFX_BRT_merge_two_colonies
+
+		relative_position_id = BRT_push_into_desert
+		prerequisite = {
+			focus = BRT_push_into_desert
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_focus_eu
+		icon = GFX_BRT_focus_eu
+
+		relative_position_id = BRT_chamber_of_war
+		prerequisite = {
+			focus = BRT_chamber_of_war
+		}
+		cost = 2
+		x = 5
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_build_up_atlantic_fleet
+		icon = GFX_BRT_build_up_atlantic_fleet
+
+		relative_position_id = BRT_focus_eu
+		prerequisite = {
+			focus = BRT_focus_eu
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_occupy_iceland
+		icon = GFX_BRT_build_up_atlantic_fleet
+
+		relative_position_id = BRT_focus_eu
+		prerequisite = {
+			focus = BRT_focus_eu
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_increase_landing_capabilities
+		icon = GFX_BRT_increase_landing_capabilities
+
+		relative_position_id = BRT_focus_eu
+		prerequisite = {
+			focus = BRT_focus_eu
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_promote_internal_divisions
+		icon = GFX_BRT_promote_internal_divisions
+
+		relative_position_id = BRT_occupy_iceland
+		prerequisite = {
+			focus = BRT_build_up_atlantic_fleet
+		}
+		prerequisite = {
+			focus = BRT_occupy_iceland
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_ignore_africa
+		icon = GFX_BRT_ignore_africa
+
+		relative_position_id = BRT_occupy_iceland
+		prerequisite = {
+			focus = BRT_increase_landing_capabilities
+		}
+		prerequisite = {
+			focus = BRT_occupy_iceland
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Unlocks A Set Of Decisions Depending On The Russian
+		#Situation. If There is Euro Britannia or the Monarchists have 
+		#won the civil war, They Will Form An Official Alliance
+		#Either way, Britannia Invades Russia
+		#
+
+		id = BRT_what_about_russia
+		icon = GFX_BRT_what_about_russia
+
+		relative_position_id = BRT_promote_internal_divisions
+		prerequisite = {
+			focus = BRT_increase_landing_capabilities
+		}
+		prerequisite = {
+			focus = BRT_ignore_africa
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+		id = BRT_declare_total_war
+		icon = GFX_BRT_declare_total_war
+
+		relative_position_id = BRT_what_about_russia
+		prerequisite = {
+			focus = BRT_what_about_russia
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_reach_paris
+		icon = GFX_BRT_reach_paris
+
+		relative_position_id = BRT_declare_total_war
+		prerequisite = {
+			focus = BRT_declare_total_war
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_our_pax_britannica
+		icon = GFX_BRT_our_pax_britannica
+
+		relative_position_id = BRT_reach_paris
+		prerequisite = {
+			focus = BRT_reach_paris
+		}
+		prerequisite = {
+			focus = BRT_merge_two_colonies
+		}
+		prerequisite = {
+			focus = BRT_counter_attrition
+		}
+
+		cost = 2
+		x = -5
+		y = 2
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_focus_china
+		icon = GFX_BRT_chamber_of_war
+
+		relative_position_id = BRT_chamber_of_war
+		prerequisite = {
+			focus = BRT_chamber_of_war
+		}
+		cost = 2
+		x = -5
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_reinforce_area_11
+		icon = GFX_BRT_reinforce_area_11
+
+		relative_position_id = BRT_focus_china
+		prerequisite = {
+			focus = BRT_focus_china
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+
+		id = BRT_bring_in_KN
+		icon = GFX_BRT_bring_in_KN
+
+		relative_position_id = BRT_focus_china
+		prerequisite = {
+			focus = BRT_focus_china
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+		
+	focus = {
+
+		id = BRT_aggressive_accidents
+		icon = GFX_BRT_aggressive_accidents
+
+		relative_position_id = BRT_reinforce_area_11
+		prerequisite = {
+			focus = BRT_reinforce_area_11
+		}
+		prerequisite = {
+			focus = BRT_bring_in_KN
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_conquer_them_all
+		icon = GFX_BRT_conquer_them_all
+
+		relative_position_id = BRT_aggressive_accidents
+		prerequisite = {
+			focus = BRT_promote_rebellions
+		}
+		prerequisite = {
+			focus = BRT_aggressive_accidents
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_quality_over_quantity
+		icon = GFX_BRT_quality_over_quantity
+
+		relative_position_id = BRT_conquer_them_all
+		prerequisite = {
+			focus = BRT_conquer_them_all
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_counter_attrition
+		icon = GFX_BRT_counter_attrition
+
+		relative_position_id = BRT_quality_over_quantity
+		prerequisite = {
+			focus = BRT_quality_over_quantity
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_promote_rebellions
+		icon = GFX_BRT_promote_rebellions
+
+		relative_position_id = BRT_bring_in_KN
+		prerequisite = {
+			focus = BRT_bring_in_KN
+		}
+		prerequisite = {
+			focus = BRT_build_pacific_fleet
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+		id = BRT_build_pacific_fleet
+		icon = GFX_BRT_build_pacific_fleet
+
+		relative_position_id = BRT_focus_china
+		prerequisite = {
+			focus = BRT_focus_china
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_bismark_britannia
+		icon = GFX_BRT_knights_restore_order
+		cost = 2
+		x = 20
+		y = 0
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#It's called the Great "Restoration" because
+		#Bismark plans to nullify PM powers and 
+		#make The Emperor as powerful as a God
+		id = BRT_great_restoration
+		icon = GFX_BRT_great_restoration
+
+		relative_position_id = BRT_bismark_britannia
+		prerequisite = {
+			focus = BRT_bismark_britannia
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_empower_rsi
+		icon = GFX_BRT_empower_rsi
+
+		relative_position_id = BRT_great_restoration
+		prerequisite = {
+			focus = BRT_great_restoration
+		}
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = BRT_judicial_powers
+		icon = GFX_BRT_judicial_powers
+
+		relative_position_id = BRT_empower_rsi
+		prerequisite = {
+			focus = BRT_empower_rsi
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = BRT_interference_army
+		icon = GFX_BRT_interference_army
+
+		relative_position_id = BRT_judicial_powers
+		prerequisite = {
+			focus = BRT_judicial_powers
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Spies will be deployed in Pendragon 24/24h every day
+		id = BRT_nights_in_pendragon
+		icon = GFX_BRT_nights_in_pendragon
+
+		relative_position_id = BRT_interference_army
+		prerequisite = {
+			focus = BRT_interference_army
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#1/3 of Senators must have a military background
+		id = BRT_modify_senate_composition
+		icon = GFX_BRT_modify_senate_composition
+
+		relative_position_id = BRT_great_restoration
+		prerequisite = {
+			focus = BRT_great_restoration
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+	
+		id = BRT_nobiliar_titles_officers
+		icon = GFX_BRT_nobiliar_titles_officers
+
+		relative_position_id = BRT_modify_senate_composition
+		prerequisite = {
+			focus = BRT_modify_senate_composition
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+	
+		id = BRT_military_aristocracy
+		icon = GFX_BRT_military_aristocracy
+
+		relative_position_id = BRT_nobiliar_titles_officers
+		prerequisite = {
+			focus = BRT_nobiliar_titles_officers
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+	
+		id = BRT_replace_the_old_one
+		icon = GFX_BRT_replace_the_old_one
+
+		relative_position_id = BRT_military_aristocracy
+		prerequisite = {
+			focus = BRT_military_aristocracy
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+	
+		id = BRT_crackdown_on_mafia
+		icon = GFX_BRT_crackdown_on_mafia
+
+		relative_position_id = BRT_merge_south_american_areas
+		prerequisite = {
+			focus = BRT_merge_south_american_areas
+		}
+		prerequisite = {
+			focus = BRT_nights_in_pendragon
+		}
+		prerequisite = {
+			focus = BRT_replace_the_old_one
+		}
+		prerequisite = {
+			focus = BRT_question_martial_law
+		}
+		cost = 2
+		x = 3
+		y = 2
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_cement_new_bureucracy
+		icon = GFX_BRT_cement_new_bureucracy
+		relative_position_id = BRT_crackdown_on_mafia
+		prerequisite = {
+			focus = BRT_crackdown_on_mafia
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		#Bismark Will Return to Its Normal Duties
+		#NOTE: He's already retired, but he won't meddle
+		#anymore from the shadows
+		id = BRT_job_is_concluded
+		icon = GFX_BRT_job_is_concluded
+		relative_position_id = BRT_cement_new_bureucracy
+		prerequisite = {
+			focus = BRT_cement_new_bureucracy
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+		
+	focus = {
+		#Final Form Of Government Will Be A 
+		#Incredibily Powerful Charles and A Puppet Government
+		#Formed By the Military, which have also replaced
+		#the old aristocracy
+		id = BRT_final_speech
+		icon = GFX_BRT_final_speech
+		relative_position_id = BRT_job_is_concluded
+		prerequisite = {
+			focus = BRT_job_is_concluded
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_guinevere_never_again
+		icon = GFX_BRT_guinevere_never_again
+
+		relative_position_id = BRT_great_restoration
+		prerequisite = {
+			focus = BRT_great_restoration
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_officialise_military_council
+		icon = GFX_BRT_officialise_military_council
+
+		relative_position_id = BRT_guinevere_never_again
+		prerequisite = {
+			focus = BRT_guinevere_never_again
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Bismark Will Resign And A New Military Council
+		#Will take over
+		id = BRT_officialise_military_council
+		icon = GFX_BRT_officialise_military_council
+
+		relative_position_id = BRT_guinevere_never_again
+		prerequisite = {
+			focus = BRT_guinevere_never_again
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Bismark Is Officially Retired, but He continues 
+		#His reforms as a Puppet Master, With The Oversight 
+		#Of Charles
+		id = BRT_nullify_PM_powers
+		icon = GFX_BRT_nullify_PM_powers
+
+		relative_position_id = BRT_officialise_military_council
+		prerequisite = {
+			focus = BRT_officialise_military_council
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Bismark Is Officially Retired, but He continues 
+		#His reforms as a Puppet Master, With The Oversight 
+		#Of Charles
+		id = BRT_nullify_PM_powers
+		icon = GFX_BRT_nullify_PM_powers
+
+		relative_position_id = BRT_officialise_military_council
+		prerequisite = {
+			focus = BRT_officialise_military_council
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Bismark Is Officially Retired, but He continues 
+		#His reforms as a Puppet Master, With The Oversight 
+		#Of Charles
+		id = BRT_question_martial_law
+		icon = GFX_BRT_question_martial_law
+
+		relative_position_id = BRT_nullify_PM_powers
+		prerequisite = {
+			focus = BRT_nullify_PM_powers
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+		id = BRT_reform_administration
+		icon = GFX_BRT_reform_administration
+
+		relative_position_id = BRT_great_restoration
+		prerequisite = {
+			focus = BRT_great_restoration
+		}
+		cost = 2
+		x = -3
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Mainland Britannia will be divided into
+		#Military regions headed by a Major-General
+		#directly nominated by Bismark, much like
+		#Cromwell's Commonwealth
+		id = BRT_divide_empire
+		icon = GFX_BRT_divide_empire
+
+		relative_position_id = BRT_reform_administration
+		prerequisite = {
+			focus = BRT_reform_administration
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_key_is_balance
+		icon = GFX_BRT_key_is_balance
+
+		relative_position_id = BRT_divide_empire
+		prerequisite = {
+			focus = BRT_divide_empire
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+
+		id = BRT_merge_south_american_areas
+		icon = GFX_BRT_merge_south_american_areas
+
+		relative_position_id = BRT_key_is_balance
+		prerequisite = {
+			focus = BRT_key_is_balance
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_knights_restore_order
+		icon = GFX_BRT_knights_restore_order
+		cost = 2
+		x = 7
+		y = 0
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_crush_guinevere_militia
+		icon = GFX_BRT_crush_guinevere_militia
+		relative_position_id = BRT_knights_restore_order
+		prerequisite = {
+			focus = BRT_knights_restore_order
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = BRT_pendragon_control
+		icon = GFX_BRT_pendragon_control
+		relative_position_id = BRT_crush_guinevere_militia
+		prerequisite = {
+			focus = BRT_crush_guinevere_militia
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = BRT_reach_out_imperial_family
+		icon = GFX_BRT_reach_out_imperial_family
+		relative_position_id = BRT_knights_restore_order
+		prerequisite = {
+			focus = BRT_knights_restore_order
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = BRT_recall_schneizel
+		icon = GFX_BRT_recall_schneizel
+		relative_position_id = BRT_reach_out_imperial_family
+		prerequisite = {
+			focus = BRT_reach_out_imperial_family
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = BRT_martial_law
+		icon = GFX_BRT_martial_law
+		relative_position_id = BRT_pendragon_control
+		prerequisite = {
+			focus = BRT_pendragon_control
+		}
+		prerequisite = {
+			focus = BRT_recall_schneizel
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Bismark will become PM and the Junta 
+		#forms a military government
+		#For A11, a pro-Bismark Viceroy will put in place, 
+		#continuing his policies
+		#Schneizel Will Become Foreign Minister
+
+		id = BRT_fill_void
+		icon = GFX_BRT_fill_void
+		relative_position_id = BRT_martial_law
+
+		prerequisite = {
+			focus = BRT_martial_law
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+		#Bismark will begin a purge of Guinevere and
+		#the purists in the army and the government
+
+		id = BRT_white_revolution
+		icon = GFX_BRT_white_revolution
+		relative_position_id = BRT_fill_void
+
+		prerequisite = {
+			focus = BRT_fill_void
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_target_army
+		icon = GFX_BRT_target_army
+		relative_position_id = BRT_white_revolution
+
+		prerequisite = {
+			focus = BRT_white_revolution
+		}
+		cost = 2
+		x = -3
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Demote radical officers
+
+		id = BRT_junta_demote_radical_off
+		icon = GFX_BRT_junta_demote_radical_off
+		relative_position_id = BRT_target_army
+
+		prerequisite = {
+			focus = BRT_target_army
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+
+		id = BRT_check_barracks
+		icon = GFX_BRT_check_barracks
+		relative_position_id = BRT_junta_demote_radical_off
+
+		prerequisite = {
+			focus = BRT_junta_demote_radical_off
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+
+		id = BRT_scale_down_fanaticism
+		icon = GFX_BRT_scale_down_fanaticism
+		relative_position_id = BRT_check_barracks
+
+		prerequisite = {
+			focus = BRT_check_barracks
+		}
+		prerequisite = {
+			focus = BRT_dissolve_worst_units
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+
+		id = BRT_reintegrate_honorary_brit
+		icon = GFX_BRT_reintegrate_honorary_brit
+		relative_position_id = BRT_scale_down_fanaticism
+
+		prerequisite = {
+			focus = BRT_scale_down_fanaticism
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+
+		id = BRT_reform_military_curriculum
+		icon = GFX_BRT_reform_military_curriculum
+		relative_position_id = BRT_reintegrate_honorary_brit
+
+		prerequisite = {
+			focus = BRT_reintegrate_honorary_brit
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+        #A.k.a More Apolitical And Less Extreme Army
+		id = BRT_fairer_army
+		icon = GFX_BRT_fairer_army
+		relative_position_id = BRT_reform_military_curriculum
+
+		prerequisite = {
+			focus = BRT_reform_military_curriculum
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+
+		id = BRT_epuration_complete
+		icon = GFX_BRT_epuration_complete
+		relative_position_id = BRT_fairer_army
+
+		prerequisite = {
+			focus = BRT_fairer_army
+		}
+		prerequisite = {
+			focus = BRT_good_old_days
+		}
+
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+
+		id = BRT_spy_on_the_generals
+		icon = GFX_BRT_spy_on_the_generals
+		relative_position_id = BRT_target_army
+
+		prerequisite = {
+			focus = BRT_target_army
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+
+		id = BRT_dissolve_worst_units
+		icon = GFX_BRT_dissolve_worst_units
+		relative_position_id = BRT_spy_on_the_generals
+
+		prerequisite = {
+			focus = BRT_spy_on_the_generals
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_target_administration
+		icon = GFX_BRT_target_administration
+		relative_position_id = BRT_white_revolution
+
+		prerequisite = {
+			focus = BRT_white_revolution
+		}
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		id = BRT_dump_guinevere_laws
+		icon = GFX_BRT_dump_guinevere_laws
+		relative_position_id = BRT_target_administration
+
+		prerequisite = {
+			focus = BRT_target_administration
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+
+		id = BRT_clean_senate
+		icon = GFX_BRT_clean_senate
+		relative_position_id = BRT_dump_guinevere_laws
+
+		prerequisite = {
+			focus = BRT_dump_guinevere_laws
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Conglomerates that have offered financial
+		#support to Guinevere will be dissolved
+
+		id = BRT_dissolve_brown_corp
+		icon = GFX_BRT_dissolve_brown_corp
+		relative_position_id = BRT_clean_senate
+
+		prerequisite = {
+			focus = BRT_clean_senate
+		}
+		prerequisite = {
+			focus = BRT_keep_an_eye_areas
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Charles will give Bismark wide powers
+		#to meddle with troublesome members of the family
+
+		id = BRT_green_light_charles
+		icon = GFX_BRT_green_light_charles
+		relative_position_id = BRT_dissolve_brown_corp
+
+		prerequisite = {
+			focus = BRT_dissolve_brown_corp
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+        #Guinevere will be sent to the penal colony of New
+		#Anglia
+
+		id = BRT_exile_guinevere
+		icon = GFX_BRT_exile_guinevere
+		relative_position_id = BRT_green_light_charles
+
+		prerequisite = {
+			focus = BRT_green_light_charles
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+        #Just propaganda Efforts
+
+		id = BRT_good_old_days
+		icon = GFX_BRT_good_old_days
+		relative_position_id = BRT_exile_guinevere
+
+		prerequisite = {
+			focus = BRT_exile_guinevere
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_arrest_purist_governors
+		icon = GFX_BRT_arrest_purist_governors
+		relative_position_id = BRT_target_administration
+
+		prerequisite = {
+			focus = BRT_target_administration
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		id = BRT_keep_an_eye_areas
+		icon = GFX_BRT_keep_an_eye_areas
+		relative_position_id = BRT_arrest_purist_governors
+
+		prerequisite = {
+			focus = BRT_arrest_purist_governors
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = BRT
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+}	

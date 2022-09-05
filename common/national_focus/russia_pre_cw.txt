@@ -1,0 +1,557 @@
+﻿focus_tree = {
+	id = pre_cw_russia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = RUS
+		}
+	}
+	
+
+	default = no
+	
+			focus = {
+			id = RUS_need_for_reforms #####In this focus tree, you will need to think about what you need: 1pp per day or few features with debuffs
+			icon = GFX_RUS_need_for_reforms
+			cost = 3
+			x = 18
+			y = 0
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {
+
+		}
+	}
+			focus = {
+			id = RUS_Get_rid_of_corrupt_officials_in_Moscow
+			icon = GFX_RUS_Get_rid_of_corrupt_officials_in_Moscow
+			cost = 10
+			prerequisite = { focus = RUS_need_for_reforms }
+			relative_position_id = RUS_need_for_reforms
+			x = -6
+			y = 2
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### -pp +few percent to the admin. reforming of the first region
+		}
+	}
+			focus = {
+			id = RUS_Secretly_buy_assets_of_corrupt_officials
+			icon = GFX_RUS_Secretly_buy_assets_of_corrupt_officials
+			cost = 5
+			prerequisite = { focus = RUS_Get_rid_of_corrupt_officials_in_Moscow }
+			relative_position_id = RUS_Get_rid_of_corrupt_officials_in_Moscow
+			x = -2
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +ind factory -adm reform
+		}
+	}
+			focus = {
+			id = RUS_Delegation_to_the_Caucasus
+			icon = GFX_RUS_Delegation_to_the_Caucasus
+			cost = 5
+			prerequisite = { focus = RUS_Get_rid_of_corrupt_officials_in_Moscow}
+			relative_position_id = RUS_Get_rid_of_corrupt_officials_in_Moscow
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### event (options: Agree with their customs(get cool mountain general, but -army reform OR +army reform, but heavier debuffs on Caucasians modifiers))
+		}
+	}
+
+			focus = {
+			id = RUS_Complicate_departure_procedure_in_EU
+			icon = GFX_RUS_Complicate_departure_procedure_in_EU
+			cost = 5
+			prerequisite = { focus = RUS_Delegation_to_the_Caucasus }
+			relative_position_id = RUS_Delegation_to_the_Caucasus
+			mutually_exclusive = { focus = RUS_Improve_conditions_for_immigrants }
+			x = -1
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### -adm +econ reform (mb -consumer goods)
+		}
+	}
+			focus = {
+			id = RUS_Improve_conditions_for_immigrants
+			icon = GFX_RUS_Improve_conditions_for_immigrants
+			cost = 5
+			prerequisite = { focus = RUS_Delegation_to_the_Caucasus }
+			relative_position_id = RUS_Delegation_to_the_Caucasus
+			mutually_exclusive = { focus = RUS_Complicate_departure_procedure_in_EU }
+			x = 1
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +adm(From EU) -econ reform (mb +consumer goods) +pp
+		}
+	}
+				focus = {
+			id = RUS_Nationalize_shipyards_of_St_Petersburg
+			icon = GFX_RUS_Nationalize_shipyards_of_St_Petersburg
+			cost = 5
+			prerequisite = { focus = RUS_Improve_conditions_for_immigrants 
+							 focus = RUS_Complicate_departure_procedure_in_EU }
+			relative_position_id = RUS_Improve_conditions_for_immigrants
+			x = -1
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### -stab +dockyards and econ reform 
+		}
+	}
+
+			focus = {
+			id = RUS_Inspect_Black_Sea_shipyards
+			icon = GFX_RUS_Inspect_Black_Sea_shipyards
+			cost = 5
+			prerequisite = { focus = RUS_Nationalize_shipyards_of_St_Petersburg }
+			relative_position_id = RUS_Nationalize_shipyards_of_St_Petersburg
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the first region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### event (options: Use shipyards for civ purpose +eco +pp OR use for navy +army and 2 submarines in project
+		}
+	}
+			focus = {
+			id = RUS_End_reformation_of_1st_region
+			icon = GFX_RUS_End_reformation_of_1st_region
+			cost = 5
+			prerequisite = { focus = RUS_Inspect_Black_Sea_shipyards }
+			relative_position_id = RUS_Inspect_Black_Sea_shipyards
+			x = 0
+			y = 1
+			bypass = {
+				NOT = {
+				####has country flag about reforming the first region
+				}
+			}
+			available = {
+			
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			
+		}
+	}
+
+	#####################################################################################
+			focus = {
+			id = RUS_Re_launch_Ural_steel_industry
+			icon = GFX_RUS_Re_launch_Ural_steel_industry
+			cost = 10
+			prerequisite = { focus = RUS_need_for_reforms }
+			relative_position_id = RUS_need_for_reforms
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### -pp +eco. reforming of the second region  +steel, mb get rid of some debuffs in "agrarian economy"? 
+		}
+	}
+			focus = {
+			id = RUS_develop_military_enterprises
+			icon = GFX_RUS_develop_military_enterprises
+			cost = 10
+			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
+			relative_position_id = RUS_Re_launch_Ural_steel_industry
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### -pp +army. reforming of the second region +mil factory, mb get rid of some debuffs in "agrarian economy"? 
+		}
+	}
+			focus = {
+			id = RUS_disband_national_formations
+			icon = GFX_RUS_disband_national_formations
+			cost = 5
+			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
+			relative_position_id = RUS_Re_launch_Ural_steel_industry
+			mutually_exclusive = { focus = RUS_integrate_national_formations }
+			x = -1
+			y = 2
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +army reform +manpower -war support -to "russians nationalists" idea
+		}
+	}
+			focus = {
+			id = RUS_integrate_national_formations
+			icon = GFX_RUS_integrate_national_formations
+			cost = 5
+			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
+			relative_position_id = RUS_Re_launch_Ural_steel_industry
+			mutually_exclusive = { focus = RUS_disband_national_formations }
+			x = 1
+			y = 2
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### -army reform +militia div +to "russians nationalists" idea
+		}
+	}
+			focus = {
+			id = RUS_destroy_bandits
+			icon = GFX_RUS_destroy_bandits
+			cost = 5
+			prerequisite = { focus = RUS_disband_national_formations }
+			relative_position_id = RUS_disband_national_formations
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +stab +pp
+		}
+	}
+			focus = {
+			id = RUS_Train_army_to_fight_in_taiga
+			icon = GFX_RUS_Train_army_to_fight_in_taiga
+			cost = 5
+			prerequisite = { focus = RUS_integrate_national_formations }
+			relative_position_id = RUS_integrate_national_formations
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +army reform +army xp, mb get rid of some debuffs in "republican army"?
+		}
+	}
+			focus = {
+			id = RUS_Increasing_administrative_inspections_of_small_regions
+			icon = GFX_RUS_Increasing_administrative_inspections_of_small_regions
+			cost = 5
+			prerequisite = { focus = RUS_destroy_bandits 
+							 focus = RUS_Train_army_to_fight_in_taiga}
+			relative_position_id = RUS_destroy_bandits
+			x = 1
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +adm +eco -pp -stab
+		}
+	}
+			focus = {
+			id = RUS_Creating_workarounds 
+			icon = GFX_RUS_Creating_workarounds 
+			cost = 5
+			prerequisite = { focus = RUS_Increasing_administrative_inspections_of_small_regions }
+			relative_position_id = RUS_Increasing_administrative_inspections_of_small_regions
+			x = 2
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### -adm +pp 
+		}
+	}
+			focus = {
+			id = RUS_Creation_of_small_parliament 
+			icon = GFX_RUS_Creation_of_small_parliament 
+			cost = 5
+			prerequisite = { focus = RUS_Increasing_administrative_inspections_of_small_regions }
+			relative_position_id = RUS_Increasing_administrative_inspections_of_small_regions
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### ++adm +pp 
+		}
+	}
+			focus = {
+			id = RUS_End_reformation_of_2nd_region
+			icon = GFX_RUS_End_reformation_of_2nd_region
+			cost = 5
+			prerequisite = { focus = RUS_Creation_of_small_parliament }
+			relative_position_id = RUS_Creation_of_small_parliament
+			x = 0
+			y = 1
+			bypass = {
+				NOT = {
+				####has country flag about reforming the second region
+				}
+			}
+			available = {
+			
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			
+		}
+	}
+	#################################################################################################
+			focus = {
+			id = RUS_deal_with_proBritannians_aggitators
+			icon = GFX_RUS_deal_with_proBritannians_aggitators
+			cost = 10
+			prerequisite = { focus = RUS_need_for_reforms }
+			relative_position_id = RUS_need_for_reforms
+			x = 6
+			y = 2
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### -mannpower (like 1378) +pp +current ideology drift
+		}
+	}
+			focus = {
+			id = RUS_Increase_loyalty_of_population
+			icon = GFX_RUS_Increase_loyalty_of_population
+			cost = 5
+			prerequisite = { focus = RUS_deal_with_proBritannians_aggitators }
+			relative_position_id = RUS_deal_with_proBritannians_aggitators
+			x = -1
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### +stab
+		}
+	}
+			focus = {
+			id = RUS_Strengthen_influence_of_the_capital_on_local_government
+			icon = GFX_RUS_Strengthen_influence_of_the_capital_on_local_government
+			cost = 5
+			prerequisite = { focus = RUS_deal_with_proBritannians_aggitators }
+			relative_position_id = RUS_deal_with_proBritannians_aggitators
+			x = 1
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### +stab
+		}
+	}
+				focus = {
+			id = RUS_Formation_of_the_regions_own_budgets
+			icon = GFX_RUS_Formation_of_the_regions_own_budgets
+			cost = 5
+			prerequisite = { focus = RUS_Strengthen_influence_of_the_capital_on_local_government
+							 focus = RUS_Increase_loyalty_of_population}
+			relative_position_id = RUS_Strengthen_influence_of_the_capital_on_local_government
+			x = -1
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### +eco +adm
+		}
+	}
+			focus = {
+			id = RUS_Creation_of_a_new_research_center_in_the_Far_East
+			icon = GFX_RUS_Creation_of_a_new_research_center_in_the_Far_East
+			cost = 10
+			prerequisite = { focus = RUS_Formation_of_the_regions_own_budgets}
+			relative_position_id = RUS_Formation_of_the_regions_own_budgets
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### -pp +tech slot +eco +army
+		}
+	}
+				focus = {
+			id = RUS_Creation_of_an_innovative_Pacific_Fleet
+			icon = GFX_RUS_Creation_of_an_innovative_Pacific_Fleet
+			cost = 5
+			prerequisite = { focus = RUS_Creation_of_a_new_research_center_in_the_Far_East}
+			relative_position_id = RUS_Creation_of_a_new_research_center_in_the_Far_East
+			x = 0
+			y = 1
+			available = {
+			####has country flag about reforming the second region
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### +army +pp +some projects of ships in production line
+		}
+	}
+				focus = {
+			id = RUS_End_reformation_of_3rd_region
+			icon = GFX_RUS_End_reformation_of_3rd_region
+			cost = 5
+			prerequisite = { focus = RUS_Creation_of_an_innovative_Pacific_Fleet }
+			relative_position_id = RUS_Creation_of_an_innovative_Pacific_Fleet
+			x = 0
+			y = 1
+			bypass = {
+				NOT = {
+				####has country flag about reforming the third region
+				}
+			}
+			available = {
+			
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			
+		}
+	}
+####################################################################################################
+			focus = {
+			id = RUS_Long_live_the_Republic
+			icon = GFX_RUS_Long_live_the_Republic
+			cost = 5
+			prerequisite = { focus = RUS_End_reformation_of_1st_region }
+			prerequisite = { focus = RUS_End_reformation_of_2nd_region }
+			prerequisite = { focus = RUS_End_reformation_of_3rd_region }
+			relative_position_id = RUS_End_reformation_of_2nd_region
+			x = 0
+			y = 1
+			available = {
+			
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			
+		}
+	}
+			
+	}
