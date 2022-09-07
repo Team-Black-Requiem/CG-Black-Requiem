@@ -1,7 +1,7 @@
 ideas = {
     country = {
 	
-	    mother_of_the_revolution = {
+mother_of_the_revolution = {
 
 		 	allowed = {
 				always = yes
@@ -174,6 +174,40 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				research_speed_factor = -0.20
+			}
+		}
+
+		technological_pride_swap_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.15
+			}
+		}
+
+		technological_pride_swap_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
 				research_speed_factor = -0.15
 			}
 		}
@@ -284,7 +318,7 @@ ideas = {
 			}
 
 			add_dynamic_modifier = {
-                          days = 180
+                days = 180
 			}
 		}
 
@@ -309,6 +343,77 @@ ideas = {
 			}
 		}
 
+		gigantic_weapons = {
 
-	####### IDEA COPIES #######
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.05
+				equipment_bonus = {
+				knightmare = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			}
+		}
+
+	 tank_manufacturer = {
+
+		designer = yes
+
+		FRA_sophie_randle_design = {
+			picture = FRA_sophie_randle_design
+
+			allowed = {
+				has_country_flag = FRA_sophie_randle
+				original_tag = FRA
+			}
+			research_bonus = {
+				sakuradite = 0.05
+				knightmare_all_pur = 0.05
+			}
+			traits = { 
+				knightmare_producer_quality_1 
+			}
+		}
+	 }
+	
+	    materiel_manufacturer = {
+		
+		  designer = yes
+
+		    FRA_anna_clement_design = {
+			    picture = FRA_anna_clement_design
+
+			    allowed = {
+				  has_country_flag = FRA_anna_clment
+				  original_tag = FRA
+			    }
+			    traits = { materiel_designer_defence_1 } 
+		    }
+	    }
+
+	    aircraft_manufacturer = {
+		
+		    designer = yes
+
+		      FRA_joe_wise_design = {
+
+		    	allowed = {
+			     	has_country_flag = FRA_joe_wise
+			    	original_tag = FRA
+			    }
+			   traits = { ground_support_manufacturer }
+		    }
+	    }
+    }
 }	
