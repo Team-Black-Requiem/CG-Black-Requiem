@@ -163,7 +163,7 @@ characters={
 
 	### ARMY - NAVY - AIR (CHIEFS)
 
-	RUS_generic_army_chief = {
+	RUS_generic_army_chief_1 = {
 		name = "Kurakin Svyatoslav"
 		portraits = {
 			army = {
@@ -173,7 +173,7 @@ characters={
 
 		advisor = {
 			slot = army_chief
-			idea_token = RUS_generic_army_chief_idea
+			idea_token = RUS_generic_army_chief_idea_1
 			allowed = {
 				tag = RUS
 			}
@@ -188,6 +188,59 @@ characters={
 			}
 		}
 	}
+	RUS_generic_army_chief_2 = {
+		name = "Yevseyev Andreiv"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_2_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = RUS_generic_army_chief_idea_2
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				army_chief_defensive_1
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RUS_generic_army_chief_3 = {
+		name = "Zaslavsky Urvan"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_3_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = RUS_generic_army_chief_idea_3
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				army_chief_entrenchment_2
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
 
 	RUS_generic_navy_chief = {
 		name = "Chebykin Yaroslav"
