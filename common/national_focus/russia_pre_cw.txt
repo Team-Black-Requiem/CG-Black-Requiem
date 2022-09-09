@@ -4,17 +4,18 @@
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 5
 			tag = RUS
 		}
 	}
+	
 	
 
 	default = no
 	
 			focus = {
 			id = RUS_need_for_reforms #####In this focus tree, you will need to think about what you need: 1pp per day or few features with debuffs
-			icon = GFX
+			icon = GFX_RUS_need_for_reforms
 			cost = 3
 			x = 18
 			y = 0
@@ -31,7 +32,7 @@
 	}
 			focus = {
 			id = RUS_Unexpected_arest ###Event, where will we learn about the arrest of a municipal deputy, from whom an investigation of a corruption scheme will begin
-			icon = GFX
+			icon = GFX_RUS_Get_rid_of_corrupt_officials_in_Moscow
 			cost = 10
 			prerequisite = { focus = RUS_need_for_reforms }
 			relative_position_id = RUS_need_for_reforms
@@ -50,7 +51,7 @@
 	}
 			focus = {
 			id = RUS_Investigation_of_goverment_orders_shipyards_Petersburg ####An event where we discover that most of the ships that were built for the state are not listed in the Russian Navy. Some similar ships have been spotted in the Persian Gulf. It is worth investigating in the Middle East
-			icon = GFX
+			icon = GFX_RUS_Inspect_Black_Sea_shipyards
 			cost = 5
 			prerequisite = { focus = RUS_Unexpected_arest}
 			relative_position_id = RUS_Unexpected_arest
@@ -70,7 +71,7 @@
 
 			focus = {
 			id = RUS_investigation_continues_in_Caucasus ######We learn that almost the entire government in the region of Armenia and Azerbaijan is associated with bandit groups that operate on the border with Iran(Event)
-			icon = GFX
+			icon = GFX_RUS_Delegation_to_the_Caucasus
 			cost = 5
 			prerequisite = { focus = RUS_Investigation_of_goverment_orders_shipyards_Petersburg }
 			relative_position_id = RUS_Investigation_of_goverment_orders_shipyards_Petersburg
@@ -89,7 +90,7 @@
 	}
 				focus = {
 			id = RUS_Conduct_investigation_in_Armenia
-			icon = GFX
+			icon = GFX_RUS_Conduct_investigation_in_Armenia
 			cost = 5
 			prerequisite = { focus = RUS_investigation_continues_in_Caucasus }
 			relative_position_id = RUS_investigation_continues_in_Caucasus
@@ -108,7 +109,7 @@
 	}
 					focus = {
 			id = RUS_Conduct_investigation_in_Azerbaijan
-			icon = GFX
+			icon = GFX_RUS_Conduct_investigation_in_Azerbaijan
 			cost = 5
 			prerequisite = { focus = RUS_investigation_continues_in_Caucasus }
 			relative_position_id = RUS_investigation_continues_in_Caucasus
@@ -128,7 +129,7 @@
 
 			focus = {
 			id = RUS_Conduct_check_border_guards ####During this event. A border officer tells us that he was present at the talks between Iranian bandit groups and one of our Prime Minister's confidants
-			icon = GFX
+			icon = GFX_RUS_Conduct_check_border_guards
 			cost = 5
 			prerequisite = { focus = RUS_Conduct_investigation_in_Armenia }
 			prerequisite = { focus = RUS_Conduct_investigation_in_Azerbaijan }
@@ -148,7 +149,7 @@
 	}
 			focus = {
 			id = RUS_Arrest_the_traitor ####Add from the very beginning of the game a prime minister who is not deleted (as the head of the NKVD in the vanilla USSR), who will give -stability and + pp. In the event of this focus, when arrested, he resists, killing 10 policemen, but he himself was killed after a small chase
-			icon = GFX
+			icon = GFX_RUS_Arrest_the_traitor
 			cost = 5
 			prerequisite = { focus = RUS_Conduct_check_border_guards }
 			relative_position_id = RUS_Conduct_check_border_guards
@@ -175,7 +176,7 @@
 	#####################################################################################
 			focus = {
 			id = RUS_Re_launch_Ural_steel_industry ######An event where we understand that one of the main industrial concerns does not produce the amount of steel that is published in the reports. Why do we need to amend the budget and conduct another investigation
-			icon = GFX
+			icon = GFX_RUS_Re_launch_Ural_steel_industry
 			cost = 10
 			prerequisite = { focus = RUS_need_for_reforms }
 			relative_position_id = RUS_need_for_reforms
@@ -194,7 +195,7 @@
 	}
 			focus = {
 			id = RUS_develop_military_enterprises
-			icon = GFX
+			icon = GFX_RUS_develop_military_enterprises
 			cost = 10
 			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
 			relative_position_id = RUS_Re_launch_Ural_steel_industry
@@ -213,7 +214,7 @@
 	}
 			focus = {
 			id = RUS_Check_the_factory #######An event where we find out that the plant is run by a director who has been dead for several years, and his deputy, who disappeared before the inspection arrived, manages everything
-			icon = GFX
+			icon = GFX_RUS_Check_the_factory
 			cost = 5
 			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
 			relative_position_id = RUS_Re_launch_Ural_steel_industry
@@ -233,7 +234,7 @@
 	}
 			focus = {
 			id = RUS_Check_military_government_orders_in_region #######An event where we find that most of the contracts are frozen for a certain period, and the money has already been paid for them
-			icon = GFX
+			icon = GFX_RUS_destroy_bandits
 			cost = 5
 			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
 			relative_position_id = RUS_Re_launch_Ural_steel_industry
@@ -253,7 +254,7 @@
 	}
 			focus = {
 			id = RUS_Find_the_fugitive #####An event (how many of them there are) where the deputy, in exchange for life, helps us and tells us that the director died under "accidental" circumstances, and at the same time he received an order for the supply of steel to the Far Eastern region. In exchange for incognito, the buyer paid almost 2 times the market price.
-			icon = GFX
+			icon = GFX_RUS_Increasing_administrative_inspections_of_small_regions
 			cost = 5
 			prerequisite = { focus = RUS_Check_the_factory }
 			relative_position_id = RUS_Check_the_factory
@@ -272,7 +273,7 @@
 	}
 			focus = {
 			id = RUS_Investigation_at_infantry_weapons_factories #####An event where we learn that some of our weapons are being secretly transported to the Far Eastern Military District
-			icon = GFX
+			icon = GFX_RUS_Investigation_at_infantry_weapons_factories
 			cost = 5
 			prerequisite = { focus = RUS_Check_military_government_orders_in_region }
 			relative_position_id = RUS_Check_military_government_orders_in_region
@@ -291,7 +292,7 @@
 	}
 			focus = {
 			id = RUS_Appoint_managers_loyal_to_the_government
-			icon = GFX
+			icon = GFX_RUS_integrate_national_formations
 			cost = 5
 			prerequisite = { focus = RUS_Find_the_fugitive 
 							 focus = RUS_Investigation_at_infantry_weapons_factories}
@@ -311,7 +312,7 @@
 	}
 			focus = {
 			id = RUS_modernize_the_industry
-			icon = GFX
+			icon = GFX_RUS_modernize_the_industry
 			cost = 5
 			prerequisite = { focus = RUS_Appoint_managers_loyal_to_the_government }
 			relative_position_id = RUS_Appoint_managers_loyal_to_the_government
@@ -336,7 +337,7 @@
 	#################################################################################################
 			focus = {
 			id = RUS_deal_with_proBritannians_aggitators
-			icon = GFX
+			icon = GFX_RUS_deal_with_proBritannians_aggitators
 			cost = 10
 			prerequisite = { focus = RUS_need_for_reforms }
 			relative_position_id = RUS_need_for_reforms
@@ -355,7 +356,7 @@
 	}
 			focus = {
 			id = RUS_Increase_loyalty_of_population
-			icon = GFX
+			icon = GFX_RUS_Increase_loyalty_of_population
 			cost = 5
 			prerequisite = { focus = RUS_deal_with_proBritannians_aggitators }
 			relative_position_id = RUS_deal_with_proBritannians_aggitators
@@ -374,7 +375,7 @@
 	}
 			focus = {
 			id = RUS_Strengthen_influence_of_the_capital_on_local_government
-			icon = GFX
+			icon = GFX_RUS_Strengthen_influence_of_the_capital_on_local_government
 			cost = 5
 			prerequisite = { focus = RUS_deal_with_proBritannians_aggitators }
 			relative_position_id = RUS_deal_with_proBritannians_aggitators
@@ -393,7 +394,7 @@
 	}
 				focus = {
 			id = RUS_Get_on_the_trail ######Event: During one of the raids on the nationalists, we found that they were using weapons, the marking of which coincides with the recent batch of our order.
-			icon = GFX
+			icon = GFX_RUS_Get_on_the_trail
 			cost = 5
 			prerequisite = { focus = RUS_Strengthen_influence_of_the_capital_on_local_government}
 			prerequisite = { focus = RUS_Increase_loyalty_of_population}
@@ -413,7 +414,7 @@
 	}
 			focus = {
 			id = RUS_Strengthen_raids_on_nationalist_bases  #####We are finding more and more of our latest weapons, and former lower-ranking officers are at the head of the bases
-			icon = GFX
+			icon = GFX_RUS_Strengthen_raids_on_nationalist_bases
 			cost = 10
 			prerequisite = { focus = RUS_Get_on_the_trail}
 			relative_position_id = RUS_Get_on_the_trail
@@ -432,7 +433,7 @@
 	}
 				focus = {
 			id = RUS_Conduct_an_inventory_of_military_units
-			icon = GFX
+			icon = GFX_RUS_Conduct_an_inventory_of_military_units
 			cost = 10
 			prerequisite = { focus = RUS_Get_on_the_trail}
 			relative_position_id = RUS_Get_on_the_trail
@@ -451,8 +452,8 @@
 	}
 				focus = {
 			id = RUS_Conduct_an_investigation_in_Irkutsk ######After a little investigation from the head of the administration, we learn that the entire region is secretly controlled by the 	
-																Field Marshal of the Far Eastern Military District. Thanks to his plans, he puts the Russian army in a bad light, and also secretly commands nationalists, trying to incite hatred among the population towards the Moscow government and the army.
-			icon = GFX
+																#Field Marshal of the Far Eastern Military District. Thanks to his plans, he puts the Russian army in a bad light, and also secretly commands nationalists, trying to incite hatred among the population towards the Moscow government and the army.
+			icon = GFX_RUS_Conduct_an_investigation_in_Irkutsk
 			cost = 5
 			prerequisite = { focus = RUS_Strengthen_raids_on_nationalist_bases}
 			prerequisite = { focus = RUS_Conduct_an_inventory_of_military_units}
@@ -471,9 +472,8 @@
 		}
 	}
 				focus = {
-			id = RUS_End_of_the_Nationalist #########################################After he was charged. The leader of the nationalists refused to surrender and dug in a small military base in the South of Lake Baikal. Having gathered everyone who was nearby, he posed a great threat to us. 
-																					Although the assault was heavy, but we were able to break this fortress. The Field Marshal himself tried to escape in a small boat, but was destroyed by the only aircraft that was at his disposal. The pilot was awarded. The Field Marshal's body was not found.
-			icon = GFX
+			id = RUS_End_of_the_Nationalist #########################################After he was charged. The leader of the nationalists refused to surrender and dug in a small military base in the South of Lake Baikal. Having gathered everyone who was nearby, he posed a great threat to us. 																Although the assault was heavy, but we were able to break this fortress. The Field Marshal himself tried to escape in a small boat, but was destroyed by the only aircraft that was at his disposal. The pilot was awarded. The Field Marshal's body was not found.
+			icon = GFX_RUS_End_reformation_of_3rd_region
 			cost = 5
 			prerequisite = { focus = RUS_Conduct_an_investigation_in_Irkutsk }
 			relative_position_id = RUS_Conduct_an_investigation_in_Irkutsk
@@ -499,7 +499,7 @@
 ####################################################################################################
 			focus = {
 			id = RUS_Long_live_the_Republic
-			icon = GFX
+			icon = GFX_RUS_Long_live_the_Republic
 			cost = 5
 			prerequisite = { focus = RUS_Arrest_the_traitor }
 			prerequisite = { focus = RUS_modernize_the_industry }
