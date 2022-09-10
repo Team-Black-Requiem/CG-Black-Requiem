@@ -1,0 +1,25 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+            #### sets initial country sakuradite surplus
+			
+		}
+	}
+
+	on_daily = {
+		effect = {
+
+
+			#### collects national sakuradite surplus daily
+
+			set_variable = { country_sakuradite = root.resource@sakuradite }
+			
+			set_variable = { sakuradite_capacity_k = root.num_core_states }
+			multiply_variable = {sakuradite_capacity_k = 2500}
+			add_to_variable = {sakruadite_capacity_k = 50000}
+
+
+        }
+    }
+}
