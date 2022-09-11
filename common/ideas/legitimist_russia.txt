@@ -1,0 +1,67 @@
+ideas = {
+    country = {
+
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+	
+		LRU_right_wing_paramilitaries  = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly = -0.0020
+			political_power_gain = -0.15
+			ultra_nationalism_drift = 0.002
+			authoritarian_democracy_drift = 0.002
+			}
+		}
+		
+		LRU_populist_threat = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			war_support_weekly = -0.0020
+			political_power_gain = -0.15
+			moderate_socialism_drift = 0.002
+			moderate_liberalism_drift = 0.002
+			}
+		}
+		
+		LRU_shard_russian_republic = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.10
+			army_morale_factor = -0.05
+			conscription_factor = -0.10
+			mobilization_speed = -0.10
+			}
+		}
+
+    }
+}
