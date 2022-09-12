@@ -38,6 +38,17 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	
+		Gandolfi_trait = {
+				  
+		random = no
+							   
+		stability_factor = 0.10
+  
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 		
 	FRA_edouard_herriot_trait = {
@@ -2415,7 +2426,6 @@ leader_traits = {
 				factor = 1
 			}
 		}
-
 		##Artillery Producers
 	
 		artillery_producer_offense_0 = {
@@ -2629,32 +2639,16 @@ leader_traits = {
 					build_cost_ic = -0.15
 	
 				}
+				anti_tank_equipment = {
+					defense = 0.15
+					hard_attack = 0.15
+				}
 			}
-	
+			army_attack_factor = 0.1	
 			ai_will_do = {
 				factor = 1
 			}
-		}	
-
-
-		## Materiel Designer/Artillery Designer ##
-
-				materiel_designer_defence_1 = {
-					random = no
-					equipment_bonus = {
-						anti_tank_equipment = {
-							defense = 0.15
-							hard_attack = 0.15
-						}
-					}
-					army_attack_factor = 0.1
-		
-					ai_will_do = {
-						factor = 1
-					}
-				}
-		
-				## Aircraft Designer ##
+		}
 	
 	
 	
@@ -2727,16 +2721,16 @@ leader_traits = {
 		}
 	}
 
-	ground_support_manufacturer = {
+	CAS_FRA_manufacturer = {
 		random = no
 		equipment_bonus = {
 			CAS_equipment = {
-				air_ground_attack = 0.15
-				air_agility = 0.15 
+				air_ground_attack = 0.15 reliability = 0.15
+				air_agility = 0.15 maximum_speed = 0.15
 			}
 			cv_CAS_equipment = {
-				air_ground_attack = 0.15 
-				air_agility = 0.15 
+				air_ground_attack = 0.15 reliability = 0.15
+				air_agility = 0.15 maximum_speed = 0.15
 			}		
 		}
 		
@@ -2902,8 +2896,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
-	
 	
 	heavy_tank_manufacturer = {
 		random = no

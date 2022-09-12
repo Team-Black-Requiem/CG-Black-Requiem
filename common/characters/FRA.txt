@@ -222,6 +222,23 @@ characters={
 			}
 		}
 	}
+	FRA_gandolfi_character_foreign_minister={
+		name="Gandolfi"
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_generic_minister_1"
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = foreign_minister
+			idea_token = FRA_gandolfi_character_foreign_minister
+			cancel_if_invalid = no
+			traits  = {
+				Gandolfi_trait
+			}
+		}
+	}
 	FRA_claus_warwick={
 		name="Claus Warwick"
 		portraits={
@@ -235,6 +252,23 @@ characters={
 			attack_skill = 2
 			defense_skill = 5
 			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	}
+	FRA_constantin_lyon={
+		name="Constantin Lyon"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_constantin_lyon"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer bearer_of_artillery }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
 			logistics_skill = 2
 			legacy_id=-1
 		}
@@ -253,24 +287,6 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 5
-			legacy_id=-1
-		}
-	}
-
-	FRA_constantin_lyon={
-		name="Constantin Lyon"
-		portraits={
-			army={
-				large="GFX_portrait_FRA_constantin_lyon"
-			}
-		}
-		corps_commander={
-			traits={ infantry_officer bearer_of_artillery }
-			skill = 2
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
 			legacy_id=-1
 		}
 	}

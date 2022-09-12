@@ -3,6 +3,7 @@
 oob = "FRA"
 set_naval_oob = "FRANCE_NAVAL"
 
+set_naval_oob = "FRANCE_NAVAL"
 
 set_research_slots = 3
 set_stability = 0.5
@@ -19,7 +20,13 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	eu_war_artillery = 1
+	early_submarine = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_frigate = 1
 	support_equip = 1
+	early_frigate = 1
 	cold_war_tank = 1
 	tank_design = 1
 	motorised_infantry = 1
@@ -30,32 +37,6 @@ set_technology = {
 	g_support1 = 1
 	bomber1 = 1
 	armored_car1 = 1
-}
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		early_ship_hull_frigate = 1  #Frigate I
-		early_ship_hull_cruiser = 1 #Cruiser I
-		early_ship_hull_submarine = 1 #Submarine I
-		early_ship_hull_carrier = 1 #Carrier I
-		early_ship_hull_light = 1 #Destroyer I
-		mtg_transport = 1
-		smoke_generator = 1
-		basic_torpedo = 1
-	}
-}
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-		early_submarine = 1
-	    early_carrier = 1
-	    early_destroyer = 1
-	    early_light_cruiser = 1
-		early_frigate = 1
-		transport = 1
-	}
 }
 
 
@@ -81,12 +62,46 @@ set_popularities = {
 add_ideas = {
     mother_of_the_revolution
     guardian_of_europia
-    corrupt_bureaucracy
-    the_new_aristocracy
     sluggish_industry
     technological_pride
-    memories_of_the_great_war
 }
+
+FRA = {
+	add_dynamic_modifier = {
+		modifier = the_new_aristocracy_dynamic_modifier_FRA
+    }
+}
+
+FRA = {
+	add_dynamic_modifier = {
+        modifier = corrupt_bureaucracy_dynamic_modifier_FRA
+	}
+}
+
+FRA = {
+	add_dynamic_modifier = {
+        modifier = memories_of_the_great_war_dynamic_modifier_FRA
+	}
+}
+
+set_variable = { FRA_the_new_aristocracy_stability_factor = -0.40 }
+set_variable = { FRA_the_new_aristocracy_political_gain_factor = -0.70 }
+set_variable = { FRA_the_new_aristocracy_war_support_weekly = -0.005 }
+set_variable = { FRA_the_new_aristocracy_max_command_power = -30 }
+set_variable = { FRA_the_new_aristocracy_army_org_factor = -0.40 }
+
+set_variable = { FRA_corrupt_bureaucracy_stability_factor = -0.25 }
+set_variable = { FRA_corrupt_bureaucracy_stability_weekly_factor = -0.05 } 
+set_variable = { FRA_corrupt_bureaucracy_war_support_weekly_factor = -0.0007 } 
+set_variable = { FRA_corrupt_bureaucracy_consumer_goods_factor = 0.60 }
+
+set_variable = { FRA_memories_of_the_great_war_conscription_factor_dynamic_modifier = -0.50 }
+set_variable = { FRA_memories_of_the_great_war_war_support_dynamic_modifier = -0.55 }
+set_variable = { FRA_memories_of_the_great_war_offence_dynamic_modifier = -0.50 }
+set_variable = { FRA_memories_of_the_great_war_defence_dynamic_modifier = -0.50 }
+set_variable = { FRA_memories_of_the_great_war_army_speed_factor_dynamic_modifier = -0.40 }
+set_variable = { FRA_memories_of_the_great_war_mobilization_speed_dynamic_modifier = -0.30 }
+set_variable = { FRA_memories_of_the_great_war_army_morale_factor_dynamic_modifier = -0.15 }
 
 create_faction = European_Universe
 add_to_faction = POR
@@ -115,4 +130,4 @@ recruit_character = FRA_gene_smilas
 recruit_character = FRA_bradow_von_breisgau
 recruit_character = FRA_claus_warwick
 recruit_character = FRA_pierre_anou
-recruit_character = FRA_constantin_lyon
+recruit_character = FRA_gandolfi_character_foreign_minister
