@@ -9,9 +9,11 @@ characters={
 		advisor={				
 			slot = head_of_government
 			idea_token = RUS_julien_blanchet
+			removal_cost = -1
 			ledger = civilian
 				allowed = {
 					original_tag = RUS
+					NOT = {has_completed_focus = RUS_Arrest_the_traitor}
 				}
 				traits = {
 					oligarchy_guy appointed_general
@@ -377,9 +379,9 @@ characters={
 				large="GFX_portrait_RUS_officer_1"
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits={ infantry_officer scavenger }
-			skill = 2
+			skill = 4
 			attack_skill = 2
 			defense_skill = 4
 			planning_skill = 3

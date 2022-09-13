@@ -72,10 +72,6 @@
 			available_if_capitulated = no
 			completion_reward = { 
 			###################### +2 shipyards +few percent to the admin. reforming of the first region +few percent to the econ. reforming of the first region
-			add_offsite_building = {
-				type = dockyard
-				level = 2
-			}
 			RUS = { country_event = RUS.25 }
 			add_to_variable = {
 				RUS_reform_region_1_admin = 0.05
@@ -193,11 +189,6 @@
 			relative_position_id = RUS_Conduct_check_border_guards
 			x = 0
 			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the first region
-				}
-			}
 			available = {
 			
 			}
@@ -207,8 +198,7 @@
 			available_if_capitulated = no
 			completion_reward = { 
 			#################################-11 manpower -pp +new event about new prime minister (3 to choose from, everyone will give small buffs (the first for stability and pp, the second for the economy and speed of construction, the third for the army) The choice of this prime minister will depend on which category of reforms the percentages will be added to)
-			add_manpower = -11
-			add_political_power = -50
+			
 
 			RUS = { country_event = RUS.30 }
 
@@ -236,11 +226,7 @@
 			add_to_variable = {
 				RUS_reform_region_2_admin = 0.05
 			}
-			add_resource = {
-				type = steel
-				amount = -12
-				state = 582
-			}
+
 
 			RUS = { country_event = RUS.31 }
 		}
@@ -285,7 +271,7 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### +eco. reforming of the second region -pp
+			###################### +eco. reforming of the second region
 			add_to_variable = {
 				RUS_reform_region_2_admin_econ = 0.05
 			}
@@ -407,11 +393,6 @@
 			relative_position_id = RUS_Appoint_managers_loyal_to_the_government
 			x = 0
 			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the second region
-				}
-			}
 			available = {
 			
 			}
@@ -452,7 +433,7 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### -2000 mannpower +pp +current ideology drift
-			add_manpower = -2000
+			add_manpower = -2916
 			add_political_power = 50
 			#!!
 		}
@@ -474,7 +455,7 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
-			add_stability = 0.15
+			add_stability = 0.05
 		}
 	}
 			focus = {
@@ -494,7 +475,7 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
-			add_stability = 0.15
+			add_stability = 0.05
 		}
 	}
 				focus = {
@@ -515,14 +496,6 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +1000 rifles and 20 motorized infantry +army reforming for the 3rd region
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 20
-			}
 			add_to_variable = {
 				RUS_reform_region_3_army = 0.05
 			}
@@ -607,7 +580,7 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### -stab +adm reform
-			add_stability = 0.15
+			add_stability = 0.05
 			add_to_variable = {
 				RUS_reform_region_3_army = 0.05
 			}
@@ -621,11 +594,6 @@
 			relative_position_id = RUS_Conduct_an_investigation_in_Irkutsk
 			x = 0
 			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the third region
-				}
-			}
 			available = {
 			
 			}
@@ -638,12 +606,7 @@
 			add_to_variable = {
 				RUS_reform_region_3_army = 0.05
 			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				name = cat_mass_assault
-				category = cat_mass_assault
-			}
+			RUS = { country_event = RUS.37 }
 			
 		}
 	}
