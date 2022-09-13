@@ -2188,7 +2188,524 @@ focus_tree = {
 		}
 	}
 
+ #################   ##############   #############   ####        ####
+ #################   ##############   #############   ####        ####
+       ####          ####             ####            ####        ####
+       ####          ####             ####            ####        ####
+       ####          ##############   ####            ################
+       ####          ##############   ####            ################
+       ####          ####             ####            ####        ####
+       ####          ####             ####            ####        ####
+       ####          ##############   #############   ####        ####
+       ####          ##############   #############   ####        ####
+    
+  #####
+
+    #Focus for Purple Gold
+	focus = {
+		id = FRA_purple_gold
+		icon = GFX_FRA_purple_gold
+		x = 49
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			FRA = { country_event = { id = FRA.event.5 } }
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 558
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 275
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 735
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 131
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 60
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 65
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 58
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 644
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 581
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 213
+			}
+		}
+	}
+	#Focus for Knightmares
+	focus = {
+		id = FRA_knightmares
+		icon = GFX_FRA_knightmares
+		x = 44
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_purple_gold }
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = knightmare_mass_production
+			}
+		}
+	}
+	#Focus for Gigantic Weapons
+	focus = {
+		id = FRA_gigantic_weapons
+		icon = GFX_FRA_gigantic_weapons
+		x = 41
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = gigantic_weapons
+			add_war_support = 0.05
+		}
+	}
+	#Focus for Factspheres
+	focus = {
+		id = FRA_factspheres
+		icon = GFX_FRA_factspheres
+		x = 44
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = factspheres
+			}
+		}
+	}
+	#Focus for Landspinners
+	focus = {
+		id = FRA_landspinners
+		icon = GFX_FRA_landspinners
+		x = 47
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_knightmares }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = landspinner
+			}
+		}
+	}
+	#Focus for Design a Frame
+	focus = {
+		id = FRA_design_a_frame
+		icon = GFX_FRA_design_a_frame
+		x = 44
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FRA_landspinners 
+		}
+		prerequisite = { 
+			focus = FRA_factspheres 
+		}
+		prerequisite = { 
+			focus = FRA_gigantic_weapons 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		country_exists = FRA
+		has_tech = knightmare_frame_1
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = knightmare_frame_2
+			}
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = knightmare_frame_3
+			}
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = knightmare_frame_4
+			}
+		}
+	}
+	#Focus for Sophie Randle
+	focus = {
+		id = FRA_sophie_randle
+		icon = GFX_FRA_sophie_randle
+		x = 42
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_design_a_frame }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = FRA_sophie_randle_design
+			army_experience = 25
+			army_hard_attack_factor = 0.1
+		}
+	}
+	#Focus for Panzer Hummel
+	focus = {
+		id = FRA_panzer_hummel
+		icon = GFX_FRA_panzer_hummel
+		x = 42
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_sophie_randle }
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		country_exists = FRA
+		has_tech = knightmare_frame_4
+		has_tech = anti_knightmare_design
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = knightmare_frame_5
+			}
+		}
+	}
+	#Focus for Anna Clément
+	focus = {
+		id = FRA_anna_clment
+		icon = GFX_FRA_anna_clment
+		x = 46
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_design_a_frame }
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = FRA_anna_clement_design
+		}
+	}
+	#Focus for The Alexander
+	focus = {
+		id = FRA_the_alexander
+		icon = GFX_FRA_the_alexander
+		x = 46
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_anna_clment }
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		country_exists = FRA
+		has_tech = all_pur_knightmare
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				technology = all_pur_knightmare_gen_7
+			}
+		}
+	}
+	#Focus for Army of Steel
+	focus = {
+		id = FRA_army_of_steel
+		icon = GFX_FRA_army_of_steel
+		x = 44
+		y = 7
+		cost = 3
+		prerequisite = { 
+			focus = FRA_the_alexander 
+		}
+		prerequisite = { 
+			focus = FRA_panzer_hummel 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		country_exists = FRA
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 100
+			research_speed_factor = 0.10
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	#Focus for Space
+	focus = {
+		id = FRA_space
+		icon = GFX_FRA_space
+		x = 54
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_purple_gold }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = technological_pride
+				}
+				swap_ideas = {
+					remove_idea = technological_pride
+					add_idea = technological_pride_swap_1
+				}
+			}
+		}
+	}
+	#Focus for Paris Conference
+	focus = {
+		id = FRA_paris_conference
+		icon = GFX_FRA_paris_conference
+		x = 54
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_space }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			FRA = {country_event = { id = FRA.event.6 } }
+			if = {
+				limit = {
+					has_idea = technological_pride
+				}
+				swap_ideas = {
+					remove_idea = technological_pride
+					add_idea = technological_pride_swap_2
+				}
+			}
+		}
+	}
+    #Focus for Joe Wise
+	focus = {
+		id = FRA_joe_wise
+		icon = GFX_FRA_joe_wise
+		x = 54
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_paris_conference }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = FRA_joe_wise_design
+		}
+	}
+	#Focus for Orbital Program
+	focus = {
+		id = FRA_orbital_program
+		icon = GFX_FRA_orbital_program
+		x = 54
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_joe_wise }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+		  add_tech_bonus = {
+	        name = rocketry_bonus
+	        bonus = 0.5
+            ahead_reduction = 1
+	        uses = 1
+	        category = rocketry
+		  }
+        }
+	}
+	#Focus for Weisswolf Space Centre
+	focus = {
+		id = FRA_weisswolf_space_centre
+		icon = GFX_FRA_weisswolf_space_centre
+		x = 54
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_orbital_program }
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		    add_tech_bonus = {
+	         name = rocketry_bonus
+	         bonus = 1.00
+             ahead_reduction = 1
+	         uses = 1
+	         category = rocketry
+		    } 
+			42 = {
+	            add_building_construction = {
+		         type = rocket_site
+        	      province = 11547
+		          level = 1
+	            }
+            } 
+	    }
+	}
+	#Focus for Scientific Enthusiasm
+	focus = {
+		id = FRA_scientific_enthusiasm
+		icon = GFX_FRA_scientific_enthusiasm
+		x = 54
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = FRA_weisswolf_space_centre }
+		ai_will_do = {
+			factor = 1
+		}
+
+        search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+            remove_ideas= technological_pride
+			add_research_slot = 1
+		}
+	}
 #End of focuses 
- }
+}
 
 
