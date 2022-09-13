@@ -95,6 +95,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = fra_tt_the_new_aristocracy_1
 			add_to_variable = { FRA_the_new_aristocracy_stability_factor = 0.3 }
 		}
 	}
@@ -132,6 +133,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = fra_tt_corrupt_bureucracy_1
 			add_to_variable = { FRA_corrupt_bureaucracy_consumer_goods_factor = -0.50 }
 		}
 	}
@@ -148,6 +150,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = fra_tt_the_new_aristocracy_2
 			add_to_variable = { FRA_the_new_aristocracy_army_org_factor = 0.20 }
 			add_to_variable = { FRA_the_new_aristocracy_political_gain_factor = 0.03 }
 		}					   
@@ -166,6 +169,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 150
+			custom_effect_tooltip = fra_tt_the_new_aristocracy_4
 			add_to_variable = { FRA_the_new_aristocracy_war_support_weekly = 0.005 }
 			division_template = {
 				name = "Defense Militia"
@@ -215,6 +219,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = fra_tt_the_new_aristocracy_3
             add_ideas= special_military_school_of_saint_cyr
 			army_experience = 100
 			add_to_variable = { FRA_memories_of_the_great_war_war_support_dynamic_modifier = 0.25 }
@@ -243,6 +248,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 100
+			custom_effect_tooltip = fra_tt_corrupt_bureucracy_2
 			add_to_variable = { FRA_corrupt_bureaucracy_war_support_weekly_factor = 0.07 }
             activate_advisor = FRA_gene_smilas
 			add_political_power = 50
@@ -393,7 +399,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_timed_idea = { idea = repayments_to_the_ecb  days = 200 }	
+			add_timed_idea = { idea = repayments_to_the_ecb days = 200 }	
 		}
 	}
 	#Focus for Bradow Von Breisgau
@@ -415,7 +421,8 @@ focus_tree = {
 		}
 		completion_reward = {
             activate_advisor = FRA_bradow_von_breisgau
-			add_to_variable = { FRA_corrupt_bureaucracy_consumer_goods_factor = 0.40 }
+			custom_effect_tooltip = fra_tt_corrupt_bureucracy_3
+			add_to_variable = { FRA_corrupt_bureaucracy_consumer_goods_factor = -0.40 }
 			add_political_power = 50
 		}					   
 	}
@@ -634,7 +641,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_opinion_modifier = { target = GER modifer = huge_increase }
+			add_opinion_modifier = { target = GER modifier = germanic_privilege }
 		}
 	}
 	#Focus for Old Entente

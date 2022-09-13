@@ -180,26 +180,8 @@ ideas = {
 		modifier = {
 			research_speed_factor = -0.20
 		}
-	}
 
-	technological_pride_swap_1 = {
-
-		allowed = {
-			always = no
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-
-		modifier = {
-			research_speed_factor = -0.15
-		}
-	}
-
-	technological_pride_swap_2 = {
+	    technological_pride_swap_1 = {
 
 		allowed = {
 			always = no
@@ -214,7 +196,24 @@ ideas = {
 		modifier = {
 			research_speed_factor = -0.15
 		}
-	}
+	    }
+
+	    technological_pride_swap_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			research_speed_factor = -0.15
+		}
+	    }
 		
 		memories_of_the_great_war = {
 
@@ -238,10 +237,8 @@ ideas = {
 				army_morale_factor = -0.15
 			}
 		}
-    }
-
-
-	######## FOCUS IDEAS ########
+       
+	    ######## FOCUS IDEAS ########
 
 		special_military_school_of_saint_cyr = {
 
@@ -323,7 +320,7 @@ ideas = {
 			}
 
 			add_dynamic_modifier = {
-                          days = 180
+                  days = 180
 			}
 		}
 
@@ -360,6 +357,7 @@ ideas = {
 				moderate_liberalism_drift = 0.05
 			}
 		}
+
 		france_maintaining_the_peace_stability_modifier = {
 			allowed = {
 				always = no
@@ -369,7 +367,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_weekly = 0.0005
+				stability_weekly = 0.005
 			}
 		}
 		
@@ -392,9 +390,9 @@ ideas = {
 				   knightmare_producer_quality_1 
 			    }
 		    }
-	      }
+	    }
 	
-	      materiel_manufacturer = {
+	    materiel_manufacturer = {
 		
 		  designer = yes
 
@@ -407,7 +405,7 @@ ideas = {
 			    }
 			    traits = { materiel_designer_defence_1 } 
 		    }
-	     }
+	    } 
 
 	    aircraft_manufacturer = {
 		
@@ -422,28 +420,24 @@ ideas = {
 			   traits = { ground_support_manufacturer }
 		    }
 	    }
-	}
-}									  
 
-ideas = {
-industrial_concern = { 
+        industrial_concern = { 
 
-	designer = yes
+	        designer = yes
 
-	FRA_gen_industry = {
-		picture = BRT_gen_industry
+	        FRA_gen_industry = {
+	     	picture = BRT_gen_industry
 
-		allowed = {
+		    allowed = {
 			original_tag = FRA
-		  }
+		    }
 
-		research_bonus = {
+		    research_bonus = {
 			industry = 0.02
-		}
+		    }
 
-		traits = { industrial_manufacturer }
-
-	}
-  }
-}					   
-}	
+		    traits = { industrial_manufacturer }
+	    }
+    }
+    }
+}
