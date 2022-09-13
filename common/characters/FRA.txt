@@ -239,15 +239,15 @@ characters={
 			}
 		}
 	}
-	FRA_claus_warwick={
-		name="Claus Warwick"
+	FRA_claus_warwick = {
+		name = "Claus Warwick"
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Claus_Warwick"
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer scavenger }
+		corps_commander = {
+			traits = { infantry_officer scavenger }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 5
@@ -256,14 +256,14 @@ characters={
 			legacy_id=-1
 		}
 	}
-	FRA_constantin_lyon={
+	FRA_constantin_lyon = {
 		name="Constantin Lyon"
 		portraits={
 			army={
 				large="GFX_portrait_FRA_constantin_lyon"
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			traits={ infantry_officer bearer_of_artillery }
 			skill = 2
 			attack_skill = 4
@@ -271,6 +271,12 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id=-1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_constantin_lyon
+			traits = { army_chief_both_1 }
+			cost = 2000
 		}
 	}
 	FRA_pierre_anou={
