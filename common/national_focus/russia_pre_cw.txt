@@ -49,10 +49,11 @@
 			###################### -pp +few percent to the admin. reforming of the first region -stab
 			add_political_power = -100
 			add_to_variable = {
-				RUS_reform_region_1_admin = 0.05
+				RUS_reform_region_1_admin = 0.1
 			}
 			set_stability = -0.15
 			RUS = { country_event = RUS.24}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 			focus = {
@@ -74,9 +75,13 @@
 			###################### +2 shipyards +few percent to the admin. reforming of the first region +few percent to the econ. reforming of the first region
 			RUS = { country_event = RUS.25 }
 			add_to_variable = {
-				RUS_reform_region_1_admin = 0.05
-				RUS_reform_region_1_admin_econ = 0.05
+				RUS_reform_region_1_admin = 0.1
 			}
+			add_to_variable = {
+			RUS_reform_region_1_econ = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
+			custom_effect_tooltip = RUS_reform_region_1_econ_tt
 		}
 	}
 
@@ -98,11 +103,11 @@
 			completion_reward = { 
 			###################### +few percent to the admin. reforming of the first region -pp
 			add_to_variable = {
-				RUS_reform_region_1_admin = 0.05
+				RUS_reform_region_1_admin = 0.1
 			}
 			add_political_power = -50
-
 			RUS = { country_event = RUS.26}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 				focus = {
@@ -123,10 +128,10 @@
 			completion_reward = { 
 			###################### +few percent to the admin. reforming of the first region (If this is the last focus of these two, then launch an event where we will find that the border guards and those responsible for them are not doing their job so honestly)
 			add_to_variable = {
-				RUS_reform_region_1_admin = 0.05
+				RUS_reform_region_1_admin = 0.1
 			}
-
 			RUS = { country_event = RUS.27 }
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 					focus = {
@@ -147,10 +152,10 @@
 			completion_reward = { 
 			###################### +few percent to the admin. reforming of the first region (If this is the last focus of these two, then launch an event where we will find that the border guards and those responsible for them are not doing their job so honestly)
 			add_to_variable = {
-				RUS_reform_region_1 = 0.05
+				RUS_reform_region_1_admin = 0.1
 			}
-
 			RUS = { country_event = RUS.28}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 
@@ -174,10 +179,10 @@
 			###################### -pp +few percent to the army. reforming of the first region
 			add_political_power = -50
 			add_to_variable = {
-				RUS_reform_region_1_army = 0.05
+				RUS_reform_region_1_army = 0.1
 			}
-
 			RUS = { country_event = RUS.29 }
+			custom_effect_tooltip = RUS_reform_region_1_army_tt
 
 		}
 	}
@@ -215,7 +220,7 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			RUS = { has_completed_focus = RUS_Arrest_the_traitor }
 			}
 			ai_will_do = {
 					factor = 30
@@ -224,11 +229,11 @@
 			completion_reward = {
 			###################### +eco. reforming of the second region -steel in Magnitogorsk
 			add_to_variable = {
-				RUS_reform_region_2_admin = 0.05
+				RUS_reform_region_2_econ = 0.1
 			}
 
-
 			RUS = { country_event = RUS.31 }
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 			focus = {
@@ -250,8 +255,9 @@
 			###################### -pp +army. reforming of the second region +mil factory
 			add_political_power = -50
 			add_to_variable = {
-				RUS_reform_region_2_admin_army = 0.05
+				RUS_reform_region_2_army = 0.1
 			}
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
 		}
 	}
 			focus = {
@@ -273,10 +279,10 @@
 			completion_reward = { 
 			###################### +eco. reforming of the second region
 			add_to_variable = {
-				RUS_reform_region_2_admin_econ = 0.05
+				RUS_reform_region_2_econ = 0.1
 			}
-
 			RUS = { country_event = RUS.32 }
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 			focus = {
@@ -298,10 +304,11 @@
 			completion_reward = { 
 			###################### +army. reforming of the second region -pp
 			add_to_variable = {
-				RUS_reform_region_2_army = 0.05
+				RUS_reform_region_2_army = 0.1
 			}
 			add_political_power = -50
 			RUS = { country_event = RUS.33 }
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
 		}
 	}
 			focus = {
@@ -323,10 +330,10 @@
 			###################### +pp +few percent to the admin. reforming of the second region
 			add_political_power = 50
 			add_to_variable = {
-				RUS_reform_region_2_admin = 0.05
+				RUS_reform_region_2_admin = 0.1
 			}
-
 			RUS = { country_event = RUS.34 }
+			custom_effect_tooltip = RUS_reform_region_2_admin_tt
 		}
 	}
 			focus = {
@@ -347,13 +354,14 @@
 			completion_reward = { 
 			###################### +army reform +2 mill factory
 			add_to_variable = {
-				RUS_reform_region_2_army = 0.05
+				RUS_reform_region_2_army = 0.1
 			}
 			add_offsite_building = {
 				type = arms_factory
 				level = 2
 			}
 			RUS = { country_event = RUS.35 }
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
 		}
 	}
 			focus = {
@@ -375,14 +383,18 @@
 			completion_reward = { 
 			###################### +adm +eco -pp (return all steel to Magnitogorsk)
 			add_to_variable = {
-				RUS_reform_region_2_admin = 0.05
-				RUS_reform_region_2_econ = 0.05
+				RUS_reform_region_2_admin = 0.1	
+			}
+			add_to_variable = {
+			RUS_reform_region_2_econ = 0.1
 			}
 			add_resource = {
 				type = steel
 				amount = 12
 				state = 582
 			}
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
+			custom_effect_tooltip = RUS_reform_region_2_admin_tt
 		}
 	}
 			focus = {
@@ -402,7 +414,7 @@
 			available_if_capitulated = no
 			completion_reward = { ############+eco +2 mil factory +2 civ factory
 			add_to_variable = {
-				RUS_reform_region_2_admin_econ = 0.05
+				RUS_reform_region_2_econ = 0.1
 			}
 			add_offsite_building = {
 				type = arms_factory
@@ -412,7 +424,7 @@
 				type = industrial_complex
 				level = 2
 			}
-			
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 	#################################################################################################
@@ -426,6 +438,7 @@
 			y = 1
 			available = {
 			####has country flag about reforming the second region
+			RUS = { has_completed_focus = RUS_modernize_the_industry }
 			}
 			ai_will_do = {
 					factor = 30
@@ -455,7 +468,11 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
-			add_stability = 0.05
+			add_stability = 0.1
+			add_to_variable = {
+				RUS_reform_region_3_admin = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_admin_tt
 		}
 	}
 			focus = {
@@ -475,7 +492,11 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
-			add_stability = 0.05
+			add_stability = 0.1
+			add_to_variable = {
+				RUS_reform_region_3_admin = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_admin_tt
 		}
 	}
 				focus = {
@@ -497,11 +518,10 @@
 			completion_reward = {
 			###################### +1000 rifles and 20 motorized infantry +army reforming for the 3rd region
 			add_to_variable = {
-				RUS_reform_region_3_army = 0.05
+				RUS_reform_region_3_army = 0.1
 			}
-
 			RUS = { country_event = RUS.36 }
-
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 
 		}
 	}
@@ -527,8 +547,9 @@
 				amount = 3000
 			}
 			add_to_variable = {
-				RUS_reform_region_3_army = 0.05
+				RUS_reform_region_3_army = 0.1
 			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 		}
 	}
 				focus = {
@@ -557,8 +578,9 @@
 				amount = 500
 			}
 			add_to_variable = {
-				RUS_reform_region_3_army = 0.05
+				RUS_reform_region_3_army = 0.1
 			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 		}
 	}
 				focus = {
@@ -582,8 +604,9 @@
 			###################### -stab +adm reform
 			add_stability = 0.05
 			add_to_variable = {
-				RUS_reform_region_3_army = 0.05
+				RUS_reform_region_3_army = 0.1
 			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 		}
 	}
 				focus = {
@@ -604,9 +627,10 @@
 			completion_reward = { 
 			######Kill Field Marshal ""; +army reform; delete nationalists idea; +research speed to Mass Assault doctrine
 			add_to_variable = {
-				RUS_reform_region_3_army = 0.05
+				RUS_reform_region_3_army = 0.1
 			}
 			RUS = { country_event = RUS.37 }
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 			
 		}
 	}

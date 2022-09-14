@@ -619,7 +619,54 @@ country_event = {
 		add_manpower = -11
 		add_political_power = -50
 		remove_ideas = {RUS_julien_blanchet}
-		remove_country_leader_role = RUS_julien_blanchet
+		RUS = { country_event = RUS.38 }
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = RUS.38
+	title = RUS.38.t
+	desc = RUS.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RUS.38.a
+		RUS = {
+		recruit_character = RUS_Butasov
+		add_ideas = {RUS_Butasov}
+		add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
+			}}
+		custom_effect_tooltip = RUS_reform_region_1_admin_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = RUS.38.b
+		RUS = {
+		recruit_character = RUS_Lavinov
+		add_ideas = {RUS_Lavinov}
+		add_to_variable = {
+				RUS_reform_region_1_econ = 0.1
+			}}
+		custom_effect_tooltip = RUS_reform_region_1_econ_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = RUS.38.c
+		RUS = {
+		recruit_character = RUS_Osipov
+		add_ideas = {RUS_Osipov}
+		add_to_variable = {
+				RUS_reform_region_1_army = 0.1
+			}}
+		custom_effect_tooltip = RUS_reform_region_1_army_tt
 		ai_chance = {
 			factor = 100
 		}
