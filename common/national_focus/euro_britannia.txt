@@ -1,0 +1,484 @@
+﻿focus_tree = {
+id = euro_britannia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = EUR
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = EUR_cold_far_east
+		icon = GFX_EUR_cold_far_east
+		cost = 2
+		x = 15
+		y = 0
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_under_our_management
+		icon = GFX_EUR_under_our_management
+		relative_position_id = EUR_cold_far_east
+		prerequisite = {
+			focus = EUR_cold_far_east
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_centralize_government
+		icon = GFX_EUR_centralize_government
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_delegation_pendragon
+		icon = GFX_EUR_delegation_pendragon
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 2
+		x = -3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_retreat_into_isolation
+		icon = GFX_EUR_retreat_into_isolation
+		relative_position_id = EUR_delegation_pendragon
+		prerequisite = {
+			focus = EUR_delegation_pendragon
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = EUR_protect_arctic_routes
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_protect_arctic_routes
+		icon = GFX_EUR_protect_arctic_routes
+		relative_position_id = EUR_delegation_pendragon
+		prerequisite = {
+			focus = EUR_delegation_pendragon
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = EUR_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_invite_BRT_advisers
+		icon = GFX_EUR_invite_BRT_advisers
+		relative_position_id = EUR_protect_arctic_routes
+		prerequisite = {
+			focus = EUR_protect_arctic_routes
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_prepare_to_strike
+		icon = GFX_EUR_prepare_to_strike
+		relative_position_id = EUR_befriend_Bismark
+		prerequisite = {
+			focus = EUR_befriend_Bismark
+		}
+		prerequisite = {
+			focus = EUR_secure_northen_loyalty
+		}
+		prerequisite = {
+			focus = EUR_invite_BRT_advisers
+		}
+		cost = 2
+		x = 3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_magadan_declaration
+		icon = GFX_EUR_magadan_declaration
+		relative_position_id = EUR_prepare_to_strike
+
+		prerequisite = {
+			focus = EUR_prepare_to_strike
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_befriend_Bismark
+		icon = GFX_EUR_befriend_Bismark
+		relative_position_id = EUR_protect_arctic_routes
+		prerequisite = {
+			focus = EUR_protect_arctic_routes
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_fortify_borders
+		icon = GFX_EUR_fortify_borders
+		relative_position_id = EUR_retreat_into_isolation
+		prerequisite = {
+			focus = EUR_retreat_into_isolation
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_allow_Russian_battalions
+		icon = GFX_EUR_allow_Russian_battalions
+		relative_position_id = EUR_fortify_borders
+		prerequisite = {
+			focus = EUR_fortify_borders
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_preserve_our_existence
+		icon = GFX_EUR_preserve_our_existence
+		relative_position_id = EUR_allow_Russian_battalions
+		prerequisite = {
+			focus = EUR_allow_Russian_battalions
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+		id = EUR_provisional_senate
+		icon = GFX_EUR_provisional_senate
+		relative_position_id = EUR_centralize_government
+		prerequisite = {
+			focus = EUR_centralize_government
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_secure_northen_loyalty
+		icon = GFX_EUR_secure_northen_loyalty
+		relative_position_id = EUR_provisional_senate
+		prerequisite = {
+			focus = EUR_provisional_senate
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+}	

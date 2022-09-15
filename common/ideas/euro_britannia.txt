@@ -1,10 +1,69 @@
 ideas = {
+    country = {
 
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+	
+	    EUR_poor_logistics = {
+		
+		 	allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost = -1
+			
+			modifier = {
+			out_of_supply_factor = 0.15
+			army_org_factor = -0.10
+			army_speed_factor = -0.10
+			consumer_goods_factor = 0.02
+			}
+		}
+		
+		EUR_legitimate_cause = {
+		
+		 	allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
-	######################## DESIGNERS ########################
+			removal_cost = -1
+			
+			modifier = {
+			political_power_gain = 0.50
+			stability_factor = 0.10
+			offensive_war_stability_factor = 0.30
+			}
+		}
+		
+		EUR_crisis_authority = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly_factor = -0.0010
+			resistance_growth = 0.05
+			autocracy_drift = -0.01
+			}
+		}
+
+    }
+	
+	
 	tank_manufacturer = {
 		designer = yes
 
@@ -105,5 +164,4 @@ ideas = {
 			}
 		}
 	}
-
 }

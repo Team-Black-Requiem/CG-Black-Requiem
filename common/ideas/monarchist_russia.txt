@@ -1,10 +1,55 @@
 ideas = {
+    country = {
 
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+	
+	    MRU_imperial_dreams = {
+		
+		 	allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost = -1
+			
+			modifier = {
+			war_support_factor = 0.10
+			offensive_war_stability_factor = 0.10
+			army_attack_factor = 0.20
+			justify_war_goal_time = -0.10
+            
+			}
+		}
+		
+		MRU_russian_aristocracy = {
+		
+		 	allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
-	######################## DESIGNERS ########################
+			removal_cost = -1
+			
+			modifier = {
+			authoritarian_democracy_drift = 0.02
+			stability_factor = -0.05
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+			}
+		}
+		
+
+    }
+	
+	
+	
+		######################## DESIGNERS ########################
 	tank_manufacturer = {
 		designer = yes
 
@@ -105,5 +150,4 @@ ideas = {
 			}
 		}
 	}
-
-}
+}	

@@ -35,12 +35,13 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			EUR = {
-			load_oob = "EURO-BRITANNIA"
             transfer_state = 637
 			transfer_state = 822
 			transfer_state = 562
 			transfer_state = 644
 			transfer_state = 574
+			load_oob = "EURO-BRITANNIA"
+			inherit_technology = RUS
 
 			}	
 		}
@@ -50,6 +51,51 @@ country_event = {
 			factor = 20
 		}
 	}
+
+
+
+
+	option = { #Euro-Britannia Pops Up
+	name = russiaCW.1.b
+	hidden_effect = {
+		delete_unit = {
+			state = 637
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 574
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state =  644
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 562
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 822
+			disband = no #will refund equipment and manpower
+		}
+		EUR = {
+		transfer_state = 637
+		transfer_state = 822
+		transfer_state = 562
+		transfer_state = 644
+		transfer_state = 574
+		load_oob = "EURO-BRITANNIA"
+		inherit_technology = RUS
+
+		}	
+		EUR = { change_tag_from = RUS }
+	}
+	country_event = { id = russiaCW.2 days = 15 }		
+	
+	ai_chance = {
+		factor = 20
+	}
+}
 
 }
 
@@ -122,7 +168,6 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			SRU = {
-			load_oob = "SOCIALIST_RUSSIA"
             transfer_state = 563
 			transfer_state = 565
 			transfer_state = 564
@@ -138,14 +183,111 @@ country_event = {
 			transfer_state = 654
 			transfer_state = 569
 
+			inherit_technology = RUS
+			load_oob = "SOCIALIST_RUSSIA"
+
 			}	
+
 		}
-		country_event = { id = russiaCW.3 days = 5 }		
+		country_event = { id = russiaCW.4 days = 5 }		
 		
 		ai_chance = {
 			factor = 20
 		}
 	}
+
+
+
+
+	option = { #Socialists Pops Up
+	name = russiaCW.2.b
+	hidden_effect = {
+		delete_unit = {
+			state = 569
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 654
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state =  578
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 570
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 40
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 516
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 575
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 576
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 568
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 567
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 566
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 564
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state =  565
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 563
+			disband = no #will refund equipment and manpower
+		}
+		SRU = {
+		transfer_state = 563
+		transfer_state = 565
+		transfer_state = 564
+		transfer_state = 566
+		transfer_state = 567
+		transfer_state = 568
+		transfer_state = 576
+		transfer_state = 516
+		transfer_state = 575
+		transfer_state = 40
+		transfer_state = 570
+		transfer_state = 578
+		transfer_state = 654
+		transfer_state = 569
+
+		inherit_technology = RUS
+		load_oob = "SOCIALIST_RUSSIA"
+
+		}	
+
+		SRU = { change_tag_from = RUS }
+
+	}
+	country_event = { id = russiaCW.4 days = 5 }		
+	
+	ai_chance = {
+		factor = 20
+	}
+}
 
 }
 
@@ -178,11 +320,11 @@ country_event = {
 		}
 		hidden_effect = {
 			LRU = {
-				load_oob = "LEGITIMIST_RUSSIA"
             transfer_state = 824
 			transfer_state = 577
 			transfer_state = 571
 			transfer_state = 403
+			load_oob = "LEGITIMIST_RUSSIA"
 			}	
 		}
 		country_event = { id = russiaCW.4 days = 4 }		
@@ -191,6 +333,43 @@ country_event = {
 			factor = 20
 		}
 	}
+
+
+	option = { #Legitismists Pops Up
+	name = russiaCW.3.b
+	delete_unit = {
+		state = 824
+		disband = no #will refund equipment and manpower
+	}
+	delete_unit = {
+		state = 577
+		disband = no #will refund equipment and manpower
+	}
+	delete_unit = {
+		state =  571
+		disband = no #will refund equipment and manpower
+	}
+	delete_unit = {
+		state = 403
+		disband = no #will refund equipment and manpower
+	}
+	hidden_effect = {
+		LRU = {
+		transfer_state = 824
+		transfer_state = 577
+		transfer_state = 571
+		transfer_state = 403
+		load_oob = "LEGITIMIST_RUSSIA"
+		}	
+
+		LRU = { change_tag_from = RUS }
+	}
+	country_event = { id = russiaCW.4 days = 4 }		
+	
+	ai_chance = {
+		factor = 20
+	}
+}
 
 }
 
@@ -227,7 +406,6 @@ country_event = {
 			disband = no #will refund equipment and manpower
 		}
 			MRU = {
-				load_oob = "IMPERIAL_RUSSIA"
             transfer_state = 579
 			transfer_state = 580
 			transfer_state = 653
@@ -240,15 +418,69 @@ country_event = {
 			transfer_state = 573
 			transfer_state = 905
 			transfer_state = 582
+			inherit_technology = RUS
+			load_oob = "IMPERIAL_RUSSIA"
 
 			}	
 		}
-		country_event = { id = russiaCW.4 days = 4 }		
+		country_event = { id = russiaCW.6 days = 4 }		
 		
 		ai_chance = {
 			factor = 20
 		}
 	}
+
+
+
+	option = { #Monarchists Pops Up
+	name = russiaCW.4.b
+	hidden_effect = {
+		delete_unit = {
+			state = 651
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit = {
+			state = 398
+			disband = no #will refund equipment and manpower
+		}
+				delete_unit = {
+		state = 653
+		disband = no #will refund equipment and manpower
+	}
+			delete_unit = {
+		state = 580
+		disband = no #will refund equipment and manpower
+	}
+	delete_unit = {
+		state = 579
+		disband = no #will refund equipment and manpower
+	}
+		MRU = {
+		transfer_state = 579
+		transfer_state = 580
+		transfer_state = 653
+		transfer_state = 572
+		transfer_state = 652
+		transfer_state = 651
+		transfer_state = 581
+		transfer_state = 398
+		transfer_state = 399
+		transfer_state = 573
+		transfer_state = 905
+		transfer_state = 582
+		inherit_technology = RUS
+		load_oob = "IMPERIAL_RUSSIA"
+
+		}	
+
+		MRU = { change_tag_from = RUS }
+	}
+	country_event = { id = russiaCW.6 days = 4 }		
+	
+	ai_chance = {
+		factor = 20
+	}
+}
 
 }
 
@@ -293,6 +525,7 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			WR1 = {
+				inherit_technology = RUS
             transfer_state = 825
 			transfer_state = 262
 			transfer_state = 397
@@ -303,6 +536,7 @@ country_event = {
 			}
 
 			WR3 = {
+				inherit_technology = RUS
 				transfer_state = 265
 				transfer_state = 829
 				transfer_state = 239
@@ -311,6 +545,7 @@ country_event = {
 			}
 
 			WR6 = {
+				inherit_technology = RUS
 				transfer_state = 251
 				transfer_state = 249
 				transfer_state = 250
@@ -320,6 +555,7 @@ country_event = {
 
 			
 			WR5 = {
+				inherit_technology = RUS
 				transfer_state = 255
 				transfer_state = 926
 				transfer_state = 250
@@ -328,17 +564,20 @@ country_event = {
 			}
 
 			WR4 = {
+				inherit_technology = RUS
 				transfer_state = 252
 				transfer_state = 925
 
 			}
 
 			WR7 = {
+				inherit_technology = RUS
 				transfer_state = 833
 
 			}
 			
 			WR2 = {
+				inherit_technology = RUS
 				transfer_state = 400
 				transfer_state = 924
 
@@ -347,7 +586,7 @@ country_event = {
 	
 				}
 		}
-		country_event = { id = russiaCW.4 days = 4 }		
+		country_event = { id = russiaCW.5 days = 4 }		
 		
 		ai_chance = {
 			factor = 20
@@ -372,23 +611,27 @@ country_event = {
 		set_cosmetic_tag = RUS_CW
 		hidden_effect = {
 			KW1 = {
+				inherit_technology = RUS
 				transfer_state = 217
 				transfer_state = 237
 				transfer_state = 236
 			}
 
 			KW2 = {
+				inherit_technology = RUS
 					transfer_state = 218
 					transfer_state = 245
 				
 			}	
 			
 			KW3 = {
+				inherit_technology = RUS
 				transfer_state = 232
 				transfer_state = 821	
 				transfer_state = 827		
 		    }
 			KW4 = {
+				inherit_technology = RUS
 				transfer_state = 234
 				transfer_state = 235	
 				transfer_state = 233
