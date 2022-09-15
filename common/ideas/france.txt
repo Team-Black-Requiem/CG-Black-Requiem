@@ -370,74 +370,59 @@ ideas = {
 				stability_weekly = 0.005
 			}
 		}
-		
-		tank_manufacturer = {
+	}
 
-		  designer = yes
-
-		    FRA_sophie_randle_design = {
-			   picture = FRA_sophie_randle_design
-
-			    allowed = {
-				    has_country_flag = FRA_sophie_randle
-				    original_tag = FRA
-			    }
-			    research_bonus = {
-				   sakuradite = 0.05
-				   knightmare_all_pur = 0.05
-			    }
-			    traits = { 
-				   knightmare_producer_quality_1 
-			    }
-		    }
-	    }
-	
-	    materiel_manufacturer = {
-		
-		  designer = yes
-
-		    FRA_anna_clement_design = {
-			    picture = FRA_anna_clement_design
-
-			    allowed = {
-				  has_country_flag = FRA_anna_clment
-				  original_tag = FRA
-			    }
-			    traits = { materiel_designer_defence_1 } 
-		    }
-	    } 
-
-	    aircraft_manufacturer = {
-		
-		    designer = yes
-
-		      FRA_joe_wise_design = {
-
-		    	allowed = {
-			     	has_country_flag = FRA_joe_wise
-			    	original_tag = FRA
-			    }
-			   traits = { ground_support_manufacturer }
-		    }
-	    }
-
-        industrial_concern = { 
-
-	        designer = yes
-
-	        FRA_gen_industry = {
-	     	picture = BRT_gen_industry
-
+	tank_manufacturer = {
+		designer = yes
+	    FRA_sophie_randle_design = {
+		   picture = FRA_sophie_randle_design
 		    allowed = {
-			original_tag = FRA
+			    has_country_flag = FRA_sophie_randle
+			    original_tag = FRA
 		    }
-
 		    research_bonus = {
-			industry = 0.02
+			   sakuradite = 0.05
+			   knightmare_all_pur = 0.05
 		    }
-
-		    traits = { industrial_manufacturer }
+		    traits = { 
+			   knightmare_producer_quality_1 
+		    }
 	    }
-    }
+	}
+
+	materiel_manufacturer = {
+	  designer = yes
+	    FRA_anna_clement_design = {
+		    picture = FRA_anna_clement_design
+			cost = 2000
+		    allowed = {
+			  has_country_flag = FRA_anna_clment
+			  original_tag = FRA
+		    }
+		    traits = { materiel_designer_defence_1 } 
+	    }
+	} 
+	aircraft_manufacturer = {
+	    designer = yes
+	      FRA_joe_wise_design = {
+	    	allowed = {
+		     	has_country_flag = FRA_joe_wise
+		    	original_tag = FRA
+		    }
+		   traits = { CAS_FRA_manufacturer }
+	    }
+	}
+    industrial_concern = { 
+	    designer = yes
+	    FRA_gen_industry = {
+	 	picture = BRT_gen_industry
+	    allowed = {
+		original_tag = FRA
+	    }
+	    research_bonus = {
+		industry = 0.02
+	    }
+	    traits = { industrial_manufacturer }
+		}
     }
 }
