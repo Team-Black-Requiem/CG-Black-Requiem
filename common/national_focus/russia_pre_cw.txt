@@ -20,15 +20,19 @@
 			x = 18
 			y = 0
 			available = {
-			####has country flag about reforming the first region
+                country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 100
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				set_country_flag = first_region_reform
+				add_political_power = 50
+				add_stability = 0.02
+				add_war_support = 0.02
 
-		}
+		    }
 	}
 			focus = {
 			id = RUS_Unexpected_arest ###Event, where will we learn about the arrest of a municipal deputy, from whom an investigation of a corruption scheme will begin
@@ -39,7 +43,7 @@
 			x = -6
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			   has_country_flag = first_region_reform
 			}
 			ai_will_do = {
 					factor = 30
@@ -51,7 +55,7 @@
 			add_to_variable = {
 				RUS_reform_region_1_admin = 0.1
 			}
-			set_stability = -0.15
+			add_stability = -0.15
 			RUS = { country_event = RUS.24}
 			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
@@ -65,7 +69,8 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			has_country_flag = first_region_reform
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -94,7 +99,8 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			has_country_flag = first_region_reform
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -119,7 +125,8 @@
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			has_country_flag = first_region_reform
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -143,7 +150,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			has_country_flag = first_region_reform
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -169,7 +177,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			has_country_flag = first_region_reform
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -202,6 +211,8 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+				set_country_flag = second_region_reform
+				clr_country_flag = first_region_reform
 			#################################-11 manpower -pp +new event about new prime minister (3 to choose from, everyone will give small buffs (the first for stability and pp, the second for the economy and speed of construction, the third for the army) The choice of this prime minister will depend on which category of reforms the percentages will be added to)
 			
 
@@ -245,7 +256,8 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -270,7 +282,8 @@
 			x = -1
 			y = 2
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -295,7 +308,8 @@
 			x = 1
 			y = 2
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -320,7 +334,8 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -345,7 +360,8 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -374,7 +390,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			has_country_flag = second_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
@@ -416,6 +433,8 @@
 			add_to_variable = {
 				RUS_reform_region_2_econ = 0.1
 			}
+			set_country_flag = third_region_reform
+			clr_country_flag = second_region_reform
 			add_offsite_building = {
 				type = arms_factory
 				level = 2
@@ -437,7 +456,8 @@
 			x = 6
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			RUS = { has_completed_focus = RUS_modernize_the_industry }
 			}
 			ai_will_do = {
@@ -460,7 +480,8 @@
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -484,7 +505,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -509,7 +531,8 @@
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -534,7 +557,8 @@
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -561,7 +585,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -594,7 +619,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				has_country_flag = third_region_reform
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -618,6 +644,8 @@
 			x = 0
 			y = 1
 			available = {
+				has_country_flag = third_region_reform
+				country_exists = RUS
 			
 			}
 			ai_will_do = {
@@ -625,6 +653,7 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+			clr_country_flag = third_region_reform
 			######Kill Field Marshal ""; +army reform; delete nationalists idea; +research speed to Mass Assault doctrine
 			add_to_variable = {
 				RUS_reform_region_3_army = 0.1
@@ -653,6 +682,62 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+				custom_effect_tooltip = RUS_civil_war_results_tt
+				if = {
+					limit = { 
+						AND = { 
+							check_variable = { RUS_reform_region_1_admin = 100 }
+							check_variable = { RUS_reform_region_2_admin = 100 }
+							check_variable = { RUS_reform_region_3_admin = 100 }
+
+							check_variable = { RUS_reform_region_1_admin_econ = 100 }
+							check_variable = { RUS_reform_region_2_admin_econ = 100 }
+							check_variable = { RUS_reform_region_3_admin_econ = 100 }
+
+							check_variable = { RUS_reform_region_1_admin_army = 100 }
+							check_variable = { RUS_reform_region_2_admin_army = 100 }
+							check_variable = { RUS_reform_region_3_admin_army = 100 }
+                        
+
+
+
+						}
+
+
+
+
+					}
+					country_event = RUS.38
+
+
+					else_if = {
+						limit = { 
+							OR = { 
+								check_variable = { RUS_reform_region_1_admin < 100 }
+								check_variable = { RUS_reform_region_2_admin < 100 }
+								check_variable = { RUS_reform_region_3_admin < 100 }
+	
+								check_variable = { RUS_reform_region_1_admin_econ < 100 }
+								check_variable = { RUS_reform_region_2_admin_econ < 100 }
+								check_variable = { RUS_reform_region_3_admin_econ < 100 }
+	
+								check_variable = { RUS_reform_region_1_admin_army < 100 }
+								check_variable = { RUS_reform_region_2_admin_army < 100 }
+								check_variable = { RUS_reform_region_3_admin_army < 100 }
+							
+	
+	
+	
+							}
+	
+	
+	
+	
+						}
+						country_event = RUS.39
+					}
+				}
+
 			
 		}
 	}

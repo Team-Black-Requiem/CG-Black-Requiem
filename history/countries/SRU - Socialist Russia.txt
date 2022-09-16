@@ -10,26 +10,62 @@ set_war_support = 0.45
 
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
 	tech_engineers = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	gwtank = 1
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	cv_CAS1 = 1
-	naval_bomber1 = 1
-	CAS1 = 1
-	early_bomber = 1
-	superior_firepower = 1
-	base_strike = 1
+	tech_mountaineers = 1
 	motorised_infantry = 1
+	trench_warfare = 1
+	fleet_in_being = 1
 	fuel_silos = 1
-	fuel_refining = 1
-	marines = 1
+	eu_war_artillery = 1
+	support_equip = 1
+	motorised_infantry = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_cruiser = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_carrier = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+}
+
+set_politics = {
+	ruling_party = hardline_socialism
+	last_election = "2008.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	moderate_socialism = 15
+	moderate_conservatism = 10
+	moderate_liberalism = 14
+	hardline_socialism = 26
+	totalitarian_socialism = 20
+	authoritarian_democracy = 10
+	ultra_nationalism =  8
+}
+
+
+add_ideas = {
+	SRU_flame_socialism
+	SRU_unstable_government
+	SRU_unprofessional_army
+	RUS_Corrupt_government_improved_2
+	RUS_low_level_education_improved_1 
+	RUS_Agrarian_economy_improved_2
 }
 
 
@@ -47,6 +83,7 @@ recruit_character = SRU_generic_economy_minister
 recruit_character = SRU_generic_foreign_minister
 recruit_character = SRU_generic_minister_of_interior
 recruit_character = SRU_generic_intelligence
+recruit_character = SRU_Bunina
 #### HIGH COMMAND
 recruit_character = SRU_generic_high_command
 #### GENERALS

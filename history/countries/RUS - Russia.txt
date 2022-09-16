@@ -7,23 +7,6 @@ set_research_slots = 3
 set_stability = 0.5
 
 
-recruit_character = RUS_officer_2
-recruit_character = RUS_Chernov
-recruit_character = RUS_Bulganin
-recruit_character = RUS_Conovalovs
-recruit_character = RUS_gen_intelligence
-recruit_character = RUS_generic_general_3
-recruit_character = RUS_generic_general_1
-recruit_character = RUS_generic_general_2
-recruit_character = RUS_julien_blanchet
-recruit_character = RUS_officer_1
-recruit_character = RUS_generic_army_chief_1
-recruit_character = RUS_generic_army_chief_2
-recruit_character = RUS_generic_army_chief_3
-recruit_character = RUS_generic_navy_chief
-recruit_character = RUS_generic_air_chief
-recruit_character = RUS_vladislav
-
 
 set_technology = {
 	infantry_weapons = 1
@@ -34,13 +17,31 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	early_submarine = 1
-	early_carrier = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
 	support_equip = 1
 	motorised_infantry = 1
 }
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_cruiser = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_carrier = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+}
+
 FRA = {
 	set_autonomy = {
 		target = RUS
@@ -75,9 +76,6 @@ RUS_Corrupt_government
 RUS_Russian_nationalism
 RUS_low_level_education
 RUS_Economical_crisis
-
-RUS_julien_blanchet
-
 #RUS_EU_loans
 }
 
@@ -113,6 +111,24 @@ create_country_leader = {
 	traits = {
 	}
 }
+
+
+recruit_character = RUS_officer_2
+recruit_character = RUS_Chernov
+recruit_character = RUS_Bulganin
+recruit_character = RUS_Conovalovs
+recruit_character = RUS_gen_intelligence
+recruit_character = RUS_generic_general_3
+recruit_character = RUS_generic_general_1
+recruit_character = RUS_generic_general_2
+recruit_character = RUS_julien_blanchet
+recruit_character = RUS_officer_1
+recruit_character = RUS_generic_army_chief_1
+recruit_character = RUS_generic_army_chief_2
+recruit_character = RUS_generic_army_chief_3
+recruit_character = RUS_generic_navy_chief
+recruit_character = RUS_generic_air_chief
+recruit_character = RUS_vladislav
 
 
 

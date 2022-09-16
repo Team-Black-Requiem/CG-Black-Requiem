@@ -17,7 +17,7 @@ id = socialist_russia_focus
 	focus = {
 		id = SRU_wild_siberia
 		icon = GFX_SRU_wild_siberia
-		cost = 2
+		cost = 3
 		x = 15
 		y = 0
 		available = {
@@ -47,8 +47,39 @@ id = socialist_russia_focus
 		prerequisite = {
 			focus = SRU_wild_siberia
 		}
-		cost = 2
+		cost = 3
 		x = 0
+		y = 1
+		available = {
+			country_exists = SRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = SRU_destroy_RUS_institutions
+		icon = GFX_SRU_destroy_RUS_institutions
+		relative_position_id = SRU_red_flame
+		prerequisite = {
+			focus = SRU_red_flame
+		}
+		cost = 3
+		x = 2
 		y = 1
 		available = {
 			country_exists = SRU
@@ -74,12 +105,12 @@ id = socialist_russia_focus
 	focus = {
 		id = SRU_form_united_front
 		icon = GFX_SRU_form_united_front
-		relative_position_id = SRU_red_flame
+		relative_position_id = SRU_destroy_RUS_institutions
 		prerequisite = {
-			focus = SRU_red_flame
+			focus = SRU_destroy_RUS_institutions
 		}
 		cost = 2
-		x = 2
+		x = 0
 		y = 1
 		available = {
 			country_exists = SRU
@@ -108,7 +139,7 @@ id = socialist_russia_focus
 		prerequisite = {
 			focus = SRU_red_flame
 		}
-		cost = 2
+		cost = 3
 		x = -2
 		y = 1
 		available = {
@@ -196,6 +227,38 @@ id = socialist_russia_focus
 	}
 
 
+	focus = {
+		id = SRU_recruit_mongol_exiles
+		icon = GFX_SRU_recruit_mongol_exiles
+		relative_position_id = SRU_full_mobilization
+		prerequisite = {
+			focus = SRU_full_mobilization
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = SRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = SRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
 	
 	focus = {
 		id = SRU_support_turkestan
@@ -232,18 +295,85 @@ id = socialist_russia_focus
 	}
 
 
+		
+	focus = {
+		id = SRU_support_china
+		icon = GFX_SRU_support_china
+		relative_position_id = SRU_support_turkestan
+		prerequisite = {
+			focus = SRU_support_turkestan
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = SRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = SRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
 	focus = {
 		id = SRU_exploit_RUS_equipment
 		icon = GFX_SRU_exploit_RUS_equipment
 		relative_position_id = SRU_support_turkestan
 		prerequisite = {
-			focus = SRU_support_turkestan
+			focus = SRU_support_china
 		}
 		prerequisite = {
 			focus = SRU_continue_confederacy
 		}
-		cost = 2
+		cost = 3
 		x = 2
+		y = 2
+		available = {
+			country_exists = SRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = SRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = SRU_right_chance
+		icon = GFX_SRU_right_chance
+		relative_position_id = SRU_exploit_RUS_equipment
+		prerequisite = {
+			focus = SRU_exploit_RUS_equipment
+		}
+
+		cost = 3
+		x = 0
 		y = 1
 		available = {
 			country_exists = SRU
@@ -268,16 +398,18 @@ id = socialist_russia_focus
 
 
 
+
+
 	
 	focus = {
 		id = SRU_march_east
 		icon = GFX_SRU_march_east
-		relative_position_id = SRU_exploit_RUS_equipment
+		relative_position_id = SRU_right_chance
 
 		prerequisite = {
-			focus = SRU_exploit_RUS_equipment
+			focus = SRU_right_chance
 		}
-		cost = 2
+		cost = 3
 		x = 0
 		y = 1
 		available = {

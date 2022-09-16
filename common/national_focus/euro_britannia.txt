@@ -17,7 +17,7 @@ id = euro_britannia_focus
 	focus = {
 		id = EUR_cold_far_east
 		icon = GFX_EUR_cold_far_east
-		cost = 2
+		cost = 3
 		x = 15
 		y = 0
 		available = {
@@ -47,7 +47,7 @@ id = euro_britannia_focus
 		prerequisite = {
 			focus = EUR_cold_far_east
 		}
-		cost = 2
+		cost = 3
 		x = 0
 		y = 1
 		available = {
@@ -74,12 +74,12 @@ id = euro_britannia_focus
 	focus = {
 		id = EUR_centralize_government
 		icon = GFX_EUR_centralize_government
-		relative_position_id = EUR_under_our_management
+		relative_position_id = EUR_defy_RUS_institutions
 		prerequisite = {
-			focus = EUR_under_our_management
+			focus = EUR_defy_RUS_institutions
 		}
 		cost = 2
-		x = 3
+		x = 0
 		y = 1
 		available = {
 			country_exists = EUR
@@ -108,7 +108,7 @@ id = euro_britannia_focus
 		prerequisite = {
 			focus = EUR_under_our_management
 		}
-		cost = 2
+		cost = 3
 		x = -3
 		y = 1
 		available = {
@@ -228,21 +228,52 @@ id = euro_britannia_focus
 
 
 	focus = {
-		id = EUR_prepare_to_strike
-		icon = GFX_EUR_prepare_to_strike
-		relative_position_id = EUR_befriend_Bismark
-		prerequisite = {
-			focus = EUR_befriend_Bismark
-		}
-		prerequisite = {
-			focus = EUR_secure_northen_loyalty
-		}
+		id = EUR_beg_for_Knightmares
+		icon = GFX_EUR_beg_for_Knightmares
+		relative_position_id = EUR_invite_BRT_advisers
 		prerequisite = {
 			focus = EUR_invite_BRT_advisers
 		}
 		cost = 2
-		x = 3
+		x = 0
 		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_prepare_to_strike
+		icon = GFX_EUR_prepare_to_strike
+		relative_position_id = EUR_befriend_Bismark
+		prerequisite = {
+			focus = EUR_beg_for_Knightmares
+		}
+		prerequisite = {
+			focus = EUR_use_purist_militias
+		}
+		prerequisite = {
+			focus = EUR_secure_northen_loyalty
+		}
+		cost = 3
+		x = 3
+		y = 2
 		available = {
 			country_exists = EUR
 		}
@@ -272,7 +303,7 @@ id = euro_britannia_focus
 		prerequisite = {
 			focus = EUR_prepare_to_strike
 		}
-		cost = 2
+		cost = 3
 		x = 0
 		y = 1
 		available = {
@@ -305,6 +336,37 @@ id = euro_britannia_focus
 		}
 		cost = 2
 		x = -1
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_use_purist_militias
+		icon = GFX_EEUR_use_purist_militias
+		relative_position_id = EUR_befriend_Bismark
+		prerequisite = {
+			focus = EUR_befriend_Bismark
+		}
+		cost = 2
+		x = 0
 		y = 1
 		available = {
 			country_exists = EUR
@@ -460,6 +522,37 @@ id = euro_britannia_focus
 		}
 		cost = 2
 		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_defy_RUS_institutions
+		icon = GFX_EUR_defy_RUS_institutions
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 3
+		x = 3
 		y = 1
 		available = {
 			country_exists = EUR
