@@ -176,10 +176,11 @@ ideas = {
 			modifier = {
 				research_speed_factor = -0.15
 			}
-		}
+		
 		modifier = {
 			research_speed_factor = -0.20
 		}
+	    }
 
 	    technological_pride_swap_1 = {
 
@@ -345,6 +346,28 @@ ideas = {
 			}
 		}
 
+		gigantic_weapons = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.05
+				equipment_bonus = {
+				knightmare = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			    }
+		    }
+	    }
+		
 		france_promoting_democracy_in_africa = {
 			allowed = {
 				always = no
