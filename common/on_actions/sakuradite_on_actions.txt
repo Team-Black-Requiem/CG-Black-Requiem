@@ -18,15 +18,19 @@ on_actions = {
 
 			set_variable = { country_sakuradite = root.resource@sakuradite }
 			
-			set_variable = {sakuradite_capacity_k = root.num_core_states }
+			set_variable = {sakuradite_capacity_k = root.num_core_states}
 			multiply_variable = {sakuradite_capacity_k = 2500}
-			add_to_variable = {sakruadite_capacity_k = 50000}
+			add_to_variable = {sakuradite_capacity_k = 50000}
 			
+
+
 			##### sets fuel gain
 			set_variable = {sakuradite_fuel_modifier = 100}
 			set_variable = {temp_sakuradite_fuel_gain = country_sakuradite}
 			multiply_variable = {temp_sakuradite_fuel_gain = sakuradite_fuel_modifier}
 			set_variable = {sakuradite_fuel_gain = temp_sakuradite_fuel_gain}
+
+
 
 			##### sets fuel current
 			IF = {
