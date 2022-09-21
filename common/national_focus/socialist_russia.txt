@@ -35,6 +35,8 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		add_political_power = 100
+		SRU = { country_event = SRU.1 }
 		}
 
 
@@ -65,6 +67,8 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		
+		add_ideas = { SRU_flame_socialism }
 		}
 
 
@@ -96,6 +100,9 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = SRU_unstable_government
+		add_idea = SRU_unstable_government_2}
 		}
 
 
@@ -127,6 +134,7 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		SRU = {country_event = SRU.2}
 		}
 
 
@@ -157,6 +165,9 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = SRU_unprofessional_army
+		add_idea = SRU_unprofessional_army_2}
 		}
 
 
@@ -189,9 +200,20 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		EUR = {
+		add_timed_idea={
+		idea = EUR_sabotage
+		days = 365}}
+		
+		574 = {damage_building = {
+				type = infrastructure
+				damage = 2}
 		}
-
-
+		644 = {damage_building = {
+				type = infrastructure
+				damage = 2}
+		}
+	}
 	}
 
 
@@ -221,6 +243,13 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		army_experience = 50
+				add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				name = cat_mass_assault
+				category = cat_mass_assault
+			}
 		}
 
 
@@ -253,6 +282,8 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		load_oob = SRU_Mongol_exiles
+		recruit_character = SRU_Mongol_commander
 		}
 
 
@@ -289,6 +320,7 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		TAS = {country_event = SRU.3}
 		}
 
 
@@ -323,6 +355,7 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		CHI = {country_event = SRU.4}
 		}
 
 
@@ -358,6 +391,11 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+		army_experience = 50
 		}
 
 
@@ -391,6 +429,9 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = SRU_unprofessional_army_2
+		add_idea = SRU_second_chance}
 		}
 
 
@@ -428,6 +469,11 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+				create_wargoal = {
+				type = take_state_focus
+				target = EUR
+				expire = 0
+			}
 		}
 
 
@@ -463,6 +509,7 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		LRU = { country_event = SRU.5}
 		}
 
 
@@ -494,6 +541,9 @@ id = socialist_russia_focus
 		}
 	
 		completion_reward = {
+		add_timed_idea = {
+		idea = SRU_their_small_help
+		days = 365}
 		}
 
 
