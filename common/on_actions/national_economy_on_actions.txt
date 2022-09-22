@@ -1,0 +1,30 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+            #### sets initial country GDP
+			set_variable = {GDP = 0}
+			BRT = {
+				set_variable = {GDP = 25}
+			}
+			JAP = {
+				set_variable = {GDP = 20}
+			}
+			GER = {
+				set_variable = {GDP = 15}
+			}
+			FRA = {
+				set_variable = {GDP = 12}
+			}
+			RUS = {
+				set_variable = {GDP = 8}
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+            add_to_variable = {GDP = 1}
+        }
+    }
+}
