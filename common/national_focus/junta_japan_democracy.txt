@@ -1,0 +1,607 @@
+﻿focus_tree = {
+id = japan_focus_junta_4
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+
+		#Internal strifes in the Junta has allowed a 
+		#counter-coup by the few democratic officers, allied with
+		#the remaining of the old establishment and leftist organisations
+
+		id = JAP_junta_collapse
+		icon = GFX_JAP_junta_collapse
+		cost = 2
+		x = 15
+		y = 0
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh has escaped to Hokkaido once again, while Katase has been captured by our men
+		#the Military Council has been dismantled and a Provisional Government has born, with
+		#the partecipation of all parties (except far right)
+		id = JAP_return_democracy
+		icon = GFX_JAP_return_democracy
+		relative_position_id = JAP_junta_collapse
+		prerequisite = {
+			focus = JAP_junta_collapse
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+		#The new government will make extensive propaganda and various promises
+		#to paint the tree contenders (Kururugi, Kirihara and Tohdoh) as tyrants 
+		#Flawes of the old system will be sidelined and its faults attribuited to Kururugi
+		id = JAP_strongmen_no_more
+		icon = GFX_JAP_strongmen_no_more
+		relative_position_id = JAP_return_democracy
+		prerequisite = {
+			focus = JAP_return_democracy
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#The Prov. Gov. has announced a quick transition to ensure new elections within few years or even months
+		#But first, the stains of the old regime need to be cleaned, and military violence hasn't ended completely
+		id = JAP_prepare_transition
+		icon = GFX_JAP_prepare_transition
+		relative_position_id = JAP_strongmen_no_more
+		prerequisite = {
+			focus = JAP_strongmen_no_more
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Katase will be executed and deemed too instable for the new course, his clique shall
+		#be destroyed as well
+		id = JAP_execute_katase
+		icon = GFX_JAP_execute_katase
+		relative_position_id = JAP_prepare_transition
+		prerequisite = {
+			focus = JAP_prepare_transition
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#A military mission from the EU is helping our forces to push back paramilitaries of
+		#the old Junta
+		id = JAP_push_back_militias
+		icon = GFX_JAP_push_back_militias
+		relative_position_id = JAP_prepare_transition
+		prerequisite = {
+			focus = JAP_prepare_transition
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Next step is to defeat Tohdoh on the ground; his forces aren't 
+		#the ones of before (thanks to internal infighting and crumbling popular support)
+		#once Tohdoh will be beaten, he will be senteced to several years in jail
+
+		id = JAP_defeat_tohdoh
+		icon = GFX_JAP_defeat_tohdoh
+		relative_position_id = JAP_prepare_transition
+		prerequisite = {
+			focus = JAP_prepare_transition
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+		#Lesser Officers who haven't directly partecipated in the Junta
+		#will be pardoned, further alienating the pro-Junta faction and reinforcing
+		#our position
+		id = JAP_amnesty_lesser_generals
+		icon = GFX_JAP_amnesty_lesser_generals
+		relative_position_id = JAP_defeat_tohdoh
+		prerequisite = {
+			focus = JAP_defeat_tohdoh
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#The Navy was the only branch truly neutral during the Great Chaos (Tokyo Strike and Aftermath)
+		#We should entrust them the most important duties in the new high command
+		id = JAP_rely_navy
+		icon = GFX_JAP_rely_navy
+		relative_position_id = JAP_push_back_militias
+		prerequisite = {
+			focus = JAP_push_back_militias
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Event though Katase and Tohdoh are unharmful, many soldiers are still hailing them
+		#as heroes, and they are still defing our rule. That is why we must enact purges of the worst units
+		id = JAP_destroy_hardliners
+		icon = GFX_JAP_destroy_hardliners
+		relative_position_id = JAP_execute_katase
+		prerequisite = {
+			focus = JAP_execute_katase
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The time has finally come to announce the snap elections, which will be contested by mainly three parties
+		#the social democratic one, the liberal one, and the social conservative one 
+		#Event with election required here; the player chooses the winner 
+		id = JAP_snap_elections
+		icon = GFX_JAP_snap_elections
+		relative_position_id = JAP_rely_navy
+		prerequisite = {
+			focus = JAP_rely_navy
+		}
+		prerequisite = {
+			focus = JAP_amnesty_lesser_generals
+		}
+		prerequisite = {
+			focus = JAP_destroy_hardliners
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	
+	focus = {
+
+		#The new party in power will restore press freedom and remove censorship introduced by Kururugi
+		id = JAP_restore_press_freedom
+		icon = GFX_JAP_restore_press_freedom
+		relative_position_id = JAP_snap_elections
+		prerequisite = {
+			focus = JAP_snap_elections
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#The new party in power will diminish the power of the PM, with great autonomy of the parliament
+		id = JAP_free_government
+		icon = GFX_JAP_free_government
+		relative_position_id = JAP_snap_elections
+		prerequisite = {
+			focus = JAP_snap_elections
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#The new party in power will extend voting rights for regions, towns and the country
+		id = JAP_universal_voting
+		icon = GFX_JAP_universal_voting
+		relative_position_id = JAP_snap_elections
+		prerequisite = {
+			focus = JAP_snap_elections
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The new party in power has now restored the basic liberties, and the situation is stabilising fastly
+		#the civil society is being healed and the past is looking distant
+		id = JAP_new_mandate
+		icon = GFX_JAP_JAP_new_mandate
+		relative_position_id = JAP_free_government
+		prerequisite = {
+			focus = JAP_free_government
+		}
+		prerequisite = {
+			focus = JAP_universal_voting
+		}
+		prerequisite = {
+			focus = JAP_restore_press_freedom
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Japan won't make the same error of before and it will try to secure its alliance with the EU
+		#With this position, it will remove Sakuradite concessions and restore its independence from Britannia 
+		id = JAP_EU_membership
+		icon = GFX_JAP_EU_membership
+		relative_position_id = JAP_new_mandate
+		prerequisite = {
+			focus = JAP_new_mandate
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#A New democratic and EU-Aligned Japan is born, Banzai!
+		id = JAP_new_status_quo
+		icon = GFX_JAP_new_status_quo
+		relative_position_id = JAP_EU_membership
+		prerequisite = {
+			focus = JAP_EU_membership
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+}	
