@@ -516,7 +516,7 @@ id = japan_focus_junta_3
 
 	focus = {
 
-		#Tohodoh has decided to reach a balance between military and civilian production and needs, in that way
+		#Tohdoh has decided to reach a balance between military and civilian production and needs, in that way
 		#Japan will prepare to sustain a policy of armed neutrality while still keeping its light manufacturing 
 
 		id = JAP_military_civilian_balance
@@ -873,7 +873,7 @@ id = japan_focus_junta_3
 
 	focus = {
 
-		#Tohodoh will put a limit to the power of the energy sector, in an effort to balance it with other economical sectors
+		#Tohdoh will put a limit to the power of the energy sector, in an effort to balance it with other economical sectors
 
 		id = JAP_limit_sakuradite_power
 		icon = GFX_JAP_limit_sakuradite_power
@@ -908,7 +908,7 @@ id = japan_focus_junta_3
 
 	focus = {
 
-		#Tohodoh will pass environmentally-friendly laws to block any harsh exploitation of Mount Fuji mine, effectively
+		#Tohdoh will pass environmentally-friendly laws to block any harsh exploitation of Mount Fuji mine, effectively
 		#dimishing the greatst mine of Sakuradite
 
 		id = JAP_protect_mount_fuji
@@ -1054,7 +1054,7 @@ id = japan_focus_junta_3
 
 	focus = {
 
-		#Tohodoh has effectively secured his position inside the Council and he's ready to start his program of 
+		#Tohdoh has effectively secured his position inside the Council and he's ready to start his program of 
 		#political reform (he has a moderate position, preferring an authoritarian democratic system with
 		#political tutelage)
 
@@ -1085,7 +1085,7 @@ id = japan_focus_junta_3
 
 	focus = {
 
-		#Tohodoh will reform the Military Council into a some sort of overseeing council that will control
+		#Tohdoh will reform the Military Council into a some sort of overseeing council that will control
 		#and enforce the will of the General###Removal of Tohdoh and his advisers from the government slots
 		#Tohdoh will only remain President of the Japanese Republic
 		id = JAP_prepare_political_tutelage
@@ -1112,6 +1112,7 @@ id = japan_focus_junta_3
 		}
 	
 		completion_reward = {
+			add_political_power = 100
 		}
 
 
@@ -1182,6 +1183,7 @@ id = japan_focus_junta_3
 		}
 	
 		completion_reward = {
+			add_stability = 0.2
 		}
 
 
@@ -1215,6 +1217,10 @@ id = japan_focus_junta_3
 		}
 	
 		completion_reward = {
+			add_popularity = {
+				ideology = social_conservatism
+				popularity = -0.1
+			}
 		}
 
 
@@ -1248,6 +1254,10 @@ id = japan_focus_junta_3
 		}
 	
 		completion_reward = {
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.05
+			}
 		}
 
 
