@@ -399,5 +399,624 @@ RUS_region_reform_category = {
 		}
 
 	}
+
+
+	################################
+	### RUSSIAN REFORM DECISIONS ###
+	################################
+
+	### {WEST} ###
+
+
+	# + ADMINISTRATIVE #
+
+	Placeholder_WEST_plusADM_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			check_variable = {
+				RUS_reform_region_1_admin_army > 0.05
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_WEST_plusADM_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_1_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+	# + MILITARY #
+
+	Placeholder_WEST_plusMIL_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_1_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_WEST_plusMIL_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_1_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+	# + ECON #
+
+	Placeholder_WEST_plusECON_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_1_admin_army < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_WEST_plusECON_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 1 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_1_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_1_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_1_admin = -0.05 }
+		}
+	
+
+	}
+
+	### {END - WEST} ###
+
+
+	### {CENTRAL} ###
+
+
+
+	# + ADMINISTRATIVE #
+
+	Placeholder_CENTRAL_plusADM_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin_army < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_CENTRAL_plusADM_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+
+	# + MILITARY #
+
+	Placeholder_CENTRAL_plusMIL_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_CENTRAL_plusMIL_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+	# + ECON #
+
+	Placeholder_CENTRAL_plusECON_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin_army < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_CENTRAL_plusECON_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+		
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 2 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_2_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_2_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_2_admin= -0.05 }
+		}
+	
+
+	}
+
+
+	### {END - CENTRAL} ###
+
+
+	# { EAST } #
+
+
+	# + ADMINISTRATIVE # 
+
+
+	Placeholder_EAST_plusADM_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin_army < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_EAST_plusADM_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+
+	# + MILITARY # 
+
+	Placeholder_EAST_plusMIL_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_EAST_plusMIL_minusECON = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin_econ < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin_army = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin_econ = -0.05 }
+		}
+	
+
+	}
+
+	# + ECON #
+
+	Placeholder_EAST_plusECON_minusADM = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin = -0.05 }
+		}
+	
+
+	}
+
+	Placeholder_EAST_plusECON_minusMIL = {
+		fire_only_once = no
+		days_remove = 5
+		days_re_enable = 5
+
+		ai_will_do = {
+			base = 0
+		}
+
+
+		visible = {
+			check_variable = { RUS_Chosen_Region = 3 }
+		}
+
+		available = {
+			NOT = {
+				check_variable = {
+					RUS_reform_region_3_admin_army < 0.05
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_to_variable = { RUS_reform_region_3_admin_econ = 0.05 }
+			add_to_variable = { RUS_reform_region_3_admin_army = -0.05 }
+		}
+	
+
+	}
+
+	### {END - EAST} ###
 	
 }
