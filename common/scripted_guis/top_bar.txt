@@ -1,24 +1,18 @@
 scripted_gui = {
 
-	ammunition = {
-		context_type = player_context
+ammunition = {
+	window_name = "sakuradite_topbar"
+	context_type = player_context
+	parent_window_token = "top_bar"
 
-		window_name = "ammunition_topbar"
-
-
-		triggers = {
-			
+	properties = {
+		sakuradite_ratio_bar = {
+			frame = sakuradite_ratio_var
+		}
+		sakuradite_icon = {
+			frame = sakuradite_frame_var
 		}
 
-		properties = {
-			ammo_ratio_bar = {
-				frame = ammo_ratio_var
-			}
-
-			ammo_icon = {
-				frame = ammo_frame_var
-			}
-        }
-
 	}
+}
 }
