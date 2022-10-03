@@ -1,3 +1,21 @@
+air_wings = {
+	282 = { 
+		CAS_equipment_1 = { 
+			owner = "JAP" 
+			amount = 300
+			start_experience_factor = 0.2 #optional, otherwise starts with 0 expereince
+		}
+	}
+	282 = {
+		fighter_equipment_1 = { 
+			owner = "JAP"  
+			amount = 200 	
+			start_experience_factor = 0.5	
+		}		
+	}
+}
+
+
 
 division_template = {
 	name = "Fuhyōshidan"	
@@ -570,6 +588,26 @@ instant_effect = {
 			creator = "BRT"
 		}
 		requested_factories = 3
+		progress = 0.85
+		efficiency = 50
+	}
+
+ add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "BRT"
+		}
+		requested_factories = 4
+		progress = 0.85
+		efficiency = 50
+	}
+
+ add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "BRT"
+		}
+		requested_factories = 4
 		progress = 0.85
 		efficiency = 50
 	}
