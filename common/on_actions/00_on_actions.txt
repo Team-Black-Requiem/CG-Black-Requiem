@@ -96,8 +96,8 @@ on_actions = {
 				limit = { NOT = { has_global_flag = first_nuke_dropped } }
 				country_event = { id = generic.8 }
 			}
+		}
 	}
-
 	# country random events
 	#on_bi_yearly_pulse = {
 	#
@@ -126,28 +126,28 @@ on_actions = {
 	}
 
 	#FROM is war target
-	on_declare_war = {
-		effect = {
-			#If prepared with surprise attack plan, get bonus
-			if = {
-				limit = {
-					FROM = {
-						original_tag = ROOT
-						#has_civil_war = yes
-						has_country_flag = formulated_surprise_attack_plan_for_civil_war
-					}
-					#has_civil_war = yes
-				}
-				FROM = {
-					clr_country_flag = formulated_surprise_attack_plan_for_civil_war
-					add_timed_idea = {
-						idea = civil_war_surprise_attack_plan
-						days = 30
-					}
-				}
-			}
-		}
-	}
+#	on_declare_war = {
+#		effect = {
+#			#If prepared with surprise attack plan, get bonus
+#			if = {
+#				limit = {
+#					FROM = {
+#						original_tag = ROOT
+#						#has_civil_war = yes
+#						has_country_flag = formulated_surprise_attack_plan_for_civil_war
+#					}
+#					#has_civil_war = yes
+#				}
+#				FROM = {
+#					clr_country_flag = formulated_surprise_attack_plan_for_civil_war
+#					add_timed_idea = {
+#						idea = civil_war_surprise_attack_plan
+#						days = 30
+#					}
+#				}
+#			}
+#		}
+#	}
 
 	# When a new faction is formed
 	on_faction_formed = {
