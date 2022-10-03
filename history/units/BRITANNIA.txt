@@ -1150,45 +1150,6 @@ units = {
 	}
 }
 
-
-air_wings = {
-	645 = { 
-		CAS_equipment_1 = { 
-			owner = "BRT" 
-			amount = 400 
-			start_experience_factor = 0.2 #optional, otherwise starts with 0 expereince
-		}
-	}
-	645 = {
-		fighter_equipment_0 = { 
-			owner = "BRT"  
-			amount = 500 	
-			start_experience_factor = 0.5	
-		}		
-	}
-	645 = {
-		strat_bomber_equipment_1 = {
-			owner = "BRT"
-			amount = 100
-			start_experience_factor = 0.5
-		}
-	}
-	648 = { 	
-		CAS_equipment_1 = { 
-			owner = "BRT" 
-			amount = 100 
-			start_experience_factor = 0.2	
-		}
-	}
-	648 = {
-		fighter_equipment_0 = { 
-			owner = "BRT"  
-			amount = 300 
-			start_experience_factor = 0.5		
-		}
-	}
-}
-
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
@@ -1225,36 +1186,6 @@ instant_effect = {
 			creator = "BRT"
 		}
 		requested_factories = 7
-		progress = 0.85
-		efficiency = 50
-	}
-
- add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0
-			creator = "BRT"
-		}
-		requested_factories = 7
-		progress = 0.85
-		efficiency = 50
-	}
-
- add_equipment_production = {
-		equipment = {
-			type = CAS_equipment_1
-			creator = "BRT"
-		}
-		requested_factories = 4
-		progress = 0.85
-		efficiency = 50
-	}
-
- add_equipment_production = {
-		equipment = {
-			type = strat_bomber_equipment_1
-			creator = "BRT"
-		}
-		requested_factories = 5
 		progress = 0.85
 		efficiency = 50
 	}
