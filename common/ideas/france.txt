@@ -362,7 +362,27 @@ ideas = {
 				}
 			    }
 		    }
-	    }
+	        }
+	        african_conscription = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.15
+				stability_factor= 0.15
+				conscription = 0.10
+				non_core_manpower = 0.05
+				mobilization_speed = 0.05
+			}
+		}
 		
 		france_promoting_democracy_in_africa = {
 			allowed = {
