@@ -3,8 +3,10 @@
 
 technology_categories = {
 	#Tanks
+
 	MBT_armour
  	armor
+
 	#Knightmares
 
 	knightmare_mass_production
@@ -14,48 +16,19 @@ technology_categories = {
 	knightmare_mobile
 	knightmare_all
 	knightmare_artillery
-
+	
 	#Artillery
-
+	
 	anti_air
 	cat_modern_spaa
 	cat_modern_artillery
 	cat_raiko_artillery
 	cat_sp_artillery
-
-
 	
-	light_air
-	medium_air
-	heavy_air
-	artillery
-	cat_anti_tank
-	cat_anti_air
-	naval_air
-	infantry_weapons
-	motorized_equipment
-	cat_mechanized_equipment
-	naval_equipment
-	rocketry
-	nuclear
-	industry
-	electronics
-	land_doctrine
-	air_doctrine
-	naval_doctrine
-	strategic_destruction_tree
-	battlefield_support_tree
-	operational_integrity_tree
-	jet_technology
-	trade_interdiction_tree
-	convoy_defense_tree
-	light_fighter
-	cat_heavy_fighter
-	tactical_bomber
-	cat_strategic_bomber
-	naval_bomber
-	cas_bomber
+	#Navy
+	
 	ship_modules_tech
+	naval_equipment
 	dd_tech
 	cl_tech
 	ca_tech
@@ -65,8 +38,65 @@ technology_categories = {
 	shbb_tech
 	ss_tech
 	tp_tech
-	synth_resources
+	fg_tech
+	asw_tech
+	naval_mines
+	naval_minesweeping
+	naval_minelaying
+	
+	#Air
+	
+	light_fighter
+	cas_bomber
+	tactical_bomber
+	naval_bomber
+	naval_air
+	cat_heavy_fighter
+	cat_strategic_bomber
+	cat_scout_plane
+	
+	#Doctrines
+	
+	naval_doctrine
+	submarine_doctrine
+	convoy_defense_tree
+	base_strike_main
+	trade_interdiction_tree
 	fleet_in_being_tree
+	cat_base_strike
+	cat_trade_interdiction
+	cat_fleet_in_being
+	
+	land_doctrine
+	cat_mobile_warfare
+	cat_superior_firepower
+	cat_grand_battle_plan
+	cat_mass_assault
+	
+	air_doctrine
+	strategic_destruction_tree
+	battlefield_support_tree
+	operational_integrity_tree
+	cat_strategic_destruction
+	cat_battlefield_support
+	cat_operational_integrity
+
+
+	light_air
+	medium_air
+	heavy_air
+	artillery
+	cat_anti_tank
+	cat_anti_air
+	infantry_weapons
+	motorized_equipment
+	cat_mechanized_equipment
+	rocketry
+	nuclear
+	industry
+	electronics
+	jet_technology
+	synth_resources
 	encryption_tech
 	decryption_tech
 	computing_tech
@@ -75,20 +105,8 @@ technology_categories = {
 	marine_tech
 	construction_tech
 	excavation_tech
-	submarine_doctrine
 	air_equipment
-	cat_mobile_warfare
-	cat_superior_firepower
-	cat_grand_battle_plan
-	cat_mass_assault
-	cat_base_strike
-	cat_trade_interdiction
-	cat_fleet_in_being
-	cat_strategic_destruction
-	cat_battlefield_support
-	cat_operational_integrity
 	night_vision
-	base_strike_main
 	mot_rockets
 	support_tech
 	para_tech
@@ -100,13 +118,8 @@ technology_categories = {
 	logistics_tech
 	signal_company_tech
 	maintenance_company_tech
-	naval_mines
 	concentrated_industry_category
 	dispersed_industry_category
-	asw_tech
-	naval_minesweeping
-	naval_minelaying
-	cat_scout_plane
 	train_tech
 	cat_production
 	cat_synth_rubber
@@ -139,18 +152,35 @@ technology_folders = {
 	}
 	air_techs_folder = {
 		ledger = air
+		available = {
+			NOT = { 
+				has_dlc = "By Blood Alone" 
+			} 
+		}
+	}
+	bba_conventional_air_techs_folder = {
+		ledger = air
+		available = {
+			has_dlc = "By Blood Alone"
+		}
+	}
+	bba_geass_air_techs_folder = {
+		ledger = air
+		available = {
+			has_dlc = "By Blood Alone"
+		}
 	}
 	naval_folder = {
+		ledger = navy
 		available = {
 			not = { has_dlc = "Man the Guns" }
 		}
-		ledger = navy
 	}
 	mtgnavalfolder = {
+		ledger = navy
 		available = {
 			has_dlc = "Man the Guns"
 		}
-		ledger = navy
 	}
 	industry_folder = {
 		ledger = civilian
@@ -172,5 +202,3 @@ technology_folders = {
 	}
 	#secret_weapons_folder
 }
-
- 
