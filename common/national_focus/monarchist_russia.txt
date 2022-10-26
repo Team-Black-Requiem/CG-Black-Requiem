@@ -1,0 +1,658 @@
+﻿focus_tree = {
+id = monarchist_russia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = MRU
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = MRU_restored_throne
+		icon = GFX_MRU_restored_throne
+		cost = 3
+		x = 15
+		y = 0
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		id = MRU_create_the_senate
+		icon = GFX_MRU_create_the_senate
+		relative_position_id = MRU_restored_throne
+		prerequisite = {
+			focus = MRU_restored_throne
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_form_the_regency
+		icon = GFX_MRU_form_the_regency
+		relative_position_id = MRU_create_the_senate
+		prerequisite = {
+			focus = MRU_create_the_senate
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+		id = MRU_the_past_the_present
+		icon = GFX_MRU_the_past_the_present
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = 0
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_tsar_memories
+		icon = GFX_MRU_tsar_memories
+		relative_position_id = MRU_the_past_the_present
+		prerequisite = {
+			focus = MRU_the_past_the_present
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		id = MRU_clever_policy
+		icon = GFX_MRU_clever_policy
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = 3
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_the_gulag_state  ##Katorga
+		icon = GFX_MRU_the_gulag_state
+		relative_position_id = MRU_clever_policy
+		prerequisite = {
+			focus = MRU_clever_policy
+		}
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_the_republics
+		icon = GFX_MRU_the_republics
+		relative_position_id = MRU_clever_policy
+		prerequisite = {
+			focus = MRU_clever_policy
+		}
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_the_Samara_government
+		icon = GFX_MRU_the_Samara_government
+		relative_position_id = MRU_clever_policy
+		prerequisite = {
+			focus = MRU_clever_policy
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_the_theocracy
+		icon = GFX_MRU_MRU_the_theocracy
+		relative_position_id = MRU_the_Samara_government
+		prerequisite = {
+			focus = MRU_the_Samara_government
+		}
+		prerequisite = {
+			focus = MRU_the_republics
+		}
+		prerequisite = {
+			focus = MRU_the_gulag_state
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_the_soviet_states
+		icon = GFX_MRU_the_soviet_states
+		relative_position_id = MRU_the_theocracy
+
+		prerequisite = {
+			focus = MRU_the_theocracy
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_anti_popular_mandate
+		icon = GFX_MRU_anti_popular_mandate
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = -3
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_use_RUS_nationalism
+		icon = GFX_MRU_use_RUS_nationalism
+		relative_position_id = MRU_anti_popular_mandate
+		prerequisite = {
+			focus = MRU_anti_popular_mandate
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_crush_opposition
+		icon = GFX_MRU_crush_opposition
+		relative_position_id = MRU_anti_popular_mandate
+		prerequisite = {
+			focus = MRU_anti_popular_mandate
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_destroy_rep_ideas
+		icon = GFX_MRU_destroy_rep_ideas
+		relative_position_id = MRU_anti_popular_mandate
+		prerequisite = {
+			focus = MRU_anti_popular_mandate
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+		id = MRU_guard_the_cities
+		icon = GFX_MRU_guard_the_cities
+		relative_position_id = MRU_crush_opposition
+		prerequisite = {
+			focus = MRU_crush_opposition
+		}
+		prerequisite = {
+			focus = MRU_use_RUS_nationalism
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+		
+	focus = {
+		id = MRU_the_new_hierarchy
+		icon = GFX_MRU_the_new_hierarchy
+		relative_position_id = MRU_guard_the_cities
+		prerequisite = {
+			focus = MRU_guard_the_cities
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_the_FIRST_test
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_guard_the_cities
+		prerequisite = {
+			focus = MRU_the_new_hierarchy
+		}
+		prerequisite = {
+			focus = MRU_discuss_feudal_obligations
+		}
+
+		prerequisite = {
+			focus = MRU_the_soviet_states
+		}
+		cost = 3
+		x = 3
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = MRU_shift_to_older_times
+		icon = GFX_MRU_shift_to_older_times
+		relative_position_id = MRU_tsar_memories
+		prerequisite = {
+			focus = MRU_tsar_memories
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_discuss_feudal_obligations
+		icon = GFX_MRU_discuss_feudal_obligations
+		relative_position_id = MRU_shift_to_older_times
+		prerequisite = {
+			focus = MRU_shift_to_older_times
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+}	

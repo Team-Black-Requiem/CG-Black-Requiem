@@ -1,0 +1,532 @@
+﻿focus_tree = {
+id = legitimist_russia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = LRU
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = LRU_the_disaster
+		icon = GFX_LRU_the_disaster
+		cost = 3
+		x = 15
+		y = 0
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		id = LRU_our_long_march
+		icon = GFX_LRU_our_long_march
+		relative_position_id = LRU_the_disaster
+		prerequisite = {
+			focus = LRU_the_disaster
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = LRU_a_new_home_urals
+		icon = GFX_LRU_a_new_home_urals
+		relative_position_id = LRU_our_long_march
+		prerequisite = {
+			focus = LRU_our_long_march
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+		id = LRU_a_populist_agenda
+		icon = GFX_LRU_a_populist_agenda
+		relative_position_id = LRU_a_new_home_urals
+		prerequisite = {
+			focus = LRU_a_new_home_urals
+		}
+		cost = 3
+		x = 2
+		y = 2
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_centralize_administration
+		icon = GFX_LRU_centralize_administration
+		relative_position_id = LRU_a_populist_agenda
+		prerequisite = {
+			focus = LRU_a_populist_agenda
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+
+	focus = {
+		id = LRU_re_think_our_government
+		icon = GFX_LRU_re_think_our_government
+		relative_position_id = LRU_a_new_home_urals
+		prerequisite = {
+			focus = LRU_a_new_home_urals
+		}
+		cost = 3
+		x = -2
+		y = 2
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_guarantee_BASIC_freedoms
+		icon = GFX_LRU_guarantee_BASIC_freedoms
+		relative_position_id = LRU_re_think_our_government
+		prerequisite = {
+			focus = LRU_re_think_our_government
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_de_europeanization
+		icon = GFX_LRU_de_europeanization
+		relative_position_id = LRU_re_think_our_government
+		prerequisite = {
+			focus = LRU_re_think_our_government
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_the_paramilitaries
+		icon = GFX_LRU_the_paramilitaries
+		relative_position_id = LRU_re_think_our_government
+		prerequisite = {
+			focus = LRU_re_think_our_government
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+		id = LRU_dangerous_pendulum
+		icon = GFX_LRU_dangerous_pendulum
+		relative_position_id = LRU_de_europeanization
+		prerequisite = {
+			focus = LRU_de_europeanization
+		}
+		prerequisite = {
+			focus = LRU_guarantee_BASIC_freedoms
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+		
+	focus = {
+		id = LRU_balacing_here_there
+		icon = GFX_LRU_balacing_here_there
+		relative_position_id = LRU_dangerous_pendulum
+		prerequisite = {
+			focus = LRU_dangerous_pendulum
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+			
+	focus = {
+		id = LRU_plan_is_working_for_now
+		icon = GFX_LRU_plan_is_working_for_now
+		relative_position_id = LRU_balacing_here_there
+		prerequisite = {
+			focus = LRU_balacing_here_there
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_an_opportunity
+		icon = GFX_LRU_an_opportunity
+		relative_position_id = LRU_dangerous_pendulum
+		prerequisite = {
+			focus = LRU_who_is_worth_trusting?
+		}
+		prerequisite = {
+			focus = LRU_plan_is_working_for_now
+		}
+
+
+		cost = 3
+		x = 2
+		y = 4
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = LRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = LRU_mend_economic_hardships
+		icon = GFX_LRU_mend_economic_hardships
+		relative_position_id = LRU_centralize_administration
+		prerequisite = {
+			focus = LRU_centralize_administration
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = LRU_improve_token_army
+		icon = GFX_LRU_improve_token_army
+		relative_position_id = LRU_mend_economic_hardships
+		prerequisite = {
+			focus = LRU_mend_economic_hardships
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		id = LRU_who_is_worth_trusting?
+		icon = GFX_LRU_who_is_worth_trusting
+		relative_position_id = LRU_improve_token_army
+		prerequisite = {
+			focus = LRU_improve_token_army
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = LRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+}	
