@@ -19,7 +19,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
-			maximum_speed = 1800
+			maximum_speed = 600
+			thrust = 100
 		}
 	}
 
@@ -208,6 +209,8 @@ equipment_modules = {
 	# # # #    #  # #    #  # #  ##    #
 	####  #### #  # #     ##  #   # ####
 
+	### Tier 1 Fighter Weapons ###
+
 	fighter_weapon_1 = {
 		category = fighter_weapon
 		sfx = sfx_ui_sd_module_turret
@@ -215,16 +218,226 @@ equipment_modules = {
 
 		add_stats = {
 			air_attack = 100
+			build_cost_ic = 1
 		}
 	}
 
-	fighter_missile_weapons_1 = {
+	aam_weapons_1 = {
 		category = fighter_weapon
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = fighter
 
 		add_stats = {
+			air_attack = 200
+			build_cost_ic = 2
+		}
+	}
+
+	### Tier 2 Fighter Weapons ###
+
+	fighter_weapon_2 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 100
+			build_cost_ic = 1
+		}
+	}
+
+	aam_weapons_2 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 200
+			build_cost_ic = 2
+		}
+	}
+
+	### Tier 3 Fighter Weapons ###
+
+	fighter_weapon_3 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 100
+			build_cost_ic = 1
+		}
+	}
+
+	aam_weapons_3 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 200
+			build_cost_ic = 2
+		}
+	}
+
+	### Tier 4 Fighter Weapons ###
+
+	fighter_weapon_4 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 100
+			build_cost_ic = 1
+		}
+	}
+
+	aam_weapons_4 = {
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 200
+			build_cost_ic = 2
+		}
+	}
+
+	### Sakuradite Fighter Weapons
+
+	### Tier 1 CAS Weapons ###
+
+	cas_cannon_1 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
 			
 		}
 	}
+
+	cas_agm_1 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	### Tier 2 CAS Weapons ###
+
+	cas_cannon_2 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	cas_agm_2 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	### Tier 3 CAS Weapons ###
+
+	cas_cannon_3 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	cas_agm_3 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	### Tier 4 CAS Weapons ###
+
+	cas_cannon_4 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	cas_agm_4 = {
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			
+		}
+	}
+
+	### Sakuradite CAS Weapons ###
+
+	### Tier 1 Multirole Weapons ###
+	### Basically, stats between a fighter and CAS weapon so it can provide both roles but worse | You can then choose to equip CAS or AAM missles for the secondary ###
+	### Having Problems implementing Multiroles so I am commenting it out for the patch ###
+
+	#multirole_cannon_1 = {
+	#	category = multi_weapon
+	#	sfx = sfx_ui_sd_module_turret
+	#	add_equipment_type = multirole
+	#	add_stats = {
+	#		
+	#	}
+	#}
+	#### Tier 2 Multirole Weapons ###
+	#multirole_cannon_2 = {
+	#	category = multi_weapon
+	#	sfx = sfx_ui_sd_module_turret
+	#	add_equipment_type = multirole
+	#	add_stats = {
+	#		
+	#	}
+	#}
+	#### Tier 3 Multirole Weapons ###
+	#multirole_cannon_3 = {
+	#	category = multi_weapon
+	#	sfx = sfx_ui_sd_module_turret
+	#	add_equipment_type = multirole
+	#	add_stats = {
+	#		
+	#	}
+	#}
+	#### Tier 4 Multirole Weapons ###
+	#multirole_cannon_4 = {
+	#	category = multi_weapon
+	#	sfx = sfx_ui_sd_module_turret
+	#	add_equipment_type = multirole
+	#	add_stats = {
+	#		
+	#	}
+	#}
+	#### Sakuradite Multirole Weapons ###
+
+
+	
 }

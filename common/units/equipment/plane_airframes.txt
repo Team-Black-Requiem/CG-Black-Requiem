@@ -1,21 +1,44 @@
 equipments = {
-	early_light_jet_airframe_base = {
-		year = 1980
+	small_plane_airframe = {
+		year = 2009
 		is_archetype = yes
-		is_buildable = no
+		is_buildable = yes
+		is_convertable = yes
 		picture = archetype_fighter_equipment
 		type = fighter
+		type_override = fixed_main_weapon_slot
+		allowed_types = {
+			fighter
+			interceptor
+			cas
+			naval_bomber
+		}
+		allow_mission_type = training
 		group_by = archetype
 		interface_category = interface_category_air
 		sprite = light_plane
 		air_map_icon_frame = 1
+
+		interface_overview_category_index = 1
+		air_superiority = 1
+		reliability = 0.8
+		naval_strike_attack = 1
+		naval_strike_targetting = 1
+		lend_lease_cost = 8
+		manpower = 20
+		fuel_consumption = 0.05
+		build_cost_ic = 6
+		resources = {
+			aluminium = 2
+			rubber = 1
+		}
 
 		module_slots = {
 			fixed_main_weapon_slot = {
 				required = yes
 				allowed_module_categories = {
 					fighter_weapon
-					#cas_weapon
+					cas_weapon
 					#nav_bomber_weapon
 					#kamikaze_bomber_weapon
 				}
@@ -155,41 +178,28 @@ equipments = {
 		#}
 
 		default_modules = {
-			fixed_main_weapon_slot = fighter_weapon_1
+			fixed_main_weapon_slot = empty
 			fixed_auxiliary_weapon_slot_1 = empty
-			engine_type_slot = engine_1_1x
+			engine_type_slot = empty
 			special_type_slot_1 = empty
 			special_type_slot_2 = empty
 		}
 	}
 
-	early_light_jet_airframe = {
-		abbreviation = "elj"
+	small_plane_airframe_0 = {
+		abbreviation = "afs0"
+		derived_variant_name = fighter_equipment_0
 		year = 2009
-		archetype = early_light_jet_airframe_base
-		priority = 2000
+		archetype = small_plane_airframe
 		module_slots = inherit
+		priority = 5
 
-		air_superiority = 1
-		reliability = 0.8
-
-		# Air vs Navy - low damage / high hit chance / easy to hurt
+		air_range = 500
+		maximum_speed = 0
+		air_agility = 45
+		air_defence = 7
+		weight = 3
 		naval_strike_attack = 1
-		naval_strike_targetting = 10
-		surface_detection = 10 # For airwing of 100 planes (Destroyer I: 20 surface detection)
-		sub_detection = 2.5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
-
-		#Space taken in convoy
-		lend_lease_cost = 8
-
-		build_cost_ic = 22
-		resources = {
-			#oil = 1
-			aluminium = 2
-			rubber = 1
-		}
-
-		manpower = 20
-		fuel_consumption = 0.21
+		naval_strike_targetting = 1
 	}
 }
