@@ -220,6 +220,11 @@ equipment_modules = {
 			air_attack = 100
 			build_cost_ic = 1
 		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 	}
 
 	aam_weapons_1 = {
@@ -230,6 +235,11 @@ equipment_modules = {
 		add_stats = {
 			air_attack = 200
 			build_cost_ic = 2
+		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
 		}
 	}
 
@@ -244,6 +254,11 @@ equipment_modules = {
 			air_attack = 100
 			build_cost_ic = 1
 		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 	}
 
 	aam_weapons_2 = {
@@ -254,6 +269,11 @@ equipment_modules = {
 		add_stats = {
 			air_attack = 200
 			build_cost_ic = 2
+		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
 		}
 	}
 
@@ -268,6 +288,11 @@ equipment_modules = {
 			air_attack = 100
 			build_cost_ic = 1
 		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 	}
 
 	aam_weapons_3 = {
@@ -278,6 +303,11 @@ equipment_modules = {
 		add_stats = {
 			air_attack = 200
 			build_cost_ic = 2
+		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
 		}
 	}
 
@@ -292,6 +322,11 @@ equipment_modules = {
 			air_attack = 100
 			build_cost_ic = 1
 		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
 	}
 
 	aam_weapons_4 = {
@@ -302,6 +337,11 @@ equipment_modules = {
 		add_stats = {
 			air_attack = 200
 			build_cost_ic = 2
+		}
+		xp_cost = 1
+		allow_mission_type = {
+			air_superiority
+			interception
 		}
 	}
 
@@ -315,8 +355,24 @@ equipment_modules = {
 		add_equipment_type = cas
 
 		add_stats = {
-			
+			build_cost_ic = 1
 		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 100
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	cas_agm_1 = {
@@ -324,9 +380,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 200
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	### Tier 2 CAS Weapons ###
@@ -336,9 +405,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 100
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	cas_agm_2 = {
@@ -346,9 +428,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 200
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	### Tier 3 CAS Weapons ###
@@ -358,9 +453,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 100
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	cas_agm_3 = {
@@ -368,9 +476,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 200
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	### Tier 4 CAS Weapons ###
@@ -380,9 +501,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 100
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	cas_agm_4 = {
@@ -390,9 +524,22 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 
-		add_stats = {
-			
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
 		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 200
+				weight = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
 	}
 
 	### Sakuradite CAS Weapons ###
