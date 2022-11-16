@@ -1,0 +1,27 @@
+add_namespace = EUR
+
+country_event = {  
+	id = EUR.1
+	title = EUR.1.t
+	desc = EUR.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = EUR.1.a
+		ai_chance = {
+			factor = 100
+		}
+		EUR = {set_country_flag = EUR_help_YES}
+		
+    } 
+	option = {
+		name = EUR.1.b
+		ai_chance = {
+			factor = 0
+		}
+		EUR = {set_country_flag = EUR_help_NO}
+    }	
+}
