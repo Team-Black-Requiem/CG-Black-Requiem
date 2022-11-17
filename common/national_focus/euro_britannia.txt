@@ -74,6 +74,36 @@ id = euro_britannia_focus
 
 
 	}
+	focus = {
+		id = EUR_defy_RUS_institutions
+		icon = GFX_EUR_defy_RUS_institutions
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 3
+		x = 3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		remove_ideas = EUR_crisis_authority_1
+		}
+
+
+	}
 
 
 	focus = {
@@ -101,6 +131,11 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		add_state_core = 574
+		add_state_core = 644
+		add_state_core = 562
+		add_state_core = 822
+		add_state_core = 637
 		}
 
 
@@ -165,6 +200,31 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		hidden_effect = {
+		remove_country_leader_role = {
+		character = EUR_Mil_Coun
+		ideology = paternal_autocracy}}
+			add_country_leader_role = {
+			character = EUR_Mil_Coun
+			country_leader = {
+				expire = "2020.1.1"
+				ideology = purist_aristocracy
+				traits = {
+					}
+				}
+			promote_leader = yes
+			}
+				EUR_Mil_Coun = {
+				set_portraits = {
+						civilian={
+							large="GFX_portrait_EUR_Mil_Coun_NO"}
+				}}
+				set_politics = {
+			ruling_party = ultra_nationalism
+			last_election = "2008.1.1"
+			election_frequency = 48
+			elections_allowed = no}
+			remove_ideas = EUR_everything_for_new_life
 		}
 
 
@@ -421,9 +481,45 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		574 = {
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 4821
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 7785
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 7889
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 4855
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 12611
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 1852
+							instant_build = yes
+						}
 		}
-
-
+	}
 	}
 
 
@@ -452,6 +548,7 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		load_oob = EUR_Rus_Battalions
 		}
 
 
@@ -483,6 +580,16 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		add_ideas = EUR_Waiting_for_the_future
+
+		562 = {
+		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
 		}
 
 
@@ -552,34 +659,6 @@ id = euro_britannia_focus
 	}
 
 
-	focus = {
-		id = EUR_defy_RUS_institutions
-		icon = GFX_EUR_defy_RUS_institutions
-		relative_position_id = EUR_under_our_management
-		prerequisite = {
-			focus = EUR_under_our_management
-		}
-		cost = 3
-		x = 3
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
 
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-
-
-	}
 
 }	
