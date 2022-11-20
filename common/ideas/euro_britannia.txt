@@ -22,6 +22,23 @@ ideas = {
 			consumer_goods_factor = 0.02
 			}
 		}
+		EUR_poor_logistics_1 = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.10
+			army_speed_factor = -0.10
+			}
+		}
 		
 		EUR_legitimate_cause = {
 		
@@ -77,6 +94,23 @@ ideas = {
 			autocracy_drift = -0.01
 			}
 		}
+		EUR_provisional_senate = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.05
+			political_power_gain = 0.2
+			}
+		}
 		EUR_everything_for_new_life = {
 		
 		 	allowed = {
@@ -93,6 +127,28 @@ ideas = {
 			weekly_manpower = 400
 			stability_factor = -0.05
 			}
+		}
+		EUR_fight_in_Siberia = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			weekly_manpower = 1200
+			army_attack_factor = 0.05
+			army_org_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
 		}
 		EUR_Waiting_for_the_future = {
 		

@@ -132,9 +132,7 @@ id = euro_britannia_focus
 	
 		completion_reward = {
 		add_state_core = 574
-		add_state_core = 644
 		add_state_core = 562
-		add_state_core = 822
 		add_state_core = 637
 		}
 
@@ -258,6 +256,28 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = EUR_poor_logistics
+		add_idea = EUR_poor_logistics_1}
+		574 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4855
+					instant_build = yes
+				}
+			}
+		562 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12518
+					instant_build = yes
+				}
+			}
+		build_railway = {
+				path = { 4855 1795 4726 7746 1878 12623 1714 12518 }
+			}
 		}
 
 
@@ -289,6 +309,8 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		remove_ideas = EUR_poor_logistics_1
+		recruit_character = EUR_Britannian_economy_minister
 		}
 
 
@@ -320,9 +342,9 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		load_oob = EUR_beg_for_knightmares
+		country_event = EUR.4
 		}
-
-
 	}
 
 
@@ -357,6 +379,13 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		recruit_character = EUR_Michele_Manfredi
+		add_timed_idea = {
+			idea = EUR_fight_in_Siberia
+			days = 365}
+			hidden_effect = {
+			country_event = { days = 7 id = EUR.5}
+			}
 		}
 
 
@@ -389,9 +418,13 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		EUR = {
+			declare_war_on = {
+			target = SRU
+			type = annex_everything
+						}
 		}
-
-
+	}
 	}
 
 
@@ -420,6 +453,13 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		add_opinion_modifier = { target = BRT modifier = friendly }
+		BRT = {
+		add_opinion_modifier = { target = EUR modifier = friendly }}
+		add_offsite_building  = {
+					type = arms_factory
+					level = 5
+				}
 		}
 
 
@@ -428,7 +468,7 @@ id = euro_britannia_focus
 
 	focus = {
 		id = EUR_use_purist_militias
-		icon = GFX_EEUR_use_purist_militias
+		icon = GFX_EUR_use_purist_militias
 		relative_position_id = EUR_befriend_Bismark
 		prerequisite = {
 			focus = EUR_befriend_Bismark
@@ -451,6 +491,8 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		country_event = EUR.3
+		
 		}
 
 
@@ -581,19 +623,16 @@ id = euro_britannia_focus
 	
 		completion_reward = {
 		add_ideas = EUR_Waiting_for_the_future
-
-		562 = {
-		add_extra_state_shared_building_slots = 2
-				add_building_construction = {
+				add_offsite_building  = {
 					type = arms_factory
 					level = 2
-					instant_build = yes
 				}
+				add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			}
 		}
-		}
-
-
-	}
 
 
 
@@ -622,6 +661,8 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		add_ideas = EUR_provisional_senate
+		country_event = EUR.2
 		}
 
 
@@ -653,6 +694,25 @@ id = euro_britannia_focus
 		}
 	
 		completion_reward = {
+		add_political_power = -50
+		add_stability = 0.05
+		add_state_core = 644
+				644 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+			  }
+		add_state_core = 822
+		822 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+			  }
+		
 		}
 
 

@@ -16,6 +16,14 @@ characters = {
 			id = -1
 		}
 	}
+	EUR_Augusta_Henry= {
+		name="Augusta Henry Highland"
+		portraits={
+			civilian={
+				large="GFX_portrait_EUR_Highland"
+			}
+		}
+	}
 	
 
 
@@ -62,6 +70,30 @@ characters = {
 
 			traits = { 
 				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EUR_Britannian_economy_minister = {
+		name = "Noble"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = EUR_generic_economy_minister_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				britannian_supplier
 			}
 
 			cost = 2000
@@ -263,6 +295,24 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+		}
+	}
+	EUR_Michele_Manfredi={
+		name= "Michele Manfredi"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={  }
+				skill=4
+				attack_skill=4
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
 		}
 	}
 
