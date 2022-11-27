@@ -50,9 +50,22 @@ division_template = {
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
     }
-	support = {
-		military_police = { x = 0 y = 0 } 		
+}
+
+division_template = {
+	name = "Siberian People's Cavalry"	
+
+	division_names_group = "SOV_CAV_01"
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 1 y = 0 }
+		Cavalry = { x = 1 y = 1 }
+		Cavalry = { x = 1 y = 2 }
 	}
+	
 }
 
 
@@ -63,8 +76,48 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Siberian People's National Guard"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's National Guard"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -73,8 +126,8 @@ division= {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 
@@ -84,8 +137,8 @@ division= {
 		name_order = 1
 	}
 	location = 7835
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -94,8 +147,8 @@ division= {
 		name_order = 1
 	}
 	location = 7835
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 
@@ -105,8 +158,8 @@ division= {
 		name_order = 1
 	}
 	location = 4797
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Siberian People's National Guard"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -115,8 +168,8 @@ division= {
 		name_order = 1
 	}
 	location = 4797
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 
@@ -126,8 +179,8 @@ division= {
 		name_order = 1
 	}
 	location = 4724
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -136,8 +189,8 @@ division= {
 		name_order = 1
 	}
 	location = 4724
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 
@@ -147,8 +200,8 @@ division= {
 		name_order = 1
 	}
 	location = 7789
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Siberian People's National Guard"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -157,8 +210,8 @@ division= {
 		name_order = 1
 	}
 	location = 7789
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -167,8 +220,8 @@ division= {
 		name_order = 1
 	}
 	location = 7789
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 division= {
@@ -177,8 +230,8 @@ division= {
 		name_order = 1
 	}
 	location = 7789
-	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	division_template = "Socialist Militias"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 
@@ -189,7 +242,107 @@ division= {
 	}
 	location = 7822
 	division_template = "Siberian People's Infantry"
-	start_experience_factor = 0.5
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Infantry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Infantry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Infantry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
+	start_equipment_factor = 0.6
+}
+division = {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4705
+	division_template = "Siberian People's Cavalry"
+	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
 }
