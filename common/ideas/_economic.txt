@@ -31,44 +31,6 @@ ideas = {
 			
 			available = {
 				has_war_support > 0.15
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.3
-					congress_high_support_trigger = yes
-				}	
-				if = {
-					limit = {
-						original_tag = TUR
-						has_dlc = "Battle for the Bosporus" 
-					}
-					NOT = { 
-						OR = {
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
-							has_active_mission = TUR_etatism_crisis_4
-						}
-					}
-				}
-			}
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 			}
 			
 			cost = 150
@@ -84,7 +46,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 2
+  				factor = 2
 
    				modifier = {
 					factor = 20
@@ -95,13 +57,7 @@ ideas = {
 					has_war_support > 0.25
 					factor = 0 #don't even look at it if you could be taking partial mob
 				}
-				modifier = {
-					tag = ENG
-					has_war = no
-					date < 1937.6.1
-					factor = 0
-				}
-   			}
+  			}
 		}
 		
 		partial_economic_mobilisation = {
@@ -203,45 +159,6 @@ ideas = {
 						ratio > 0.5
 					}
 				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.9
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
-						original_tag = TUR
-						has_dlc = "Battle for the Bosporus" 
-					}
-					NOT = { 
-						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
-						}
-					}
-				}
-			}
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 			}
 			ai_will_do = {
    				factor = 1
@@ -267,33 +184,7 @@ ideas = {
 						has_idea = limited_conscription
 					}
 				}
-
-				# Germany needs to be careful
-				modifier = {
-					factor = 0
-
-					tag = GER
-					NOT = { has_tech = volkssturm }
-					has_war = yes
-					date < 1944.01.01
-				}
-				modifier = {
-					factor = 0
-
-					tag = SOV
-					has_war = yes
-					OR = {
-						has_manpower < 2000000
-						NOT = {
-							OR = {
-								has_idea = all_adults_serve
-								has_idea = service_by_requirement
-							}
-						}
-					}									
-				}
-   			}
-			
+   			}		
 			cost = 150
 			removal_cost = -1
 			
@@ -336,19 +227,8 @@ ideas = {
 
    				modifier = {
 					factor = 300
-
-					OR = {
-						tag = PER
-						tag = IRQ
-					}
+					tag = IRQ
 					is_in_faction = no
-				}
-
-				modifier = {
-					factor = 300
-
-					tag = BRA
-					date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
 				}
 
 				# Oil for hitlers oil throne!
@@ -403,10 +283,10 @@ ideas = {
 					OR = {
 						# portugal and sweden are special tungsten snowflakes
 						tag = POR
-						tag = SWE
+						#tag = SWE
 
 						# Iraq & Iran are special oil snowflakes
-						tag = PER
+						#tag = PER
 						tag = IRQ
 					}
 				}
@@ -500,12 +380,8 @@ ideas = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
 				}
-				OR = {
-					NOT = {	tag = SOV }
-					NOT = { has_opinion_modifier = MR_pact }
-				}
 
-								if = {
+				if = {
 					limit = {
 						original_tag = JAP
 					}
