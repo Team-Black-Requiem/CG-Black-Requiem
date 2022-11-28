@@ -44,8 +44,8 @@ focus_tree = {
 			cost = 3
 			x = 6
 			y = 2
-			prerequisite = { focus = RUS_Revise_the_Constitution_of_1919 }
-			relative_position_id = RUS_Revise_the_Constitution_of_1919
+			prerequisite = { focus = RUS_Revitalize_The_Economy}
+			relative_position_id = RUS_Revitalize_The_Economy
 			mutually_exclusive = { focus = RUS_Use_the_Conovalovs_Plan }
 			mutually_exclusive = { focus = RUS_Use_the_Bulganins_Plan }
 			available = {
@@ -63,6 +63,29 @@ focus_tree = {
 
 		}
 	}
+
+				focus = {
+			id = RUS_Revitalize_The_Economy
+			#icon = 
+			cost = 3
+			x = 0
+			y = 1
+			prerequisite = {focus = RUS_Revise_the_Constitution_of_1919}
+			relative_position_id = RUS_Revise_the_Constitution_of_1919
+			available = {
+				country_exists = RUS
+ 			}
+ 			ai_will_do = {
+		 		factor = 100
+			}
+			available_if_capitulated = no
+			completion_reward = {
+				
+			}
+				}
+
+
+
 				focus = {
 			id = RUS_Creation_of_an_Anti_Corruption_Agency #####(-100 pp + 5 stab) 
 			icon = GFX_RUS_Creation_of_an_Anti_Corruption_Agency
@@ -369,8 +392,8 @@ focus_tree = {
 			cost = 3
 			x = 0
 			y = 2
-			prerequisite = { focus = RUS_Revise_the_Constitution_of_1919 }
-			relative_position_id = RUS_Revise_the_Constitution_of_1919
+			prerequisite = { focus = RUS_Revitalize_The_Economy}
+			relative_position_id = RUS_Revitalize_The_Economy
 			mutually_exclusive = { focus = RUS_Use_the_Chernovs_Plan }
 			mutually_exclusive = { focus = RUS_Use_the_Bulganins_Plan }
 			available = {
@@ -652,8 +675,8 @@ focus_tree = {
 			cost = 3
 			x = -6
 			y = 2
-			prerequisite = { focus = RUS_Revise_the_Constitution_of_1919 }
-			relative_position_id = RUS_Revise_the_Constitution_of_1919
+			prerequisite = { focus = RUS_Revitalize_The_Economy}
+			relative_position_id = RUS_Revitalize_The_Economy
 			mutually_exclusive = { focus = RUS_Use_the_Chernovs_Plan }
 			mutually_exclusive = { focus = RUS_Use_the_Conovalovs_Plan }
 			available = {
