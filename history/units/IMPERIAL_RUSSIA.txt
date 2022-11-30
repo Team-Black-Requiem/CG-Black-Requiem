@@ -1,73 +1,52 @@
 ﻿division_template = {
-	name = "Russian Royal Garrison"	
-
-	division_names_group = "SOV_GAR_01"
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-	}	
-
-}
-division_template = {
-	name = "Imperial National Guard"	
-
-	division_names_group = "SOV_GRD_01"
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		artillery_brigade = { x = 1 y = 4 }
-	}	
-	support = {
-		engineer = { x = 0 y = 0 } 		
-	}
-}
-
-
-division_template = {
-	name = "Russian Imperial Infantry Division" 		
+	name = "Imperial Infantry" 		
 
 	division_names_group = "SOV_INF_01"
 
     regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 0 }
+		artillery_brigade = { x = 0 y = 1 }
+		artillery_brigade = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		artillery_brigade = { x = 2 y = 1 }
-		artillery_brigade = { x = 2 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 0 y = 3 }
+		mechanized = { x = 2 y = 0 }
     }
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		mot_recon = { x = 0 y = 2 }
+	}
 }
 
 division_template = {
-	name = "Russian Imperial Armored Division" 		
+	name = "Imperial Guard" 		
 
 	division_names_group = "SOV_INF_01"
 
     regiments = {
 		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
+		mot_artillery_brigade = { x = 0 y = 1 }
+		mot_artillery_brigade = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		mechanized = { x = 1 y = 3 }
 		modern_armor = { x = 2 y = 0 }
 		modern_armor = { x = 2 y = 1 }
 		modern_armor = { x = 2 y = 2 }
+		modern_armor = { x = 2 y = 3 }
     }
+	support = {
+		engineer = { x = 0 y = 0 }
+		maintenance_company = { x = 0 y = 1 }
+		anti_air = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
 }
 
 units = {
@@ -79,7 +58,7 @@ units = {
 			name_order = 1
 		}
 		location = 1278
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -89,7 +68,7 @@ units = {
 			name_order = 1
 		}
 		location = 1278
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -100,7 +79,7 @@ units = {
 			name_order = 1
 		}
 		location = 9292
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -110,7 +89,7 @@ units = {
 			name_order = 1
 		}
 		location = 9292
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -120,7 +99,7 @@ units = {
 			name_order = 1
 		}
 		location = 9292
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -130,7 +109,7 @@ units = {
 			name_order = 1
 		}
 		location = 9292
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -140,7 +119,7 @@ units = {
 			name_order = 1
 		}
 		location = 1821
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -150,7 +129,7 @@ units = {
 			name_order = 1
 		}
 		location = 1821
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -160,7 +139,7 @@ units = {
 			name_order = 1
 		}
 		location = 1821
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -170,7 +149,7 @@ units = {
 			name_order = 1
 		}
 		location = 1821
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -180,7 +159,7 @@ units = {
 			name_order = 1
 		}
 		location = 6278
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -190,7 +169,7 @@ units = {
 			name_order = 1
 		}
 		location = 6278
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -200,7 +179,7 @@ units = {
 			name_order = 1
 		}
 		location = 6278
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -210,7 +189,57 @@ units = {
 			name_order = 1
 		}
 		location = 6278
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6278
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6278
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6278
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6278
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6278
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -220,7 +249,7 @@ units = {
 			name_order = 1
 		}
 		location = 4354
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -230,7 +259,27 @@ units = {
 			name_order = 1
 		}
 		location = 4354
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4354
+		division_template = "Imperial Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4354
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -240,7 +289,7 @@ units = {
 			name_order = 1
 		}
 		location = 7375
-		division_template = "Russian Imperial Armored Division"
+		division_template = "Imperial Guard"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
 	}
@@ -250,7 +299,7 @@ units = {
 			name_order = 1
 		}
 		location = 10256
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -260,7 +309,7 @@ units = {
 			name_order = 1
 		}
 		location = 10256
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -270,7 +319,7 @@ units = {
 			name_order = 1
 		}
 		location = 7375
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -281,7 +330,7 @@ units = {
 			name_order = 1
 		}
 		location = 7375
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -291,7 +340,7 @@ units = {
 			name_order = 1
 		}
 		location = 7375
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -302,7 +351,7 @@ units = {
 			name_order = 1
 		}
 		location = 1659
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -312,7 +361,7 @@ units = {
 			name_order = 1
 		}
 		location = 1659
-		division_template = "Imperial National Guard"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -323,7 +372,7 @@ units = {
 			name_order = 1
 		}
 		location = 1684
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -333,7 +382,7 @@ units = {
 			name_order = 1
 		}
 		location = 1684
-		division_template = "Russian Imperial Infantry Division"
+		division_template = "Imperial Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}

@@ -1,5 +1,28 @@
 ﻿division_template = {
-	name = "Provisional Russian Authority Mechanized Infantry Division" 		
+	name = "Russian Conscripts" 		
+
+	division_names_group = "SOV_INF_01"
+
+    regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+		mechanized = { x = 2 y = 2 }
+    }	
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Coalition forces" 		
 
 	division_names_group = "SOV_INF_01"
 
@@ -8,20 +31,17 @@
 		mechanized = { x = 0 y = 1 }
 		mechanized = { x = 1 y = 0 }
 		mechanized = { x = 1 y = 1 }
+		modern_armor = { x = 2 y = 0 }
+		modern_armor = { x = 2 y = 1 }
+		modern_armor = { x = 3 y = 0 }
     }
-}
-
-division_template = {
-	name = "Provisional Russian Authority Armored Division" 		
-
-	division_names_group = "SOV_INF_01"
-
-    regiments = {
-		modern_armor = { x = 0 y = 0 }
-		modern_armor = { x = 0 y = 1 }
-		modern_armor = { x = 0 y = 2 }
-		modern_armor = { x = 1 y = 0 }
-    }
+	support = {
+		artillery = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
 }
 
 units = {
@@ -31,9 +51,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -41,9 +61,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Coalition forces"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -51,9 +71,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -61,9 +81,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -71,9 +91,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -81,9 +101,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -91,9 +111,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -101,9 +121,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -111,9 +131,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -121,9 +141,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Armored Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -131,9 +151,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -141,9 +161,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -151,9 +171,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -161,9 +181,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -171,9 +191,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -181,9 +201,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -191,9 +211,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -201,9 +221,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -211,9 +231,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -221,9 +241,9 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
 	}
 	division= {
 		division_name = {   
@@ -231,8 +251,108 @@ units = {
 			name_order = 1
 		}
 		location = 6380
-		division_template = "Provisional Russian Authority Mechanized Infantry Division"
+		division_template = "Russian Conscripts"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Russian Conscripts"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Russian Conscripts"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+		division_name = {   
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Coalition forces"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
 	}
 }
