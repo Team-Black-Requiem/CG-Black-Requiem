@@ -583,6 +583,7 @@ country_event = {
 	option = {
 		name = russiaCW.7.a
 		hidden_effect = {
+			country_event = {id = russiaCW.9 days = 1}
 			EIZ = {
 				load_focus_tree = EUIZ_Opening_Moves
 				transfer_state = 94
@@ -639,7 +640,6 @@ country_event = {
 				transfer_state = 217
 				transfer_state = 236
 				transfer_state = 239
-				transfer_state = 828
 				transfer_state = 401
 				EIZ = { change_tag_from = RUS }
 				#Below Is Caucausus
@@ -675,11 +675,24 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		country_event = {id = russiaCW.1}
-		country_event = {id = russiaCW.2 days = 1}
-		country_event = {id = russiaCW.4 days = 8 }
-		country_event = {id = russiaCW.7 days = 15}
-		
+		country_event = {id = russiaCW.1 days = 3}
+		country_event = {id = russiaCW.2 days = 10}
+		country_event = {id = russiaCW.4 days = 17}
+		country_event = {id = russiaCW.7 days = 24}
 	}
 	
+}
+
+country_event = {
+	id = russiaCW.9
+	hidden = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		EIZ = {
+			transfer_state = 828
+		}
+	}
 }
