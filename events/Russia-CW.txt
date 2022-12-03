@@ -570,3 +570,97 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = russiaCW.7
+	title = russiaCW.7.t
+	desc = russiaCW.7.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = russiaCW.7.a
+		hidden_effect = {
+			EIZ = {
+				transfer_state = 94
+				transfer_state = 886
+				transfer_state = 95
+				transfer_state = 96
+				transfer_state = 206
+				transfer_state = 906
+				transfer_state = 204
+				transfer_state = 194
+				transfer_state = 224
+				transfer_state = 241
+				transfer_state = 243
+				transfer_state = 207
+				transfer_state = 242
+				transfer_state = 210
+				transfer_state = 246
+				transfer_state = 209
+				transfer_state = 263
+				transfer_state = 208
+				transfer_state = 195
+				transfer_state = 244
+				transfer_state = 264
+				transfer_state = 351
+				transfer_state = 216
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 722
+				transfer_state = 247
+				transfer_state = 248
+				transfer_state = 253
+				transfer_state = 219
+				transfer_state = 205
+				transfer_state = 223
+				transfer_state = 254
+				transfer_state = 252
+				transfer_state = 925
+				transfer_state = 926
+				transfer_state = 256
+				transfer_state = 250
+				transfer_state = 255
+				transfer_state = 257
+				transfer_state = 258
+				transfer_state = 222
+				transfer_state = 220
+				transfer_state = 240
+				transfer_state = 260
+				transfer_state = 265
+				transfer_state = 829
+				transfer_state = 228
+				transfer_state = 227
+				transfer_state = 218
+				transfer_state = 245
+				transfer_state = 217
+				transfer_state = 236
+				transfer_state = 239
+				transfer_state = 828
+				#Below Is Caucausus
+				transfer_state = 137
+				transfer_state = 234
+				transfer_state = 238
+				transfer_state = 237
+				transfer_state = 235
+				transfer_state = 232
+				transfer_state = 233
+				transfer_state = 826
+				transfer_state = 231
+				transfer_state = 827
+				transfer_state = 821
+				transfer_state = 229
+				transfer_state = 230
+				inherit_technology = RUS
+
+				EIZ = { change_tag_from = RUS }
+		}
+			ai_chance = {
+				factor = 20
+			}
+
+		}
+	}
+}
