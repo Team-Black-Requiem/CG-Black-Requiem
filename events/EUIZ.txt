@@ -1,0 +1,64 @@
+add_namespace = EIZ
+
+set_variable = {FrenchInfluence = 0}
+set_variable = {GermanInfluence = 0}
+set_variable = {AustrianInfluence = 0}
+
+country_event = {
+    id = EIZ.1
+    title = EIZ.1.t
+    desc = EIZ.1.d
+    #picture
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+	   
+		name = EIZ.1.a
+        add_state_core = 219
+        add_state_core = 205
+        add_state_core = 242
+        add_state_core = 223
+
+        add_to_variable = {FrenchInfluence = 1}
+		
+		ai_chance = {
+			factor = 33
+		}
+		
+    } 
+    option = {
+	   
+		name = EIZ.1.b
+         
+        add_state_core = 195
+        add_state_core = 208
+        add_state_core = 244
+        add_state_core = 209
+        add_state_core = 263
+		add_to_variable = {GermanInfluence = 1}
+
+		ai_chance = {
+			factor = 33
+		}
+
+        
+		
+    } 
+    option = {
+	   
+		name = EIZ.1.c
+         
+        add_state_core = 137
+        add_state_core = 234
+        add_state_core = 233
+        add_state_core = 238
+        add_state_core = 235
+		add_to_variable = {AustrianInfluence = 1}
+
+		ai_chance = {
+			factor = 33
+		}
+		
+    } 
+}
