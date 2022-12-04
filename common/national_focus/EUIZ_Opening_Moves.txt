@@ -45,7 +45,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_To_The_Victors_Go_The_Spoils
+        id = EIZ_Colapse_Of_Resistance
         #icon = 
         x = 0
         y = 2
@@ -71,6 +71,40 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.2
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_To_The_Victors_Go_The_Spoils
+        #icon = 
+        x = 0
+        y = 2
+        prerequisite = { focus = EIZ_Colapse_Of_Resistance }
+        relative_position_id = EIZ_Colapse_Of_Resistance
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
 
                 hidden_effect = {
               }
