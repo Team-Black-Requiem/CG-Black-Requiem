@@ -729,7 +729,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = USA
+				tag = BRT
 			}
 			
 			modifier = {
@@ -843,7 +843,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = USA
+				tag = BRT
 			}
 			
 			modifier = {
@@ -881,7 +881,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = USA
+				tag = BRT
 			}
 			
 			modifier = {
@@ -919,7 +919,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = USA
+				tag = BRT
 			}
 			
 			modifier = {
@@ -951,7 +951,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				tag = USA
+				tag = BRT
 			}
 			
 			modifier = {
@@ -1773,12 +1773,12 @@ technologies = {
 
 				OR = {
 					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
+					#tag = PRC
+					#tag = XSM
+					#tag = SIK
+					#tag = GXC
+					#tag = SHX
+					#tag = YUN
 				}
 			}
 			modifier = {
@@ -1858,12 +1858,12 @@ technologies = {
 
 				OR = {
 					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
+					#tag = PRC
+					#tag = XSM
+					#tag = SIK
+					#tag = GXC
+					#tag = SHX
+					#tag = YUN
 				}
 			}
 			modifier = {
@@ -2309,44 +2309,44 @@ technologies = {
 		}
 	}
 
-	armored_car_at_upgrade = {
-
-		enable_equipments = {
-			armored_car_at_equipment
-		}
-
-		research_cost = 1
-		start_year = 1942
-		sub_tech_index = 1
-		
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
-		}
-	}
+#	armored_car_at_upgrade = {
+#
+#		enable_equipments = {
+#			armored_car_at_equipment
+#		}
+#
+#		research_cost = 1
+#		start_year = 1942
+#		sub_tech_index = 1
+#		
+#		categories = {
+#			motorized_equipment
+#			armor
+#		}
+#
+#		ai_will_do = {
+#			factor = 1
+#			
+#			modifier = {
+#				factor = 2
+#				date > "1937.1.1"
+#			}
+#			
+#			modifier = {
+#				factor = 2
+#				date > "1938.1.1"
+#			}
+#			
+#			modifier = {
+#				factor = 2
+#				date > "1939.1.1"
+#			}
+#			modifier = {
+#				is_major = no
+#				factor = 0.5
+#			}
+#		}
+#	}
 
 	mechanised_infantry = {  #IFV
 
@@ -2427,7 +2427,7 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				tag = USA
+				tag = BRT
 				factor = 2
 			}
 		}

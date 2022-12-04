@@ -5,7 +5,6 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = UNLOCK_DIVISION_PLANES
 		}
-
 	
 		path = {
 			leads_to_tech = g_support1
@@ -28,8 +27,6 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
@@ -47,8 +44,6 @@ technologies = {
 		sub_technologies = {
 			cv_early_fighter
 		}
-
-
 	
 		path = {
 			leads_to_tech = fighter2
@@ -67,8 +62,6 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
@@ -105,8 +98,6 @@ technologies = {
 		sub_technologies = {
 			cv_fighter1
 		}
-
-
 	
 		path = {
 			leads_to_tech = improved_fighter
@@ -125,8 +116,6 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
@@ -183,9 +172,6 @@ technologies = {
 			air_attack = 0.05
 			air_defence = 0.05
 		}
-
-
-
 	
 		path = {
 			leads_to_tech = fighter4
@@ -204,18 +190,13 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
-			factor = 1
-			
-			
+			factor = 1	
 		}
 	}
 
 	fighter4 = {
-
 
 		enable_equipments = {
 			fighter_equipment_2
@@ -224,8 +205,6 @@ technologies = {
 		sub_technologies = {
 			cv_fighter2
 		}
-
-
 	
 		path = {
 			leads_to_tech = stealth_fighters
@@ -244,13 +223,9 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
-			factor = 1
-			
-			
+			factor = 1	
 		}
 	}
 
@@ -299,8 +274,6 @@ technologies = {
 			air_mission_efficiency = 0.05
 
 		}
-
-
 	
 		path = {
 			leads_to_tech = fighter5
@@ -319,19 +292,14 @@ technologies = {
 			light_fighter
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
 	fighter5 = {
 
-		
 		enable_equipments = {
 			fighter_equipment_3
 		}
@@ -339,9 +307,6 @@ technologies = {
 		sub_technologies = {
 			cv_fighter3
 		}
-
-
-	
 
 		research_cost = 2
 		start_year = 2018
@@ -356,12 +321,8 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -409,7 +370,6 @@ technologies = {
 			cv_CAS1
 		}
 
-	
 		path = {
 			leads_to_tech = g_support2
 			research_cost_coeff = 1
@@ -427,13 +387,9 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -457,21 +413,21 @@ technologies = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_tech = CAS2
-					is_researching_technology = CAS2
+					has_tech = g_support2
+					is_researching_technology = g_support2
 				}
 			}
 			modifier = {
 				factor = 2
 				OR = {
-					tag = USA
+					tag = BRT
 					tag = JAP
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = USA
+					has_war_with = BRT
 					has_war_with = JAP
 				}
 			}
@@ -487,7 +443,6 @@ technologies = {
 	}
 
 	g_support2 = {
-
 		
 		enable_equipments = {
 			CAS_equipment_2
@@ -496,8 +451,6 @@ technologies = {
 		sub_technologies = {
 			cv_CAS2
 		}
-
-
 	
 		path = {
 			leads_to_tech = improved_g_support
@@ -516,19 +469,14 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
 
-			
 			modifier = {
 				factor = -555
 				date < "2011.1.1"
 			}
-			
-			
 		}
 	}
 
@@ -552,14 +500,14 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					tag = USA
+					tag = BRT
 					tag = JAP
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = USA
+					has_war_with = BRT
 					has_war_with = JAP
 				}
 			}
@@ -587,7 +535,6 @@ technologies = {
 			air_defence = 0.05
 		}
 
-	
 		path = {
 			leads_to_tech = g_support4
 			research_cost_coeff = 1
@@ -605,13 +552,9 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -624,8 +567,6 @@ technologies = {
 		sub_technologies = {
 			cv_CAS3
 		}
-
-
 	
 		path = {
 			leads_to_tech = stealth_g_support
@@ -644,13 +585,9 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -674,14 +611,14 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					tag = USA
+					tag = BRT
 					tag = JAP
 				}
 			}
 			modifier = {
 				factor = 1.5
 				OR = {
-					has_war_with = USA
+					has_war_with = BRT
 					has_war_with = JAP
 				}
 			}
@@ -708,8 +645,6 @@ technologies = {
 
 		}
 
-	
-
 		research_cost = 2
 		start_year = 2018
 		folder = {
@@ -722,21 +657,11 @@ technologies = {
 			cas_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
-
-
-
-
-
-
 
 	early_jet_design_2 = {
 
@@ -744,7 +669,6 @@ technologies = {
 			custom_effect_tooltip = UNLOCK_DIVISION_PLANES_2
 		}
 
-	
 		path = {
 			leads_to_tech = hel1
 			research_cost_coeff = 1
@@ -772,13 +696,9 @@ technologies = {
 			cat_strategic_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -787,8 +707,6 @@ technologies = {
 		enable_equipments = {
 			transport_plane_equipment_1
 		}
-
-
 	
 		path = {
 			leads_to_tech = trans_improve
@@ -806,13 +724,9 @@ technologies = {
 			medium_air
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 0.5
-			
-			
 		}
 	}
 
@@ -839,26 +753,17 @@ technologies = {
 			medium_air
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
 	trans2 = {#Necessary for KN Parachuted
 
-	
-	enable_equipments = {
-		transport_plane_equipment_2
-	}
-
-
-	  
-	
+		enable_equipments = {
+			transport_plane_equipment_2
+		}
 
 		research_cost = 2
 		start_year = 2014
@@ -871,13 +776,9 @@ technologies = {
 			medium_air
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -886,8 +787,6 @@ technologies = {
 		enable_equipments = {
 			helicopter_equipment_1
 		}
-
-
 	
 		path = {
 			leads_to_tech = hel_improve
@@ -905,13 +804,9 @@ technologies = {
 			medium_air
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 0.5
-			
-			
 		}
 	}
 
@@ -921,7 +816,6 @@ technologies = {
 			air_agility = 0.05
 			air_attack = 0.05
 		}
-
 	
 		path = {
 			leads_to_tech = hel2
@@ -939,13 +833,9 @@ technologies = {
 			medium_air
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -955,9 +845,6 @@ technologies = {
 		enable_equipments = {
 			helicopter_equipment_2
 		}
-
-
-
 	
 		path = {
 			leads_to_tech = hel2
@@ -976,18 +863,13 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
 
-			
 			modifier = {
 				factor = -555
 				date < "2014.1.1"
 			}
-			
-			
 		}
 	}
 
@@ -997,11 +879,9 @@ technologies = {
 			strat_bomber_equipment_1
 		}
 
-		sub_technologies = {
-			cv_strat_bomber_equipment_1
-		}
-
-
+		#sub_technologies = {
+		#	cv_strat_bomber_equipment_1
+		#}
 	
 		path = {
 			leads_to_tech = bomber2
@@ -1021,13 +901,9 @@ technologies = {
 			cat_strategic_bomber
 			air_equipment
 		}
-
-		
 		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -1037,13 +913,10 @@ technologies = {
 			strat_bomber_equipment_2
 		}
 
-		sub_technologies = {
-			cv_strat_bomber_equipment_2
-		}
+		#sub_technologies = {
+		#	cv_strat_bomber_equipment_2
+		#}
 
-
-
-	
 		path = {
 			leads_to_tech = missile_equip
 			research_cost_coeff = 1
@@ -1062,19 +935,15 @@ technologies = {
 			cat_strategic_bomber
 			air_equipment
 		}
-
-		
-		
+	
 		ai_will_do = {
 			factor = 1
 
-			
 			modifier = {
 				factor = -555
 				date < "2011.1.1"
 			}
-			
-			
+	
 		}
 	}
 
@@ -1085,11 +954,6 @@ technologies = {
 			air_range = 0.05
 		}
 
-
-
-
-
-	
 		path = {
 			leads_to_tech = bomber3
 			research_cost_coeff = 1
@@ -1109,12 +973,9 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
+	
 		}
 	}
 
@@ -1124,11 +985,6 @@ technologies = {
 			strat_bomber_equipment_3
 		}
 
-
-
-
-
-	
 		path = {
 			leads_to_tech = sak_equip
 			research_cost_coeff = 1
@@ -1138,7 +994,6 @@ technologies = {
 			leads_to_tech = gen_improv_2
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 2
 		start_year = 2015
@@ -1154,12 +1009,9 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
+	
 		}
 	}
 
@@ -1170,17 +1022,10 @@ technologies = {
 			air_range = 0.10
 		}
 
-
-
-
-
-	
 		path = {
 			leads_to_tech = bomber4
 			research_cost_coeff = 1
 		}
-
-
 
 		research_cost = 2
 		start_year = 2016
@@ -1196,12 +1041,8 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -1212,14 +1053,10 @@ technologies = {
 			air_range = 0.05
 		}
 
-
-
-	
 		path = {
 			leads_to_tech = bomber4
 			research_cost_coeff = 1
 		}
-
 
 		research_cost = 2
 		start_year = 2016
@@ -1235,12 +1072,8 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
 
@@ -1249,10 +1082,6 @@ technologies = {
 		enable_equipments = {
 			strat_bomber_equipment_4
 		}
-
-
-
-
 
 		research_cost = 2
 		start_year = 2018
@@ -1268,15 +1097,8 @@ technologies = {
 			air_equipment
 		}
 
-		
-		
 		ai_will_do = {
 			factor = 1
-			
-			
 		}
 	}
-
-
-
 }
