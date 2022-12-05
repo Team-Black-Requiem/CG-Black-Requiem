@@ -15,6 +15,7 @@ country_event = {
     option = {
 	   
 		name = EIZ.1.a
+
         
 		ai_chance = {
 			factor = 33
@@ -34,19 +35,13 @@ is_triggered_only = yes
   option = {
    
   name = EIZ.2.a
-      add_state_core = 219
-      add_state_core = 205
-      add_state_core = 242
-      add_state_core = 223
+  set_stability = -0.4
 
-      add_to_variable = {FrenchInfluence = 1}
-  
   ai_chance = {
     factor = 33
   }
   } 
 }
-
 
 country_event = {
   id = EIZ.3
@@ -59,6 +54,25 @@ is_triggered_only = yes
   option = {
    
   name = EIZ.3.a
+  set_war_support = -0.4
+
+  ai_chance = {
+    factor = 33
+  }
+  } 
+}
+
+country_event = {
+  id = EIZ.4
+  title = EIZ.4.t
+  desc = EIZ.4.d
+  #picture
+  fire_only_once = yes
+is_triggered_only = yes
+
+  option = {
+   
+  name = EIZ.4.a
       add_state_core = 219
       add_state_core = 205
       add_state_core = 242
@@ -73,7 +87,7 @@ is_triggered_only = yes
   } 
   option = {
    
-  name = EIZ.3.b
+  name = EIZ.4.b
        
       add_state_core = 195
       add_state_core = 208
@@ -89,7 +103,7 @@ is_triggered_only = yes
   } 
   option = {
    
-  name = EIZ.3.c
+  name = EIZ.4.c
        
       add_state_core = 137
       add_state_core = 234
