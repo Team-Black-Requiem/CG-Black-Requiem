@@ -146,7 +146,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Temp
+        id = EIZ_Chief_Of_Army
         #icon = 
         x = -3
         y = 1
@@ -180,7 +180,7 @@ focus_tree = {
     }   
 
     focus = {
-        id = EIZ_Temp2
+        id = EIZ_Chief_Of_Airforce
         #icon = 
         x = -1
         y = 1
@@ -214,7 +214,7 @@ focus_tree = {
     }    
 
     focus = {
-        id = EIZ_Temp3
+        id = EIZ_Head_Of_Logistics
         #icon = 
         x = 1
         y = 1
@@ -248,7 +248,7 @@ focus_tree = {
     } 
     
     focus = {
-        id = EIZ_Temp4
+        id = EIZ_Administrator_Of_Government
         #icon = 
         x = 3
         y = 1
@@ -279,5 +279,82 @@ focus_tree = {
                 hidden_effect = {
               }
         }
-    }    
+    } 
+    
+    focus = {
+        id = EIZ_Final_Selection
+        #icon = 
+        x = 0
+        y = 2
+        prerequisite = { 
+            focus = EIZ_Chief_Of_Army
+        }
+        prerequisite = {
+            focus = EIZ_Chief_Of_Airforce
+        }
+        prerequisite = {
+            focus = EIZ_Head_Of_Logistics
+        }
+        prerequisite = {
+            focus = EIZ_Administrator_Of_Government
+        }
+        relative_position_id = EIZ_Setting_Up_Headquarters
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = FrenchVictory
+        #icon = 
+        x = 18
+        y = 0
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
 }
