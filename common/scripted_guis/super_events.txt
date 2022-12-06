@@ -8,19 +8,36 @@ scripted_gui = {
 			has_country_flag  = Super_Event_Visible
 		}
 
-		triggers = {
-			Super_Event_Image_japan_invasion = {
-				has_country_flag  = JAP_invasion
-			}
-		}
+		#triggers = {
+		#	Super_Event_Image_japan_invasion = {
+		#		has_country_flag  = JAP_invasion
+		#	}
+		#}
 
-		properties = {
+		properties = {								#dynamically looks for the event picture from Super_Event_Scripted_Loc.txt
 			Super_Event_Image = {
 				image = "[get_superevent_texture]"
 			}
 		}
 
-		effects = {
+		ai_enabled = {								 #Enables GUI AI is the country is a non-player and the window is visible
+			AND = {
+				is_AI = yes
+				has_country_flag = Super_Event_Visible
+			}	
+		}
+		ai_test_interval = 1						#AI will check hourly to close the window
+		ai_weights = {
+			Super_Event_Close_click = {
+				ai_will_do = {
+					base = 1
+					add = 1
+				}
+			}
+		}
+		
+
+		effects = {									#clears country flags on window close so things don't get confused
 			Super_Event_Close_click = {
 				clr_country_flag = Super_Event_Visible
 
@@ -30,7 +47,18 @@ scripted_gui = {
 					}
 					clr_country_flag  = JAP_invasion
 				}
-			}
+				else_if = {
+					limit = {
+						has_country_flag = RUS_Civil_War_Start
+					}
+					clr_country_flag  = RUS_Civil_War_Start
+				}
+				else_if = {
+					limit = {
+						has_country_flag = RUS_Civil_War_End		
+					}
+					clr_country_flag = RUS_Civil_War_End
+				}
 		}
 	}
 }

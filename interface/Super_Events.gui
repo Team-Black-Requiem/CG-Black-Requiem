@@ -10,22 +10,28 @@ guiTypes = {
 		moveable = yes
 
 		iconType = {
-			name ="Super_Event_Image"
-			#spriteType = "[get_super_event_image]"
+			name = "Super_Event_Background"
+			spriteType = "GFX_Super_Background"
 			position = { x = 35 y = 0 }
 		}
 
-		instantTextBoxType = {
-			name = "Super_Event_Title_textbox"
-			position = { x = 150 y = 290 }
-			font = "newsfeed_body"
-			borderSize = {x = 0 y = 0}
-			text = "[get_super_event_title]"
-			maxWidth = 290
-			maxHeight = 20
-			fixedsize = yes	
-			format = center
+		iconType = {
+			name ="Super_Event_Image"
+			#spriteType = "[get_super_event_image]"
+			position = { x = 58 y = 38 }
 		}
+
+		#instantTextBoxType = {
+		#	name = "Super_Event_Title_textbox"
+		#	position = { x = 150 y = 290 }
+		#	font = "newsfeed_body"
+		#	borderSize = {x = 0 y = 0}
+		#	text = "[get_super_event_title]"
+		#	maxWidth = 290
+		#	maxHeight = 20
+		#	fixedsize = yes	
+		#	format = center
+		#}
 
 		instantTextBoxType = {
 			name = "Super_Event_Quote_textbox"
@@ -41,9 +47,12 @@ guiTypes = {
 
 		buttonType = {
             name = "Super_Event_Close"
-            position = { x = 520 y = 10 }
-            quadTextureSprite ="GFX_closebutton"
+			position = { x = 205 y = 280 }
+            quadTextureSprite ="GFX_Super_Button"
             clicksound = click_scroll
+			buttonFont = "newsfeed_body"
+			buttonText = "[get_super_event_title]"
+			format = center
         }
 	}
 }

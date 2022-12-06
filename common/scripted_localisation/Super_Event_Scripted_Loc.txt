@@ -7,6 +7,18 @@ defined_text = { #SUPER EVENT TITLES
         }
         localization_key = SPEVNT_JAP_invasion
     }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_Start
+        }
+        localization_key = RUS_Civil_War_Start_TITLE
+    }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_End
+        }
+        localization_key = RUS_Civil_War_End_TITLE
+    }
 }
 
 defined_text = { #SUPER EVENT QUOTES
@@ -18,6 +30,18 @@ defined_text = { #SUPER EVENT QUOTES
         }
         localization_key = SPEVNT_JAP_invasion_TEXT
     }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_Start
+        }
+        localization_key = RUS_Civil_War_Start_TEXT
+    }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_End
+        }
+        localization_key = RUS_Civil_War_End_TEXT
+    }
 }
 
 defined_text = { #SUPER EVENT IMAGE
@@ -27,6 +51,18 @@ defined_text = { #SUPER EVENT IMAGE
         trigger = {
             has_country_flag = JAP_invasion
         }
-        localization_key = "GFX_SPEVNT_japanese_invasion"
+        localization_key = "GFX_JAP_invasion"
+    }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_Start
+        }
+        localization_key = "GFX_RCW_start"
+    }
+    text = { 
+        trigger = {
+            has_country_flag = RUS_Civil_War_End
+        }
+        localization_key = "GFX_RCW_end"
     }
 }
