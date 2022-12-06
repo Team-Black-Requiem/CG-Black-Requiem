@@ -46,7 +46,7 @@ focus_tree = {
 
     focus = {
         id = EIZ_Collapse_Of_Government
-        icon = EIZ_Collapse_Of_Government
+        icon = GFX_EIZ_Collapse_Of_Government
         x = 0
         y = 1
         prerequisite = { focus = EIZ_European_Invasion }
@@ -79,7 +79,7 @@ focus_tree = {
 
     focus = {
         id = EIZ_Collapse_Of_Organized_Resistance
-        icon = EIZ_Collapse_Of_Organized_Resistance
+        icon = GFX_EIZ_Collapse_Of_Organized_Resistance
         x = 0
         y = 1
         prerequisite = { focus = EIZ_Collapse_Of_Government }
@@ -290,9 +290,9 @@ focus_tree = {
     } 
 
     focus = {
-        id = FrenchVictory
+        id = EIZ_LyonVictory
         #icon = 
-        x = 18
+        x = 14
         y = 0
 
         cost = 1
@@ -322,9 +322,9 @@ focus_tree = {
     } 
 
     focus = {
-        id = GermanVictory
+        id = EIZ_FredrericaVictory
         #icon = 
-        x = 24
+        x = 20
         y = 0
 
         cost = 1
@@ -354,9 +354,9 @@ focus_tree = {
     } 
 
     focus = {
-        id = AustrianVictory
+        id = EIZ_OskarVictory
         #icon = 
-        x = 30
+        x = 26
         y = 0
 
         cost = 1
@@ -384,4 +384,454 @@ focus_tree = {
               }
         }
     } 
+
+    focus = {
+        id = EIZ_A_Reasonable_War
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { focus = EIZ_LyonVictory}
+        relative_position_id = EIZ_LyonVictory
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_A_Just_War
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { focus = EIZ_FredrericaVictory}
+        relative_position_id = EIZ_FredrericaVictory
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_A_Desperate_War
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { focus = EIZ_OskarVictory}
+        relative_position_id = EIZ_OskarVictory
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_Request_Economic_Support_V1
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Reasonable_War}
+        relative_position_id = EIZ_A_Reasonable_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_Raise_Volunteers
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Reasonable_War}
+        relative_position_id = EIZ_A_Reasonable_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_Request_Economic_Support_V2
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Just_War}
+        relative_position_id = EIZ_A_Just_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_Request_Unoffical_Renforcements
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Just_War}
+        relative_position_id = EIZ_A_Just_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Request_Economic_Support_V3
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Desperate_War}
+        relative_position_id = EIZ_A_Desperate_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = EIZ_Force_Russians_To_War
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { focus = EIZ_A_Desperate_War}
+        relative_position_id = EIZ_A_Desperate_War
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Destory_The_Monarchists
+        #icon = 
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Request_Economic_Support_V1
+            focus = EIZ_Raise_Volunteers
+        }
+        prerequisite = { 
+            #focus = EIZ_Raise_Volunteers
+        }
+        relative_position_id = EIZ_A_Reasonable_War
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                EIZ = {
+                    declare_war_on = {
+                    target = MRU
+                    type = annex_everything
+                                }
+                }
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Fight_The_Monarchists
+        #icon = 
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Request_Economic_Support_V2
+        }
+        prerequisite = { 
+            focus = EIZ_Request_Unoffical_Renforcements
+        }
+        relative_position_id = EIZ_A_Just_War
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                EIZ = {
+                    declare_war_on = {
+                    target = MRU
+                    type = annex_everything
+                                }
+                }
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Subvert_The_Monarchists
+        #icon = 
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Request_Economic_Support_V3
+        }
+        prerequisite = { 
+            focus = EIZ_Force_Russians_To_War
+        }
+        relative_position_id = EIZ_A_Desperate_War
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                EIZ = {
+                    declare_war_on = {
+                    target = MRU
+                    type = annex_everything
+                                }
+                }
+
+                hidden_effect = {
+              }
+        }
+    }
 }
