@@ -138,7 +138,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.4
 
                 hidden_effect = {
               }
@@ -148,7 +148,7 @@ focus_tree = {
     focus = {
         id = EIZ_Chief_Of_Army
         #icon = 
-        x = -3
+        x = -2
         y = 1
         prerequisite = { focus = EIZ_Setting_Up_Headquarters}
         relative_position_id = EIZ_Setting_Up_Headquarters
@@ -177,46 +177,12 @@ focus_tree = {
                 hidden_effect = {
               }
         }
-    }   
-
-    focus = {
-        id = EIZ_Chief_Of_Airforce
-        #icon = 
-        x = -1
-        y = 1
-        prerequisite = { focus = EIZ_Setting_Up_Headquarters}
-        relative_position_id = EIZ_Setting_Up_Headquarters
-
-        cost = 1
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = BRT
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.3
-
-                hidden_effect = {
-              }
-        }
-    }    
+    }     
 
     focus = {
         id = EIZ_Head_Of_Logistics
         #icon = 
-        x = 1
+        x = 0
         y = 1
         prerequisite = { focus = EIZ_Setting_Up_Headquarters}
         relative_position_id = EIZ_Setting_Up_Headquarters
@@ -250,7 +216,7 @@ focus_tree = {
     focus = {
         id = EIZ_Administrator_Of_Government
         #icon = 
-        x = 3
+        x = 2
         y = 1
         prerequisite = { focus = EIZ_Setting_Up_Headquarters}
         relative_position_id = EIZ_Setting_Up_Headquarters
@@ -290,9 +256,6 @@ focus_tree = {
             focus = EIZ_Chief_Of_Army
         }
         prerequisite = {
-            focus = EIZ_Chief_Of_Airforce
-        }
-        prerequisite = {
             focus = EIZ_Head_Of_Logistics
         }
         prerequisite = {
@@ -330,6 +293,70 @@ focus_tree = {
         id = FrenchVictory
         #icon = 
         x = 18
+        y = 0
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = GermanVictory
+        #icon = 
+        x = 24
+        y = 0
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.3
+
+                hidden_effect = {
+              }
+        }
+    } 
+
+    focus = {
+        id = AustrianVictory
+        #icon = 
+        x = 30
         y = 0
 
         cost = 1
