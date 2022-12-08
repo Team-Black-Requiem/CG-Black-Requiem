@@ -1055,7 +1055,9 @@ focus_tree = {
 					factor = 2
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+			add_political_power = -50
+			add_war_support = 0.025}
 	}	
 	focus = {
 		id = FRA_send_geological_expedition_to_Africa ##event(lose pp) 
@@ -1074,6 +1076,7 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			country_event = FRA.1
 			}
 	}
 	focus = {
@@ -1093,6 +1096,11 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 53
+				state = 544
+			}
 			}
 	}
 	focus = { 
@@ -1112,6 +1120,13 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			544 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+					}
+				}
 			}
 	}
 	focus = {
@@ -1131,6 +1146,16 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				add_tech_bonus = {
+						name = FRA_African_sakuradite
+						bonus = 1.5
+						uses = 1
+						technology = excavation1
+						technology = excavation2
+						technology = excavation3
+						technology = excavation4
+						technology = excavation5
+					}
 			}
 	}
 	focus = {
@@ -1150,6 +1175,21 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 15
+				state = 771
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 18
+				state = 718 
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 23
+				state = 546 
+			}
 			}
 	}
 	focus = {
@@ -1169,6 +1209,16 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 31
+				state = 540
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 17
+				state = 295
+			}
 			}
 	}
 	focus = {
@@ -1188,6 +1238,16 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 14
+				state = 275
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 32
+				state = 681
+			}
 			}
 	}
 	focus = {
@@ -1209,6 +1269,23 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			build_railway = {
+				path = { 10966 2126 1552 10538 697 5199}
+			}
+			771 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			540 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
 			}
 	}
 	focus = {
@@ -1230,6 +1307,23 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			544 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					}
+				}
+			add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 20
+			producer = FRA
+				}
 			}
 	}
 	focus = {
@@ -1251,6 +1345,48 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+		MZB = {
+		set_cosmetic_tag = MZB_HCSA
+		transfer_state = 545
+		transfer_state = 770
+		transfer_state = 771
+		transfer_state = 540
+		transfer_state = 719
+		transfer_state = 275
+		transfer_state = 681
+		transfer_state = 541
+		transfer_state = 542
+		transfer_state = 546
+		transfer_state = 769
+		transfer_state = 768
+		transfer_state = 295
+		transfer_state = 538
+		transfer_state = 718
+		transfer_state = 796
+		every_state = {
+				limit = {
+					OR = {	
+		state = 545
+		state = 770
+		state = 771
+		state = 540
+		state = 719
+		state = 275
+		state = 681
+		state = 541
+		state = 542
+		state = 546
+		state = 769
+		state = 768
+		state = 295
+		state = 538
+		state = 718
+		state = 796
+										}
+				}
+				add_core_of = MZB
+			}
+		}
 			}
 	}
 	focus = {
@@ -1271,6 +1407,8 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			MZB = {give_resource_rights = { receiver = FRA state = 544 }}
+			
 			}
 	}
 	focus = {
@@ -1290,6 +1428,16 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_timed_idea = {
+				idea = FRA_mozambiques_sakuradite_experience
+				days = 730
+			}
+			MZB = {
+			add_timed_idea = {
+				idea = FRA_mozambiques_sakuradite_experience
+				days = 730
+			}
+			}
 			}
 	}
 	focus = {
@@ -1310,6 +1458,15 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			MZB = {give_resource_rights = { receiver = FRA state = 544 }
+			give_resource_rights = { receiver = FRA state = 275 }
+			give_resource_rights = { receiver = FRA state = 681 }
+			give_resource_rights = { receiver = FRA state = 540 }
+			give_resource_rights = { receiver = FRA state = 295 }
+			give_resource_rights = { receiver = FRA state = 546 }
+			give_resource_rights = { receiver = FRA state = 771 }
+			give_resource_rights = { receiver = FRA state = 718 }
+			add_stability = -0.25}
 			}
 	}
 	focus = {
@@ -1330,6 +1487,7 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_political_power = 100
 			}
 	}
 	focus = {
@@ -1350,6 +1508,27 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = -10
+				state = 544
+			}
+			add_resource = {
+				type = sakuradite
+				amount = -8
+				state = 681
+			}
+			add_resource = {
+				type = sakuradite
+				amount = -6
+				state = 540
+			}
+			add_resource = {
+				type = sakuradite
+				amount = -10
+				state = 718
+			}
+		add_ideas = FRA_sakuradite_syndicate
 			}
 	}
 	
@@ -1371,6 +1550,7 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_stability = -0.05
 			}
 	}
 	focus = {
