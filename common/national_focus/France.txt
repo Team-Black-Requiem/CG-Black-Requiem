@@ -1386,6 +1386,7 @@ focus_tree = {
 				}
 				add_core_of = MZB
 			}
+		add_ideas = MZB_Overhauling_Administration
 		}
 			}
 	}
@@ -1407,8 +1408,10 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			MZB = {give_resource_rights = { receiver = FRA state = 544 }}
-			
+			MZB = {give_resource_rights = { receiver = FRA state = 544 }
+			swap_ideas = {
+			remove_idea = MZB_Overhauling_Administration
+			add_idea = MZB_Integration_Policy}}
 			}
 	}
 	focus = {
@@ -1437,6 +1440,9 @@ focus_tree = {
 				idea = FRA_mozambiques_sakuradite_experience
 				days = 730
 			}
+			swap_ideas = {
+			remove_idea = MZB_Human_right_violations 
+			add_idea = MZB_Parallel_growth}
 			}
 			}
 	}
@@ -1466,7 +1472,13 @@ focus_tree = {
 			give_resource_rights = { receiver = FRA state = 546 }
 			give_resource_rights = { receiver = FRA state = 771 }
 			give_resource_rights = { receiver = FRA state = 718 }
-			add_stability = -0.25}
+			
+			add_ideas = MZB_shadow_war
+			add_stability = -0.25
+			swap_ideas = {
+			remove_idea = MZB_Human_right_violations
+			add_idea = MZB_Jewel_of_the_Empire}
+			}
 			}
 	}
 	focus = {
@@ -1487,8 +1499,11 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			add_political_power = 100
-			}
+			MZB = {
+			swap_ideas = {
+			remove_idea = MZB_Human_right_violations
+			add_idea = MZB_Neo_Colonialism}
+			}}
 	}
 	focus = {
 		id = FRA_Give_to_corporations ##decrease amount of sakuradite in each state by 10-20% add idea, that reduce consumer goods
@@ -1529,7 +1544,11 @@ focus_tree = {
 				state = 718
 			}
 		add_ideas = FRA_sakuradite_syndicate
-			}
+		MZB = {
+			swap_ideas = {
+			remove_idea = MZB_Human_right_violations
+			add_idea = MZB_State_Corporatism}
+			}}
 	}
 	
 	
@@ -1570,6 +1589,9 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_timed_idea = {
+			days = 70
+			idea = FRA_incomprehensible_government}
 			}
 	}
 	focus = {
@@ -1589,6 +1611,7 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+		country_event = FRA.2
 			}
 	}
 	focus = {
@@ -1608,6 +1631,7 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+		country_event = FRA.3
 			}
 	}
 	focus = {
@@ -1669,6 +1693,9 @@ focus_tree = {
 				}
 			available_if_capitulated = no
 			completion_reward = {
+			add_timed_idea = {
+			days = 365
+			idea = FRA_factory_for_Russia}
 			}
 	}
 	focus = {
