@@ -9,3 +9,16 @@ EUR_arms_supply = {
 	has_completed_focus = EUR_beg_for_Knightmares
 	}
 }
+
+EUR_foreign_arms_purchases = {
+		icon = GFX_decision_category_RUS_region_reform_category
+	priority = 80
+allowed = {
+		tag = EUR
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+	}
+}

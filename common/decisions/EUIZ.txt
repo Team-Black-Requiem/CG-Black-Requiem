@@ -1,76 +1,10 @@
-EUR_arms_supply = {	
-	EUR_guns_for_solders= {
-		icon = d
-		available = {
-			country_exists = BRT }
-		cost = 50
-		days_remove = 45
-		fire_only_once = no
-		ai_will_do = {
-			factor = 10
-		}
-		visible = {
-		
-		}
-		modifier = {
-		}
-		complete_effect = {
-		BRT = {country_event = EUR.6}
-		}
-		remove_effect = {
-			}
-		}
-	EUR_spare_parts_for_knightmares= {
-		icon = d
-		available = {
-			country_exists = BRT }
-		cost = 50
-		days_remove = 45
-		fire_only_once = no
-		ai_will_do = {
-			factor = 10
-		}
-		visible = {
-		
-		}
-		modifier = {
-		}
-		complete_effect = {
-		BRT = {country_event = EUR.8}
-		}
-		remove_effect = {
-			}
-		}
-	EUR_knightmare_frames= {
-		icon = d
-		available = {
-			country_exists = BRT }
-		cost = 100
-		days_remove = 90
-		fire_only_once = no
-		ai_will_do = {
-			factor = 10
-		}
-		visible = {
-		
-		}
-		modifier = {
-		}
-		complete_effect = {
-		BRT = {country_event = EUR.10}
-		}
-		remove_effect = {
-			}
-		}
-}
-
-EUR_foreign_arms_purchases = {
-	EUR_purchase_infantry_equipment = {
+EIZ_foreign_arms_purchases = {
+	EIZ_purchase_infantry_equipment = {
 
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			original_tag = EUR
+			original_tag = EIZ
 		}
 
 		available = {
@@ -88,8 +22,12 @@ EUR_foreign_arms_purchases = {
 		}
 
 		visible = {
-		tag = EUR
-		has_completed_focus = EUR_under_our_management
+			tag = EIZ
+			OR = {
+			has_completed_focus = EIZ_Request_Economic_Support_V1
+			has_completed_focus = EIZ_Request_Economic_Support_V2
+			has_completed_focus = EIZ_Request_Economic_Support_V3
+			}
 		}
 
 		complete_effect = {
@@ -164,12 +102,12 @@ EUR_foreign_arms_purchases = {
 
 	}
 
-	EUR_purchase_support_equipment = {
+	EIZ_purchase_support_equipment = {
 
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			original_tag = EUR
+			original_tag = EIZ
 		}
 
 		available = {
@@ -187,8 +125,12 @@ EUR_foreign_arms_purchases = {
 		}
 
 		visible = {
-		tag = EUR
-		has_completed_focus = EUR_under_our_management
+			tag = EIZ
+			OR = {
+			has_completed_focus = EIZ_Request_Economic_Support_V1
+			has_completed_focus = EIZ_Request_Economic_Support_V2
+			has_completed_focus = EIZ_Request_Economic_Support_V3
+			}
 		}
 
 		complete_effect = {
@@ -263,12 +205,12 @@ EUR_foreign_arms_purchases = {
 
 	}
 
-	EUR_purchase_artillery_equipment = {
+	EIZ_purchase_artillery_equipment = {
 
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			original_tag = EUR
+			original_tag = EIZ
 		}
 
 		available = {
@@ -286,8 +228,12 @@ EUR_foreign_arms_purchases = {
 		}
 
 		visible = {
-		tag = EUR
-		has_completed_focus = EUR_under_our_management
+			tag = EIZ
+			OR = {
+			has_completed_focus = EIZ_Request_Economic_Support_V1
+			has_completed_focus = EIZ_Request_Economic_Support_V2
+			has_completed_focus = EIZ_Request_Economic_Support_V3
+			}
 		}
 
 		complete_effect = {
@@ -362,12 +308,12 @@ EUR_foreign_arms_purchases = {
 
 	}
 
-	EUR_purchase_trucks = {
+	EIZ_purchase_trucks = {
 
 		icon = generic_prepare_civil_war
 
 		allowed = {
-			original_tag = EUR
+			original_tag = EIZ
 		}
 
 		available = {
@@ -385,8 +331,12 @@ EUR_foreign_arms_purchases = {
 		}
 
 		visible = {
-		tag = EUR
-		has_completed_focus = EUR_under_our_management
+			tag = EIZ
+			OR = {
+			has_completed_focus = EIZ_Request_Economic_Support_V1
+			has_completed_focus = EIZ_Request_Economic_Support_V2
+			has_completed_focus = EIZ_Request_Economic_Support_V3
+			}
 		}
 
 		complete_effect = {
@@ -461,12 +411,12 @@ EUR_foreign_arms_purchases = {
 
 	}
 
-	EUR_purchase_tanks = {
+	EIZ_purchase_tanks = {
 
 		icon = generic_tank
 
 		allowed = {
-			original_tag = EUR
+			original_tag = EIZ
 		}
 
 		available = {
@@ -484,8 +434,12 @@ EUR_foreign_arms_purchases = {
 		}
 
 		visible = {
-		tag = EUR
-		has_completed_focus = EUR_under_our_management
+			tag = EIZ
+			OR = {
+			has_completed_focus = EIZ_Request_Economic_Support_V1
+			has_completed_focus = EIZ_Request_Economic_Support_V2
+			has_completed_focus = EIZ_Request_Economic_Support_V3
+			}
 		}
 
 		complete_effect = {
