@@ -1,5 +1,4 @@
 ﻿capital = 500
-
 oob = "AR8_START"
 set_country_flag = hbe_administrative_area
 
@@ -7,23 +6,19 @@ set_research_slots = 3
 set_stability = 0.45
 set_war_support = 0.45
 
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
-	tech_engineers = 1
-	#gw_artillery = 1
-	#interwar_antiair = 1
-	#gwtank = 1
-	#early_fighter = 1
-	#cv_early_fighter = 1
-	#cv_naval_bomber1 = 1
-	#cv_CAS1 = 1
-	#naval_bomber1 = 1
-	#CAS1 = 1
-	#early_bomber = 1
+	support_equip_tech = 1
+	eu_war_anti_air = 1
+	eu_war_artillery = 1
+	tank_design = 1
+	cold_war_tank = 1
+	early_jet_design = 1
+	early_jet_design_2 = 1
+	fighter1 = 1
+	g_support1 = 1
+	bomber1 = 1
 	superior_firepower = 1
 	base_strike = 1
 	motorised_infantry = 1
@@ -37,7 +32,8 @@ BRT = {
 		target = AR8
 		autonomous_state = area_developing
 	}
-	}
+}
+
 	set_politics = {
 		ruling_party = autocracy
 		last_election = "1936.5.16"
@@ -50,9 +46,7 @@ BRT = {
 	add_popularity = { ideology = moderate_liberalism popularity = 0.03 }
 	add_popularity = { ideology = moderate_socialism popularity = 0.02 }
 
-
 set_convoys = 500
-
 
 add_ideas = {
 quota_level_3
@@ -97,5 +91,3 @@ recruit_character = BRT_generic_general_1
 recruit_character = BRT_generic_noble_1
 recruit_character = BRT_generic_minister_1
 recruit_character = BRT_VV
-
-

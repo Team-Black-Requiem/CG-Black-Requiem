@@ -1,24 +1,20 @@
 ﻿capital = 16
-
 oob = "ALB"
-
 
 set_research_slots = 3
 set_stability = 0.5
 
-
-
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	support_equip_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	support_equip = 1
 	tank_design = 1
+	cold_war_tank = 1
 	motorised_infantry = 1
 	early_jet_design = 1
 	early_jet_design_2 = 1
@@ -27,9 +23,12 @@ set_technology = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
+		filler_submarine_tech = 1
+		filler_destroyer_tech = 1
 		early_ship_hull_submarine = 1
 		early_ship_hull_light = 1
 		basic_torpedo = 1
+		basic_battery = 1
 	}
 }
 
@@ -46,12 +45,9 @@ FRA = {
 	target = ALB
 	autonomous_state = eu_outer_sphere
     }
-    }  
-
-
+}  
 
 set_convoys = 300
-
 
 set_politics = {
 	ruling_party = moderate_liberalism
@@ -71,7 +67,6 @@ set_popularities = {
 
 #add_ideas = {
 #}
-
 
 create_country_leader = {
 	name = "United European Council"
@@ -102,10 +97,3 @@ create_country_leader = {
 	traits = {
 	}
 }
-
-
-
-
-
-
-

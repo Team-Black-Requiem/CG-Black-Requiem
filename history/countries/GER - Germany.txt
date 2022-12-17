@@ -1,5 +1,4 @@
 ﻿capital = 16
-
 oob = "GER"
 
 set_research_slots = 3
@@ -7,7 +6,7 @@ set_stability = 0.5
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	support_equip_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
@@ -15,7 +14,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	eu_war_artillery = 1
-	support_equip = 1
+	mbt_1 = 1
 	cold_war_tank = 1
 	tank_design = 1
 	motorised_infantry = 1
@@ -27,12 +26,18 @@ set_technology = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
+		filler_submarine_tech = 1
+		filler_cruiser_tech = 1
+		filler_destroyer_tech = 1
+		filler_carrier_tech = 1
+		filler_frigate_tech = 1
 		basic_torpedo = 1
 		improved_ship_torpedo_launcher = 1
 		early_ship_hull_submarine = 1
-		early_ship_hull_carrier = 1
 		early_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
 	}
 }
 
@@ -40,17 +45,17 @@ if = {
 	limit = { not = { has_dlc = "Man the Guns" }}
 	set_technology = {
 		early_submarine = 1
-		early_carrier = 1
+		early_frigate = 1
 		early_destroyer = 1
 		early_light_cruiser = 1
 	}
 }
 
 FRA = {
-set_autonomy = {
-	target = GER
-	autonomous_state = eu_inner_sphere
-}
+	set_autonomy = {
+		target = GER
+		autonomous_state = eu_inner_sphere
+	}
 }
 
 set_convoys = 300
