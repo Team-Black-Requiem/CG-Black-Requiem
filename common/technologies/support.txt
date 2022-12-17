@@ -1,0 +1,795 @@
+technologies = {
+
+	#Y Value
+	@1991 = 1
+	@2009 = 3
+	@2012 = 5
+	@2015 = 7
+	@2018 = 9
+
+	#X alignment Value
+	@1 = -4 #signal company
+	@2 = -2 #recon companies
+	@3 = 0 #maintenance company
+	@4 = 2 #logistics comapny
+	@5 = 4 #field hospital
+	@6 = 6 #engineer company
+	@7 = 8 #military police
+
+	support_equip_tech = {
+		research_cost = 1.5
+		start_year = 2009
+
+		path = {
+			leads_to_tech = signal_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = recon_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = maintenance_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = logistics_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = field_hospital_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = engineer_company_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = military_police_company_tech
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			support_equipment_1 
+		}
+
+		enable_subunits = {
+			signal_company
+			mot_recon
+			maintenance_company
+			logistics_company
+			field_hospital
+			engineer
+			military_police
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = 2 y = @1991 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##############
+	### Tier 1 ###
+	##############
+
+	signal_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		signal_company = {
+			initiative = 0.03
+			default_morale = 0.03
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = signal_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @1 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	recon_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		category_recon = {
+			recon = 0.1
+		}
+
+		path = {
+			leads_to_tech = recon_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @2 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	maintenance_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		maintenance_company = {
+			reliability_factor = 0.03
+		}
+
+		path = {
+			leads_to_tech = maintenance_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @3 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	logistics_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		logistics_company = {
+			supply_consumption_factor = -0.02
+		}
+
+		path = {
+			leads_to_tech = logistics_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @4 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	field_hospital_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		field_hospital = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.04
+		}
+
+		path = {
+			leads_to_tech = field_hospital_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @5 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	engineer_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		engineer = {
+			entrenchment = 1
+			fort = {
+				defence = 0.1
+				attack = 0.1
+			}
+		}
+
+		path = {
+			leads_to_tech = engineer_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @6 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	military_police_company_tech = {
+		research_cost = 1
+		start_year = 2009
+
+		military_police = {
+			suppression = 0.03
+			suppression_factor = 0.01
+		}
+		knightmare_pol_unit = {
+			suppression = 0.04
+			suppression_factor = 0.02
+		}
+
+		path = {
+			leads_to_tech = military_police_company_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @7 y = @2009 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	##############
+	### Tier 2 ###
+	##############
+
+	signal_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		signal_company = {
+			initiative = 0.03
+			default_morale = 0.03
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = signal_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @1 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	recon_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		category_recon = {
+			recon = 0.1
+		}
+
+		path = {
+			leads_to_tech = recon_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @2 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	maintenance_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		maintenance_company = {
+			reliability_factor = 0.03
+		}
+
+		path = {
+			leads_to_tech = maintenance_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @3 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	logistics_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		logistics_company = {
+			supply_consumption_factor = -0.02
+		}
+
+		path = {
+			leads_to_tech = logistics_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @4 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	field_hospital_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		field_hospital = {
+			casualty_trickleback = 0.04
+			experience_loss_factor = -0.04
+		}
+
+		path = {
+			leads_to_tech = field_hospital_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @5 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	engineer_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		engineer = {
+			entrenchment = 1
+			forest = {
+				attack = 0.1
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.1
+				defence = 0.05
+			}
+			jungle = {
+				attack = 0.05
+			}
+			marsh = {
+				attack = 0.05
+			}
+			river = {
+				attack = 0.1
+			}
+		}
+
+		path = {
+			leads_to_tech = engineer_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @6 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	military_police_company_tech_2 = {
+		research_cost = 1
+		start_year = 2012
+
+		military_police = {
+			suppression = 0.03
+			suppression_factor = 0.01
+		}
+		knightmare_pol_unit = {
+			suppression = 0.04
+			suppression_factor = 0.02
+		}
+
+		path = {
+			leads_to_tech = military_police_company_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @7 y = @2012 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	##############
+	### Tier 3 ###
+	##############
+
+	signal_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		signal_company = {
+			initiative = 0.03
+			default_morale = 0.03
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = signal_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @1 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	recon_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		category_recon = {
+			recon = 0.1
+		}
+
+		path = {
+			leads_to_tech = recon_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @2 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	maintenance_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		maintenance_company = {
+			max_organisation = 2
+			reliability_factor = 0.03
+		}
+
+		path = {
+			leads_to_tech = maintenance_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @3 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	logistics_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		logistics_company = {
+			supply_consumption_factor = -0.02
+		}
+
+		path = {
+			leads_to_tech = logistics_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @4 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	field_hospital_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		field_hospital = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = field_hospital_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @5 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	engineer_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		engineer = {
+			entrenchment = 1
+			supply_consumption = 0.01
+			breakthrough = 0.02
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+			jungle = {
+				attack = 0.05
+				defence = 0.1
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.1
+			}
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.15
+				defence = 0.05
+			}
+			fort = {
+				attack = 0.15
+				defence = 0.05
+			}
+		}
+
+		path = {
+			leads_to_tech = engineer_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @6 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	military_police_company_tech_3 = {
+		research_cost = 1
+		start_year = 2015
+
+		military_police = {
+			suppression = 0.03
+			suppression_factor = 0.01
+		}
+		knightmare_pol_unit = {
+			suppression = 0.04
+			suppression_factor = 0.02
+		}
+
+		path = {
+			leads_to_tech = military_police_company_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @7 y = @2015 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	##############
+	### Tier 4 ###
+	##############
+
+	signal_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		signal_company = {
+			initiative = 0.03
+			default_morale = 0.03
+			max_organisation = 5
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @1 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	recon_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		category_recon = {
+			recon = 0.2
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @2 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	maintenance_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		maintenance_company = {
+			max_organisation = 3
+			reliability_factor = 0.03
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @3 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	logistics_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		logistics_company = {
+			supply_consumption_factor = -0.03
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @4 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	field_hospital_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		field_hospital = {
+			casualty_trickleback = 0.02
+			experience_loss_factor = -0.05
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @5 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	engineer_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		engineer = {
+			entrenchment = 1
+			supply_consumption = 0.02
+			breakthrough = 0.02
+			forest = {
+				movement = 0.05
+			}
+			hills = {
+				movement = 0.05
+			}
+			jungle = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.05
+			}
+			marsh = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.05
+			}
+			fort = {
+				attack = 0.01
+				defence = 0.1
+			}
+			river = {
+				attack = 0.05
+				defence = 0.1
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @6 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+
+	military_police_company_tech_4 = {
+		research_cost = 1
+		start_year = 2018
+
+		military_police = {
+			suppression = 0.03
+			suppression_factor = 0.02
+		}
+		knightmare_pol_unit = {
+			suppression = 0.04
+			suppression_factor = 0.02
+		}
+
+		folder = {
+			name = support_folder
+			position = { x = @7 y = @2018 }
+		}
+		categories = {
+			support_tech
+		}
+	}
+}
