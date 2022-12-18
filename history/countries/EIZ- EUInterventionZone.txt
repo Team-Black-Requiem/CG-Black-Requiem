@@ -1,12 +1,8 @@
-﻿capital = 563
-
-oob = "SOCIALIST_RUSSIA"
-
+captial = 206
 
 set_research_slots = 3
 set_stability = 0.45
 set_war_support = 0.45
-
 
 set_technology = {
 	infantry_weapons = 1
@@ -19,6 +15,20 @@ set_technology = {
 	eu_war_artillery = 1
 	support_equip = 1
 	motorised_infantry = 1
+}
+
+set_politics = {
+	ruling_party = authoritarian_democracy 
+	last_election = "2008.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	autocracy = 32
+	ultra_nationalism  = 24
+	authoritarian_democracy = 42
+	moderate_socialism = 2
 }
 
 if = {
@@ -41,9 +51,9 @@ if = {
 		early_light_cruiser = 1
 	}
 }
-
-
+add_ideas = {
+	
+}
+recruit_character = EIZ_Military_Council
 
 set_convoys = 500
-
-
