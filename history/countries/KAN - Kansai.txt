@@ -1,6 +1,5 @@
 ﻿capital = 534
 
-
 set_stability = 0.4
 set_war_support = 0.4
 
@@ -12,10 +11,9 @@ add_ideas = {
 	civilian_economy
 }
 
-
 set_technology = {
 	infantry_weapons = 1
-	support_equip = 1
+	support_equip_tech = 1
 	infantry_weapons1 = 1
 	motorised_infantry = 1
 	tank_design = 1
@@ -32,6 +30,11 @@ set_technology = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
+		filler_cruiser_tech = 1
+		filler_submarine_tech = 1
+		filler_carrier_tech = 1
+		filler_destroyer_tech = 1
+		filler_frigate_tech = 1
 		basic_torpedo = 1
 		early_ship_hull_carrier = 1
 		early_ship_hull_cruiser = 1
@@ -50,8 +53,6 @@ if = {
 
 set_convoys = 100
 
-
-
 set_politics = {
 	ruling_party = authoritarian_democracy
 	last_election = "2008.1.1"
@@ -66,38 +67,7 @@ set_popularities = {
 	moderate_conservatism = 19
 }
 
-
 recruit_character = KAN_kirihara
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

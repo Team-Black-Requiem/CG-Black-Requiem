@@ -1,5 +1,4 @@
 ﻿capital = 282
-
 oob = "JAP_START"
 
 set_stability = 0.4
@@ -23,10 +22,9 @@ add_ideas = {
 	civilian_economy
 }
 
-
 set_technology = {
 	infantry_weapons = 1
-	support_equip = 1
+	support_equip_tech = 1
 	infantry_weapons1 = 1
 	motorised_infantry = 1
 	tank_design = 1
@@ -37,17 +35,26 @@ set_technology = {
 	early_jet_design = 1
 	early_jet_design_2 = 1
 	fighter1 = 1
+	cv_fighter1 = 1
 	g_support1 = 1
 }
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
+		filler_submarine_tech = 1
+		filler_carrier_tech = 1
+		filler_cruiser_tech = 1
+		filler_destroyer_tech = 1
+		filler_frigate_tech = 1
 		basic_torpedo = 1
 		improved_airplane_launcher = 1
 		early_ship_hull_carrier = 1
 		early_ship_hull_cruiser = 1
 		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
 	}
 }
 
@@ -57,16 +64,13 @@ if = {
 		early_carrier = 1
 		early_light_cruiser = 1
 		early_submarine = 1
+		transport = 1
 	}
 }
 
-	set_naval_oob = "JAPAN_NAVAL"
-
-
+set_naval_oob = "JAPAN_NAVAL"
 
 set_convoys = 800
-
-
 
 set_politics = {
 	ruling_party = moderate_conservatism
@@ -142,39 +146,6 @@ create_navy_leader = {
 	maneuvering_skill = 2
 	coordination_skill = 1
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

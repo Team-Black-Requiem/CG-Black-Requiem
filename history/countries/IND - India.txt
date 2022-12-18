@@ -1,5 +1,4 @@
 ﻿capital = 607 
-
 oob = "IND"
 
 set_stability = 0.47
@@ -7,14 +6,13 @@ set_war_support = 0.46
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	support_equip_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	support_equip = 1
 	tank_design = 1
 	motorised_infantry = 1
 	early_jet_design = 1
@@ -24,9 +22,12 @@ set_technology = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
+		filler_submarine_tech = 1
+		filler_destroyer_tech = 1
 		basic_torpedo = 1
 		early_ship_hull_submarine = 1
 		early_ship_hull_light = 1
+		basic_battery = 1
 	}
 }
 
@@ -39,9 +40,9 @@ if = {
 }
 
 add_ideas = {
-rampant_corruption
-member_state
-chinese_exploitation
+	rampant_corruption
+	member_state
+	chinese_exploitation
 }
 
 set_convoys = 90

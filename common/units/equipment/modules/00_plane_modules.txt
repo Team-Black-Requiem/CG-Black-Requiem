@@ -1,590 +1,554 @@
-equipment_modules = {
-	
-	###  #     ##  #   # #### ####
-	#  # #    #  # ##  # #    #
-	###  #    #### # # # #### ####
-	#    #    #  # #  ## #       #
-	#    #### #  # #   # #### ####
-
-		#### #   #  ### ### #   # #### ####
-		#    ##  # #     #  ##  # #    #
-		#### # # # # ##  #  # # # #### ####
-		#    #  ## #  #  #  #  ## #       #
-		#### #   #  ### ### #   # #### ####
-
-	### Tier 1 Jet Engines
-
-	engine_1_1x = {
-		category = plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			maximum_speed = 600
-			thrust = 100
-		}
-	}
-
-	engine_1_2x = {
-		category = medium_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_1_4x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_1_6x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	### Tier 2 Jet Engines
-
-	engine_2_1x = {
-		category = plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_2_2x = {
-		category = medium_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_2_4x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_2_6x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	### Tier 3 Jet Engines
-
-	engine_3_1x = {
-		category = plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_3_2x = {
-		category = medium_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_3_4x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_3_6x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	### Tier 4 Jet Engines
-
-	engine_4_1x = {
-		category = plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_4_2x = {
-		category = medium_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_4_4x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_4_6x = {
-		category = large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	### Sakuradite Engines... They use Sakuradite instead of Fuel
-
-	engine_sak_1x = {
-		category = sak_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_sak_2x = {
-		category = sak_medium_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_sak_4x = {
-		category = sak_large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	engine_sak_6x = {
-		category = sak_large_plane_jet_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			
-		}
-	}
-
-	#   # ####  ##  ###   ##  #   # ####
-	#   # #    #  # #  # #  # ##  # #
-	# # # #### #### ###  #  # # # # ####
-	# # # #    #  # #    #  # #  ##    #
-	####  #### #  # #     ##  #   # ####
-
-	### Tier 1 Fighter Weapons ###
-
-	fighter_weapon_1 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 100
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	aam_weapons_1 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 200
-			build_cost_ic = 2
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	### Tier 2 Fighter Weapons ###
-
-	fighter_weapon_2 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 100
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	aam_weapons_2 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 200
-			build_cost_ic = 2
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	### Tier 3 Fighter Weapons ###
-
-	fighter_weapon_3 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 100
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	aam_weapons_3 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 200
-			build_cost_ic = 2
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	### Tier 4 Fighter Weapons ###
-
-	fighter_weapon_4 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 100
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	aam_weapons_4 = {
-		category = fighter_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = fighter
-
-		add_stats = {
-			air_attack = 200
-			build_cost_ic = 2
-		}
-		xp_cost = 1
-		allow_mission_type = {
-			air_superiority
-			interception
-		}
-	}
-
-	### Sakuradite Fighter Weapons
-
-	### Tier 1 CAS Weapons ###
-
-	cas_cannon_1 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		add_stats = {
-			build_cost_ic = 1
-		}
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 100
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	cas_agm_1 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 200
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	### Tier 2 CAS Weapons ###
-
-	cas_cannon_2 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 100
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	cas_agm_2 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 200
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	### Tier 3 CAS Weapons ###
-
-	cas_cannon_3 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 100
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	cas_agm_3 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 200
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	### Tier 4 CAS Weapons ###
-
-	cas_cannon_4 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 100
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	cas_agm_4 = {
-		category = cas_weapon
-		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = cas
-
-		xp_cost = 2
-		allow_mission_type = {
-			cas
-			attack_logistics
-		}
-		mission_type_stats = {
-			limit = {
-				cas
-				attack_logistics
-			}
-			add_stats = {
-				air_ground_attack = 200
-				weight = 1
-			}
-		}
-		dismantle_cost_ic = 0.5
-	}
-
-	### Sakuradite CAS Weapons ###
-
-	### Tier 1 Multirole Weapons ###
-	### Basically, stats between a fighter and CAS weapon so it can provide both roles but worse | You can then choose to equip CAS or AAM missles for the secondary ###
-	### Having Problems implementing Multiroles so I am commenting it out for the patch ###
-
-	#multirole_cannon_1 = {
-	#	category = multi_weapon
-	#	sfx = sfx_ui_sd_module_turret
-	#	add_equipment_type = multirole
-	#	add_stats = {
-	#		
-	#	}
-	#}
-	#### Tier 2 Multirole Weapons ###
-	#multirole_cannon_2 = {
-	#	category = multi_weapon
-	#	sfx = sfx_ui_sd_module_turret
-	#	add_equipment_type = multirole
-	#	add_stats = {
-	#		
-	#	}
-	#}
-	#### Tier 3 Multirole Weapons ###
-	#multirole_cannon_3 = {
-	#	category = multi_weapon
-	#	sfx = sfx_ui_sd_module_turret
-	#	add_equipment_type = multirole
-	#	add_stats = {
-	#		
-	#	}
-	#}
-	#### Tier 4 Multirole Weapons ###
-	#multirole_cannon_4 = {
-	#	category = multi_weapon
-	#	sfx = sfx_ui_sd_module_turret
-	#	add_equipment_type = multirole
-	#	add_stats = {
-	#		
-	#	}
-	#}
-	#### Sakuradite Multirole Weapons ###
-
-
-	
-}
+#equipment_modules = {
+#	
+#	###  #     ##  #   # #### ####
+#	#  # #    #  # ##  # #    #
+#	###  #    #### # # # #### ####
+#	#    #    #  # #  ## #       #
+#	#    #### #  # #   # #### ####
+#
+#		#### #   #  ### ### #   # #### ####
+#		#    ##  # #     #  ##  # #    #
+#		#### # # # # ##  #  # # # #### ####
+#		#    #  ## #  #  #  #  ## #       #
+#		#### #   #  ### ### #   # #### ####
+#
+#	### Tier 1 Jet Engines
+#
+#	engine_1_1x = {
+#		category = plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			maximum_speed = 600
+#			thrust = 100
+#		}
+#	}
+#
+#	engine_1_2x = {
+#		category = medium_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_1_4x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_1_6x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	### Tier 2 Jet Engines
+#
+#	engine_2_1x = {
+#		category = plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_2_2x = {
+#		category = medium_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_2_4x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_2_6x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	### Tier 3 Jet Engines
+#
+#	engine_3_1x = {
+#		category = plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_3_2x = {
+#		category = medium_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_3_4x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_3_6x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	### Tier 4 Jet Engines
+#
+#	engine_4_1x = {
+#		category = plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_4_2x = {
+#		category = medium_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_4_4x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_4_6x = {
+#		category = large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	### Sakuradite Engines... They use Sakuradite instead of Fuel
+#
+#	engine_sak_1x = {
+#		category = sak_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_sak_2x = {
+#		category = sak_medium_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_sak_4x = {
+#		category = sak_large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	engine_sak_6x = {
+#		category = sak_large_plane_jet_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			
+#		}
+#	}
+#
+#	#   # ####  ##  ###   ##  #   # ####
+#	#   # #    #  # #  # #  # ##  # #
+#	# # # #### #### ###  #  # # # # ####
+#	# # # #    #  # #    #  # #  ##    #
+#	####  #### #  # #     ##  #   # ####
+#
+#	### Tier 1 Fighter Weapons ###
+#
+#	fighter_weapon_1 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 100
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	aam_weapons_1 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 200
+#			build_cost_ic = 2
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	### Tier 2 Fighter Weapons ###
+#
+#	fighter_weapon_2 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 100
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	aam_weapons_2 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 200
+#			build_cost_ic = 2
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	### Tier 3 Fighter Weapons ###
+#
+#	fighter_weapon_3 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 100
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	aam_weapons_3 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 200
+#			build_cost_ic = 2
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	### Tier 4 Fighter Weapons ###
+#
+#	fighter_weapon_4 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 100
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	aam_weapons_4 = {
+#		category = fighter_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = fighter
+#
+#		add_stats = {
+#			air_attack = 200
+#			build_cost_ic = 2
+#		}
+#		xp_cost = 1
+#		allow_mission_type = {
+#			air_superiority
+#			interception
+#		}
+#	}
+#
+#	### Sakuradite Fighter Weapons
+#
+#	### Tier 1 CAS Weapons ###
+#
+#	cas_cannon_1 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 1
+#			air_ground_attack = 100
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	cas_agm_1 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			air_ground_attack = 200
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	### Tier 2 CAS Weapons ###
+#
+#	cas_cannon_2 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 1
+#			air_ground_attack = 100
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	cas_agm_2 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			air_ground_attack = 200
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	### Tier 3 CAS Weapons ###
+#
+#	cas_cannon_3 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 1
+#			air_ground_attack = 100
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	cas_agm_3 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			air_ground_attack = 200
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	### Tier 4 CAS Weapons ###
+#
+#	cas_cannon_4 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 1
+#			air_ground_attack = 100
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	cas_agm_4 = {
+#		category = cas_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = cas
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			air_ground_attack = 200
+#			weight = 1
+#		}
+#		xp_cost = 2
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#		}
+#		dismantle_cost_ic = 0.5
+#	}
+#
+#	### Sakuradite CAS Weapons ###
+#
+#	### Tier 1 Multirole Weapons ###
+#	### Basically, stats between a fighter and CAS weapon so it can provide both roles but worse | You can then choose to equip CAS or AAM missles for the secondary ###
+#	### Having Problems implementing Multiroles so I am commenting it out for the patch ###
+#
+#	multirole_cannon_1 = {
+#		category = multi_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = interceptor
+#
+#		allow_mission_type = {
+#			cas
+#			attack_logistics
+#			air_superiority
+#			interception
+#		}
+#
+#		add_stats = {
+#			air_ground_attack = 50
+#			air_attack = 20
+#			build_cost_ic = 20
+#		}
+#	}
+#	### Tier 2 Multirole Weapons ###
+#	multirole_cannon_2 = {
+#		category = multi_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = multirole
+#		add_stats = {
+#			
+#		}
+#	}
+#	### Tier 3 Multirole Weapons ###
+#	multirole_cannon_3 = {
+#		category = multi_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = multirole
+#		add_stats = {
+#			
+#		}
+#	}
+#	### Tier 4 Multirole Weapons ###
+#	multirole_cannon_4 = {
+#		category = multi_weapon
+#		sfx = sfx_ui_sd_module_turret
+#		add_equipment_type = multirole
+#		add_stats = {
+#			
+#		}
+#	}
+#	### Sakuradite Multirole Weapons ###
+#}

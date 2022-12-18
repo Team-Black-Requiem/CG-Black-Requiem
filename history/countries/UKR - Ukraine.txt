@@ -1,5 +1,4 @@
 ﻿capital = 16
-
 oob = "UKR"
 
 set_research_slots = 3
@@ -7,20 +6,41 @@ set_stability = 0.5
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	infantry_weapons1 = 1
+	support_equip_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
+	eu_war_anti_air = 1
+	eu_war_artillery = 1
+	tank_design = 1
+	cold_war_tank = 1
+	early_jet_design = 1
+	early_jet_design_2 = 1
+	fighter1 = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
-	eu_war_artillery = 1
-	early_submarine = 1
-	early_destroyer = 1
-	support_equip = 1
-	tank_design = 1
-	motorised_infantry = 1
-	early_jet_design = 1
-	early_jet_design_2 = 1
+	fuel_refining = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		filler_submarine_tech = 1
+		filler_destroyer_tech = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
 }
 
 RUS = {
