@@ -292,7 +292,7 @@ focus_tree = {
     focus = {
         id = EIZ_LyonVictory
         #icon = 
-        x = 16
+        x = 24
         y = 0
 
         cost = 1
@@ -324,7 +324,7 @@ focus_tree = {
     focus = {
         id = EIZ_FedericaVictory
         #icon = 
-        x = 26
+        x = 38
         y = 0
 
         cost = 1
@@ -356,7 +356,7 @@ focus_tree = {
     focus = {
         id = EIZ_OskarVictory
         #icon = 
-        x = 36
+        x = 48
         y = 0
 
         cost = 1
@@ -836,4 +836,2334 @@ focus_tree = {
               }
         }
     }
+
+    focus = {
+        id = EIZ_Lyons_Air_Force
+        #icon = 
+        x = -11
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Destory_The_Monarchists
+        }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyons_Plan_To_Modernize
+        #icon = 
+        x = -4
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+        mutually_exclusive = { focus = EIZ_Fill_The_Hangers }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Fill_The_Hangers
+        #icon = 
+        x = -2
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+        mutually_exclusive = { focus = EIZ_Lyons_Plan_To_Modernize }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Air_Doctrine
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Plan_To_Modernize
+        }
+
+        relative_position_id = EIZ_Lyons_Plan_To_Modernize
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Ground_Pounding
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Air_Doctrine
+        }
+
+        relative_position_id = EIZ_Lyon_Air_Doctrine
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Air_RND
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Ground_Pounding
+        }
+
+        relative_position_id = EIZ_Lyon_Ground_Pounding
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Train_Airforce
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Air_RND
+        }
+
+        relative_position_id = EIZ_Lyon_Air_RND
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Gain_Aces
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Train_Airforce  focus = EIZ_Lyon_Death_From_Above
+        }
+
+        relative_position_id = EIZ_Lyon_Train_Airforce
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Fill_The_Hangers
+        #icon = 
+        x = -2
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+        mutually_exclusive = { focus = EIZ_Lyons_Plan_To_Modernize }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Spear_And_Shield_Program
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Fill_The_Hangers
+        }
+        relative_position_id = EIZ_Fill_The_Hangers
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Import_Rubber
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Spear_And_Shield_Program
+        }
+        relative_position_id = EIZ_Spear_And_Shield_Program
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Aircraft_Production_Bonus
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Import_Rubber
+        }
+        relative_position_id = EIZ_Lyon_Import_Rubber
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Death_From_Above
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Aircraft_Production_Bonus
+        }
+        relative_position_id = EIZ_Lyon_Aircraft_Production_Bonus
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Oil_Focused
+        #icon = 
+        x = 2
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Sakuradite_Focused }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Get_Tracks_Off_Convoys
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Oil_Focused
+        }
+        relative_position_id = EIZ_Lyon_Oil_Focused
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Artilery_RND
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Get_Tracks_Off_Convoys
+        }
+        relative_position_id = EIZ_Lyon_Get_Tracks_Off_Convoys
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Tank_Designer
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Artilery_RND
+        }
+        relative_position_id = EIZ_Lyon_Artilery_RND
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Artilery_Focus
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Tank_Designer
+        }
+        relative_position_id = EIZ_Lyon_Tank_Designer
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Army_Training
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Artilery_Focus focus = EIZ_Lyon_On_The_Front
+        }
+        relative_position_id = EIZ_Lyon_Artilery_Focus
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Sakuradite_Focused
+        #icon = 
+        x = 4
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+
+        mutually_exclusive = { focus = EIZ_Lyon_Oil_Focused }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Sakuradite_Cannons
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Sakuradite_Focused
+        }
+        relative_position_id = EIZ_Lyon_Sakuradite_Focused  
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Sakuradite_Plating
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Sakuradite_Cannons
+        }
+        relative_position_id = EIZ_Lyon_Sakuradite_Cannons
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Give_Russians_Knightmares
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Sakuradite_Plating
+        }
+        relative_position_id = EIZ_Lyon_Sakuradite_Plating
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_On_The_Front
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Give_Russians_Knightmares
+        }
+        relative_position_id = EIZ_Lyon_Give_Russians_Knightmares
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_West_Secured
+        #icon = 
+        x = 0
+        y = 12
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Gain_Aces 
+        }
+        prerequisite = {
+            focus = EIZ_Lyon_Army_Training
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Economic_Stability_Secured focus = EIZ_Lyon_Magnum_Opus
+        }
+        prerequisite = { 
+            focus = EIZ_Portugal_Volunteer_Quantity focus = EIZ_Portugal_Volunteer_Quantity
+        }
+
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Economic_Board
+        #icon = 
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Destory_The_Monarchists
+        }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Reach_Out_To_The_EU
+        #icon = 
+        x = -3
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Economic_Board
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Covert_Resource_Acquisition }
+        relative_position_id = EIZ_Lyon_Economic_Board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Covert_Resource_Acquisition
+        #icon = 
+        x = 3
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Economic_Board
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Reach_Out_To_The_EU }
+        relative_position_id = EIZ_Lyon_Economic_Board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Contacts_In_France
+        #icon = 
+        x = -2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Reach_Out_To_The_EU
+        }
+        relative_position_id = EIZ_Lyon_Reach_Out_To_The_EU
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Appease_German_Pride
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Reach_Out_To_The_EU
+        }
+        relative_position_id = EIZ_Lyon_Reach_Out_To_The_EU
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Preasure_The_Austrians
+        #icon = 
+        x = 2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Reach_Out_To_The_EU
+        }
+        relative_position_id = EIZ_Lyon_Reach_Out_To_The_EU
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_A_Brick_For_Every_Corner
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Contacts_In_France
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Appease_German_Pride
+        }
+        relative_position_id = EIZ_Lyon_Contacts_In_France
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Not_A_Euro_Wasted
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Appease_German_Pride
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Preasure_The_Austrians
+        }
+        relative_position_id = EIZ_Lyon_Appease_German_Pride
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Economic_Stability_Secured
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_A_Brick_For_Every_Corner
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Not_A_Euro_Wasted
+        }
+        relative_position_id = EIZ_Lyon_A_Brick_For_Every_Corner
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Casablanca_Proposal
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Covert_Resource_Acquisition
+        }
+        relative_position_id = EIZ_Lyon_Covert_Resource_Acquisition
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Calling_The_Pale_Jewel
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Covert_Resource_Acquisition
+        }
+        relative_position_id = EIZ_Lyon_Covert_Resource_Acquisition
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Reaching_Out_To_Old_Friends
+        #icon = 
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Casablanca_Proposal
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Calling_The_Pale_Jewel
+        }
+        relative_position_id = EIZ_Lyon_Covert_Resource_Acquisition
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Lybian_Raid
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Reaching_Out_To_Old_Friends
+        }
+        relative_position_id = EIZ_Lyon_Reaching_Out_To_Old_Friends
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Loot_South_Africa
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Reaching_Out_To_Old_Friends
+        }
+        relative_position_id = EIZ_Lyon_Reaching_Out_To_Old_Friends
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Magnum_Opus
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Lybian_Raid
+        }
+        prerequisite = { 
+            focus = EIZ_Lyon_Loot_South_Africa
+        }
+        relative_position_id = EIZ_Lyon_Lybian_Raid
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Spanish_Volunteer_Quality
+        #icon = 
+        x = 6
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Destory_The_Monarchists
+        }
+        mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quantity }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Spanish_Volunteer_Quantity
+        #icon = 
+        x = 8
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Destory_The_Monarchists
+        }
+        mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quality }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_English_Volunteer_Quality
+        #icon = 
+        x = 6
+        y = 4
+
+        prerequisite = { 
+            focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_English_Volunteer_Quantity }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_English_Volunteer_Quantity
+        #icon = 
+        x = 8
+        y = 4
+
+        prerequisite = { 
+            focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_English_Volunteer_Quality }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Italy_Volunteer_Quality
+        #icon = 
+        x = 6
+        y = 6
+
+        prerequisite = { 
+            focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quantity }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Italy_Volunteer_Quantity
+        #icon = 
+        x = 8
+        y = 6
+
+        prerequisite = { 
+            focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quality }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Morocco_Volunteer_Quality
+        #icon = 
+        x = 6
+        y = 8
+
+        prerequisite = { 
+            focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quantity }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Morocco_Volunteer_Quantity
+        #icon = 
+        x = 8
+        y = 8
+
+        prerequisite = { 
+            focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quality }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Portugal_Volunteer_Quality
+        #icon = 
+        x = 6
+        y = 10
+
+        prerequisite = { 
+            focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quantity }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Portugal_Volunteer_Quantity
+        #icon = 
+        x = 8
+        y = 10
+
+        prerequisite = { 
+            focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
+        }
+        mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quality }
+        relative_position_id = EIZ_Destory_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Putting_Down_The_Rebels
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_West_Secured
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Crossing_The_Urals }
+        relative_position_id = EIZ_Lyon_West_Secured
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Crossing_The_Urals
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_West_Secured
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Putting_Down_The_Rebels }
+        relative_position_id = EIZ_Lyon_West_Secured
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Intervene_In_The_East
+        #icon = 
+        x = 0
+        y = 3
+
+        prerequisite = { 
+            focus = EIZ_Lyon_West_Secured
+        }
+
+        relative_position_id = EIZ_Lyon_West_Secured
+        
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Backing_The_Socialists
+        #icon = 
+        x = -2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Intervene_In_The_East
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Backing_The_Euro_Britannians }
+        relative_position_id = EIZ_Lyon_Intervene_In_The_East
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Backing_The_Euro_Britannians
+        #icon = 
+        x = 2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Intervene_In_The_East
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Backing_The_Socialists }
+        relative_position_id = EIZ_Lyon_Intervene_In_The_East
+        
+        cost = 2
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Feeding_Their_Industry
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Backing_The_Socialists
+        }
+
+        relative_position_id = EIZ_Lyon_Backing_The_Socialists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Backing_The_Socialists
+        }
+
+        relative_position_id = EIZ_Lyon_Backing_The_Socialists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space2
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Temp_Space
+        }
+
+        relative_position_id = EIZ_Lyon_Temp_Space
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space3
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Temp_Space2
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Temp_Space5 }
+        relative_position_id = EIZ_Lyon_Temp_Space2
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space4
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Feeding_Their_Industry
+        }
+
+        relative_position_id = EIZ_Lyon_Feeding_Their_Industry
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space5
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Temp_Space4
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Temp_Space3 }
+        relative_position_id = EIZ_Lyon_Temp_Space4
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Temp_Space6
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Temp_Space5 focus = EIZ_Lyon_Temp_Space3
+        }
+        
+        relative_position_id = EIZ_Lyon_Temp_Space5
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Siberia_Burns
+        #icon = 
+        x = 2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Temp_Space6 
+        }
+        
+        relative_position_id = EIZ_Lyon_Temp_Space6
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
 }
+
