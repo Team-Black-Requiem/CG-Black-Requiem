@@ -2419,5 +2419,482 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+
+# Army focus tree (someone do this huge word of #)
+	focus = {
+		id = FRA_Napoleon_Memories
+		icon = GFX_
+		cost = 5
+		x = 92
+		y = 1
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_New_Continenetial_Army
+		icon = GFX_
+		cost = 5
+		x = -5
+		y = 1
+		relative_position_id = FRA_Napoleon_Memories
+		prerequisite = {
+		focus = FRA_Napoleon_Memories }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_New_Rifles_For_Army
+		icon = GFX_
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = FRA_New_Continenetial_Army
+		prerequisite = {
+		focus = FRA_New_Continenetial_Army }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Reorganize_Old_Divisions
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_New_Rifles_For_Army
+		prerequisite = {
+		focus = FRA_New_Rifles_For_Army }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Found_The_Office_Of_Mechs_Modernization
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Reorganize_Old_Divisions
+		prerequisite = {
+		focus = FRA_Reorganize_Old_Divisions }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Meritocratic_System
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Found_The_Office_Of_Mechs_Modernization
+		prerequisite = {
+		focus = FRA_Found_The_Office_Of_Mechs_Modernization }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Nightmares_Hinters
+		icon = GFX_
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FRA_Meritocratic_System
+		prerequisite = {
+		focus = FRA_Meritocratic_System }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_IT_Division
+		icon = GFX_
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = FRA_New_Continenetial_Army
+		prerequisite = {
+		focus = FRA_New_Continenetial_Army }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Hakers_Squads
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_IT_Division
+		prerequisite = {
+		focus = FRA_IT_Division }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Special_W-O_Squad
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Hakers_Squads
+		prerequisite = {
+		focus = FRA_Hakers_Squads }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Fortifications_In_Eastern_Europe
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Special_W-O_Squad
+		prerequisite = {
+		focus = FRA_Special_W-O_Squad }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Knightmares_Hunters
+		icon = GFX_
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FRA_Fortifications_In_Eastern_Europe
+		prerequisite = {
+		focus = FRA_Meritocratic_System
+		focus = FRA_Fortifications_In_Eastern_Europe }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_United_General_Staff_Of_All_Europe
+		icon = GFX_
+		cost = 5
+		x = -6
+		y = 1
+		relative_position_id = FRA_Knightmares_Hunters
+		prerequisite = {
+		focus = FRA_Knightmares_Hunters
+		focus = FRA_Inner_Sea }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Shock_And_Awe_At_Sea
+		icon = GFX_
+		cost = 5
+		x = -5
+		y = 0
+		relative_position_id = FRA_New_Rifles_For_Army
+		prerequisite = {
+		focus = FRA_New_Rifles_For_Army }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Inner_Sea
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = FRA_Shock_And_Awe_At_Sea
+		prerequisite = {
+		focus = FRA_Shock_And_Awe_At_Sea }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Strong_Ships_Doctrine
+		icon = GFX_
+		cost = 5
+		x = -2
+		y = 0
+		relative_position_id = FRA_Inner_Sea
+		prerequisite = {
+		focus = FRA_Inner_Sea }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Special_Marine_Knightmares
+		icon = GFX_
+		cost = 5
+		x = 2
+		y = 0
+		relative_position_id = FRA_Inner_Sea
+		prerequisite = {
+		focus = FRA_Inner_Sea }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Legion_Etrangere
+		icon = GFX_
+		cost = 5
+		x = 5
+		y = 1
+		relative_position_id = FRA_Napoleon_Memories
+		prerequisite = {
+		focus = FRA_Napoleon_Memories }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_American_Gerritas
+		icon = GFX_
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = FRA_Legion_Etrangere
+		prerequisite = {
+		focus = FRA_Legion_Etrangere }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_African_Mercenaries
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_American_Gerritas
+		prerequisite = {
+		focus = FRA_American_Gerritas }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Knightmare_Pilots_From_Area_2
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_African_Mercenaries
+		prerequisite = {
+		focus = FRA_African_Mercenaries }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_What_Should_We_Do_With_Elevens?
+		icon = GFX_
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FRA_Knightmare_Pilots_From_Area_2
+		prerequisite = {
+		focus = FRA_Indian_Software_engineers
+		focus = FRA_Knightmare_Pilots_From_Area_2 }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Invite_Arabic_Tankmen
+		icon = GFX_
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = FRA_Legion_Etrangere
+		prerequisite = {
+		focus = FRA_Legion_Etrangere }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Russian_Special_Forces
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Invite_Arabic_Tankmen
+		prerequisite = {
+		focus = FRA_Invite_Arabic_Tankmen }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
+	focus = {
+		id = FRA_Indian_Software_engineers
+		icon = GFX_
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FRA_Russian_Special_Forces
+		prerequisite = {
+		focus = FRA_Russian_Special_Forces }
+		available = {
+			is_puppet = no
+			}
+			ai_will_do = {
+					factor = 2
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			}
+	}
 #End of focuses 
 }
