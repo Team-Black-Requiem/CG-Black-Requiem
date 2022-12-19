@@ -64,18 +64,6 @@ recruit_character = EIZ_aloïs_chapelle
 
 set_convoys = 500
 
-create_field_marhsall_commander = {
-	name = "Otto Van Hollen"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-			traits = { old_guard }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id=-1
-		
-	}
 create_corps_commander = {
 	name = "Vlad Soyuz"
 	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
@@ -100,18 +88,28 @@ create_corps_commander = {
 			logistics_skill = 2
 			legacy_id=-1
 		}
-	}
 
-	create_corps_commander = {
+		create_corps_commander = {
 	name = "Aloïs Chapelle"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			traits = {}
 			skill = 2
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 2
 			legacy_id=-1
 		}
-	}
-	}
+
+		create_field_marshal= {
+	name = "0tto Van Hollen"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			traits = { old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
+		}
+	
