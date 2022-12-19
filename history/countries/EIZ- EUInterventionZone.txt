@@ -64,16 +64,9 @@ recruit_character = EIZ_aloïs_chapelle
 
 set_convoys = 500
 
-EIZ_otto_van_hollen={
-		name = "Otto Van Hollen"
-		portraits = {
-			army = {
-				large = "GFX_portrait_hol_petrus_wilhelmus_best"
-				small = "GFX_idea_HOL_petrus_wilhelmus_best"
-				
-			}
-		}
-		field_marshal = {
+field_marhsall_commander = {
+	name = "Otto Van Hollen"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 			traits = { old_guard }
 			skill = 1
 			attack_skill = 2
@@ -81,18 +74,11 @@ EIZ_otto_van_hollen={
 			planning_skill = 1
 			logistics_skill = 2
 			legacy_id=-1
-		}
+		
 	}
-
-		EIZ_vlad_soyus={
-		name = "Vlad Soyus"
-		portraits = {
-			army = {
-				large = "GFX_portrait_hol_godfried_van_voorst_tot_voorst"
-				small = "GFX_idea_HOL_godfried_van_voorst_tot_voorst"
-			}
-		}
-		corps_commander = {
+create_corps_commander = {
+	name = "Vlad Soyuz"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 			traits = { infantry_officer}
 			skill = 4
 			attack_skill = 4
@@ -101,17 +87,11 @@ EIZ_otto_van_hollen={
 			logistics_skill = 3
 			legacy_id=-1
 		}
-	}
 
-	EIZ_philipie_allard={
-		name = "Philipie Allard"
-		portraits = {
-			army = {
-			large = "GFX_portrait_HOL_johannes_theodorus_furstner"
-				small = "GFX_portrait_HOL_johannes_theodorus_furstner_small"
-			}
-		}
-		corps_commander = {
+
+	create_corps_commander = {
+	name = "Philipie Allard"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 			traits = {}
 			skill = 2
 			attack_skill = 2
@@ -122,15 +102,9 @@ EIZ_otto_van_hollen={
 		}
 	}
 
-		EIZ_aloïs_chapelle={
-		name =" Aloïs Chapelle"
-		portraits = {
-			army = {
-	        large = "GFX_portrait_hol_conrad_helfrich"
-				small = "GFX_portrait_HOL_conrad_helfrich_small"
-			}
-		}
-		corps_commander = {
+		create_corps_commander = {
+	name = "Aloïs Chapelle"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			traits = {}
 			skill = 2
 			attack_skill = 1
