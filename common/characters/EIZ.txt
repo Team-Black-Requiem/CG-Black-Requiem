@@ -18,83 +18,25 @@ characters = {
 
 }
 
-##GENERALS & COMMANDERS##
-	{
-	
-	EIZ_otto_van_hollen={
-		name = "Otto Van Hollen"
-		portraits = {
-			army = {
-				large = "GFX_portrait_hol_petrus_wilhelmus_best"
-				small = "GFX_idea_HOL_petrus_wilhelmus_best"
-				
+EIZ_generic_air={
+		name=Air Marshal Zastrov 
+		portraits={
+			army={
+				small="GFX_idea_BRT_generic_air"
 			}
 		}
-		field_marshal = {
-			traits = { old_guard }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id=-1
-		}
-	}
-
-		EIZ_vlad_soyus={
-		name = "Vlad Soyus"
-		portraits = {
-			army = {
-				large = "GFX_portrait_hol_godfried_van_voorst_tot_voorst"
-				small = "GFX_idea_HOL_godfried_van_voorst_tot_voorst"
+		advisor={
+			slot = air_chief
+			idea_token = BRT_generic_air_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
 			}
 		}
-		corps_commander = {
-			traits = { infantry_officer}
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id=-1
-		}
-	}
-
-	EIZ_philipie_allard={
-		name = "Philipie Allard"
-		portraits = {
-			army = {
-			large = "GFX_portrait_HOL_johannes_theodorus_furstner"
-				small = "GFX_portrait_HOL_johannes_theodorus_furstner_small"
-			}
-		}
-		corps_commander = {
-			traits = {}
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id=-1
-		}
-	}
-
-		EIZ_aloïs_chapelle={
-		name =" Aloïs Chapelle"
-		portraits = {
-			army = {
-	        large = "GFX_portrait_hol_conrad_helfrich"
-				small = "GFX_portrait_HOL_conrad_helfrich_small"
-			}
-		}
-		corps_commander = {
-			traits = {}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id=-1
-		}
-	}
 	}
