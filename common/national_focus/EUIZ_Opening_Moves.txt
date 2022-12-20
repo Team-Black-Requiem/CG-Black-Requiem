@@ -172,7 +172,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.5
 
                 hidden_effect = {
               }
@@ -206,7 +206,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.6
 
                 hidden_effect = {
               }
@@ -240,7 +240,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.7
 
                 hidden_effect = {
               }
@@ -282,7 +282,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.8
 
                 hidden_effect = {
               }
@@ -314,7 +314,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.9
 
                 hidden_effect = {
               }
@@ -346,7 +346,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.10
 
                 hidden_effect = {
               }
@@ -378,7 +378,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.11
 
                 hidden_effect = {
               }
@@ -413,7 +413,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
+                country_event = EIZ.12
 
                 hidden_effect = {
               }
@@ -701,7 +701,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Destory_The_Monarchists
+        id = EIZ_Destroy_The_Monarchists
         #icon = 
         x = 0
         y = 2
@@ -734,12 +734,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                EIZ = {
-                    declare_war_on = {
-                    target = MRU
-                    type = annex_everything
-                                }
-                }
+                country_event = EIZ.13
+
 
                 hidden_effect = {
               }
@@ -844,9 +840,9 @@ focus_tree = {
         y = 2
 
         prerequisite = { 
-            focus = EIZ_Destory_The_Monarchists
+            focus = EIZ_Destroy_The_Monarchists
         }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -1847,7 +1843,7 @@ focus_tree = {
             focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity
         }
 
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -1881,9 +1877,9 @@ focus_tree = {
         y = 2
 
         prerequisite = { 
-            focus = EIZ_Destory_The_Monarchists
+            focus = EIZ_Destroy_The_Monarchists
         }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -1904,6 +1900,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.14
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = FRA
+                        }
+                    }
+                    FRA = { country_event = EIZ.15 }
+                }
 
                 hidden_effect = {
               }
@@ -1941,6 +1946,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.18
 
                 hidden_effect = {
               }
@@ -1978,6 +1984,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.31
 
                 hidden_effect = {
               }
@@ -2014,6 +2021,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.19
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = FRA
+                        }
+                    }
+                    FRA = { country_event = EIZ.20 }
+                }
 
                 hidden_effect = {
               }
@@ -2050,6 +2066,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.23
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = GER
+                        }
+                    }
+                    GER = { country_event = EIZ.24 }
+                }
 
                 hidden_effect = {
               }
@@ -2086,6 +2111,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.27
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = DAN
+                        }
+                    }
+                    DAN = { country_event = EIZ.28 }
+                }
 
                 hidden_effect = {
               }
@@ -2239,6 +2273,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.32
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = MOR
+                        }
+                    }
+                    MOR = { country_event = EIZ.33 }
+                }
 
                 hidden_effect = {
               }
@@ -2275,6 +2318,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.34
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = WAF
+                        }
+                    }
+                    WAF = { country_event = EIZ.35 }
+                }
 
                 hidden_effect = {
               }
@@ -2314,6 +2366,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.36
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = ETH
+                        }
+                    }
+                    ETH = { country_event = EIZ.37 }
+                }
 
                 hidden_effect = {
               }
@@ -2350,6 +2411,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.38
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = LBA
+                        }
+                    }
+                    LBA = { country_event = EIZ.39 }
+                }
 
                 hidden_effect = {
               }
@@ -2386,6 +2456,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.40
+                if = {
+                    limit = {
+                        NOT = {
+                            has_war_with = SAF
+                        }
+                    }
+                    SAF = { country_event = EIZ.41 }
+                }
 
                 hidden_effect = {
               }
@@ -2425,6 +2504,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.42
+                news_event = EIZ.43
 
                 hidden_effect = {
               }
@@ -2438,10 +2519,10 @@ focus_tree = {
         y = 2
 
         prerequisite = { 
-            focus = EIZ_Destory_The_Monarchists
+            focus = EIZ_Destroy_The_Monarchists
         }
         mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quantity }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2475,10 +2556,10 @@ focus_tree = {
         y = 2
 
         prerequisite = { 
-            focus = EIZ_Destory_The_Monarchists
+            focus = EIZ_Destroy_The_Monarchists
         }
         mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quality }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2515,7 +2596,7 @@ focus_tree = {
             focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quantity }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2552,7 +2633,7 @@ focus_tree = {
             focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quality }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2589,7 +2670,7 @@ focus_tree = {
             focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quantity }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2626,7 +2707,7 @@ focus_tree = {
             focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quality }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2663,7 +2744,7 @@ focus_tree = {
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quantity }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2700,7 +2781,7 @@ focus_tree = {
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quality }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2737,7 +2818,7 @@ focus_tree = {
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quantity }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2774,7 +2855,7 @@ focus_tree = {
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quality }
-        relative_position_id = EIZ_Destory_The_Monarchists
+        relative_position_id = EIZ_Destroy_The_Monarchists
         
         cost = 3
 
@@ -2906,6 +2987,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.44
 
                 hidden_effect = {
               }
@@ -3276,6 +3358,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                country_event = EIZ.45
 
                 hidden_effect = {
               }
