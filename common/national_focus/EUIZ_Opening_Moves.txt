@@ -915,43 +915,6 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Fill_The_Hangers
-        #icon = 
-        x = -2
-        y = 2
-
-        prerequisite = { 
-            focus = EIZ_Lyons_Air_Force
-        }
-        mutually_exclusive = { focus = EIZ_Lyons_Plan_To_Modernize }
-        relative_position_id = EIZ_Lyons_Air_Force
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = BRT
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
         id = EIZ_Lyon_Air_Doctrine
         #icon = 
         x = 0
