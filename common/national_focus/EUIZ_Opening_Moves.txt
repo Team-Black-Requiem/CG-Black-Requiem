@@ -3069,7 +3069,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space
+        id = EIZ_Lyon_Revolution_fuel_are_Soldiers
         #icon = 
         x = 1
         y = 1
@@ -3106,16 +3106,16 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space2
+        id = EIZ_Lyon_Cutting_Lion_Communication
         #icon = 
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Temp_Space
+            focus = EIZ_Lyon_Revolution_fuel_are_Soldiers
         }
 
-        relative_position_id = EIZ_Lyon_Temp_Space
+        relative_position_id = EIZ_Lyon_Revolution_fuel_are_Soldiers
         
         cost = 3
 
@@ -3143,16 +3143,16 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space3
+        id = EIZ_Lyon_Resistance_Last_Man
         #icon = 
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Temp_Space2
+            focus = EIZ_Lyon_Cutting_Lion_Communication
         }
         mutually_exclusive = { focus = EIZ_Lyon_Temp_Space5 }
-        relative_position_id = EIZ_Lyon_Temp_Space2
+        relative_position_id = EIZ_Lyon_Cutting_Lion_Communication
         
         cost = 3
 
@@ -3180,7 +3180,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space4
+        id = EIZ_Lyon_Supplies_Red_War_Machine
         #icon = 
         x = 0
         y = 1
@@ -3217,16 +3217,16 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space5
+        id = EIZ_Lyon_Bear_United_Against
         #icon = 
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Temp_Space4
+            focus = EIZ_Lyon_Supplies_Red_War_Machine
         }
-        mutually_exclusive = { focus = EIZ_Lyon_Temp_Space3 }
-        relative_position_id = EIZ_Lyon_Temp_Space4
+        mutually_exclusive = { focus = EIZ_Lyon_Resistance_Last_Man }
+        relative_position_id = EIZ_Lyon_Supplies_Red_War_Machine
         
         cost = 3
 
@@ -3254,16 +3254,275 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Temp_Space6
+        id = EIZ_Lyon_Death_Traitor_Punishment
         #icon = 
         x = 1
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Temp_Space5 focus = EIZ_Lyon_Temp_Space3
+            focus = EIZ_Lyon_Bear_United_Against focus = EIZ_Lyon_Resistance_Last_Man
         }
         
-        relative_position_id = EIZ_Lyon_Temp_Space5
+        relative_position_id = EIZ_Lyon_Bear_United_Against
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Lion_Needs_Strength
+        #icon = 
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Backing_The_Euro_Britannians
+        }
+
+        relative_position_id = EIZ_Lyon_Backing_The_Euro_Britannians
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Enemy_of_Enemy_Supplies
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Lion_Needs_Strength
+        }
+
+        relative_position_id = EIZ_Lyon_Lion_Needs_Strength
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Lion_Bear_United
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Enemy_of_Enemy_Supplies
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Price_Revolution }
+        relative_position_id = EIZ_Lyon_Enemy_of_Enemy_Supplies
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Send_Lapdogs
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Backing_The_Euro_Britannians
+        }
+        
+        relative_position_id = EIZ_Lyon_Backing_The_Euro_Britannians
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Socialist_Little_Hell
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Send_Lapdogs
+        }
+        
+        relative_position_id = EIZ_Lyon_Send_Lapdogs
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Price_Revolution
+        #icon = 
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Socialist_Little_Hell
+        }
+        mutually_exclusive = { focus = EIZ_Lyon_Lion_Bear_United }
+        relative_position_id = EIZ_Lyon_Socialist_Little_Hell
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = BRT
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Red_Flag_Burns
+        #icon = 
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Lion_Bear_United focus = EIZ_Lyon_Price_Revolution
+        }
+        
+        relative_position_id = EIZ_Lyon_Lion_Bear_United
         
         cost = 3
 
@@ -3297,10 +3556,10 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Temp_Space6 
+            focus = EIZ_Lyon_Death_Traitor_Punishment focus = EIZ_Lyon_Red_Flag_Burns
         }
         
-        relative_position_id = EIZ_Lyon_Temp_Space6
+        relative_position_id = EIZ_Lyon_Death_Traitor_Punishment
         
         cost = 3
 
