@@ -713,7 +713,7 @@ news_event = {
   
 }
 
-country_event = {
+country_event = { ##Intervening in the East
   id = EIZ.44
   title = EIZ.44.t
   desc = EIZ.44.d
@@ -723,6 +723,15 @@ country_event = {
 
   option = {
     name = EIZ.44.a
+    hidden_effect = {
+      set_country_flag = EIZ_supporting_socialist_flag
+    }
+  }
+  option = {
+    name = EIZ.44.b
+    hidden_effect = {
+      set_country_flag = EIZ_supporting_eurobritannia_flag
+    }
   }
 }
 
