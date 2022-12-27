@@ -4,8 +4,8 @@ guiTypes = {
 		name ="frontend_background"
 		position = { x=0 y =0 }	
 		size = { 
-			width = 1920 
-			height = 1440 
+			#width = 1920 
+			#height = 1440 
 			min = { width = 100% height = 100% }
 			max = { width = 100% height = 10000 }
 			preserve_aspect_ratio = yes
@@ -25,19 +25,19 @@ guiTypes = {
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
+		position = { x=0 y =-800 }
 		show_position = { x=0 y =-1 }
 		animation_type = decelerated
 		animation_time = 100
 		size = { width = 256 height = 768}
-		
+		orientation = center
 		iconType =
 		{
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= -50 y = 250 }
-		}
-		
+			position = { x= 0 y = -420 }
+			centerposition = yes
+		}	
 	}
 
 	#containerWindowType = {
@@ -57,107 +57,118 @@ guiTypes = {
 	#}	
 	
 	### MAIN MENU PANEL (upperright)
-	containerWindowType = {
-		name ="mainmenu_panel_upperright"
-		position = { x=0 y =-1 }
-		show_position = { x=-256 y =-1 }
-		animation_type = decelerated
-		animation_time = 1000					
-		size = { width = 256 height = 768}
-		Orientation = upper_right
-
-		ButtonType = {
-			name = "achievements_button"
-			position = { x = -50 y = 25 }
-			quadTextureSprite ="achievements"
-			pdx_tooltip = "MENU_ACHIEVEMENTS"
-		}
-
-		iconType =
-		{
-			name ="frontend_dev_logo"
-			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
-		}
-		
-		iconType =
-		{
-			name ="pdx_int_logo"
-			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
-		}		
-		
-	}		
+	#containerWindowType = {
+	#	name ="mainmenu_panel_upperright"
+	#	position = { x=0 y =-1 }
+	#	show_position = { x=-256 y =-1 }
+	#	animation_type = decelerated
+	#	animation_time = 1000					
+	#	size = { width = 256 height = 768}
+	#	Orientation = upper_right
+	#
+	#	ButtonType = {
+	#		name = "achievements_button"
+	#		position = { x = -50 y = 25 }
+	#		quadTextureSprite ="achievements"
+	#		pdx_tooltip = "MENU_ACHIEVEMENTS"
+	#	}
+	#
+	#	iconType =
+	#	{
+	#		name ="frontend_dev_logo"
+	#		spriteType = "GFX_frontend_dev_logo"
+	#		position = { x= 15 y = 15 }
+	#	}
+	#	iconType =
+	#	{
+	#		name ="pdx_int_logo"
+	#		spriteType = "GFX_pdx_int_logo"
+	#		position = { x= 135 y = 15 }
+	#	}		
+	#	
+	#}		
 
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=250 y =0}
-		size = { width = 320 height = 395}
-		Orientation = CENTER
-		Origo = center	
+		position = { x=0 y =0}
+		size = { width = 320 height = 475}
+		Orientation = lower_left
+		Origo = lower_left
 				
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+		#iconType =
+		#{
+		#	name ="frontend_game_version"
+		#	spriteType = "GFX_frontend_game_version"
+		#	position = { x = -17 y = -142 }
+		#}
+
+		containerWindowType = {
+			name ="mainmenu_panel_bottom_background"
+			position = { x= 0 y = 79 }
+			size = { width = 320 height = 395}
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
 		}
 		
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 97 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_CONTINUE"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		
+
 		iconType = {
 			name = "sp_continue_flag_left"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
+
 		iconType = {
 			name = "sp_continue_flag_left_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
+
 		iconType = {
 			name = "sp_continue_flag_right"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
+
 		iconType = {
 			name = "sp_continue_flag_right_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
+
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 16 y = 58 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 137 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_NEW"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		
+
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 16 y = 98 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 16 y = 177 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "MENU_BAR_LOAD"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
@@ -166,18 +177,18 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "sp_tutorial_button"
-			position = { x = 16 y = 138}
+			position = { x = 16 y = 500 }
 			quadTextureSprite ="GFX_main_lobby_button"	
 			buttonText = "FE_TUTORIAL"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		
+
 		ButtonType = {
 			name = "sp_back_button"
-			position = { x = 16 y = 218 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 297 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "BACK"
 			buttonFont = "hoi_24header"
 			clicksound = click_close
@@ -189,32 +200,36 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=250 y =0}
-		size = { width = 320 height = 395}
-		Orientation = CENTER
-		Origo = center		
+		position = { x=0 y =0}
+		size = { width = 320 height = 475}
+		Orientation = lower_left
+		Origo = lower_left		
 				
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+		containerWindowType = {
+			name ="mainmenu_panel_bottom_background"
+			position = { x= 0 y = 79 }
+			size = { width = 320 height = 395}
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
 		}
-			
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 16 y = 18 }
+			position = { x = 16 y = 97  }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
-			text = "FE_SINGLE_PLAYER"				
-			clicksound = click_default			
+			font = "hoi_24header"
+			text = "FE_SINGLE_PLAYER"
+			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 16 y = 58}
+			position = { x = 16 y = 137 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
-			text = "FE_MULTI_PLAYER"			
+			font = "hoi_24header"
+			text = "FE_MULTI_PLAYER"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -229,21 +244,21 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 35 y = 356 }
+			position = { x = 35 y = 435 }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
-			text = "ALPHA"	
+			text = "ALPHA"
 			format = centre
 			maxWidth = 250
-			maxHeight = 20	
+			maxHeight = 20
 		}
-		
-		
+
+
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 16 y = 98 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 177 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "OPTIONS"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
@@ -253,32 +268,76 @@ guiTypes = {
 
 		ButtonType = {
 			name = "credits_button"
-			position = {  x = 16 y = 138 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 16 y = 217 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_CREDITS"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 16 y = 257 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 178 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 297 }
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
 		}
-		
+
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 16 y = 260 }
+			position = { x = 16 y = 339 }
 			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
-			text = "FE_EXIT"			
+			font = "hoi_24header"
+			text = "FE_EXIT"
 			clicksound = click_default
 			oversound = ui_menu_over
-			
+
+		}
+
+		##social buttons etc.
+		ButtonType = {
+			name = "homepage_button"
+			position = { x=80 y=388 }
+			quadTextureSprite ="homepage"
+			clicksound = click_default
+			pdx_tooltip = "MENU_HOMEPAGE"
+			web_link = "https://www.paradoxinteractive.com/games/hearts-of-iron-iv/about"	  
+		}
+		ButtonType = {
+			name = "privacy_policy_button"
+			position = { x=120 y=388 }
+			quadTextureSprite ="privacy"
+			#clicksound = click_default
+			pdx_tooltip = "MENU_PRIVACY_POLICY"
+			web_link = "https://legal.paradoxplaza.com/privacy"
+		}
+		ButtonType = {
+			name = "forum_button"
+			position = { x = 160 y =388 }
+			quadTextureSprite ="br_discord"
+			clicksound = click_default
+			pdx_tooltip = "BR_MENU_DISCORD"
+			web_link = "https://discord.gg/HF87SZ7ngh"
+		}
+		ButtonType = {
+			name = "facebook_button"
+			position = { x = 200 y =388 }
+			quadTextureSprite ="br_steamworkshop"
+			clicksound = click_default
+			pdx_tooltip = "BR_MENU_STEAMWORKSHOP"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2785523030"
 		}
 	}
 	
@@ -338,47 +397,8 @@ guiTypes = {
 				pdx_tooltip = "SOCIAL_NEW_FRIEND"
 			}
 		}
-		
-		ButtonType = {
-			name = "homepage_button"
-			position = { x=250 y=0 }
-			quadTextureSprite ="homepage"
-			clicksound = click_default
-			pdx_tooltip = "MENU_HOMEPAGE"
-		}
-		ButtonType = {
-			name = "forum_button"
-			position = { x=300 y=0 }
-			quadTextureSprite ="forum"
-			clicksound = click_default
-			pdx_tooltip = "MENU_FORUM"
-			web_link = "http://forum.paradoxplaza.com/forum/forumdisplay.php?844-Hearts-of-Iron-IV"
-		}
-		ButtonType = {
-			name = "facebook_button"
-			position = { x=350 y=0 }
-			quadTextureSprite ="facebook"
-			clicksound = click_default
-			pdx_tooltip = "MENU_FACEBOOK"
-			web_link = "https://www.facebook.com/Heartsofiron"
-		}
-		ButtonType = {
-			name = "twitter_button"
-			position = { x=400 y=0 }
-			quadTextureSprite ="twitter"
-			#clicksound = click_default
-			pdx_tooltip = "MENU_TWITTER"
-			web_link = "https://twitter.com/hoi_game"
-		}
-		ButtonType = {
-			name = "privacy_policy_button"
-			position = { x=450 y=0 }
-			quadTextureSprite ="privacy"
-			#clicksound = click_default
-			pdx_tooltip = "MENU_PRIVACY_POLICY"
-		}
 	}
-
+	
 	## This position needs updated
 	containerWindowType = {
 		name = "mainmenu_achievement_button"
