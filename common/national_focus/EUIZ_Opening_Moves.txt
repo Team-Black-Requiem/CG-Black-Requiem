@@ -356,7 +356,7 @@ focus_tree = {
     focus = {
         id = EIZ_OskarVictory
         icon = GFX_EIZ_OskarVictory
-        x = 70
+        x = 85
         y = 3
 
         cost = 1
@@ -1790,20 +1790,20 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
-        x = 0
+        x = 14
         y = 12
 
         prerequisite = { 
-            focus = EIZ_Lyon_Gain_Aces 
+            focus = EIZ_Lyon_Gain_Aces focus = EIZ_Call_the_Young_Fox
         }
         prerequisite = {
-            focus = EIZ_Lyon_Army_Training
+            focus = EIZ_Lyon_Army_Training focus = EIZ_Frederica_Army_Training
         }
         prerequisite = { 
-            focus = EIZ_Lyon_Economic_Stability_Secured focus = EIZ_Lyon_Magnum_Opus
+            focus = EIZ_Lyon_Economic_Stability_Secured focus = EIZ_Lyon_Magnum_Opus focus = EIZ_Economic_Stability_Secured focus = EIZ_Russian_Welfare_fund
         }
         prerequisite = { 
-            focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity
+            focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity focus = EIZ_Swiss_Volunteer_Quaality focus = EIZ_Swiss_Volunteer_Quantity
         }
 
         relative_position_id = EIZ_Destroy_The_Monarchists
@@ -5171,7 +5171,1113 @@ focus_tree = {
         
         #Volunteer brna   
      
-   
+        focus = {
+            id = EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 6
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Fight_The_Monarchists
+            }
+
+            mutually_exclusive = {focus = EIZ_Danish_Volunteer_Quantity
+        }
+           
+            relative_position_id = EIZ_Fight_The_Monarchists
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Danish_Volunteer_Quantity
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 8
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Fight_The_Monarchists
+            }
+
+            mutually_exclusive = {focus = EIZ_Danish_Volunteer_Quality
+            }
+
+           
+            relative_position_id = EIZ_Fight_The_Monarchists
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Polish_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Danish_Volunteer_Quantity
+            }
+            prerequisite = {
+                focus = EIZ_Danish_Volunteer_Quality
+            }
+
+            
+            mutually_exclusive = {focus = EIZ_Polish_Volunteer_Quantity
+            }
+
+           
+            relative_position_id = EIZ_Danish_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Polish_Volunteer_Quantity
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 2   
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Danish_Volunteer_Quantity
+            }
+            prerequisite = {
+                focus = EIZ_Danish_Volunteer_Quality
+            }
+
+            
+            mutually_exclusive = {focus = EIZ_Polish_Volunteer_Quality
+            }
+
+           
+            relative_position_id = EIZ_Danish_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Skandinavian_Volunteer_Quantity
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Polish_Volunteer_Quality
+            }
+            prerequisite = {
+                focus = EIZ_Polish_Volunteer_Quantity
+            }
+           
+            mutually_exclusive = {focus = EIZ_Skandinavian_Volunteer_Quality
+            }
+
+            relative_position_id = EIZ_Polish_Volunteer_Quantity
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Skandinavian_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Polish_Volunteer_Quality
+            }
+            prerequisite = {
+                focus = EIZ_Polish_Volunteer_Quantity
+            }
+
+            mutually_exclusive = {focus = EIZ_Skandinavian_Volunteer_Quantity
+            }
+           
+            relative_position_id = EIZ_Polish_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Baltic_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Skandinavian_Volunteer_Quantity
+            }
+            prerequisite = {
+                focus = EIZ_Skandinavian_Volunteer_Quantity
+            }
+           
+            mutually_exclusive { focus = EIZ_Baltic_Volunteer_Quantity}
+
+            relative_position_id = EIZ_Skandinavian_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Baltic_Volunteer_Quantity
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 2
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Polish_Volunteer_Quality
+            }
+            prerequisite = {
+                focus = EIZ_Polish_Volunteer_Quantity
+            }
+
+            mutually_exclusive { focus = EIZ_Baltic_Volunteer_Quality}
+            
+           
+            relative_position_id = EIZ_Skandinavian_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Swiss_Volunteer_Quantity
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 2
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Baltic_Volunteer_Quantity
+            }
+            prerequisite = {
+                focus = EIZ_Baltic_Volunteer_Quality
+            }
+
+            mutually_exclusive { focus = EIZ_Swiss_Volunteer_Quaality}
+            
+           
+           
+            relative_position_id = EIZ_Baltic_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Swiss_Volunteer_Quaality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Baltic_Volunteer_Quantity
+            }
+            prerequisite = {
+                focus = EIZ_Baltic_Volunteer_Quality
+            }
+
+            mutually_exclusive { focus = EIZ_Swiss_Volunteer_Quaality}
+            
+           
+            relative_position_id = EIZ_Baltic_Volunteer_Quality
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        #Oscars tree
+
+        #Military branches
+        focus = {
+            id = EIZ_Panic_At_The_Staff_Office
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -10
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Subvert_The_Monarchists
+            }
+           
+            relative_position_id = EIZ_Subvert_The_Monarchists
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Exploring_Abandoned_Structures
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -2
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Panic_At_The_Staff_Office
+            }
+            
+            mutually_exclusive = {focus = EIZ_Using_What_We_Hasve
+        }
+            relative_position_id = EIZ_Panic_At_The_Staff_Office
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_Repurposing_Underground_Metro_Lanes
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Exploring_Abandoned_Structures
+            }
+            
+            relative_position_id = EIZ_Exploring_Abandoned_Structures
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+                
+        focus = {
+            id = EIZ_Federal_Reserves_reclamation
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Exploring_Abandoned_Structures
+            }
+            
+            relative_position_id = EIZ_Exploring_Abandoned_Structures
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Administrative_Archives_Unearthed
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -4
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Exploring_Abandoned_Structures
+            }
+            
+            relative_position_id = EIZ_Exploring_Abandoned_Structures
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_The_Presidential_Bunker
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Repurposing_Underground_Metro_Lanes
+            }
+            
+            prerequisite = {
+                focus = EIZ_Federal_Reserves_reclamation
+            }
+
+            prerequisite = {
+                focus = EIZ_Administrative_Archives_Unearthed
+            }
+            relative_position_id = EIZ_Repurposing_Underground_Metro_Lanes
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Take_TO_The_Sea
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_The_Presidential_Bunker
+            }
+            
+            relative_position_id = EIZ_The_Presidential_Bunker
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_RECALL_THE_FLEETS
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Take_TO_The_Sea
+            }
+            
+            relative_position_id = EIZ_Take_TO_The_Sea
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_WE_MUST_LAND
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -3
+            y = 0.5
+    
+            prerequisite = { 
+                focus = EIZ_OUR_TANKS_MUST_SWIM
+            }
+
+            prerequisite = {
+                focus =EIZ_Everry_Boat_A_Transport
+            }
+            
+            relative_position_id = EIZ_OUR_TANKS_MUST_SWIM
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Stick_The_Landing
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_WE_MUST_LAND
+            }
+
+           
+            relative_position_id = EIZ_WE_MUST_LAND
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_CALL_UPON_THE_TRUE_RUSSIANS
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_WE_MUST_LAND
+            }
+
+            prerequisite = {
+                focus =EIZ_SUMMON_THE_ICEBREAKERS
+            }
+            
+            relative_position_id = EIZ_WE_MUST_LAND
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_Right_Man_For_The_Job
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_CALL_UPON_THE_TRUE_RUSSIANS
+            }
+
+          
+            relative_position_id = EIZ_CALL_UPON_THE_TRUE_RUSSIANS
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+              
+        focus = {
+            id = EIZ_THEY_WONT_SEE_IT_COMING
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Right_Man_For_The_Job
+            }
+
+            prerequisite = {
+                focus = EIZ_Stick_The_Landing
+            }
+
+          
+            relative_position_id = EIZ_Right_Man_For_The_Job
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+
+        focus = {
+            id = EIZ_OUR_TANKS_MUST_SWIM
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_RECALL_THE_FLEETS
+            }
+            
+            relative_position_id = EIZ_RECALL_THE_FLEETS
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+
+               
+        focus = {
+            id = EIZ_Everry_Boat_A_Transport
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_RECALL_THE_FLEETS
+            }
+            
+            relative_position_id = EIZ_RECALL_THE_FLEETS
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_SUMMON_THE_ICEBREAKERS
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_Everry_Boat_A_Transport
+            }
+            
+            relative_position_id = EIZ_Everry_Boat_A_Transport
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+        focus = {
+            id = EIZ_Using_What_We_Hasve
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 2
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Panic_At_The_Staff_Office
+            }
+
+            mutually_exclusive = {focus = EIZ_Exploring_Abandoned_Structures
+            }
+
+             relative_position_id = EIZ_Panic_At_The_Staff_Office
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+
+        
+
+
+        
+    
+    
         
 }
 
