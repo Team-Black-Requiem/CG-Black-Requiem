@@ -23,16 +23,26 @@ set_technology = {
 	eu_war_anti_air = 1
 	eu_war_artillery = 1
 	modern_artillery_90 = 1
-	early_carrier = 1
-	early_light_cruiser = 1
-	early_submarine = 1
-	early_jet_design = 1
-	early_jet_design_2 = 1
-	fighter1 = 1
-	g_support1 = 1
 }
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+	}
+}
 
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_carrier = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+	}
+}
 
 set_convoys = 100
 

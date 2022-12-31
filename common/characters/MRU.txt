@@ -1,0 +1,278 @@
+characters = {
+	
+	### CABINET & POLITICIANS
+	
+	MRU_Vsevolod_Romanov = {
+		name="Vsevolod Romanov"
+		portraits={
+			civilian={
+				large="GFX_portrait_MRU_Vsevolod_Romanov"
+			}
+		}
+		country_leader={
+			desc = "	"
+			ideology= integralism
+			traits={  }
+			expire="2020.1.1.1"
+			id = -1
+		}
+	}
+
+	MRU_generic_head_of_government = {
+		name = "Head Of Government"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = head_of_government
+			idea_token = MRU_generic_head_of_government_idea_1
+
+			allowed = {
+				tag = MRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_economy_minister = {
+		name = "The Economy Minister"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = MRU_generic_economy_minister_idea_1
+
+			allowed = {
+				tag = MRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_foreign_minister = {
+		name = "The Foreign Minister"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = foreign_minister
+			idea_token = MRU_generic_foreign_minister_idea_1
+
+			allowed = {
+				tag = MRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_minister_of_interior = {
+		name = "The Minister Of The Interior"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = minister_of_interior
+			idea_token = MRU_generic_minister_of_interior_idea_1
+
+			allowed = {
+				tag = MRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_intelligence = {
+		name = "The Intelligence Guy"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = intelligence
+			idea_token = MRU_generic_intelligence_idea_1
+
+			allowed = {
+				tag = MRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	### ARMY - NAVY - AIR (CHIEFS)
+
+	MRU_generic_army_chief = {
+		name = "Generic Genericus"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = army_chief
+			idea_token = MRU_generic_army_chief_idea_1
+			allowed = {
+				tag = MRU
+			}
+			traits = { 
+				army_chief_defensive_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_navy_chief = {
+		name = "Generic Genericus"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = navy_chief
+			allowed = {
+				tag = MRU
+			}
+			idea_token = MRU_generic_navy_chief_idea_1
+			traits = { 
+				navy_chief_decisive_battle_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_generic_air_chief = {
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = air_chief
+			allowed = {
+				tag = MRU
+			}
+			idea_token = MRU_generic_air_chief_idea_1
+			traits = { 
+				air_chief_ground_support_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	### HIGH COMMAND
+
+
+	MRU_generic_high_command = {
+		name = "High Command Feller"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = MRU_generic_high_command_1
+			traits = { 
+				army_artillery_1
+			}
+			allowed = {
+				tag = MRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+
+	### GENERALS
+
+	MRU_generic_corps_commander = {
+		name = "Corps Commander"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+
+
+}

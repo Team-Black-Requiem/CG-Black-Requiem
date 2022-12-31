@@ -1,6 +1,6 @@
 characters={
 	FRA_edouard_herriot={
-		name="Edouard Herriot"
+		name = FRA_edouard_herriot_loc
 		portraits={
 			civilian={
 				large="GFX_portrait_FRA_edouard_herriot"
@@ -40,7 +40,7 @@ characters={
 	        logistics_skill = 5
 			legacy_id=-1
 		}
-		name="Frederica de Clèves"
+		name = FRA_frederica_de_cleves
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Frederica_de_Cleves"
@@ -65,7 +65,7 @@ characters={
 					factor = 1.000
 				}
 		}
-		name="Gilles Durand"
+		name = FRA_gilles_durand_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Officier_2"
@@ -84,7 +84,6 @@ characters={
 	FRA_carver_smith={
 		advisor={
 			
-			
 			slot = high_command
 			idea_token = FRA_carver_smith
 			ledger = army
@@ -99,7 +98,7 @@ characters={
 					factor = 1.000
 				}
 		}
-		name="Carver Smith"
+		name = FRA_carver_smith_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Officier_1"
@@ -130,7 +129,7 @@ characters={
 					military_police
 				}
 		}
-		name="Oscar Hamel"
+		name = FRA_oscar_hamel_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Oscar_Hamel"
@@ -160,7 +159,7 @@ characters={
 					economic_minister_daniel_malcal
 				}
 		}
-		name="Daniel Malcal"
+		name = FRA_daniel_malcal_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Officier_1"
@@ -183,7 +182,7 @@ characters={
 					factor = 1.000
 				}
 		}
-		name="Gene Smilas"
+		name = FRA_gene_smilas_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Gene_Smilas"
@@ -215,22 +214,36 @@ characters={
 					factor = 1.000
 				}
 		}
-		name="Bradow Von Breisgau"
+		name = FRA_bradow_von_breisgau_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Officier_1"
 			}
 		}
 	}
-	FRA_claus_warwick={
-		name="Claus Warwick"
+	FRA_gandolfi_character_foreign_minister={
+		name = FRA_louis_gandolfi_loc
+		portraits={
+			civilian={
+				small="GFX_idea_JAP_generic_minister_1"
+			}
+		}
+		advisor = {
+			cost = 2000
+			slot = foreign_minister
+			idea_token = FRA_gandolfi_character_foreign_minister
+			traits = { Gandolfi_trait }
+		}
+	}
+	FRA_claus_warwick = {
+		name = FRA_claus_warwick_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_Claus_Warwick"
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer scavenger }
+		corps_commander = {
+			traits = { infantry_officer scavenger }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 5
@@ -239,8 +252,31 @@ characters={
 			legacy_id=-1
 		}
 	}
+	FRA_constantin_lyon = {
+		name = FRA_constantin_lyon_loc
+		portraits={
+			army={
+				large="GFX_portrait_FRA_constantin_lyon"
+			}
+		}
+		corps_commander = {
+			traits={ infantry_officer bearer_of_artillery }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_constantin_lyon
+			traits = { army_chief_both_1 }
+			cost = 2000
+		}
+	}
 	FRA_pierre_anou={
-		name="Pierre Anou"
+		name = FRA_pierre_anou_loc
 		portraits={
 			army={
 				large="GFX_portrait_FRA_pierre_anou"
@@ -253,6 +289,24 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 5
+			legacy_id=-1
+		}
+	}
+
+	FRA_constantin_lyon={
+		name="Constantin Lyon"
+		portraits={
+			army={
+				large="GFX_portrait_FRA_constantin_lyon"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer bearer_of_artillery }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
 			legacy_id=-1
 		}
 	}

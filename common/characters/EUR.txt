@@ -1,0 +1,338 @@
+characters = {
+		
+		
+	EUR_Mil_Coun = {
+		name="Military council"
+		portraits={
+			civilian={
+				large="GFX_portrait_EUR_Mil_Coun"
+			}
+		}
+		country_leader={
+			desc = "	"
+			ideology=paternal_autocracy
+			traits={  }
+			expire="2020.1.1.1"
+			id = -1
+		}
+	}
+	EUR_Augusta_Henry= {
+		name="Augusta Henry Highland"
+		portraits={
+			civilian={
+				large="GFX_portrait_EUR_Highland"
+			}
+		}
+	}
+	
+
+
+	### CABINET & POLITICIANS
+
+	EUR_generic_head_of_government = {
+		name = "Head Of Government"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = head_of_government
+			idea_token = EUR_generic_head_of_government_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_economy_minister = {
+		name = "The Economy Minister"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = EUR_generic_economy_minister_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EUR_Britannian_economy_minister = {
+		name = "Noble"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = EUR_generic_economy_minister_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				britannian_supplier
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_foreign_minister = {
+		name = "The Foreign Minister"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = foreign_minister
+			idea_token = EUR_generic_foreign_minister_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_minister_of_interior = {
+		name = "The Minister Of The Interior"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = minister_of_interior
+			idea_token = EUR_generic_minister_of_interior_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_intelligence = {
+		name = "The Intelligence Guy"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = intelligence
+			idea_token = EUR_generic_intelligence_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+
+
+	### ARMY - NAVY - AIR (CHIEFS)
+
+	EUR_generic_army_chief = {
+		name = "Generic Genericus"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = army_chief
+			idea_token = EUR_generic_army_chief_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				army_chief_defensive_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_navy_chief = {
+		name = "Generic Genericus"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = EUR_generic_navy_chief_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				navy_chief_decisive_battle_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_generic_air_chief = {
+		name = "Generic Genericus"
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = air_chief
+			idea_token = EUR_generic_air_chief_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				air_chief_ground_support_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	### HIGH COMMAND
+
+
+	EUR_generic_high_command = {
+		name = "High Command Feller"
+
+		#portraits = {
+		#	
+		#}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = EUR_generic_high_command_1
+			traits = { 
+				army_artillery_1
+			}
+			allowed = {
+				tag = EUR
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	EUR_Michele_Manfredi={
+		name= "Michele Manfredi"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={  }
+				skill=4
+				attack_skill=4
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
+		}
+	}
+
+
+	### GENERALS
+
+	EUR_generic_corps_commander = {
+		name = "Corps Commander"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+
+}

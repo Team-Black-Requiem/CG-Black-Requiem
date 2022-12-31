@@ -9,6 +9,7 @@
 		}
 	}
 	
+	
 
 	default = no
 	
@@ -19,167 +20,189 @@
 			x = 18
 			y = 0
 			available = {
-			####has country flag about reforming the first region
+                country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 100
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				set_country_flag = first_region_reform
+				add_political_power = 50
+				add_stability = 0.02
+				add_war_support = 0.02
 
-		}
+		    }
 	}
 			focus = {
-			id = RUS_Get_rid_of_corrupt_officials_in_Moscow
+			id = RUS_Unexpected_arest ###Event, where will we learn about the arrest of a municipal deputy, from whom an investigation of a corruption scheme will begin
 			icon = GFX_RUS_Get_rid_of_corrupt_officials_in_Moscow
 			cost = 10
 			prerequisite = { focus = RUS_need_for_reforms }
 			relative_position_id = RUS_need_for_reforms
 			x = -6
-			y = 2
+			y = 1
 			available = {
-			####has country flag about reforming the first region
+			   
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### -pp +few percent to the admin. reforming of the first region
-		}
-	}
-			focus = {
-			id = RUS_Secretly_buy_assets_of_corrupt_officials
-			icon = GFX_RUS_Secretly_buy_assets_of_corrupt_officials
-			cost = 5
-			prerequisite = { focus = RUS_Get_rid_of_corrupt_officials_in_Moscow }
-			relative_position_id = RUS_Get_rid_of_corrupt_officials_in_Moscow
-			x = -2
-			y = 1
-			available = {
-			####has country flag about reforming the first region
+			###################### -pp +few percent to the admin. reforming of the first region -stab
+			add_political_power = -100
+			add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
 			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### +ind factory -adm reform
+			add_stability = -0.15
+			RUS = { country_event = RUS.24}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 			focus = {
-			id = RUS_Delegation_to_the_Caucasus
-			icon = GFX_RUS_Delegation_to_the_Caucasus
+			id = RUS_Investigation_of_goverment_orders_shipyards_Petersburg ####An event where we discover that most of the ships that were built for the state are not listed in the Russian Navy. Some similar ships have been spotted in the Persian Gulf. It is worth investigating in the Middle East
+			icon = GFX_RUS_Inspect_Black_Sea_shipyards
 			cost = 5
-			prerequisite = { focus = RUS_Get_rid_of_corrupt_officials_in_Moscow}
-			relative_position_id = RUS_Get_rid_of_corrupt_officials_in_Moscow
+			prerequisite = { focus = RUS_Unexpected_arest}
+			relative_position_id = RUS_Unexpected_arest
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### event (options: Agree with their customs(get cool mountain general, but -army reform OR +army reform, but heavier debuffs on Caucasians modifiers))
+			###################### +2 shipyards +few percent to the admin. reforming of the first region +few percent to the econ. reforming of the first region
+			RUS = { country_event = RUS.25 }
+			add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
+			}
+			add_to_variable = {
+			RUS_reform_region_1_econ = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
+			custom_effect_tooltip = RUS_reform_region_1_econ_tt
 		}
 	}
 
 			focus = {
-			id = RUS_Complicate_departure_procedure_in_EU
-			icon = GFX_RUS_Complicate_departure_procedure_in_EU
+			id = RUS_investigation_continues_in_Caucasus ######We learn that almost the entire government in the region of Armenia and Azerbaijan is associated with bandit groups that operate on the border with Iran(Event)
+			icon = GFX_RUS_Delegation_to_the_Caucasus
 			cost = 5
-			prerequisite = { focus = RUS_Delegation_to_the_Caucasus }
-			relative_position_id = RUS_Delegation_to_the_Caucasus
-			mutually_exclusive = { focus = RUS_Improve_conditions_for_immigrants }
-			x = -1
+			prerequisite = { focus = RUS_Investigation_of_goverment_orders_shipyards_Petersburg }
+			relative_position_id = RUS_Investigation_of_goverment_orders_shipyards_Petersburg
+			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### -adm +econ reform (mb -consumer goods)
-		}
-	}
-			focus = {
-			id = RUS_Improve_conditions_for_immigrants
-			icon = GFX_RUS_Improve_conditions_for_immigrants
-			cost = 5
-			prerequisite = { focus = RUS_Delegation_to_the_Caucasus }
-			relative_position_id = RUS_Delegation_to_the_Caucasus
-			mutually_exclusive = { focus = RUS_Complicate_departure_procedure_in_EU }
-			x = 1
-			y = 1
-			available = {
-			####has country flag about reforming the first region
+			###################### +few percent to the admin. reforming of the first region -pp
+			add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
 			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### +adm(From EU) -econ reform (mb +consumer goods) +pp
+			add_political_power = -50
+			RUS = { country_event = RUS.26}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 				focus = {
-			id = RUS_Nationalize_shipyards_of_St_Petersburg
-			icon = GFX_RUS_Nationalize_shipyards_of_St_Petersburg
+			id = RUS_Conduct_investigation_in_Armenia
+			icon = GFX_RUS_Conduct_investigation_in_Armenia
 			cost = 5
-			prerequisite = { focus = RUS_Improve_conditions_for_immigrants 
-							 focus = RUS_Complicate_departure_procedure_in_EU }
-			relative_position_id = RUS_Improve_conditions_for_immigrants
+			prerequisite = { focus = RUS_investigation_continues_in_Caucasus }
+			relative_position_id = RUS_investigation_continues_in_Caucasus
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### -stab +dockyards and econ reform 
+			###################### +few percent to the admin. reforming of the first region (If this is the last focus of these two, then launch an event where we will find that the border guards and those responsible for them are not doing their job so honestly)
+			add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
+			}
+			RUS = { country_event = RUS.27 }
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
+		}
+	}
+					focus = {
+			id = RUS_Conduct_investigation_in_Azerbaijan
+			icon = GFX_RUS_Conduct_investigation_in_Azerbaijan
+			cost = 5
+			prerequisite = { focus = RUS_investigation_continues_in_Caucasus }
+			relative_position_id = RUS_investigation_continues_in_Caucasus
+			x = 1
+			y = 1
+			available = {
+			
+            country_exists = RUS
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +few percent to the admin. reforming of the first region (If this is the last focus of these two, then launch an event where we will find that the border guards and those responsible for them are not doing their job so honestly)
+			add_to_variable = {
+				RUS_reform_region_1_admin = 0.1
+			}
+			RUS = { country_event = RUS.28}
+			custom_effect_tooltip = RUS_reform_region_1_admin_tt
 		}
 	}
 
 			focus = {
-			id = RUS_Inspect_Black_Sea_shipyards
-			icon = GFX_RUS_Inspect_Black_Sea_shipyards
+			id = RUS_Conduct_check_border_guards ####During this event. A border officer tells us that he was present at the talks between Iranian bandit groups and one of our Prime Minister's confidants
+			icon = GFX_RUS_Conduct_check_border_guards
 			cost = 5
-			prerequisite = { focus = RUS_Nationalize_shipyards_of_St_Petersburg }
-			relative_position_id = RUS_Nationalize_shipyards_of_St_Petersburg
-			x = 0
+			prerequisite = { focus = RUS_Conduct_investigation_in_Armenia }
+			prerequisite = { focus = RUS_Conduct_investigation_in_Azerbaijan }
+			relative_position_id = RUS_Conduct_investigation_in_Armenia
+			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the first region
+			
+            country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### event (options: Use shipyards for civ purpose +eco +pp OR use for navy +army and 2 submarines in project
+			###################### -pp +few percent to the army. reforming of the first region
+			add_political_power = -50
+			add_to_variable = {
+				RUS_reform_region_1_army = 0.1
+			}
+			RUS = { country_event = RUS.29 }
+			custom_effect_tooltip = RUS_reform_region_1_army_tt
+
 		}
 	}
 			focus = {
-			id = RUS_End_reformation_of_1st_region
-			icon = GFX_RUS_End_reformation_of_1st_region
+			id = RUS_Arrest_the_traitor ####Add from the very beginning of the game a prime minister who is not deleted (as the head of the NKVD in the vanilla USSR), who will give -stability and + pp. In the event of this focus, when arrested, he resists, killing 10 policemen, but he himself was killed after a small chase
+			icon = GFX_RUS_Arrest_the_traitor
 			cost = 5
-			prerequisite = { focus = RUS_Inspect_Black_Sea_shipyards }
-			relative_position_id = RUS_Inspect_Black_Sea_shipyards
+			prerequisite = { focus = RUS_Conduct_check_border_guards }
+			relative_position_id = RUS_Conduct_check_border_guards
 			x = 0
 			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the first region
-				}
-			}
 			available = {
 			
 			}
@@ -188,13 +211,19 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+				set_country_flag = second_region_reform
+				clr_country_flag = first_region_reform
+			#################################-11 manpower -pp +new event about new prime minister (3 to choose from, everyone will give small buffs (the first for stability and pp, the second for the economy and speed of construction, the third for the army) The choice of this prime minister will depend on which category of reforms the percentages will be added to)
 			
+
+			RUS = { country_event = RUS.30 }
+
 		}
 	}
 
 	#####################################################################################
 			focus = {
-			id = RUS_Re_launch_Ural_steel_industry
+			id = RUS_Re_launch_Ural_steel_industry ######An event where we understand that one of the main industrial concerns does not produce the amount of steel that is published in the reports. Why do we need to amend the budget and conduct another investigation
 			icon = GFX_RUS_Re_launch_Ural_steel_industry
 			cost = 10
 			prerequisite = { focus = RUS_need_for_reforms }
@@ -202,14 +231,20 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			RUS = { has_completed_focus = RUS_Arrest_the_traitor }
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### -pp +eco. reforming of the second region  +steel, mb get rid of some debuffs in "agrarian economy"? 
+			###################### +eco. reforming of the second region -steel in Magnitogorsk
+			add_to_variable = {
+				RUS_reform_region_2_econ = 0.1
+			}
+
+			RUS = { country_event = RUS.31 }
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 			focus = {
@@ -221,165 +256,172 @@
 			x = 0
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### -pp +army. reforming of the second region +mil factory, mb get rid of some debuffs in "agrarian economy"? 
+			###################### -pp +army. reforming of the second region +mil factory
+			add_political_power = -50
+			add_to_variable = {
+				RUS_reform_region_2_army = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
 		}
 	}
 			focus = {
-			id = RUS_disband_national_formations
-			icon = GFX_RUS_disband_national_formations
+			id = RUS_Check_the_factory #######An event where we find out that the plant is run by a director who has been dead for several years, and his deputy, who disappeared before the inspection arrived, manages everything
+			icon = GFX_RUS_Check_the_factory
 			cost = 5
 			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
 			relative_position_id = RUS_Re_launch_Ural_steel_industry
-			mutually_exclusive = { focus = RUS_integrate_national_formations }
+			mutually_exclusive = { focus = RUS_Check_military_government_orders_in_region }
 			x = -1
 			y = 2
 			available = {
-			####has country flag about reforming the second region
+			
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### +army reform +manpower -war support -to "russians nationalists" idea
+			###################### +eco. reforming of the second region
+			add_to_variable = {
+				RUS_reform_region_2_econ = 0.1
+			}
+			RUS = { country_event = RUS.32 }
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 			focus = {
-			id = RUS_integrate_national_formations
-			icon = GFX_RUS_integrate_national_formations
+			id = RUS_Check_military_government_orders_in_region #######An event where we find that most of the contracts are frozen for a certain period, and the money has already been paid for them
+			icon = GFX_RUS_destroy_bandits
 			cost = 5
 			prerequisite = { focus = RUS_Re_launch_Ural_steel_industry }
 			relative_position_id = RUS_Re_launch_Ural_steel_industry
-			mutually_exclusive = { focus = RUS_disband_national_formations }
+			mutually_exclusive = { focus = RUS_Check_the_factory }
 			x = 1
 			y = 2
 			available = {
-			####has country flag about reforming the second region
+			
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### -army reform +militia div +to "russians nationalists" idea
-		}
-	}
-			focus = {
-			id = RUS_destroy_bandits
-			icon = GFX_RUS_destroy_bandits
-			cost = 5
-			prerequisite = { focus = RUS_disband_national_formations }
-			relative_position_id = RUS_disband_national_formations
-			x = 0
-			y = 1
-			available = {
-			####has country flag about reforming the second region
+			###################### +army. reforming of the second region -pp
+			add_to_variable = {
+				RUS_reform_region_2_army = 0.1
 			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### +stab +pp
+			add_political_power = -50
+			RUS = { country_event = RUS.33 }
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
 		}
 	}
 			focus = {
-			id = RUS_Train_army_to_fight_in_taiga
-			icon = GFX_RUS_Train_army_to_fight_in_taiga
-			cost = 5
-			prerequisite = { focus = RUS_integrate_national_formations }
-			relative_position_id = RUS_integrate_national_formations
-			x = 0
-			y = 1
-			available = {
-			####has country flag about reforming the second region
-			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### +army reform +army xp, mb get rid of some debuffs in "republican army"?
-		}
-	}
-			focus = {
-			id = RUS_Increasing_administrative_inspections_of_small_regions
+			id = RUS_Find_the_fugitive #####An event (how many of them there are) where the deputy, in exchange for life, helps us and tells us that the director died under "accidental" circumstances, and at the same time he received an order for the supply of steel to the Far Eastern region. In exchange for incognito, the buyer paid almost 2 times the market price.
 			icon = GFX_RUS_Increasing_administrative_inspections_of_small_regions
 			cost = 5
-			prerequisite = { focus = RUS_destroy_bandits 
-							 focus = RUS_Train_army_to_fight_in_taiga}
-			relative_position_id = RUS_destroy_bandits
+			prerequisite = { focus = RUS_Check_the_factory }
+			relative_position_id = RUS_Check_the_factory
+			x = 0
+			y = 1
+			available = {
+			
+                  country_exists = RUS
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +pp +few percent to the admin. reforming of the second region
+			add_political_power = 50
+			add_to_variable = {
+				RUS_reform_region_2_admin = 0.1
+			}
+			RUS = { country_event = RUS.34 }
+			custom_effect_tooltip = RUS_reform_region_2_admin_tt
+		}
+	}
+			focus = {
+			id = RUS_Investigation_at_infantry_weapons_factories #####An event where we learn that some of our weapons are being secretly transported to the Far Eastern Military District
+			icon = GFX_RUS_Investigation_at_infantry_weapons_factories
+			cost = 5
+			prerequisite = { focus = RUS_Check_military_government_orders_in_region }
+			relative_position_id = RUS_Check_military_government_orders_in_region
+			x = 0
+			y = 1
+			available = {
+			
+                  country_exists = RUS
+			}
+			ai_will_do = {
+					factor = 0
+				}
+			available_if_capitulated = no
+			completion_reward = { 
+			###################### +army reform +2 mill factory
+			add_to_variable = {
+				RUS_reform_region_2_army = 0.1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			RUS = { country_event = RUS.35 }
+			custom_effect_tooltip = RUS_reform_region_2_army_tt
+		}
+	}
+			focus = {
+			id = RUS_Appoint_managers_loyal_to_the_government
+			icon = GFX_RUS_integrate_national_formations
+			cost = 5
+			prerequisite = { focus = RUS_Find_the_fugitive 
+							 focus = RUS_Investigation_at_infantry_weapons_factories}
+			relative_position_id = RUS_Find_the_fugitive
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+			
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 0
 				}
 			available_if_capitulated = no
 			completion_reward = { 
-			###################### +adm +eco -pp -stab
-		}
-	}
-			focus = {
-			id = RUS_Creating_workarounds 
-			icon = GFX_RUS_Creating_workarounds 
-			cost = 5
-			prerequisite = { focus = RUS_Increasing_administrative_inspections_of_small_regions }
-			relative_position_id = RUS_Increasing_administrative_inspections_of_small_regions
-			x = 2
-			y = 1
-			available = {
-			####has country flag about reforming the second region
+			###################### +adm +eco -pp (return all steel to Magnitogorsk)
+			add_to_variable = {
+				RUS_reform_region_2_admin = 0.1	
 			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### -adm +pp 
+			add_to_variable = {
+			RUS_reform_region_2_econ = 0.1
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 582
+			}
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
+			custom_effect_tooltip = RUS_reform_region_2_admin_tt
 		}
 	}
 			focus = {
-			id = RUS_Creation_of_small_parliament 
-			icon = GFX_RUS_Creation_of_small_parliament 
+			id = RUS_modernize_the_industry
+			icon = GFX_RUS_modernize_the_industry
 			cost = 5
-			prerequisite = { focus = RUS_Increasing_administrative_inspections_of_small_regions }
-			relative_position_id = RUS_Increasing_administrative_inspections_of_small_regions
+			prerequisite = { focus = RUS_Appoint_managers_loyal_to_the_government }
+			relative_position_id = RUS_Appoint_managers_loyal_to_the_government
 			x = 0
 			y = 1
-			available = {
-			####has country flag about reforming the second region
-			}
-			ai_will_do = {
-					factor = 0
-				}
-			available_if_capitulated = no
-			completion_reward = { 
-			###################### ++adm +pp 
-		}
-	}
-			focus = {
-			id = RUS_End_reformation_of_2nd_region
-			icon = GFX_RUS_End_reformation_of_2nd_region
-			cost = 5
-			prerequisite = { focus = RUS_Creation_of_small_parliament }
-			relative_position_id = RUS_Creation_of_small_parliament
-			x = 0
-			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the second region
-				}
-			}
 			available = {
 			
 			}
@@ -387,8 +429,21 @@
 					factor = 0
 				}
 			available_if_capitulated = no
-			completion_reward = { 
-			
+			completion_reward = { ############+eco +2 mil factory +2 civ factory
+			add_to_variable = {
+				RUS_reform_region_2_econ = 0.1
+			}
+			set_country_flag = third_region_reform
+			clr_country_flag = second_region_reform
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			custom_effect_tooltip = RUS_reform_region_2_econ_tt
 		}
 	}
 	#################################################################################################
@@ -399,16 +454,21 @@
 			prerequisite = { focus = RUS_need_for_reforms }
 			relative_position_id = RUS_need_for_reforms
 			x = 6
-			y = 2
+			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
+			RUS = { has_completed_focus = RUS_modernize_the_industry }
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### -mannpower (like 1378) +pp +current ideology drift
+			###################### -2000 mannpower +pp +current ideology drift
+			add_manpower = -2916
+			add_political_power = 50
+			#!!
 		}
 	}
 			focus = {
@@ -420,7 +480,8 @@
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -428,6 +489,11 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
+			add_stability = 0.1
+			add_to_variable = {
+				RUS_reform_region_3_admin = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_admin_tt
 		}
 	}
 			focus = {
@@ -439,7 +505,8 @@
 			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
@@ -447,80 +514,138 @@
 			available_if_capitulated = no
 			completion_reward = {
 			###################### +stab
+			add_stability = 0.1
+			add_to_variable = {
+				RUS_reform_region_3_admin = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_admin_tt
 		}
 	}
 				focus = {
-			id = RUS_Formation_of_the_regions_own_budgets
-			icon = GFX_RUS_Formation_of_the_regions_own_budgets
+			id = RUS_Get_on_the_trail ######Event: During one of the raids on the nationalists, we found that they were using weapons, the marking of which coincides with the recent batch of our order.
+			icon = GFX_RUS_Get_on_the_trail
 			cost = 5
-			prerequisite = { focus = RUS_Strengthen_influence_of_the_capital_on_local_government
-							 focus = RUS_Increase_loyalty_of_population}
+			prerequisite = { focus = RUS_Strengthen_influence_of_the_capital_on_local_government}
+			prerequisite = { focus = RUS_Increase_loyalty_of_population}
 			relative_position_id = RUS_Strengthen_influence_of_the_capital_on_local_government
 			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### +eco +adm
+			###################### +1000 rifles and 20 motorized infantry +army reforming for the 3rd region
+			add_to_variable = {
+				RUS_reform_region_3_army = 0.1
+			}
+			RUS = { country_event = RUS.36 }
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
+
 		}
 	}
 			focus = {
-			id = RUS_Creation_of_a_new_research_center_in_the_Far_East
-			icon = GFX_RUS_Creation_of_a_new_research_center_in_the_Far_East
+			id = RUS_Strengthen_raids_on_nationalist_bases  #####We are finding more and more of our latest weapons, and former lower-ranking officers are at the head of the bases
+			icon = GFX_RUS_Strengthen_raids_on_nationalist_bases
 			cost = 10
-			prerequisite = { focus = RUS_Formation_of_the_regions_own_budgets}
-			relative_position_id = RUS_Formation_of_the_regions_own_budgets
-			x = 0
+			prerequisite = { focus = RUS_Get_on_the_trail}
+			relative_position_id = RUS_Get_on_the_trail
+			x = -1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### -pp +tech slot +eco +army
+			###################### +3000 rifles +army reforming for the 3rd region
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+			add_to_variable = {
+				RUS_reform_region_3_army = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 		}
 	}
 				focus = {
-			id = RUS_Creation_of_an_innovative_Pacific_Fleet
-			icon = GFX_RUS_Creation_of_an_innovative_Pacific_Fleet
+			id = RUS_Conduct_an_inventory_of_military_units
+			icon = GFX_RUS_Conduct_an_inventory_of_military_units
+			cost = 10
+			prerequisite = { focus = RUS_Get_on_the_trail}
+			relative_position_id = RUS_Get_on_the_trail
+			x = 1
+			y = 1
+			available = {
+				
+                  country_exists = RUS
+			}
+			ai_will_do = {
+					factor = 30
+				}
+			available_if_capitulated = no
+			completion_reward = {
+			###################### +1000 rifles +500 sup equipment +army reforming for the 3rd region
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+			add_to_variable = {
+				RUS_reform_region_3_army = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
+		}
+	}
+				focus = {
+			id = RUS_Conduct_an_investigation_in_Irkutsk ######After a little investigation from the head of the administration, we learn that the entire region is secretly controlled by the 	
+																#Field Marshal of the Far Eastern Military District. Thanks to his plans, he puts the Russian army in a bad light, and also secretly commands nationalists, trying to incite hatred among the population towards the Moscow government and the army.
+			icon = GFX_RUS_Conduct_an_investigation_in_Irkutsk
 			cost = 5
-			prerequisite = { focus = RUS_Creation_of_a_new_research_center_in_the_Far_East}
-			relative_position_id = RUS_Creation_of_a_new_research_center_in_the_Far_East
-			x = 0
+			prerequisite = { focus = RUS_Strengthen_raids_on_nationalist_bases}
+			prerequisite = { focus = RUS_Conduct_an_inventory_of_military_units}
+			relative_position_id = RUS_Strengthen_raids_on_nationalist_bases
+			x = 1
 			y = 1
 			available = {
-			####has country flag about reforming the second region
+				
+                  country_exists = RUS
 			}
 			ai_will_do = {
 					factor = 30
 				}
 			available_if_capitulated = no
 			completion_reward = {
-			###################### +army +pp +some projects of ships in production line
+			###################### -stab +adm reform
+			add_stability = 0.05
+			add_to_variable = {
+				RUS_reform_region_3_army = 0.1
+			}
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 		}
 	}
 				focus = {
-			id = RUS_End_reformation_of_3rd_region
+			id = RUS_End_of_the_Nationalist #########################################After he was charged. The leader of the nationalists refused to surrender and dug in a small military base in the South of Lake Baikal. Having gathered everyone who was nearby, he posed a great threat to us. 																Although the assault was heavy, but we were able to break this fortress. The Field Marshal himself tried to escape in a small boat, but was destroyed by the only aircraft that was at his disposal. The pilot was awarded. The Field Marshal's body was not found.
 			icon = GFX_RUS_End_reformation_of_3rd_region
 			cost = 5
-			prerequisite = { focus = RUS_Creation_of_an_innovative_Pacific_Fleet }
-			relative_position_id = RUS_Creation_of_an_innovative_Pacific_Fleet
+			prerequisite = { focus = RUS_Conduct_an_investigation_in_Irkutsk }
+			relative_position_id = RUS_Conduct_an_investigation_in_Irkutsk
 			x = 0
 			y = 1
-			bypass = {
-				NOT = {
-				####has country flag about reforming the third region
-				}
-			}
 			available = {
+				
+				country_exists = RUS
 			
 			}
 			ai_will_do = {
@@ -528,6 +653,14 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+				country_event = russiaCW.8
+			clr_country_flag = third_region_reform
+			######Kill Field Marshal ""; +army reform; delete nationalists idea; +research speed to Mass Assault doctrine
+			add_to_variable = {
+				RUS_reform_region_3_army = 0.1
+			}
+			RUS = { country_event = RUS.37 }
+			custom_effect_tooltip = RUS_reform_region_3_army_tt
 			
 		}
 	}
@@ -536,10 +669,10 @@
 			id = RUS_Long_live_the_Republic
 			icon = GFX_RUS_Long_live_the_Republic
 			cost = 5
-			prerequisite = { focus = RUS_End_reformation_of_1st_region }
-			prerequisite = { focus = RUS_End_reformation_of_2nd_region }
-			prerequisite = { focus = RUS_End_reformation_of_3rd_region }
-			relative_position_id = RUS_End_reformation_of_2nd_region
+			prerequisite = { focus = RUS_Arrest_the_traitor }
+			prerequisite = { focus = RUS_modernize_the_industry }
+			prerequisite = { focus = RUS_End_of_the_Nationalist }
+			relative_position_id = RUS_modernize_the_industry
 			x = 0
 			y = 1
 			available = {
@@ -550,6 +683,62 @@
 				}
 			available_if_capitulated = no
 			completion_reward = { 
+				custom_effect_tooltip = RUS_civil_war_results_tt
+				if = {
+					limit = { 
+						AND = { 
+							check_variable = { RUS_reform_region_1_admin = 100 }
+							check_variable = { RUS_reform_region_2_admin = 100 }
+							check_variable = { RUS_reform_region_3_admin = 100 }
+
+							check_variable = { RUS_reform_region_1_admin_econ = 100 }
+							check_variable = { RUS_reform_region_2_admin_econ = 100 }
+							check_variable = { RUS_reform_region_3_admin_econ = 100 }
+
+							check_variable = { RUS_reform_region_1_admin_army = 100 }
+							check_variable = { RUS_reform_region_2_admin_army = 100 }
+							check_variable = { RUS_reform_region_3_admin_army = 100 }
+                        
+
+
+
+						}
+
+
+
+
+					}
+					country_event = RUS.38
+
+
+					else_if = {
+						limit = { 
+							OR = { 
+								check_variable = { RUS_reform_region_1_admin < 100 }
+								check_variable = { RUS_reform_region_2_admin < 100 }
+								check_variable = { RUS_reform_region_3_admin < 100 }
+	
+								check_variable = { RUS_reform_region_1_admin_econ < 100 }
+								check_variable = { RUS_reform_region_2_admin_econ < 100 }
+								check_variable = { RUS_reform_region_3_admin_econ < 100 }
+	
+								check_variable = { RUS_reform_region_1_admin_army < 100 }
+								check_variable = { RUS_reform_region_2_admin_army < 100 }
+								check_variable = { RUS_reform_region_3_admin_army < 100 }
+							
+	
+	
+	
+							}
+	
+	
+	
+	
+						}
+						country_event = RUS.39
+					}
+				}
+
 			
 		}
 	}

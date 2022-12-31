@@ -2,8 +2,6 @@
 
 oob = "IND"
 
-
-
 set_stability = 0.47
 set_war_support = 0.46
 
@@ -16,22 +14,33 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	early_submarine = 1
-	early_destroyer = 1
 	support_equip = 1
 	tank_design = 1
-	motorised_infantry = 1
-	early_jet_design = 1
-	early_jet_design_2 = 1
+	motorised_infantry = 1	
 }
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+}
 
 add_ideas = {
 rampant_corruption
 member_state
 chinese_exploitation
 }
-
 
 set_convoys = 90
 
@@ -52,9 +61,6 @@ set_popularities = {
 	moderate_socialism = 15
 }
 
-
-
-
 create_country_leader = {
 	name = "Empress Tianzi"
 	desc = "POLITICS_EMPRESS_TIENZI_PUPPETS_DESC"
@@ -65,8 +71,3 @@ create_country_leader = {
 	chinese_oppression
 	}
 }
-
-
-
-
-

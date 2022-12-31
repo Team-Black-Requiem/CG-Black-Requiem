@@ -1,8 +1,6 @@
 equipments = {
-
 	fighter_equipment = {
 		year = 1980
-
 
 		is_archetype = yes
 		is_convertable = yes
@@ -23,6 +21,12 @@ equipments = {
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			air_superiority
+			interception
 		}
 
 		air_superiority = 1
@@ -50,11 +54,8 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
 		}
-
+		
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -76,6 +77,12 @@ equipments = {
 			cv_plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			air_superiority
+			interception
 		}
 
 		air_superiority = 1
@@ -103,9 +110,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
+
 		}
 
 		is_archetype = yes
@@ -127,6 +132,14 @@ equipments = {
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			cas
+			attack_logistics
+			naval_bomber
+			port_strike
 		}
 
 		air_superiority = 1
@@ -154,9 +167,7 @@ equipments = {
 		year = 1980
 
 		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
+
 		}
 
 		is_archetype = yes
@@ -179,6 +190,14 @@ equipments = {
 			cv_plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			cas
+			attack_logistics
+			naval_bomber
+			port_strike
 		}
 
 		air_superiority = 1
@@ -286,7 +305,6 @@ equipments = {
 		air_agility = 80
 		air_attack = 32
 		air_defence = 14	
-		
 				
 		build_cost_ic = 28
 		resources = {
@@ -299,8 +317,6 @@ equipments = {
 		naval_strike_targetting = 10
 	}
 
-
-	
 	# Early Carrier Fighter
 	cv_fighter_equipment_0 = {
 		year = 2009
@@ -320,6 +336,7 @@ equipments = {
 		naval_strike_attack = 2
 		naval_strike_targetting = 10
 	}
+
 	# Basic Carrier Fighter
 	cv_fighter_equipment_1 = {
 		year = 2011
@@ -345,6 +362,7 @@ equipments = {
 		naval_strike_attack = 3
 		naval_strike_targetting = 10
 	}
+
 	# Improved Carrier Fighter
 	cv_fighter_equipment_2 = {
 		year = 2014
@@ -369,6 +387,7 @@ equipments = {
 		naval_strike_attack = 6
 		naval_strike_targetting = 10
 	}
+
 	# Advanced Carrier Fighter
 	cv_fighter_equipment_3 = {
 		year = 2018
@@ -485,6 +504,7 @@ equipments = {
 		naval_strike_attack = 9
 		naval_strike_targetting = 10
 	}
+
 	# Improved Carrier CAS
 	cv_CAS_equipment_2 = {
 		year = 2011
@@ -511,6 +531,7 @@ equipments = {
 		naval_strike_attack = 15
 		naval_strike_targetting = 10
 	}
+
 	# Advanced Carrier CAS
 	cv_CAS_equipment_3 = {
 		year = 2018
@@ -538,16 +559,12 @@ equipments = {
 		naval_strike_targetting = 10
 	}
 	
-
-	
 	# ROCKET INTERCEPTORS ###############
 	rocket_interceptor_equipment = {
 		year = 1936
 
 		can_be_produced = {
-			NOT = {
-				has_idea = BUL_army_restrictions
-			}
+
 		}
 
 		is_archetype = yes
@@ -568,6 +585,11 @@ equipments = {
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			interception
 		}
 
 		build_cost_ic = 14
@@ -648,6 +670,4 @@ equipments = {
 			rubber = 1
 		}
 	}
-
-	
 }

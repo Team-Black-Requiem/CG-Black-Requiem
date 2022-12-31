@@ -13,18 +13,29 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
-	trench_warfare = 1
-	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	early_submarine = 1
-	early_destroyer = 1
 	support_equip = 1
 	tank_design = 1
 	motorised_infantry = 1
-	early_jet_design = 1
-	early_jet_design_2 = 1
 	eu_war_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_torpedo = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
 }
 
 YUG = {
@@ -54,10 +65,8 @@ set_popularities = {
 	autocracy = 5
 }
 
-add_ideas = {
-}
-
-
+#add_ideas = {
+#}
 
 create_country_leader = {
 	name = "United European Council"
@@ -65,8 +74,8 @@ create_country_leader = {
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
 	ideology = social_conservatism
-	traits = {
-	}
+	#traits = {
+	#}
 }
 
 create_country_leader = {
@@ -75,8 +84,8 @@ create_country_leader = {
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
 	ideology = social_liberalism
-	traits = {
-	}
+	#traits = {
+	#}
 }
 
 create_country_leader = {
@@ -85,8 +94,8 @@ create_country_leader = {
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
 	ideology = social-capitalism
-	traits = {
-	}
+	#traits = {
+	#}
 }
 
 

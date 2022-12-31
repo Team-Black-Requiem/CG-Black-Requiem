@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 			name = "RUS_regions_reform_gui_decision_gui_window"
 			position = { x = 0 y = 0 }
-			size = { width = 275 height = 450 }
+			size = { width = 275 height = 570 }
 			
 			iconType = {
 				name = "RUS_map"
@@ -16,10 +16,10 @@ guiTypes = {
 
 			
 			instantTextboxType = {
-				name = "Western_Russia_title"
+				name = "Western_Russia_title_army"
 				position = { x = 15 y = 270 }
 				font = "hoi_25header"
-				text = Western_Russia_percentage
+				text = Western_Russia_percentage_army
 				format = left
 				maxWidth = 200
 				fixedsize = yes
@@ -27,10 +27,10 @@ guiTypes = {
 			}
 
 			instantTextboxType = {
-				name = "Central_Russia_title"
+				name = "Western_Russia_title_admin"
 				position = { x = 250 y = 270 }
 				font = "hoi_25header"
-				text = Central_Russia_percentage
+				text = Western_Russia_percentage_admin
 				format = left
 				maxWidth = 200
 				fixedsize = yes
@@ -38,20 +38,86 @@ guiTypes = {
 			}
 
 			instantTextboxType = {
-				name = "Eastern_Russia_title"
+				name = "Western_Russia_title_econ"
 				position = { x = 15 y = 330 }
 				font = "hoi_25header"
-				text = Eastern_Russia_percentage
+				text = Western_Russia_percentage_econ
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+			
+			instantTextboxType = {
+				name = "Central_Russia_title_army"
+				position = { x = 250 y = 330 }
+				font = "hoi_25header"
+				text = Central_Russia_percentage_army
 				format = left
 				maxWidth = 200
 				fixedsize = yes
 				maxHeight = 100
 			}
 
+			instantTextboxType = {
+				name = "Central_Russia_title_admin"
+				position = { x = 15 y = 390 }
+				font = "hoi_25header"
+				text = Central_Russia_percentage_admin
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "Central_Russia_title_econ"
+				position = { x = 250 y = 390 }
+				font = "hoi_25header"
+				text = Central_Russia_percentage_econ
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+			
+			instantTextboxType = {
+				name = "Eastern_Russia_title_army"
+				position = { x = 15 y = 450 }
+				font = "hoi_25header"
+				text = Eastern_Russia_percentage_army
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "Eastern_Russia_title_admin"
+				position = { x = 250 y = 450 }
+				font = "hoi_25header"
+				text = Eastern_Russia_percentage_admin
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "Eastern_Russia_title_econ"
+				position = { x = 15 y = 510 }
+				font = "hoi_25header"
+				text = Eastern_Russia_percentage_econ
+				format = left
+				maxWidth = 200
+				fixedsize = yes
+				maxHeight = 100
+			}
+			
 			buttonType = {
 				name = "Western_Russia"
 				orientation = center
-				position = { x = -150 y = -220 }
+				position = { x = -150 y = -275 }
 				spriteType = "GFX_decision_Western_Russia"
 	
 			}
@@ -59,14 +125,14 @@ guiTypes = {
 			buttonType = {
 				name = "Central_Russia"
 				orientation = center
-				position = { x = -147 y = -215 }
+				position = { x = -147 y = -270 }
 				spriteType = "GFX_decision_Central_Russia"
 			}
 
 			buttonType = {
 				name = "Eastern_Russia"
 				orientation = center
-				position = { x = -143 y = -215 }
+				position = { x = -143 y = -270 }
 				spriteType = "GFX_decision_Eastern_Russia"
 			}
 

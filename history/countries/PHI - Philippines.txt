@@ -1,4 +1,4 @@
-﻿`capital = 327
+﻿capital = 327
 
 oob = "PHI_START"
 
@@ -12,12 +12,25 @@ set_technology = {
 	tech_engineers = 1
 	support_equip = 1
 	tech_mountaineers = 1
-	early_frigate = 1
 	eu_war_artillery = 1
-	transport = 1
-	early_destroyer = 1
 }
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_light = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		transport = 1
+		early_destroyer = 1
+	}
+}
 
 add_ideas = {
 rampant_corruption

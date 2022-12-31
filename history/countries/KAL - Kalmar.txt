@@ -17,14 +17,26 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	early_submarine = 1
-	early_destroyer = 1
 	support_equip = 1
 	tank_design = 1
-	motorised_infantry = 1
-	early_jet_design = 1
-	early_jet_design_2 = 1
 	eu_war_anti_air = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
 }
 
 FRA = {
@@ -53,6 +65,7 @@ set_popularities = {
 }
 
 add_ideas = {
+     iceland_purchase
 }
 
 

@@ -1,0 +1,16 @@
+EIZ_foreign_arms_purchases = {
+		icon = GFX_decision_category_RUS_region_reform_category
+	priority = 80
+allowed = {
+		tag = EIZ
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = EIZ
+        OR = {
+		has_completed_focus = EIZ_Request_Economic_Support_V1
+        has_completed_focus = EIZ_Request_Economic_Support_V2
+        has_completed_focus = EIZ_Request_Economic_Support_V3
+        }
+	}
+}
