@@ -1,0 +1,561 @@
+EUR_arms_supply = {	
+	EUR_guns_for_solders= {
+		icon = d
+		available = {
+			country_exists = BRT }
+		cost = 50
+		days_remove = 45
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		
+		}
+		modifier = {
+		}
+		complete_effect = {
+		BRT = {country_event = EUR.6}
+		}
+		remove_effect = {
+			}
+		}
+	EUR_spare_parts_for_knightmares= {
+		icon = d
+		available = {
+			country_exists = BRT }
+		cost = 50
+		days_remove = 45
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		
+		}
+		modifier = {
+		}
+		complete_effect = {
+		BRT = {country_event = EUR.8}
+		}
+		remove_effect = {
+			}
+		}
+	EUR_knightmare_frames= {
+		icon = d
+		available = {
+			country_exists = BRT }
+		cost = 100
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		
+		}
+		modifier = {
+		}
+		complete_effect = {
+		BRT = {country_event = EUR.10}
+		}
+		remove_effect = {
+			}
+		}
+}
+
+EUR_foreign_arms_purchases = {
+	EUR_purchase_infantry_equipment = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ENG
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = FRA
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = FRA
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = BRT
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = BRT
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = GER
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = GER
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ITA
+					}
+					add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ITA
+					}
+				}
+			}
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 1000
+				    producer = ENG
+				}
+			}
+		}
+
+	}
+
+	EUR_purchase_support_equipment = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ENG
+					}
+					add_equipment_to_stockpile = {
+					    type = support_equipment
+					    amount = 200
+					    producer = ENG
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = FRA
+					}
+					add_equipment_to_stockpile = {
+					    type = support_equipment
+					    amount = 200
+					    producer = FRA
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = BRT
+					}
+					add_equipment_to_stockpile = {
+					    type = support_equipment
+					    amount = 200
+					    producer = BRT
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = GER
+					}
+					add_equipment_to_stockpile = {
+					    type = support_equipment
+					    amount = 200
+					    producer = GER
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ITA
+					}
+					add_equipment_to_stockpile = {
+					    type = support_equipment
+					    amount = 200
+					    producer = ITA
+					}
+				}
+			}
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 200
+				    producer = ENG
+				}
+			}
+		}
+
+	}
+
+	EUR_purchase_artillery_equipment = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ENG
+					}
+					add_equipment_to_stockpile = {
+					    type = artillery_equipment
+					    amount = 200
+					    producer = ENG
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = FRA
+					}
+					add_equipment_to_stockpile = {
+					    type = artillery_equipment
+					    amount = 200
+					    producer = FRA
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = BRT
+					}
+					add_equipment_to_stockpile = {
+					    type = artillery_equipment
+					    amount = 200
+					    producer = BRT
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = GER
+					}
+					add_equipment_to_stockpile = {
+					    type = artillery_equipment
+					    amount = 200
+					    producer = GER
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ITA
+					}
+					add_equipment_to_stockpile = {
+					    type = artillery_equipment
+					    amount = 200
+					    producer = ITA
+					}
+				}
+			}
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 200
+				    producer = ENG
+				}
+			}
+		}
+
+	}
+
+	EUR_purchase_trucks = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ENG
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 100
+					    producer = ENG
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = FRA
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 100
+					    producer = FRA
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = BRT
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 100
+					    producer = BRT
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = GER
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 100
+					    producer = GER
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ITA
+					}
+					add_equipment_to_stockpile = {
+					    type = motorized_equipment
+					    amount = 100
+					    producer = ITA
+					}
+				}
+			}
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = motorized_equipment
+				    amount = 100
+				    producer = ENG
+				}
+			}
+		}
+
+	}
+
+	EUR_purchase_tanks = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		available = {
+			
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		visible = {
+		tag = EUR
+		has_completed_focus = EUR_under_our_management
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ENG
+					}
+					add_equipment_to_stockpile = {
+					    type = cold_war_tank_equip
+					    amount = 50
+					    producer = ENG
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = FRA
+					}
+					add_equipment_to_stockpile = {
+					    type = cold_war_tank_equip
+					    amount = 50
+					    producer = FRA
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = BRT
+					}
+					add_equipment_to_stockpile = {
+					    type = cold_war_tank_equip
+					    amount = 50
+					    producer = BRT
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = GER
+					}
+					add_equipment_to_stockpile = {
+					    type = cold_war_tank_equip
+					    amount = 50
+					    producer = GER
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						has_war_with = ITA
+					}
+					add_equipment_to_stockpile = {
+					    type = cold_war_tank_equip
+					    amount = 50
+					    producer = ITA
+					}
+				}
+			}
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+				    type = cold_war_tank_equip
+				    amount = 50
+				    producer = ENG
+				}
+			}
+		}
+	}
+}

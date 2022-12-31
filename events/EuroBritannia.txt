@@ -1,0 +1,333 @@
+add_namespace = EUR
+
+country_event = {  
+	id = EUR.1
+	title = EUR.1.t
+	desc = EUR.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = EUR.1.a
+		ai_chance = {
+			factor = 100
+		}
+		EUR = {set_country_flag = EUR_help_YES}
+		
+    } 
+	option = {
+		name = EUR.1.b
+		ai_chance = {
+			factor = 0
+		}
+		EUR = {set_country_flag = EUR_help_NO}
+    }	
+}
+
+country_event = {  
+	id = EUR.2 ########## Main Power
+	title = EUR.2.t
+	desc = EUR.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = EUR.2.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = ultra_nationalism
+				popularity = 0.2
+				}
+		
+    } 
+	option = {
+		name = EUR.2.b
+		ai_chance = {
+			factor = 0
+				}
+		add_popularity = {
+			ideology = autocracy
+				popularity = 0.2
+		}
+    }
+	option = {
+		name = EUR.2.c
+		ai_chance = {
+			factor = 0
+				}
+		add_popularity = {
+			ideology = authoritarian_democracy
+				popularity = 0.2
+		}
+    }	
+}
+country_event = {  
+	id = EUR.3
+	title = EUR.3.t
+	desc = EUR.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = EUR.3.a ####Buy rifles from Britannia
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -100
+		add_manpower = 10000
+		add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = BRT
+				}
+		army_experience = 50
+    } 
+	option = {
+		name = EUR.3.b ###They have their own guns
+		ai_chance = {
+			factor = 0
+		}
+		add_manpower = 10000
+		add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 300
+					producer = EUR
+				}
+    }	
+}
+
+country_event = {  
+	id = EUR.4
+	title = EUR.4.t
+	desc = EUR.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.4.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_equipment_to_stockpile = {
+					type = landspinner_equip
+					amount = 800
+					producer = BRT
+				}
+		add_equipment_to_stockpile = {
+					type = factspheres_equip
+					amount = 800
+					producer = BRT
+				}
+		add_equipment_to_stockpile = {
+					type = knightmare_mass_prod
+					amount = 800
+					producer = BRT
+				}
+    } 
+}
+country_event = {  
+	id = EUR.5
+	title = EUR.5.t
+	desc = EUR.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.5.a 
+		ai_chance = {
+			factor = 100
+		}
+		remove_country_leader_role = {
+		character = EUR_Mil_Coun
+		ideology = paternal_autocracy}
+		recruit_character = EUR_Augusta_Henry
+		add_country_leader_role = {
+			character = EUR_Augusta_Henry
+			country_leader = {
+				expire = "2020.1.1"
+				ideology = paternal_autocracy
+				traits = {
+					}
+				}
+			promote_leader = yes
+			}
+		country_event = { days = 3 id = EUR.12}
+    } 
+}
+country_event = {  
+	id = EUR.6
+	title = EUR.6.t
+	desc = EUR.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.6.a 
+		ai_chance = {
+			factor = 7
+		}
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BRT
+				}
+		EUR = {country_event = EUR.7}
+    } 
+	option = {
+		name = EUR.6.b
+		ai_chance = {
+			factor = 3
+		}
+    }
+}
+country_event = {  
+	id = EUR.7
+	title = EUR.7.t
+	desc = EUR.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.7.a 
+		ai_chance = {
+			factor = 10
+		}
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = BRT
+				}
+    } 
+}
+country_event = {  
+	id = EUR.8
+	title = EUR.8.t
+	desc = EUR.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.8.a 
+		ai_chance = {
+			factor = 6
+		}
+		add_equipment_to_stockpile = {
+					type = landspinner_equip
+					amount = -200
+					producer = BRT
+				}
+		add_equipment_to_stockpile = {
+					type = factspheres_equip
+					amount = -200
+					producer = BRT
+				}
+		EUR = {country_event = EUR.9}
+    } 
+	option = {
+		name = EUR.8.b
+		ai_chance = {
+			factor = 4
+		}
+    }
+}
+country_event = {  
+	id = EUR.9
+	title = EUR.9.t
+	desc = EUR.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.9.a 
+		ai_chance = {
+			factor = 10
+		}
+		add_equipment_to_stockpile = {
+					type = landspinner_equip
+					amount = 200
+					producer = BRT
+				}
+		add_equipment_to_stockpile = {
+					type = factspheres_equip
+					amount = 200
+					producer = BRT
+				}
+    } 
+}
+country_event = {  
+	id = EUR.10
+	title = EUR.10.t
+	desc = EUR.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.10.a 
+		ai_chance = {
+			factor = 4
+		}
+		add_equipment_to_stockpile = {
+					type = knightmare_mass_prod
+					amount = -100
+					producer = BRT
+				}
+		EUR = {country_event = EUR.11}
+    } 
+	option = {
+		name = EUR.10.b
+		ai_chance = {
+			factor = 6
+		}
+    }
+}
+country_event = {  
+	id = EUR.11
+	title = EUR.11.t
+	desc = EUR.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.11.a 
+		ai_chance = {
+			factor = 10
+		}
+				add_equipment_to_stockpile = {
+					type = knightmare_mass_prod
+					amount = 100
+					producer = BRT
+				}
+    } 
+}
+country_event = {  
+	id = EUR.12
+	title = EUR.12.t
+	desc = EUR.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = EUR.12.a 
+		ai_chance = {
+			factor = 10
+		}
+		add_country_leader_trait = Unpopular_in_Russia
+    } 
+}

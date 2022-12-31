@@ -1,60 +1,52 @@
 ﻿division_template = {
-	name = "Euro-Britannian Garrison"	
+	name = "Euro-Britannian Infantry"	
 
 	division_names_group = "SOV_GAR_01"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 2 y = 1 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 2 }
 	}	
-
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+	}
 }
 division_template = {
-	name = "Euro-Britannian Light Infantry"	
+	name = "Britannian Volunteers" 		
 
-	division_names_group = "SOV_GRD_01"
+	division_names_group = "Knightmare Squadron"
+
+	regiments = {
+		knightmare_mass_prod_unit = { x = 0 y = 0 }
+		knightmare_mass_prod_unit = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Militia" 		
+
+	division_names_group = "EUR_GAR_01"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		artillery = { x = 1 y = 4 }
-	}	
+	}
 	support = {
-		engineer = { x = 0 y = 0 } 		
+		mot_recon = { x = 0 y = 0 } 		
 	}
 }
-
-
-division_template = {
-	name = "Euro-Britannian Infantry Division" 		
-
-	division_names_group = "SOV_INF_01"
-
-    regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-    }
-	support = {
-		military_police = { x = 0 y = 0 } 		
-	}
-}
-
 
 units = {
 division= {
@@ -63,9 +55,9 @@ division= {
 		name_order = 1
 	}
 	location = 1839
-	division_template = "Euro-Britannian Infantry Division"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
 division= {
 	division_name = {   
@@ -73,21 +65,9 @@ division= {
 		name_order = 1
 	}
 	location = 1839
-	division_template = "Euro-Britannian Infantry Division"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
-}
-
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 13063
-	division_template = "Euro-Britannian Infantry Division"
-	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
 division= {
 	division_name = {   
@@ -95,9 +75,19 @@ division= {
 		name_order = 1
 	}
 	location = 13063
-	division_template = "Euro-Britannian Infantry Division"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 13063
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
 }
 
 division= {
@@ -106,9 +96,9 @@ division= {
 		name_order = 1
 	}
 	location = 10540
-	division_template = "Euro-Britannian Garrison"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
 
 division= {
@@ -117,32 +107,249 @@ division= {
 		name_order = 1
 	}
 	location = 12683
-	division_template = "Euro-Britannian Garrison"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
 
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4855
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4855
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 4855
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
 division= {
 	division_name = {   
 		is_name_ordered = yes
 		name_order = 1
 	}
 	location = 12518
-	division_template = "Euro-Britannian Garrison"
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
-
-
 division= {
 	division_name = {   
 		is_name_ordered = yes
 		name_order = 1
 	}
-	location = 10598
-	division_template = "Euro-Britannian Garrison"
+	location = 12518
+	division_template = "Euro-Britannian Infantry"
 	start_experience_factor = 0.5
-	start_equipment_factor = 0.6
+	start_equipment_factor = 1
 }
-
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Euro-Britannian Infantry"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Britannian Volunteers"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Britannian Volunteers"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Britannian Volunteers"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 7691
+	division_template = "Britannian Volunteers"
+	start_experience_factor = 0.5
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12518
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
 }

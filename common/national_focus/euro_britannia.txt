@@ -1,0 +1,724 @@
+﻿#focus_tree = {
+id = euro_britannia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			#tag = EUR
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = EUR_cold_far_east
+		icon = GFX_EUR_cold_far_east
+		cost = 3
+		x = 15
+		y = 0
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = {EUR_everything_for_new_life}
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_under_our_management
+		icon = GFX_EUR_under_our_management
+		relative_position_id = EUR_cold_far_east
+		prerequisite = {
+			focus = EUR_cold_far_east
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_political_power = 100
+		swap_ideas = {
+		remove_idea = EUR_crisis_authority
+		add_idea = EUR_crisis_authority_1 }
+		}
+
+
+	}
+	focus = {
+		id = EUR_defy_RUS_institutions
+		icon = GFX_EUR_defy_RUS_institutions
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 3
+		x = 3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		remove_ideas = EUR_crisis_authority_1
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_centralize_government
+		icon = GFX_EUR_centralize_government
+		relative_position_id = EUR_defy_RUS_institutions
+		prerequisite = {
+			focus = EUR_defy_RUS_institutions
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_state_core = 574
+		add_state_core = 562
+		add_state_core = 637
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_delegation_pendragon
+		icon = GFX_EUR_delegation_pendragon
+		relative_position_id = EUR_under_our_management
+		prerequisite = {
+			focus = EUR_under_our_management
+		}
+		cost = 3
+		x = -3
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		BRT = {country_event = EUR.1}
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_retreat_into_isolation
+		icon = GFX_EUR_retreat_into_isolation
+		relative_position_id = EUR_delegation_pendragon
+		prerequisite = {
+			focus = EUR_delegation_pendragon
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = EUR
+			has_country_flag = EUR_help_NO
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = EUR_protect_arctic_routes
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		hidden_effect = {
+		remove_country_leader_role = {
+		character = EUR_Mil_Coun
+		ideology = paternal_autocracy}}
+			add_country_leader_role = {
+			character = EUR_Mil_Coun
+			country_leader = {
+				expire = "2020.1.1"
+				ideology = purist_aristocracy
+				traits = {
+					}
+				}
+			promote_leader = yes
+			}
+				EUR_Mil_Coun = {
+				set_portraits = {
+						civilian={
+							large="GFX_portrait_EUR_Mil_Coun_NO"}
+				}}
+				set_politics = {
+			ruling_party = ultra_nationalism
+			last_election = "2008.1.1"
+			election_frequency = 48
+			elections_allowed = no}
+			remove_ideas = EUR_everything_for_new_life
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_protect_arctic_routes
+		icon = GFX_EUR_protect_arctic_routes
+		relative_position_id = EUR_delegation_pendragon
+		prerequisite = {
+			focus = EUR_delegation_pendragon
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = EUR
+			has_country_flag = EUR_help_YES
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = EUR_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = EUR_poor_logistics
+		add_idea = EUR_poor_logistics_1}
+		574 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4855
+					instant_build = yes
+				}
+			}
+		562 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12518
+					instant_build = yes
+				}
+			}
+		build_railway = {
+				path = { 4855 1795 4726 7746 1878 12623 1714 12518 }
+			}
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_invite_BRT_advisers
+		icon = GFX_EUR_invite_BRT_advisers
+		relative_position_id = EUR_protect_arctic_routes
+		prerequisite = {
+			focus = EUR_protect_arctic_routes
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		remove_ideas = EUR_poor_logistics_1
+		recruit_character = EUR_Britannian_economy_minister
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_beg_for_Knightmares
+		icon = GFX_EUR_beg_for_Knightmares
+		relative_position_id = EUR_invite_BRT_advisers
+		prerequisite = {
+			focus = EUR_invite_BRT_advisers
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		load_oob = EUR_beg_for_knightmares
+		country_event = EUR.4
+		}
+	}
+
+
+	focus = {
+		id = EUR_prepare_to_strike
+		icon = GFX_EUR_prepare_to_strike
+		relative_position_id = EUR_befriend_Bismark
+		prerequisite = {
+			focus = EUR_beg_for_Knightmares
+		}
+		prerequisite = {
+			focus = EUR_use_purist_militias
+		}
+		prerequisite = {
+			focus = EUR_secure_northen_loyalty
+		}
+		cost = 3
+		x = 3
+		y = 2
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		recruit_character = EUR_Michele_Manfredi
+		add_timed_idea = {
+			idea = EUR_fight_in_Siberia
+			days = 365}
+			hidden_effect = {
+			country_event = { days = 7 id = EUR.5}
+			}
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_magadan_declaration
+		icon = GFX_EUR_magadan_declaration
+		relative_position_id = EUR_prepare_to_strike
+
+		prerequisite = {
+			focus = EUR_prepare_to_strike
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		EUR = {
+			declare_war_on = {
+			target = SRU
+			type = annex_everything
+						}
+		}
+	}
+	}
+
+
+	focus = {
+		id = EUR_befriend_Bismark
+		icon = GFX_EUR_befriend_Bismark
+		relative_position_id = EUR_protect_arctic_routes
+		prerequisite = {
+			focus = EUR_protect_arctic_routes
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_opinion_modifier = { target = BRT modifier = friendly }
+		BRT = {
+		add_opinion_modifier = { target = EUR modifier = friendly }}
+		add_offsite_building  = {
+					type = arms_factory
+					level = 5
+				}
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_use_purist_militias
+		icon = GFX_EUR_use_purist_militias
+		relative_position_id = EUR_befriend_Bismark
+		prerequisite = {
+			focus = EUR_befriend_Bismark
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = EUR.3
+		
+		}
+
+
+	}
+
+	focus = {
+		id = EUR_fortify_borders
+		icon = GFX_EUR_fortify_borders
+		relative_position_id = EUR_retreat_into_isolation
+		prerequisite = {
+			focus = EUR_retreat_into_isolation
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		574 = {
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 4821
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 7785
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 7889
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 4855
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 12611
+							instant_build = yes
+						}
+		add_building_construction = {
+							type = bunker
+							level = 1
+							province = 1852
+							instant_build = yes
+						}
+		}
+	}
+	}
+
+
+	focus = {
+		id = EUR_allow_Russian_battalions
+		icon = GFX_EUR_allow_Russian_battalions
+		relative_position_id = EUR_fortify_borders
+		prerequisite = {
+			focus = EUR_fortify_borders
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		load_oob = EUR_Rus_Battalions
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_preserve_our_existence
+		icon = GFX_EUR_preserve_our_existence
+		relative_position_id = EUR_allow_Russian_battalions
+		prerequisite = {
+			focus = EUR_allow_Russian_battalions
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = EUR_Waiting_for_the_future
+				add_offsite_building  = {
+					type = arms_factory
+					level = 2
+				}
+				add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			}
+		}
+
+
+
+	focus = {
+		id = EUR_provisional_senate
+		icon = GFX_EUR_provisional_senate
+		relative_position_id = EUR_centralize_government
+		prerequisite = {
+			focus = EUR_centralize_government
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = EUR_provisional_senate
+		country_event = EUR.2
+		}
+
+
+	}
+
+
+	focus = {
+		id = EUR_secure_northern_loyalty
+		icon = GFX_EUR_secure_northern_loyalty
+		relative_position_id = EUR_provisional_senate
+		prerequisite = {
+			focus = EUR_provisional_senate
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = EUR
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_political_power = -50
+		add_stability = 0.05
+		add_state_core = 644
+				644 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+			  }
+		add_state_core = 822
+		822 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+			  }
+		
+		}
+
+
+	}
+
+
+
+
+}	

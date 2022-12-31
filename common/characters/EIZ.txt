@@ -1,0 +1,42 @@
+characters = {
+
+	EIZ_Military_Council={
+		name="Council for Russian Liberation"
+		portraits={
+			civilian={
+				large="GFX_portrait_EIZ_"
+			}
+		}
+		country_leader={
+			desc = "When the Russian Civil War began, the collective body of the EU rushed to the aid of their friends in the Government. This body is comprised of Generals and Politicians united towards the goal of liberating Russia!	"
+			ideology=military_dictatorship
+			traits={  }
+			expire="2020.1.1.1"
+			id = -1
+		}
+	}
+
+}
+
+EIZ_generic_air={
+		name=Air Marshal Zastrov 
+		portraits={
+			army={
+				small="GFX_idea_BRT_generic_air"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BRT_generic_air_idea
+			allowed = {
+				original_tag = BRT
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
+	}
