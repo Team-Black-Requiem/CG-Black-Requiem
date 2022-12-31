@@ -1,0 +1,1881 @@
+﻿focus_tree = {
+id = japan_focus_junta_3
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 2
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+
+		#Tohdoh knows that the real causes of the conflict have been Kururugi's and Kirihara's foolish policies
+		#in economics and government, this must change 
+
+		id = JAP_economic_reform
+		icon = GFX_JAP_economic_reform
+		cost = 2
+		x = 24
+		y = 0
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Japanese economy was too dependent on Sakuradite, which risked to cause the national downfall
+		#and created a parasitic class, rapresented by the Kyoto House. Kirihara's reign must be destroyed
+
+		id = JAP_dismantle_kirihara_system
+		icon = GFX_JAP_dismantle_kirihara_system
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_economic_reform
+		prerequisite = {
+			focus = JAP_economic_reform
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The military will draft a plan to completely restructure Japanese economy, based on three principles:
+		#diversification of the economy, destruction of corporate lobbies and a military-civilian equilibriums
+
+		id = JAP_national_plan_economic_renewal
+		icon = GFX_JAP_national_plan_economic_renewal
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_dismantle_kirihara_system
+		prerequisite = {
+			focus = JAP_dismantle_kirihara_system
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Sure,Japan has lots of Sakuradite, but it has got also other natural resources as well, with medium and small
+		#deposits, ready to be extracted 
+		id = JAP_exploit_other_resources
+		icon = GFX_JAP_exploit_other_resources
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_national_plan_economic_renewal
+		prerequisite = {
+			focus = JAP_national_plan_economic_renewal
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Japanese corporations have damaged enough the economy, and the entire system must be changed from within 
+
+		id = JAP_reform_japanese_corporatocracy
+		icon = GFX_JAP_reform_japanese_corporatocracy
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_national_plan_economic_renewal
+		prerequisite = {
+			focus = JAP_national_plan_economic_renewal
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Japan's labour market has always been very rigid, and this prompted great difficulties with work mobility
+		#and new assumptions. By encouraging labour fluidity and strenghtening links among various economic sectors,
+		#we can improve the situation
+
+		id = JAP_unfreeze_labour_market
+		icon = GFX_JAP_unfreeze_labour_market
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_reform_japanese_corporatocracy
+		prerequisite = {
+			focus = JAP_reform_japanese_corporatocracy
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#the Kyoto House is the symbol of this system, and we must implement specific laws that will curtail
+		#relations between the government and the corporations, banning deep-ties among politicians and business
+
+		id = JAP_kyoto_house_never_again
+		icon = GFX_JAP_kyoto_house_never_again
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_reform_japanese_corporatocracy
+		prerequisite = {
+			focus = JAP_reform_japanese_corporatocracy
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#A great source of corporate power is their gigantic size, and for this reason we must break up major 
+		#corporations and put serious limits to avoid monopolies
+
+		id = JAP_limit_corporate_size
+		icon = GFX_JAP_limit_corporate_size
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_kyoto_house_never_again
+		prerequisite = {
+			focus = JAP_kyoto_house_never_again
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#A minimum wage will be really expensive, but it will greatly help thousands of poor workers and people
+		#In addition, it will fight labour exploitment
+
+		id = JAP_minimum_wage
+		icon = GFX_JAP_minimum_wage
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_limit_corporate_size
+		prerequisite = {
+			focus = JAP_limit_corporate_size
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#Tohdoh has done it! The Japanese job market has been fully reformed along more dynamic and fluid standards
+
+		id = JAP_dynamic_system
+		icon = GFX_JAP_dynamic_system
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_minimum_wage
+		prerequisite = {
+			focus = JAP_minimum_wage
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+
+		#Usually, corporations would assume gigantic quantities of people in one shot, completely cutting off
+		#many students and workers from the job market, and opening rifts in society. A possible solution could be
+		#a more balanced rate of assumptions
+
+		id = JAP_scale_back_job_hunting
+		icon = GFX_JAP_scale_back_job_hunting
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_unfreeze_labour_market
+		prerequisite = {
+			focus = JAP_unfreeze_labour_market
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The fight to hyperinflation, started after the war, must continue with new monetary reforms, as well
+		#as reviving the banking sector
+
+		id = JAP_anti_inflationary_measures
+		icon = GFX_JAP_anti_inflationary_measures
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_scale_back_job_hunting
+		prerequisite = {
+			focus = JAP_scale_back_job_hunting
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#A proper State-Welfare system will be put in place with the revenue of the energy sector,replacing the old
+		#corporate welfare that dominated the country
+
+		id = JAP_further_worker_protection
+		icon = GFX_JAP_further_worker_protection
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_anti_inflationary_measures
+		prerequisite = {
+			focus = JAP_anti_inflationary_measures
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#After all of our reforms, our business-labour situation has been completely overhauled, with many positive
+		#effects to our devastated economy
+
+		id = JAP_new_era_business
+		icon = GFX_JAP_new_era_business
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_further_worker_protection
+		prerequisite = {
+			focus = JAP_further_worker_protection
+		}
+		prerequisite = {
+			focus = JAP_dynamic_system
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+
+
+	focus = {
+
+		#Tohdoh has decided to reach a balance between military and civilian production and needs, in that way
+		#Japan will prepare to sustain a policy of armed neutrality while still keeping its light manufacturing 
+
+		id = JAP_military_civilian_balance
+		icon = GFX_JAP_military_civilian_balance
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_national_plan_economic_renewal
+		prerequisite = {
+			focus = JAP_national_plan_economic_renewal
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Small businesses are very important to counter future conglomerates like the ones in Kururugi's era
+		#Economic incetives will be important to sustain them
+
+		id = JAP_support_small_business
+		icon = GFX_JAP_support_small_business
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_military_civilian_balance
+		prerequisite = {
+			focus = JAP_military_civilian_balance
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Japan still used old tactics and equipment in the Pacific War, and we must put every resource into the 
+		#acquisition of the Knightmare weapon
+
+		id = JAP_innovate_defense_industry
+		icon = GFX_JAP_innovate_defense_industry
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_military_civilian_balance
+		prerequisite = {
+			focus = JAP_military_civilian_balance
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#China has begun to produce an enormous quantity of KN, and we can make a deal with them to obtain their models
+
+		id = JAP_obtain_CHI_KN_models
+		icon = GFX_JAP_obtain_CHI_KN_models
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_innovate_defense_industry
+		prerequisite = {
+			focus = JAP_innovate_defense_industry
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#While it's important to have external bases to our research, we still need to build specific KN
+		#for our country, different from all others
+
+		id = JAP_continue_KN_research
+		icon = GFX_JAP_continue_KN_research
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_obtain_CHI_KN_models
+		prerequisite = {
+			focus = JAP_obtain_CHI_KN_models
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh will finance the reconstruction of many military industrial complexes and specific zones of Japan, such as
+		#Hokkaido and Tokyo
+
+		id = JAP_military_complexes
+		icon = GFX_JAP_military_complexes
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_continue_KN_research
+		prerequisite = {
+			focus = JAP_continue_KN_research
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#While our military production is ramping up, we must not forget the importance of 
+		#saving our light economical needs, such as consumer goods
+
+		id = JAP_promote_cunsumer_goods
+		icon = GFX_JAP_promote_cunsumer_goods
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_support_small_business
+		prerequisite = {
+			focus = JAP_support_small_business
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Although Britannia has attacked Japan, it still rapresents one third of all economic manufacturing in the world,
+		#and, even though it will be opposed by some nationalists, Tohdoh will try to re-open trade with the enemy
+
+		id = JAP_commercial_treaty_BRT
+		icon = GFX_JAP_commercial_treaty_BRT
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_promote_cunsumer_goods
+		prerequisite = {
+			focus = JAP_promote_cunsumer_goods
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Economic laws that closed Japan in the early years after the war will be changed to allow export and import once more
+		#in the Pacific
+
+		id = JAP_open_trade
+		icon = GFX_JAP_open_trade
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_commercial_treaty_BRT
+		prerequisite = {
+			focus = JAP_commercial_treaty_BRT
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The Military-civilian balance has been achieved
+
+		id = JAP_balanced_system
+		icon = GFX_JAP_balanced_system
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_open_trade
+		prerequisite = {
+			focus = JAP_open_trade
+		}
+		prerequisite = {
+			focus = JAP_military_complexes
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh will put a limit to the power of the energy sector, in an effort to balance it with other economical sectors
+
+		id = JAP_limit_sakuradite_power
+		icon = GFX_JAP_limit_sakuradite_power
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_exploit_other_resources
+		prerequisite = {
+			focus = JAP_exploit_other_resources
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh will pass environmentally-friendly laws to block any harsh exploitation of Mount Fuji mine, effectively
+		#dimishing the greatst mine of Sakuradite
+
+		id = JAP_protect_mount_fuji
+		icon = GFX_JAP_protect_mount_fuji
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_limit_sakuradite_power
+		prerequisite = {
+			focus = JAP_limit_sakuradite_power
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+
+		#An energy-based economy is full of corruption, and as Tohdoh continues the switch, he will crack down on corruption
+
+		id = JAP_tackle_corruption
+		icon = GFX_JAP_tackle_corruption
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_protect_mount_fuji
+		prerequisite = {
+			focus = JAP_protect_mount_fuji
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Final legislation to counter energy's conglomerates will be passed
+
+		id = JAP_lock_energy_industry
+		icon = GFX_JAP_lock_energy_industry
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_tackle_corruption
+		prerequisite = {
+			focus = JAP_tackle_corruption
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#The economy is now ready to sustain the army and the people, all for the fatherland!
+
+		id = JAP_economy_people_army
+		icon = GFX_JAP_economy_people_army
+		cost = 2
+		x = 0
+		y = 3
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_lock_energy_industry
+		prerequisite = {
+			focus = JAP_lock_energy_industry
+		}
+		prerequisite = {
+			focus = JAP_new_era_business
+		}
+		prerequisite = {
+			focus = JAP_balanced_system
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh has effectively secured his position inside the Council and he's ready to start his program of 
+		#political reform (he has a moderate position, preferring an authoritarian democratic system with
+		#political tutelage)
+
+		id = JAP_tohdoh_junta
+		icon = GFX_JAP_tohdoh_junta
+		cost = 2
+		x = 10
+		y = 0
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh will reform the Military Council into a some sort of overseeing council that will control
+		#and enforce the will of the General###Removal of Tohdoh and his advisers from the government slots
+		#Tohdoh will only remain President of the Japanese Republic
+		id = JAP_prepare_political_tutelage
+		icon = GFX_JAP_prepare_political_tutelage
+		relative_position_id = JAP_tohdoh_junta
+		prerequisite = {
+			focus = JAP_tohdoh_junta
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#Said empty slots will be occupied by civilian personell, while Tohdoh will remain President
+		#and the overseeing council will continue its activities from the shadows
+		id = JAP_civilian_military_government
+		icon = GFX_JAP_civilian_military_government
+		relative_position_id = JAP_prepare_political_tutelage
+		prerequisite = {
+			focus = JAP_prepare_political_tutelage
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The old Constitution is still heavily favouring the PM, so Tohdoh will modify it to balance PM with 
+		#the Presidential role and the Parliament (Upper and Lower House). It will officialise
+		#the permanent presence of the military in positions of power
+		id = JAP_reform_constitution
+		icon = GFX_JAP_civilian_military_government
+		relative_position_id = JAP_prepare_political_tutelage
+		prerequisite = {
+			focus = JAP_prepare_political_tutelage
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = 0.2
+		}
+
+
+	}
+
+	focus = {
+
+		#If Kururugi's family is still alive, this act will ban every member of his family from ever joining positions
+		#of power again; either way it will ban Kururugi's cult of personality after his death
+		id = JAP_anti_kururugi_decrees
+		icon = GFX_JAP_anti_kururugi_decrees
+		relative_position_id = JAP_reform_constitution
+		prerequisite = {
+			focus = JAP_reform_constitution
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = moderate_conservatism
+				popularity = -0.1
+			}
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh is in favour of a partially censored press, still allowing a certain degree of criticism 
+		id = JAP_controlled_press
+		icon = GFX_JAP_controlled_press
+		relative_position_id = JAP_anti_kururugi_decrees
+		prerequisite = {
+			focus = JAP_anti_kururugi_decrees
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.05
+			}
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh personally dislikes the concept of a cult of personality, so he will try to avoid it
+		#For example, by banning the use of posters and slogans with his names around the capital
+		id = JAP_avoid_personality_cult
+		icon = GFX_JAP_avoid_personality_cult
+		relative_position_id = JAP_anti_kururugi_decrees
+		prerequisite = {
+			focus = JAP_anti_kururugi_decrees
+		}
+		cost = 2
+		x = -2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh and the Council will speak to the rapresentatives of all parties, offering a share of rapresentation
+		#(although limited) in exchange of the recognition of the new regime
+		id = JAP_talk_all_parties
+		icon = GFX_JAP_talk_all_parties
+		relative_position_id = JAP_avoid_personality_cult
+		prerequisite = {
+			focus = JAP_avoid_personality_cult
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Some parties, still not trusting Tohdoh himself, will support, along some members of the Junta, to make 
+		#a referendum for a constitutional monarchy, that technically will delete the position of President,held by Tohdoh
+		#Low changes of success 
+		id = JAP_monarchy_referendum
+		icon = GFX_JAP_monarchy_referendum
+		relative_position_id = JAP_controlled_press
+		prerequisite = {
+			focus = JAP_controlled_press
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#The regime (at this point Tohdoh could have been removed from President if the referendum passed) will
+		#rely on traditional religious and traditional values, it will be disliked by leftist parties
+		id = JAP_shintoist_values
+		icon = GFX_JAP_shintoist_values
+		relative_position_id = JAP_monarchy_referendum
+		prerequisite = {
+			focus = JAP_monarchy_referendum
+		}
+		prerequisite = {
+			focus = JAP_talk_all_parties
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#The victory in the Pacific War was expensive, and the Regime wants to ensure that it will be 
+		#further reinforced and secured by external threats (plus exploiting Britannia's Civil War)
+		id = JAP_secure_our_victory
+		icon = GFX_JAP_secure_our_victory
+		relative_position_id = JAP_prepare_political_tutelage
+		prerequisite = {
+			focus = JAP_prepare_political_tutelage
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#After the support from EU and China, and Britannian military still recovering from the war
+		#Japan will be in a strong position to retake Sakuradite fields that were ceded to Britannia
+		id = JAP_negotiate_sakuradite_concessions
+		icon = GFX_JAP_negotiate_sakuradite_concessions
+		relative_position_id = JAP_diplomatic_trip_Asia
+		prerequisite = {
+			focus = JAP_diplomatic_trip_Asia
+		}
+		prerequisite = {
+			focus = JAP_reinforce_coast
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh will make various trips in the Chinese Federation to ensure renewed support for the regime
+		id = JAP_diplomatic_trip_Asia
+		icon = GFX_JAP_diplomatic_trip_Asia
+		relative_position_id = JAP_friendship_treaty_CHI
+		prerequisite = {
+			focus = JAP_friendship_treaty_CHI
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The trips will culminate in a friendship treaty with China (and military obligation if Japanese mines
+		#are threatened by outsiders)
+		id = JAP_friendship_treaty_CHI
+		icon = GFX_JAP_friendship_treaty_CHI
+		relative_position_id = JAP_search_EU_support
+		prerequisite = {
+			focus = JAP_search_EU_support
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+
+		#Tohdoh will occupy Okinawa once again if Britannia is still in the civil war, or he will simply fund
+		#resistance activity on the islands
+		id = JAP_observe_okinawa
+		icon = GFX_JAP_observe_okinawa
+		relative_position_id = JAP_search_EU_support
+		prerequisite = {
+			focus = JAP_search_EU_support
+		}
+		cost = 2
+		x = 2
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#A new wave of coastal forts will be put in place to resist naval invasion, pretty simple
+		id = JAP_reinforce_coast
+		icon = GFX_JAP_reinforce_coast
+		relative_position_id = JAP_observe_okinawa
+		prerequisite = {
+			focus = JAP_observe_okinawa
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+
+		#Russia rapresents a useful country to block Britannia from the north and defend Northen seas, so military assurances
+		#will be made (it will be bypassed if Russia is in a civil war)
+		id = JAP_search_EU_support
+		icon = GFX_JAP_search_EU_support
+		relative_position_id = JAP_secure_our_victory
+		prerequisite = {
+			focus = JAP_secure_our_victory
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The army will have, in the lower and upper house, a permanent number of seats to control the situation
+		id = JAP_shares_parliament
+		icon = GFX_JAP_shares_parliament
+		relative_position_id = JAP_civilian_military_government
+		prerequisite = {
+			focus = JAP_civilian_military_government
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The overseeing council will be taken to broadlight, visible to everyone as the Transitional Council, although
+		#most of controversial tasks are already been completed, so it won't change much
+		id = JAP_council_transition
+		icon = GFX_JAP_council_transition
+		relative_position_id = JAP_shares_parliament
+		prerequisite = {
+			focus = JAP_shares_parliament
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The police will have greater powers in contrast to the old regime, always ready in case of riots
+		id = JAP_empower_police
+		icon = GFX_JAP_empower_police
+		relative_position_id = JAP_council_transition
+		prerequisite = {
+			focus = JAP_council_transition
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+
+		#Limited voting will be introduced for middle and low administrations, plus a part of the Two Houses
+		id = JAP_limited_voting
+		icon = GFX_JAP_limited_voting
+		relative_position_id = JAP_empower_police
+		prerequisite = {
+			focus = JAP_empower_police
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Last constitutional conflicts will be taken care by the Military, with the new regime greatly stabilising
+		id = JAP_solve_last_issues
+		icon = GFX_JAP_solve_last_issues
+		relative_position_id = JAP_limited_voting
+		prerequisite = {
+			focus = JAP_limited_voting
+		}
+		prerequisite = {
+			focus = JAP_shintoist_values
+		}
+		prerequisite = {
+			focus = JAP_negotiate_sakuradite_concessions
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#The regime will support a policy of armed neutrality 
+		id = JAP_armed_neutrality
+		icon = GFX_JAP_armed_neutrality
+		relative_position_id = JAP_solve_last_issues
+		prerequisite = {
+			focus = JAP_solve_last_issues
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+
+		#Tohdoh has done much to the country, and new he deserves a vacation right?
+		id = JAP_tohdoh_retirement
+		icon = GFX_JAP_tohdoh_retirement
+		relative_position_id = JAP_armed_neutrality
+		prerequisite = {
+			focus = JAP_armed_neutrality
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+}	
