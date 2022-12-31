@@ -1,0 +1,169 @@
+ideas = {
+    country = {
+
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+	
+		LRU_right_wing_paramilitaries  = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly = -0.0020
+			political_power_gain = -0.15
+			ultra_nationalism_drift = 0.002
+			authoritarian_democracy_drift = 0.002
+			}
+		}
+		
+		LRU_populist_threat = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			war_support_weekly = -0.0020
+			political_power_gain = -0.15
+			moderate_socialism_drift = 0.002
+			moderate_liberalism_drift = 0.002
+			}
+		}
+		
+		LRU_shard_russian_republic = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.10
+			army_morale_factor = -0.05
+			conscription_factor = -0.10
+			mobilization_speed = -0.10
+			}
+		}
+
+    }
+	
+	
+	tank_manufacturer = {
+		designer = yes
+
+		SEC_RUS_REP_gen_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = LRU
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				fast_tank_manufacturer
+			}
+
+		}
+	}
+
+	industrial_concern = {
+		designer = yes
+
+		SEC_RUS_REP_gen_industrial_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = LRU
+			}
+
+			research_bonus = {
+				industry = 0.05
+			}
+
+			traits = {
+				resource_extration_industry
+			}
+
+
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		SEC_RUS_REP_gen_mater_man = {
+			# picture =
+
+			allowed = {
+				original_tag = LRU
+			}
+
+			research_bonus = {
+				infantry_equipment = 0.05
+			}
+
+			traits = {
+				artillery_producer_mass_1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		SEC_RUS_REP_gen_naval_man = {
+			# picture =
+
+			allowed = {
+				original_tag = LRU
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
+			traits = {
+				submarine_producer_offense_1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		SEC_RUS_REP_gen_air_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = LRU
+			}
+			research_bonus = {
+				heavy_air = 0.05
+			}
+
+			traits = {
+				light_aircraft_manufacturer
+			}
+		}
+	}
+}

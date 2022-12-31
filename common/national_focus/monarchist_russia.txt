@@ -1,0 +1,1258 @@
+﻿focus_tree = {
+id = monarchist_russia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = MRU
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+	focus = {
+		id = MRU_restored_throne
+		icon = GFX_MRU_restored_throne
+		cost = 3
+		x = 15
+		y = 0
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = MRU.1
+		}
+
+
+	}
+
+	
+	focus = {
+		id = MRU_create_the_senate
+		icon = GFX_MRU_create_the_senate
+		relative_position_id = MRU_restored_throne
+		prerequisite = {
+			focus = MRU_restored_throne
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_political_power = -50
+		swap_ideas = {
+		remove_idea = MRU_russian_aristocracy
+		add_idea = MRU_russian_aristocracy_senate}
+		}
+
+
+	}
+
+	focus = {
+		id = MRU_form_the_regency
+		icon = GFX_MRU_form_the_regency
+		relative_position_id = MRU_create_the_senate
+		prerequisite = {
+			focus = MRU_create_the_senate
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = MRU.2
+		}
+
+
+	}
+	focus = {
+		id = MRU_Problems_of_free_Russia
+		icon = GFX_MRU_Problems_of_Free_Russia
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = 6
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = MRU.2
+		}
+
+
+	}
+	focus = {
+		id = MRU_the_soviet_states #event, where you need to choose what to do with soviets (for now only 1 option to start coop work)
+		icon = GFX_MRU_the_soviet_states
+		relative_position_id = MRU_Problems_of_free_Russia
+
+		prerequisite = {
+			focus = MRU_Problems_of_free_Russia
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_Forget_the_revolution ###increase stability in both states. Idea for MRU "angry aristocrats"
+		icon = GFX_MRU_Forget_the_revolution
+		relative_position_id = MRU_the_soviet_states
+
+		prerequisite = {
+			focus = MRU_the_soviet_states
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_cooperation_in_industry  
+		icon = GFX_MRU_cooperation_in_industry
+		relative_position_id = MRU_Forget_the_revolution
+
+		prerequisite = {
+			focus = MRU_Forget_the_revolution
+		}
+		mutually_exclusive = {focus = MRU_cooperation_in_army}
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_cooperation_in_army 
+		icon = GFX_MRU_cooperation_in_army
+		relative_position_id = MRU_Forget_the_revolution
+
+		prerequisite = {
+			focus = MRU_Forget_the_revolution
+		}
+		mutually_exclusive = {focus = MRU_cooperation_in_industry}
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_France_idiots #decrease opinion with EUIZ, idea for +defence against EUIZ
+		icon = GFX_MRU_France_idiots
+		relative_position_id = MRU_Problems_of_free_Russia
+
+		prerequisite = {
+			focus = MRU_Problems_of_free_Russia
+		}
+		cost = 3
+		x = -2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_Their_miscalculation #idea against liberalism drift
+		icon = GFX_MRU_Their_miscalculation
+		relative_position_id = MRU_France_idiots
+
+		prerequisite = {
+			focus = MRU_France_idiots
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_destroy_rep_ideas
+		icon = GFX_MRU_destroy_rep_ideas
+		relative_position_id = MRU_Their_miscalculation
+		prerequisite = {
+			focus = MRU_Their_miscalculation
+		}
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = MRU_anti_popular_mandate_idea
+		add_idea = MRU_anti_popular_mandate_idea_2}
+		}
+
+
+	}
+	focus = {
+		id = MRU_Britannia_traitors #decrease opinion with EuroBritannia, idea for +defence against EuroBritannia
+		icon = GFX_MRU_Britannia_traitors
+		relative_position_id = MRU_Problems_of_free_Russia
+
+		prerequisite = {
+			focus = MRU_Problems_of_free_Russia
+		}
+		cost = 3
+		x = 2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_Their_betrayal #idea against liberalism drift autocracy
+		icon = GFX_MRU_Their_betrayal
+		relative_position_id = MRU_Britannia_traitors
+
+		prerequisite = {
+			focus = MRU_Britannia_traitors
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_use_RUS_nationalism
+		icon = GFX_MRU_use_RUS_nationalism
+		relative_position_id = MRU_Their_betrayal
+		prerequisite = {
+			focus = MRU_Their_betrayal
+		}
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = MRU_imperial_dreams
+		add_idea = MRU_imperial_dreams_2}
+		add_popularity = { ideology = ultra_nationalism popularity = 0.10 }
+		}
+
+
+	}
+	focus = {
+		id = MRU_the_Unholy_Alliance
+		icon = GFX_MRU_the_republics
+		relative_position_id = MRU_use_RUS_nationalism
+		prerequisite = {
+			focus = MRU_use_RUS_nationalism
+		}
+		prerequisite = {
+			focus = MRU_destroy_rep_ideas
+		}
+		prerequisite = {
+			focus = MRU_cooperation_in_army
+			focus = MRU_cooperation_in_industry
+		}
+		cost = 3
+		x = -2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	
+	focus = {
+		id = MRU_clever_policy ###timed idea fot -20% consumer goods factory
+		icon = GFX_MRU_clever_policy
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_timed_idea = {
+		days = 365
+		idea = MRU_Future_opportunities
+		}}
+
+
+	}
+
+	focus = {
+		id = MRU_the_gulag_state  ##Katorga
+		icon = GFX_MRU_the_gulag_state
+		relative_position_id = MRU_clever_policy
+		prerequisite = {
+			focus = MRU_clever_policy
+		}
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = MRU_Katorga
+		add_manpower = -6000
+		}
+	}
+	focus = {
+		id = MRU_increase_steel_production 
+		icon = GFX_MRU_increase_steel_production
+		relative_position_id = MRU_the_gulag_state
+		prerequisite = {
+			focus = MRU_the_gulag_state
+		}
+		cost = 3
+		x = 1
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = MRU_Katorga
+		add_manpower = -6000
+		}
+	}
+	focus = {
+		id = MRU_Privatize_small_businesses
+		icon = GFX_MRU_Privatize_small_businesses
+		relative_position_id = MRU_the_gulag_state
+		prerequisite = {
+			focus = MRU_the_gulag_state
+		}
+		cost = 3
+		x = 0
+		y = 3
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = MRU_Katorga
+		add_manpower = -6000
+		}
+	}
+	focus = {
+		id = MRU_guard_the_cities
+		icon = GFX_MRU_guard_the_cities
+		relative_position_id = MRU_clever_policy
+		prerequisite = {
+			focus = MRU_clever_policy
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		load_oob = MRU_guard_the_cities
+		}
+	}
+	focus = {
+		id = MRU_reestablish_Okhranka 
+		icon = GFX_MRU_reestablish_Okhranka
+		relative_position_id = MRU_guard_the_cities
+		prerequisite = {
+			focus = MRU_guard_the_cities
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_poach_french_spies
+		icon = GFX_MRU_poach_french_spies
+		relative_position_id = MRU_reestablish_Okhranka
+		prerequisite = {
+			focus = MRU_reestablish_Okhranka
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_find_canned_weapons_caches ###after fall of Russian Empire, they save some equipment underground
+		icon = GFX_MRU_find_canned_weapons_caches
+		relative_position_id = MRU_guard_the_cities
+		prerequisite = {
+			focus = MRU_guard_the_cities
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_instruct_imperial_guard_to_train_recruits 
+		icon = GFX_MRU_instruct_imperial_guard_to_train_recruits
+		relative_position_id = MRU_find_canned_weapons_caches
+		prerequisite = {
+			focus = MRU_find_canned_weapons_caches
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_develop_plan_for_return_of_capital ###buff for -40 xp to doctrine once. Add timed idea against EUIZ, add xp
+		icon = GFX_MRU_develop_plan_for_return_of_capital
+		relative_position_id = MRU_instruct_imperial_guard_to_train_recruits
+		prerequisite = {
+			focus = MRU_instruct_imperial_guard_to_train_recruits
+		}
+		prerequisite = {
+			focus = MRU_poach_french_spies
+		}
+		cost = 2
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_Everything_for_army ###timed idea to -10% cost of rifles. Events to ask for help in China and India (random) (can give armor to stockpile, moto and rifles, or nothing)
+		icon = GFX_MRU_Everything_for_army
+		relative_position_id = MRU_develop_plan_for_return_of_capital
+		prerequisite = {
+			focus = MRU_develop_plan_for_return_of_capital
+		}
+		prerequisite = {
+			focus = MRU_Privatize_small_businesses
+		}
+		cost = 2
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+
+
+
+	##focus = {
+	##	id = MRU_the_Samara_government
+	##	icon = GFX_MRU_the_Samara_government
+	##	relative_position_id = MRU_clever_policy
+	##	prerequisite = {
+	##		focus = MRU_clever_policy
+	##	}
+	##	cost = 3
+	##	x = 0
+	##	y = 1
+	##	available = {
+	##		country_exists = MRU
+	##	}
+	##	bypass = { }
+	##
+
+	##	mutually_exclusive = {
+	##	}
+
+
+	##	ai_will_do = {
+	##		factor = 10
+	##	}
+	
+	##	completion_reward = {
+	##	}
+
+
+	#}
+
+	
+	focus = {
+		id = MRU_crisis_of_authority ###event to choose who of three generals will take most power under young tsar (buffs for tsar modifier "puppet" depends on the choice)
+		icon = GFX_MRU_crisis_of_authority
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = -7
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		focus = MRU_young_ruler
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_young_ruler ###event where you will try to get rid of 3 generals. There can be a chance for each of them to step back from power, but save their loyalty to tsar. Otherwise they will be executed (get rid of puppet modifier and add modifier depends on what happend (like if one of them is executed - add modifier with minus satbility))
+		icon = GFX_MRU_young_ruler
+		relative_position_id = MRU_form_the_regency
+		prerequisite = {
+			focus = MRU_form_the_regency
+		}
+		cost = 3
+		x = -5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		focus = MRU_crisis_of_authority
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_the_past_the_present #####event to add idea about learning on mistake of old Empire (too many liberal ideas, Relied on an ally too much, maybe give some hint, that allience with Soviets won`t last long)
+		icon = GFX_MRU_the_past_the_present
+		relative_position_id = MRU_crisis_of_authority
+		prerequisite = {
+			focus = MRU_crisis_of_authority
+			focus = MRU_young_ruler
+		}
+		cost = 3
+		x = -1
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		id = MRU_tsar_memories #Returning of the white generals
+		icon = GFX_MRU_tsar_memories
+		relative_position_id = MRU_the_past_the_present
+		prerequisite = {
+			focus = MRU_the_past_the_present
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		country_event = MRU.3
+		
+		}
+	}
+	focus = {
+		id = MRU_shift_to_older_times ###capital to Ekaterinburg, get rid of corrupt bureacracy idea and add a little buff idea instead
+		icon = GFX_MRU_shift_to_older_times
+		relative_position_id = MRU_tsar_memories
+		prerequisite = {
+			focus = MRU_tsar_memories
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		set_capital = { state = 653 }
+		swap_ideas = {
+		remove_idea = RUS_Corrupt_government_improved_2
+		add_idea = MRU_Rising_Eagle
+		}
+	}
+	}
+
+	focus = {
+		id = MRU_anti_popular_mandate ## get rid of unloyal (LOYALTY) people in your environment (add idea)
+		icon = GFX_MRU_anti_popular_mandate
+		relative_position_id = MRU_crisis_of_authority
+		prerequisite = {
+			focus = MRU_crisis_of_authority
+			focus = MRU_young_ruler
+		}
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = MRU_anti_popular_mandate_idea
+		}
+
+
+	}
+
+
+
+
+	focus = {
+		id = MRU_crush_opposition ####purge among nobles
+		icon = GFX_MRU_crush_opposition
+		relative_position_id = MRU_anti_popular_mandate
+		prerequisite = {
+			focus = MRU_anti_popular_mandate
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_timed_idea = {
+		days = 90
+		idea = MRU_Purges_among_the_nobles}
+		add_stability = -0.05
+		
+		}
+
+
+	}
+	focus = {
+		id = MRU_the_new_hierarchy
+		icon = GFX_MRU_the_new_hierarchy
+		relative_position_id = MRU_crush_opposition
+		prerequisite = {
+			focus = MRU_crush_opposition
+		}
+
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		remove_ideas = MRU_anti_popular_mandate_idea_2
+		add_political_power = 150
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = MRU_discuss_feudal_obligations
+		icon = GFX_MRU_discuss_feudal_obligations
+		relative_position_id = MRU_the_new_hierarchy
+		prerequisite = {
+			focus = MRU_the_new_hierarchy
+		}
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	
+	focus = {
+		id = MRU_the_theocracy
+		icon = GFX_MRU_the_theocracy
+		relative_position_id = MRU_crisis_of_authority
+		prerequisite = {
+			focus = MRU_crisis_of_authority
+			focus = MRU_young_ruler
+		}
+		cost = 3
+		x = 3
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = MRU_Support_from_orthodox
+		add_manpower = 5403
+		add_political_power = 50
+		}
+
+
+	}
+	focus = {
+		id = MRU_God_messenger_for_people ## idea to increase stability weekly (mb smth else) 
+		icon = GFX_MRU_God_messenger_for_people
+		relative_position_id = MRU_the_theocracy
+		prerequisite = {
+			focus = MRU_the_theocracy
+		}
+		cost = 3
+		x = 0
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_new_Empire ###Change name to Russian Empire, change tsar modifier to Emperor of shattered land with some army buffs
+		icon = GFX_MRU_new_Empire
+		relative_position_id = MRU_discuss_feudal_obligations
+		prerequisite = {
+			focus = MRU_discuss_feudal_obligations
+		}
+		prerequisite = {
+			focus = MRU_God_messenger_for_people
+		}
+		prerequisite = {
+			focus = MRU_shift_to_older_times
+		}
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MRU_Experience_exchange ##SRU and MRU get timed ideas against EuroBritannia nad EUIZ
+		icon = GFX_MRU_Experience_exchange
+		relative_position_id = MRU_Everything_for_army
+		prerequisite = {
+			focus = MRU_Everything_for_army
+		}
+		prerequisite = {
+			focus = MRU_the_Unholy_Alliance
+		}
+		cost = 3
+		x = 3
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_middle_east_volunteers ##Get oob with few infantry and 1 tank division
+		icon = GFX_MRU_middle_east_volunteers
+		relative_position_id = MRU_Everything_for_army
+		prerequisite = {
+			focus = MRU_Everything_for_army
+		}
+		prerequisite = {
+			focus = MRU_new_Empire
+		}
+		cost = 3
+		x = -3
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+	focus = {
+		id = MRU_the_FIRST_test
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_middle_east_volunteers
+		prerequisite = {
+			focus = MRU_middle_east_volunteers
+		}
+		prerequisite = {
+			focus = MRU_Experience_exchange
+		}
+
+		cost = 3
+		x = 3
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+			focus = MRU_retreat_into_isolation
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}	

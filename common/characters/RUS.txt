@@ -3,16 +3,17 @@ characters={
 		name="Julien Blanchet"
 		portraits={
 			civilian={
-				large="GFX_portrait_RUS_julien_blanchet"
 				small="gfx/interface/ideas/RUS/RUS_julien_blanchet_idea.dds"
 			}
 		}
 		advisor={				
 			slot = head_of_government
 			idea_token = RUS_julien_blanchet
+			removal_cost = -1
 			ledger = civilian
 				allowed = {
 					original_tag = RUS
+					NOT = {has_completed_focus = RUS_Arrest_the_traitor}
 				}
 				traits = {
 					oligarchy_guy appointed_general
@@ -21,6 +22,15 @@ characters={
 				ai_will_do = {
 					factor = 1.000
 				}
+		}
+	}
+
+	RUS_vladislav={
+		name="Vladislav Zakharov"
+		portraits={
+			civilian={
+				large="GFX_portrait_RUS_vladislav"
+			}
 		}
 		country_leader={
 			desc = "	"
@@ -160,6 +170,138 @@ characters={
 			}
 		}
 	}
+
+	### ARMY - NAVY - AIR (CHIEFS)
+
+	RUS_generic_army_chief_1 = {
+		name = "Kurakin Svyatoslav"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_4_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = RUS_generic_army_chief_idea_1
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				army_chief_offensive_2
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	RUS_generic_army_chief_2 = {
+		name = "Yevseyev Andreiv"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_5_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = RUS_generic_army_chief_idea_2
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				army_chief_defensive_1
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RUS_generic_army_chief_3 = {
+		name = "Zaslavsky Urvan"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_6_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = RUS_generic_army_chief_idea_3
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				army_chief_entrenchment_2
+			}
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	RUS_generic_navy_chief = {
+		name = "Chebykin Yaroslav"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_7_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = RUS_generic_navy_chief_idea
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				navy_chief_decisive_battle_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RUS_generic_air_chief = {
+		name = "Kondurov Potap"
+		portraits = {
+			army = {
+				small="gfx/interface/ideas/RUS/RUS_generic_general_8_idea.dds"
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = RUS_generic_air_chief_idea
+			allowed = {
+				tag = RUS
+			}
+			traits = { 
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	###
+
 	RUS_Conovalovs={
 		advisor={
 			cost = 2000
@@ -237,9 +379,9 @@ characters={
 				large="GFX_portrait_RUS_officer_1"
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits={ infantry_officer scavenger }
-			skill = 2
+			skill = 4
 			attack_skill = 2
 			defense_skill = 4
 			planning_skill = 3
@@ -262,6 +404,65 @@ characters={
 			planning_skill = 1
 			logistics_skill = 5
 			legacy_id=-1
+		}
+	}
+	RUS_Butasov={
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = RUS_Butasov
+				allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					silent_workhorse 
+				}
+		}
+		name="Gleb Butasov"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_Butasov_idea.dds" #####Kruger, change pls
+			}
+		}
+	}
+	RUS_Lavinov={
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = RUS_Lavinov
+				allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					financial_expert
+					economist
+				}
+		}
+		name="Alexander Lavinov"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_Lavinov_idea.dds" #####Kruger, change pls
+			}
+		}
+	}
+	RUS_Osipov={
+		advisor={
+			cost = 2000
+			slot = head_of_government
+			idea_token = RUS_Osipov
+				allowed = {
+					original_tag = RUS
+				}
+				traits = {
+					fortification_engineer
+					war_industrialist
+				}
+		}
+		name="Nikolay Osipov"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/RUS/RUS_Osipov_idea.dds" #####Kruger, change pls
+			}
 		}
 	}
 }
