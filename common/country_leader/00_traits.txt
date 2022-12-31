@@ -27,7 +27,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 	
 	artist_prince = {
 		random = no
@@ -38,7 +37,16 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
+	
+	Gandolfi_trait = {		  
+		random = no				
+		trade_opinion_factor = 0.45
+		stability_factor = 0.10
+  
+		ai_will_do = {
+			factor = 1
+		}
+	}
 		
 	FRA_edouard_herriot_trait = {
 		random = no
@@ -2628,13 +2636,35 @@ leader_traits = {
 					build_cost_ic = -0.15
 	
 				}
+				anti_tank_equipment = {
+					defense = 0.15
+					hard_attack = 0.15
+				}
 			}
-	
+			army_attack_factor = 0.1	
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
 	
+		## Materiel Designer/Artillery Designer ##
+
+		materiel_designer_defence_1 = {
+			random = no
+			equipment_bonus = {
+				anti_tank_equipment = {
+					defense = 0.15
+					hard_attack = 0.15
+				}
+			}
+			army_attack_factor = 0.1
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		## Aircraft Designer ##
 	
 	
 		bomber_producer_offense_2 = {
@@ -3221,52 +3251,6 @@ leader_traits = {
 		stability_factor = 0.10
 		war_support_factor = -0.10
 		political_power_factor = 0.30
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	fortification_engineer = {
-		random = yes
-		production_speed_bunker_factor = 0.2
-		production_speed_coastal_bunker_factor = 0.2
-		production_speed_anti_air_building_factor = 0.2
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	war_industrialist = {
-		random = yes
-		production_speed_arms_factory_factor = 0.1
-		production_speed_dockyard_factor = 0.1		
-		production_speed_fuel_silo_factor = 0.1
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	financial_expert = {
-		random = yes
-		consumer_goods_factor = -0.05
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	economist = {
-		random = yes
-		production_factory_max_efficiency_factor = 0.05
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	silent_workhorse = {
-		random = yes
-		political_power_factor = 0.15
-		stability_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1

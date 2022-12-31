@@ -4,7 +4,7 @@ sub_units = {
 		priority = 1
 		active = yes
 		type = { fighter }
-		need = { small_plane_airframe = 1 }
+		need = { fighter_equipment = 1 }
 		categories = { category_fighter }
 		land_air_wing_size = 100
 	}
@@ -25,7 +25,7 @@ sub_units = {
 		priority = 2
 		active = yes
 		type = { cas }
-		need = { small_plane_cas_airframe = 1 }
+		need = { CAS_equipment = 1 }
 		categories = { category_cas }
 		land_air_wing_size = 100
 	}
@@ -40,6 +40,16 @@ sub_units = {
 		carrier_air_wing_size = 10
 		land_air_wing_size = 100
 	}
+
+	#multirole = {
+	#	sprite = light_plane
+	#	priority = 2
+	#	active = yes
+	#	type = { interceptor }
+	#	need = { small_plane_multirole_airframe = 1 }
+	#	categories = { category_multirole }
+	#	land_air_wing_size = 100
+	#}
 
 	strat_bomber = {
 		sprite = heavy_plane
@@ -70,14 +80,14 @@ sub_units = {
 		land_air_wing_size = 100
 	}
 
-	rocket_interceptor = {
-		sprite = light_plane
-		priority = 7
-		active = yes
-		type = { interceptor }
-		need = { rocket_interceptor_equipment = 1 }
-		land_air_wing_size = 100
-	}
+	#rocket_interceptor = {
+	#	sprite = light_plane
+	#	priority = 7
+	#	active = yes
+	#	type = { interceptor }
+	#	need = { rocket_interceptor_equipment = 1 }
+	#	land_air_wing_size = 100
+	#}
 
 	guided_missile = {
 		sprite = missile_default

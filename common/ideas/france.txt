@@ -161,7 +161,7 @@ ideas = {
 			}
 		}
 
-		technological_pride = {
+	     technological_pride = {
 
 			allowed = {
 				always = yes
@@ -172,11 +172,45 @@ ideas = {
 			}
 
 			removal_cost = -1
+		
+		    modifier = {
+			   research_speed_factor = -0.20
+		    }
+	    }
 
-			modifier = {
-				research_speed_factor = -0.15
-			}
-		}
+	    technological_pride_swap_1 = {
+
+		    allowed = {
+			   always = no
+		    }
+
+		    allowed_civil_war = {
+			   always = yes
+		    }
+
+		    removal_cost = -1
+
+		    modifier = {
+			   research_speed_factor = -0.15
+		    }
+	    }
+
+	    technological_pride_swap_2 = {
+
+		    allowed = {
+			   always = no
+		    }
+
+		   allowed_civil_war = {
+			   always = yes
+		    }
+
+		removal_cost = -1
+
+		    modifier = {
+			    research_speed_factor = -0.10
+		    }
+	    }
 		
 		memories_of_the_great_war = {
 
@@ -200,10 +234,8 @@ ideas = {
 				army_morale_factor = -0.15
 			}
 		}
-    }
-
-
-	######## FOCUS IDEAS ########
+       
+	    ######## FOCUS IDEAS ########
 
 		special_military_school_of_saint_cyr = {
 
@@ -225,6 +257,7 @@ ideas = {
 				army_org_factor = 0.3
 				max_dig_in_factor = 0.10
 				max_planning_factor = 0.10
+			    dig_in_speed = 0.15						  
 			}
 		}
 
@@ -258,9 +291,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.60
+				stability_factor = -0.70
 				war_support_factor = -0.80
-				stability_weekly = -0.05
+				stability_weekly = -0.005
 			}
 		}
 
@@ -284,7 +317,7 @@ ideas = {
 			}
 
 			add_dynamic_modifier = {
-                          days = 180
+                  days = 180
 			}
 		}
 
@@ -309,6 +342,536 @@ ideas = {
 			}
 		}
 
+		gigantic_weapons = {
+			allowed = {
+				always = no
+			}
 
-	####### IDEA COPIES #######
-}	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.05
+		    }
+			equipment_bonus = {
+				knightmare_mass_prod = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+	    }
+	    african_conscription = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor= 0.15
+				stability_factor= 0.15
+				conscription = 0.10
+				non_core_manpower = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		
+		france_promoting_democracy_in_africa = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				moderate_liberalism_drift = 0.05
+			}
+		}
+
+		france_maintaining_the_peace_stability_modifier = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+
+		jungle_war_attrition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -0.05
+			}
+		}
+
+		division_defence_and_org = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.10
+				army_org_Factor = 0.10
+			}
+		}
+		FRA_sakuradite_syndicate = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_incomprehensible_government = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+				political_power_gain = -2
+			}
+		}
+		FRA_factory_for_Russia= {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		FRA_mozambiques_sakuradite_experience = {
+
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+
+
+		tank_manufacturer = {
+			designer = yes
+			FRA_sophie_randle_design = {
+			picture = FRA_sophie_randle_design
+				allowed = {
+					has_country_flag = FRA_sophie_randle
+					original_tag = FRA
+				}
+				research_bonus = {
+				sakuradite = 0.05
+				knightmare_all_pur = 0.05
+				}
+				traits = { 
+				knightmare_producer_quality_1 
+				}
+			}
+		}
+
+		materiel_manufacturer = {
+			designer = yes
+			FRA_anna_clement_design = {
+				picture = FRA_anna_clement_design
+				cost = 2000
+				allowed = {
+				has_country_flag = FRA_anna_clment
+				original_tag = FRA
+				}
+				traits = { materiel_designer_defence_1 } 
+			}
+		} 
+		aircraft_manufacturer = {
+			designer = yes
+			FRA_joe_wise_design = {
+				allowed = {
+					has_country_flag = FRA_joe_wise
+					original_tag = FRA
+				}
+			traits = { CAS_FRA_manufacturer }
+			}
+		}
+		industrial_concern = { 
+			designer = yes
+			FRA_gen_industry = {
+			picture = BRT_gen_industry
+			allowed = {
+			original_tag = FRA
+			}
+			research_bonus = {
+			industry = 0.02
+			}
+			traits = { industrial_manufacturer }
+			}
+		}
+		legion_etrangere = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.05
+			}
+		}
+		legion_etrangere1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.05
+				resistance_growth_on_our_occupied_states = 0.15
+			}
+		}
+		legion_etrangere2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.05
+				resistance_growth_on_our_occupied_states = 0.15
+				encryption = 1
+				decryption = 1
+			}
+		}
+		napoleons_legacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.1
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				motorized_equipment = {
+					maximum_speed = 0.03
+				}
+			}
+		}
+		napoleons_legacy1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.1
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				motorized_equipment = {
+					maximum_speed = 0.03
+				}
+			}
+			research_bonus = {
+				artillery = 0.04
+				support_tech = 0.04
+				electronics = 0.04
+			}
+		}
+		napoleons_legacy2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.1
+				decryption = 2.5
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				motorized_equipment = {
+					maximum_speed = 0.03
+				}
+			}
+			research_bonus = {
+				artillery = 0.04
+				support_tech = 0.04
+				electronics = 0.04
+			}
+		}
+		napoleons_legacy3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = 0.1
+				decryption = 2.5
+				recon_factor = 0.03
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				motorized_equipment = {
+					maximum_speed = 0.03
+				}
+			}
+			research_bonus = {
+				artillery = 0.04
+				support_tech = 0.04
+				electronics = 0.04
+			}
+		}
+		division_reorganization = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_Factor = -0.1
+				land_equipment_upgrade_xp_cost = -0.2
+			}
+		}
+		office_of_mech_modernization = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			equipment_bonus = {
+				knightmare_mass_prod = {
+					reliability = 0.1
+				}
+			}
+			research_bonus = {
+				knightmare_mass_production = 0.05
+			}
+		}
+		office_of_mech_modernization1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+
+			}
+			equipment_bonus = {
+				knightmare_mass_prod = {
+					reliability = 0.1
+					movement = 0.03
+					build_cost_ic = -0.05
+				}
+			}
+			research_bonus = {
+				knightmare_mass_production = 0.05
+			}
+		}
+		reformed_army_hq = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 1
+				experience_gain_army_factor = 0.05
+				max_command_power = 70
+				command_power_gain = 0.5
+			}
+		}
+		reformed_army_hq1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 1
+				experience_gain_army_factor = 0.15
+				max_command_power = 70
+				command_power_gain = 1
+				terrain_trait_xp_gain_factor = 0.1
+			}
+		}
+		fortification_effort = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.2
+			}
+		}
+		marine_nationale = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+			}
+		}
+		marine_nationale1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+				trait_green_water_expert_xp_gain_factor = 0.15
+			}
+		}
+		marine_nationale2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.16
+				trait_green_water_expert_xp_gain_factor = 0.15
+			}
+			equipment_bonus = {
+				capital_ship = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+			}
+		}
+		marine_nationale3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.16
+				trait_green_water_expert_xp_gain_factor = 0.15
+				amphibious_invasion = 0.04
+			}
+			equipment_bonus = {
+				capital_ship = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+			}
+		}
+		continental_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+	}
+}

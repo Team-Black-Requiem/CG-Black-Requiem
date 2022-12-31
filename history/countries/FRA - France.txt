@@ -1,13 +1,11 @@
 ﻿capital = 16
-
 oob = "FRA"
-set_naval_oob = "FRANCE_NAVAL"
 set_research_slots = 3
 set_stability = 0.5
 
 set_technology = {
+	support_equip_tech = 1
 	infantry_weapons = 1
-	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
@@ -15,13 +13,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	eu_war_artillery = 1
-	early_submarine = 1
-	early_carrier = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_frigate = 1
-	support_equip = 1
-	early_frigate = 1
+	eu_war_anti_air = 1
 	cold_war_tank = 1
 	tank_design = 1
 	motorised_infantry = 1
@@ -34,9 +26,75 @@ set_technology = {
 	armored_car1 = 1
 }
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		filler_carrier_tech = 1
+		filler_cruiser_tech = 1
+		filler_destroyer_tech = 1
+		filler_frigate_tech = 1
+		filler_submarine_tech = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_frigate = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_carrier = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_frigate = 1
+		transport = 1
+	}
+}
+
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Rainier Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Jean De Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+
+	create_equipment_variant = {
+		name = "César Class"
+		type = carrier_1
+		upgrades = {
+			ship_deckspace_upgrade = 1
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
 
 set_convoys = 1000
-
 
 set_politics = {
 	ruling_party = moderate_liberalism
@@ -55,10 +113,10 @@ set_popularities = {
 }
 
 add_ideas = {
-    #mother_of_the_revolution
-    #guardian_of_europia
-    #sluggish_industry
-    #technological_pride
+    mother_of_the_revolution
+    guardian_of_europia
+    sluggish_industry
+    technological_pride
 }
 
 FRA = {
@@ -110,7 +168,7 @@ add_to_faction = EST
 add_to_faction = RUS
 add_to_faction = OTT
 add_to_faction = MOR
-add_to_faction = LYB
+add_to_faction = LBA
 add_to_faction = UKR
 add_to_faction = GER
 
@@ -129,29 +187,20 @@ create_country_leader = {
 	desc = "POLITICS_CHARLES_DESC"
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
-	ideology = social-capitalism
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "United European Council"
-	desc = "POLITICS_CHARLES_DESC"
-	picture = "Portrait_Forty.dds"
-	expire = "2030.1.1"
 	ideology = social_liberalism
 	traits = {
 	}
 }
 
-#recruit_character = FRA_edouard_herriot
-#recruit_character = FRA_frederica_de_cleves
-#recruit_character = FRA_gilles_durand
-#recruit_character = FRA_carver_smith
-#recruit_character = FRA_oscar_hamel
-#recruit_character = FRA_constantin_lyon
-#recruit_character = FRA_daniel_malcal
-#recruit_character = FRA_gene_smilas
-#recruit_character = FRA_bradow_von_breisgau
-#recruit_character = FRA_claus_warwick
-#recruit_character = FRA_pierre_anou
-#recruit_character = FRA_gandolfi_character_foreign_minister
+recruit_character = FRA_edouard_herriot
+recruit_character = FRA_frederica_de_cleves
+recruit_character = FRA_gilles_durand
+recruit_character = FRA_carver_smith
+recruit_character = FRA_oscar_hamel
+recruit_character = FRA_constantin_lyon
+recruit_character = FRA_daniel_malcal
+recruit_character = FRA_gene_smilas
+recruit_character = FRA_bradow_von_breisgau
+recruit_character = FRA_claus_warwick
+recruit_character = FRA_pierre_anou
+recruit_character = FRA_gandolfi_character_foreign_minister

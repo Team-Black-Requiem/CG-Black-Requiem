@@ -1,0 +1,167 @@
+add_namespace = FRA
+
+country_event = {  
+	id = FRA.1
+	title = FRA.1.t
+	desc = FRA.1.d
+	picture = GFX
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = FRA.1.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -100
+    }     
+}
+country_event = {  
+	id = FRA.2
+	title = FRA.2.t
+	desc = FRA.2.d
+	picture = GFX
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = FRA.2.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_equipment_to_stockpile = {
+					type = cold_war_tank_equip
+					amount = -900
+					producer = fra
+				}
+		EST = {
+		add_equipment_to_stockpile = {
+					type = cold_war_tank_equip
+					amount = 300
+					producer = fra
+				}
+		}
+		POL = {
+		add_equipment_to_stockpile = {
+					type = cold_war_tank_equip
+					amount = 300
+					producer = fra
+				}
+		}
+		UKR = {
+		add_equipment_to_stockpile = {
+					type = cold_war_tank_equip
+					amount = 300
+					producer = fra
+				}
+		}
+    }
+	option = {
+		name = FRA.2.b
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -500
+    }	
+}
+country_event = {  
+	id = FRA.3
+	title = FRA.3.t
+	desc = FRA.3.d
+	picture = GFX
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = FRA.3.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.025
+		add_political_power = -50
+    }
+	option = {
+		name = FRA.3.b
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.05
+		
+    }     
+}
+
+country_event = {  
+	id = FRA.4
+	title = FRA.4.t
+	desc = FRA.4.d
+	picture = GFX
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = FRA.4.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 50
+
+    }
+	option = {
+		name = FRA.4.b
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.05
+		
+    }
+	option = {
+		name = FRA.4.c
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -100
+		
+    }     	
+}
+
+country_event = {  
+	id = FRA.5
+	title = FRA.5.t
+	desc = FRA.5.d
+	picture = GFX
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = FRA.3.a
+		
+		ai_chance = {
+			factor = 100
+		}
+    }
+	option = {
+		name = FRA.3.b
+		
+		ai_chance = {
+			factor = 100
+		}
+    }     
+}
