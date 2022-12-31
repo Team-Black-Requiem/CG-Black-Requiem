@@ -317,6 +317,7 @@ country_event = { #Start of Pacific War
 
 		hidden_effect = {
 			news_event = news.4 
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -1121,8 +1122,36 @@ country_event = {
 }
 
 
+country_event = { 
+	id = JAP.33    
+	title = JAP.33.t
+	desc = JAP.33.d
+	#picture = 
 
+	is_triggered_only = yes
+	fire_only_once = yes
 
+	option = {   #Completely Reform
+		name = JAP.33.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = autocracy
+			popularity = 0.05
+		}
+		JAP_tohdoh_influence_up = yes
+	}
+
+	option = {  #Partialy "Reform"
+		name = JAP.33.b
+		add_political_power = 100
+		add_popularity = {
+			ideology = autocracy
+			popularity = -0.05	
+		}
+		JAP_katase_influence_up = yes
+	}
+}
 
 
 

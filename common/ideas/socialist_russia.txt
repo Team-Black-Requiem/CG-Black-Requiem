@@ -1,0 +1,267 @@
+ideas = {
+    country = {
+
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education 
+	
+	    SRU_flame_socialism = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.20
+			political_power_gain_factor = 0.20
+			drift_defence_factor = 0.40
+			}
+		}
+		
+		SRU_unstable_government = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.05
+			totalitarian_socialism_drift = 0.003
+			ultra_nationalism_drift = 0.001
+			moderate_socialism_drift = 0.003
+			}
+		}
+			SRU_unstable_government_2 = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.1
+			totalitarian_socialism_drift = 0.003
+			ultra_nationalism_drift = 0.001
+			moderate_socialism_drift = 0.003
+			moderate_conservatism_drift = -0.01
+			moderate_liberalism_drift = -0.01
+			}
+		}
+		
+		SRU_unprofessional_army = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.15
+			army_morale_factor = -0.15
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+		SRU_unprofessional_army_2 = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.15
+			army_morale_factor = -0.15
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			conscription = 0.01
+			}
+		}
+			SRU_second_chance = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.05
+			army_morale_factor = -0.05
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			conscription = 0.01
+			hardline_socialism_drift = 0.01
+			totalitarian_socialism_drift = 0.01
+			moderate_socialism_drift = 0.01
+			}
+		}
+		SRU_their_small_help = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.1
+				unit_upkeep_attrition_factor = -0.1
+				weekly_manpower = 250
+			}
+		}
+		EUR_sabotage =	{	
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_infrastructure_factor = -0.1
+			industry_repair_factor = -0.1
+			}
+			}
+
+    }
+	
+	
+	
+		tank_manufacturer = {
+		designer = yes
+
+		SOC_SIB_gen_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				fast_tank_manufacturer
+			}
+
+		}
+	}
+
+	industrial_concern = {
+		designer = yes
+
+		SOC_SIB_gen_industrial_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+			}
+
+			research_bonus = {
+				industry = 0.05
+			}
+
+			traits = {
+				resource_extration_industry
+			}
+
+
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		SOC_SIB_gen_mater_man = {
+			# picture =
+
+			allowed = {
+				original_tag = SRU
+			}
+
+			research_bonus = {
+				infantry_equipment = 0.05
+			}
+
+			traits = {
+				artillery_producer_mass_1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		SOC_SIB_gen_naval_man = {
+			# picture =
+
+			allowed = {
+				original_tag = SRU
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
+			traits = {
+				submarine_producer_offense_1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		SOC_SIB_gen_air_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+			}
+			research_bonus = {
+				heavy_air = 0.05
+			}
+
+			traits = {
+				light_aircraft_manufacturer
+			}
+		}
+	}
+}

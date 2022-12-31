@@ -1,0 +1,749 @@
+add_namespace = EIZ
+
+set_variable = {FrenchInfluence = 0}
+set_variable = {GermanInfluence = 0}
+set_variable = {AustrianInfluence = 0}
+
+country_event = {
+    id = EIZ.1
+    title = EIZ.1.t
+    desc = EIZ.1.d
+    #picture
+    fire_only_once = yes
+	is_triggered_only = yes
+
+    option = {
+	   
+		name = EIZ.1.a
+
+        
+		ai_chance = {
+			factor = 33
+		}
+		
+    } 
+}
+
+country_event = {
+  id = EIZ.2
+  title = EIZ.2.t
+  desc = EIZ.2.d
+  #picture
+  fire_only_once = yes
+is_triggered_only = yes
+
+  option = {
+   
+  name = EIZ.2.a
+  set_stability = -0.4
+
+  ai_chance = {
+    factor = 33
+  }
+  } 
+}
+
+country_event = {
+  id = EIZ.3
+  title = EIZ.3.t
+  desc = EIZ.3.d
+  #picture
+  fire_only_once = yes
+is_triggered_only = yes
+
+  option = {
+   
+  name = EIZ.3.a
+  set_war_support = -0.4
+
+  ai_chance = {
+    factor = 33
+  }
+  } 
+}
+
+country_event = {
+  id = EIZ.4
+  title = EIZ.4.t
+  desc = EIZ.4.d
+  #picture
+  fire_only_once = yes
+is_triggered_only = yes
+
+  option = {
+   
+  name = EIZ.4.a
+      add_state_core = 219
+      add_state_core = 205
+      add_state_core = 242
+      add_state_core = 223
+      
+      EIZ = {
+        set_capital = {
+          state = 219
+          remember_old_capital = no
+        }
+      }
+
+      add_to_variable = {FrenchInfluence = 1}
+  
+  ai_chance = {
+    factor = 33
+  }
+  
+  } 
+  option = {
+   
+  name = EIZ.4.b
+       
+      add_state_core = 195
+      add_state_core = 208
+      add_state_core = 244
+      add_state_core = 209
+      add_state_core = 263
+
+      EIZ = {
+        set_capital = {
+          state = 195
+          remember_old_capital = no
+        }
+      }
+  add_to_variable = {GermanInfluence = 1}
+
+  ai_chance = {
+    factor = 33
+  }
+
+  } 
+  option = {
+   
+  name = EIZ.4.c
+       
+      add_state_core = 137
+      add_state_core = 234
+      add_state_core = 233
+      add_state_core = 238
+      add_state_core = 235
+
+      EIZ = {
+        set_capital = {
+          state = 137
+          remember_old_capital = no
+        }
+      }
+  add_to_variable = {AustrianInfluence = 1}
+
+  ai_chance = {
+    factor = 33
+  }
+  
+  } 
+}
+
+country_event = {
+  id = EIZ.5
+  title = EIZ.5.t
+  desc = EIZ.5.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.5.a
+    name = EIZ.5.b
+    name = EIZ.5.c
+  }
+
+}
+
+country_event = {
+  id = EIZ.6
+  title = EIZ.6.t
+  desc = EIZ.6.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.6.a
+    name = EIZ.6.b
+    name = EIZ.6.c
+  }
+
+}
+
+country_event = {
+  id = EIZ.7
+  title = EIZ.7.t
+  desc = EIZ.7.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.7.a
+    name = EIZ.7.b
+    name = EIZ.7.c
+  }
+
+}
+
+country_event = {
+  id = EIZ.8
+  title = EIZ.8.t
+  desc = EIZ.8.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.8.a
+  }
+
+}
+
+country_event = {
+  id = EIZ.9
+  title = EIZ.9.t
+  desc = EIZ.9.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.9.a
+  }
+
+}
+
+country_event = {
+  id = EIZ.10
+  title = EIZ.10.t
+  desc = EIZ.10.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.10.a
+  }
+
+}
+
+country_event = {
+  id = EIZ.11
+  title = EIZ.11.t
+  desc = EIZ.11.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.11.a
+  }
+
+}
+
+country_event = {
+  id = EIZ.12
+  title = EIZ.12.t
+  desc = EIZ.12.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.12.a
+  }
+}
+
+country_event = {
+  id = EIZ.13
+  title = EIZ.13.t
+  desc = EIZ.13.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+   
+  name = EIZ.13.a
+  EIZ = {
+    declare_war_on = {
+    target = MRU
+    type = annex_everything
+    }
+  }
+      
+  ai_chance = {
+    factor = 33
+  }
+  
+  } 
+}
+
+country_event = {
+  id = EIZ.14
+  title = EIZ.14.t
+  desc = EIZ.14.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.14.a
+  }
+}
+
+country_event = {
+  id = EIZ.15
+  title = EIZ.15.t
+  desc = EIZ.15.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.15.a
+    EIZ = { country_event = EIZ.16 }
+    name = EIZ.15.b
+    EIZ = { country_event = EIZ.17 }
+  }
+}
+
+country_event = {
+  id = EIZ.16
+  title = EIZ.16.t
+  desc = EIZ.16.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.16.a
+  }
+}
+
+country_event = {
+  id = EIZ.17
+  title = EIZ.17.t
+  desc = EIZ.17.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.17.a
+  }
+}
+
+country_event = {
+  id = EIZ.18
+  title = EIZ.18.t
+  desc = EIZ.18.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.18.a
+  }
+}
+
+country_event = {
+  id = EIZ.19
+  title = EIZ.19.t
+  desc = EIZ.19.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.19.a
+  }
+}
+
+country_event = {
+  id = EIZ.20
+  title = EIZ.20.t
+  desc = EIZ.20.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.20.a
+    EIZ = { country_event = EIZ.21 }
+    name = EIZ.20.b
+    EIZ = { country_event = EIZ.22 }
+  }
+}
+
+country_event = {
+  id = EIZ.21
+  title = EIZ.21.t
+  desc = EIZ.21.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.21.a
+  }
+}
+
+country_event = {
+  id = EIZ.22
+  title = EIZ.22.t
+  desc = EIZ.22.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.22.a
+  }
+}
+
+country_event = {
+  id = EIZ.23
+  title = EIZ.23.t
+  desc = EIZ.23.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.23.a
+  }
+}
+
+country_event = {
+  id = EIZ.24
+  title = EIZ.24.t
+  desc = EIZ.24.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.24.a
+    EIZ = { country_event = EIZ.25 }
+    name = EIZ.24.b
+    EIZ = { country_event = EIZ.26 }
+  }
+}
+
+country_event = {
+  id = EIZ.25
+  title = EIZ.25.t
+  desc = EIZ.25.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.25.a
+  }
+}
+
+country_event = {
+  id = EIZ.26
+  title = EIZ.26.t
+  desc = EIZ.26.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.26.a
+  }
+}
+
+country_event = {
+  id = EIZ.27
+  title = EIZ.27.t
+  desc = EIZ.27.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.27.a
+  }
+}
+
+country_event = {
+  id = EIZ.28
+  title = EIZ.28.t
+  desc = EIZ.28.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.28.a
+    EIZ = { country_event = EIZ.29 }
+    name = EIZ.28.b
+    EIZ = { country_event = EIZ.30 }
+  }
+}
+
+country_event = {
+  id = EIZ.29
+  title = EIZ.29.t
+  desc = EIZ.29.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.29.a
+  }
+}
+
+country_event = {
+  id = EIZ.30
+  title = EIZ.30.t
+  desc = EIZ.30.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.30.a
+  }
+}
+
+country_event = {
+  id = EIZ.31
+  title = EIZ.31.t
+  desc = EIZ.31.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.31.a
+  }
+}
+
+country_event = {
+  id = EIZ.32
+  title = EIZ.32.t
+  desc = EIZ.32.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.32.a
+  }
+}
+
+country_event = {
+  id = EIZ.33
+  title = EIZ.33.t
+  desc = EIZ.33.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.33.a
+  }
+}
+
+country_event = {
+  id = EIZ.34
+  title = EIZ.34.t
+  desc = EIZ.34.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.34.a
+  }
+}
+
+country_event = {
+  id = EIZ.35
+  title = EIZ.35.t
+  desc = EIZ.35.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.35.a
+  }
+}
+
+country_event = {
+  id = EIZ.36
+  title = EIZ.36.t
+  desc = EIZ.36.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.36.a
+  }
+}
+
+country_event = {
+  id = EIZ.37
+  title = EIZ.37.t
+  desc = EIZ.37.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.37.a
+  }
+}
+
+country_event = {
+  id = EIZ.38
+  title = EIZ.38.t
+  desc = EIZ.38.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.38.a
+  }
+}
+
+country_event = {
+  id = EIZ.39
+  title = EIZ.39.t
+  desc = EIZ.39.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.39.a
+  }
+}
+
+country_event = {
+  id = EIZ.40
+  title = EIZ.40.t
+  desc = EIZ.40.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.40.a
+  }
+}
+
+country_event = {
+  id = EIZ.41
+  title = EIZ.41.t
+  desc = EIZ.41.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.41.a
+  }
+}
+
+country_event = {
+  id = EIZ.42
+  title = EIZ.42.t
+  desc = EIZ.42.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.42.a
+  }
+}
+
+news_event = {
+  id = EIZ.43
+  title = {
+      text = EIZ.43.t.a
+      trigger = {
+          tag = EIZ
+      }
+  }
+  title = {
+      text = EIZ.43.t
+  }
+  desc = {
+      text = EIZ.43.desc.a
+      trigger = {
+          tag = EIZ
+      }
+  }
+  desc = {
+      text = EIZ.43.desc
+  }
+  
+  picture = GFX_my_news_event_picture
+  
+  is_triggered_only = yes
+  major = yes
+  
+  option = {
+      name = EIZ.43.1.a
+      trigger = {
+          tag = EIZ
+      }
+  }
+  
+  option = {
+      name = EIZ.43.1.b
+      trigger = {
+          NOT = { tag = EIZ }
+      }
+  }
+  
+}
+
+country_event = { ##Intervening in the East
+  id = EIZ.44
+  title = EIZ.44.t
+  desc = EIZ.44.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.44.a
+    hidden_effect = {
+      set_country_flag = EIZ_supporting_socialist_flag
+    }
+  }
+  option = {
+    name = EIZ.44.b
+    hidden_effect = {
+      set_country_flag = EIZ_supporting_eurobritannia_flag
+    }
+  }
+}
+
+country_event = {
+  id = EIZ.45
+  title = EIZ.45.t
+  desc = EIZ.45.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.45.a
+  }
+}

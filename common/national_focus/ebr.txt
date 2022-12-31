@@ -1,0 +1,671 @@
+focus_tree = {
+	id = euro_britannia_focus_new
+	continuous_focus_position = { x = 20 y = 2500 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EUR
+		}
+	}
+	#All Hail Euro Britannia !
+	focus = {
+		id = BRI_allhaileurobritannia
+		icon = GFX_goal_unknown
+		x = 9
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Homes for Euro Britannians !
+	focus = {
+		id = BRI_homesforeurobritannians
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_eastern_jewels  }
+	}
+
+	#The Duke Awakening
+	focus = {
+		id = BRI_the_duke_awakening
+		icon = GFX_goal_unknown
+		x = 9
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_allhaileurobritannia  }
+	}
+
+	#A Palace for the Duke
+	focus = {
+		id = BRI_a_palace_for_the_duke
+		icon = GFX_goal_unknown
+		x = 9
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_eastern_jewels  }
+	}
+
+	#Eastern Jewels
+	focus = {
+		id = BRI_eastern_jewels
+		icon = GFX_goal_unknown
+		x = 9
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_the_duke_awakening  }
+	}
+
+	#Castles for Nobles
+	focus = {
+		id = BRI_castles_for_nobles
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_eastern_jewels  }
+	}
+
+	#Modern Feudalism
+	focus = {
+		id = BRI_modern_feudalism
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_a_palace_for_the_duke  } prerequisite = { focus = BRI_castles_for_nobles  } prerequisite = { focus = BRI_homesforeurobritannians  }
+	}
+
+	#House of Lords
+	focus = {
+		id = BRI_house_of_lords
+		icon = GFX_goal_unknown
+		x = 9
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_modern_feudalism  }
+	}
+
+	#Knights of Euro Britannia
+	focus = {
+		id = BRI_knights_of_euro_britannia
+		icon = GFX_goal_unknown
+		x = 9
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_house_of_lords  }
+	}
+
+	#Grand Master Manfredi
+	focus = {
+		id = BRI_grand_master_manfredi
+		icon = GFX_goal_unknown
+		x = 8
+		y = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knightmare_knights  }
+	}
+
+	#Holy Order of Michael
+	focus = {
+		id = BRI_holy_order_of_michael
+		icon = GFX_goal_unknown
+		x = 8
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+	}
+
+	#Holy Order of Raphael
+	focus = {
+		id = BRI_holy_order_of_raphael
+		icon = GFX_goal_unknown
+		x = 12
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+	}
+
+	#Holy Order of Gabriel
+	focus = {
+		id = BRI_holy_order_of_gabriel
+		icon = GFX_goal_unknown
+		x = 6
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+	}
+
+	#Holy Order of Uriel
+	focus = {
+		id = BRI_holy_order_of_uriel
+		icon = GFX_goal_unknown
+		x = 10
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+	}
+
+	#Summon the Levies
+	focus = {
+		id = BRI_summon_the_levies
+		icon = GFX_goal_unknown
+		x = 7
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_bread_for_the_people  }
+	}
+
+	#Knightmare Knights
+	focus = {
+		id = BRI_knightmare_knights
+		icon = GFX_goal_unknown
+		x = 8
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_holy_order_of_michael  }
+	}
+
+	#Establish Euro Shilling
+	focus = {
+		id = BRI_establish_euro_shilling
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_homesforeurobritannians  }
+	}
+
+	#Open the Forges
+	focus = {
+		id = BRI_open_the_forges
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_establish_euro_shilling  }
+	}
+
+	#Grand Master du Villon
+	focus = {
+		id = BRI_grand_master_du_villon
+		icon = GFX_goal_unknown
+		x = 6
+		y = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_metal_horses  }
+	}
+
+	#White Phone
+	focus = {
+		id = BRI_white_phone
+		icon = GFX_goal_unknown
+		x = 13
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_castles_for_nobles  }
+	}
+
+	#Pendragon Embassy
+	focus = {
+		id = BRI_pendragon_embassy
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_white_phone  }
+	}
+
+	#Grand Master Farnese
+	focus = {
+		id = BRI_grand_master_farnese
+		icon = GFX_goal_unknown
+		x = 12
+		y = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_firebow  }
+	}
+
+	#Rogue Knights
+	focus = {
+		id = BRI_rogue_knights
+		icon = GFX_goal_unknown
+		x = 10
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_holy_order_of_uriel  }
+	}
+
+	#Grand Master du Saint-Gilles
+	focus = {
+		id = BRI_grand_master_du_saintgilles
+		icon = GFX_goal_unknown
+		x = 10
+		y = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_rogue_knights  }
+	}
+
+	#Brioche for Aristocrats
+	focus = {
+		id = BRI_brioche_for_aristocrats
+		icon = GFX_goal_unknown
+		x = 10
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_modern_feudalism  }
+	}
+
+	#Bread for the People
+	focus = {
+		id = BRI_bread_for_the_people
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_modern_feudalism  }
+	}
+
+	#Call the Host !
+	focus = {
+		id = BRI_callthehost
+		icon = GFX_goal_unknown
+		x = 9
+		y = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_grand_master_manfredi  focus = BRI_grand_master_du_villon  focus = BRI_grand_master_farnese  focus = BRI_grand_master_du_saintgilles  }
+	}
+
+	#Conquest of Siberia
+	focus = {
+		id = BRI_conquest_of_siberia
+		icon = GFX_goal_unknown
+		x = 9
+		y = 13
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_callthehost  }
+	}
+
+	#Burn the Taïga
+	focus = {
+		id = BRI_burnthetaiga
+		icon = GFX_goal_unknown
+		x = 6
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_strike_disgusting_socialism  }
+	}
+
+	#Strike the Wrong Monarchism
+	focus = {
+		id = BRI_strike_the_wrong_monarchism
+		icon = GFX_goal_unknown
+		x = 12
+		y = 14
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_conquest_of_siberia  }
+	}
+
+	#Knightmare Krieg
+	focus = {
+		id = BRI_knightmare_krieg
+		icon = GFX_goal_unknown
+		x = 6
+		y = 16
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_burnthetaiga  }
+	}
+
+	#No Building, No City
+	focus = {
+		id = BRI_nobuildingnocity
+		icon = GFX_goal_unknown
+		x = 6
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_knightmare_krieg  }
+	}
+
+	#End of Equality
+	focus = {
+		id = BRI_end_of_equality
+		icon = GFX_goal_unknown
+		x = 6
+		y = 18
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_nobuildingnocity  }
+	}
+
+	#Strike Disgusting Socialism
+	focus = {
+		id = BRI_strike_disgusting_socialism
+		icon = GFX_goal_unknown
+		x = 6
+		y = 14
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_conquest_of_siberia  }
+	}
+
+	#Pass the Urals
+	focus = {
+		id = BRI_pass_the_urals
+		icon = GFX_goal_unknown
+		x = 12
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_strike_the_wrong_monarchism  }
+	}
+
+	#The Great Host
+	focus = {
+		id = BRI_the_great_host
+		icon = GFX_goal_unknown
+		x = 12
+		y = 16
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_pass_the_urals  }
+	}
+
+	#No Logistic, No Army
+	focus = {
+		id = BRI_nologisticnoarmy
+		icon = GFX_goal_unknown
+		x = 12
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_the_great_host  }
+	}
+
+	#End of the Usurper
+	focus = {
+		id = BRI_end_of_the_usurper
+		icon = GFX_goal_unknown
+		x = 12
+		y = 18
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_nologisticnoarmy  }
+	}
+
+	#Remembering Old Traditions
+	focus = {
+		id = BRI_remembering_old_traditions
+		icon = GFX_goal_unknown
+		x = 9
+		y = 14
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_conquest_of_siberia  }
+		mutually_exclusive = { focus = BRI_strike_the_wrong_monarchism  }
+	}
+
+	#Cease Fire
+	focus = {
+		id = BRI_cease_fire
+		icon = GFX_goal_unknown
+		x = 9
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_remembering_old_traditions  }
+	}
+
+	#Noble Wedding
+	focus = {
+		id = BRI_noble_wedding
+		icon = GFX_goal_unknown
+		x = 9
+		y = 16
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_cease_fire  }
+	}
+
+	#What Hand ?
+	focus = {
+		id = BRI_whathand
+		icon = GFX_goal_unknown
+		x = 9
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_noble_wedding  }
+	}
+
+	#Euro Britannia's Wedding !
+	focus = {
+		id = BRI_eurobritanniaswedding
+		icon = GFX_goal_unknown
+		x = 9
+		y = 18
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_whathand  }
+	}
+
+	#Conquest of Volga
+	focus = {
+		id = BRI_conquest_of_volga
+		icon = GFX_goal_unknown
+		x = 9
+		y = 19
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_end_of_equality  } prerequisite = { focus = BRI_end_of_the_usurper  focus = BRI_end_of_equality  } prerequisite = { focus = BRI_eurobritanniaswedding  }
+	}
+
+	#Serfdom Law
+	focus = {
+		id = BRI_serfdom_law
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_homesforeurobritannians  }
+	}
+
+	#No Russians
+	focus = {
+		id = BRI_no_russians
+		icon = GFX_goal_unknown
+		x = 4
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_serfdom_law  }
+	}
+
+	#Beg Schneizel
+	focus = {
+		id = BRI_beg_schneizel
+		icon = GFX_goal_unknown
+		x = 13
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_pendragon_embassy  } prerequisite = { focus = BRI_white_phone  }
+	}
+
+	#The Grail was a Knightmare
+	focus = {
+		id = BRI_the_grail_was_a_knightmare
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_beg_schneizel  }
+	}
+
+	#Operation Mordred
+	focus = {
+		id = BRI_operation_mordred
+		icon = GFX_goal_unknown
+		x = 9
+		y = 20
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_conquest_of_volga  }
+	}
+
+	#Training Youngs Nobles
+	focus = {
+		id = BRI_training_youngs_nobles
+		icon = GFX_goal_unknown
+		x = 11
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_brioche_for_aristocrats  }
+	}
+
+	#St Petersburg, Home of Knights
+	focus = {
+		id = BRI_stpetersburghomeofknights
+		icon = GFX_goal_unknown
+		x = 9
+		y = 21
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_operation_mordred  }
+	}
+
+	#Gulag of Britannia
+	focus = {
+		id = BRI_gulag_of_britannia
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_open_the_forges  } prerequisite = { focus = BRI_no_russians  }
+	}
+
+	#Purple Gold Mines
+	focus = {
+		id = BRI_purple_gold_mines
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_gulag_of_britannia  }
+	}
+
+	#Metal Horses
+	focus = {
+		id = BRI_metal_horses
+		icon = GFX_goal_unknown
+		x = 6
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_holy_order_of_gabriel  }
+	}
+
+	#Firebow
+	focus = {
+		id = BRI_firebow
+		icon = GFX_goal_unknown
+		x = 12
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BRI_holy_order_of_raphael  }
+	}
+
+}
