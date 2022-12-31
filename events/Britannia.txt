@@ -1456,6 +1456,9 @@ option = {
 }
 }
 
+
+#Now Britannia Will Decide Which colonies are the
+#Weakest to Britannian Infiltration
 country_event = {   #Influence EU Colonies
 id = BRT.43
 title = BRT.43.t
@@ -1772,3 +1775,184 @@ option = {
 	}
 }
 }
+
+
+
+##SCHNEIZEL FOREIGN POLICY-SOME ADDINGS 
+country_event = {  #Iceland Purchase
+id = BRT.60
+title = BRT.60.t
+desc = BRT.60.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.60.a   #They accept
+	add_ideas = BRT_iceland_deal
+	KAL = {
+		add_political_power = 50
+		add_ideas = KAL_iceland_purchase
+	}
+
+	AR2 = {
+		transfer_state = 100
+		add_state_core = 100		
+	}
+	ai_chance = {
+		factor = 100
+	}
+}
+
+option = {
+	name = BRT.60.b  #They refuse (only-player option)
+	add_opinion_modifier = {
+		target = KAL
+		modifier = holds_our_claims
+	}
+	KAL = {
+		add_political_power = -50
+	}
+	AR2 = {
+		add_state_claim = 100		
+	}
+	ai_chance = {
+		factor = 0
+	}
+}
+}
+
+
+#Ok, time to settle this
+#Britannia is offering China free hand to smash Middle East
+#While Britannia Is Busy in Russia And Africa 
+
+#In the future, this will unlock a possible 
+#Chinese focus tree's branch for the invasion
+country_event = {  
+id = BRT.61
+title = BRT.61.t
+desc = BRT.61.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.61.a
+	add_opinion_modifier = {
+		target = CHI
+		modifier = brittanian_support
+	}
+	CHI = {
+		add_war_support = 0.05
+		set_variable = {
+			middle_east_invasion = 1
+		}
+	}
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+
+#Narrative Event For Britannian Diplomats Secretely Meeting
+#Boer Leaders
+country_event = {   
+id = BRT.62
+title = BRT.62.t
+desc = BRT.62.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.62.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+
+#Narrative Event For Finalising South Africa's Hidden
+#Alliance
+country_event = {   
+id = BRT.63
+title = BRT.63.t
+desc = BRT.63.d
+
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = BRT.63.a	
+
+	ai_chance = {
+		factor = 70
+	}
+}
+}
+
+
+
+#Creation of a secret paramilitary formed by French Pied Nois
+#It will Coup the Administration When the Time Comes
+country_event = {   
+	id = BRT.64
+	title = BRT.64.t
+	desc = BRT.64.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BRT.64.a	
+	
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+
+#Narrative Events-Britannian Bureaucrats Meddling
+#Over The Colonial Government
+country_event = {   
+	id = BRT.65
+	title = BRT.65.t
+	desc = BRT.65.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BRT.65.a	
+	
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+#Narrative Events-Finalising Nigeria Take Over
+country_event = {   
+	id = BRT.66
+	title = BRT.66.t
+	desc = BRT.66.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BRT.66.a	
+	
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+	
+

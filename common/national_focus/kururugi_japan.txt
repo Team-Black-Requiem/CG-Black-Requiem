@@ -15,10 +15,502 @@ id = japan_kururugi
 	continuous_focus_position = { x = 20 y = 2500 }
 
 	focus = {
+		#The economy will be modified according to Kururugi's capitalism (aka. complete take over of the economy
+		#by the Kururugi's family and a bit of state capitalism)
+		id = JAP_kururugi_capitalism
+		icon = GFX_JAP_kururugi_capitalism
+		cost = 2
+		x = 6
+		y = 5
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#All economy, previously under the guidance of the Tokyo House, and frozen some time ago,will be transferred
+		#to Kururugi's relatives and closest friends
+		id = JAP_nationalize_economy
+		icon = GFX_JAP_nationalize_economy
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_kururugi_capitalism
+		prerequisite = {
+			focus = JAP_kururugi_capitalism
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Many of these practice will result in a massive increase in corruption,and even the formation of Oligarch people
+		id = JAP_increasing_corruption
+		icon = GFX_JAP_increasing_corruption
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_nationalize_economy
+		prerequisite = {
+			focus = JAP_nationalize_economy
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+
+	focus = {
+		#The Kururugi's empire stretches from Kyushu to Hokkaido, but it could be expanded further, to Korea, to Indonesia
+		#and the entire Pacific!
+		id = JAP_build_kururugi_empire
+		icon = GFX_JAP_build_kururugi_empire
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_increasing_corruption
+		prerequisite = {
+			focus = JAP_increasing_corruption
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Suzaku is increasingly opposing these measures, but we will try to convince him to accept the role as successor 
+		#of Kururugi's dynasty 
+		id = JAP_talk_with_suzaku
+		icon = GFX_JAP_talk_with_suzaku
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_build_kururugi_empire
+		prerequisite = {
+			focus = JAP_build_kururugi_empire
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Last pockets of independent industries and all corporations are virtually non-existant
+		id = JAP_familiar_economy
+		icon = GFX_JAP_familiar_economy
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_talk_with_suzaku
+		prerequisite = {
+			focus = JAP_talk_with_suzaku
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Japan, a monster of steel, has regained and even improved its economic power. ALL HAIL KURURUGI!
+		id = JAP_monster_steel
+		icon = GFX_JAP_monster_steel
+		cost = 2
+		x = 0
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_familiar_economy
+		prerequisite = {
+			focus = JAP_familiar_economy
+		}
+		prerequisite = {
+			focus = JAP_kyushu_industrial_parks
+		}
+		prerequisite = {
+			focus = JAP_soften_crime_laws
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Organised crime has been a really useful too in war, and it can be used again with our peace-time objectives
+		id = JAP_rely_organised_crime
+		icon = GFX_JAP_rely_organised_crime
+		cost = 2
+		x = 3
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_nationalize_economy
+		prerequisite = {
+			focus = JAP_nationalize_economy
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#In return from their support, we will listen to some of their requests 
+		id = JAP_accept_their_requests
+		icon = GFX_JAP_accept_their_requests
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_rely_organised_crime
+		prerequisite = {
+			focus = JAP_rely_organised_crime
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#With these deal, we will have a good share of their illegal trades, that will finance our state
+		id = JAP_use_their_illegal_trades
+		icon = GFX_JAP_use_their_illegal_trades
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_accept_their_requests
+		prerequisite = {
+			focus = JAP_accept_their_requests
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#In return, many anti-crime laws will be soften, and we will left certain zones of Japan to their control
+		id = JAP_soften_crime_laws
+		icon = GFX_JAP_soften_crime_laws
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_use_their_illegal_trades
+		prerequisite = {
+			focus = JAP_use_their_illegal_trades
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+
+	focus = {
+		#Heavy industry must be re-vived in order to sustain the economic nazionalization and our future aggressive goals
+		id = JAP_return_heavy_industry
+		icon = GFX_JAP_return_heavy_industry
+		cost = 2
+		x = -3
+		y = 2
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_nationalize_economy
+		prerequisite = {
+			focus = JAP_nationalize_economy
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#First things first, local infrastructures,already devastated by the war will be improved to sustain our plans
+		id = JAP_improve_local_infr
+		icon = GFX_JAP_improve_local_infr
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_return_heavy_industry
+		prerequisite = {
+			focus = JAP_return_heavy_industry
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Industrial Parks will be buildt in Tokyo and its surroundings
+		id = JAP_tokyo_industrial_parks
+		icon = GFX_JAP_tokyo_industrial_parks
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_improve_local_infr
+		prerequisite = {
+			focus = JAP_improve_local_infr
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	
+	focus = {
+		#Industrial Parks will be buildt in Kyushu and its surroundings
+		id = JAP_kyushu_industrial_parks
+		icon = GFX_JAP_kyushu_industrial_parks
+		cost = 2
+		x = 0
+		y = 1
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+
+		relative_position_id = JAP_tokyo_industrial_parks
+		prerequisite = {
+			focus = JAP_tokyo_industrial_parks
+		}
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+
+	}
+
+	focus = {
+		#Kururugi has successfully cracked down on the Tokyo strike and government's militias are currently in control of major
+		#cities. Kururugi's positions is entrenched 
 		id = back_in_control_2
 		icon = GFX_back_in_control_2
 		cost = 2
-		x = 15
+		x = 18
 		y = 0
 		available = {
 			country_exists = JAP
@@ -40,6 +532,9 @@ id = japan_kururugi
 
 	}
 	focus = {
+		#Kururugi will hit the great business to avoid corporations' interference into politics again, as well as laiding
+		#the base to establish a familiar Kururugi's economical empire (FOCUS ID IS BADLY WRITTEN, IT DOESN'T RAPRESENT 
+		#THE ACTUAL MEANING)
 		id = hit_right
 		icon = GFX_hit_right
 		relative_position_id = back_in_control_2
@@ -70,6 +565,7 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Kururugi will bail out only certain companies, the ones which proved most loyal to him
 		id = biased_bail_out
 		icon = GFX_biased_bail_out
 		relative_position_id = hit_right
@@ -100,14 +596,19 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Moderate policies against inflation will carried out to reduce the burden of the average Japanese, and avoid 
+		#revolts like the Tokyo Strike
 		id = control_inflation
 		icon = GFX_control_inflation
 		relative_position_id = biased_bail_out
 		prerequisite = {
 			focus = biased_bail_out
 		}
+		prerequisite = {
+			focus = crush_kirihara
+		}
 		cost = 2
-		x = 0
+		x = -1
 		y = 1
 		available = {
 			country_exists = JAP
@@ -130,6 +631,8 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#The Kyoto House's assets will be frozen and Kirihara imprisoned (it's becoming repetitive, ngl) until further notice 
+		#major industries will be put under temporary management 
 		id = crush_kirihara
 		icon = GFX_crush_kirihara
 		relative_position_id = hit_right
@@ -159,12 +662,16 @@ id = japan_kururugi
 
 	}
 
+
 	focus = {
-		id = familiar_economy
-		icon = GFX_familiar_economy
-		relative_position_id = crush_kirihara
+		#Some of the corporations and frozen assets will be transferred officially to goverment's control,as well as
+		#most of Kyoto Group disbanded 
+		id = state_conglomerates
+		icon = GFX_state_conglomerates
+		relative_position_id = control_inflation
+
 		prerequisite = {
-			focus = crush_kirihara
+			focus = control_inflation
 		}
 		cost = 2
 		x = 0
@@ -190,39 +697,7 @@ id = japan_kururugi
 	}
 
 	focus = {
-		id = state_conglomerates
-		icon = GFX_state_conglomerates
-		relative_position_id = control_inflation
-		prerequisite = {
-			focus = familiar_economy
-		}
-		prerequisite = {
-			focus = control_inflation
-		}
-		cost = 2
-		x = -1
-		y = 1
-		available = {
-			country_exists = JAP
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-
-
-	}
-
-	focus = {
+		#Some degree of corruption is necessary in order to carry out the nationalization of the economy
 		id = tolerate_corruption
 		icon = GFX_tolerate_corruption
 		relative_position_id = state_conglomerates
@@ -254,6 +729,7 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Special quotas for strategic resources and Dirigismè politics will be introducted to the Japanese economy
 		id = economy_for_the_state
 		icon = GFX_economy_for_the_state
 		relative_position_id = tolerate_corruption
@@ -286,6 +762,8 @@ id = japan_kururugi
 
 	
 	focus = {
+		#While we have put down the schemy business, dangerous elements of Japanese Anarchist groups are still present in our
+		#society, and they must be eliminated 
 		id = hit_left
 		icon = GFX_hit_left
 		relative_position_id = back_in_control_2
@@ -316,6 +794,8 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#An enormous pression must be put on the working class; in that way,we will discover and eliminate the most defying 
+		#and rebellious members 
 		id = long_work_day
 		icon = GFX_long_work_day
 		relative_position_id = hit_left
@@ -347,6 +827,8 @@ id = japan_kururugi
 
 	
 	focus = {
+		#Of course, some sort of welfare must be guaranted, and Corporate Welfare is just fit for our case. In particular
+		#Welfare services will be based around the working field and the specific company
 		id = corporative_welfare
 		icon = GFX_corporative_welfare
 		relative_position_id = long_work_day
@@ -378,6 +860,8 @@ id = japan_kururugi
 
 		
 	focus = {
+		#Some proposal about a minimum wage were being discussed prior to the war,but it seems that these will only
+		#embolden the Communist subversives
 		id = abolish_minimum_wage
 		icon = GFX_abolish_minimum_wage
 		relative_position_id = factory_police
@@ -411,6 +895,7 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Political influence of Unions and these types of organisations will be eliminated entirely 
 		id = curtail_pol_influence
 		icon = GFX_curtail_pol_influence
 		relative_position_id = abolish_minimum_wage
@@ -443,6 +928,7 @@ id = japan_kururugi
 
 	
 	focus = {
+		#Our apparatus is stronger than ever, and no unrest will ever take place under our supervision
 		id = no_place_for_unrest
 		icon = GFX_no_place_for_unrest
 		relative_position_id = curtail_pol_influence
@@ -474,6 +960,8 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Many Unions gave their support for the Great Strike, and this is enough to individuate their true political allegiance
+		#A simple ban will be enforced
 		id = ban_unions
 		icon = GFX_ban_unions
 		relative_position_id = hit_left
@@ -504,6 +992,7 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Workers and subversives will be targeted in the factories, with the creation of a special designated police 
 		id = factory_police
 		icon = GFX_factory_police
 		relative_position_id = ban_unions
@@ -534,6 +1023,9 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#Kururugi will propose a series of targeted assassianations towards various elements of civil society and the army,
+		#in particular, those who supported the strikes, but also dangerous factions such as Tohdoh's clique 
+		#LELOUCH WILL BARELY ESCAPE THE PROTOCOLS 
 		id = nagasaky_protocols
 		icon = GFX_nagasaky_protocols
 		relative_position_id = back_in_control_2
@@ -564,6 +1056,8 @@ id = japan_kururugi
 	}
 
 	focus = {
+		#The rubber stamp legislation will pass a series of measures to make Kururugi president for life, and 
+		#centralising all govermental duties on him (JAPAN WILL BECOME A SUPER-PRESIDENTAL REPUBLIC)
 		id = official_wartime_pow
 		icon = GFX_official_wartime_pow
 		relative_position_id = nagasaky_protocols
@@ -596,6 +1090,8 @@ id = japan_kururugi
 
 
 focus = {
+	#The old constitution will be "re-interpreted" to best suit the new situation. Kururugi is the new leader, and this is a fact
+	#that can't be changed anymore
 	id = new_normal
 	icon = GFX_new_normal
 	relative_position_id = official_wartime_pow
@@ -626,6 +1122,8 @@ focus = {
 }
 
 focus = {
+	#The JPF (Japanese People's Front) party, the face of the new government, will be established, while some minor 
+	#opposition will be allowed 
 	id = jpf_establishment
 	icon = GFX_jpf_establishment
 	relative_position_id = new_normal
@@ -657,6 +1155,8 @@ focus = {
 
 
 focus = {
+	#Kururugi has personal control over Japan,and statues will be erected to commemorate his achievements, some are even 
+	#suggesting to modify the months' names to better reflect Kururugi's might 
 	id = personalistic_dictatorship
 	icon = GFX_personalistic_dictatorship
 	relative_position_id = jpf_establishment
@@ -687,6 +1187,8 @@ focus = {
 }
 
 focus = {
+	#After some trubles in the rubber-stamp parliament, Kururugi has ordered the merging of all parties into the JPF,once
+	#and for all
 	id = merge_all_parties
 	icon = GFX_merge_all_parties
 	relative_position_id = personalistic_dictatorship
@@ -717,6 +1219,7 @@ focus = {
 }
 
 focus = {
+	#The final move: declare a new Japanese Empire, born from the ashes of defeat, with the new Kururugi's dynasty
 	id = declare_jap_empire
 	icon = GFX_declare_jap_empire
 	relative_position_id = merge_all_parties
@@ -753,6 +1256,10 @@ focus = {
 }
 
 focus = {
+
+
+	#A special Department For The Security Of The Pacific will be created (the goal is to manage efficiently a new possible
+	#attack on Japan and establish a secure zone in the seas)
 	id = establish_pacific_minister
 	icon = GFX_establish_pacific_minister
 	relative_position_id = declare_jap_empire
@@ -782,6 +1289,8 @@ focus = {
 }
 
 focus = {
+	#Kururugi eyes on Australia, a perfect territory to build Japan's own Empire, since it is an unclaimed territory and 
+	#external interferences will be minimal
 	id = colonise_australia
 	icon = GFX_colonise_australia
 	relative_position_id = establish_pacific_minister
@@ -813,6 +1322,8 @@ focus = {
 }
 
 focus = {
+	#Increasing the country's naval capacity will allow Japan to better prepare its landing troops and shipments 
+	#throughout the seas
 	id = increase_vessel_cap
 	icon = GFX_increase_vessel_cap
 	relative_position_id = colonise_australia
@@ -844,6 +1355,8 @@ focus = {
 }
 
 focus = {
+	#With a specific deal with China, the Federation's fleet will protect Japan from Britannia's interference from New Anglia
+	#in exchange of economical concessions
 	id = use_chinese_fleet
 	icon = GFX_use_chinese_fleet
 	relative_position_id = colonise_australia
@@ -875,6 +1388,7 @@ focus = {
 }
 
 focus = {
+	#First Naval Bases and Colonies on the northen coast will be established. Mostly military ones
 	id = first_bases
 	icon = GFX_first_bases
 	relative_position_id = increase_vessel_cap
@@ -909,6 +1423,8 @@ focus = {
 }
 
 focus = {
+	#Of course, natives will be still present and they will oppose our actions, but some repression and colonial wars
+	#will quickly solve this
 	id = hunt_natives
 	icon = GFX_hunt_natives
 	relative_position_id = first_bases
@@ -941,6 +1457,8 @@ focus = {
 }
 
 focus = {
+	#Japan will push in the southern regions, and establish agricultural territories, as well as building new settlemnents
+	#(I thought of Krushev while making this, hence the name)
 	id = virgin_land_campaign
 	icon = GFX_virgin_land_campaign
 	relative_position_id = hunt_natives
@@ -973,6 +1491,7 @@ focus = {
 }
 
 focus = {
+	#A proper Japanese colony will be established over all of Australia,BANZAI
 	id = establish_australia_puppet
 	icon = GFX_establish_australia_puppet
 	relative_position_id = virgin_land_campaign
@@ -1009,6 +1528,7 @@ focus = {
 
 
 focus = {
+	#Kururugi will contact Luoyang to form an alliance to counter Britannia, and negotiations in Korea will begin
 	id = contact_chinese
 	icon = GFX_contact_chinese
 	relative_position_id = establish_pacific_minister
@@ -1040,6 +1560,8 @@ focus = {
 }
 
 focus = {
+	#If negotiations are successful (which are going to be), Japan will receive Korea in exchange of a full adherence 
+	#to the Chinese-aligned bloc
 	id = seoul_deal
 	icon = GFX_seoul_deal
 	relative_position_id = contact_chinese
@@ -1071,6 +1593,7 @@ focus = {
 }
 
 focus = {
+	#Japan will prepare for its vengeance against Britannia, so it will be a reverse card 
 	id = prepare_vengeance
 	icon = GFX_prepare_vengeance
 	relative_position_id = seoul_deal
@@ -1101,38 +1624,11 @@ focus = {
 
 }
 
-focus = {
-	id = prepare_vengeance
-	icon = GFX_prepare_vengeance
-	relative_position_id = seoul_deal
-	prerequisite = {
-		focus = seoul_deal
-	}
 
-	cost = 2
-	x = 0
-	y = 1
-	available = {
-		country_exists = JAP
-	}
-	bypass = { }
-
-
-	mutually_exclusive = {
-	}
-
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	completion_reward = {
-	}
-
-
-}
 
 focus = {
+	#First step to start the invasion of Britannia is to take back Okinawa and erase the concessions, along some minor islands
+	#along the Pacific 
 	id = take_back_okinawa
 	icon = GFX_take_back_okinawa
 	relative_position_id = prepare_vengeance
@@ -1164,6 +1660,7 @@ focus = {
 }
 
 focus = {
+	#Chinese productors will also help Japan's industry to sustain its quest, along brand new KN
 	id = amphibius_kn_imports
 	icon = GFX_amphibius_kn_imports
 	relative_position_id = prepare_vengeance
@@ -1196,6 +1693,7 @@ focus = {
 
 
 focus = {
+	#Kururugi will radicalize the army, which at this point would be pretty ultranationalistic 
 	id = fanatic_army
 	icon = GFX_fanatic_army
 	relative_position_id = prepare_vengeance
@@ -1228,6 +1726,7 @@ focus = {
 
 
 focus = {
+	#Seizing New Anglia will weaken the position of Britannia in the Southern Pacific, and push our ambitions further east
 	id = new_anglia_strike
 	icon = GFX_new_anglia_strike
 	relative_position_id = take_back_okinawa
@@ -1265,6 +1764,7 @@ focus = {
 }
 
 focus = {
+	#The time has come to officially invade Britannia! Vengeance is a cold plate!
 	id = britannia_coming
 	icon = GFX_britannia_coming
 	relative_position_id = new_anglia_strike

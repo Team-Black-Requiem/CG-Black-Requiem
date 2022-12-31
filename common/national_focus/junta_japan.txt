@@ -15,6 +15,12 @@ id = japan_focus_junta_1
 	continuous_focus_position = { x = 20 y = 2500 }
 
 	focus = {
+
+		#Tohdoh has put his trusted generals in Japan 
+		#and, in a pretty dramatic move, he announces
+		#the ousting of Kururugi and the creation of 
+		#the junta to "save" Japan
+
 		id = JAP_sapporo_declaration
 		icon = GFX_JAP_sapporo_declaration
 		cost = 2
@@ -35,12 +41,18 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			add_political_power = 100
 		}
 
 
 	}
 
 	focus = {
+
+		#Kirihara is still opposing the coup, so Tohdoh
+		#will personally arrest him for good, but not yet
+		#disbanding the Kyoto House (or facing economic
+		#collapse)
 		id = JAP_subdue_kirihara
 		icon = GFX_JAP_subdue_kirihara
 		relative_position_id = JAP_sapporo_declaration
@@ -65,6 +77,11 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			add_political_power = -50
+			remove_advisor_role = {
+				character = "JAP_kyoto_kirihara"
+				slot = economy_minister
+			  }
 		}
 
 
@@ -72,6 +89,11 @@ id = japan_focus_junta_1
 
 	
 	focus = {
+
+		#Offially, a military cabinet will be put in place
+		#with Tohdoh at its head, elections will be 
+		#temporarely suspended and emergency measures 
+		#implemented 
 		id = JAP_establish_military_council
 		icon = GFX_JAP_establish_military_council
 		relative_position_id = JAP_subdue_kirihara
@@ -97,12 +119,34 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = autocracy
+				elections_allowed = no
+			}
+			set_country_leader_name = {
+				ideology = autocracy
+				name = Tohdoh
+			}
+			set_country_leader_portrait = {
+				ideology = autocracy
+				portrait = GFX_IMAGE_NAME
+			}
+			add_popularity = {
+				ideology = autocracy
+				popularity = 0.2
+			}
 		}
 
 
 	}
 
 	focus = {
+
+		#What's that? Katase, the interior minister of the
+		#Junta is trying to take over entirely, both for
+		#his personal ambitions and disagreements with
+		#Tohdoh, the next moves will decide the winner!
 		id = JAP_fightings_begin
 		icon = GFX_JAP_fightings_begin
 		relative_position_id = JAP_militarize_police
@@ -133,6 +177,7 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			add_political_power = 50
 		}
 
 
@@ -140,6 +185,12 @@ id = japan_focus_junta_1
 
 
 	focus = {
+
+		#A Sakuradite-based economy was pretty 
+		#effective, yeah, but it has lead to disaster
+		#What is the best approach to it?
+		#T: Completely Reforming It 
+		#K: He Will "Change" It For His personal wealth
 		id = JAP_question_economy
 		icon = GFX_JAP_question_economy
 		relative_position_id = JAP_fightings_begin
@@ -171,6 +222,15 @@ id = japan_focus_junta_1
 	}
 
 	focus = {
+
+		#From now on, I will refer to Katase as "K",
+		#Tohdoh as "T"
+
+		#While low, we still have few Britannian POW 
+		#that were abandoned by the mainland, 
+		#what should we do with them?
+		#T: Put them to hard labour for limited time
+		#K: Publicily execute the half, slave the rest forever
 		id = JAP_britannian_pow
 		icon = GFX_JAP_britannian_pow
 		relative_position_id = JAP_fightings_begin
@@ -202,6 +262,13 @@ id = japan_focus_junta_1
 	}
 
 	focus = {
+
+		
+		#Suzaku and some other members of the family
+		#are still alive, hidden of course, but Katase
+		#doesn't really like that
+		#He will try to convince the others to execute
+		#ALL family, Suzaku included
 		id = JAP_kururugi_family
 		icon = GFX_JAP_kururugi_family
 		relative_position_id = JAP_fightings_begin
@@ -233,6 +300,14 @@ id = japan_focus_junta_1
 	}
 
 	focus = {
+
+		#One of the most important question, how much
+		#temporary should be this "temporary" junta?
+		#T: It's better to keep Japan as an authoritarian
+		#democracy (militar-civilian government)
+		#after the chaos of Kururugi
+		#K: An eternal Junta for extensive political 
+		#tutelage.Those politicians are sick.
 		id = JAP_return_civilian_gov
 		icon = GFX_JAP_return_civilian_gov
 		relative_position_id = JAP_fightings_begin
@@ -265,6 +340,11 @@ id = japan_focus_junta_1
 
 
 	focus = {
+		#China has been pretty ambigous during the invation
+		#despising Britannia, but ready to grab territory
+		#at first occasion, what should we do with it?
+		#T: Reconcile with China
+		#K: Cut All Relations To Those Bastards
 		id = JAP_relations_china
 		icon = GFX_JAP_relations_china
 		relative_position_id = JAP_fightings_begin
@@ -297,6 +377,9 @@ id = japan_focus_junta_1
 
 
 	focus = {
+
+		#Now the time has come. An internal vote Will
+		#decide who is the real chief of the Junta
 		id = JAP_votations_begin
 		icon = GFX_JAP_votations_begin
 		relative_position_id = JAP_relations_china
@@ -341,6 +424,9 @@ id = japan_focus_junta_1
 
 
 	focus = {
+
+		#Katase has the most support and his focus tree
+		#Will be unlocked
 		id = JAP_katase_wins
 		icon = GFX_JAP_votations_begin
 		relative_position_id = JAP_relations_china
@@ -373,6 +459,12 @@ id = japan_focus_junta_1
 	}
 
 	focus = {
+
+		#Katase And Tohdoh have the same support
+		#The junta remains divided and serious internal
+		#clashes begin. The government is paralyzed 
+		#What an occasion for the old establishment
+		#to retake their pride and power, right?
 		id = JAP_civilians_win
 		icon = GFX_JAP_civilians_win
 		relative_position_id = JAP_relations_china
@@ -405,6 +497,9 @@ id = japan_focus_junta_1
 	}
 
 	focus = {
+
+		#Tohdoh has the most support and his focus tree
+		#Will be unlocked
 		id = JAP_tohdoh_wins
 		icon = GFX_JAP_tohdoh_wins
 		relative_position_id = JAP_relations_china
@@ -438,6 +533,10 @@ id = japan_focus_junta_1
 
 
 	focus = {
+
+		#Some strikers have remained in the Tokyo region
+		#but don't worry! Tohdoh has sent its units to 
+		#mass-arrest every person 
 		id = JAP_crush_strike
 		icon = GFX_JAP_crush_strike
 		relative_position_id = JAP_sapporo_declaration
@@ -462,12 +561,18 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
 		}
 
 
 	}
 
 	focus = {
+
+		#With still the memory of the now so-called 
+		#"Great Chaos" (Tokyo Strike), the police will
+		#have tight control around there
 		id = JAP_militarize_police
 		icon = GFX_JAP_militarize_police
 		relative_position_id = JAP_crush_strike
@@ -492,6 +597,7 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			add_timed_idea = { idea = Militarize_Police days = 365 }
 		}
 
 
@@ -499,6 +605,11 @@ id = japan_focus_junta_1
 
 
 	focus = {
+
+		#Good Old Kururugi! This time, his entire government
+		#Will be Executed,BUT Suzaku will be spared, while
+		#his father will get death penalty
+		#Although Suzaku won't probably be relevant at this point
 		id = JAP_purge_kururugi
 		icon = GFX_JAP_purge_kururugi
 		relative_position_id = JAP_sapporo_declaration
@@ -510,6 +621,7 @@ id = japan_focus_junta_1
 		y = 1
 		available = {
 			country_exists = JAP
+			has_completed_focus = JAP_establish_military_council
 		}
 		bypass = { }
 	
@@ -523,6 +635,17 @@ id = japan_focus_junta_1
 		}
 	
 		completion_reward = {
+			kill_ideology_leader = moderate_conservatism
+			remove_advisor_role = {
+				character = "JAP_kururugi"
+				slot = head_of_government
+			  }
+			add_political_power = -200
+			add_stability = -0.2
+			add_popularity = {
+				ideology = moderate_conservatism
+				popularity = -0.15
+			}
 		}
 
 
