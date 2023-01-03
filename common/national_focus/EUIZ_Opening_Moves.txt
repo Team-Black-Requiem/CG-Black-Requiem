@@ -1790,7 +1790,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
-        x = 14
+        x = 3
         y = 12
 
         prerequisite = { 
@@ -5640,6 +5640,8 @@ focus_tree = {
             }
         }
 
+        #Bunker and Naval invasion
+
         focus = {
             id = EIZ_Exploring_Abandoned_Structures
             icon = GFX_EIZ_Danish_Volunteer_Quality
@@ -5654,7 +5656,7 @@ focus_tree = {
         }
             relative_position_id = EIZ_Panic_At_The_Staff_Office
             
-            cost = 3
+            cost = 1
     
             ai_will_do = {
                 factor = 100
@@ -5811,7 +5813,7 @@ focus_tree = {
             }
             relative_position_id = EIZ_Repurposing_Underground_Metro_Lanes
             
-            cost = 3
+            cost = 2
     
             ai_will_do = {
                 factor = 100
@@ -6229,7 +6231,8 @@ focus_tree = {
             }
         }
 
-
+         
+        #Bunker and ww1 extreme steps
         focus = {
             id = EIZ_Using_What_We_Hasve
             icon = GFX_EIZ_Danish_Volunteer_Quality
@@ -6240,10 +6243,280 @@ focus_tree = {
                 focus = EIZ_Panic_At_The_Staff_Office
             }
 
-            mutually_exclusive = {focus = EIZ_Exploring_Abandoned_Structures
+             relative_position_id = EIZ_Panic_At_The_Staff_Office
+            
+            cost = 1
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+        focus = {
+            id = EIZ_Not_Enough_Guns
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Using_What_We_Hasve
             }
 
-             relative_position_id = EIZ_Panic_At_The_Staff_Office
+             relative_position_id = EIZ_Using_What_We_Hasve
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_In_All_of_Russia
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Using_What_We_Hasve
+            }
+
+             relative_position_id = EIZ_Using_What_We_Hasve
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_For_This_Damn_War
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 4
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Using_What_We_Hasve
+            }
+
+            relative_position_id = EIZ_Using_What_We_Hasve
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        
+        focus = {
+            id = EIZ_Stand_Firm
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Not_Enough_Guns
+            }
+
+            prerequisite = {
+                focus = EIZ_In_All_of_Russia
+            }
+
+            prerequisite = {
+               focus = EIZ_For_This_Damn_War
+            }
+
+             relative_position_id = EIZ_Not_Enough_Guns
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_NOT_ONE_STEP_BACK
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 2
+
+    
+        
+            prerequisite = {
+                focus =EIZ_Stand_Firm
+            }
+            
+            relative_position_id = EIZ_Stand_Firm
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_HOLE_IN_THE_GROUND
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_NOT_ONE_STEP_BACK
+            }
+
+             relative_position_id = EIZ_NOT_ONE_STEP_BACK
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_A_Barrel_For_Every_Bunker
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_HOLE_IN_THE_GROUND
+            }
+
+             relative_position_id = EIZ_HOLE_IN_THE_GROUND
             
             cost = 3
     
@@ -6271,13 +6544,1627 @@ focus_tree = {
         }
 
 
+        focus = {
+            id = EIZ_Retun_Fire
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_HOLE_IN_THE_GROUND
+            }
+
+             relative_position_id = EIZ_HOLE_IN_THE_GROUND
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Super_Electromagnetic_Shrapnel_Cannon
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_Retun_Fire
+            }
+
+             relative_position_id = EIZ_Retun_Fire
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Comfurts_Of_The_Trenches
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Retun_Fire
+            }
+
+            prerequisite = {
+                focus = EIZ_A_Barrel_For_Every_Bunker
+            }
+
+             relative_position_id = EIZ_Retun_Fire
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Collateral_Damage
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Comfurts_Of_The_Trenches
+            }
+
+         
+             relative_position_id = EIZ_Comfurts_Of_The_Trenches
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_No_More_Going_Home
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_Comfurts_Of_The_Trenches
+            }
+
+            prerequisite = {
+                focus = EIZ_Super_Electromagnetic_Shrapnel_Cannon
+            }
+
+             relative_position_id = EIZ_Comfurts_Of_The_Trenches
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Continental_Trenches
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 3
+            y = 0
+    
+            prerequisite = { 
+                focus = EIZ_No_More_Going_Home
+            }
+
+             relative_position_id = EIZ_No_More_Going_Home
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Every_Peak_A_Bunker
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = 3
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Continental_Trenches
+            }
+
+            prerequisite = {
+                focus =EIZ_Collateral_Damage
+            }
+
+             relative_position_id = EIZ_No_More_Going_Home
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        #Economic paths
+
+        focus = {
+            id = EIZ_Oscars_Bandit
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 20
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Subvert_The_Monarchists
+            }
+        
+            relative_position_id = EIZ_Subvert_The_Monarchists
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        #Internalal Resources
+
+        focus = {
+            id = EIZ_Repairing_What_We_Saved
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -2
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Oscars_Bandit
+            }
+        
+            relative_position_id = EIZ_Oscars_Bandit
+            
+            cost = 1
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Repair_Remaining_Infrastructure
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -4
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Repairing_What_We_Saved
+            }
+        
+            relative_position_id = EIZ_Repairing_What_We_Saved
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Consolidate_the_North
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Repairing_What_We_Saved
+            }
+        
+            relative_position_id = EIZ_Repairing_What_We_Saved
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Ensure_Material_Production
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Repairing_What_We_Saved
+            }
+        
+            relative_position_id = EIZ_Repairing_What_We_Saved
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Russia_For_Russians
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Ensure_Material_Production
+            }
+            
+            prerequisite = {
+                focus = EIZ_Consolidate_the_North
+            }
+
+            prerequisite = {
+                focus = EIZ_Repair_Remaining_Infrastructure
+            }
+        
+            relative_position_id = EIZ_Ensure_Material_Production
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_IT_WONT_BE_ENOUGH
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Russia_For_Russians
+            }
+        
+            relative_position_id = EIZ_Russia_For_Russians
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_CALL_IN_THE_FAVORS
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -10
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_IT_WONT_BE_ENOUGH
+            }
+        
+            relative_position_id = EIZ_IT_WONT_BE_ENOUGH
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Let_Them_Build_Roads
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_CALL_IN_THE_FAVORS
+            }
+        
+            relative_position_id = EIZ_CALL_IN_THE_FAVORS
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_WHERE_ARE_THE_RESOURCES?
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -8
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_IT_WONT_BE_ENOUGH
+            }
+        
+            relative_position_id = EIZ_IT_WONT_BE_ENOUGH
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Get_Me_More_Money
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 2.5
+    
+            prerequisite = { 
+                focus = EIZ_IT_WONT_BE_ENOUGH
+            }
+        
+            relative_position_id = EIZ_IT_WONT_BE_ENOUGH
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_EXTRACT_EVERYTHING
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -3
+            y = 2.5
+    
+            prerequisite = { 
+                focus = EIZ_IT_WONT_BE_ENOUGH
+            }
+
+           prerequisite = {
+                focus = EIZ_WHERE_ARE_THE_RESOURCES?
+           }
+        
+            relative_position_id = EIZ_IT_WONT_BE_ENOUGH
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Just_Find_A_Way
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 3
+    
+            prerequisite = { 
+                focus = EIZ_Get_Me_More_Money
+            }
+        
+            relative_position_id = EIZ_Get_Me_More_Money
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_WE_NEED_MORE
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -6
+            y = -2
+    
+            prerequisite = { 
+                focus = EIZ_Just_Find_A_Way
+            }
+
+            prerequisite = {
+                focus = EIZ_EXTRACT_EVERYTHING
+            }
+        
+            relative_position_id = EIZ_Just_Find_A_Way
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_It_MIGHT_BE_ENOUGH
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 1
+            y = 3
+    
+            prerequisite = { 
+                focus = EIZ_Let_Them_Build_Roads
+            }
+
+            prerequisite = {
+               focus = EIZ_WE_NEED_MORE
+            }
+        
+            relative_position_id = EIZ_Let_Them_Build_Roads
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_An_Unholy_Arrangement
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 2
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Oscars_Bandit
+            }
+        
+            relative_position_id = EIZ_Oscars_Bandit
+            
+            cost = 1
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_A_Hapsburg_And_A_Monarch 
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_An_Unholy_Arrangement
+            }
+        
+            relative_position_id = EIZ_An_Unholy_Arrangement
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Inviting_The_Iranians
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_An_Unholy_Arrangement
+            }
+        
+            relative_position_id = EIZ_An_Unholy_Arrangement
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Iraq_Crashes_The_Meeting
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 4
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_An_Unholy_Arrangement
+            }
+        
+            relative_position_id = EIZ_An_Unholy_Arrangement
+            
+            cost = 3
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_The_Tehran_Proposal  
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_A_Hapsburg_And_A_Monarch
+            }
+
+            prerequisite = {
+                focus = EIZ_Inviting_The_Iranians
+            }
+
+            prerequisite = {
+               focus = EIZ_Iraq_Crashes_The_Meeting
+            }
+        
+            relative_position_id = EIZ_A_Hapsburg_And_A_Monarch
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Hapsburgs_First_step
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_The_Tehran_Proposal
+            }
+        
+            relative_position_id = EIZ_The_Tehran_Proposal
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Iranian_Deal
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 8
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Hapsburgs_First_step
+            }
+        
+            relative_position_id = EIZ_Hapsburgs_First_step
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Dusty_Trucks
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 3
+            y = 2.5
+    
+            prerequisite = { 
+                focus = EIZ_Hapsburgs_First_step
+            }
+
+            prerequisite = {
+                focus = EIZ_Iranian_Deal
+            }
+        
+            relative_position_id = EIZ_Hapsburgs_First_step
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
 
         
-
-
+        focus = {
+            id = EIZ_Arabian_Deal
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 2.5
+    
+            prerequisite = { 
+                focus = EIZ_Hapsburgs_First_step
+            }
         
+            relative_position_id = EIZ_Hapsburgs_First_step
+            
+            cost = 2
     
+            ai_will_do = {
+                factor = 100
+            }
     
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+          
+        focus = {
+            id = EIZ_Arabian_Guns
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 0
+            y = 3
+    
+            prerequisite = { 
+                focus = EIZ_Arabian_Deal
+            }
+        
+            relative_position_id = EIZ_Arabian_Deal
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Arms_Trade_Deal
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 3
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_Dusty_Trucks
+            }
+
+            prerequisite = {
+                focus = EIZ_Arabian_Guns
+            }
+        
+            relative_position_id = EIZ_Dusty_Trucks
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Kindred_SPirits
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = 10
+            y = 2
+    
+            prerequisite = { 
+                focus = EIZ_Hapsburgs_First_step
+            }
+        
+            relative_position_id = EIZ_Hapsburgs_First_step
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Our_Special_Relationship
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -2
+            y = 1.5
+    
+            prerequisite = { 
+                focus = EIZ_Kindred_SPirits
+            }
+        
+            relative_position_id = EIZ_Kindred_SPirits
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Foreign_Relations_Secured
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -1
+            y = 3
+    
+            prerequisite = { 
+                focus = EIZ_Our_Special_Relationship
+            }
+
+            prerequisite = {
+                focus = EIZ_Arms_Trade_Deal
+            }
+        
+            relative_position_id = EIZ_Our_Special_Relationship
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+        focus = {
+            id = EIZ_Halfway_There
+            icon = GFX_EIZ_Subvert_The_Monarchists
+            x = -29
+            y = 5
+    
+            prerequisite = { 
+                focus = EIZ_Foreign_Relations_Secured focus = EIZ_It_MIGHT_BE_ENOUGH
+            }
+
+            prerequisite = {
+                focus = EIZ_Every_Peak_A_Bunker focus = EIZ_THEY_WONT_SEE_IT_COMING
+            }
+        
+            relative_position_id = EIZ_Our_Special_Relationship
+            
+            cost = 2
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                    EIZ = {
+                        declare_war_on = {
+                        target = MRU
+                        type = annex_everything
+                                    }
+                    }
+    
+                    hidden_effect = {
+                  }
+            }
+        }
+
+
+
+
+
+
+
+ 
         
 }
 
