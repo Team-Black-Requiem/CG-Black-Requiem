@@ -1244,12 +1244,345 @@ id = monarchist_russia_focus
 
 	}
 
+	focus = {
+		id = MRU_Revamp_Tree
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_restored_throne
+
+		cost = 3
+		x = 30
+		y = 0
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+  
+	
 
 
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 
 
+	}
+
+	#Pre War
+	focus = {
+		id = MRU_Locating_the_Tsar
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_restored_throne
+
+		cost = 3
+		x = 30
+		y = 0
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 
 
+	}
+
+	focus = {
+		id = MRU_The_Bear_Comes_Home
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Locating_the_Tsar
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Locating_the_Tsar
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Coalition_Government
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Bear_Comes_Home
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Bear_Comes_Home
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Coalition_Government
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Bear_Comes_Home
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Bear_Comes_Home
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Coalition_Government
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Bear_Comes_Home
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Bear_Comes_Home
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Question_Of_Industry
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Coalition_Government
+
+		cost = 3
+		x = -2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Coalition_Government
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Stockpiles_From_The_Old_War
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Question_Of_Industry
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Question_Of_Industry
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+    
+	focus = {
+		id = MRU_Furniture_For_Guns
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Stockpiles_From_The_Old_War
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Question_Of_Industry
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Fill_High_Command
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Coalition_Government
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Coalition_Government
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	
+	focus = {
+		id = MRU_Use_The_Old_Roads
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Fill_High_Command
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Fill_High_Command
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_Sleepless_Nights 
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Use_The_Old_Roads
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Use_The_Old_Roads
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	
+	focus = {
+		id = MRU_Tsar_Talks_To_His_People
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Coalition_Government
+
+		cost = 3
+		x = 2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Coalition_Government
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
 
 
 

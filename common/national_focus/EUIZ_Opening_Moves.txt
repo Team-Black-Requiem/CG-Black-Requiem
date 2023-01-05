@@ -1794,19 +1794,65 @@ focus_tree = {
         y = 12
 
         prerequisite = { 
-            focus = EIZ_Lyon_Gain_Aces focus = EIZ_Call_the_Young_Fox
+            focus = EIZ_Lyon_Gain_Aces 
         }
         prerequisite = {
-            focus = EIZ_Lyon_Army_Training focus = EIZ_Frederica_Army_Training
+            focus = EIZ_Lyon_Army_Training 
         }
         prerequisite = { 
-            focus = EIZ_Lyon_Economic_Stability_Secured focus = EIZ_Lyon_Magnum_Opus focus = EIZ_Economic_Stability_Secured focus = EIZ_Russian_Welfare_fund
+            focus = EIZ_Lyon_Economic_Stability_Secured focus = EIZ_Lyon_Magnum_Opus
         }
         prerequisite = { 
-            focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity focus = EIZ_Swiss_Volunteer_Quaality focus = EIZ_Swiss_Volunteer_Quantity
+            focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity 
         }
 
         relative_position_id = EIZ_Destroy_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Fredereica_West_Secured
+        icon = GFX_EIZ_Lyon_West_Secured
+        x = 30
+        y = 0
+
+        prerequisite = { 
+             focus = EIZ_Call_the_Young_Fox
+        }
+        prerequisite = {
+             focus = EIZ_Frederica_Army_Training
+        }
+        prerequisite = { 
+             focus = EIZ_Economic_Stability_Secured focus = EIZ_Russian_Welfare_fund
+        }
+        prerequisite = { 
+            focus = EIZ_Swiss_Volunteer_Quaality focus = EIZ_Swiss_Volunteer_Quantity
+        }
+
+        relative_position_id = EIZ_Lyon_West_Secured
         
         cost = 3
 
@@ -5304,10 +5350,10 @@ focus_tree = {
             y = 2
     
             prerequisite = { 
-                focus = EIZ_Polish_Volunteer_Quality
+                focus = EIZ_Danish_Volunteer_Quantity
             }
             prerequisite = {
-                focus = EIZ_Polish_Volunteer_Quantity
+                focus = EIZ_Danish_Volunteer_Quality
             }
 
             
@@ -5917,7 +5963,7 @@ focus_tree = {
             id = EIZ_WE_MUST_LAND
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = -3
-            y = 0.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_OUR_TANKS_MUST_SWIM
@@ -5958,7 +6004,7 @@ focus_tree = {
             id = EIZ_Stick_The_Landing
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_WE_MUST_LAND
@@ -6077,7 +6123,7 @@ focus_tree = {
             id = EIZ_THEY_WONT_SEE_IT_COMING
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Right_Man_For_The_Job
@@ -6161,7 +6207,7 @@ focus_tree = {
             id = EIZ_Everry_Boat_A_Transport
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = -3
-            y = 0
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_RECALL_THE_FLEETS
@@ -6548,7 +6594,7 @@ focus_tree = {
             id = EIZ_Retun_Fire
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 3
-            y = 0
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_HOLE_IN_THE_GROUND
@@ -6622,7 +6668,7 @@ focus_tree = {
             id = EIZ_Comfurts_Of_The_Trenches
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Retun_Fire
@@ -6663,7 +6709,7 @@ focus_tree = {
             id = EIZ_Collateral_Damage
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Comfurts_Of_The_Trenches
@@ -6779,7 +6825,7 @@ focus_tree = {
             id = EIZ_Every_Peak_A_Bunker
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 3
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Continental_Trenches
@@ -7090,7 +7136,7 @@ focus_tree = {
             id = EIZ_IT_WONT_BE_ENOUGH
             icon = GFX_EIZ_Subvert_The_Monarchists
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Russia_For_Russians
@@ -7712,7 +7758,7 @@ focus_tree = {
             id = EIZ_Hapsburgs_First_step
             icon = GFX_EIZ_Subvert_The_Monarchists
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_The_Tehran_Proposal
@@ -8115,7 +8161,7 @@ focus_tree = {
             id = EIZ_Halfway_There
             icon = GFX_EIZ_Subvert_The_Monarchists
             x = -29
-            y = 5
+            y = 7
     
             prerequisite = { 
                 focus = EIZ_Foreign_Relations_Secured focus = EIZ_It_MIGHT_BE_ENOUGH
