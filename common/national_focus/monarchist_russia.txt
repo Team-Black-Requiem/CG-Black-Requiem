@@ -1584,6 +1584,62 @@ id = monarchist_russia_focus
 
     }
 
+	
+	focus = {
+		id = MRU_Conscription
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Tsar_Talks_To_His_People
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Tsar_Talks_To_His_People
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+	
+	focus = {
+		id = MRU_A_Defense_On_Both_Sides
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Conscription
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Conscription
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+	
+	
+	
+
 
 
 
