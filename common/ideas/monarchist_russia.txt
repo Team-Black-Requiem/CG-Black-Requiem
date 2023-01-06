@@ -233,7 +233,7 @@ ideas = {
 		
        MRU_Military_Bonds = {
 		allowed = {
-			alwyas = yes
+			always = yes
 		}
 
 		allowed_civil_war = {
@@ -248,7 +248,49 @@ ideas = {
 			days_remove = 123
 		    }
 	   }
+
+	   MRU_Crisis_Of_Goverment = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.3
+			political_power_gain = -0.25
+		    }
+	   }
+
+	   MRU = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.3
+			political_power_gain = -0.25 
+			
+		    }
+	   }
+
+
+	   
     }
+    
+
+
+    
 	 
 	
 	
@@ -304,10 +346,6 @@ ideas = {
 
 			allowed = {
 				original_tag = MRU
-			}
-
-			research_bonus = {
-				infantry_equipment = 0.05
 			}
 
 			traits = {
