@@ -230,7 +230,7 @@ ideas = {
 			authoritarian_democracy_drift = -0.05
 			}
 		}
-		
+		###new tree########
        MRU_Military_Bonds = {
 		allowed = {
 			always = yes
@@ -243,8 +243,26 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			production_factory_efficiency_gain_factor = 0.05
-			production_speed_arms_factory_factor = 0.1 
+			production_speed_arms_factory_factor  = 0.10
+			production_factory_efficiency_gain_factor = 0.05 
+			days_remove = 100
+		    }
+	   }
+
+	   MRU_Give_To_The_Tsar_As_Needed = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_industrial_complex_factor = 0.05
+			consumer_goods_factor = 0.03 
 			days_remove = 100
 		    }
 	   }
@@ -331,7 +349,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			recruitable_population_factor = 0.2
+			recruitable_population_factor = 0.02
 			production_speed_buildings_factor = -0.2 
 
 
@@ -393,6 +411,7 @@ ideas = {
 		    }
 	   }
 
+       
 
 
 	   
