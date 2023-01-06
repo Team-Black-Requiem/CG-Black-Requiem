@@ -1371,12 +1371,12 @@ id = monarchist_russia_focus
 	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment
+				type = infantry_equipment_1
 				amount = 1000
 				producer = MRU
 			}
 			add_equipment_to_stockpile = {
-				type = support_equipment
+				type = support_equipment_1
 				amount = 600
 				producer = MRU
 			}
@@ -1605,14 +1605,15 @@ id = monarchist_russia_focus
 		}
 
     }
-	
+
+	#####################Tsar Path################
 	focus = {
-		id = MRU_Military_Junta
+		id = MRU_Monarch
 		icon = GFX_MRU_the_FIRST_test
 		relative_position_id = MRU_Weathering_The_Storm
 
 		cost = 3
-		x = 7
+		x = -10
 		y = 1.5
 		available = {
 			country_exists = MRU
@@ -1632,14 +1633,1423 @@ id = monarchist_russia_focus
 		}
 
     }
+########## Political Tsar Path ########
+	focus = {
+		id = MRU_Restoring_Tzarist_Institutions
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Monarch
+
+		cost = 3
+		x = -7
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Monarch
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
 
 	focus = {
-		id = MRU_Monarch
+		id = MRU_Crushing_Opposition
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Restoring_Tzarist_Institutions
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Restoring_Tzarist_Institutions
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Purge_Option_2
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Crushing_Opposition
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Crushing_Opposition
+		}
+
+		mutually_exclusive = {
+			focus = MRU_Purge_Option_1
+			focus = MRU_Purge_Option_2
+			focus = MRU_Purge_Option_3
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Purge_Option_3
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Crushing_Opposition
+
+		cost = 3
+		x = 2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Crushing_Opposition
+		}
+
+		mutually_exclusive = {
+			focus = MRU_Purge_Option_1
+			focus = MRU_Purge_Option_2
+			focus = MRU_Purge_Option_3
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Purge_Option_1
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Crushing_Opposition
+
+		cost = 3
+		x = -2
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Crushing_Opposition
+		}
+
+		mutually_exclusive = {
+			focus = MRU_Purge_Option_1
+			focus = MRU_Purge_Option_2
+			focus = MRU_Purge_Option_3
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Purge_Results
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Purge_Option_2
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Purge_Option_1
+			focus = MRU_Purge_Option_2
+			focus = MRU_Purge_Option_3
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Return_Of_The_Patriarchs
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Purge_Results
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Purge_Results
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Patriarchs_Speech
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Return_Of_The_Patriarchs
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Return_Of_The_Patriarchs
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Anointing_A_Saint
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Return_Of_The_Patriarchs
+
+		cost = 3
+		x = -1.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Return_Of_The_Patriarchs
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Loyalty_Above_All
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Return_Of_The_Patriarchs
+
+		cost = 3
+		x = 1.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Return_Of_The_Patriarchs
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Proper_Echelon
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Patriarchs_Speech
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Return_Of_The_Patriarchs
+		}
+
+		prerequisite = {
+			focus = MRU_Loyalty_Above_All
+		}
+
+		prerequisite = {
+			focus = MRU_Anointing_A_Saint
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+########Europe Route########
+	focus = {
+		id = MRU_EU_Path_Placeholder
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Proper_Echelon
+
+		cost = 3
+		x = -4
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Proper_Echelon
+		}
+
+		mutually_exclusive = {
+			focus = MRU_EU_Path_Placeholder
+			focus = MRU_Ruling_As_God_Intended
+			focus = MRU_Social_Monarchy_in_Mother_Russia
+			focus = MRU_The_Lion_And_The_Bear
+
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Elegance_of_Zinnia
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_EU_Path_Placeholder
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_EU_Path_Placeholder
+		}
+
+		
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Recorporate_To_The_EU
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Elegance_of_Zinnia
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Elegance_of_Zinnia
+		}
+
+		
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+
+#########Europe Route Fin#######
+
+######### Based Monarchy Start#######
+	focus = {
+		id = MRU_Ruling_As_God_Intended
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Proper_Echelon
+
+		cost = 3
+		x = -1.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Proper_Echelon
+		}
+
+		mutually_exclusive = {
+			focus = MRU_EU_Path_Placeholder
+			focus = MRU_Ruling_As_God_Intended
+			focus = MRU_Social_Monarchy_in_Mother_Russia
+			focus = MRU_The_Lion_And_The_Bear
+
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Royal_Azalea
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Ruling_As_God_Intended
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Ruling_As_God_Intended
+		}
+
+		
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_New_Hiearchy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Royal_Azalea
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Royal_Azalea
+		}
+
+		
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+#########Based Monarchy fin ########
+
+#########Sonya badonkas#######
+	focus = {
+		id = MRU_Social_Monarchy_in_Mother_Russia
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Proper_Echelon
+
+		cost = 3
+		x = 1.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Proper_Echelon
+		}
+
+		mutually_exclusive = {
+			focus = MRU_EU_Path_Placeholder
+			focus = MRU_Ruling_As_God_Intended
+			focus = MRU_Social_Monarchy_in_Mother_Russia
+			focus = MRU_The_Lion_And_The_Bear
+
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Passion_of_Roses
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Social_Monarchy_in_Mother_Russia
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Social_Monarchy_in_Mother_Russia
+		}
+
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Ultimate_Unification
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Passion_of_Roses
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Passion_of_Roses
+		}
+
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+######### Sonya Supreme fin #######
+
+######### Britan dogs path ########
+	focus = {
+		id = MRU_The_Lion_And_The_Bear
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Proper_Echelon
+
+		cost = 3
+		x = 4
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Proper_Echelon
+		}
+
+		mutually_exclusive = {
+			focus = MRU_EU_Path_Placeholder
+			focus = MRU_Ruling_As_God_Intended
+			focus = MRU_Social_Monarchy_in_Mother_Russia
+			focus = MRU_The_Lion_And_The_Bear
+
+		}
+
+	
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Lily_of_The_Valley
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Lion_And_The_Bear
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Lion_And_The_Bear
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Forgive_and_Forget
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Lily_of_The_Valley
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Lily_of_The_Valley
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Bears_Rebirth
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Ultimate_Unification
+
+		cost = 3
+		x = -1.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Forgive_and_Forget
+			focus = MRU_Ultimate_Unification
+			focus = MRU_The_New_Hiearchy
+			focus = MRU_Recorporate_To_The_EU
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+
+
+############Britan Dog Fin##############
+
+############Political Tsar Path Fin##########
+
+############New Oprichniki paths#########
+	focus = {
+		id = MRU_New_Oprichniki
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Monarch
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Monarch
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Only_Two_Reliable_Allies
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_New_Oprichniki
+
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_New_Oprichniki
+		}
+		mutually_exclusive = {
+			focus = MRU_Evolve.Adapt.Improvise
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Evolve.Adapt.Improvise
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_New_Oprichniki
+
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_New_Oprichniki
+		}
+		mutually_exclusive = {
+			focus = MRU_Only_Two_Reliable_Allies
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Repeating_Suvorovs_Genius
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Evolve.Adapt.Improvise
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Evolve.Adapt.Improvise
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Forward_Unto_Dawn
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Repeating_Suvorovs_Genius
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Repeating_Suvorovs_Genius
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Modern_Supply_Lines
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Forward_Unto_Dawn
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Forward_Unto_Dawn
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Knightmare_R_D_Department
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Modern_Supply_Lines
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Modern_Supply_Lines
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Establish_An_Airforce
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Knightmare_R_D_Department
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Knightmare_R_D_Department
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Circled_By_Enemies
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Only_Two_Reliable_Allies
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Only_Two_Reliable_Allies
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Saint_Susanins_Spirit
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Circled_By_Enemies
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Circled_By_Enemies
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Secrets_Of_The_Unicorns
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Saint_Susanins_Spirit
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Saint_Susanins_Spirit
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Attack_Of_The_Dead
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Secrets_Of_The_Unicorns
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Secrets_Of_The_Unicorns
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Conscripts_To_The_Standing_Armies
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Attack_Of_The_Dead
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Attack_Of_The_Dead
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Mother_Of_Kuzma
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Establish_An_Airforce
+
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Establish_An_Airforce
+		}
+
+		prerequisite = {
+			focus = MRU_Conscripts_To_The_Standing_Armies
+		}
+		
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+	########### Oprichniki path Fin #########
+
+	########### Tsar Economy Paths ##########
+
+	focus = {
+		id = MRU_Domestic_Economy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Monarch
+
+		cost = 3
+		x = 4
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Monarch
+		}
+
+		mutually_exclusive = {
+			focus = MRU_Meeting_Of_The_Monarchs
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Planned_Budget
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Domestic_Economy
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Domestic_Economy
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Establish_The_Central_Bank
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Planned_Budget
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Planned_Budget
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Military_Bonds
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Establish_The_Central_Bank
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Establish_The_Central_Bank
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_A_Modernized_Economy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Military_Bonds
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Military_Bonds
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Meeting_Of_The_Monarchs
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Monarch
+
+		cost = 3
+		x = 6
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Monarch
+		}
+
+		mutually_exclusive = {
+			focus = MRU_Domestic_Economy
+		}
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Oil_For_Their_Economy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Meeting_Of_The_Monarchs
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Meeting_Of_The_Monarchs
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Minning_Rights
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Oil_For_Their_Economy
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Oil_For_Their_Economy
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Foreign_Capitalists
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Minning_Rights
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Minning_Rights
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_They_Have_Honoured_Our_Deal
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Foreign_Capitalists
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Foreign_Capitalists
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	########### Tsar Economy Path Fin #########
+
+	########### Military Junta ############
+	focus = {
+		id = MRU_Military_Junta
 		icon = GFX_MRU_the_FIRST_test
 		relative_position_id = MRU_Weathering_The_Storm
 
 		cost = 3
-		x = -7
+		x = 10
 		y = 1.5
 		available = {
 			country_exists = MRU
@@ -1691,6 +3101,8 @@ id = monarchist_russia_focus
 		}
 
     }
+
+	
 
 	focus = {
 		id = MRU_Rostislav_Ilin_Mass_Assault
@@ -1947,7 +3359,7 @@ id = monarchist_russia_focus
 		icon = GFX_MRU_the_FIRST_test
 		relative_position_id = MRU_The_Chromium_Mines
 		cost = 3
-		x = 0
+		x = 1
 		y = 1
 		available = {
 			country_exists = MRU
@@ -2266,7 +3678,7 @@ id = monarchist_russia_focus
 		relative_position_id = MRU_Church_Donations
 
 		cost = 3
-		x = 0
+		x = -1
 		y = 1
 		available = {
 			country_exists = MRU
@@ -2277,6 +3689,251 @@ id = monarchist_russia_focus
 			focus = MRU_Church_Donations
 		}
 
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Incriminate_The_Church
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Seperation_Of_Church_And_State
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Seperation_Of_Church_And_State
+		}
+
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Tsar_Steps_Back
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Backroom_Deals
+
+		cost = 3
+		x = 0
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Backroom_Deals
+		}
+
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Junta_Reigns
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_The_Tsar_Steps_Back
+
+		cost = 3
+		x = -3.5
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_The_Tsar_Steps_Back
+			focus = MRU_Incriminate_The_Church
+		}
+
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Economy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Military_Junta
+
+		cost = 3
+		x = -8
+		y = 1.5
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Military_Junta
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Arms_Focus
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Economy
+
+		cost = 3
+		x = 0
+		y = 1.5
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Economy
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Industralize_Stragegic_points
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Arms_Focus
+
+		cost = 3
+		x = 0
+		y = 1.5
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Arms_Focus
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Electrical_Advancements
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Industralize_Stragegic_points
+
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Industralize_Stragegic_points
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_Knightmare_Designs
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Industralize_Stragegic_points
+
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Industralize_Stragegic_points
+		}
+
+	
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = { 
+		}
+
+    }
+
+	focus = {
+		id = MRU_A_Militarized_Economy
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Knightmare_Designs
+
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
+		prerequisite = {
+			focus = MRU_Knightmare_Designs
+		}
+
+		prerequisite = {
+			focus = MRU_Electrical_Advancements
+		}
+
+	
         ai_will_do = {
 			factor = 10
 		}
