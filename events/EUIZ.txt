@@ -308,6 +308,8 @@ country_event = {
     EIZ = { country_event = EIZ.16 }
     name = EIZ.15.b
     EIZ = { country_event = EIZ.17 }
+    name = EIZ.15.c
+    EIZ = { country_event = EIZ.46 }
   }
 }
 
@@ -321,6 +323,10 @@ country_event = {
 
   option = {
     name = EIZ.16.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+    }
   }
 }
 
@@ -334,6 +340,12 @@ country_event = {
 
   option = {
     name = EIZ.17.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      production_speed_industrial_complex_factor = 1.05
+      production_speed_arms_factory_factor = 1.05
+    }
   }
 }
 
@@ -745,5 +757,24 @@ country_event = {
 
   option = {
     name = EIZ.45.a
+  }
+}
+
+country_event = { #option for Lyon Economic Board
+  id = EIZ.46
+  title = EIZ.46.t
+  desc = EIZ.46.d
+
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  option = {
+    name = EIZ.46.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      production_speed_industrial_complex_factor = 1.05
+      production_speed_arms_factory_factor = 1.05
+    }
   }
 }
