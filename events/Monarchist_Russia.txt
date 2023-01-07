@@ -144,9 +144,6 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-        tag = MRU       
-    }
 
 	option = {
 		name = MRU.6.a
@@ -159,32 +156,14 @@ country_event = {
 
 	option = {
 		name = MRU.6.b
-		add_ideas  = MRU_Give_To_The_Tsar_in_Times_Of_Need
+		add_ideas  = MRU_Give_To_The_Tsar_As_Needed
 		ai_chance = {
 			factor = 100
 		}
 	}
 }
 
-country_event = {  
-	id = MRU.7
-	title = MRU.7.t
-	desc = MRU.7.d
-	fire_only_once = yes
-	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		days = 10
-	}
-	option = {
-		name = MRU.7.a
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
- }	
 
  country_event = {  
 	id = MRU.7
@@ -203,35 +182,17 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		
-	}
- }	
-
- country_event = {  
-	id = MRU.8
-	title = MRU.8.t
-	desc = MRU.8.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	
+	}	
 	option = {
-		name = MRU.8.a
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-
-	option = {
-		name = MRU.8.a
-		set_country_flag = Militar_Junta
+		name = MRU.7.b
+		set_country_flag = Military_Junta
 
 		ai_chance = {
 			factor = 100
 		}
-		
+	}	
 	}
- }	
+ 	
+
+
 

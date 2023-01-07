@@ -115,6 +115,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			country_event = MRU.6
 		}
 
     }
@@ -142,12 +143,12 @@ id = monarchist_russia_focus
 	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment_0
 				amount = 1000
 				producer = MRU
 			}
 			add_equipment_to_stockpile = {
-				type = support_equipment_1
+				type = support_equipment
 				amount = 600
 				producer = MRU
 			}
@@ -170,7 +171,7 @@ id = monarchist_russia_focus
 		bypass = { }
 
 		prerequisite = {
-			focus = MRU_The_Question_Of_Industry
+			focus = MRU_Stockpiles_From_The_Old_War
 		}
 	
         ai_will_do = {
@@ -178,6 +179,16 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			653 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+
+				add_extra_state_shared_building_slots = 4
+			}
+			add_ideas = MRU_Furniture_For_Guns
 		}
 
     }
@@ -259,6 +270,16 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = infantry_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
 		}
 
     }
@@ -286,6 +307,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			load_oob = MRU_Conscription
 		}
 
     }
@@ -313,6 +335,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			add_ideas = MRU_Russian_Conscription
+			
 		}
 
     }
@@ -373,6 +397,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.7
 		}
 
     }
@@ -388,6 +413,7 @@ id = monarchist_russia_focus
 		y = 1.5
 		available = {
 			country_exists = MRU
+			has_country_flag = Tzarist
 		}
 		bypass = { }
 
@@ -1824,6 +1850,7 @@ id = monarchist_russia_focus
 		y = 1.5
 		available = {
 			country_exists = MRU
+			has_country_flag = Military_Junta
 		}
 		bypass = { }
 
@@ -1962,6 +1989,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
 		}
 
     }
@@ -2173,6 +2205,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mass_assault
+			}
 		}
 
     }
@@ -2279,6 +2316,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_grand_battle_plan
+			}
 		}
 
     }
