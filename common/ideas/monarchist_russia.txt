@@ -314,7 +314,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			recruitable_population_factor = 0.02
+			recruitable_population = 0.02
 			production_speed_buildings_factor = -0.2 
 
 
@@ -334,8 +334,64 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-		    production_factory_max_efficiency_factor = -0.95
+		    production_factory_max_efficiency_factor = -0.05
 			days_remove = 120
+		    }
+	   }
+
+        MRU_A_Militarized_Economyv1 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		     production_factory_efficiency_gain_factor = 0.1
+
+		    }
+	   }
+
+	   MRU_A_Militarized_Economyv2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		     production_cost_max_infantry_equipment = 0.1
+             production_speed_industrial_complex_factor = -0.1
+			 production_speed_arms_factory_factor = 0.1
+		    }
+	   }
+
+	   MRU_A_Militarized_Economyv3 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		     production_cost_max_infantry_equipment = 0.1
+             production_speed_industrial_complex_factor = -0.1
+			 production_speed_arms_factory_factor = 0.1
+			 production_speed_buildings_factor = 0.1
+			 consumer_goods_factor = 0.05
+			 local_resources = 0.05
 		    }
 	   }
 

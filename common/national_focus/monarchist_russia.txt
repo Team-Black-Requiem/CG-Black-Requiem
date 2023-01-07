@@ -2613,6 +2613,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_A_Militarized_Economyv1
 		}
 
     }
@@ -2640,9 +2641,13 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_A_Militarized_Economyv2
+			
+        hidden_effect = {
+		remove_ideas = MRU_A_Militarized_Economyv1
 		}
-
-    }
+	}
+}
 
 	focus = {
 		id = MRU_Industralize_Stragegic_points
@@ -2752,6 +2757,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_A_Militarized_Economyv3
+
+			hidden_effect = {
+				remove_ideas = MRU_A_Militarized_Economyv2
+			}
 		}
 
     }
