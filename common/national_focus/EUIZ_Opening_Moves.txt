@@ -2168,6 +2168,22 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                add_offsite_building = { type = industrial_complex level = 4 }
+                add_ideas = brick_for_every_corner
+                random_owned_controlled_state = {
+                
+                    add_resource = {
+                        type = steel
+                        amount = 20
+                    }
+                }
+                random_owned_controlled_state = {
+                
+                    add_resource = {
+                        type = aluminium
+                        amount = 20
+                    }
+                }
 
                 hidden_effect = {
               }
@@ -2207,6 +2223,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                consumer_goods_factor = -0.1
+                add_ideas = not_a_euro_wasted
 
                 hidden_effect = {
               }
@@ -2246,6 +2264,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                swap_ideas = {
+                    remove_idea = economy_destroyed
+                    add_idea = economic_stability_secured
+                }
 
                 hidden_effect = {
               }

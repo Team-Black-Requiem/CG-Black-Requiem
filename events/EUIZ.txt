@@ -343,8 +343,7 @@ country_event = {
     EIZ = {
       add_offsite_building = { type = arms_factory level = 2 }
       add_offsite_building = { type = industrial_complex level = 3 }
-      production_speed_industrial_complex_factor = 1.05
-      production_speed_arms_factory_factor = 1.05
+      add_ideas = Economic_board
     }
   }
 }
@@ -401,6 +400,10 @@ country_event = {
 
   option = {
     name = EIZ.21.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+    }
   }
 }
 
@@ -456,6 +459,11 @@ country_event = {
 
   option = {
     name = EIZ.25.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      add_ideas = Appease_german_pride
+    }
   }
 }
 
@@ -511,6 +519,11 @@ country_event = {
 
   option = {
     name = EIZ.29.a
+    EIZ = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      add_ideas = preassure_the_Danubians
+    }
   }
 }
 
@@ -563,6 +576,16 @@ country_event = {
 
   option = {
     name = EIZ.33.a
+    EIZ = {
+      add_equipment_to_stockpile = {
+        type = convoy
+        amount = 500
+      }
+      add_timed_idea = {
+        idea = Casablanca_Proposal
+        days = 180
+      }
+    }
   }
 }
 
@@ -589,6 +612,9 @@ country_event = {
 
   option = {
     name = EIZ.35.a
+    EIZ = {
+      add_ideas = Calling_The_Pale_Jewel
+    }
   }
 }
 
@@ -615,6 +641,18 @@ country_event = {
 
   option = {
     name = EIZ.37.a
+    EIZ = {
+      add_equipment_to_stockpile = {
+        type = transport_plane_equipment
+        amount = 500
+      }
+      add_tech_bonus = {
+        name = paratroopers
+        bonus = 0.75
+        uses = 1
+        category = infantry_tech
+      }
+    }
   }
 }
 
@@ -641,6 +679,29 @@ country_event = {
 
   option = {
     name = EIZ.39.a
+    EIZ = {
+      random_owned_controlled_state = {
+                
+        add_resource = {
+            type = steel
+            amount = 20
+        }
+      }
+      random_owned_controlled_state = {
+    
+        add_resource = {
+            type = aluminium
+            amount = 20
+        }
+      }
+      random_owned_controlled_state = {
+    
+        add_resource = {
+          type = tungsten
+          amount = 20
+        }
+      }
+    }
   }
 }
 
@@ -667,6 +728,15 @@ country_event = {
 
   option = {
     name = EIZ.41.a
+    EIZ = {
+      random_owned_controlled_state = {
+                
+        add_resource = {
+            type = sakuradite
+            amount = 20
+        }
+      }
+    }
   }
 }
 
@@ -680,6 +750,7 @@ country_event = {
 
   option = {
     name = EIZ.42.a
+    add_ideas = Magnum_Opus
   }
 }
 
@@ -773,8 +844,8 @@ country_event = { #option for Lyon Economic Board
     EIZ = {
       add_offsite_building = { type = arms_factory level = 2 }
       add_offsite_building = { type = industrial_complex level = 3 }
-      production_speed_industrial_complex_factor = 1.05
-      production_speed_arms_factory_factor = 1.05
+      add_ideas = Economic_board
+      # and this new focus tree
     }
   }
 }
