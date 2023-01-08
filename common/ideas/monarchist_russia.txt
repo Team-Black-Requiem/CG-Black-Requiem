@@ -245,7 +245,7 @@ ideas = {
 		modifier = {
 			production_speed_arms_factory_factor  = 0.10
 			production_factory_efficiency_gain_factor = 0.05 
-			days_remove = 100
+			days = 100
 		    }
 	   }
 
@@ -263,7 +263,7 @@ ideas = {
 		modifier = {
 			production_speed_industrial_complex_factor = 0.05
 			consumer_goods_factor = 0.03 
-			days_remove = 100
+			days = 100
 		    }
 	   }
 
@@ -314,7 +314,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			recruitable_population = 0.02
+			recruitable_population_factor = 0.05
 			production_speed_buildings_factor = -0.2 
 
 
@@ -368,6 +368,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
 		     production_cost_max_infantry_equipment = 0.1
              production_speed_industrial_complex_factor = -0.1
 			 production_speed_arms_factory_factor = 0.1
@@ -386,6 +387,7 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
 		     production_cost_max_infantry_equipment = 0.1
              production_speed_industrial_complex_factor = -0.1
 			 production_speed_arms_factory_factor = 0.1
@@ -395,10 +397,141 @@ ideas = {
 		    }
 	   }
 
-       
+	   MRU_Proper_Training = {
+		allowed = {
+			always = yes
+		}
 
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			
+		    }
+	   }
+
+	   MRU_Proper_Training = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			
+		    }
+	   }
+
+
+
+	   ######Tzarist Economics path######
+
+	   MRU_Domestic_Economy = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			days = 180
+		    }
+	   }
 
 	   
+	   MRU_Planned_EconomyV1 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			
+		    }
+	   }  
+
+	   	   
+	   MRU_Planned_EconomyV2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = 0.05
+			stability_factor = 0.1
+		    }
+	   }
+
+	   	   
+	   MRU_Planned_EconomyV3 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = 0.05
+			stability_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
+			conversion_cost_civ_to_mil_factor = 0.05
+		    }
+	   }
+
+	      	   
+	   MRU_Planned_EconomyV4 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_buildings_factor = 0.125
+			consumer_goods_factor = 0.08
+			stability_factor = 0.15
+			production_factory_max_efficiency_factor = 0.05
+			conversion_cost_civ_to_mil_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+		    }
+	   }
+
+
     }
     
 
