@@ -35,6 +35,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			country_event = MRU.1
 		}
 
 
@@ -62,6 +63,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			country_event = MRU.2
 		}
 
     }
@@ -89,6 +91,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
+			country_event = MRU.3
 		}
 
     }
@@ -217,6 +220,7 @@ id = monarchist_russia_focus
 		completion_reward = {
 			add_political_power = 125
 			add_command_power = 25
+			country_event = MRU.5
 		}
 
     }
@@ -308,6 +312,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = {
 			load_oob = MRU_Conscription
+			country_event = MRU.4
 		}
 
     }
@@ -420,13 +425,20 @@ id = monarchist_russia_focus
 		prerequisite = {
 			focus = MRU_Weathering_The_Storm
 		}
-		mutually_exclusive = {focus = MRU_Military_Junta}
 	
         ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = { 
+
+			country_event = MRU.8
+			
+			hidden_effect = {
+				add_ideas = MRU_Crisis_Of_GovermentV1
+				remove_ideas = MRU_Crisis_Of_GovermentV2
+				
+			}
 		}
 
     }
@@ -453,6 +465,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.9
 		}
 
     }
@@ -479,6 +492,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.10
 		}
 
     }
@@ -541,6 +555,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
 		}
 
     }
@@ -602,6 +617,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.11
 		}
 
     }
@@ -630,6 +646,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.12
 		}
 
     }
@@ -658,6 +675,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.14
 		}
 
     }
@@ -686,6 +704,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.13
 		}
 
     }
@@ -714,6 +733,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_stability = 0.15
+			add_war_support = 0.15
 		}
 
     }
@@ -750,6 +771,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.15
 		}
 
     }
@@ -841,6 +863,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.16
 		}
 
     }
@@ -938,6 +961,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.17
 		}
 
     }
@@ -1034,6 +1058,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.18
 		}
 
     }
@@ -1124,6 +1149,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.19
 		}
 
     }
@@ -1154,6 +1180,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.20
 		}
 
     }
@@ -1867,13 +1894,18 @@ id = monarchist_russia_focus
 		prerequisite = {
 			focus = MRU_Weathering_The_Storm
 		}
-		mutually_exclusive = {focus = MRU_Military_Junta}
 	
         ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = { 
+			country_event = MRU.21
+			hidden_effect = {
+				add_ideas = MRU_Crisis_Of_GovermentV1
+				remove_ideas = MRU_Crisis_Of_GovermentV2
+				
+			}
 		}
 
     }
@@ -2112,6 +2144,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.23
 		}
 
     }
@@ -2387,6 +2420,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.22
 		}
 
     }

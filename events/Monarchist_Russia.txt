@@ -125,7 +125,7 @@ country_event = {
 	is_triggered_only = yes
 
 	mean_time_to_happen = {
-		days = 10
+		days = 14
 	}
 	option = {
 		name = MRU.7.a
@@ -194,7 +194,26 @@ country_event = {
 		}
 		
     }
+	option = {
+		name = MRU.10.b
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+    
+	option = {
+		name = MRU.10.c
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
 }
+
 
 
 country_event = {
@@ -306,9 +325,25 @@ country_event = {
 
 
 country_event = {
-	id = MRU.10
+	id = MRU.17
 	title = MRU.17.t
 	desc = MRU.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.17.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+country_event = {
+	id = MRU.18
+	title = MRU.18.t
+	desc = MRU.18.d
 	is_triggered_only = yes
 	fire_only_once = yes
 

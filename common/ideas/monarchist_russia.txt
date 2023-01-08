@@ -267,7 +267,26 @@ ideas = {
 		    }
 	   }
 
-	   MRU_Crisis_Of_Goverment = {
+	   MRU_Crisis_Of_GovermentV1 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.25
+			political_power_gain = -0.25
+			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.1
+		    }
+	   }
+
+	   MRU_Crisis_Of_GovermentV2 = {
 		allowed = {
 			always = yes
 		}
@@ -280,9 +299,13 @@ ideas = {
 
 		modifier = {
 			stability_factor = -0.3
+			war_support_factor = 0.1
 			political_power_gain = -0.25
+			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.1
 		    }
 	   }
+
 
 	   MRU_Neglect_Of_Education = {
 		allowed = {
