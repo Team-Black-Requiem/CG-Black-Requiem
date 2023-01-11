@@ -1,0 +1,133 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+EIZ_economic_board_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	production_speed_buildings_factor = EIZ_economic_board_construction_speed_dynamic_modifier_var
+}
+
+EIZ_casablanca_proposal_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	production_speed_industrial_complex_factor = EIZ_casablanca_proposal_civ_construction_speed_dynamic_modifier_var
+}
+
+EIZ_pale_jewel_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	production_speed_buildings_factor = EIZ_pale_jewel_construction_speed_dynamic_modifier_var
+	consumer_goods_factor = EIZ_pale_jewel_consumer_goods_dynamic_modifier_var
+}
+
+EIZ_apeas_german_pride_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	production_factory_max_efficiency_factor = EIZ_apeas_german_pride_factory_max_efficiency_dynamic_modifier_var
+	production_factory_efficiency_gain_factor = EIZ_apeas_german_pride_factory_efficiency_gain_dynamic_modifier_var
+}
+
+EIZ_countacts_in_france_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	consumer_goods_factor = EIZ_countacts_in_france_consumer_goods_dynamic_modifier_var
+}
+
+EIZ_preassure_the_Danubians_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	line_change_production_efficiency_factor = EIZ_preassure_the_Danubians_line_change_production_efficiency_dynamic_modifier_var
+	production_speed_industrial_complex_factor = EIZ_preassure_the_Danubians_civ_construction_speed_dynamic_modifier_var
+	production_speed_arms_factory_factor = EIZ_preassure_the_Danubians_mil_construction_speed_dynamic_modifier_var
+}
+
+EIZ_A_brick_for_every_corner_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	production_speed_industrial_complex_factor = EIZ_A_brick_for_every_corner_civ_construction_speed_dynamic_modifier_var
+	production_speed_arms_factory_factor = EIZ_A_brick_for_every_corner_mil_construction_speed_dynamic_modifier_var
+}
+
+EIZ_not_a_euro_wasted_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	consumer_goods_factor = EIZ_not_a_euro_wasted_consumer_goods_dynamic_modifier_var
+	production_speed_rail_way_factor = EIZ_not_a_euro_wasted_production_speed_rail_way_dynamic_modifier_var
+	production_speed_naval_base_factor = EIZ_not_a_euro_wasted_production_speed_naval_base_dynamic_modifier_var
+	production_speed_supply_node_factor = EIZ_not_a_euro_wasted_production_speed_supply_node_dynamic_modifier_var 
+}
+
+EIZ_economic_stability_secured_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	stability_weekly = EIZ_economic_stability_secured_stability_weekly_dynamic_modifier_var
+	war_support_weekly = EIZ_economic_stability_secured_war_support_weekly_dynamic_modifier_var
+	stability_factor = EIZ_economic_stability_secured_stability_factor_dynamic_modifier_var
+	war_support_factor = EIZ_economic_stability_secured_war_support_factor_dynamic_modifier_var
+}
+
+EIZ_economy_destroyed_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	stability_weekly = EIZ_economic_stability_secured_stability_weekly_dynamic_modifier_var
+	war_support_weekly = EIZ_economic_stability_secured_war_support_weekly_dynamic_modifier_var
+	stability_factor = EIZ_economic_stability_secured_stability_factor_dynamic_modifier_var
+	war_support_factor = EIZ_economic_stability_secured_war_support_factor_dynamic_modifier_var
+}
+
+EIZ_Magnum_Opus_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_economic_collapse_area_11
+
+	consumer_goods_factor = EIZ_Magnum_Opus_consumer_goods_dynamic_modifier_var
+	production_speed_buildings_factor = EIZ_Magnum_Opus_construction_speed_dynamic_modifier_var
+	min_export = EIZ_Magnum_Opus_min_export_dynamic_modifier_var
+	production_speed_arms_factory_factor = EIZ_Magnum_Opus_mil_construction_speed_dynamic_modifier_var
+	production_factory_efficiency_gain_factor = EIZ_Magnum_Opus_factory_efficiency_gain_dynamic_modifier_var
+	stability_factor = EIZ_Magnum_Opus_stability_factor_dynamic_modifier_var
+	war_support_factor = EIZ_Magnum_Opus_war_support_factor_dynamic_modifier_var
+}
