@@ -493,6 +493,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.10
+			add_stability = -0.2
 		}
 
     }
@@ -524,6 +525,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_stability = -0.05
 		}
 
     }
@@ -547,7 +549,7 @@ id = monarchist_russia_focus
 
 		mutually_exclusive = {
 			focus = MRU_Purge_Option_1
-			focus = MRU_Purge_Option_3
+			focus = MRU_Purge_Option_2
 		}
 	
         ai_will_do = {
@@ -555,7 +557,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-
+            add_stability = -0.05
 		}
 
     }
@@ -587,6 +589,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+            add_stability = -0.05
+
 		}
 
     }
@@ -676,6 +680,8 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.14
+			add_war_support = 0.15
+			add_stability = 0.15
 		}
 
     }
@@ -772,6 +778,9 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.15
+			add_political_power = 150
+			add_stability = 0.10
+			add_war_support = 0.10
 		}
 
     }
@@ -962,6 +971,9 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.17
+			add_political_power = -0.05
+			add_stability = -0.3
+			army_defence_factor = 0.05
 		}
 
     }
@@ -1214,6 +1226,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+               country_event = MRU.21
 		}
 
     }
@@ -1242,7 +1255,8 @@ id = monarchist_russia_focus
 			factor = 10
 		}
 	
-		completion_reward = { 
+		completion_reward = {
+
 		}
 
     }
@@ -1433,8 +1447,9 @@ id = monarchist_russia_focus
 			factor = 10
 		}
 	
-		completion_reward = { 
-		}
+		completion_reward = {
+			add_ideas = MRU_Test_military
+	}
 
     }
 
@@ -1461,6 +1476,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			
 		}
 
     }
@@ -1488,6 +1504,12 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_equipment_to_stockpile = {
+
+                
+                 type = support_equipment1
+				 amount = 400
+			}
 		}
 
     }
@@ -1515,6 +1537,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+         add_ideas = MRU_Test_militaryV3
 		}
 
     }
@@ -1542,8 +1565,9 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-		}
-
+			add_ideas = MRU_Test_militaryV2
+			remove_ideas = MRU_Test_military
+	}
     }
 
 	focus = {

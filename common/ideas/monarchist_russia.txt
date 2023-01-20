@@ -554,10 +554,62 @@ ideas = {
 		    }
 	   }
 
+	   MRU_Test_military = {
+		allowed = {
+			always = yes
+		}
+
+       allowed_civil_war = {
+		always = yes
+	   }
+	   
+	   removal_cost = -1
+
+	   modifier = {
+		army_defence_factor = 0.025
+	   }
+	}
+
+	MRU_Test_militaryV2 = {
+		allowed = {
+			always = yes
+		}
+
+       allowed_civil_war = {
+		always = yes
+	   }
+	   
+	   removal_cost = -1
+
+	   modifier = {
+		army_defence_factor = 0.075
+		dig_in_speed_factor = 0.05
+		max_dig_in_factor = 0.05
+		army_org_factor = 0.05
+	   }
+	}
+
+    
+	MRU_Test_militaryV3 = {
+		allowed = {
+			always = yes
+		}
+
+       allowed_civil_war = {
+		always = yes
+	   }
+	   
+	   removal_cost = -1
+
+	   modifier = {
+		equipment_bonus = {artillery = { instant = yes soft_attack = 0.05 } }
+	   }
+	}
+
 
     }
     
-
+	
 
     
 	 
