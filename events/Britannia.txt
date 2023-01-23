@@ -630,7 +630,7 @@ country_event = { #VV Things
 	option = {
 		name = BRT.13.a
 		BRT = {
-			activate_advisor = BRT_VV_Exotic
+			activate_advisor = BRT_VV_idea
 		}
 	}
 }
@@ -646,10 +646,10 @@ fire_only_once = yes
 option = {
 	name = BRT.14.a
 	BRT = {
-		activate_advisor = BRT_exotic_interior_1
+		activate_advisor = BRT_generic_general_1_idea
 	}
 	BRT = {
-		activate_advisor = BRT_odysseus_Exotic
+		activate_advisor = BRT_odysseus_idea
 	}
 }
 }
@@ -664,25 +664,18 @@ country_event = {  #Odysseus is no more
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	 
-	
-	
-		option = {	
-		name = BRT.15.a
-		completion_reward = {
-			BRT = {
-				retire_character = BRT_odysseus_Exotic
-			}
+	option = {	
+	name = BRT.15.a
+
+		BRT = {
+			deactivate_advisor = BRT_odysseus_idea
+		}
 		add_stability = -0.05
 		add_political_power = -30
 
 		ai_chance = {
 			factor = 20
 		}
-		
-		
-    }
-
 	}	
 	
 }
@@ -1766,8 +1759,10 @@ is_triggered_only = yes
 option = {
 	name = BRT.59.a
 	BRT = {
-		remove_idea = BRT_Purge_Navy_Phase_5
-		remove_idea = BRT_Purge_Army_Phase_4
+		remove_ideas = {
+			BRT_Purge_Navy_Phase_5
+			BRT_Purge_Army_Phase_4
+		}
 	}
 	ai_chance = {
 		factor = 70
