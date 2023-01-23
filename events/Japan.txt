@@ -358,17 +358,20 @@ country_event = { ##Truce
 			}
 			add_ideas = pacific_war_scars
 			add_ideas = military_anarchy
-			remove_ideas = total_war
-			remove_ideas = total_war_2
-			remove_ideas = total_war_3
-			remove_ideas = total_war_4
-			remove_ideas = total_war_5
-			remove_ideas = surprise_attack_jap_2
-			remove_ideas = minerary_industry_funds_5
-			remove_ideas = minerary_industry_funds_4
-			remove_ideas = minerary_industry_funds_fail
-			remove_ideas = minerary_industry_funds_fail_2
+			remove_ideas = {
+			total_war
+			total_war_2
+			total_war_3
+			total_war_4
+			total_war_5
+			surprise_attack_jap_2
+			minerary_industry_funds_5
+			minerary_industry_funds_4
+			minerary_industry_funds_fail
+			minerary_industry_funds_fail_2
+			}
 		}
+
 		BRT = {
 			white_peace = JAP
 
@@ -1034,12 +1037,13 @@ country_event = {
 		hidden_effect= { 
 			JAP = {
 				set_cosmetic_tag = JAP_KAN
-				remove_ideas = JAP_protests_4
-				remove_ideas = industrial_corporations_2
-				remove_ideas = industrial_corporations
-				remove_ideas = JAP_reconstruction_2
-				remove_ideas = military_anarchy_3
-
+				remove_ideas = {
+					JAP_protests_4
+					industrial_corporations_2
+					industrial_corporations
+					JAP_reconstruction_2
+					military_anarchy_3
+				}
 			}
 			529 = {
 				set_demilitarized_zone = no

@@ -1,9 +1,5 @@
 add_namespace = EIZ
 
-set_variable = {FrenchInfluence = 0}
-set_variable = {GermanInfluence = 0}
-set_variable = {AustrianInfluence = 0}
-
 country_event = {
     id = EIZ.1
     title = EIZ.1.t
@@ -15,11 +11,18 @@ country_event = {
     option = {
 	   
 		name = EIZ.1.a
-
         
 		ai_chance = {
 			factor = 33
 		}
+
+    hidden_effect = {
+      EIZ = {
+        set_variable = {FrenchInfluence = 0}    #Sidd, these were on line 2 and were not scoped to anything
+        set_variable = {GermanInfluence = 0}    #as a result nothing was being set to zero and the variable didn't actually exist until the add_to_variable below
+        set_variable = {AustrianInfluence = 0}  #you've got to scope these to something or else it won't work. Even if that scope is "scopeless".
+      }                                         #Set_variable and other variable operators are effects, so they'd need to be inside of an option={} or immediate={} inside an event.  
+    }                                           #Not a big issue but I figured I'd leave a comment for posterity -Bob
 		
     } 
 }
@@ -150,7 +153,11 @@ country_event = {
 
   option = {
     name = EIZ.5.a
+  }
+  option = {
     name = EIZ.5.b
+  }
+  option = {
     name = EIZ.5.c
   }
 
@@ -164,10 +171,14 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes
 
-  option = {
-    name = EIZ.6.a
-    name = EIZ.6.b
-    name = EIZ.6.c
+   option = {
+      name = EIZ.6.b
+    }
+     option = {
+       name = EIZ.6.a
+   }
+   option = {
+       name = EIZ.6.c
   }
 
 }
@@ -182,7 +193,11 @@ country_event = {
 
   option = {
     name = EIZ.7.a
+  }
+  option = {
     name = EIZ.7.b
+  }
+  option = {
     name = EIZ.7.c
   }
 
@@ -306,6 +321,8 @@ country_event = {
   option = {
     name = EIZ.15.a
     EIZ = { country_event = EIZ.16 }
+  }
+  option = {
     name = EIZ.15.b
     EIZ = { country_event = EIZ.17 }
   }
@@ -374,6 +391,8 @@ country_event = {
   option = {
     name = EIZ.20.a
     EIZ = { country_event = EIZ.21 }
+  }
+  option = {  
     name = EIZ.20.b
     EIZ = { country_event = EIZ.22 }
   }
@@ -429,6 +448,8 @@ country_event = {
   option = {
     name = EIZ.24.a
     EIZ = { country_event = EIZ.25 }
+  }
+  option = {  
     name = EIZ.24.b
     EIZ = { country_event = EIZ.26 }
   }
@@ -481,13 +502,16 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes
 
-  option = {
-    name = EIZ.28.a
-    EIZ = { country_event = EIZ.29 }
-    name = EIZ.28.b
-    EIZ = { country_event = EIZ.30 }
-  }
-}
+    option = {
+      name = EIZ.28.a
+      EIZ = { country_event = EIZ.29 }
+    }
+    option = {
+      name = EIZ.28.b
+      EIZ = { country_event = EIZ.30 }
+    }
+ }
+
 
 country_event = {
   id = EIZ.29
@@ -680,32 +704,32 @@ news_event = {
       }
   }
   title = {
-      text = EIZ.43.t
+      text = EIZ.43.t.b
   }
   desc = {
-      text = EIZ.43.desc.a
+      text = EIZ.43.d.a
       trigger = {
           tag = EIZ
       }
   }
   desc = {
-      text = EIZ.43.desc
+      text = EIZ.43.d.b
   }
   
-  picture = GFX_my_news_event_picture
+  #picture = GFX_my_news_event_picture
   
   is_triggered_only = yes
   major = yes
   
   option = {
-      name = EIZ.43.1.a
+      name = EIZ.43.a
       trigger = {
           tag = EIZ
       }
   }
   
   option = {
-      name = EIZ.43.1.b
+      name = EIZ.43.b
       trigger = {
           NOT = { tag = EIZ }
       }
