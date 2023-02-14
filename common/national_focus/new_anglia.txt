@@ -1,1 +1,49 @@
-﻿
+﻿ocus_tree = {
+	id = Bew_Anglia
+		
+		country = {
+			factor = 0
+			modifier = {
+				add = 5
+				tag = MRU
+			}
+		}
+		
+	
+		default = no
+	
+		continuous_focus_position = { x = 20 y = 2500 }
+	
+		focus = {
+			id = NA_Yetis_claim
+			icon = GFX_MA
+			cost = 3
+			x = 15
+			y = 0
+			available = {
+				country_exists = MRU
+			}
+			bypass = { }
+		
+	
+			mutually_exclusive = {
+			}
+	
+	
+			ai_will_do = {
+				factor = 10
+			}
+		
+			completion_reward = {
+
+				modifier = Yeti_Gains_all_CLaims
+
+			Modifier = Yeti_Gains_Claims_On_North_And_South_Island
+		
+			}
+	
+	
+		}
+
+
+	}

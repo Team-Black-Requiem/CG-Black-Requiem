@@ -1,6 +1,78 @@
 ﻿
 add_namespace = JAP
 
+#LOADING FOCUS TREES
+country_event = {  
+	id = JAP.99
+	title = JAP.99.t
+	desc = JAP.99.d
+	#picture = GFX_JAP_birth_problem
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = JAP.99.a
+
+		load_focus_tree = japan_focus_junta_2
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+
+    }     
+}
+
+country_event = {  
+	id = JAP.97
+	title = JAP.97.t
+	desc = JAP.97.d
+	#picture = GFX_JAP_birth_problem
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = JAP.97.a
+
+		load_focus_tree = japan_focus_junta_1
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+
+    }     
+}
+
+
+country_event = {  
+	id = JAP.98
+	title = JAP.98.t
+	desc = JAP.98.d
+	#picture = GFX_JAP_birth_problem
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = JAP.98.a
+
+		load_focus_tree = japan_focus_junta_3
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+
+    }     
+}
+
+
 
 country_event = {  
 	id = JAP.1
@@ -358,20 +430,17 @@ country_event = { ##Truce
 			}
 			add_ideas = pacific_war_scars
 			add_ideas = military_anarchy
-			remove_ideas = {
-			total_war
-			total_war_2
-			total_war_3
-			total_war_4
-			total_war_5
-			surprise_attack_jap_2
-			minerary_industry_funds_5
-			minerary_industry_funds_4
-			minerary_industry_funds_fail
-			minerary_industry_funds_fail_2
-			}
+			remove_ideas = total_war
+			remove_ideas = total_war_2
+			remove_ideas = total_war_3
+			remove_ideas = total_war_4
+			remove_ideas = total_war_5
+			remove_ideas = surprise_attack_jap_2
+			remove_ideas = minerary_industry_funds_5
+			remove_ideas = minerary_industry_funds_4
+			remove_ideas = minerary_industry_funds_fail
+			remove_ideas = minerary_industry_funds_fail_2
 		}
-
 		BRT = {
 			white_peace = JAP
 
@@ -1037,13 +1106,12 @@ country_event = {
 		hidden_effect= { 
 			JAP = {
 				set_cosmetic_tag = JAP_KAN
-				remove_ideas = {
-					JAP_protests_4
-					industrial_corporations_2
-					industrial_corporations
-					JAP_reconstruction_2
-					military_anarchy_3
-				}
+				remove_ideas = JAP_protests_4
+				remove_ideas = industrial_corporations_2
+				remove_ideas = industrial_corporations
+				remove_ideas = JAP_reconstruction_2
+				remove_ideas = military_anarchy_3
+
 			}
 			529 = {
 				set_demilitarized_zone = no

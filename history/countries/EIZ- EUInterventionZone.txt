@@ -66,8 +66,8 @@ recruit_character = EIZ_generic_air
 set_convoys = 500
 
 create_corps_commander = {
-	name = "Vlad Soyuz"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	name = "Natasha Soronova"
+	portrait_path = "gfx\leaders\EIZ\Natasha_Soronova.dds"
 			traits = { infantry_officer}
 			skill = 4
 			attack_skill = 4
@@ -80,8 +80,8 @@ create_corps_commander = {
 
 	create_corps_commander = {
 	name = "Philipie Allard"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-			traits = {}
+	portrait_path = "gfx\leaders\EIZ\Philipie_Allard.dds"
+			traits = {panzer_leader}
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -92,7 +92,7 @@ create_corps_commander = {
 
 		create_corps_commander = {
 	name = "Aloïs Chapelle"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	portrait_path = "gfx\leaders\EIZ\Alois_Chappelle.dds"
 			traits = {}
 			skill = 2
 			attack_skill = 1
@@ -102,9 +102,21 @@ create_corps_commander = {
 			legacy_id=-1
 		}
 
+				create_corps_commander = {
+	name = "Alberd Von Horthy"
+	portrait_path = "gfx\leaders\EIZ\Alberd_Von_Horthy.dds"
+			traits = {infantry_officer}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+		}
+
 		create_field_marshal= {
-	name = "0tto Van Hollen"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	name = "Charlotte Pierre"
+	portrait_path = "gfx\leaders\EIZ\Charlotte_Pierre.dds"
 			traits = { old_guard }
 			skill = 4
 			attack_skill = 3

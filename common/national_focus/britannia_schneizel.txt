@@ -121,6 +121,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_war_support = 0.05
 			add_ideas = The_Great_Homecoming_Phase_1
 		  hidden_effect = {
 		}
@@ -146,6 +147,8 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		#has_completed_focus = BRT_operation_white_bear
+		has_completed_focus = BRT_proposal_china
 
 		}
 
@@ -159,6 +162,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = BRT.43
+			add_stability = -0.05
 		  hidden_effect = {
 		}
 		}
@@ -167,7 +171,7 @@ focus_tree = {
 	focus = {
 		id = BRT_fund_russian_loyalists
 		icon = GFX_BRT_fund_russian_loyalists
-		x = 5
+		x = -5
 		y = 2
 
 		cost = 3
@@ -182,10 +186,14 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		country_exists = EUR
 
 		}
 
 		bypass = {
+			NOT = {		
+				country_exists = EUR	
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -195,7 +203,40 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = BRT.39
+			EUR = {
+				add_war_support = 0.10
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = EUR
+			}
+			send_equipment = {
+				equipment = mbt_1
+				amount = 800
+				target = EUR
+			}
+			send_equipment = {
+				equipment = sp_artillery_1
+				amount = 800
+				target = EUR
+			}
+			send_equipment = {
+				equipment = knightmare_all_pur_1
+				amount = 600
+				target = EUR
+			}
 		  hidden_effect = {
+			send_equipment = {
+				equipment = landspinner
+				amount = 800
+				target = EUR
+			}
+			send_equipment = {
+				equipment = factspheres
+				amount = 800
+				target = EUR
+			}
 		}
 		}
 	}
@@ -218,10 +259,14 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		country_exists = EUR
 
 		}
 
 		bypass = {
+			NOT = {		
+				country_exists = EUR	
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -231,6 +276,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = BRT.40
+			EUR = {
+				add_stability = 0.07
+				create_corps_commander = {
+					name = "Monica Krushevsky"
+					picture = "Portrait_General_Monica Krushevsky.dds"
+					traits = { trickster brilliant_strategist }
+					skill = 4
+					attack_skill = 5
+					defense_skill = 4
+					planning_skill = 6
+					logistics_skill = 3
+				}
+			}
 		  hidden_effect = {
 		}
 		}
@@ -254,10 +312,15 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		country_exists = EUR
+		country_exists = SRU
 
 		}
 
 		bypass = {
+			NOT = {		
+				country_exists = EUR	
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -267,6 +330,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = BRT.41
+			SRU = {
+				add_stability = -0.10
+				add_political_power = -30
+			}
 		  hidden_effect = {
 		}
 		}
@@ -290,10 +357,20 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		country_exists = EUR
+		country_exists = SRU
 
 		}
 
 		bypass = {
+			OR = {
+			NOT = {		
+				country_exists = EUR	
+			}
+			EUR = {
+			has_war_with = SRU
+		    }
+		    }
 		}
 
 		cancel_if_invalid = yes
@@ -303,6 +380,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = BRT.42
+			EUR = {
+				declare_war_on = {
+					target = SRU
+					type = annex_everything
+				}
+			}
 		  hidden_effect = {
 		}
 		}
@@ -311,7 +394,7 @@ focus_tree = {
 	focus = {
 		id = BRT_phase_two
 		icon = GFX_BRT_phase_two
-		x = -5
+		x = 5
 		y = 2
 
 		cost = 3
@@ -775,9 +858,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRT_exploit_EU_divisions
+		id = BRT_exploit_EU_divisions #Basically Antagonising France
+		#And Offering An Apparently Friendly Stance Towards Others
 		icon = GFX_BRT_exploit_EU_divisions
-		x = -5
+		x = 5
 		y = 2
 
 		cost = 3
@@ -792,6 +876,7 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		#has_completed_focus = BRT_operation_white_bear
 
 		}
 
@@ -804,6 +889,21 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			FRA = {
+				add_stability = -0.05
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = friendly
+			}
+			add_opinion_modifier = {
+				target = KAL
+				modifier = friendly
+			}
+			add_opinion_modifier = {
+				target = DAN
+				modifier = friendly
+			}
 		  hidden_effect = {
 		}
 		}
@@ -878,8 +978,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		  hidden_effect = {
-		}
+			add_political_power = 50
+		  KAL = {
+			country_event = BRT.60
+		  }
 		}
 	}
 
@@ -901,6 +1003,7 @@ focus_tree = {
 
 		available = {		
 		country_exists = BRT
+		controls_state = 100
 
 		}
 
@@ -913,6 +1016,24 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			100 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 4
+				instant_build = yes
+			}
+	     	}
+
 		  hidden_effect = {
 		}
 		}
@@ -948,6 +1069,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_political_power = 75
+			CHI = {
+			  country_event = BRT.61
+			}
 		  hidden_effect = {
 		}
 		}
@@ -985,13 +1110,30 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			country_event = BRT.64
 			NGA = {
 				add_popularity = {
 					ideology = autocracy
-					popularity = 0.20
+					popularity = 0.08
+				}
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.10
 				}
 			}
 		  hidden_effect = {
+			NGA = {
+			set_party_name = {
+				ideology = ultra_nationalism
+				name = "ASN-Purist Leaning"
+				long_name = "Armée Secrète du Nigeria-Purist Leaning"
+			}
+			set_party_name = {
+				ideology = autocracy
+				name = "ASN-Schneizel Leaning"
+				long_name = "Armée Secrète du Nigeria-Schneizel Leaning"
+			}
+		  }
 		}
 		}
 	}
@@ -1026,8 +1168,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		  hidden_effect = {
-		}
+			country_event = BRT.65
+			NGA = {
+				add_stability = -0.10
+			}
 		}
 	}
 
@@ -1061,6 +1205,22 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			NGA = {
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.05
+				}
+			}
+			add_opinion_modifier = {
+				target = NGA
+				modifier = brittanian_support
+			}
+			NGA = {
+				add_opinion_modifier = {
+					target = BRT
+					modifier = brittanian_support
+				}
+			}
 		  hidden_effect = {
 		}
 		}
@@ -1099,14 +1259,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			NGA = {
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.05
+				}
+			}
+			NGA = {
 				every_core_state = {
 					add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -1148,9 +1319,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			NGA = {
-				give_military_access = BRT
-			}
+			country_event = BRT.66
+			FRA = {
+				release_puppet = NGA
+				}
+				NGA = {
+					give_military_access = BRT
+				}
+				give_guarantee = NGA
 		  hidden_effect = {
 		}
 		}
@@ -1189,10 +1365,26 @@ focus_tree = {
 			SAF = {
 				add_popularity = {
 					ideology = autocracy
-					popularity = 0.20
+					popularity = 0.10
+				}
+				add_popularity = {
+					ideology = ultra_nationalism
+					popularity = 0.15
 				}
 			}
 		  hidden_effect = {
+			SAF = {
+			set_party_name = {
+				ideology = ultra_nationalism
+				long_name = "New National Party-Right"
+				name = "NNP-Right"
+			}
+			set_party_name = {
+				ideology = autocracy
+				long_name = "New National Party-Left"
+				name = "NNP-Left"
+			}
+		  }
 		}
 		}
 	}
@@ -1227,11 +1419,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			send_equipment = {
-				equipment = infantry_equipment
-				amount = 5000
-				target = SAF
-			}
+			add_political_power = 50
+			country_event = BRT.62
+
+
 		  hidden_effect = {
 		}
 		}
@@ -1268,7 +1459,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			SAF = {
-				add_war_support = 0.2
+				add_war_support = 0.10
+				add_state_claim = 544
+				add_state_claim = 545
 			}
 		  hidden_effect = {
 		}
@@ -1353,9 +1546,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			country_event = BRT.63
+			ENG = {
+			release_puppet = SAF
+		    }
 			SAF = {
 				give_military_access = BRT
 			}
+			give_guarantee = SAF
 		  hidden_effect = {
 		}
 		}
@@ -2401,10 +2599,8 @@ focus_tree = {
 		completion_reward = {
 			BRT = {
 				add_ideas = clean_administration
-				remove_ideas = {
-					brown_purists_part_8
-					red_purists_part_7
-				}
+				remove_ideas = brown_purists_part_8
+				remove_ideas = red_purists_part_7
 			}
 		  hidden_effect = {
 		}
@@ -3236,6 +3432,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
+			add_political_power = -20
 			BRT = {
 				swap_ideas = {
 				add_idea = rsi_phase_3
@@ -3531,7 +3728,21 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		  hidden_effect = {
+		AR7 = {
+			add_stability = 0.05
+			retire_country_leader = yes
+			remove_ideas = luciano_debauchery
+			hidden_effect = {
+				add_country_leader_role = {
+					character = britannian_viceroy
+					promote_leader = yes
+					country_leader = {
+					  ideology = paternal_autocracy
+					  expire = "2022.1.1.1"
+					  traits = {  }
+					}
+				  }
+			}
 		}
 		}
 	}
@@ -3611,6 +3822,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
+			army_experience = 30
 			BRT = {
 				swap_ideas = {
 				add_idea = osi_phase_2
@@ -3694,6 +3906,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
+			add_command_power = 50
 			BRT = {
 				swap_ideas = {
 				add_idea = osi_phase_4

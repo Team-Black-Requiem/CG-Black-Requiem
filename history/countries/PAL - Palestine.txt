@@ -14,41 +14,38 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
-
+FRA = {
+	set_autonomy = {
+		target = PAL
+		autonomous_state = eu_protectorate
+	}
+}
 
 set_convoys = 300
 
-set_politics = {
-	ruling_party = autocracy
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+PAL = {
+    add_popularity = { ideology = autocracy popularity = 0.80 }
+    add_popularity = { ideology = authoritarian_democracy popularity = 0.45 }
+	add_popularity = { ideology = moderate_liberalism popularity = 0.11 }
+	add_popularity = { ideology = moderate_socialism popularity = 0.12 }
+
+    set_politics = {
+        ruling_party = autocracy
+        last_election = "1936.6.16"
+        election_frequency = 48
+        elections_allowed = no
+    }
 }
 
-set_popularities = {
-	authoritarian_democracy = 25
-	autocracy = 30
-	hardline_socialism = 13
-	totalitarian_socialism = 22
-	moderate_conservatism = 5
-	ultra_nationalism = 5
-}
-add_ideas = {
-		oil_crisis
-	east_west
-	sultan_democracy
-	volunteer_only
-	export_focus
-	civilian_economy
-}
+#add_ideas = {
+#}
 
 create_country_leader = {
-	name = "Sultans' Oligarchy"
-	desc = "POLITICS_ARAB_COUNCIL_DESC"
-	picture = "Portrait_Arab_Council.dds"
-	expire = "2010.1.1"
-	ideology = absolute_monarchy
+	name = "United European Council"
+	desc = "POLITICS_CHARLES_DESC"
+	picture = "Portrait_Forty.dds"
+	expire = "2030.1.1"
+	ideology = paternal_autocracy
 	traits = {
-		#
 	}
 }

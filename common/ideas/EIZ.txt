@@ -14,7 +14,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				state_production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+      			production_speed_arms_factory_factor = 0.05
 			}
 		}
 
@@ -31,8 +32,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
+      			production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 
@@ -66,8 +67,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				line_change_production_efficiency_factor = 0.15
-				add_political_power = 100
+				line_change_production_efficiency_factor = 0.1
+      			production_speed_industrial_complex_factor = 0.05
+      			production_speed_arms_factory_factor = 0.05 
 			}
 		}
 
@@ -84,12 +86,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				state_production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+      			production_speed_arms_factory_factor = 0.05 
 
 			}
 		}
 
-		not_a_euro_waster = {
+		not_a_euro_wasted = {
 
 			allowed = {
 				always = yes
@@ -102,8 +105,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.03
-				local_resources = 0.15
+				production_speed_rail_way_factor = 0.15
+				production_speed_naval_base_factor = 0.15
+				production_speed_supply_node_factor = 0.1 
 			}
 		}
 
@@ -122,13 +126,8 @@ ideas = {
    			modifier = {
 				stability_weekly = 0.0075
 				war_support_weekly = 0.0075
-				local_resources = 0.20
-				consumer_goods_factor = 0.10
-				state_production_speed_industrial_complex_factor = 15
-				line_change_production_efficiency_factor = 0.15
-				add_political_power = 100
-				production_factory_efficiency_gain_factor = 0.10
-				production_factory_max_efficiency_factor = 0.10
+				stability_factor = 0.25
+				war_support_factor = 0.25
 			}
 		}
     
@@ -215,6 +214,66 @@ ideas = {
 				
 			}
 
+		}
+
+		Casablanca_Proposal = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+
+			}
+		}
+
+		Calling_The_Pale_Jewel = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+
+			}
+		}
+
+		Magnum_Opus = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+				min_export = -0.20
+				production_speed_arms_factory_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
 		}
 
 	}

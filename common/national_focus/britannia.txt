@@ -475,9 +475,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			activate_advisor  = BRT_bismark_idea
-			add_command_power = -50
-			add_political_power = -50
+				add_ideas = BRT_bismark_idea
+				hidden_effect = {
+                        remove_ideas = BRT_generic_army_1_idea
+				}	
+			   
+
+			   add_command_power = -50
+			   add_political_power = -50
 		}
 	}
 
