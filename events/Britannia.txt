@@ -438,8 +438,6 @@ country_event = {  #Total victory against Japan - Establish Area
 		option = {
 		name = BRT.10.a
 		load_focus_tree = britannia_focus_2
-
-	
 		
 
 		ai_chance = {
@@ -452,26 +450,25 @@ country_event = {  #Total victory against Japan - Establish Area
 
 		A11 = {
 			inherit_technology = BRT
+			change_tag_from = JAP		#this should kick a Japan player into A11, might cause a false game-over
 			set_variable = { A11_Chosen_State = 1 }
 			BRT = {
-	set_autonomy = {
-		target = A11
-		autonomous_state = area_reformation
-	}
-	}
+				set_autonomy = {
+				target = A11
+				autonomous_state = area_reformation
+				}
+			}
 		##Dynamic Initial Modifiers
 		set_variable = {
 			var = post_war_chaos
 			value = 0
 		}
-
 		A11_resistance_setup = yes
-		
+	
 		set_variable = {
 			var = economic_slump
 			value = 0
 		}	
-
 		set_variable = {
 			var = demographic_chaos
 			value = 0
@@ -479,7 +476,6 @@ country_event = {  #Total victory against Japan - Establish Area
 		add_dynamic_modifier = { modifier = rampant_chaos_area_11 scope = A11 }
 		add_dynamic_modifier = { modifier = economic_collapse_area_11 scope = A11 }
 		add_dynamic_modifier = { modifier = demographic_death_area_11 scope = A11 }
-
 		########
 		transfer_state = 555
 		transfer_state = 536
@@ -505,6 +501,9 @@ country_event = {  #Total victory against Japan - Establish Area
     }
 	option = {	
 		name = BRT.10.b
+		trigger = {
+			JAP = {is_ai = yes}
+		}
 		load_focus_tree = britannia_focus_2
 
 		ai_chance = {
@@ -631,7 +630,7 @@ country_event = { #VV Things
 	option = {
 		name = BRT.13.a
 		BRT = {
-			activate_advisor = BRT_VV_Exotic
+			activate_advisor = BRT_VV_idea
 		}
 	}
 }
@@ -647,10 +646,10 @@ fire_only_once = yes
 option = {
 	name = BRT.14.a
 	BRT = {
-		activate_advisor = BRT_exotic_interior_1
+		activate_advisor = BRT_generic_general_1_idea
 	}
 	BRT = {
-		activate_advisor = BRT_odysseus_Exotic
+		activate_advisor = BRT_odysseus_idea
 	}
 }
 }
@@ -665,25 +664,18 @@ country_event = {  #Odysseus is no more
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	 
-	
-	
-		option = {	
-		name = BRT.15.a
-		completion_reward = {
-			BRT = {
-				retire_character = BRT_odysseus_Exotic
-			}
+	option = {	
+	name = BRT.15.a
+
+		BRT = {
+			deactivate_advisor = BRT_odysseus_idea
+		}
 		add_stability = -0.05
 		add_political_power = -30
 
 		ai_chance = {
 			factor = 20
 		}
-		
-		
-    }
-
 	}	
 	
 }
@@ -1767,8 +1759,10 @@ is_triggered_only = yes
 option = {
 	name = BRT.59.a
 	BRT = {
-		remove_idea = BRT_Purge_Navy_Phase_5
-		remove_idea = BRT_Purge_Army_Phase_4
+		remove_ideas = {
+			BRT_Purge_Navy_Phase_5
+			BRT_Purge_Army_Phase_4
+		}
 	}
 	ai_chance = {
 		factor = 70
