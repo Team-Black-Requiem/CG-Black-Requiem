@@ -276,5 +276,44 @@ ideas = {
 			}
 		}
 
+		EIZ_EconomyV1_German_Hearts = {   #PlaceHolder Name
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
 	}
+
+	tank_manufacturer_1 = {
+		designer = yes
+		
+		German_Tank_Company = {
+			allowed = {
+				original_tag = EIZ
+				has_completed_focus = EIZ_German_Minds
+			}
+
+			research_bonus = {
+				MBT_armour = 0.15
+			}
+
+			equipment_bonus = {
+				armor = {
+					soft_attack = 0.15
+					reliability = 0.15
+				}
+			}
+		}
+	}
+
+
 }
