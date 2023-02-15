@@ -1,0 +1,43 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+            #### sets initial country GDP
+			set_variable = {GDP = 0}
+			set_variable = {GDP_Army = 0.20}
+			set_variable = {GDP_Air = 0.20}
+			set_variable = {GDP_Navy = 0.20}
+			set_variable = {GDP_Research = 0.20}
+			set_variable = {GDP_Civilian = 0.20}
+			set_variable = {MilLoop = 3}
+
+			BRT = {
+				set_variable = {GDP = 25}
+			}
+			JAP = {
+				set_variable = {GDP = 20}
+			}
+			GER = {
+				set_variable = {GDP = 15}
+			}
+			FRA = {
+				set_variable = {GDP = 12}
+			}
+			RUS = {
+				set_variable = {GDP = 8}
+			}
+		}
+	}
+
+	#on_daily
+	on_monthly = {
+		
+		effect = {
+			for_loop_effect = {
+				end = MilLoop
+				root.add_offsite_building = { type = arms_factory level = 1 }
+			}
+            
+        }
+    }
+}
