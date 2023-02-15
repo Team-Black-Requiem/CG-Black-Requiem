@@ -414,7 +414,7 @@ id = monarchist_russia_focus
 		relative_position_id = MRU_Weathering_The_Storm
 
 		cost = 3
-		x = -18
+		x = -13
 		y = 1.5
 		available = {
 			country_exists = MRU
@@ -515,11 +515,6 @@ id = monarchist_russia_focus
 			focus = MRU_Crushing_Opposition
 		}
 
-		mutually_exclusive = {
-			focus = MRU_Purge_Option_1
-			focus = MRU_Purge_Option_3
-		}
-	
         ai_will_do = {
 			factor = 10
 		}
@@ -547,10 +542,7 @@ id = monarchist_russia_focus
 			focus = MRU_Crushing_Opposition
 		}
 
-		mutually_exclusive = {
-			focus = MRU_Purge_Option_1
-			focus = MRU_Purge_Option_2
-		}
+		
 	
         ai_will_do = {
 			factor = 10
@@ -579,10 +571,7 @@ id = monarchist_russia_focus
 			focus = MRU_Crushing_Opposition
 		}
 
-		mutually_exclusive = {
-			focus = MRU_Purge_Option_2
-			focus = MRU_Purge_Option_3
-		}
+		
 	
         ai_will_do = {
 			factor = 10
@@ -671,7 +660,9 @@ id = monarchist_russia_focus
 		prerequisite = {
 			focus = MRU_Return_Of_The_Patriarchs
 		}
-
+        prerequisite = {
+			focus = MRU_Anointing_A_Saint
+		}
 	
 	
         ai_will_do = {
@@ -2281,7 +2272,7 @@ id = monarchist_russia_focus
 		relative_position_id = MRU_Weathering_The_Storm
 
 		cost = 3
-		x = 20
+		x = 25
 		y = 1
 		available = {
 			country_exists = MRU
@@ -3216,7 +3207,7 @@ id = monarchist_russia_focus
 		relative_position_id = MRU_Weathering_The_Storm
 
 		cost = 3
-		x = -3
+		x = 2
 		y = 7
 		available = {
 			country_exists = MRU
