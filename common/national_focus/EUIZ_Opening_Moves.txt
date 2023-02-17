@@ -3050,17 +3050,30 @@ focus_tree = {
             has_country_flag = EIZ_supporting_socialist_flag
             }
     
-            bypass = {
-            }
+        bypass = {
+        }
     
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
 
-            completion_reward = {
+        completion_reward = {
 
-                hidden_effect = {
-              }
+            hidden_effect = {
+                SRU = {
+                    add_dynamic_modifier = {
+                        modifier = EIZ_interfering_cwsocialist_dynamic_modifier
+                    }
+                }
+
+
+                MRU = {
+                        add_dynamic_modifier = {
+                        modifier = EIZ_interfering_cwmonarchist_dynamic_modifier
+                    }
+
+                }
+            }
         }
     }
 
@@ -3085,19 +3098,31 @@ focus_tree = {
         available = {		
             country_exists = EIZ
             has_country_flag = EIZ_supporting_eurobritannia_flag
-            }
+        }
     
-            bypass = {
-            }
+        bypass = {
+        }
     
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
 
-            completion_reward = {
+        completion_reward = {
 
-                hidden_effect = {
-              }
+            hidden_effect = {
+                SRU = {
+                    add_dynamic_modifier = {
+                        modifier = EIZ_interfering_cwsocialist_dynamic_modifier
+                    }
+                }
+                    
+                MRU = {
+                    add_dynamic_modifier = {
+                        modifier = EIZ_interfering_cwmonarchist_dynamic_modifier
+                    }
+
+                }
+            }
         }
     }
 
@@ -3122,7 +3147,7 @@ focus_tree = {
         available = {		
             country_exists = EIZ
     
-            }
+        }
     
             bypass = {
             }
@@ -3132,10 +3157,9 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                hidden_effect = {
-              }
-        }
+                set_variable = { EIZ_interfering_cwsocialist_consumer_goods_factor_dynamic_modifier_var = -0.02 }
+                set_variable = { EIZ_interfering_cwsocialist_production_speed_arms_factory_factor_dynamic_modifier_var = 0.10 }
+            }
     }
 
     focus = {
@@ -3159,19 +3183,21 @@ focus_tree = {
         available = {		
             country_exists = EIZ
     
-            }
+        }
     
-            bypass = {
-            }
+        bypass = {
+        }
     
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
 
-            completion_reward = {
-
-                hidden_effect = {
-              }
+        completion_reward = {
+            SRU = {
+                add_manpower = 27000
+            }
+            set_variable = { EIZ_interfering_cwsocialist_weekly_manpower_dynamic_modifier_var = 100 }
+            set_variable = { EIZ_interfering_cwsocialist_army_org_factor_dynamic_modifier_var = 0.10 }
         }
     }
 
@@ -3196,7 +3222,7 @@ focus_tree = {
         available = {		
             country_exists = EIZ
     
-            }
+        }
     
             bypass = {
             }
@@ -3206,10 +3232,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                hidden_effect = {
-              }
-        }
+                set_variable = { EIZ_interfering_cwmonarchist_fuel_gain_factor_from_states_dynamic_modifier_var = -0.03 }
+                set_variable = { EIZ_interfering_cwmonarchist_attritionr_dynamic_modifier_var = 0.05 }
+                set_variable = { EIZ_interfering_cwmonarchist_army_org_factor_dynamic_modifier_var = -0.06 }
+                set_variable = { EIZ_interfering_cwmonarchist_war_support_factor_dynamic_modifier_var = -0.10 }
+            }
     }
 
     focus = {
@@ -3243,10 +3270,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                hidden_effect = {
-              }
-        }
+                set_variable = { EIZ_interfering_cwmonarchist_resistance_growth_dynamic_modifier_var = 0.10 }
+                set_variable = { EIZ_interfering_cwmonarchist_local_non_core_manpower_dynamic_modifier_var = -0.10 }
+                set_variable = { EIZ_interfering_cwmonarchist_army_attack_factor_dynamic_modifier_var = -0.10 }
+            }
     }
 
     focus = {
@@ -3280,9 +3307,29 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                hidden_effect = {
-              }
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 16000
+                    target = SRU
+                }
+                send_equipment = {
+                    equipment = support_equipment
+                    amount = 1000
+                    target = SRU
+                }
+                send_equipment = {
+                    equipment = artillery_equipment
+                    amount = 100
+                    target = SRU
+                }
+                send_equipment = {
+                    equipment = motorized_equipment
+                    amount = 50
+                    target = SRU
+                }
+                SRU = {
+                    add_fuel = 50000
+                }
         }
     }
 
