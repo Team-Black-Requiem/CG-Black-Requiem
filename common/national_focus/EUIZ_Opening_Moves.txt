@@ -292,7 +292,7 @@ focus_tree = {
     focus = {
         id = EIZ_LyonVictory
         icon = GFX_EIZ_LyonVictory
-        x = 16
+        x = 20
         y = 3
 
         cost = 1
@@ -836,8 +836,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyons_Air_Force
         icon = GFX_EIZ_Lyons_Air_Force
-        x = -11
-        y = 2
+        x = -13
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Destroy_The_Monarchists
@@ -874,8 +874,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyons_Plan_To_Modernize
         icon = GFX_EIZ_Lyons_Plan_To_Modernize
-        x = -4
-        y = 2
+        x = -5
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
@@ -917,7 +917,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Air_Doctrine
         icon = GFX_EIZ_Lyon_Air_Doctrine
-        x = 0
+        x = -1
         y = 1
 
         prerequisite = { 
@@ -960,11 +960,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Ground_Pounding
         icon = GFX_EIZ_Lyon_Ground_Pounding
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Air_Doctrine
+            focus = EIZ_Lyons_Plan_To_Modernize
         }
 
         relative_position_id = EIZ_Lyon_Air_Doctrine
@@ -999,11 +999,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Air_RND
         icon = GFX_EIZ_Lyon_Air_RND
-        x = 0
+        x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Ground_Pounding
+            focus = EIZ_Lyon_Air_Doctrine
         }
 
         relative_position_id = EIZ_Lyon_Ground_Pounding
@@ -1046,11 +1046,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Train_Airforce
         icon = GFX_EIZ_Lyon_Train_Airforce
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Air_RND
+            focus = EIZ_Lyon_Ground_Pounding
         }
 
         relative_position_id = EIZ_Lyon_Air_RND
@@ -1085,11 +1085,15 @@ focus_tree = {
         id = EIZ_Lyon_Gain_Aces
         icon = GFX_EIZ_Lyon_Gain_Aces
         x = 1
-        y = 1
+        y = 2
 
         prerequisite = { 
-            focus = EIZ_Lyon_Train_Airforce  focus = EIZ_Lyon_Death_From_Above
+            focus = EIZ_Lyon_Air_RND  focus = EIZ_Lyon_Death_From_Above
         }
+        prerequisite = {
+            focus = EIZ_Lyon_Aircraft_Production_Bonus focus = EIZ_Lyon_Train_Airforce
+        }
+
 
         relative_position_id = EIZ_Lyon_Train_Airforce
         
@@ -1157,8 +1161,8 @@ focus_tree = {
     focus = {
         id = EIZ_Fill_The_Hangers
         icon = GFX_EIZ_Fill_The_Hangers
-        x = -2
-        y = 2
+        x = -1
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
@@ -1195,7 +1199,7 @@ focus_tree = {
     focus = {
         id = EIZ_Spear_And_Shield_Program
         icon = GFX_EIZ_Spear_And_Shield_Program
-        x = 0
+        x = -1
         y = 1
 
         prerequisite = { 
@@ -1238,11 +1242,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Import_Rubber
         icon = GFX_EIZ_Lyon_Import_Rubber
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Spear_And_Shield_Program
+            focus = EIZ_Fill_The_Hangers
         }
         relative_position_id = EIZ_Spear_And_Shield_Program
         
@@ -1281,11 +1285,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Aircraft_Production_Bonus
         icon = GFX_EIZ_Lyon_Aircraft_Production_Bonus
-        x = 0
+        x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Import_Rubber
+            focus = EIZ_Spear_And_Shield_Program
         }
         relative_position_id = EIZ_Lyon_Import_Rubber
         
@@ -1318,11 +1322,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Death_From_Above
         icon = GFX_EIZ_Lyon_Death_From_Above
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Aircraft_Production_Bonus
+            focus = EIZ_Lyon_Import_Rubber
         }
         relative_position_id = EIZ_Lyon_Aircraft_Production_Bonus
         
@@ -1354,8 +1358,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Oil_Focused
         icon = GFX_EIZ_Lyon_Oil_Focused
-        x = 2
-        y = 2
+        x = 3
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
@@ -1398,7 +1402,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Get_Tracks_Off_Convoys
         icon = GFX_EIZ_Lyon_Get_Tracks_Off_Convoys
-        x = 0
+        x = -1
         y = 1
 
         prerequisite = { 
@@ -1436,11 +1440,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Artilery_RND
         icon = GFX_EIZ_Lyon_Artilery_RND
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Get_Tracks_Off_Convoys
+            focus = EIZ_Lyon_Oil_Focused
         }
         relative_position_id = EIZ_Lyon_Get_Tracks_Off_Convoys
         
@@ -1478,11 +1482,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Tank_Designer
         icon = GFX_EIZ_Lyon_Tank_Designer
-        x = 0
+        x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Artilery_RND
+            focus = EIZ_Lyon_Get_Tracks_Off_Convoys
         }
         relative_position_id = EIZ_Lyon_Artilery_RND
         
@@ -1519,11 +1523,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Artilery_Focus
         icon = GFX_EIZ_Lyon_Artilery_Focus
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Tank_Designer
+            focus = EIZ_Lyon_Artilery_RND
         }
         relative_position_id = EIZ_Lyon_Tank_Designer
         
@@ -1556,9 +1560,12 @@ focus_tree = {
         id = EIZ_Lyon_Army_Training
         icon = GFX_EIZ_Lyon_Army_Training
         x = 1
-        y = 1
+        y = 2
 
         prerequisite = { 
+            focus = EIZ_Lyon_Tank_Designer focus = EIZ_Lyon_Give_Russians_Knightmares
+        }
+        prerequisite = {
             focus = EIZ_Lyon_Artilery_Focus focus = EIZ_Lyon_On_The_Front
         }
         relative_position_id = EIZ_Lyon_Artilery_Focus
@@ -1593,8 +1600,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Sakuradite_Focused
         icon = GFX_EIZ_Lyon_Sakuradite_Focused
-        x = 4
-        y = 2
+        x = 7
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
@@ -1638,7 +1645,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Sakuradite_Cannons
         icon = GFX_EIZ_Lyon_Sakuradite_Cannons
-        x = 0
+        x = -1
         y = 1
 
         prerequisite = { 
@@ -1674,11 +1681,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Sakuradite_Plating
         icon = GFX_EIZ_Lyon_Sakuradite_Plating
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Cannons
+            focus = EIZ_Lyon_Sakuradite_Focused
         }
         relative_position_id = EIZ_Lyon_Sakuradite_Cannons
         
@@ -1710,11 +1717,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Give_Russians_Knightmares
         icon = GFX_EIZ_Lyon_Give_Russians_Knightmares
-        x = 0
+        x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Plating
+            focus = EIZ_Lyon_Sakuradite_Cannons
         }
         relative_position_id = EIZ_Lyon_Sakuradite_Plating
         
@@ -1754,11 +1761,11 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_On_The_Front
         icon = GFX_EIZ_Lyon_On_The_Front
-        x = 0
-        y = 1
+        x = 2
+        y = 0
 
         prerequisite = { 
-            focus = EIZ_Lyon_Give_Russians_Knightmares
+            focus = EIZ_Lyon_Sakuradite_Plating
         }
         relative_position_id = EIZ_Lyon_Give_Russians_Knightmares
         
@@ -1790,8 +1797,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
-        x = 3
-        y = 12
+        x = -1
+        y = 8
 
         prerequisite = { 
             focus = EIZ_Lyon_Gain_Aces 
@@ -1882,8 +1889,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Economic_Board
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 0
-        y = 2
+        x = 1
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Destroy_The_Monarchists
@@ -1927,8 +1934,8 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Reach_Out_To_The_EU
         icon = GFX_EIZ_Lyon_Reach_Out_To_The_EU
-        x = -3
-        y = 2
+        x = -2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyon_Economic_Board
@@ -1966,7 +1973,7 @@ focus_tree = {
         id = EIZ_Lyon_Covert_Resource_Acquisition
         icon = GFX_EIZ_Lyon_Covert_Resource_Acquisition
         x = 3
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Lyon_Economic_Board
@@ -2546,16 +2553,50 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Spanish_Volunteer_Quality
+        id = EIZ_Europian_Volunteers_Options
         icon = GFX_EIZ_Spanish_Volunteer_Quality
-        x = 6
-        y = 2
+        x = 8
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Destroy_The_Monarchists
         }
-        mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quantity }
         relative_position_id = EIZ_Destroy_The_Monarchists
+        
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = EIZ_Spanish_Volunteer_Quality
+        icon = GFX_EIZ_Spanish_Volunteer_Quality
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Europian_Volunteers_Options
+        }
+        mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quantity }
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2585,14 +2626,14 @@ focus_tree = {
     focus = {
         id = EIZ_Spanish_Volunteer_Quantity
         icon = GFX_EIZ_Spanish_Volunteer_Quantity
-        x = 8
-        y = 2
+        x = 1
+        y = 1
 
         prerequisite = { 
-            focus = EIZ_Destroy_The_Monarchists
+            focus = EIZ_Europian_Volunteers_Options
         }
         mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quality }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2622,14 +2663,14 @@ focus_tree = {
     focus = {
         id = EIZ_English_Volunteer_Quality
         icon = GFX_EIZ_English_Volunteer_Quality
-        x = 6
-        y = 4
+        x = -1
+        y = 2
 
         prerequisite = { 
             focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quantity }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2659,14 +2700,14 @@ focus_tree = {
     focus = {
         id = EIZ_English_Volunteer_Quantity
         icon = GFX_EIZ_English_Volunteer_Quantity
-        x = 8
-        y = 4
+        x = 1
+        y = 2
 
         prerequisite = { 
             focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quality }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2696,14 +2737,14 @@ focus_tree = {
     focus = {
         id = EIZ_Italy_Volunteer_Quality
         icon = GFX_EIZ_Italy_Volunteer_Quality
-        x = 6
-        y = 6
+        x = -1
+        y = 3
 
         prerequisite = { 
             focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quantity }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2733,14 +2774,14 @@ focus_tree = {
     focus = {
         id = EIZ_Italy_Volunteer_Quantity
         icon = GFX_EIZ_Italy_Volunteer_Quantity
-        x = 8
-        y = 6
+        x = 1
+        y = 3
 
         prerequisite = { 
             focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quality }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2770,14 +2811,14 @@ focus_tree = {
     focus = {
         id = EIZ_Morocco_Volunteer_Quality
         icon = GFX_EIZ_Morocco_Volunteer_Quality
-        x = 6
-        y = 8
+        x = -1
+        y = 4
 
         prerequisite = { 
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quantity }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2807,14 +2848,14 @@ focus_tree = {
     focus = {
         id = EIZ_Morocco_Volunteer_Quantity
         icon = GFX_EIZ_Morocco_Volunteer_Quantity
-        x = 8
-        y = 8
+        x = 1
+        y = 4
 
         prerequisite = { 
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quality }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2844,14 +2885,14 @@ focus_tree = {
     focus = {
         id = EIZ_Portugal_Volunteer_Quality
         icon = GFX_EIZ_Portugal_Volunteer_Quality
-        x = 6
-        y = 10
+        x = -1
+        y = 5
 
         prerequisite = { 
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quantity }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
@@ -2881,14 +2922,14 @@ focus_tree = {
     focus = {
         id = EIZ_Portugal_Volunteer_Quantity
         icon = GFX_EIZ_Portugal_Volunteer_Quantity
-        x = 8
-        y = 10
+        x = 1
+        y = 5
 
         prerequisite = { 
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quality }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Europian_Volunteers_Options
         
         cost = 3
 
