@@ -1,100 +1,253 @@
 characters = {
 
-	EIZ_Military_Council={
-		name="Council for Russian Liberation"
+	EIZ_military_council = {
+		name= "Council for Russian Liberation"
 		portraits={
-			civilian={
+			civilian = {
 				large="GFX_portrait_EIZ_Military_Council"
+			}
+
+		army = {
+				large = "GFX_portrait_EIZ_Military_Council"
 			}
 		}
 		country_leader={
 			desc = "When the Russian Civil War began, the collective body of the EU rushed to the aid of their friends in the Government. This body is comprised of Generals and Politicians united towards the goal of liberating Russia!"
 			ideology = military_dictatorship
-			traits={  }
-			expire="2020.1.1.1"
-			id = -1
+			traits={}
+			expire= "3000.01.01.01"
 		}
 	}
 
-
-
-	#For Focus Germany's Minds
-	#The requested modifiers need to be their own traits
-
-	EIZ_Economy_Minister_Guy_1 = {
-		name = "Prodyuserov Zdaniyavaich 1"
+	EIZ_lyon = {
+        name= "Alexander C. Lyon"
 		portraits = {
 			civilian = {
-				#large = 
+				large = "gfx\leaders\EIZ\Alexander_Lyon.dds"
 			}
-			
+			army = {
+				large = "gfx\leaders\EIZ\Alexander_Lyon.dds"
+			}
 		}
-		advisor = {
-			cost = 2000
-			slot = economy_minister
-			allowed = {
-				has_completed_focus = EIZ_German_Minds
-				original_tag = EIZ
+		country_leader = {
+			desc = lyon_desc
+			ideology = paternal_autocracy
+			traits = {
 			}
-			idea_token = EIZ_Economy_Minister_Guy_1_idea
-			traits = { }
+			expire = "3000.01.01.01"
 		}
 	}
 
-	EIZ_Economy_Minister_Guy_2 = {
-		name = "Prodyuserov Zdaniyavaich 2"
+	EIZ_oskar = {
+        name= "Oskar Von Mendel"
 		portraits = {
 			civilian = {
-				#large = 
+				large = "gfx\leaders\EIZ\Oskar_Mendel.dds"
 			}
-			
+			army = {
+				large = "gfx\leaders\EIZ\Oskar_Mendel.dds"
+			}
 		}
-		advisor = {
-			cost = 2000
-			slot = economy_minister
-			allowed = {
-				has_completed_focus = EIZ_German_Minds
-				original_tag = EIZ
+		country_leader = {
+			desc = oskar_desc
+			ideology = social_conservatism
+			traits = {
 			}
-			idea_token = EIZ_Economy_Minister_Guy_2_idea
-			traits = { }
+			expire = "3000.01.01.01"
 		}
 	}
 
-	EIZ_Economy_Minister_Guy_3 = {
-		name = "Prodyuserov Zdaniyavaich 2"
+	EIZ_frederica = {
+        name= "Frederica Schröder "
 		portraits = {
 			civilian = {
-				#large = 
+				large = "gfx\leaders\EIZ\fredericka.dds"
 			}
-			
+			army = {
+				large = "gfx\leaders\EIZ\fredericka.dds"
+			}
 		}
+		country_leader = {
+			desc = oskar_desc
+			ideology = market_liberalism
+			traits = {
+			}
+			expire = "3000.01.01.01"
+		}
+	}
+	
+
+EIZ_natasha= {
+		name = "Natasha Soronova"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Natasha_Soronova.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Natasha_Soronova.dds"
+			}
+		}
+		corps_commander = {
+		traits = { infantry_officer}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+}
+}
+EIZ_allard = {
+		name = "Philipie Allard"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Philipie_Allard.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Philipie_Allard.dds"
+			}
+		}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+}
+}
+
+EIZ_chapelle = {
+		name = "Aloïs Chapelle"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Alois_Chappelle.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Alois_Chappelle.dds"
+			}
+		}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+}
+}
+
+EIZ_horthy = {
+		name = "Alberd Von Horthy"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Alberd_Von_Horthy.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Alberd_Von_Horthy.dds"
+			}
+		}
+		corps_commander = {
+			traits = {infantry_officer}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+}
+}
+
+EIZ_pierre = {
+		name = "Charlotte Pierre"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Charlotte_Pierre.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Charlotte_Pierre.dds"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+}
+}
+
+EIZ_conroy = {
+		name = "Kevin Conroy"
+		portraits = {
+			army = {
+				large = "gfx\leaders\EIZ\Kevin_Conroy.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\EIZ\Kevin_Conroy.dds"
+			}
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+		}
+
 		advisor = {
-			cost = 2000
-			slot = economy_minister
+			slot = navy_chief
+			idea_token = EIZ_generic_navy_idea
 			allowed = {
-				has_completed_focus = EIZ_German_Minds
 				original_tag = EIZ
 			}
-			idea_token = EIZ_Economy_Minister_Guy_3_idea
-			traits = { }
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
-
-
-	EIZ_generic_air={
-		name= "Air Marshal Zastrov"
+EIZ_pablo={
+		name = "Juan Pablo"
 		portraits={
 			army={
-				small="GFX_idea_BRT_generic_air"
+				small="gfx\interface\ideas\EIZ\EIZ_advisor.dds"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = EIZ_pablo_idea
+			ledger = air
+			allowed = {
+				original_tag = EIZ
+			}
+			traits = {
+				static_defence_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+	
+
+     EIZ_wanda= {
+		name= "Wanda Broz"
+		portraits={
+			army={
+				small= "gfx\interface\ideas\arthur_the_generic.dds"
 			}
 		}
 		advisor={
 			slot = air_chief
-			idea_token = BRT_generic_air_idea
+			idea_token = EIZ_generic_air_idea
 			allowed = {
-				original_tag = BRT
+				original_tag = EIZ
 			}
 			traits = {
 				naval_aviation_doctrine
@@ -105,4 +258,28 @@ characters = {
 			}
 		}
 	}
+
+	EIZ_martin={
+		name= "Martin Kristiansen"
+		portraits={
+			army={
+				small= "gfx\interface\ideas\arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = army_chief
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				original_tag = EIZ
+			}
+			traits = {
+				armoured_spearhead_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 }
