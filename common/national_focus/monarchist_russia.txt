@@ -72,7 +72,8 @@ id = monarchist_russia_focus
 	focus = {
 		id = MRU_Coalition_Government
 		icon = GFX_MRU_the_FIRST_test
-		relative_position_id = MRU_A_Defense_On_Both_Sides
+		relative_position_id = MRU_Operation_Chelyabinsk
+
 
 		cost = 3
 		x = 0
@@ -83,7 +84,7 @@ id = monarchist_russia_focus
 		bypass = { }
 
 		prerequisite = {
-			focus = MRU_A_Defense_On_Both_Sides
+			focus = MRU_Operation_Chelyabinsk
 		}
 	
         ai_will_do = {
@@ -140,7 +141,7 @@ id = monarchist_russia_focus
 
 	
 	focus = {
-		id = MRU_Conscription
+		id = MRU_The_Eagles_Nest
 		icon = GFX_MRU_the_FIRST_test
 		relative_position_id = MRU_Operation_Kulik
 
@@ -167,12 +168,12 @@ id = monarchist_russia_focus
     }
 	
 	focus = {
-		id = MRU_A_Defense_On_Both_Sides
+		id = MRU_Operation_Chelyabinsk
 		icon = GFX_MRU_the_FIRST_test
-		relative_position_id = MRU_Conscription
+		relative_position_id = MRU_The_Bear_and_the_Eagle
 
 		cost = 3
-		x = -1
+		x = 0
 		y = 1
 		available = {
 			country_exists = MRU
@@ -180,12 +181,39 @@ id = monarchist_russia_focus
 		bypass = { }
 
 		prerequisite = {
-			focus = MRU_Conscription
+			focus = MRU_The_Bear_and_the_Eagle
 		}
 	    
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+
+    }
+
+	focus = {
+		id = MRU_The_Bear_and_the_Eagle
+		icon = GFX_MRU_the_FIRST_test
+		relative_position_id = MRU_Locating_the_Tsar
+
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+
 		prerequisite = {
 			focus = MRU_Locating_the_Tsar
 		}
+	    
+		prerequisite = {
+			focus = MRU_The_Eagles_Nest
+		}
+	
         ai_will_do = {
 			factor = 10
 		}
