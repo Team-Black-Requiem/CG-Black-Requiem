@@ -1,0 +1,127 @@
+
+
+### SINCE THERE ARE NO PICTURES OR NAMES EXCEPT FOR THE COUNTRY TEST LEADER, THE PORTRAITS WILL BE GENERIC ONES, AND SO WILL THE NAMES.
+
+
+characters={
+	NAN_test_leader={
+		name="TEST LEADER"
+		portraits={
+			civilian={
+				large="GFX_portrait_cuba_jose_barnet"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NAN_test_advisor
+			allowed  = {
+				original_tag  = NAN
+			}
+			cost = 100
+			available  = {
+			}
+			traits  = {
+				democratic_crusader
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}	
+	}
+	NAN_test_theorist ={
+		advisor = {
+			slot = theorist	
+			idea_token = test_theorist
+			traits = { 
+				nuclear_enthusiast	
+			}
+		}
+	}
+	NAN_high_command_1 ={
+		advisor = {
+			idea_token = NAN_high_command_1
+			allowed = {
+				original_tag = NAN
+			}
+			slot = high_command
+			idea_token = high_command_test1
+			ledger = army
+			traits = { 
+				army_chief_organizational_2
+			}
+		}
+	}
+	NAN_high_command_2 ={
+		advisor = {
+			allowed = {
+				original_tag = NAN
+			}
+			slot = high_command
+			idea_token = high_command_test2
+			ledger = army
+			traits = { 
+				army_CombinedArms_1
+			}
+		}
+	}
+	NAN_high_command_3 ={
+		advisor = {
+			allowed = {
+				original_tag = NAN
+			}
+			slot = high_command
+			idea_token = high_command_test3
+			ledger = army
+			traits = { 
+				army_artillery_1
+			}
+		}
+	}
+	NAN_high_command_4 ={
+		advisor = {
+			allowed = {
+				original_tag = NAN
+				has_country_flag = whatever
+			}
+			slot = high_command
+			idea_token = high_command_test4
+			ledger = army
+			traits = { 
+				army_chief_defensive_1
+			}
+		}
+	}
+
+	NAN_corps_commander ={
+		name = test_corps_commander
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	NAN_field_marshal ={
+		name = test_field_marshal
+		field_marshal = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {
+				defensive_doctrine
+			}
+		}
+	}
+	NAN_hidden_corps_commander ={
+		name = "Hidden Corps Commander Test"
+		
+	}
+	NAN_hidden_field_marshal ={
+		name = "Hidden Field Marshal Test"
+	}
+
+
+}

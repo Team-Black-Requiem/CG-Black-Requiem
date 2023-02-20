@@ -1,0 +1,93 @@
+###########################
+# New Anglia Events
+###########################
+
+
+add_namespace = anglia
+
+country_event = {
+	id = anglia.1
+	title = "Premade event and idea link"
+	desc = anglia.simplelink.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+
+	option = { 
+		name = "Test1.a"
+		ai_chance = { factor = 90 }
+		add_stability = 0.2
+		add_political_power = -50
+		
+	}
+	option = {
+		name = "Test1.b"
+		ai_chance = { factor = 10 }
+		add_stability = -0.2
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = anglia.2
+	title = "First Event Creation Example"
+	desc = anglia.2.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "test2.a"
+		ai_chance = {
+			factor = 100
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 100
+			producer = GER
+		}
+	}
+}
+country_event = {
+	id = anglia.3
+	title = "Event Localisation Example"
+	desc = anglia.3.d
+	picture = GFX_report_event_ETH_ethiopian_warriors
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Event Localisation"
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = anglia.4
+	title = "Event Focus Lockout"
+	desc = anglia.4.d
+	picture = GFX_report_event_vaps_march
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = "Event Interaction 1 Chosen"
+		set_country_flag = interaction_1_chosen
+		add_ideas = event_interactions_1_idea
+	}
+	option = {
+		name = "Event Interaction 2 Chosen"
+		set_country_flag = interaction_2_chosen
+		add_ideas = event_interactions_2_idea
+	}
+}

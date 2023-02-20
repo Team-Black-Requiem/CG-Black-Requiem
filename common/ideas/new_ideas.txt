@@ -1,0 +1,129 @@
+ideas = {
+
+	country = {
+		simple_premade_idea = {
+			picture = new_anglia_premade_idea
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				training_time_factor = -0.1
+			}
+		}
+		basic_idea_implementation = {
+			picture = new_anglia_premade_idea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		intermediate_ideas_idea = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				category_fighter = {
+					build_cost_ic = -0.05
+				}
+			}
+			modifier = {
+			}
+		}
+		evolving_ideas1 = {
+			modifier = {	
+				political_power_gain = 0.15
+			}
+		}
+		evolving_ideas2 = {
+			modifier = {
+				political_power_gain = 0.30
+			}
+		}
+		socialist_workers_idea = {
+			picture = new_anglia_premade_idea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}	
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				experience_gain_army_unit_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.3
+			}
+		}
+		best_of_both_worlds_idea ={
+			picture = new_anglia_premade_idea
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_unit_factor = 0.1
+				command_power_gain = 0.25
+			}
+			research_bonus = {
+				electronics = 1
+				industry = 1
+			}
+		}
+		event_interactions_1_idea ={
+			picture = new_anglia_premade_idea
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.1
+			}
+		}
+		event_interactions_2_idea ={
+			picture = new_anglia_premade_idea
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.1
+			}
+		}
+	}
+}

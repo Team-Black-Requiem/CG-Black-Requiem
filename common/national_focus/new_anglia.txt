@@ -1,49 +1,780 @@
-﻿ocus_tree = {
-	id = Bew_Anglia
+focus_tree = {
+	id = NAN
+	
+	country = {
+		##factor = 100
 		
-		country = {
-			factor = 0
-			modifier = {
-				add = 5
-				tag = MRU
+		modifier = {
+			add = 10
+			tag = NAN
+		}
+	}
+	
+	default = no	
+
+	continuous_focus_position = { x = 50 y = 100 }
+
+	focus = { #Simple Modifiers
+		id = general_modifiers
+		icon = GFX_goal_generic_wolf_pack
+		cost = 0
+		x = 15
+		y = 1
+		completion_reward = { 
+			add_political_power = 100
+			add_stability = 0.1
+			add_manpower = 10000
+		}
+	}
+	focus = { #Simple specific modifiers, introduction to prerequisites
+		id = specific_modifers
+		icon = GFX_goal_generic_wolf_pack
+		cost = 0
+		relative_position_id = general_modifiers
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = general_modifiers
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = cat_light_armor
+			}
+			random_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 100
+				}
+				add_building_construction = {
+    				 type = arms_factory
+   					 level = 5
+   					 instant_build = yes
+				}
+				add_building_construction = {
+    				type = bunker
+    				level = 10
+    				instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 10
+			}
+		 }
+	}
+	focus = {
+		id = linking_events_ideas
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = {
+			focus = specific_modifers
+		}
+
+		relative_position_id = specific_modifers
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { 
+			country_event = anglia.1
+			add_ideas = simple_premade_idea
+		}
+	}
+	focus = {
+		id = general_implementation1
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = linking_events_ideas
+		cost = 0
+		x = 4
+		y = 1
+		completion_reward = { 
+			add_political_power = 10
+		}
+		prerequisite = {
+			focus = linking_events_ideas
+		}
+		mutually_exclusive = {
+			focus = framework_start
+		}
+	}
+	focus = {
+		id = event_creation
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = general_implementation1
+		prerequisite = {
+			focus = general_implementation1
+		}
+		cost = 0
+		x = -1	
+		y = 1
+		completion_reward = {
+			country_event = anglia.2
+		 }
+	}
+	focus = {
+		id = event_localisation
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = event_creation
+		prerequisite = {
+			focus = event_creation
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { 
+			country_event = anglia.3
+		}
+	}
+	focus = {
+		id = event_interactions
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = event_localisation
+		prerequisite = {
+			focus = event_localisation
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { 
+			country_event = anglia.4
+		}
+	}
+	focus = {
+		id = event_interactions_1
+		icon = GFX_goal_anschluss
+		relative_position_id = event_interactions
+		available = {
+			has_country_flag = interaction_1_chosen
+		}
+		cost = 00
+		x = -2
+		y = -1
+		completion_reward = {
+			add_political_power = 10
+		 }
+	}
+	focus = {
+		id = event_interactions_2
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = event_interactions
+		available = {
+			has_country_flag = interaction_2_chosen
+		}
+		cost = 00
+		x = -2
+		y = 0
+		completion_reward = { 
+			add_political_power = 10
+		}
+	}
+
+
+	focus = {
+		id = basic_ideas
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = general_implementation1
+		prerequisite = {
+			focus = general_implementation1
+		}
+		cost = 0
+		x = 1
+		y = 1
+		completion_reward = { 
+			add_ideas = basic_idea_implementation
+		}
+	}
+	focus = {
+		id = intermediate_ideas
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = basic_ideas
+		prerequisite = {
+			focus = basic_ideas
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = intermediate_ideas_idea
+			add_ideas = evolving_ideas1
+		 }
+	}
+	focus = {
+		id = evolving_ideas
+		icon = GFX_focus_generic_combined_arms
+		cost = 0
+		prerequisite = {
+			focus = intermediate_ideas
+		}
+		relative_position_id = intermediate_ideas
+		x = 0
+		y = 1
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = evolving_ideas1
+				add_idea = evolving_ideas2
 			}
 		}
-		
+	}
 	
-		default = no
-	
-		continuous_focus_position = { x = 20 y = 2500 }
-	
-		focus = {
-			id = NA_Yetis_claim
-			icon = GFX_MA
-			cost = 3
-			x = 15
-			y = 0
-			available = {
-				country_exists = MRU
-			}
-			bypass = { }
-		
-	
-			mutually_exclusive = {
-			}
-	
-	
-			ai_will_do = {
-				factor = 10
-			}
-		
-			completion_reward = {
 
-				modifier = Yeti_Gains_all_CLaims
-
-			Modifier = Yeti_Gains_Claims_On_North_And_South_Island
-		
-			}
-	
-	
+	focus = {	
+		id = framework_start
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = {
+			focus = linking_events_ideas
 		}
+		relative_position_id = linking_events_ideas
+		cost = 0
+		x = -4
+		y = 1
+		completion_reward = { }
+		mutually_exclusive = {
+			focus = general_implementation1
+		}
+	}
+	focus = {
+		id = framework.1
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework_start
+		prerequisite = {
+			focus = framework_start
+		}
+		cost = 0
+		x = x
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.2
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework_start
+		prerequisite = {
+			focus = framework_start
+		}
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.3
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework_start
+		prerequisite = {
+			focus = framework.1 focus = framework.2
+		}
+		cost = 0
+		x = -1
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.4
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.3
+		prerequisite = {
+			focus = framework.3
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.5
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.3
+		prerequisite = {
+			focus = framework.3
+		}
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.6
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.4
+		prerequisite = {
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
+		}
+		cost = 0
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.7
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.4
+		prerequisite = {
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
+		}
+		cost = 0
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = framework.8
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.4
+		prerequisite = {
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
+		}
+		cost = 0
+		x = -4
+		y = 1
+		completion_reward = { 
+			add_political_power = 500	
+		}
+	}
+	focus = {
+		id = framework.final
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = framework.4
+		prerequisite = {
+			focus = framework.7
+		}
+		prerequisite = {
+			focus = framework.6
+		}
+		prerequisite = {
+			focus = framework.8
+		}
+		cost = 0
+		x = -1
+		y = 2
+		completion_reward = { }
+	}
 
+	focus = {
+		id = country_creation_and_framework
+		relative_position_id = framework.final
+
+		available = {
+			has_completed_focus = framework.final
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = working_in_history_file
+		relative_position_id = country_creation_and_framework
+		prerequisite = {
+			focus = country_creation_and_framework
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = starting_national_spirits
+		relative_position_id = working_in_history_file
+		prerequisite = {
+			focus = working_in_history_file
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = setting_up_starting_techs
+		relative_position_id = working_in_history_file
+		prerequisite = {
+			focus = starting_national_spirits
+		}
+		cost = 0
+		x = -2
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = politics_set_up
+		relative_position_id = working_in_history_file
+		prerequisite = {
+			focus = starting_national_spirits
+		}
+		cost = 0
+		x = 2
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = unthinkable_5
+		relative_position_id = starting_national_spirits
+		prerequisite = {
+			focus = starting_national_spirits
+		}
+		prerequisite = {
+			focus = setting_up_starting_techs
+		}
+		prerequisite = {
+			focus = politics_set_up
+		}
+		mutually_exclusive = {
+			focus = unthinkable_6
+		}
+		cost = 0
+		x = -1
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = unthinkable_6
+		relative_position_id = starting_national_spirits
+		prerequisite = {
+			focus = starting_national_spirits
+		}
+		prerequisite = {
+			focus = setting_up_starting_techs
+		}
+		prerequisite = {
+			focus = politics_set_up
+		}
+		mutually_exclusive = {
+			focus = unthinkable_5
+		}
+		cost = 0
+		x = 1
+		y = 2
+		completion_reward = { }
+	}
+	focus = {
+		id = unthinkable_7
+		relative_position_id = unthinkable_5
+		mutually_exclusive = {
+			focus = unthinkable_8
+		}
+		prerequisite = {
+			focus = unthinkable_5
+			focus = unthinkable_6
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = unthinkable_8
+		relative_position_id = unthinkable_5
+		mutually_exclusive = {
+			focus = unthinkable_7
+		}
+		prerequisite = {
+			focus = unthinkable_5
+			focus = unthinkable_6
+		}
+		cost = 0
+		x = 2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = unthinkable_9
+		relative_position_id = unthinkable_8
+		prerequisite = {
+			focus = unthinkable_8
+		}
+		cost = 0
+		x = 2
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = working_in_history_file0
+		relative_position_id = unthinkable_7
+		prerequisite = {
+			focus = unthinkable_7
+		}
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = socialist_workers_idea
+		 }
+	}
+	focus = {
+		id = working_in_history_file1
+		relative_position_id = working_in_history_file0
+		prerequisite = {
+			focus = working_in_history_file0
+		}
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = best_of_both_worlds_idea
+		 }
+	}
+	focus = {
+		id = junior_technical_work
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = working_in_history_file0
+		prerequisite = {
+			focus = working_in_history_file0
+		}
+		prerequisite = {
+			focus = unthinkable_9
+		}
+		cost = 0
+		x = 3
+		y = 3
+		completion_reward = { }
+	}
+	focus = {
+		id = linking_gfx_for_focus_icons
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = junior_technical_work
+		prerequisite = {
+			focus = junior_technical_work
+		}
+		cost = 0
+		x = -6
+		y = 0
+		completion_reward = { }
+	}
+	focus = {
+		id = oobs
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = junior_technical_work
+		prerequisite = {
+			focus = junior_technical_work
+		}
+		cost = 0
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = army_oobs
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = oobs
+		prerequisite = {
+			focus = oobs
+		}
+		cost = 40
+		x = -4
+		y = 1
+		completion_reward = {
+			load_oob = NAN_army
+		}
+	}
+	focus = {	
+		id = navy_oobs
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = oobs
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Man the Guns"}
+				load_oob = NAN_navy	
+				else = {
+					load_oob = NAN_navy_legacy
+				}
+			}
+		 }
+	}
+	focus = {
+		id = air_oobs
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = oobs
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "By Blood Alone"}
+				load_oob = NAN_air
+				else = {
+					load_oob = NAN_air_legacy
+				}	
+			}
+		 }
+	}
+	
+
+	focus = {
+		id = character_work
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = junior_technical_work
+		prerequisite = {
+			focus = junior_technical_work
+		}
+		cost = 0
+		x = 1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = leader_creation
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = character_work
+		prerequisite = {
+			focus = character_work
+		}
+		cost = 0
+		x = 2
+		y = 1
+		completion_reward = { 
+			add_country_leader_role = {
+				character = NAN_test_leader
+				promote_leader = yes
+				country_leader = {
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+				traits = {
+					dictator 
+				}
+				}
+			}
+		}
+	}
+	focus = {
+		id = advisor_creation
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = character_work
+		prerequisite = {
+			focus = character_work
+		}
+		cost = 0
+		x = 0
+		y = 1
+		completion_reward = { 
+			add_ideas = high_command_test1
+			add_ideas = high_command_test2	
+			add_ideas = high_command_test3	
+			add_ideas = high_command_test4
+		}
+	}
+	focus = {
+		id = generals_and_field_marshals
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = character_work
+		prerequisite = {
+			focus = character_work
+		}
+		cost = 0
+		x = 6
+		y = 1
+		completion_reward = { 
+			add_field_marshal_role = {
+				character = NAN_hidden_field_marshal
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = NAN_hidden_corps_commander
+				skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 6
+				logistics_skill = 6
+			}
+		}
+	}
+	focus = {
+		id = high_command_creation
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = admirals
+		prerequisite = {
+			focus = generals_and_field_marshals
+		}
+		prerequisite = {
+			focus = admirals
+		}
+		cost = 0
+		x = -2
+		y = 1
+		completion_reward = { 
+		}
+	}
+	focus = {
+		id = how_to_make_custom_characters_show_up
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = high_command_creation
+		prerequisite = {
+			focus = advisor_creation
+		}
+		prerequisite = {
+			focus = generals_and_field_marshals
+		}
+		prerequisite = {
+			focus = admirals
+		}
+		prerequisite = {
+			focus = operatives
+		}
+		prerequisite = {
+			focus = leader_creation
+		}
+		prerequisite = {
+			focus = high_command_creation
+		}
+		cost = 0
+		x = -3
+		y = 1
+		completion_reward = { 
+		}
+	}
+	focus = {
+		id = admirals
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = character_work
+		prerequisite = {
+			focus = character_work
+		}
+		cost = 0
+		x = 10
+		y = 1
+		completion_reward = { 
+			add_field_marshal_role = {
+				character = NAN_hidden_field_marshal
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = NAN_hidden_corps_commander
+				skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 6
+				logistics_skill = 6
+			}
+		}
+	}
+	focus = {
+		id = operatives
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = {
+			focus = character_work
+		}
+		relative_position_id = admirals
+		cost = 0
+		x = 4
+		y = 0
+		completion_reward = { 
+		}
 
 	}
+}
