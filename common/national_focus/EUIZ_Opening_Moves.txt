@@ -1843,7 +1843,7 @@ focus_tree = {
     focus = {
         id = EIZ_Frederica_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
-        x = 30
+        x = 31
         y = 0
 
         prerequisite = { 
@@ -2553,7 +2553,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Europian_Volunteers_Options
+        id = EIZ_The_Gathering_Storm
         icon = GFX_EIZ_Spanish_Volunteer_Quality
         x = 8
         y = 1
@@ -2590,13 +2590,14 @@ focus_tree = {
         id = EIZ_Spanish_Volunteer_Quality
         icon = GFX_EIZ_Spanish_Volunteer_Quality
         x = -1
-        y = 1
+        y = 2
 
         prerequisite = { 
-            focus = EIZ_Europian_Volunteers_Options
+            focus = EIZ_English_Volunteer_Quality focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quantity }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2627,13 +2628,13 @@ focus_tree = {
         id = EIZ_Spanish_Volunteer_Quantity
         icon = GFX_EIZ_Spanish_Volunteer_Quantity
         x = 1
-        y = 1
+        y = 2
 
         prerequisite = { 
-            focus = EIZ_Europian_Volunteers_Options
+            focus = EIZ_English_Volunteer_Quality focus = EIZ_English_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Spanish_Volunteer_Quality }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2664,13 +2665,13 @@ focus_tree = {
         id = EIZ_English_Volunteer_Quality
         icon = GFX_EIZ_English_Volunteer_Quality
         x = -1
-        y = 2
+        y = 1
 
         prerequisite = { 
-            focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
+            focus = EIZ_Stand_in_Volunteer_Event_for_design
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quantity }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2701,13 +2702,13 @@ focus_tree = {
         id = EIZ_English_Volunteer_Quantity
         icon = GFX_EIZ_English_Volunteer_Quantity
         x = 1
-        y = 2
+        y = 1
 
         prerequisite = { 
-            focus = EIZ_Spanish_Volunteer_Quality focus = EIZ_Spanish_Volunteer_Quantity
+            focus = EIZ_Stand_in_Volunteer_Event_for_design 
         }
         mutually_exclusive = { focus = EIZ_English_Volunteer_Quality }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2741,10 +2742,10 @@ focus_tree = {
         y = 3
 
         prerequisite = { 
-            focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
+            focus = EIZ_Spanish_Volunteer_Quality  focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quantity }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2778,10 +2779,10 @@ focus_tree = {
         y = 3
 
         prerequisite = { 
-            focus = EIZ_English_Volunteer_Quality  focus = EIZ_English_Volunteer_Quantity
+            focus = EIZ_Spanish_Volunteer_Quality  focus = EIZ_Spanish_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Italy_Volunteer_Quality }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2818,7 +2819,7 @@ focus_tree = {
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quantity }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2855,7 +2856,7 @@ focus_tree = {
             focus = EIZ_Italy_Volunteer_Quality focus = EIZ_Italy_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Morocco_Volunteer_Quality }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2892,7 +2893,7 @@ focus_tree = {
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quantity }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -2929,7 +2930,7 @@ focus_tree = {
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
         }
         mutually_exclusive = { focus = EIZ_Portugal_Volunteer_Quality }
-        relative_position_id = EIZ_Europian_Volunteers_Options
+        relative_position_id = EIZ_Stand_in_Volunteer_Event_for_design
         
         cost = 3
 
@@ -3765,7 +3766,7 @@ focus_tree = {
         id = EIZ_Frederica_Economic_Board
         icon = GFX_EIZ_Frederica_Economic_Board
         x = 0
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Fight_The_Monarchists
@@ -3803,7 +3804,7 @@ focus_tree = {
         id = EIZ_Frederica_Reach_out_to_EU
         icon = EIZ_Frederica_Economic_Board
         x = -3
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Frederica_Economic_Board
@@ -4056,9 +4057,6 @@ focus_tree = {
             focus = EIZ_Streamlining_Russian_Production
         }
 
-        mutually_exclusive = {
-           focus = EIZ_German_Morality
-        }
         relative_position_id = EIZ_Frederica_Reach_out_to_EU
         
         cost = 3
@@ -4093,7 +4091,7 @@ focus_tree = {
         id = EIZ_German_Morality
         icon = EIZ_Frederica_Economic_Board
         x = 3
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Frederica_Economic_Board
@@ -4133,7 +4131,7 @@ focus_tree = {
     focus = {
         id = EIZ_German_Hearts
         icon = EIZ_Frederica_Economic_Board
-        x = -1
+        x = -2
         y = 1
 
         prerequisite = {
@@ -4172,7 +4170,7 @@ focus_tree = {
         focus = {
             id = EIZ_German_Minds
             icon = EIZ_Frederica_Economic_Board
-            x = 1
+            x = 2
             y = 1
     
             prerequisite = {
@@ -4210,17 +4208,12 @@ focus_tree = {
         focus = {
             id = EIZ_Russian_Self_Fulfillment
             icon = EIZ_Frederica_Economic_Board
-            x = 1
-            y = 1
+            x = 2
+            y = 0
     
             prerequisite = {
-                focus = EIZ_German_Hearts 
+                FOCUS = EIZ_German_Morality
             }
-            prerequisite = {
-                focus = EIZ_German_Minds
-            }
-            
-    
             relative_position_id = EIZ_German_Hearts
     
             cost = 3
@@ -4262,8 +4255,6 @@ focus_tree = {
                 focus = EIZ_Russian_Self_Fulfillment 
             }
        
-            
-    
             relative_position_id = EIZ_Russian_Self_Fulfillment
     
             cost = 3
@@ -4384,7 +4375,7 @@ focus_tree = {
             id = EIZ_A_Mechanized_Army
             icon = EIZ_Frederica_Economic_Board
             x = -11
-            y = 2
+            y = 1
     
             prerequisite = {
                 focus = EIZ_Fight_The_Monarchists 
@@ -4423,7 +4414,7 @@ focus_tree = {
             id = EIZ_Forming_the_S.P.C
             icon = EIZ_Frederica_Economic_Board
             x = -4
-            y = 2
+            y = 1
     
             prerequisite = {
                 focus = EIZ_A_Mechanized_Army 
@@ -4671,7 +4662,7 @@ focus_tree = {
             id = EIZ_The_Bundeswehr_Model
             icon = EIZ_Frederica_Economic_Board
             x = -2
-            y = 2
+            y = 1
     
             prerequisite = {
                 focus = EIZ_A_Mechanized_Army 
@@ -4871,7 +4862,7 @@ focus_tree = {
             id = EIZ_Frederica_Oil_Focused
             icon = EIZ_Frederica_Economic_Board
             x = 2
-            y = 2
+            y = 1
     
             prerequisite = {
                 focus = EIZ_A_Mechanized_Army 
@@ -4904,7 +4895,7 @@ focus_tree = {
                 completion_reward = {
 
                     ## NEED CLARIFICATION
-                
+                    country_event = EIZ.82
                        
                   hidden_effect = {
                 }
@@ -5115,7 +5106,7 @@ focus_tree = {
             id = EIZ_Frederica_Sakuradyte_Focused
             icon = EIZ_Frederica_Economic_Board
             x = 4
-            y = 2
+            y = 1
     
             prerequisite = {
                 focus = EIZ_A_Mechanized_Army 
@@ -5147,8 +5138,9 @@ focus_tree = {
     
                 completion_reward = {
 
-                ## NEED CLARIFICATION 
                 
+                
+                country_event = EIZ.83
                   hidden_effect = {
                 }
             }
@@ -5312,30 +5304,111 @@ focus_tree = {
     
                 completion_reward = {
 
-                ## NEED CLARIFICATION
+                    add_field_marshal_role = {
+                        character = EIZ_frederica   
+                        traits = {
+                            brilliant_strategist
+                            panzer_leader
+                            offensive_doctrine
+                            aggressive_assaulter
+                        }
+                        skill = 6
+                        attack_skill = 5
+                        defense_skill = 2
+                        planning_skill = 4
+                        logistics_skill = 4
+                    }
                        
                   hidden_effect = {
                 }
             }
         }
+        
+          focus = {
+        id = EIZ_Stand_in_Volunteer_Event_for_design
+        icon = GFX_EIZ_Spanish_Volunteer_Quality
+        x = 8
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Destroy_The_Monarchists
+        }
+        relative_position_id = EIZ_Destroy_The_Monarchists
+        
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+            
+        }
+    }
 
         
         #Volunteer brna   
      
         focus = {
-            id = EIZ_Danish_Volunteer_Quality
-            icon = GFX_EIZ_Danish_Volunteer_Quality
-            x = 6
-            y = 2
+            id = EIZ_Stand_in_Volunteer_Event_for_design
+            icon = GFX_EIZ_Spanish_Volunteer_Quality
+            x = 10
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Fight_The_Monarchists
+            }
+            relative_position_id = EIZ_Fight_The_Monarchists
+            
+            cost = 1
+    
+            ai_will_do = {
+                factor = 100
+            }
+    
+            available = {		
+                country_exists = EIZ
+        
+                }
+        
+                bypass = {
+                }
+        
+                cancel_if_invalid = yes
+                continue_if_invalid = no
+                available_if_capitulated = no
+    
+                completion_reward = {
+                
+            }
+        }
+    
+        focus = {
+            id = EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quality
+            x = -1
+            y = 1
+    
+            prerequisite = { 
+                focus = EIZ_The_Gathering_Storm
             }
 
             mutually_exclusive = {focus = EIZ_Danish_Volunteer_Quantity
         }
            
-            relative_position_id = EIZ_Fight_The_Monarchists
+            relative_position_id = EIZ_The_Gathering_Storm
             
             cost = 3
     
@@ -5365,18 +5438,18 @@ focus_tree = {
         focus = {
             id = EIZ_Danish_Volunteer_Quantity
             icon = GFX_EIZ_Danish_Volunteer_Quality
-            x = 8
-            y = 2
+            x = 1
+            y = 1
     
             prerequisite = { 
-                focus = EIZ_Fight_The_Monarchists
+                focus = EIZ_The_Gathering_Storm
             }
 
             mutually_exclusive = {focus = EIZ_Danish_Volunteer_Quality
             }
 
            
-            relative_position_id = EIZ_Fight_The_Monarchists
+            relative_position_id = EIZ_The_Gathering_Storm
             
             cost = 3
     
@@ -5407,7 +5480,7 @@ focus_tree = {
             id = EIZ_Polish_Volunteer_Quality
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Danish_Volunteer_Quantity
@@ -5452,7 +5525,7 @@ focus_tree = {
             id = EIZ_Polish_Volunteer_Quantity
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 2   
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Danish_Volunteer_Quantity
@@ -5497,7 +5570,7 @@ focus_tree = {
             id = EIZ_Skandinavian_Volunteer_Quantity
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Polish_Volunteer_Quality
@@ -5540,7 +5613,7 @@ focus_tree = {
             id = EIZ_Skandinavian_Volunteer_Quality
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Polish_Volunteer_Quality
@@ -5583,7 +5656,7 @@ focus_tree = {
             id = EIZ_Baltic_Volunteer_Quality
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Skandinavian_Volunteer_Quantity
@@ -5625,7 +5698,7 @@ focus_tree = {
             id = EIZ_Baltic_Volunteer_Quantity
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 2
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Polish_Volunteer_Quality
@@ -5668,7 +5741,7 @@ focus_tree = {
             id = EIZ_Swiss_Volunteer_Quantity
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 2
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Baltic_Volunteer_Quantity
@@ -5712,7 +5785,7 @@ focus_tree = {
             id = EIZ_Swiss_Volunteer_Quality
             icon = GFX_EIZ_Danish_Volunteer_Quality
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Baltic_Volunteer_Quantity
