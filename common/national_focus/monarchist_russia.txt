@@ -2295,8 +2295,11 @@ id = monarchist_russia_focus
         ai_will_do = {
 			factor = 10
 		}
-	
 		completion_reward = { 
+			add_equipment_to_stockpile {
+				amount = 200
+				type = motorized_equipment
+			}
 		}
 
     }
@@ -2323,6 +2326,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			custom_effect_tooltip = MRU_Assembly_Lines.d
+			
 		}
 
     }
@@ -2349,6 +2354,10 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_equipment_to_stockpile{
+				amount = 100
+				type = mbt_1
+			}
 		}
 
     }

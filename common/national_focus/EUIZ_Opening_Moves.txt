@@ -4445,8 +4445,13 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-
-                
+                    add_tech_bonus = {
+                        name = armor
+                        bonus = 2
+                        uses = 2
+                        category = tank_design
+                      }
+                add_ideas = special_projects_corp
                        
                   hidden_effect = {
                 }
@@ -4884,6 +4889,7 @@ focus_tree = {
     
                 completion_reward = {
 
+                    ## NEED CLARIFICATION
                 
                        
                   hidden_effect = {
@@ -4923,6 +4929,7 @@ focus_tree = {
     
                 completion_reward = {
 
+                add_ideas = EIZ_Rolling_Off_The_Production_Line_idea
                 
                        
                   hidden_effect = {
@@ -4962,11 +4969,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-
-                
-                       
-                  hidden_effect = {
-                }
+                    add_ideas = EIZ_Pushing_Past_Their_Lines_idea
             }
         }
 
@@ -5002,7 +5005,11 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_tech_bonus ={
+                    category = MBT_armour
+                    bonus = 0.25
+                    uses = 2
+                }
                        
                   hidden_effect = {
                 }
@@ -5041,8 +5048,11 @@ focus_tree = {
     
                 completion_reward = {
 
+                add_equipment_to_stockpile ={
+                    type = cold_war_tank_2
+                    amount = 400
+                }
                 
-                       
                   hidden_effect = {
                 }
             }
@@ -5080,7 +5090,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                army_experience = 80
                        
                   hidden_effect = {
                 }
@@ -5123,8 +5133,8 @@ focus_tree = {
     
                 completion_reward = {
 
+                ## NEED CLARIFICATION 
                 
-                       
                   hidden_effect = {
                 }
             }
@@ -5162,7 +5172,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_ideas = EIZ_Sakuradite_Propellent_idea
                        
                   hidden_effect = {
                 }
@@ -5201,7 +5211,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                    add_ideas = EIZ_Sakuradite_Plating_idea
                        
                   hidden_effect = {
                 }
@@ -5241,7 +5251,14 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                ## NEED CLARIFICATION, Is this supposed to give bonuses for EIZ  or Russia? Bit confused
+
+                add_tech_bonus ={
+                    bonus = 0.5
+                    uses = 2
+                    ahead_reduction = 1
+                    category = knightmare_mass_production
+                }
                        
                   hidden_effect = {
                 }
@@ -5281,7 +5298,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                ## NEED CLARIFICATION
                        
                   hidden_effect = {
                 }

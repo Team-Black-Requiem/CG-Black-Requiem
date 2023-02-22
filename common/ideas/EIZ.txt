@@ -290,6 +290,77 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+
+		EIZ_Rolling_Off_The_Production_Line_idea ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				build_cost_ic = -0.1
+			}
+		}
+		}
+
+		EIZ_Pushing_Past_Their_Lines_idea ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				maximum_speed = 0.1
+			}
+			motorized_equipment = {
+				instant = yes
+				maximum_speed = 0.1
+			}
+			mechanized_equipment = {
+				instant = yes
+				maximum_speed = 0.1
+			}
+		}
+	}
+	EIZ_Sakuradite_Propellent_idea ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus ={
+			artillery_equipment ={
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+			}
+		}
+	}
+		
+	EIZ_Sakuradite_Plating_idea ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus ={
+			armor ={
+				instant = yes
+				armor_value = 0.05
+			}
+		}
 		
 	}
 
@@ -315,5 +386,23 @@ ideas = {
 		}
 	}
 
-
+	special_projects_corp = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				hard_attack = 0.1
+				reliability = -0.05
+			}
+		}
+		research_bonus = {
+			armor = 0.7
+		}
+	}
 }
