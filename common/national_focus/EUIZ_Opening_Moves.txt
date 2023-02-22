@@ -4457,8 +4457,8 @@ focus_tree = {
                     add_tech_bonus = {
                         name = armor
                         bonus = 2
+                        ahead_reduction = 2
                         uses = 2
-                        category = tank_design
                       }
                 add_ideas = special_projects_corp
                        
@@ -4499,7 +4499,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_ideas = Fighting_Fire_With_Fire
                        
                   hidden_effect = {
                 }
@@ -4537,7 +4537,12 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-
+                    
+                    add_tech_bonus = {
+                        name = land_doctrine
+                        bonus = 0.5
+                        uses = 2
+                      }
                 
                        
                   hidden_effect = {
@@ -4577,7 +4582,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_ideas = Adapting_To_Our_Environment
                        
                   hidden_effect = {
                 }
@@ -4605,20 +4610,20 @@ focus_tree = {
             available = {		
                 country_exists = EIZ
         
-                }
+            }
         
-                bypass = {
-                }
+            bypass = {
+            }
         
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
     
-                completion_reward = {
-
+            completion_reward = {
                 
-                       
-                  hidden_effect = {
+                Load_oob = "EIZ_Tank_Commanders"
+                  
+                hidden_effect = {
                 }
             }
         }

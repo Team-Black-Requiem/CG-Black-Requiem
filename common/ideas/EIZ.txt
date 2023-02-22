@@ -401,8 +401,48 @@ ideas = {
 				reliability = -0.05
 			}
 		}
-		research_bonus = {
-			armor = 0.7
+	}
+
+	Fighting_Fire_With_Fire = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				ap_attack = 0.05
+			}
+		}
+	}
+
+	Adapting_To_Our_Environment = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				soft_attack = 0.05
+				armor = 0.1
+			}
+			motorized_equipment = {
+				instant = yes
+				soft_attack = 0.05
+				armor = 0.1
+			}
+			mechanized_equipment = {
+				instant = yes
+				soft_attack = 0.05
+				armor = 0.1
+			}
 		}
 	}
 }
