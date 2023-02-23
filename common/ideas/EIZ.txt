@@ -508,5 +508,132 @@ ideas = {
 			}
 		}
 	}
+
+	### EUROPIA INTERFERENCE
+
+
+
+	### EURO BRITANNIA BUFFS
+	EIZ_Lyon_Backing_The_Euro_Britannians_idea1 = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+	}
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_idea2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.02
+			production_speed_arms_factory_factor = 0.1
+		}
+
+	}
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_idea3 = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		on_add = {
+			add_manpower = 25000
+		}
+		modifier = {
+			weekly_manpower = 250
+			army_org_factor = 0.1
+		}
+
+	}
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_idea4 = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		modifier = {
+			weekly_manpower = 250
+			army_org_factor = 0.1
+			consumer_goods_factor = -0.02
+			production_speed_arms_factory_factor = 0.1
+		}
+
+	}
+
+
+	### SOCIALIST RUSSIA DEBUFFS
+
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea1 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			resistance_growth = 0.1
+			compliance_growth = -0.1
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea2 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			non_core_manpower = -0.05
+		}
+		targeted_modifier = {
+			tag = EUR
+			attack_bonus_against = -0.05
+			defense_bonus_against = -0.05
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea3 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			weekly_manpower = -450
+			unit_upkeep_attrition_factor = 0.05
+			stability_weekly_factor = -0.005
+			war_support_weekly_factor = -0.005
+		}
+	}
+	
+	
+
 }
+
+
+	
+
 }

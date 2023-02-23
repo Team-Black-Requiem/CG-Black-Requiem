@@ -1500,3 +1500,51 @@ country_event ={ #Frederica Sakuradite Focused
     }
   }
 }
+
+country_event = {
+  id =EIZ.84
+  title = EIZ.84.t
+  desc = EIZ.84.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+
+    ## SPAWNS 6 DIVISIONS IN OKHOTSK
+    
+    name = "PLACEHOLDER"
+
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 3000
+    }
+    add_equipment_to_stockpile = {
+      type = support_equipment
+      amount = 1500
+    }
+  }
+}
+
+
+
+### INTERVENE IN THE EAST EVENTS
+
+
+country_event = {
+  id = EIZ.EUR1
+  title = EIZ.EUR1.t
+  desc = EIZ.EUR1.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+ 
+  option = {
+    name = "PLACEHOLDER Is Getting Backed By the EIZ PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+
+    add_ideas = EIZ_Lyon_Backing_The_Euro_Britannians_idea1
+  }
+}

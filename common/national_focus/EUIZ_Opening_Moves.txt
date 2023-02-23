@@ -3131,7 +3131,6 @@ focus_tree = {
 
         available = {		
             country_exists = EIZ
-            has_country_flag = EIZ_supporting_eurobritannia_flag
         }
     
         bypass = {
@@ -3142,6 +3141,16 @@ focus_tree = {
         available_if_capitulated = no
 
         completion_reward = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_war_with = EUR
+                    }
+                }
+                EUR = {
+                    country_event = EIZ.EUR1
+                }
+            }
 
             hidden_effect = {
                 
@@ -3453,6 +3462,27 @@ focus_tree = {
 
             completion_reward = {
 
+                set_country_flag = has_lion_needs_strength
+                if = {
+                    limit = { has_country_flag = has_sent_lapdogs }
+                    EUR ={
+                        swap_ideas = {
+                            remove_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea3
+                            add_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea4
+                        }
+                    }
+                    else = {
+                        EUR ={
+                            swap_ideas = {
+                                remove_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea1
+                                add_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea2
+                            }
+
+                        }
+                        
+                    }
+              }
+
                 hidden_effect = {
               }
         }
@@ -3490,6 +3520,23 @@ focus_tree = {
 
             completion_reward = {
 
+                EUR ={
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment
+                        amount = 10000
+                    }
+                    add_equipment_to_stockpile = {
+                        type = knightmare_mass_prod
+                        amount = 3000
+                    }
+                    add_equipment_to_stockpile = {
+                        type = artillery_equipment
+                        amount = 4000
+                    }
+                    add_fuel = 80000
+
+                }
+
                 hidden_effect = {
               }
         }
@@ -3515,7 +3562,6 @@ focus_tree = {
 
         available = {		
             country_exists = EIZ
-    
             }
     
             bypass = {
@@ -3526,6 +3572,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+                EUR ={
+                    country_event = EIZ.84
+                    load_oob = EUR_Lion_Bear_United
+                }
 
                 hidden_effect = {
               }
@@ -3552,7 +3603,6 @@ focus_tree = {
 
         available = {		
             country_exists = EIZ
-    
             }
     
             bypass = {
@@ -3564,7 +3614,25 @@ focus_tree = {
 
             completion_reward = {
 
-                hidden_effect = {
+                set_country_flag = has_sent_lapdogs
+
+                if = {
+                    limit = { has_country_flag = has_lion_needs_strength }
+                    EUR = {
+                        swap_ideas = {
+                            remove_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea2
+                            add_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea4
+                        }
+                    }
+                    else = {
+                        EUR ={
+                            swap_ideas = {
+                                remove_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea1
+                                add_idea = EIZ_Lyon_Backing_The_Euro_Britannians_idea3
+                            }
+                        }
+                        
+                    }
               }
         }
     }
@@ -3601,8 +3669,9 @@ focus_tree = {
 
             completion_reward = {
 
-                hidden_effect = {
-              }
+                SRU ={
+                    add_ideas = EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea1
+                }
         }
     }
 
@@ -3638,6 +3707,9 @@ focus_tree = {
 
             completion_reward = {
 
+                SRU ={
+                    add_ideas = EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea2
+                }
                 hidden_effect = {
               }
         }
@@ -3674,6 +3746,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+               SRU ={
+                    add_ideas = EIZ_Lyon_Backing_The_Euro_Britannians_debuffs_idea3
+                }
 
                 hidden_effect = {
               }
