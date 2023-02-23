@@ -1,72 +1,31 @@
 ideas = {
 
 	country = {
-		simple_premade_idea = {
-			picture = new_anglia_premade_idea
+		Idea_1 = { #Idea for simple linking of ideas
+
+			picture = new_anglia_premade_idea  #Picture for the idea under your national spirits
 			
-			allowed = {
-				always = no
+			allowed = { # Boolean, yes or no, we generally have it to always = yes
+				always = yes 
 			}
 
-			available = {
+			available = { # Available is  if you want to hide an idea before a certain condition, such as has_completed_focus, or others.
 				
 			}
 
-			cancel = {
+			cancel = { # Cancelled if...
 				
 			}
 
-			allowed_civil_war = {
+			allowed_civil_war = { # If you get to keep the idea if the country goes into civil war
 				always = yes
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
-				training_time_factor = -0.1
+				recruitable_population_factor = 0.05
 			}
 		}
-		basic_idea_implementation = {
-			picture = new_anglia_premade_idea
 
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.2
-				production_speed_arms_factory_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
-			}
-		}
-		intermediate_ideas_idea = {
-			allowed = {
-				always = yes
-			}
-			removal_cost = -1
-			research_bonus = {
-				air_equipment = 0.1
-			}
-			equipment_bonus = {
-				category_fighter = {
-					build_cost_ic = -0.05
-				}
-			}
-			modifier = {
-			}
-		}
-		evolving_ideas1 = {
-			modifier = {	
-				political_power_gain = 0.15
-			}
-		}
-		evolving_ideas2 = {
-			modifier = {
-				political_power_gain = 0.30
-			}
-		}
 		socialist_workers_idea = {
 			picture = new_anglia_premade_idea
 

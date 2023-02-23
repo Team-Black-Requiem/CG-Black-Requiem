@@ -21,9 +21,9 @@ focus_tree = {
 		x = 15
 		y = 1
 		completion_reward = { 
-			add_political_power = 100
-			add_stability = 0.1
-			add_manpower = 10000
+
+			# Below here, add in a simple modifier that gives stability +10%, and -3% consumer goods, the resources provided have the necessary help.
+
 		}
 	}
 	focus = { #Simple specific modifiers, introduction to prerequisites
@@ -34,35 +34,21 @@ focus_tree = {
 		x = 0
 		y = 1
 		prerequisite = {
+
+			# The prerequisite here, means that this focus cannot be done, before the one listed, in this case, the first focus.
+
 			focus = general_modifiers
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.2
-				uses = 1
-				category = cat_light_armor
-			}
-			random_controlled_state = {
-				add_resource = {
-					type = oil
-					amount = 100
-				}
-				add_building_construction = {
-    				 type = arms_factory
-   					 level = 5
-   					 instant_build = yes
-				}
-				add_building_construction = {
-    				type = bunker
-    				level = 10
-    				instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 10
-			}
+			
+
+			# Make a specific modifier, that for example gives you technology research bonus or adds a resource in a province 
+
+			
 		 }
 	}
-	focus = {
-		id = linking_events_ideas
+	focus = { #Introduction to events and ideas
+		id = linking_events_ideas  
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = {
 			focus = specific_modifers
@@ -78,7 +64,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = general_implementation1
+		id = general_implementation1 # General Implementation Start
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = linking_events_ideas
 		cost = 0
@@ -95,7 +81,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = event_creation
+		id = event_creation # First Event Creation
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = general_implementation1
 		prerequisite = {
@@ -105,7 +91,9 @@ focus_tree = {
 		x = -1	
 		y = 1
 		completion_reward = {
-			country_event = anglia.2
+
+			# Create an event from scratch, and link it here. This was already done in the Linking Events focus, so, if need be, go there for inspiration.
+
 		 }
 	}
 	focus = {
@@ -119,7 +107,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = { 
-			country_event = anglia.3
+			
+			# Make another event, or change the event before this, and link it again. And this time give it localisation, this means to give it a title, description, and also name the options of an event
+			# Localisation for focuses needs to be done too, but that's for later, but it's done in the same way
+			# You can find the localisation folder under localisation/english/NewAnglia_l_english
+
 		}
 	}
 	focus = {
@@ -136,38 +128,9 @@ focus_tree = {
 			country_event = anglia.4
 		}
 	}
-	focus = {
-		id = event_interactions_1
-		icon = GFX_goal_anschluss
-		relative_position_id = event_interactions
-		available = {
-			has_country_flag = interaction_1_chosen
-		}
-		cost = 00
-		x = -2
-		y = -1
-		completion_reward = {
-			add_political_power = 10
-		 }
-	}
-	focus = {
-		id = event_interactions_2
-		icon = GFX_goal_generic_occupy_start_war
-		relative_position_id = event_interactions
-		available = {
-			has_country_flag = interaction_2_chosen
-		}
-		cost = 00
-		x = -2
-		y = 0
-		completion_reward = { 
-			add_political_power = 10
-		}
-	}
-
 
 	focus = {
-		id = basic_ideas
+		id = basic_ideas # First Idea Creation
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = general_implementation1
 		prerequisite = {
@@ -212,6 +175,27 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = focus_localisation # Focus Localisation
+		icon = GFX_focus_generic_combined_arms
+		cost = 0
+		prerequisite = { # If you want it to be dependant on 2 focuses being done, add 2 seperate prerequisites
+			focus = evolving_ideas
+		}
+		prerequisite = {
+			focus = event_interactions
+		}
+		relative_position_id = intermediate_ideas
+		x = -1
+		y = 2
+		completion_reward = { 
+
+			# You don't have to type anything here, just give the focus localisation from the localisation file
+			complete_national_focus = framework_start
+
+
+		}
+	}
 	
 
 	focus = {	
@@ -224,25 +208,27 @@ focus_tree = {
 		cost = 0
 		x = -4
 		y = 1
-		completion_reward = { }
+		completion_reward = { 
+			country_event = anglia.2
+		}
 		mutually_exclusive = {
 			focus = general_implementation1
 		}
 	}
 	focus = {
-		id = framework.1
+		id = framework.2
 		icon = GFX_goal_generic_occupy_start_war
-		relative_position_id = framework_start
+		relative_position_id = framework_start # This uses the relative position of the framework_start focus, basing its position off of that, so y = 1 is 1 down, and x = 0 (or just x) means it doesnt move left or right
 		prerequisite = {
-			focus = framework_start
+			focus = framework_start # Needs framework_start to be able to be done
 		}
-		cost = 0
+		cost = 0 # How long it will take to do in weeks
 		x = x
 		y = 1
 		completion_reward = { }
 	}
 	focus = {
-		id = framework.2
+		id = framework.1
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework_start
 		prerequisite = {
@@ -254,11 +240,11 @@ focus_tree = {
 		completion_reward = { }
 	}
 	focus = {
-		id = framework.3
+		id = framework.3 ## Mutually Exclusive 1 Please make this mutually exclusive with framework.4
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework_start
-		prerequisite = {
-			focus = framework.1 focus = framework.2
+		prerequisite = { ## Either or
+			focus = framework.1 focus = framework.2 # If you want a prerequisite to be either or, this is how you'd do it. Have both prior focuses in a singular prerequisite tag
 		}
 		cost = 0
 		x = -1
@@ -266,7 +252,7 @@ focus_tree = {
 		completion_reward = { }
 	}
 	focus = {
-		id = framework.4
+		id = framework.4 ## Mutually Exclusive 2 Please make this mutually exclusive with framework.3
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.3
 		prerequisite = {
@@ -320,7 +306,7 @@ focus_tree = {
 		completion_reward = { }
 	}
 	focus = {
-		id = framework.8
+		id = framework.8 ## There are errors in this, fix them so it looks normal, either change relative_position_id to framework.5, or just change the x and y coordinates so it's in line with the others
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.4
 		prerequisite = {
@@ -356,12 +342,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = country_creation_and_framework
+		id = country_creation_and_framework ## Start of country creation
 		relative_position_id = framework.final
+		# Make it so this is only available after you've done framework.final
 
-		available = {
-			has_completed_focus = framework.final
-		}
 		cost = 0
 		x = 0
 		y = 1
@@ -519,7 +503,7 @@ focus_tree = {
 		 }
 	}
 	focus = {
-		id = junior_technical_work
+		id = junior_technical_work # Work for Junior Technicals
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = working_in_history_file0
 		prerequisite = {
