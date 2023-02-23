@@ -4527,12 +4527,12 @@ focus_tree = {
     
                 completion_reward = {
                     add_tech_bonus = {
-                        name = armor
-                        bonus = 2
+                        category = MBT_armour
+                        bonus = 0.5
                         ahead_reduction = 2
                         uses = 2
                       }
-                add_ideas = special_projects_corp
+                    add_ideas = special_projects_corp
                        
                   hidden_effect = {
                 }
@@ -4610,12 +4610,11 @@ focus_tree = {
     
                 completion_reward = {
                     
-                    add_tech_bonus = {
-                        name = land_doctrine
-                        bonus = 0.5
+                    add_doctrine_cost_reduction = {
+                        cost_reduction = 0.5
+                        category = land_doctrine
                         uses = 2
-                      }
-                
+                    }
                        
                   hidden_effect = {
                 }
@@ -4775,14 +4774,14 @@ focus_tree = {
                 completion_reward = {
 
                 country_event = EIZ.85
-                add_tech_bonus = {
-                    name = land_doctrine
-                    bonus = 1
+                add_doctrine_cost_reduction = {
+                    cost_reduction = 1
+                    category = cat_mobile_warfare
                     uses = 1
                 }
-                add_tech_bonus = {
-                    name = land_doctrine
-                    ahead_reduction = 1
+                add_doctrine_cost_reduction = {
+                    cost_reduction = 0.5
+                    category = cat_mobile_warfare
                     uses = 2
                 }
                   hidden_effect = {
@@ -4941,13 +4940,13 @@ focus_tree = {
                     EIZ = {
                         add_equipment_to_stockpile = {
 
-                            type = mbt_1
+                            type = cold_war_tank_2
                 
                             amount = 500
                         }
                         add_equipment_to_stockpile = {
 
-                            type = mechanised_infantry
+                            type = mechanized_equipment_1
                 
                             amount = 800
                         }    
