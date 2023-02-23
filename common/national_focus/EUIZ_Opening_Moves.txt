@@ -1028,12 +1028,14 @@ focus_tree = {
 
             completion_reward = {
 
-                add_tech_bonus = {
+                add_tech_bonus  = {
+                    category = air_equipment
                     bonus = 0.5
                     uses = 3              
                 }
 
                 add_tech_bonus = {
+                    category = air_equipment
                     uses = 2
                     ahead_reduction = 0.5
                 }
@@ -1190,6 +1192,10 @@ focus_tree = {
 
             completion_reward = {
 
+                add_equipment_to_stockpile = {
+                    type = fighter_equipment
+                    amount = 200
+                }
 
                 hidden_effect = {
               }
@@ -1313,6 +1319,7 @@ focus_tree = {
 
             completion_reward = {
 
+                add_ideas = EIZ_Lyon_Aircraft_Production_Bonus_idea
                 
                 hidden_effect = {
               }
@@ -1349,6 +1356,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+                add_equipment_to_stockpile = {
+                    type = jet_tac_bomber_equipment
+                    amount = 100
+                }
+                add_equipment_to_stockpile = {
+                    type = CAS_equipment_1
+                    amount = 100
+                }
 
                 hidden_effect = {
               }
@@ -1550,6 +1566,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                add_ideas = EIZ_Lyon_Artilery_Focus_idea
 
                 hidden_effect = {
               }
@@ -1673,6 +1690,8 @@ focus_tree = {
 
             completion_reward = {
 
+                add_ideas = EIZ_Lyon_Sakuradite_Cannons_idea
+
                 hidden_effect = {
               }
         }
@@ -1708,6 +1727,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+                add_ideas = EIZ_Lyon_Sakuradite_Plating_idea
 
                 hidden_effect = {
               }
@@ -1788,6 +1809,21 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+                add_field_marshal_role = {
+                        character = EIZ_lyon  
+                        traits = {
+                            brilliant_strategist
+                            panzer_leader
+                            offensive_doctrine
+                            aggressive_assaulter
+                        }
+                        skill = 6
+                        attack_skill = 5
+                        defense_skill = 4
+                        planning_skill = 3
+                        logistics_skill = 3
+                    }
 
                 hidden_effect = {
               }
@@ -5231,7 +5267,7 @@ focus_tree = {
                     bonus = 0.5
                     uses = 2
                     ahead_reduction = 1
-                    category = knightmare_mass_production
+                    category = armor
                 }
                        
                   hidden_effect = {
@@ -5283,8 +5319,8 @@ focus_tree = {
                         skill = 6
                         attack_skill = 5
                         defense_skill = 2
-                        planning_skill = 4
-                        logistics_skill = 4
+                        planning_skill = 3
+                        logistics_skill = 2
                     }
                        
                   hidden_effect = {
@@ -8356,7 +8392,7 @@ focus_tree = {
     
             available = {		
                 country_exists = EIZ
-        
+    
                 }
         
                 bypass = {
