@@ -917,7 +917,9 @@ country_event = { #Call Young Fox
 
   option = {
       name = EIZ.49.a
-
+      EIZ = {
+        recruit_character = EIZ_rommel
+      }
       ai_chance = {
           factor = 100
       }
@@ -1525,6 +1527,23 @@ country_event = {
   }
 }
 
+country_event ={ #Bundeswehr Model
+  id  = EIZ.85
+  title =  EIZ_85.t
+  desc =  EIZ_85.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+    name = EIZ.85.a
+    EIZ = {
+      add_ideas = A_Mobile_Front
+    }
+    ai_chance = {
+      factor = 100
+    }
+  }
+}
 
 
 ### INTERVENE IN THE EAST EVENTS

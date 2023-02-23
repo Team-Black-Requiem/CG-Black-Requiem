@@ -4733,7 +4733,6 @@ focus_tree = {
                 completion_reward = {
                     country_event = EIZ.49
                 
-                       
                   hidden_effect = {
                 }
             }
@@ -4775,8 +4774,17 @@ focus_tree = {
     
                 completion_reward = {
 
-                
-                       
+                country_event = EIZ.85
+                add_tech_bonus = {
+                    name = land_doctrine
+                    bonus = 1
+                    uses = 1
+                }
+                add_tech_bonus = {
+                    name = land_doctrine
+                    ahead_reduction = 1
+                    uses = 2
+                }
                   hidden_effect = {
                 }
             }
@@ -4803,20 +4811,20 @@ focus_tree = {
             available = {		
                 country_exists = EIZ
         
-                }
+            }
         
-                bypass = {
-                }
+            bypass = {
+            }
         
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
     
-                completion_reward = {
+            completion_reward = {
 
-                
+                add_ideas = Hybrid_Engines
                        
-                  hidden_effect = {
+                hidden_effect = {
                 }
             }
         }
@@ -4853,7 +4861,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_ideas = Standardized_Field_Manuals
                        
                   hidden_effect = {
                 }
@@ -4892,7 +4900,7 @@ focus_tree = {
     
                 completion_reward = {
 
-                
+                add_ideas = Automated_Tank_Refits
                        
                   hidden_effect = {
                 }
@@ -4930,12 +4938,23 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+                    EIZ = {
+                        add_equipment_to_stockpile = {
 
+                            type = mbt_1
                 
-                       
-                  hidden_effect = {
+                            amount = 500
+                        }
+                        add_equipment_to_stockpile = {
+
+                            type = mechanised_infantry
+                
+                            amount = 800
+                        }    
+                    }   
+                    hidden_effect = {
+                    }
                 }
-            }
         }
 
         

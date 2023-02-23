@@ -629,7 +629,74 @@ ideas = {
 		}
 	}
 	
-	
+	A_Mobile_Front = {
+
+		allowed = {
+			   always = yes
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+
+		   modifier = {
+			ap_attack = 0.05
+			maximum_speed = 0.1
+			land_reinforce_rate = 0.1
+		}
+	}
+	Standardized_Field_Manuals = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				reliability_factor = 0.05
+				max_organisation = 0.05
+			}
+		}
+	}
+	Automated_Tank_Refits = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				build_cost_ic = -0.2
+			}
+			mechanized_equipment = {
+				instant = yes
+				build_cost_ic = -0.2
+			}
+		}
+	}
+	Hybrid_Engines = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				army_fuel_consumption_factor = -0.15
+			}
+		}
+	}
 
 }
 
