@@ -68,7 +68,7 @@ focus_tree = {
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = linking_events_ideas
 		cost = 0
-		x = 4
+		x = 2
 		y = 1
 		completion_reward = { 
 			add_political_power = 10
@@ -206,7 +206,7 @@ focus_tree = {
 		}
 		relative_position_id = linking_events_ideas
 		cost = 0
-		x = -4
+		x = -2
 		y = 1
 		completion_reward = { 
 			country_event = anglia.2
@@ -259,7 +259,7 @@ focus_tree = {
 			focus = framework.3
 		}
 		cost = 0
-		x = 0
+		x = 1
 		y = 1
 		completion_reward = { }
 	}
@@ -271,7 +271,7 @@ focus_tree = {
 			focus = framework.3
 		}
 		cost = 0
-		x = -2
+		x = -1
 		y = 1
 		completion_reward = { }
 	}
@@ -326,15 +326,7 @@ focus_tree = {
 		id = framework.final
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.4
-		prerequisite = {
-			focus = framework.7
-		}
-		prerequisite = {
-			focus = framework.6
-		}
-		prerequisite = {
-			focus = framework.8
-		}
+
 		cost = 0
 		x = -1
 		y = 2
@@ -348,173 +340,19 @@ focus_tree = {
 
 		cost = 0
 		x = 0
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = working_in_history_file
-		relative_position_id = country_creation_and_framework
-		prerequisite = {
-			focus = country_creation_and_framework
-		}
-		cost = 0
-		x = 0
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = starting_national_spirits
-		relative_position_id = working_in_history_file
-		prerequisite = {
-			focus = working_in_history_file
-		}
-		cost = 0
-		x = 0
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = setting_up_starting_techs
-		relative_position_id = working_in_history_file
-		prerequisite = {
-			focus = starting_national_spirits
-		}
-		cost = 0
-		x = -2
 		y = 2
 		completion_reward = { }
 	}
-	focus = {
-		id = politics_set_up
-		relative_position_id = working_in_history_file
-		prerequisite = {
-			focus = starting_national_spirits
-		}
-		cost = 0
-		x = 2
-		y = 2
-		completion_reward = { }
-	}
-	focus = {
-		id = unthinkable_5
-		relative_position_id = starting_national_spirits
-		prerequisite = {
-			focus = starting_national_spirits
-		}
-		prerequisite = {
-			focus = setting_up_starting_techs
-		}
-		prerequisite = {
-			focus = politics_set_up
-		}
-		mutually_exclusive = {
-			focus = unthinkable_6
-		}
-		cost = 0
-		x = -1
-		y = 2
-		completion_reward = { }
-	}
-	focus = {
-		id = unthinkable_6
-		relative_position_id = starting_national_spirits
-		prerequisite = {
-			focus = starting_national_spirits
-		}
-		prerequisite = {
-			focus = setting_up_starting_techs
-		}
-		prerequisite = {
-			focus = politics_set_up
-		}
-		mutually_exclusive = {
-			focus = unthinkable_5
-		}
-		cost = 0
-		x = 1
-		y = 2
-		completion_reward = { }
-	}
-	focus = {
-		id = unthinkable_7
-		relative_position_id = unthinkable_5
-		mutually_exclusive = {
-			focus = unthinkable_8
-		}
-		prerequisite = {
-			focus = unthinkable_5
-			focus = unthinkable_6
-		}
-		cost = 0
-		x = 0
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = unthinkable_8
-		relative_position_id = unthinkable_5
-		mutually_exclusive = {
-			focus = unthinkable_7
-		}
-		prerequisite = {
-			focus = unthinkable_5
-			focus = unthinkable_6
-		}
-		cost = 0
-		x = 2
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = unthinkable_9
-		relative_position_id = unthinkable_8
-		prerequisite = {
-			focus = unthinkable_8
-		}
-		cost = 0
-		x = 2
-		y = 1
-		completion_reward = { }
-	}
-	focus = {
-		id = working_in_history_file0
-		relative_position_id = unthinkable_7
-		prerequisite = {
-			focus = unthinkable_7
-		}
-		cost = 0
-		x = -2
-		y = 1
-		completion_reward = {
-			add_ideas = socialist_workers_idea
-		 }
-	}
-	focus = {
-		id = working_in_history_file1
-		relative_position_id = working_in_history_file0
-		prerequisite = {
-			focus = working_in_history_file0
-		}
-		cost = 0
-		x = -2
-		y = 1
-		completion_reward = {
-			add_ideas = best_of_both_worlds_idea
-		 }
-	}
+
+
 	focus = {
 		id = junior_technical_work # Work for Junior Technicals
 		icon = GFX_focus_generic_combined_arms
-		relative_position_id = working_in_history_file0
-		prerequisite = {
-			focus = working_in_history_file0
-		}
-		prerequisite = {
-			focus = unthinkable_9
-		}
+		relative_position_id = framework.final
+
 		cost = 0
-		x = 3
-		y = 3
+		x = 0
+		y = 12
 		completion_reward = { }
 	}
 	focus = {
