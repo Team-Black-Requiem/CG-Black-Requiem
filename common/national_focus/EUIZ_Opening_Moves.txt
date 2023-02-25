@@ -3105,6 +3105,8 @@ focus_tree = {
 
         completion_reward = {
 
+            country_event = EIZ.87
+
             hidden_effect = {
                 
             }
@@ -3149,7 +3151,7 @@ focus_tree = {
                     }
                 }
                 EUR = {
-                    country_event = EIZ.EUR1
+                    country_event = EIZ.86
                 }
             }
 
@@ -3190,6 +3192,30 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+
+
+                set_country_flag = has_feeding_industry
+                if = {
+                    limit = { has_country_flag = has_revolution_fuel }
+                    SRU ={
+                        swap_ideas = {
+                            remove_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea3
+                            add_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea4
+                        }
+                    }
+                    else = {
+                        SRU ={
+                            swap_ideas = {
+                                remove_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea1
+                                add_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea2
+                            }
+
+                        }
+                        
+                    }
+              }
+              add_manpower = 27000
                 
             }
     }
@@ -3225,9 +3251,27 @@ focus_tree = {
         available_if_capitulated = no
 
         completion_reward = {
-            SRU = {
-                add_manpower = 27000
-            }
+            set_country_flag = has_revolution_fuel
+
+            if = {
+                    limit = { has_country_flag = has_feeding_industry }
+                    SRU ={
+                        swap_ideas = {
+                            remove_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea2
+                            add_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea4
+                        }
+                    }
+                    else = {
+                        SRU ={
+                            swap_ideas = {
+                                remove_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea1
+                                add_idea = EIZ_Lyon_Backing_The_Socialists_buffs_idea3
+                            }
+
+                        }
+                        
+                    }
+              }
         }
     }
 
@@ -3263,6 +3307,8 @@ focus_tree = {
 
         completion_reward = {
             
+            add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea1
+            
         }
     }
 
@@ -3296,6 +3342,8 @@ focus_tree = {
         available_if_capitulated = no
 
         completion_reward = {
+
+            add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea2
             
         }
     }
@@ -3389,6 +3437,17 @@ focus_tree = {
 
             completion_reward = {
 
+                SRU ={
+                    country_event = EIZ.88
+                    load_oob = SRU_Beat_United_Against
+                    add_equipment_to_stockpile = {
+                        type = cold_war_tank_2
+                        amount = 800
+                    }
+                }
+                
+                
+
                 hidden_effect = {
               }
         }
@@ -3425,6 +3484,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+
+                add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea3
 
                 hidden_effect = {
               }

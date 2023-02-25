@@ -623,11 +623,130 @@ ideas = {
 
 		modifier = {
 			weekly_manpower = -450
-			unit_upkeep_attrition_factor = 0.05
+			attrition = 0.05
 			stability_weekly_factor = -0.005
 			war_support_weekly_factor = -0.005
 		}
 	}
+
+	#### SOCIALIST RUSSIA BUFFS
+
+	EIZ_Lyon_Backing_The_Socialists_buffs_idea1 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Socialists_buffs_idea2 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.02
+			production_speed_arms_factory_factor = 0.1
+			
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Socialists_buffs_idea3 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			weekly_manpower = 100
+			army_org_factor = 0.1
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Socialists_buffs_idea4 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.02
+			production_speed_arms_factory_factor = 0.1
+			weekly_manpower = 100
+			army_org_factor = 0.1
+		}
+	}
+
+
+	### EURO BRITANNIA DEBUFFS
+
+
+	EIZ_Lyon_Backing_The_Socialists_debuffs_idea1 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			fuel_gain_factor = -0.03
+			attrition = 0.05
+			army_org_factor = -0.06
+			war_support_factor = -0.1
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Socialists_debuffs_idea2 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			resistance_growth = 0.1
+			non_core_manpower = -0.1
+		}
+		targeted_modifier = {
+			tag = SRU
+			attack_bonus_against = -0.1
+		}
+	}
+
+	EIZ_Lyon_Backing_The_Socialists_debuffs_idea3 ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			weekly_manpower = -230
+			war_support_weekly = -0.01	
+			stability_weekly = -0.01
+		}
+	}
+
+
+	###
 	
 	A_Mobile_Front = {
 
