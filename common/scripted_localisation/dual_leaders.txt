@@ -1,0 +1,89 @@
+# For the Duel Leader Title, Leader Names, and custom portrait!
+
+defined_text = {
+	name = GetFirstTitle
+	text = {
+		trigger = {
+			tag = BRT
+			has_government = autocracy
+		}
+		localization_key = BRT_PRIME_MINISTER_TITLE
+	}
+	
+}
+
+defined_text = {
+	name = GetSecondTitle
+	text = {
+		trigger = {
+			tag = BRT
+			has_government = autocracy
+		}
+		localization_key = BRT_MONARCH_TITLE
+	}
+}
+
+defined_text = {
+	name = GetDualLeaderName
+	text = {
+		trigger = {
+			tag = BRT
+			has_government = autocracy
+		}
+		localization_key = BRT_Chariles_Zi
+	}
+	text = {
+		trigger = {
+			original_tag = BRT
+		}
+		localization_key = BRT_Chariles_Zi
+	}
+	text = {
+		localization_key = BRT_Chariles_Zi
+	}
+}
+
+defined_text = {
+    name = GetDualLeaderPortrait
+	text = {
+		trigger = {
+			tag = BRT
+			has_government = autocracy
+		}
+		localization_key = prime_minister_gfx_BRT
+	}
+    text = {
+        trigger = {
+			original_tag = BRT
+			
+		}
+        localization_key = prime_minister_gfx_BRT
+	}
+	text = {
+		localization_key = prime_minister_gfx_BRT
+	}
+}
+
+defined_text = {
+    name = GetDualLeaderDesc
+    
+    text = {
+        trigger = {
+			original_tag = BRT
+		
+        }
+        localization_key = "DESCRIPTION_TEST"
+	}
+}
+
+defined_text = {
+    name = GetFirstLeaderDesc
+    
+    text = {
+        trigger = {
+			original_tag = BRT
+		
+        }
+        localization_key = "FIRST_LEADER_DESC_TEST"
+	}
+}
