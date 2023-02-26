@@ -8103,13 +8103,100 @@ focus_tree = {
                 completion_reward = {
                     country_event = EIZ.76
 
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                    NCA = {
+                     transfer_state = 234
+                     transfer_state = 231
+                     transfer_state = 233
+                     transfer_state = 826
+                     transfer_state = 237
+                     transfer_state = 236
+                     transfer_state = 238
+                     transfer_state = 235
+                     transfer_state = 232
+                     transfer_state = 827
+                     transfer_state = 828
+                     transfer_state = 821
+                     transfer_state = 231
+                     transfer_state = 230
+                     transfer_state = 229
                     }
-    
+                    
+                    add_resource = {
+                        type = steel
+                        amount = 20
+                        state = 229
+                    }
+                    add_resource = {
+                        type = aluminium 
+                        amount = 20
+                        state = 230
+                    }
+                    add_resource = {
+                        type = rubber
+                        amount = 16
+                        state = 232
+
+                    }
+                    add_resource = {
+                        type = oil
+                        amount = 80
+                        state = 234
+                    }
+                    add_resource = {
+                        type = steel
+                        amount = 16
+                        state = 231
+                    }
+                    add_resource = {
+                        type = oil
+                        amount = 70
+                        state = 826
+                    }
+                    add_resource = {
+                        type = oil
+                        amount = 17
+                        state = 821
+                    }
+                    add_resource = {
+                        type = steel
+                        amount = 26
+                        state = 821
+                    }
+                    add_resource = {
+                        type = oil
+                        amount = 100
+                        state = 237
+                    }
+                    add_resource = {
+                        type = rubber
+                        amount = 18
+                        state = 238
+                    }
+
+                    give_resource_rights = { receiver = IRQ state = 229 }
+                    give_resource_rights = { receiver = IRQ state = 230 }
+                    give_resource_rights = { receiver = ENG state = 232 }
+
+                    give_resource_rights = { receiver = ENG state = 234 }
+                    give_resource_rights = { receiver = ENG state = 233 }
+                    give_resource_rights = { receiver = ENG state = 826 }
+                    give_resource_rights = { receiver = ENG state = 231 }
+                    give_resource_rights = { receiver = ENG state = 827 }
+                    give_resource_rights = { receiver = ENG state = 231 }
+
+                    give_resource_rights = { receiver = ENG state = 821 }
+                    give_resource_rights = { receiver = ENG state = 236 }
+                    give_resource_rights = { receiver = ENG state = 237 }
+                    give_resource_rights = { receiver = ENG state = 238 }
+                    give_resource_rights = { receiver = ENG state = 235 }
+
+                    NEJ = {
+                        set_autonomy = {
+                            target = NCA
+                            autonomous_state = Caucus_Administrative_Zone
+                        }
+                    }
+
                     hidden_effect = {
                   }
             }
