@@ -3737,6 +3737,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_opinion_modifier = {
+				target = SRU
+				modifier = aggressive
+			}
+			add_political_power = 50
 		}
 
     }
@@ -3766,6 +3771,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_timed_idea = { idea = Secure_Right_Flank  days = 120 }
 		}
 
     }
@@ -3795,6 +3801,19 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			if = {
+                    limit = { has_completed_focus = MRU_No_Step_Back }
+                        swap_ideas = {
+                            remove_idea = The_First_Push2
+                            add_idea = The_First_Push3
+                        }
+                    else = {
+                            add_ideas = The_First_Push1
+                    }
+              }
+
+			
 		}
 
     }
@@ -3824,6 +3843,18 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			if = {
+                    limit = { has_completed_focus = MRU_By_Blood_Alone }
+                        swap_ideas = {
+                            remove_idea = The_First_Push1
+                            add_idea = The_First_Push3
+                        }
+                    else = {
+                            add_ideas = The_First_Push2
+                    }
+              }
+
 		}
 
     }
@@ -3986,6 +4017,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = Show_The_Reds
 		}
 
     }
@@ -4122,6 +4154,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = Its_Russian_Time
 		}
 
     }

@@ -628,6 +628,117 @@ ideas = {
 
 	}
 	}
+	The_First_Push1 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+	The_First_Push2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_core_defence_factor = 0.05
+		}
+	}
+	The_First_Push3 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+		}
+	}
+	Secure_Right_Flank = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_bunker_factor = 0.5
+		}
+	}
+	Its_Russian_Time = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+
+		equipment_bonus ={
+			armor ={
+				maximum_speed = 0.1
+			}
+		}
+		removal_cost = -1 
+		modifier ={
+			recruitable_population_factor = 0.05
+
+		}
+	}
+	Show_The_Reds = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		equipment_bonus ={
+			mechanized ={
+				soft_attack = 0.1
+			}
+			motorized ={
+				soft_attack = 0.1
+			}
+			artillery_equipment ={
+				soft_attack = 0.1
+			}
+			modifier ={
+				if ={
+					limit ={
+						at_war_with = EIZ
+					}
+				}
+			}
+		}
+	}
 
 	###SOCIALISTS_INTERACTIONS###
 
@@ -709,9 +820,6 @@ ideas = {
 		days = 120
 
 	}
-	}
-		
-		
 		R.U.M = {    
 		allowed = {
 			tag = MRU
@@ -734,7 +842,7 @@ ideas = {
 			soft_attack = 0.05
 		}
 	}
-	}
+
 
 	Fighting_Alone = {
 		allowed = {
@@ -929,4 +1037,3 @@ ideas = {
 	
 }	
 
-}
