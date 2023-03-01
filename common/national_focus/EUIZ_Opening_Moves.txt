@@ -8278,13 +8278,30 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                    add_resource = {
+                        type = steel
+                        amount = 10
+                        state = 217
                     }
-    
+
+                    add_resource = {
+                        type = tungstan
+                        amount = 15
+                        state = 217
+                    }
+                    
+                    add_resource = {
+                        type = rubber
+                        amount = 20
+                        state = 217
+                    }
+                    
+                    add_resource = {
+                        type = chromium
+                        amount = 20
+                        state = 217
+                    }
+
                     hidden_effect = {
                   }
             }
@@ -8325,12 +8342,12 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
+                    
+                    add_equipment_to_stockpile = {
+                        type = motorized_equipment
+                        amount = 800
+                    }  
+                                               
     
                     hidden_effect = {
                   }
@@ -8372,10 +8389,7 @@ focus_tree = {
     
                 completion_reward = {
                     EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                        activate_advisor = EIZ_Middle_Eastern_Advisor
                     }
     
                     hidden_effect = {
