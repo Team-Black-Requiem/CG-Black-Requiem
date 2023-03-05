@@ -6354,6 +6354,11 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+
+                    ## No way to buff only marines, as far as i can see - Ruskie
+
+                    load_oob = EIZ_We_Must_Land
+
                     
                     hidden_effect = {
                   }
@@ -6392,6 +6397,15 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+
+                    add_equipment_to_stockpile = {
+                        type = fighter_equipment
+                        amount = 60
+                    }
+                    add_equipment_to_stockpile = {
+                        type = transport_plane_equipment
+                        amount = 60
+                    }
                     
                     hidden_effect = {
                   }
@@ -6472,6 +6486,8 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+
+                    custom_effect_tooltip = EIZ_Right_Man_For_The_Job_tt
                     
                     hidden_effect = {
                   }
@@ -6555,6 +6571,14 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+
+                    add_ideas = EIZ_OUR_TANKS_MUST_SWIM_idea
+
+                    add_tech_bonus = {
+                        bonus = 0.5
+                        uses = 2
+                        category = naval_equipment
+                    }
                     
                     hidden_effect = {
                   }
@@ -6595,6 +6619,11 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
+
+                    add_equipment_to_stockpile = {
+                        type = convoy
+                        amount = 400
+                    }
                     
                     hidden_effect = {
                   }
