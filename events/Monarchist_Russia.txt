@@ -503,21 +503,19 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # Form Austria-Hungary
-		name = MRU.0.a
+	option = {
+	      
+		name = MRU.27.1
 		ai_chance = { factor = 0 }
 		add_political_power = -100
 		SMR = {
-			SMR = { transfer_state = 1 }
+			
 			change_tag_from = MRU
-			annex_country = {
-				target =MRU
-			}
-			annex_country = {
-				target =SRU 
-			}
+			
+		
+			annex_country = { target = MRU }
+			annex_country = { target = SRU }
 		}
-	
 	}
-	}
+}
 
