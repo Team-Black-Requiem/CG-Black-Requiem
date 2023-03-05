@@ -3240,7 +3240,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Joint_Military_TrainingVII
-		icon = GFX_MRU_joint_military_training_2
+		icon = GFX_MRU_joint_military_training
 		relative_position_id = MRU_Embassy_Establishment
 
 		cost = 3
@@ -3326,7 +3326,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Crown_Design_Company 
-		icon = GFX_MRU_crown_design_companies
+		icon = GFX_MRU_crown_design_company
 		relative_position_id = MRU_Socialists_Veterans_in_Cadet_School
 
 		cost = 3
@@ -3542,7 +3542,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Socialist_Workers_in_the_Factories 
-		icon = GFX_MRU_socialist_workers_in_the_fatories_2
+		icon = GFX_MRU_Socialist_workers_in_the_factories
 		relative_position_id = MRU_Shared_Investment_Fund
 
 		cost = 3
@@ -3745,7 +3745,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Secure_Right_Flank
-		icon = GFX_MRU_the_FIRST_test
+		icon = MRU_Secure_right_flank
 		relative_position_id = MRU_We_Are_Fighting_Alone
 
 		cost = 3
@@ -3774,7 +3774,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_By_Blood_Alone
-		icon = GFX_MRU_the_FIRST_test
+		icon = MRU_by_blood_alone
 		relative_position_id = MRU_We_Are_Fighting_Alone
 
 		cost = 3
@@ -3803,7 +3803,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_No_Step_Back
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_no_step_back
 		relative_position_id = MRU_Secure_Right_Flank
 
 		cost = 3
@@ -3832,7 +3832,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Rather_Be_Dead_Than_Red
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Better_dead_then_red
 		relative_position_id = MRU_Its_Russian_Time
 
 		cost = 3
@@ -3858,7 +3858,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Monarchs_among_them
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Monarchs_among_them
 		relative_position_id = MRU_Its_Russian_Time
 
 		cost = 3
@@ -3884,7 +3884,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Reach_out_to_Euro_Britannia
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Reach_out_to_eurobrittania
 		relative_position_id = MRU_Monarchs_among_them
 
 		cost = 3
@@ -3896,7 +3896,7 @@ id = monarchist_russia_focus
 		bypass = { }
 
 		prerequisite = {
-			focus = MRU_Rather_Be_Dead_Than_Red focus = MRU_Monarchs_among_them focus = NRU_Tzar_Before_Russia
+			focus = MRU_Rather_Be_Dead_Than_Red focus = MRU_Monarchs_among_them focus = MRU_Tzar_Before_Russia
 		}
 
 		 ai_will_do = {
@@ -3909,34 +3909,8 @@ id = monarchist_russia_focus
     }
 
 	focus = {
-		id = NRU_Tzar_Before_Russia
-		icon = GFX_MRU_the_FIRST_test
-		relative_position_id = MRU_Its_Russian_Time
-
-		cost = 3
-		x = -4
-		y = 1
-		available = {
-			country_exists = MRU
-		}
-		bypass = { }
-
-		prerequisite = {
-			focus = MRU_Its_Russian_Time
-		}
-
-		 ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = { 
-		}
-
-    }
-
-	focus = {
-		id = NRU_Tzar_Before_Russia
-		icon = GFX_MRU_the_FIRST_test
+		id = MRU_Tzar_Before_Russia
+		icon = GFX_MRU_Tsar_before_Russia
 		relative_position_id = MRU_Its_Russian_Time
 
 		cost = 3
@@ -3963,7 +3937,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Lets_Show_The_Reds_How_Its_Done
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Show_the_reds_how_its_done
 		relative_position_id = MRU_No_Step_Back
 
 		cost = 3
@@ -3994,7 +3968,7 @@ id = monarchist_russia_focus
     
 	focus = {
 		id = MRU_Preempt_Our_Invasion
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_preempt_our_invasion
 		relative_position_id = MRU_Lets_Show_The_Reds_How_Its_Done
 
 		cost = 3
@@ -4020,7 +3994,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Soften_Their_Fronts
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_soften_their_fronts
 		relative_position_id = MRU_Lets_Show_The_Reds_How_Its_Done
 
 		cost = 3
@@ -4047,7 +4021,7 @@ id = monarchist_russia_focus
 	
 	focus = {
 		id = MRU_Prep_The_Line 
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_prep_the_line
 		relative_position_id = MRU_Lets_Show_The_Reds_How_Its_Done
 
 		cost = 3
@@ -4073,7 +4047,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Fortify_The_Front 
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_fortify_the_fron
 		relative_position_id = MRU_Soften_Their_Fronts
 
 		cost = 3
@@ -4099,7 +4073,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Its_Russian_Time
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_its_russian_time
 		relative_position_id = MRU_No_Step_Back
 
 		cost = 3
@@ -4271,7 +4245,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Socialist_Workers_in_the_factories 
-		icon = GFX_MRU_Socialist_workers_in_the_factories
+		icon = GFX_MRU_socialist_workers_in_the_fatories_2
 		relative_position_id = MRU_Drawing_Close
 
 		cost = 3
@@ -4298,7 +4272,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = Joint_Military_Training
-		icon = GFX_MRU_joint_military_training
+		icon = GFX_MRU_joint_military_training_2
 		relative_position_id = MRU_Drawing_Close
 
 		cost = 3
@@ -4455,9 +4429,14 @@ id = monarchist_russia_focus
 			factor = 10
 		}
 	
-		completion_reward = { 
-		}
+		completion_reward = {
 
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 400
+			}
+			
+		}
     }
 
 	focus = {
@@ -4483,8 +4462,39 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-		}
+			
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 300
+			}
+			580 = {
+				set_building_level = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
 
+				set_building_level = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			403 = {
+				set_building_level = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+				set_building_level = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
     }
 
 	focus = {
@@ -4510,6 +4520,64 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			579 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7689
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7738
+					instant_build = yes
+				}
+			}
+
+			580 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10592
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 12602
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1812
+					instant_build = yes
+				}
+			}
+
+			403 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7833
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6787
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10659
+					instant_build = yes
+				}
+			}
 		}
 
     }
