@@ -7950,12 +7950,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
+                    country_event = EIZ.89
     
                     hidden_effect = {
                   }
@@ -7993,12 +7988,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
+                    country_event = EIZ.90
     
                     hidden_effect = {
                   }
@@ -8036,12 +8026,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
+                    country_event = EIZ.91
     
                     hidden_effect = {
                   }
@@ -8220,13 +8205,6 @@ focus_tree = {
     
                 completion_reward = {
                     country_event = EIZ.77
-
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
     
                     hidden_effect = {
                   }
@@ -8264,11 +8242,29 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                    
+                    add_resource = {
+                        type = steel
+                        amount = 10
+                        state = 229
+                    }
+
+                    add_resource = {
+                        type = tungsten
+                        amount = 15
+                        state = 825
+                    }
+
+                    add_resource = {
+                        type = rubber
+                        amount = 10
+                        state = 223
+                    }
+                    
+                    add_resource = {
+                        type = chromium
+                        amount = 10
+                        state = 400
                     }
     
                     hidden_effect = {
@@ -8311,13 +8307,11 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                    add_equipment_to_stockpile = {
+                        type = motorized_equipment_1
+                        amount = 1000
                     }
-    
+
                     hidden_effect = {
                   }
             }
@@ -8357,12 +8351,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
+                    
     
                     hidden_effect = {
                   }
@@ -8401,11 +8390,14 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment_1
+                        amount = 5000
+                    }
+
+                    add_equipment_to_stockpile = {
+                        type = support_equipment
+                        amount = 800
                     }
     
                     hidden_effect = {
@@ -8449,13 +8441,6 @@ focus_tree = {
     
                 completion_reward = {
                     country_event = EIZ.78
-
-                    EIZ = {
-                        declare_war_on = {
-                        target = MRU
-                        type = annex_everything
-                                    }
-                    }
     
                     hidden_effect = {
                   }
