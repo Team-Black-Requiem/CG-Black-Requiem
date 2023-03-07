@@ -8,664 +8,2764 @@ focus_tree = {
 			tag = EUR
 		}
 	}
-	#All Hail Euro Britannia !
+	#Cold Pacific coast
 	focus = {
-		id = BRI_allhaileurobritannia
+		id = EUR_Cold_Pacific_coast
 		icon = GFX_goal_unknown
-		x = 9
+		cost = 3
+		x = 29
 		y = 0
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
 		}
 	}
-
-	#Homes for Euro Britannians !
+	#Britannian`s illusions
 	focus = {
-		id = BRI_homesforeurobritannians
+		id = EUR_Britannians_illusions
 		icon = GFX_goal_unknown
-		x = 5
-		y = 3
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_eastern_jewels  }
-	}
-
-	#The Duke Awakening
-	focus = {
-		id = BRI_the_duke_awakening
-		icon = GFX_goal_unknown
-		x = 9
+		cost = 3
+		x = 0
 		y = 1
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		relative_position_id = EUR_Cold_Pacific_coast
+		prerequisite = {
+			focus = EUR_Cold_Pacific_coast
 		}
-		prerequisite = { focus = BRI_allhaileurobritannia  }
-	}
-
-	#A Palace for the Duke
-	focus = {
-		id = BRI_a_palace_for_the_duke
-		icon = GFX_goal_unknown
-		x = 9
-		y = 3
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_eastern_jewels  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Eastern Jewels
+	#Explore old military archives
 	focus = {
-		id = BRI_eastern_jewels
+		id = EUR_Explore_old_military_archives
 		icon = GFX_goal_unknown
-		x = 9
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Britannians_illusions
+		prerequisite = {
+			focus = EUR_Britannians_illusions
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	#Expedition to the North Pole
+	focus = {
+		id = EUR_Expedition_to_the_North_Pole
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Explore_old_military_archives
+		prerequisite = {
+			focus = EUR_Explore_old_military_archives
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Send_scientist
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Expedition_to_the_North_Pole
+		prerequisite = {
+			focus = EUR_Expedition_to_the_North_Pole
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Try_to_get_British_spies_to_talk
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Expedition_to_the_North_Pole
+		prerequisite = {
+			focus = EUR_Expedition_to_the_North_Pole
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ace_in_the_hole
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Try_to_get_British_spies_to_talk
+		prerequisite = {
+			focus = EUR_Try_to_get_British_spies_to_talk
+		}
+		prerequisite = {
+			focus = EUR_Send_scientist
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Britannians_proposal
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ace_in_the_hole
+		prerequisite = {
+			focus = EUR_Ace_in_the_hole
+		}
+		mutually_exclusive = {
+			focus = EUR_Finding_alternatives
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Finding_alternatives #(WIP)
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Ace_in_the_hole
+		prerequisite = {
+			focus = EUR_Ace_in_the_hole
+		}
+		mutually_exclusive = {
+			focus = EUR_Britannians_proposal
+		}
+		search_filters = {
+		}
+		
+		available = {
+		has_country_flag = WIP
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_Britannian_generals
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Britannians_proposal
+		prerequisite = {
+			focus = EUR_Britannians_proposal
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Expand_north_trading_routes
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Invite_Britannian_generals
+		prerequisite = {
+			focus = EUR_Invite_Britannian_generals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	#Create special rights for Britannia soldiers
+	focus = {
+		id = EUR_Create_special_rights
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Invite_Britannian_generals
+		prerequisite = {
+			focus = EUR_Invite_Britannian_generals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Britannian_ultimatum
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Create_special_rights
+		prerequisite = {
+			focus = EUR_Create_special_rights
+		}
+		prerequisite = {
+			focus = EUR_Expand_north_trading_routes
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+##################################CALL UPON THE OSI
+	focus = {
+		id = EUR_Call_Upon_The_OSI
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Cast_Wide_Net
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Numbers_Stations
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id =  EUR_Getting_Rid_Of_Troublemakers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 2*
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Bucket_and_Chair
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Getting_Rid_Of_Troublemakers
+		prerequisite = {
+			focus = EUR_Getting_Rid_Of_Troublemakers
+		}
+		prerequisite = {
+			focus = EUR_Numbers_Stations
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Hope_They_Like_Chocolate
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Getting_Rid_Of_Troublemakers
+		prerequisite = {
+			focus = EUR_Getting_Rid_Of_Troublemakers
+		}
+		prerequisite = {
+			focus = EUR_Cast_Wide_Net
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Operation_Parasyte
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Bucket_and_Chair
+		prerequisite = {
+			focus = EUR_Bucket_and_Chair
+		}
+		prerequisite = {
+			focus = EUR_Hope_They_Like_Chocolate
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#############################################Secure The First Site
+	focus = {
+		id = EUR_Secure_First_Site
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Opening_Up_Data_Vaults
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Secure_First_Site
+		prerequisite = {
+			focus = EUR_Secure_First_Site
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Reengage_Cooling_Protocols
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Secure_First_Site
+		prerequisite = {
+			focus = EUR_Secure_First_Site
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Research_Anomaly 
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reengage_Cooling_Protocols
+		prerequisite = {
+			focus = EUR_Reengage_Cooling_Protocols
+		}
+		prerequisite = {
+			focus = EUR_Opening_Up_Data_Vaults
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#########################################################Schnizel Support
+	focus = {
+		id = EUR_Schnizel_Support
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 26
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_By_Emperors_order
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+		}
+		mutually_exclusive = { focus = EUR_In_memory_of_Russian_Empire}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_In_memory_of_Russian_Empire
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+		}
+		mutually_exclusive = { focus = EUR_By_Emperors_order}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#############################################By Emperor's order Schneizel`s Playground
+	focus = {
+		id = EUR_Schneizels_Playground
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -5
+		y = 1
+		relative_position_id = EUR_By_Emperors_order
+		prerequisite = {
+			focus = EUR_By_Emperors_order
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Pulling_from_people
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Schneizels_Playground
+		prerequisite = {
+			focus = EUR_Schneizels_Playground
+		}
+		mutually_exclusive = { focus = EUR_Pulling_From_Land}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ensuring_material_transport
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Pulling_from_people
+		prerequisite = {
+			focus = EUR_Pulling_from_people
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Britannia_Welfare_program
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Pulling_from_people
+		prerequisite = {
+			focus = EUR_Pulling_from_people
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Expanding_Neryungri_area
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Britannia_Welfare_program
+		prerequisite = {
+			focus = EUR_Britannia_Welfare_program
+		}
+		prerequisite = {
+			focus = EUR_Ensuring_material_transport
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Signs_of_growth
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Expanding_Neryungri_area
+		prerequisite = {
+			focus = EUR_Expanding_Neryungri_area
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Protect_our_investment
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Signs_of_growth
+		prerequisite = {
+			focus = EUR_Signs_of_growth
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Revitalize_Neryungri_Airfields
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Expanding_Neryungri_area
+		prerequisite = {
+			focus = EUR_Expanding_Neryungri_area
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Leasing_to_Military
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Revitalize_Neryungri_Airfields
+		prerequisite = {
+			focus = EUR_Revitalize_Neryungri_Airfields
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_Pulling_From_Land
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Schneizels_Playground
+		prerequisite = {
+			focus = EUR_Schneizels_Playground
+		}
+		mutually_exclusive = { focus = EUR_Pulling_from_people}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Focus_on_jewerly_industry
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Pulling_From_Land
+		prerequisite = {
+			focus = EUR_Pulling_From_Land
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Reopening_old_mineshafts
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Pulling_From_Land
+		prerequisite = {
+			focus = EUR_Pulling_From_Land
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Establish_relations_with_Brittanian_nobles
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reopening_old_mineshafts
+		prerequisite = {
+			focus = EUR_Reopening_old_mineshafts
+		}
+		prerequisite = {
+			focus = EUR_Focus_on_jewerly_industry
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Perfecting_our_Craft
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Establishing_our_Brand
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Perfecting_our_Craft
+		prerequisite = {
+			focus = EUR_Perfecting_our_Craft
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Steel_for_Britannia
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Modernizing_to_Meet_Their_Needs
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Steel_for_Britannia
+		prerequisite = {
+			focus = EUR_Steel_for_Britannia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Economic_Stability_Secured
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Establishing_our_Brand
+		prerequisite = {
+			focus = EUR_Establishing_our_Brand
+			focus = EUR_Leasing_to_Military
+		}
+		prerequisite = {
+			focus = EUR_Modernizing_to_Meet_Their_Needs
+			focus = EUR_Protect_our_investment
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#############################################By Emperor's order Restoring discipline in the army
+	focus = {
+		id = EUR_Restoring_discipline_in_army
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -17
+		y = 1
+		relative_position_id = EUR_By_Emperors_order
+		prerequisite = {
+			focus = EUR_By_Emperors_order
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_New_officier_corps
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Restoring_discipline_in_army
+		prerequisite = {
+			focus = EUR_Restoring_discipline_in_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+##########Ask more generals from Britannia
+	focus = {
+		id = EUR_Ask_more_generals
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_New_officier_corps
+		prerequisite = {
+			focus = EUR_New_officier_corps
+		}
+		mutually_exclusive = { focus = EUR_Replace_young_officers}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Using_Britannia_experience
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Ask_more_generals
+		prerequisite = {
+			focus = EUR_Ask_more_generals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#########################Invite Communications officers and  logistics officers from Britannia
+	focus = {
+		id = EUR_Invite_Communications_officers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Using_Britannia_experience
+		prerequisite = {
+			focus = EUR_Using_Britannia_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Death_from_sky
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers
+		}
+		mutually_exclusive = { focus = EUR_Modern_vehicle_of_victory}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Learn_from_Brittanian_experience
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Death_from_sky
+		prerequisite = {
+			focus = EUR_Death_from_sky
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_Britannian_aces
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Learn_from_Brittanian_experience
+		prerequisite = {
+			focus = EUR_Learn_from_Brittanian_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Develop_our_own_doctrine
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Learn_from_Brittanian_experience
+		prerequisite = {
+			focus = EUR_Learn_from_Brittanian_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Asking_Britannia_about_Air_Commander
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Invite_Britannian_aces
+		prerequisite = {
+			focus = EUR_Invite_Britannian_aces
+		}
+		prerequisite = {
+			focus = EUR_Develop_our_own_doctrine
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Modern_vehicle_of_victory
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers
+		}
+		mutually_exclusive = { focus = EUR_Death_from_sky}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Modern_vehicle_of_victory
+		prerequisite = {
+			focus = EUR_Modern_vehicle_of_victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Conduct_grueling_exercises
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ask_homeland
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises
+		}
+		mutually_exclusive = { focus = EUR_Area_11_deposits}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Area_11_deposits
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises
+		}
+		mutually_exclusive = { focus = EUR_Ask_homeland}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	
+#########################Replace young officers with Britannias nobles
+	focus = {
+		id = EUR_Replace_young_officers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_New_officier_corps
+		prerequisite = {
+			focus = EUR_New_officier_corps
+		}
+		mutually_exclusive = { focus = EUR_Ask_more_generals}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Mobilize_more_people
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
 		y = 2
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		relative_position_id = EUR_Replace_young_officers
+		prerequisite = {
+			focus = EUR_Replace_young_officers
 		}
-		prerequisite = { focus = BRI_the_duke_awakening  }
-	}
-
-	#Castles for Nobles
-	focus = {
-		id = BRI_castles_for_nobles
-		icon = GFX_goal_unknown
-		x = 13
-		y = 3
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_eastern_jewels  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Modern Feudalism
 	focus = {
-		id = BRI_modern_feudalism
+		id = EUR_Introduce_harsh_punishments_in_army
 		icon = GFX_goal_unknown
-		x = 9
-		y = 4
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Mobilize_more_people
+		prerequisite = {
+			focus = EUR_Mobilize_more_people
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_a_palace_for_the_duke  } prerequisite = { focus = BRI_castles_for_nobles  } prerequisite = { focus = BRI_homesforeurobritannians  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#House of Lords
 	focus = {
-		id = BRI_house_of_lords
+		id = EUR_Open_Britannian_academy_for_officers
 		icon = GFX_goal_unknown
-		x = 9
-		y = 7
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Mobilize_more_people
+		prerequisite = {
+			focus = EUR_Mobilize_more_people
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_modern_feudalism  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Knights of Euro Britannia
 	focus = {
-		id = BRI_knights_of_euro_britannia
+		id = EUR_Restore_organisation_in_army
 		icon = GFX_goal_unknown
-		x = 9
-		y = 8
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Open_Britannian_academy_for_officers
+		prerequisite = {
+			focus = EUR_Open_Britannian_academy_for_officers
+		}
+		prerequisite = {
+			focus = EUR_Introduce_harsh_punishments_in_army
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_house_of_lords  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Grand Master Manfredi
 	focus = {
-		id = BRI_grand_master_manfredi
+		id = EUR_Transfer_all_scientists_to_research_knightmares
 		icon = GFX_goal_unknown
-		x = 8
-		y = 11
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Restore_organisation_in_army
+		prerequisite = {
+			focus = EUR_Restore_organisation_in_army
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_knightmare_knights  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Holy Order of Michael
 	focus = {
-		id = BRI_holy_order_of_michael
+		id = EUR_Focusing_on_knightmares_production
 		icon = GFX_goal_unknown
-		x = 8
-		y = 9
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Restore_organisation_in_army
+		prerequisite = {
+			focus = EUR_Restore_organisation_in_army
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Holy Order of Raphael
 	focus = {
-		id = BRI_holy_order_of_raphael
+		id = EUR_Conduct_several_tests
 		icon = GFX_goal_unknown
-		x = 12
-		y = 9
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Focusing_on_knightmares_production
+		prerequisite = {
+			focus = EUR_Focusing_on_knightmares_production
+		}
+		prerequisite = {
+			focus = EUR_Transfer_all_scientists_to_research_knightmares
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_knights_of_euro_britannia  }
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
-
-	#Holy Order of Gabriel
 	focus = {
-		id = BRI_holy_order_of_gabriel
+		id = EUR_Our_own_genius
 		icon = GFX_goal_unknown
-		x = 6
-		y = 9
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Conduct_several_tests
+		prerequisite = {
+			focus = EUR_Ask_homeland
+			focus = EUR_Area_11_deposits
+			focus = EUR_Conduct_several_tests
+		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = BRI_knights_of_euro_britannia  }
-	}
-
-	#Holy Order of Uriel
-	focus = {
-		id = BRI_holy_order_of_uriel
-		icon = GFX_goal_unknown
-		x = 10
-		y = 9
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		
+		available = {
 		}
-		prerequisite = { focus = BRI_knights_of_euro_britannia  }
-	}
-
-	#Summon the Levies
-	focus = {
-		id = BRI_summon_the_levies
-		icon = GFX_goal_unknown
-		x = 7
-		y = 6
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		
+		ai_will_do = {
+			factor = 10
 		}
-		prerequisite = { focus = BRI_bread_for_the_people  }
-	}
-
-	#Knightmare Knights
-	focus = {
-		id = BRI_knightmare_knights
-		icon = GFX_goal_unknown
-		x = 8
-		y = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+	
+		completion_reward = {
 		}
-		prerequisite = { focus = BRI_holy_order_of_michael  }
 	}
-
-	#Establish Euro Shilling
+#####################################In memory of Russian Empire Attract investment from British nobles
 	focus = {
-		id = BRI_establish_euro_shilling
+		id = EUR_Attract_investment_from_British_nobles
 		icon = GFX_goal_unknown
-		x = 6
-		y = 4
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_homesforeurobritannians  }
-	}
-
-	#Open the Forges
-	focus = {
-		id = BRI_open_the_forges
-		icon = GFX_goal_unknown
-		x = 6
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_establish_euro_shilling  }
-	}
-
-	#Grand Master du Villon
-	focus = {
-		id = BRI_grand_master_du_villon
-		icon = GFX_goal_unknown
-		x = 6
-		y = 11
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_metal_horses  }
-	}
-
-	#White Phone
-	focus = {
-		id = BRI_white_phone
-		icon = GFX_goal_unknown
-		x = 13
-		y = 4
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_castles_for_nobles  }
-	}
-
-	#Pendragon Embassy
-	focus = {
-		id = BRI_pendragon_embassy
-		icon = GFX_goal_unknown
-		x = 13
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_white_phone  }
-	}
-
-	#Grand Master Farnese
-	focus = {
-		id = BRI_grand_master_farnese
-		icon = GFX_goal_unknown
-		x = 12
-		y = 11
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_firebow  }
-	}
-
-	#Rogue Knights
-	focus = {
-		id = BRI_rogue_knights
-		icon = GFX_goal_unknown
-		x = 10
-		y = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_holy_order_of_uriel  }
-	}
-
-	#Grand Master du Saint-Gilles
-	focus = {
-		id = BRI_grand_master_du_saintgilles
-		icon = GFX_goal_unknown
-		x = 10
-		y = 11
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_rogue_knights  }
-	}
-
-	#Brioche for Aristocrats
-	focus = {
-		id = BRI_brioche_for_aristocrats
-		icon = GFX_goal_unknown
-		x = 10
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_modern_feudalism  }
-	}
-
-	#Bread for the People
-	focus = {
-		id = BRI_bread_for_the_people
-		icon = GFX_goal_unknown
-		x = 8
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_modern_feudalism  }
-	}
-
-	#Call the Host !
-	focus = {
-		id = BRI_callthehost
-		icon = GFX_goal_unknown
-		x = 9
-		y = 12
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_grand_master_manfredi  focus = BRI_grand_master_du_villon  focus = BRI_grand_master_farnese  focus = BRI_grand_master_du_saintgilles  }
-	}
-
-	#Conquest of Siberia
-	focus = {
-		id = BRI_conquest_of_siberia
-		icon = GFX_goal_unknown
-		x = 9
-		y = 13
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_callthehost  }
-	}
-
-	#Burn the Taïga
-	focus = {
-		id = BRI_burnthetaiga
-		icon = GFX_goal_unknown
-		x = 6
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_strike_disgusting_socialism  }
-	}
-
-	#Strike the Wrong Monarchism
-	focus = {
-		id = BRI_strike_the_wrong_monarchism
-		icon = GFX_goal_unknown
-		x = 12
-		y = 14
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_conquest_of_siberia  }
-	}
-
-	#Knightmare Krieg
-	focus = {
-		id = BRI_knightmare_krieg
-		icon = GFX_goal_unknown
-		x = 6
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_burnthetaiga  }
-	}
-
-	#No Building, No City
-	focus = {
-		id = BRI_nobuildingnocity
-		icon = GFX_goal_unknown
-		x = 6
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_knightmare_krieg  }
-	}
-
-	#End of Equality
-	focus = {
-		id = BRI_end_of_equality
-		icon = GFX_goal_unknown
-		x = 6
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_nobuildingnocity  }
-	}
-
-	#Strike Disgusting Socialism
-	focus = {
-		id = BRI_strike_disgusting_socialism
-		icon = GFX_goal_unknown
-		x = 6
-		y = 14
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_conquest_of_siberia  }
-	}
-
-	#Pass the Urals
-	focus = {
-		id = BRI_pass_the_urals
-		icon = GFX_goal_unknown
-		x = 12
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_strike_the_wrong_monarchism  }
-	}
-
-	#The Great Host
-	focus = {
-		id = BRI_the_great_host
-		icon = GFX_goal_unknown
-		x = 12
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_pass_the_urals  }
-	}
-
-	#No Logistic, No Army
-	focus = {
-		id = BRI_nologisticnoarmy
-		icon = GFX_goal_unknown
-		x = 12
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_the_great_host  }
-	}
-
-	#End of the Usurper
-	focus = {
-		id = BRI_end_of_the_usurper
-		icon = GFX_goal_unknown
-		x = 12
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_nologisticnoarmy  }
-	}
-
-	#Remembering Old Traditions
-	focus = {
-		id = BRI_remembering_old_traditions
-		icon = GFX_goal_unknown
-		x = 9
-		y = 14
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_conquest_of_siberia  }
-		mutually_exclusive = { focus = BRI_strike_the_wrong_monarchism  }
-	}
-
-	#Cease Fire
-	focus = {
-		id = BRI_cease_fire
-		icon = GFX_goal_unknown
-		x = 9
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_remembering_old_traditions  }
-	}
-
-	#Noble Wedding
-	focus = {
-		id = BRI_noble_wedding
-		icon = GFX_goal_unknown
-		x = 9
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_cease_fire  }
-	}
-
-	#What Hand ?
-	focus = {
-		id = BRI_whathand
-		icon = GFX_goal_unknown
-		x = 9
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_noble_wedding  }
-	}
-
-	#Euro Britannia's Wedding !
-	focus = {
-		id = BRI_eurobritanniaswedding
-		icon = GFX_goal_unknown
-		x = 9
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_whathand  }
-	}
-
-	#Conquest of Volga
-	focus = {
-		id = BRI_conquest_of_volga
-		icon = GFX_goal_unknown
-		x = 9
-		y = 19
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_end_of_equality  } prerequisite = { focus = BRI_end_of_the_usurper  focus = BRI_end_of_equality  } prerequisite = { focus = BRI_eurobritanniaswedding  }
-	}
-
-	#Serfdom Law
-	focus = {
-		id = BRI_serfdom_law
-		icon = GFX_goal_unknown
-		x = 4
-		y = 4
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_homesforeurobritannians  }
-	}
-
-	#No Russians
-	focus = {
-		id = BRI_no_russians
-		icon = GFX_goal_unknown
-		x = 4
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_serfdom_law  }
-	}
-
-	#Beg Schneizel
-	focus = {
-		id = BRI_beg_schneizel
-		icon = GFX_goal_unknown
-		x = 13
-		y = 6
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_pendragon_embassy  } prerequisite = { focus = BRI_white_phone  }
-	}
-
-	#The Grail was a Knightmare
-	focus = {
-		id = BRI_the_grail_was_a_knightmare
-		icon = GFX_goal_unknown
-		x = 13
-		y = 7
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_beg_schneizel  }
-	}
-
-	#Operation Mordred
-	focus = {
-		id = BRI_operation_mordred
-		icon = GFX_goal_unknown
-		x = 9
-		y = 20
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_conquest_of_volga  }
-	}
-
-	#Training Youngs Nobles
-	focus = {
-		id = BRI_training_youngs_nobles
-		icon = GFX_goal_unknown
-		x = 11
-		y = 6
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_brioche_for_aristocrats  }
-	}
-
-	#St Petersburg, Home of Knights
-	focus = {
-		id = BRI_stpetersburghomeofknights
-		icon = GFX_goal_unknown
-		x = 9
-		y = 21
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_operation_mordred  }
-	}
-
-	#Gulag of Britannia
-	focus = {
-		id = BRI_gulag_of_britannia
-		icon = GFX_goal_unknown
+		cost = 3
 		x = 5
-		y = 6
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		y = 1
+		relative_position_id = EUR_In_memory_of_Russian_Empire
+		prerequisite = {
+			focus = EUR_In_memory_of_Russian_Empire
 		}
-		prerequisite = { focus = BRI_open_the_forges  } prerequisite = { focus = BRI_no_russians  }
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Creating_trading_hub_port_in_Okhotsk
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Attract_investment_from_British_nobles
+		prerequisite = {
+			focus = EUR_Attract_investment_from_British_nobles
+		}
+		mutually_exclusive = { focus = EUR_Invest_to_extractive_industry}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Free_trade
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Creating_trading_hub_port_in_Okhotsk
+		prerequisite = {
+			focus = EUR_Creating_trading_hub_port_in_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_tidy_up_country_for_Businessmen
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Creating_trading_hub_port_in_Okhotsk
+		prerequisite = {
+			focus = EUR_Creating_trading_hub_port_in_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Easing_of_customs_duties_from_China
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_tidy_up_country_for_Businessmen
+		prerequisite = {
+			focus = EUR_tidy_up_country_for_Businessmen
+		}
+		prerequisite = {
+			focus = EUR_Free_trade
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Easing_of_customs_duties_from_Japan
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Easing_of_customs_duties_from_China
+		prerequisite = {
+			focus = EUR_Easing_of_customs_duties_from_China
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Creation_of_emergency_hub_for_Britannia
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Easing_of_customs_duties_from_Japan
+		prerequisite = {
+			focus = EUR_Easing_of_customs_duties_from_Japan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Leasing_out_our_coastline
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Easing_of_customs_duties_from_China
+		prerequisite = {
+			focus = EUR_Easing_of_customs_duties_from_China
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Study_guns_of_British_ships
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Leasing_out_our_coastline
+		prerequisite = {
+			focus = EUR_Leasing_out_our_coastline
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_Invest_to_extractive_industry
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Attract_investment_from_British_nobles
+		prerequisite = {
+			focus = EUR_Attract_investment_from_British_nobles
+		}
+		mutually_exclusive = { focus = EUR_Creating_trading_hub_port_in_Okhotsk}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Focus_on_jewerly_industry1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Invest_to_extractive_industry
+		prerequisite = {
+			focus = EUR_Invest_to_extractive_industry
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Reopening_old_mineshafts1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Invest_to_extractive_industry
+		prerequisite = {
+			focus = EUR_Invest_to_extractive_industry
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Establish_relations_with_Brittanian_nobles1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reopening_old_mineshafts1
+		prerequisite = {
+			focus = EUR_Reopening_old_mineshafts1
+		}
+		prerequisite = {
+			focus = EUR_Focus_on_jewerly_industry1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Perfecting_our_Craft1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles1
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Establishing_our_Brand1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Perfecting_our_Craft1
+		prerequisite = {
+			focus = EUR_Perfecting_our_Craft1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Steel_for_Britannia1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles1
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Modernizing_to_Meet_Their_Needs1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Steel_for_Britannia1
+		prerequisite = {
+			focus = EUR_Steel_for_Britannia1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Economic_Stability_Secured1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Establishing_our_Brand1
+		prerequisite = {
+			focus = EUR_Establishing_our_Brand1
+			focus = EUR_Creation_of_emergency_hub_for_Britannia
+		}
+		prerequisite = {
+			focus = EUR_Modernizing_to_Meet_Their_Needs1
+			focus = EUR_Study_guns_of_British_ships
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#####################################In memory of Russian Empire Restoring discipline in the army
+	focus = {
+		id = EUR_Restoring_discipline_in_army1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 16
+		y = 1
+		relative_position_id = EUR_In_memory_of_Russian_Empire
+		prerequisite = {
+			focus = EUR_In_memory_of_Russian_Empire
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_New_officier_corps1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Restoring_discipline_in_army1
+		prerequisite = {
+			focus = EUR_Restoring_discipline_in_army1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Rely_on_young_Russian_officers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_New_officier_corps1
+		prerequisite = {
+			focus = EUR_New_officier_corps1
+		}
+		mutually_exclusive = { focus = EUR_Ask_more_generals1}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Our_own_tactics
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rely_on_young_Russian_officers
+		prerequisite = {
+			focus = EUR_Rely_on_young_Russian_officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ask_Japan
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Our_own_tactics
+		prerequisite = {
+			focus = EUR_Our_own_tactics
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ask_China
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Our_own_tactics
+		prerequisite = {
+			focus = EUR_Our_own_tactics
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Return_army_hierarchy
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ask_Japan
+		prerequisite = {
+			focus = EUR_Ask_China
+			focus = EUR_Ask_Japan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Develop_new_rifles_for_army
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Return_army_hierarchy
+		prerequisite = {
+			focus = EUR_Return_army_hierarchy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Artillery_training
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Return_army_hierarchy
+		prerequisite = {
+			focus = EUR_Return_army_hierarchy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_New_Russian_army
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Artillery_training
+		prerequisite = {
+			focus = EUR_Artillery_training
+		}
+		prerequisite = {
+			focus = EUR_Develop_new_rifles_for_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {
+		id = EUR_Ask_more_generals1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_New_officier_corps1
+		prerequisite = {
+			focus = EUR_New_officier_corps1
+		}
+		mutually_exclusive = { focus = EUR_Rely_on_young_Russian_officers}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Using_Britannia_experience1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Ask_more_generals1
+		prerequisite = {
+			focus = EUR_Ask_more_generals1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_Communications_officers1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Using_Britannia_experience1
+		prerequisite = {
+			focus = EUR_Using_Britannia_experience1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Cheap_and_fast_firepower
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers1
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers1
+		}
+		mutually_exclusive = { focus = EUR_Modern_vehicle_of_victory1}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Using_experience_of_the_Great_War
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Cheap_and_fast_firepower
+		prerequisite = {
+			focus = EUR_Cheap_and_fast_firepower
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Oil_for_our_maneuvers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Cheap_and_fast_firepower
+		prerequisite = {
+			focus = EUR_Cheap_and_fast_firepower
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Improve_outdated_recharge_system
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Oil_for_our_maneuvers
+		prerequisite = {
+			focus = EUR_Oil_for_our_maneuvers
+			focus = EUR_Using_experience_of_the_Great_War
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Brittanian_Crew_Training_standards
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Oil_for_our_maneuvers
+		prerequisite = {
+			focus = EUR_Oil_for_our_maneuvers
+			focus = EUR_Using_experience_of_the_Great_War
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Present_from_Britannia
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Brittanian_Crew_Training_standards
+		prerequisite = {
+			focus = EUR_Brittanian_Crew_Training_standards
+		}
+		prerequisite = {
+			focus = EUR_Improve_outdated_recharge_system
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Modern_vehicle_of_victory1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers1
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers1
+		}
+		mutually_exclusive = { focus = EUR_Cheap_and_fast_firepower}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Modern_vehicle_of_victory1
+		prerequisite = {
+			focus = EUR_Modern_vehicle_of_victory1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Conduct_grueling_exercises1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael1
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Ask_homeland1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises1
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises1
+		}
+		mutually_exclusive = { focus = EUR_Area_11_deposits1}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Area_11_deposits1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises1
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises1
+		}
+		mutually_exclusive = { focus = EUR_Ask_homeland1}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Our_own_genius1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ask_homeland1
+		prerequisite = {
+			focus = EUR_Ask_homeland1
+			focus = EUR_Area_11_deposits1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+####################################Guinevere Support
+	focus = {
+		id = EUR_Guinevere_Support
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -18
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Guinevere_Caring_Hand
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+		}
+		mutually_exclusive = { focus = EUR_Reach_Out_To_The_Proper_Areas}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Reach_Out_To_The_Proper_Areas
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+		}
+		mutually_exclusive = { focus = EUR_Guinevere_Caring_Hand}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
 	}
 
-	#Purple Gold Mines
-	focus = {
-		id = BRI_purple_gold_mines
-		icon = GFX_goal_unknown
-		x = 5
-		y = 7
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_gulag_of_britannia  }
-	}
-
-	#Metal Horses
-	focus = {
-		id = BRI_metal_horses
-		icon = GFX_goal_unknown
-		x = 6
-		y = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_holy_order_of_gabriel  }
-	}
-
-	#Firebow
-	focus = {
-		id = BRI_firebow
-		icon = GFX_goal_unknown
-		x = 12
-		y = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = BRI_holy_order_of_raphael  }
-	}
 
 }
