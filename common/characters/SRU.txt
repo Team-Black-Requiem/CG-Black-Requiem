@@ -247,17 +247,20 @@ characters = {
 	### HIGH COMMAND
 
 
-	SRU_generic_high_command = {
-		name = "High Command Feller"
-
-		#portraits = {
-		#	
-		#}
-
+	SRU_ostrova = {
+		name = "Natasha Ostrova"
+portraits = {
+			civilian = {
+				large ="gfx\leaders\SRU\SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx\leaders\SRU\SRU_natasha_ostrava.dds"
+		}
+}
 		advisor = {
 			slot = high_command
 			ledger = army
-			idea_token = SRU_generic_high_command_1
+			idea_token = SRU_ostrova_high_command
 			traits = { 
 				army_artillery_1
 			}
@@ -269,50 +272,118 @@ characters = {
 				factor = 1.000
 			}
 		}
+	
 
 		field_marshal = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = { brilliant_strategist }
+			skill = 5
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 5
 		}
 	}
 
 
 	### GENERALS
 
-	SRU_generic_corps_commander = {
-		name = "Corps Commander"
-		#portraits = {
-		#	
-		#}
-
+	SRU_panteleyev = {
+		name = "Sergej Panteleyev"
+		portraits = {
+			civilian = {
+				large = "gfx\leaders\SRU\SRU_sergej_panteleyev.dds"
+			}
+			army = {
+				large = "gfx\leaders\SRU\SRU_sergej_panteleyev.dds"
+			}
+		}
 		corps_commander = {
-			skill = 1
+		traits = {winter_specialist}
+			skill = 2
 			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	SRU_nemov = {
+		name = "Alexander Nemov"
+	portraits = {
+			civilian = {
+				large = "gfx\leaders\SRU\SRU_alexander_nemov.dds"
+			}
+			army = {
+				large = "gfx\leaders\SRU\SRU_alexander_nemov.dds"
+			}
+		}
+		corps_commander = {
+		traits = { infantry_officer}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+	}
+	}
+
+SRU_belov = {
+		name = "Anton Belov"
+	portraits = {
+			civilian = {
+				large = "\gfx\leaders\SRU\SRU_Anton_Belov.dds"
+			}
+			army = {
+				large = "\gfx\leaders\SRU\SRU_Anton_Belov.dds"
+			}
+		}
+		corps_commander = {
+			traits = {infantry_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+}
+
+SRU_kirova = {
+		name = "Maria Kirova"
+	portraits = {
+			civilian = {
+				large = "\gfx\leaders\SRU\SRU_Maria_Kirov.dds"
+			army = {
+				large = "\gfx\leaders\SRU\SRU_Maria_Kirov.dds"
+			}
+		}
+	}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 3
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 4
 		}
-	}
-	SRU_Mongol_commander = {
-		name = "Sangiin Dumpil"
-		#portraits = {
-		#	
-		#}
-
-		corps_commander = {
-		traits = {}
-			skill = 3
-			attack_skill = 4
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 2
-		}
-	}
-
-
-
-
 }
+
+SRU_sonin = {
+		name = "Dmitri Sonin"
+	portraits = {
+			civilian = {
+				large = "gfx\leaders\SRU\SRU_dmitri_sonin.dds"
+			army = {
+				large = "gfx\leaders\SRU\SRU_dmitri_sonin.dds"
+			}
+		}
+	}
+		corps_commander = {
+		traits = {engineer}
+			skill = 4
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+}
+	}
