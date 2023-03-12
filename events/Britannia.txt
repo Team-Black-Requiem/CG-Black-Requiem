@@ -450,7 +450,6 @@ country_event = {  #Total victory against Japan - Establish Area
 
 		A11 = {
 			inherit_technology = BRT
-			change_tag_from = JAP		#this should kick a Japan player into A11, might cause a false game-over
 			set_variable = { A11_Chosen_State = 1 }
 			BRT = {
 				set_autonomy = {
@@ -494,6 +493,7 @@ country_event = {  #Total victory against Japan - Establish Area
 		transfer_state = 942
 		load_oob = "A11_START"
 		load_oob = "A11_NAVAL"
+		change_tag_from = JAP 	#this should kick a Japan player into A11, might cause a false game-over
 		}
 		
 	}	
