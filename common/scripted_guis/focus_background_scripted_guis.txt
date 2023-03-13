@@ -1,12 +1,12 @@
 scripted_gui = {
 	focus_background_scripted_gui = {
 		context_type = player_context
-		parent_window_name = "focus_background_container"
+		parent_window_name = "focus_background_container"		#references nationalfocusview.gui - it works ignore error
         window_name = "focus_background_scripted_gui_container"
 		#dirty = show_focus_background
 
 		visible = {
-			check_variable = { show_focus_background > 0 }
+			#check_variable = { show_focus_background > 0 }
 		}
 
 		properties = {
