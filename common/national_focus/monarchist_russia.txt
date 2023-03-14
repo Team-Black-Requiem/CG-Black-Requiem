@@ -275,7 +275,12 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-
+            MRU_Vsevolod_Romanov = {
+				set_character_flag = {
+				flag = Tsar_leadership
+				value = 3
+			}
+		}
 			country_event = MRU.8
 			    add_ideas = MRU_Crisis_Of_GovermentV1
 			hidden_effect = {
@@ -3065,7 +3070,8 @@ id = monarchist_russia_focus
 		x = 0
 		y = 6
 		available = {
-			country_exists = MRU
+			any_character = { has_character_flag = Tsar_leadership   }
+
 		}
 		bypass = { }
 
@@ -3075,13 +3081,15 @@ id = monarchist_russia_focus
 		}
 
 		
-
+   
 	
         ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = { 
+			country_event = { id = MRU.28 days = 15 }	
+            
 		}
 
     }
