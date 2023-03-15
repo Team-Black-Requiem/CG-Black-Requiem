@@ -2178,6 +2178,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			
 		}
 
     }
@@ -2212,6 +2213,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = cat_mass_assault
+				bonus = 0.5
+				uses = 3
+			}
 		}
 
     }
@@ -2420,6 +2426,20 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			572 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+				}
+			}
+			582 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+
 		}
 
     }
@@ -2445,6 +2465,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+				add_resource = {
+					type = chromium
+					amount = 20
+					state = 652
+				}
 		}
 
     }
@@ -2470,6 +2495,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Backroom_Deals_idea
 		}
 
     }
@@ -2529,6 +2555,9 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Every_Citizen_A_Weapon_idea
+
+			
 		}
 
     }
@@ -2556,12 +2585,16 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 600
+			}
 		}
 
     }
 
 	focus = {
-		id = MRU_What_Safety_Codes?
+		id = MRU_What_Safety_Codes
 		icon = GFX_MRU_the_FIRST_test
 		relative_position_id = MRU_Swarm_The_Enemy
 		cost = 5
@@ -2582,6 +2615,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_What_Safety_Codes_idea
 		}
 
     }
@@ -2608,10 +2642,10 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 3
+			add_tech_bonus = {
 				category = cat_grand_battle_plan
+				bonus = 0.5
+				uses = 3
 			}
 		}
 
@@ -2639,6 +2673,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Proper_Training_idea
 		}
 
     }
@@ -2696,6 +2731,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = infantry_tech
+				uses = 2
+				bonus = 1
+			}
 		}
 
     }
@@ -2722,6 +2762,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_A_Perfect_Plan_idea
 		}
 
     }
@@ -2774,6 +2815,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Church_Donations_idea
 		}
 
     }
@@ -2800,6 +2842,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_stability = 0.1
 		}
 
     }
@@ -2826,6 +2869,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			
 		}
 
     }
@@ -2992,6 +3036,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = electronics
+				bonus = 1
+				uses = 2
+			}
 		}
 
     }
@@ -3019,6 +3068,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.5
+			}
 		}
 
     }

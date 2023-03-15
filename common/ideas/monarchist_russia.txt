@@ -451,7 +451,134 @@ ideas = {
 			
 		    }
 	   }
+	   MRU_Every_Citizen_A_Weapon_idea = {
+		allowed = {
+			always = yes
+		}
 
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+			}
+		}
+
+		modifier = {
+
+			
+			recruitable_population_factor = 0.05
+			non_core_manpower = -0.05
+			
+		}
+	   }
+	
+
+	   MRU_What_Safety_Codes_idea ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+				reliability_factor = -0.1
+			}
+		}
+		modifier = {
+			
+		}
+	   }
+	   MRU_Backroom_Deals_idea ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = -0.025
+			stability_factor = 0.15	
+		}
+	   }
+	   MRU_Church_Donations_idea ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	   }
+	   MRU_Proper_Training_idea ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			army_org_factor = 0.05
+			army_defence_factor = 0.05
+			dig_in_speed_factor = 0.1
+			training_time_army_factor = 0.1
+		}
+	   }
+	   MRU_A_Perfect_Plan_idea ={
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			max_planning_factor = 0.1
+
+			
+		}
+		targeted_modifier = {
+			tag = EIZ
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = SRU
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = EUR
+			defense_bonus_against = 0.1
+		}
+	   }
+	   
+	   
 
 
 	   ######Tzarist Economics path######

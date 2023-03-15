@@ -423,6 +423,72 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+		SRU = {
+			give_resource_rights = {
+				receiver = MRU
+				state = 571
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 570
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 578
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 577
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 824
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 516
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 576
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 575
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 564
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 565
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 563
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 567
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 568
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 569
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 554
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 40
+			}
+		}
 		
     }
 }
@@ -439,8 +505,13 @@ country_event = {
 		
 		ai_chance = {
 			factor = 100
+
 		}
-		
+		KAZ ={
+			country_event = MRU.35
+		}
+		add_war_support = 0.1
+		army_experience = 50
     }
 }
 
@@ -747,4 +818,20 @@ country_event = {
 			}
 	}
 }
+}
+country_event = {
+	id = MRU.35 ## KAZAKHSTAN RAIDED EVENT
+	title = MRU.35.t
+	desc = MRU.35.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+	      
+		name = MRU.35.1
+		ai_chance = { factor = 100 }
+		add_political_power = -100
+		add_stability = -0.05
+	}
 }
