@@ -1125,6 +1125,16 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = air_equipment
+				bonus = 0.5
+				ahead_reduction = 1
+			}
+			add_tech_bonus = {
+				category = artillery
+				bonus = 0.5
+				ahead_reduction = 1
+			}
 		}
 
     }
@@ -1152,6 +1162,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Repeating_Suvorovs_Genius_idea
 		}
 
     }
@@ -1179,6 +1190,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			army_experience = 50
 		}
 
     }
@@ -1206,6 +1218,18 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
+			add_timed_idea = {
+				idea = MRU_Modern_Supply_Lines_idea
+				days = 90
+			}
 		}
 
     }
@@ -1233,6 +1257,12 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_tech_bonus = {
+				category = armor
+				bonus = 0.5
+				uses = 2
+
+			}
 		}
 
     }
@@ -1260,6 +1290,16 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 600
+			}
+			add_tech_bonus = {
+				category = air_equipment
+				bonus = 0.75
+				ahead_reduction = 1
+				uses = 1
+			}
 		}
 
     }
@@ -1348,12 +1388,11 @@ id = monarchist_russia_focus
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = field_hospital_company_tech
+				category = support_tech
 			}
 
 			add_equipment_to_stockpile = {
-
-                 type = support_equipment1
+                 type = support_equipment
 				 amount = 400
 			}
 		}
@@ -3801,6 +3840,10 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_opinion_modifier = {
+				target = SRU
+				modifier = large_decrease
+			}
 		}
 
     }
@@ -3830,6 +3873,11 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			add_timed_idea = {
+				idea = MRU_Secure_Right_Flank_idea
+				days = 120
+			}
 		}
 
     }
@@ -3859,6 +3907,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			add_ideas = MRU_by_blood_alone_idea
 		}
 
     }
@@ -3888,6 +3938,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			add_ideas = MRU_No_Step_Back_idea
 		}
 
     }
@@ -3914,6 +3966,12 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = 0.2
+			}
+			add_stability = 0.2
 		}
 
     }
@@ -4024,6 +4082,8 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
+			add_ideas = MRU_Lets_Show_The_Reds_How_Its_Done_idea
 		}
 
     }
@@ -4076,6 +4136,10 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			SRU = {
+
+				add_ideas = MRU_Soften_Their_Fronts_idea
+			}
 		}
 
     }
@@ -4160,6 +4224,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_ideas = MRU_Its_Russian_Time_idea
 		}
 
     }
@@ -4190,6 +4255,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+
 		}
 
     }
@@ -4244,6 +4310,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			add_manpower = 50000
 		}
 
     }

@@ -578,6 +578,148 @@ ideas = {
 		}
 	   }
 	   
+	   MRU_Secure_Right_Flank_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			production_speed_bunker_factor = 0.5
+		}
+	   }
+	    MRU_by_blood_alone_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			army_core_attack_factor = 0.05
+		}
+	   }
+	    MRU_No_Step_Back_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			army_core_defence_factor = 0.05
+		}
+	   }
+	    MRU_Its_Russian_Time_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			armor = {
+				maximum_speed = 0.1
+			}
+		}
+		
+		modifier = {
+			recruitable_population_factor = 0.05
+		}
+	   }
+
+	    MRU_Lets_Show_The_Reds_How_Its_Done_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			light_sp_artillery_brigade = {
+				soft_attack = 0.1
+			}
+			heavy_sp_artillery_brigade = {
+				soft_attack = 0.1
+			}
+			medium_sp_artillery_brigade = {
+				soft_attack = 0.1
+			}
+		}
+		
+		modifier = {
+		}
+	   }
+
+	   MRU_Soften_Their_Fronts_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+				army_defence_factor = -0.05
+
+		}
+	   }
+
+	    MRU_Repeating_Suvorovs_Genius_idea = {
+	   allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+				army_speed_factor = 0.1
+		}
+	   }
+	   MRU_Modern_Supply_Lines_idea = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+				production_speed_supply_node_factor = 0.3
+				production_speed_rail_way_factor = 0.3
+		}
+	   }
 	   
 
 
@@ -693,7 +835,7 @@ ideas = {
 	   removal_cost = -1
 
 	   modifier = {
-		army_defence_factor = 0.025
+		army_defence_factor = 0.05		
 	   }
 	}
 
@@ -728,14 +870,15 @@ ideas = {
 	   
 	   removal_cost = -1
 
+	   equipment_bonus = {
+		   modern_artillery = {
+				instant = yes
+				soft_attack = 0.05
+			}
+		}
 	   modifier = {
-		equipment_bonus = {
-			modern_artillery = {
-				 		instant = yes
-				 		soft_attack = 0.05
-			  		}
-		   		}
-	}
+
+		}
 	}
 
 	Muddy_Ground = {
