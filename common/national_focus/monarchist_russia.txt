@@ -275,12 +275,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-            MRU_Vsevolod_Romanov = {
-				set_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-		}
+
 			country_event = MRU.8
 			    add_ideas = MRU_Crisis_Of_GovermentV1
 			hidden_effect = {
@@ -1392,7 +1387,7 @@ id = monarchist_russia_focus
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = field_hospital_company_tech
+				category  = field_hospital_company_tech
 			}
 
 			add_equipment_to_stockpile = {
@@ -3185,6 +3180,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			country_event = MRU.28
 		}
 
 }
@@ -3230,7 +3226,7 @@ id = monarchist_russia_focus
 		
                 has_country_flag = {
                   flag = Grand_Embassy
-                  value > 5
+                  value > 10
 				}
 			
 		
@@ -3834,7 +3830,7 @@ id = monarchist_russia_focus
 		
               has_country_flag = {
                   flag = Grand_Embassy
-                  value < -5
+                  value < -10
                  }
             
         }
@@ -3857,7 +3853,7 @@ id = monarchist_russia_focus
 		completion_reward = { 
 			add_opinion_modifier = {
 				target = SRU
-				modifier = large_decrease
+				 modifier = large_decrease
 			}
 		}
 
@@ -4256,6 +4252,18 @@ id = monarchist_russia_focus
 		y = 1
 		available = {
 			country_exists = MRU
+			NOT = {
+				has_country_flag = {
+					flag = Grand_Embassy
+					value > 10
+				  }
+
+                  	
+              has_country_flag = {
+				flag = Grand_Embassy
+				value < -10
+			   }
+			}
 		}
 		bypass = { }
 
