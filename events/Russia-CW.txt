@@ -1,0 +1,916 @@
+add_namespace = russiaCW
+
+
+country_event = {
+	id = russiaCW.1
+	title = russiaCW.1.t
+	desc = russiaCW.1.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Euro-Britannia Pops Up
+		name = russiaCW.1.a
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			EUR = {
+				transfer_state = 637
+				transfer_state = 822
+				transfer_state = 562
+				transfer_state = 644
+				transfer_state = 574
+
+				add_state_core = 637
+				add_state_core = 822
+				add_state_core = 562
+				add_state_core = 644
+				add_state_core = 574
+
+				inherit_technology = RUS
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { knightmare_frame_3 = 1 }
+				set_technology = { factspheres = 1 }
+				set_technology = { landspinner = 1 }
+				load_oob = "EURO-BRITANNIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}
+		}
+		country_event = { id = russiaCW.2 days = 15 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+
+
+
+	option = { #Euro-Britannia Pops Up
+		name = russiaCW.1.b
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			EUR = {
+				transfer_state = 637
+				transfer_state = 822
+				transfer_state = 562
+				transfer_state = 644
+				transfer_state = 574
+
+				add_state_core = 637
+				add_state_core = 822
+				add_state_core = 562
+				add_state_core = 644
+				add_state_core = 574
+
+				inherit_technology = RUS
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { knightmare_frame_3 = 1 }
+				set_technology = { factspheres = 1 }
+				set_technology = { landspinner = 1 }
+				load_oob = "EURO-BRITANNIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}
+			EUR = { change_tag_from = RUS }		
+			RUS = { load_oob = "Prov_RUS" }
+		}
+		country_event = { id = russiaCW.2 days = 15 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+
+country_event = {
+	id = russiaCW.2
+	title = russiaCW.2.t
+	desc = russiaCW.2.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Socialists Pops Up
+		name = russiaCW.2.a
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			SRU = {
+				transfer_state = 563
+				transfer_state = 565
+				transfer_state = 564
+				transfer_state = 566
+				transfer_state = 567
+				transfer_state = 568
+				transfer_state = 576
+				transfer_state = 516
+				transfer_state = 575
+				transfer_state = 40
+				transfer_state = 570
+				transfer_state = 578
+				transfer_state = 654
+				transfer_state = 569
+				transfer_state = 824
+				transfer_state = 577
+				transfer_state = 571
+
+				add_state_core = 563
+				add_state_core = 565
+				add_state_core = 564
+				add_state_core = 566
+				add_state_core = 567
+				add_state_core = 568
+				add_state_core = 576
+				add_state_core = 516
+				add_state_core = 575
+				add_state_core = 40
+				add_state_core = 570
+				add_state_core = 578
+				add_state_core = 654
+				add_state_core = 569
+				add_state_core = 824
+				add_state_core = 577
+				add_state_core = 571
+
+				inherit_technology = RUS
+				set_technology = { modern_artillery_1 = 1 }
+				load_oob = "SOCIALIST_RUSSIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}	
+
+		}
+		country_event = { id = russiaCW.4 days = 5 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+
+
+
+	option = { #Socialists Pops Up
+		name = russiaCW.2.b
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			SRU = {
+				transfer_state = 563
+				transfer_state = 565
+				transfer_state = 564
+				transfer_state = 566
+				transfer_state = 567
+				transfer_state = 568
+				transfer_state = 576
+				transfer_state = 516
+				transfer_state = 575
+				transfer_state = 40
+				transfer_state = 570
+				transfer_state = 578
+				transfer_state = 654
+				transfer_state = 569
+				transfer_state = 824
+				transfer_state = 577
+				transfer_state = 571
+
+				add_state_core = 563
+				add_state_core = 565
+				add_state_core = 564
+				add_state_core = 566
+				add_state_core = 567
+				add_state_core = 568
+				add_state_core = 576
+				add_state_core = 516
+				add_state_core = 575
+				add_state_core = 40
+				add_state_core = 570
+				add_state_core = 578
+				add_state_core = 654
+				add_state_core = 569
+				add_state_core = 824
+				add_state_core = 577
+				add_state_core = 571
+
+				inherit_technology = RUS
+				set_technology = { modern_artillery_1 = 1 }
+				load_oob = "SOCIALIST_RUSSIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}	
+
+			SRU = { change_tag_from = RUS }
+
+		}
+		country_event = { id = russiaCW.4 days = 5 }		
+			
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+
+country_event = {
+	id = russiaCW.3
+	title = russiaCW.3.t
+	desc = russiaCW.3.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Legitismists Pops Up
+		name = russiaCW.3.a
+		delete_unit_template_and_units  = {
+			division_template = "Russian Garrison"
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit_template_and_units  = {
+			division_template = "Russian Light Infantry"
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit_template_and_units  = {
+			division_template = "Russian Infantry Division"
+			disband = no #will refund equipment and manpower
+		}
+		hidden_effect = {
+			LRU = {
+				transfer_state = 824
+				transfer_state = 577
+				transfer_state = 571
+				transfer_state = 403
+
+				add_state_core = 824
+				add_state_core = 577
+				add_state_core = 571
+				add_state_core = 403
+
+				load_oob = "LEGITIMIST_RUSSIA"
+			}	
+		}
+		country_event = { id = russiaCW.4 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+
+	option = { #Legitismists Pops Up
+		name = russiaCW.3.b
+		delete_unit_template_and_units  = {
+			division_template = "Russian Garrison"
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit_template_and_units  = {
+			division_template = "Russian Light Infantry"
+			disband = no #will refund equipment and manpower
+		}
+		delete_unit_template_and_units  = {
+			division_template = "Russian Infantry Division"
+			disband = no #will refund equipment and manpower
+		}
+		hidden_effect = {
+			LRU = {
+				transfer_state = 824
+				transfer_state = 577
+				transfer_state = 571
+				transfer_state = 403
+
+				add_state_core = 824
+				add_state_core = 577
+				add_state_core = 571
+				add_state_core = 403
+
+				load_oob = "LEGITIMIST_RUSSIA"
+				}	
+
+			LRU = { change_tag_from = RUS }
+		}
+		country_event = { id = russiaCW.4 days = 4 }		
+	
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+
+country_event = {
+	id = russiaCW.4
+	title = russiaCW.4.t
+	desc = russiaCW.4.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Monarchists Pops Up
+		name = russiaCW.4.a
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			MRU = {
+				transfer_state = 579
+				transfer_state = 580
+				transfer_state = 653
+				transfer_state = 572
+				transfer_state = 652
+				transfer_state = 651
+				transfer_state = 581
+				transfer_state = 398
+				transfer_state = 399
+				transfer_state = 573
+				transfer_state = 905
+				transfer_state = 582
+				transfer_state = 403
+				transfer_state = 214
+				transfer_state = 923
+				transfer_state = 262
+				transfer_state = 825
+				transfer_state = 397
+				transfer_state = 924
+				transfer_state = 400
+				transfer_state = 833
+				transfer_state = 249
+				transfer_state = 251
+
+				add_state_core = 579
+				add_state_core = 580
+				add_state_core = 653
+				add_state_core = 572
+				add_state_core = 652
+				add_state_core = 651
+				add_state_core = 581
+				add_state_core = 398
+				add_state_core = 399
+				add_state_core = 573
+				add_state_core = 905
+				add_state_core = 582
+				add_state_core = 403
+				add_state_core = 214
+				add_state_core = 923
+				add_state_core = 262
+				add_state_core = 825
+				add_state_core = 397
+				add_state_core = 924
+				add_state_core = 400
+				add_state_core = 833
+				add_state_core = 249
+				add_state_core = 251
+
+				inherit_technology = RUS
+				load_oob = "IMPERIAL_RUSSIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}	
+		}
+		RUS = {	load_oob = "Prov_RUS" }
+		#####country_event = { id = russiaCW.6 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+
+
+	option = { #Monarchists Pops Up
+		name = russiaCW.4.b
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			MRU = {
+				transfer_state = 579
+				transfer_state = 580
+				transfer_state = 653
+				transfer_state = 572
+				transfer_state = 652
+				transfer_state = 651
+				transfer_state = 581
+				transfer_state = 398
+				transfer_state = 399
+				transfer_state = 573
+				transfer_state = 905
+				transfer_state = 582
+				transfer_state = 582
+				transfer_state = 403
+				transfer_state = 214
+				transfer_state = 923
+				transfer_state = 262
+				transfer_state = 825
+				transfer_state = 397
+				transfer_state = 924
+				transfer_state = 400
+				transfer_state = 833
+				transfer_state = 249
+				transfer_state = 251
+
+				add_state_core = 579
+				add_state_core = 580
+				add_state_core = 653
+				add_state_core = 572
+				add_state_core = 652
+				add_state_core = 651
+				add_state_core = 581
+				add_state_core = 398
+				add_state_core = 399
+				add_state_core = 573
+				add_state_core = 905
+				add_state_core = 582
+				add_state_core = 403
+				add_state_core = 214
+				add_state_core = 923
+				add_state_core = 262
+				add_state_core = 825
+				add_state_core = 397
+				add_state_core = 924
+				add_state_core = 400
+				add_state_core = 833
+				add_state_core = 249
+				add_state_core = 251
+			
+				inherit_technology = RUS
+				load_oob = "IMPERIAL_RUSSIA"
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 50
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 350
+				}
+			}	
+			RUS = {	load_oob = "Prov_RUS" }
+			MRU = { change_tag_from = RUS }
+		}
+		####country_event = { id = russiaCW.6 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+
+country_event = {
+	id = russiaCW.6
+	title = russiaCW.6.t
+	desc = russiaCW.6.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #West Russia Blows Up
+		name = russiaCW.6.a
+		hidden_effect = {
+			delete_unit_template_and_units  = {
+				division_template = "Russian Garrison"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Light Infantry"
+				disband = no #will refund equipment and manpower
+			}
+			delete_unit_template_and_units  = {
+				division_template = "Russian Infantry Division"
+				disband = no #will refund equipment and manpower
+			}
+			WR1 = {
+				inherit_technology = RUS
+            	transfer_state = 825
+				transfer_state = 262
+				transfer_state = 397
+            	transfer_state = 923
+
+            	add_state_core = 825
+				add_state_core = 262
+				add_state_core = 397
+            	add_state_core = 923
+			}
+
+			WR3 = {
+				inherit_technology = RUS
+				transfer_state = 265
+				transfer_state = 829
+				transfer_state = 239
+				transfer_state = 401
+
+				add_state_core = 265
+				add_state_core = 829
+				add_state_core = 239
+				add_state_core = 401
+			}
+
+			WR6 = {
+				inherit_technology = RUS
+				transfer_state = 251
+				transfer_state = 249
+				transfer_state = 250
+				transfer_state = 256
+
+				add_state_core = 251
+				add_state_core = 249
+				add_state_core = 250
+				add_state_core = 256
+			}
+
+			
+			WR5 = {
+				inherit_technology = RUS
+				transfer_state = 255
+				transfer_state = 926
+				transfer_state = 250
+				transfer_state = 256
+
+				add_state_core = 255
+				add_state_core = 926
+				add_state_core = 250
+				add_state_core = 256
+			}
+
+			WR4 = {
+				inherit_technology = RUS
+				transfer_state = 252
+				transfer_state = 925
+
+				add_state_core = 252
+				add_state_core = 925
+
+			}
+
+			WR7 = {
+				inherit_technology = RUS
+				transfer_state = 833
+
+				add_state_core = 833
+			}
+			
+			WR2 = {
+				inherit_technology = RUS
+				transfer_state = 400
+				transfer_state = 924
+
+				add_state_core = 400
+				add_state_core = 924
+			}
+		}
+		country_event = { id = russiaCW.5 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+
+country_event = {
+	id = russiaCW.5
+	title = russiaCW.5.t
+	desc = russiaCW.5.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Kaukasus Blows Up
+		name = russiaCW.5.a
+		set_cosmetic_tag = RUS_CW
+		hidden_effect = {
+			KW1 = {
+				inherit_technology = RUS
+				transfer_state = 217
+				transfer_state = 237
+				transfer_state = 236
+
+				add_state_core = 217
+				add_state_core = 237
+				add_state_core = 236
+			}
+
+			KW2 = {
+				inherit_technology = RUS
+				transfer_state = 218
+				transfer_state = 245
+
+				add_state_core = 218
+				add_state_core = 245
+			}	
+			
+			KW3 = {
+				inherit_technology = RUS
+				transfer_state = 232
+				transfer_state = 821	
+				transfer_state = 827	
+				
+				add_state_core = 232
+				add_state_core = 821	
+				add_state_core = 827
+		    }
+			KW4 = {
+				inherit_technology = RUS
+				transfer_state = 234
+				transfer_state = 235	
+				transfer_state = 233
+				transfer_state = 238
+				
+				add_state_core = 234
+				add_state_core = 235	
+				add_state_core = 233
+				add_state_core = 238
+		    }
+			ARM = {
+            	transfer_state = 230
+
+				add_state_core = 230
+			}
+			AZB = {
+				transfer_state = 229
+
+				add_state_core = 229
+			}
+			GEO = {
+				transfer_state = 231
+				transfer_state = 828
+				transfer_state = 826
+
+				add_state_core = 231
+				add_state_core = 828
+				add_state_core = 826
+			}		
+		}
+		country_event = { id = russiaCW.4 days = 4 }		
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+}
+
+country_event = {
+	id = russiaCW.7
+	title = russiaCW.7.t
+	desc = russiaCW.7.d
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = russiaCW.7.a
+		hidden_effect = {
+			country_event = {id = russiaCW.9 hours = 1}
+			EIZ = {
+				load_focus_tree = EUIZ_Opening_Moves
+				transfer_state = 886
+				change_tag_from = RUS
+				inherit_technology = RUS
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = russiaCW.8
+	hidden = yes
+	#picture = GFX_event_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		country_event = {id = russiaCW.1 days = 3}
+		country_event = {id = russiaCW.2 days = 10}
+		country_event = {id = russiaCW.4 days = 17}
+		country_event = {id = russiaCW.7 days = 24}
+	}
+	
+}
+
+country_event = {
+	id = russiaCW.9
+	hidden = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		EIZ = {
+			annex_country = {target = RUS}
+			set_capital = {
+				state = 206
+				remember_old_capital = no
+			}
+			load_oob = "EIZ_Starting_Units"
+		}
+	}
+}

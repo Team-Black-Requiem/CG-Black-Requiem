@@ -1,0 +1,165 @@
+add_namespace = SRU
+
+country_event = {  
+	id = SRU.1
+	title = SRU.1.t
+	desc = SRU.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = SRU.1.a
+		add_country_leader_trait = Daughter_of_communism
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }     
+}
+country_event = {  
+	id = SRU.2
+	title = SRU.2.t
+	desc = SRU.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = SRU.2.a
+		add_opinion_modifier = { target = LRU modifier = friendly }
+		LRU = {
+		add_opinion_modifier = { target = SRU modifier = friendly }}
+		
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+	option = {
+		name = SRU.2.b
+		add_opinion_modifier = { target = LRU modifier = friendly }
+		LRU = {
+		add_opinion_modifier = { target = SRU modifier = friendly }}
+		add_opinion_modifier = { target = MRU modifier = friendly }
+		MRU = {
+		add_opinion_modifier = { target = SRU modifier = friendly }}
+		add_political_power = -20
+		
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }     
+}
+country_event = {  
+	id = SRU.3
+	title = SRU.3.t
+	desc = SRU.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SRU.3.a
+		RUS = {
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}}
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+	option = {
+		name = SRU.3.b
+		add_political_power = -50
+		ai_chance = {
+			factor = 0
+		}
+		
+    }         
+}
+country_event = {  
+	id = SRU.4
+	title = SRU.4.t
+	desc = SRU.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SRU.4.a
+		RUS = {
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+		add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}}
+		ai_chance = {
+			factor = 50
+		}
+		
+    } 
+	option = {
+		name = SRU.4.b
+		add_political_power = -50
+		ai_chance = {
+			factor = 50
+		}
+		
+    }         
+}
+country_event = {  
+	id = SRU.5
+	title = SRU.5.t
+	desc = SRU.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = SRU.5.a ####Yes
+		SRU = { country_event = SRU.501 }
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+	option = {
+		name = SRU.5.B 
+		
+		ai_chance = {
+			factor = 0
+		}
+		
+    }    
+}
+country_event = {  
+	id = SRU.501
+	title = SRU.501.t
+	desc = SRU.501.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = SRU.501.a
+		diplomatic_relation = { country = LRU relation = non_aggression_pact }
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }     
+}
