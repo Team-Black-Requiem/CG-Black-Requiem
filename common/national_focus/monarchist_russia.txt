@@ -283,7 +283,11 @@ id = monarchist_russia_focus
 				 set_country_flag = {
 					flag = Grand_Embassy
 					value = 3
-				
+			}
+			set_country_flag = {
+				target = SRU	
+				flag = Grand_Embassy
+					value = 3
 			}
 		}
 	}
@@ -3181,6 +3185,11 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.28
+			country_flag = {
+				target = SRU
+				value = 0
+				flag = Monarchists_Reach_out
+			}
 		}
 
 }

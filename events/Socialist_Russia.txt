@@ -163,3 +163,296 @@ country_event = {
 		
     }     
 }
+
+
+### GRAND EMBASSY EVENT CHAIN##
+
+country_event = {
+	id = SRU.28
+	title = SRU.28.t
+	desc = SRU.28.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU.28.a 
+		ai_chance = {
+			factor = 100
+		}
+		country_event = MRU.29
+	}
+	
+}
+
+country_event = {
+	id = SRU.29
+	title = SRU.29.t
+	desc = SRU.29.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU.29.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+			
+		}
+	
+	country_event = MRU.30
+}
+	option = {
+
+		name = SRU.29.b
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.30
+}
+
+	option = {
+
+		name = SRU.29.c 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+	country_event = MRU.30
+}
+	
+}
+
+
+country_event = {
+	id = SRU.30
+	title = SRU.30.t
+	desc = SRU.30.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU.30.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+	country_event = MRU.31
+}
+
+	option = {
+
+		name = SRU.30.b
+		ai_chance = {
+		    factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.31
+}
+
+	option = {
+
+		name = SRU.30.c 
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+	country_event = MRU.31
+}
+	
+}
+
+
+country_event = {
+	id = SRU.31
+	title = SRU.31.t
+	desc = SRU.31.d
+   
+	is_triggered_only = yes
+    
+	option = {
+
+		name = SRU.31.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+    country_event = MRU.32
+}
+
+	option = {
+
+		name = SRU.31.b
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.32
+}
+
+	option = {
+
+		name = SRU.31.c 
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+
+	country_event = MRU.32
+}
+}
+
+
+country_event = {
+	id = SRU.32
+	title = SRU.32.t
+	desc = SRU.32.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU.32.a 
+		ai_chance = {
+			factor = 100
+		}
+	     modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	country_event = MRU.33
+}
+
+	option = {
+
+		name = SRU.32.b
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	country_event = MRU.33
+}
+
+	option = {
+
+		name = SRU.32.c 
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	country_event = MRU.33
+}
+}
+
+
+country_event = {
+	id = SRU.33
+	title = SRU.33.t
+	desc = SRU.33.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU.32.a 
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		
+	}
+	country_event = MRU.33
+}
+
+	option = {
+
+		name = SRU.32.b
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	country_event = MRU.33
+}
+
+	option = {
+
+		name = SRU.32.c 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		country_event = MRU.33
+		country_event = SRU.33
+	}	
+	
+}
+
+
+country_event = {
+	id = SRU.33
+	title = SRU.33.t
+	desc = SRU.33.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.33.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
