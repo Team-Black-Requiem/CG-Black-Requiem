@@ -154,7 +154,11 @@ country_event = {
 
 	option = {
 		name = MRU.8.a
-		
+		MRU_Vsevolod_Romanov = {set_character_flag = {
+			flag = my_flag
+			value = 3
+		}
+	}
 		ai_chance = {
 			factor = 100
 		}
@@ -576,7 +580,7 @@ country_event = {
 	
 	option = {
 	      
-		name = MRU.27.1
+		name = MRU.27.a
 		ai_chance = { factor = 0 }
 		add_political_power = -100
 		SMR = {
@@ -593,245 +597,288 @@ country_event = {
 country_event = {
 	id = MRU.28
 	title = MRU.28.t
-	desc = MRU.28.d 
+	desc = MRU.28.d
 
 	is_triggered_only = yes
 
 	option = {
-		
+
 		name = MRU.28.a 
-		modifier = {
-        modify_character_flag = {
-			flag = Tsar_leadership
-			value = 3
+		ai_chance = {
+			factor = 100
 		}
-	} 
-}
-
-	option = {
-		name = MRU.28.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
-}
-
-	option = {
-		name = MRU.28.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
+		country_event = MRU.29
 	}
+	
 }
-}
-
 
 country_event = {
 	id = MRU.29
 	title = MRU.29.t
-	desc = MRU.29.d 
+	desc = MRU.29.d
 
 	is_triggered_only = yes
-    
-	mean_time_to_happen = {
-		days = 9
-	}
 
 	option = {
+
 		name = MRU.29.a 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-	} 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+			
+		}
+	
+	country_event = MRU.30
 }
-
-
 	option = {
+
 		name = MRU.29.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.30
 }
 
 	option = {
+
 		name = MRU.29.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
-	}
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+	country_event = MRU.30
 }
+	
 }
+
+
 country_event = {
 	id = MRU.30
 	title = MRU.30.t
-	desc = MRU.30.d 
+	desc = MRU.30.d
 
 	is_triggered_only = yes
 
 	option = {
+
 		name = MRU.30.a 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-	} 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+	country_event = MRU.31
 }
 
 	option = {
-		name = MRU.31.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
+
+		name = MRU.30.b
+		ai_chance = {
+		    factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.31
 }
 
 	option = {
-		name = MRU.31.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
-	}
+
+		name = MRU.30.c 
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+	country_event = MRU.31
 }
+	
 }
+
 
 country_event = {
 	id = MRU.31
 	title = MRU.31.t
-	desc = MRU.31.d 
+	desc = MRU.31.d
+
 	is_triggered_only = yes
-    
-	trigger = {
-		tag = MRU
-		has_completed_focus = MRU_Grand_Embassy
-	}
+
+	option = {
+
+		name = MRU.31.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
 	
+    country_event = MRU.32
+}
+
 	option = {
+
+		name = MRU.31.b
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+	country_event = MRU.32
+}
+
+	option = {
+
+		name = MRU.31.c 
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+
+	country_event = MRU.32
+}
+}
+
+
+country_event = {
+	id = MRU.32
+	title = MRU.32.t
+	desc = MRU.32.d
+
+	is_triggered_only = yes
+
+	option = {
+
 		name = MRU.32.a 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-	} 
-	}
+		ai_chance = {
+			factor = 100
+		}
+	     modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	country_event = MRU.33
+}
+
 	option = {
+
 		name = MRU.32.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
-	}
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	country_event = MRU.33
+}
+
 	option = {
+
 		name = MRU.32.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
-	}
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	country_event = MRU.33
 }
 }
+
+
 country_event = {
 	id = MRU.33
 	title = MRU.33.t
-	desc = MRU.33.d 
+	desc = MRU.33.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = MRU.33.a 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-	} 
-	}
-	option = {
-		name = MRU.33.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
-	}
-	option = {
-		name = MRU.33.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
-	}
-}
-}
-country_event = {
-	id = MRU.34
-	title = MRU.34.t
-	desc = MRU.34.d 
 
-	is_triggered_only = yes
+		name = MRU.32.a 
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		
+	}
+	country_event = MRU.33
+}
 
 	option = {
-		name = MRU.34.a 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 3
-			}
-	} 
-	}
+
+		name = MRU.32.b
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	country_event = MRU.33
+}
+
 	option = {
-		name = MRU.34.b
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = 0
-			}
-	} 
-}
-	option = {
-		name = MRU.34.c 
-		modifier = {
-			modify_character_flag = {
-				flag = Tsar_leadership
-				value = -3
-			}
-	}
-}
-}
-country_event = {
-	id = MRU.35 ## KAZAKHSTAN RAIDED EVENT
-	title = MRU.35.t
-	desc = MRU.35.d
-	picture = GFX_report_event_japanese_transport_soldiers
+
+		name = MRU.32.c 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		country_event = MRU.33
+	}	
 	
+}
+
+
+country_event = {
+	id = MRU.33
+	title = MRU.33.t
+	desc = MRU.33.d
+
 	is_triggered_only = yes
+    
 	
 	option = {
-	      
-		name = MRU.35.1
-		ai_chance = { factor = 100 }
-		add_political_power = -100
-		add_stability = -0.05
+		 
+		name = MRU.32.a 
+		ai_chance = {
+			factor = 100
+		}
+		
 	}
 }

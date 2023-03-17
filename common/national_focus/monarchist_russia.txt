@@ -285,11 +285,15 @@ id = monarchist_russia_focus
 			    add_ideas = MRU_Crisis_Of_GovermentV1
 			hidden_effect = {
 				remove_ideas = MRU_Crisis_Of_GovermentV2
+				 set_country_flag = {
+					flag = Grand_Embassy
+					value = 3
 				
 			}
 		}
+	}
 
-    }
+}
 ########## Political Tsar Path ########
 	focus = {
 		id = MRU_Restoring_Tzarist_Institutions
@@ -1388,7 +1392,7 @@ id = monarchist_russia_focus
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = support_tech
+				category = field_hospital_company_tech
 			}
 
 			add_equipment_to_stockpile = {
@@ -2346,7 +2350,7 @@ id = monarchist_russia_focus
 			factor = 10
 		}
 		completion_reward = { 
-			add_equipment_to_stockpile {
+			add_equipment_to_stockpile = {
 				amount = 200
 				type = motorized_equipment
 			}
@@ -2404,7 +2408,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-			add_equipment_to_stockpile{
+			add_equipment_to_stockpile = {
 				amount = 100
 				type = mbt_1
 			}
@@ -3163,9 +3167,9 @@ id = monarchist_russia_focus
 		x = 0
 		y = 6
 		available = {
-			any_character = { has_character_flag = Tsar_leadership   }
-
+			country_exists = MRU
 		}
+
 		bypass = { }
 
 		prerequisite = {
@@ -3181,11 +3185,9 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-			country_event = { id = MRU.28 days = 15 }	
-            
 		}
 
-    }
+}
 
 	focus = {
 		id = MRU_First_Contact
@@ -3210,6 +3212,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+		
 		}
 
     }
@@ -3224,7 +3227,13 @@ id = monarchist_russia_focus
 		y = 1
 		available = {
 			country_exists = MRU
-	
+		
+                has_country_flag = {
+                  flag = Grand_Embassy
+                  value > 5
+				}
+			
+		
 		}
 		bypass = { }
 
@@ -3655,7 +3664,7 @@ id = monarchist_russia_focus
 		bypass = { }
 
 		prerequisite = {
-			focus = MRU_Shared_Investment_Fund focs = MRU_Joint_Military_TrainingVII
+			focus = MRU_Shared_Investment_Fund focus = MRU_Joint_Military_TrainingVII
 		}
 		
 	
@@ -3822,7 +3831,13 @@ id = monarchist_russia_focus
 		y = 1
 		available = {
 			country_exists = MRU
-		}
+		
+              has_country_flag = {
+                  flag = Grand_Embassy
+                  value < -5
+                 }
+            
+        }
 		bypass = { }
 
 		prerequisite = {
@@ -4207,7 +4222,9 @@ id = monarchist_russia_focus
 		y = 1
 		available = {
 			country_exists = MRU
+			
 		}
+	
 		bypass = { }
 
 		prerequisite = {
