@@ -10,7 +10,7 @@ focus_tree = {
 
 	focus = {
 		id = remember_sonya
-		icon = GFX_goal_generic_construction
+		icon = "gfx\interface\goals\BWR\sonya_polish.dds"
 		prerequisite = {}
 		x = 15
 		y = 1
@@ -30,7 +30,7 @@ focus_tree = {
 
     focus = {
 		id = the_new_face_of_russia
-		icon = GFX_goal_generic_construction
+		icon = "gfx\interface\goals\BWR\New_face_of_russia.dds"
 		prerequisite = {focus = remember_sonya}
 		x = 15
 		y = 3
@@ -69,8 +69,8 @@ focus = {
 	}
 
     focus = {
-		id = bear_economics
-		icon = GFX_goal_generic_construction
+		id = bear_market
+		icon = "gfx\interface\goals\BWR\bear_ecnomics.dds"
 		prerequisite = {focus = the_new_face_of_russia}
 		x = 14
 		y = 5
@@ -110,7 +110,7 @@ focus = {
 
     focus = {
 		id = beary_good
-		icon = GFX_goal_generic_construction
+		icon = "gfx\interface\goals\BWR\bearry_good.dds"
 		prerequisite = {focus = the_new_face_of_russia}
 		x = 18
 		y = 5
@@ -132,9 +132,9 @@ focus = {
 		id = train_the_bears_for_war
 		icon = GFX_goal_generic_construction
 		prerequisite = {focus = bear_economy}
-        prerequisite = { focus = bear_economics}
+        prerequisite = { focus = bear_market}
 		x = 13
-		y = 6focus
+		y = 6
 
 		cost = 10
 
