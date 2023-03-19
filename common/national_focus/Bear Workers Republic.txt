@@ -1,0 +1,442 @@
+focus_tree = {
+	id = BWR
+	
+	country = {
+		factor = 100
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+
+	focus = {
+		id = remember_sonya
+		icon = GFX_goal_generic_construction
+		prerequisite = {}
+		x = 15
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = the_new_face_of_russia
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = remember_sonya}
+		x = 15
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+focus = {
+		id = bear_economy
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 12
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = bear_economics
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 14
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = bear_necessities
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 16
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = beary_good
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 18
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = train_the_bears_for_war
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = bear_economy}
+        prerequisite = { focus = bear_economics}
+		x = 13
+		y = 6focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = call_out_to_the_international_bears
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = bear_necessities}
+        prerequisite = {focus = beary_good}
+		x = 17
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = bear_revolution
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = train_the_bears_for_war}
+		x = 14
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+
+    focus = {
+		id = put_the_bears_on_boats
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = bear_revolution}
+		x = 12
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = beary_good_navy
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = put_the_bears_on_boats}
+		x = 12
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = establish_knightbears
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = call_out_to_the_international_bears}
+		x = 16
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = planes_fit_for_a_bear
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = establish_knightbears}
+		x = 18
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+      focus = {
+		id = getting_our_bearings
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = planes_fit_for_a_bear}
+		x = 18
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = release_the_war_bears
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = getting_our_bearings}
+        prerequisite = {focus = beary_good_navy}
+		x = 15
+		y = 13
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = bears_are_unstoppable
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = release_the_war_bears}
+		x = 15
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+       focus = {
+		id = bear_law
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = release_the_war_bears}
+		x = 17
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+        focus = {
+		id = sonya_will_be_avenged
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = release_the_war_bears}
+		x = 13
+		y = 15
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+        focus = {
+		id = force_the_humans_to_fight 
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = sonya_will_be_avenged}
+        prerequisite = {focus = bear_law}
+        prerequisite = {focus = bears_are_unstoppable}
+		x = 14
+		y = 17
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+      focus = {
+		id = expand_bear_knights
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = sonya_will_be_avenged}
+        prerequisite = {focus = bear_law}
+        prerequisite = {focus = bears_are_unstoppable}
+		x = 16
+		y = 17
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+     focus = {
+		id = beartality
+		icon = GFX_goal_generic_construction
+		prerequisite = {focus = force_the_humans_to_fight}
+        prerequisite = {focus = expand_bear_knights}
+
+		x = 15
+		y = 19
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+
+     
+}
