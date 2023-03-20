@@ -5,12 +5,12 @@ characters = {
 		name="Puka Pavlov"
 		portraits={
 			civilian={
-				large="PLACEHOLDER"
+				large="gfx\leaders\BWR\puka_pavlov.dds"
 			}
 		}
 		
 		army = {
-				large = 
+				large = "gfx\leaders\BWR\puka_pavlov.dds"
 			}
 		country_leader={
 			desc = "	"
@@ -119,6 +119,40 @@ BWR_wojtek = {
 }
 }
 
+###Admiral###
+EIZ_fur = {
+		name = "Brown Fur"
+		portraits = {
+			army = {
+				large = "gfx\leaders\BWR\brown_fur.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\BWR\brown_fur.dds"
+			}
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			maneuvering_skill=5
+			coordination_skill=5
+		}
 
+		advisor = {
+			slot = navy_chief
+			idea_token = BWR_generic_navy_idea
+			allowed = {
+				original_tag = BWR
+			}
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
 }
