@@ -7,11 +7,10 @@ characters = {
 			civilian={
 				large="gfx\leaders\BWR\puka_pavlov.dds"
 			}
-		}
-		
-		army = {
+			army = {
 				large = "gfx\leaders\BWR\puka_pavlov.dds"
 			}
+		}
 		country_leader={
 			desc = "	"
 			ideology= syndacalism
@@ -97,6 +96,25 @@ BWR_bearkkossky = {
 			logistics_skill = 3
 }
 }
+BWR_beardolf = {
+	name = "Beardolf Betler"
+	portraits = {
+		army = {
+			large = "gfx\leaders\BWR\Beardolf_Betler.dds"
+		}
+		civilian = {
+			large = "gfx\leaders\BWR\Beardolf_Betler.dds"
+		}
+	}
+	corps_commander = {
+		traits = {panzer_leader panzer_expert logistics_wizard aggressive_assaulter}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+}
+}
 
 ###Field Marshalls###
 BWR_wojtek = {
@@ -118,6 +136,25 @@ BWR_wojtek = {
 			logistics_skill = 4
 }
 }
+BWR_Puka_Pavlov_Marshall = {
+	name="Puka Pavlov"
+	portraits={
+		army = {
+			large = "gfx\leaders\BWR\puka_pavlov.dds"
+		}
+		civilian={
+			large="gfx\leaders\BWR\puka_pavlov.dds"
+		}
+	}
+	field_marshal = {
+		traits = {logistics_wizard aggressive_assaulter}
+		skill = 5
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+}
+}
 
 ###Admiral###
 BWR_fur = {
@@ -129,12 +166,12 @@ BWR_fur = {
 			civilian = {
 				large = "gfx\leaders\BWR\brown_fur.dds"
 			}
-		portraits={
-			army={
+
+		}
+		portraits = {
+			army = {
 				small="gfx\interface\ideas\BWR\Bear.dds"
 			}
-		}
-
 		}
 			navy_leader={
 			traits={ gentlemanly naval_lineage}

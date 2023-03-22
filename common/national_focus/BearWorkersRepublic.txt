@@ -32,6 +32,7 @@ country = {
 		
 		completion_reward = {
 			add_political_power = 300
+			country_event = BWR.2
 			
 			}
 	}
@@ -53,6 +54,7 @@ country = {
 		}
 
 		completion_reward = {
+			country_event = BWR.3
 		}
 	}
 
@@ -193,7 +195,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_Trained_Bears_Idea
+			country_event = BWR.4
 		}
 	}
 
@@ -215,6 +217,7 @@ focus = {
 		}
 
 		completion_reward = {
+			country_event = BWR.5
 		}
 	}
 
@@ -257,6 +260,7 @@ focus = {
 		}
 
 		completion_reward = {
+			load_oob = BWR_navy
 		}
 	}
 
@@ -298,6 +302,8 @@ focus = {
 		}
 
 		completion_reward = {
+			load_oob = BWR_knightmares
+			add_ideas = BWR_Bear_Knightmares
 		}
 	}
 
@@ -323,6 +329,42 @@ focus = {
                 uses = 3
                 bonus = 0.5
             }
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_fighter_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_CAS_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = strat_bomber_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_strat_bomber_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_naval_bomber_airframe_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_small_plane_naval_bomber_airframe_0
+				amount = 200
+			}
 		}
 	}
 
@@ -365,7 +407,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_War_Bears
+			country_event = BWR.6
 		}
 	}
 
@@ -427,6 +469,8 @@ focus = {
 
 		completion_reward = {
 			add_ideas = BWR_sonya_will_be_avenged_idea
+			add_country_leader_trait = BWR_sonya_will_be_avanged
+			recruit_character = BWR_Puka_Pavlov_Marshall
 		}
 	}
 
@@ -449,6 +493,7 @@ focus = {
 		}
 
 		completion_reward = {
+			country_event = BWR.7
 		}
 	}
 
@@ -471,6 +516,7 @@ focus = {
 		}
 
 		completion_reward = {
+			country_event = BWR.8
 		}
 	}
 
@@ -493,6 +539,7 @@ focus = {
 		}
 
 		completion_reward = {
+			country_event = BWR.9
 		}
 	}
 }

@@ -48,11 +48,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				
+				supply_node_range = 0.2
 			}
 
 			equipment_bonus = {
-				infantry_equipment{
+				infantry_equipment = {
 				   reliability_factor = 0.15
 			   }
 			 }
@@ -109,6 +109,27 @@ ideas = {
 			}
 		}
 
+		BWR_Bear_Knightmares= {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				knightmare_all_pur = {
+					build_cost_ic = -0.2
+			   }
+			 }
+		}
+
 		
 
 		BWR_Bear_Air_Two={
@@ -158,7 +179,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory = 0.05
-				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.2
 			
 			}
 		}
@@ -178,7 +199,24 @@ ideas = {
 				surrender_limit = 0.8
 
 				org_loss_when_moving = -0.2
-				army_defence_factor = 0.05
+				army_defence_factor = 0.1
+			}
+		}
+
+		BWR_beartality = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 		}
 
