@@ -1234,17 +1234,23 @@ BWR_force_the_humans_to_fight = {
 		}
 		available = {
 			has_completed_focus = force_the_humans_to_fight
+			has_equipment = {
+				infantry_equipment_0 > 19999
+			}
+			has_manpower > 19999
 		}
 		visible = {
 			
 		}
 		cost = 0
-		fire_only_once = yes
+		days_re_enable = 30
 		ai_will_do = {
 			factor = 0
 		}
 		complete_effect = { 
 				load_oob = BWR_humans
+				add_manpower = -20000
+				
 		}
 	}
 }	
