@@ -4,7 +4,7 @@ BWR_the_bears_of_revolution = {
 
 		name = BWR_integrate_commune
 
-		icon = generic_nationalism
+		icon = ''
 
 		allowed = {
 			original_tag = BWR
@@ -47,26 +47,52 @@ BWR_the_bears_of_revolution = {
 						is_owned_by = ROOT
 					}
 					NOT = {
-						state = 41
-						state = 165
-						state = 166
-						state = 167
-						state = 168
-						state = 169
-						state = 170
-						state = 171
-						state = 172
-						state = 173
-						state = 174
-						state = 175
-						state = 176
-						state = 788
-						state = 789
-						state = 790
-						state = 791
-						state = 792
-						state = 793
-						state = 794
+						state = 637
+						state = 822
+						state = 562
+						state = 644
+						state = 574
+						state = 563
+						state = 565
+						state = 564
+						state = 566
+						state = 567
+						state = 568
+						state = 576
+						state = 516
+						state = 575
+						state = 40
+						state = 570
+						state = 578
+						state = 654
+						state = 569
+						state = 824
+						state = 577
+						state = 571
+						state = 579
+						state = 580
+						state = 653
+						state = 572
+						state = 652
+						state = 651
+						state = 581
+						state = 398
+						state = 399
+						state = 573
+						state = 905
+						state = 582
+						state = 403
+						state = 214
+						state = 923
+						state = 262
+						state = 825
+						state = 397
+						state = 924
+						state = 400
+						state = 833
+						state = 249
+						state = 251
+						state = 207
 					}
 				}
 				compliance > 35
@@ -105,7 +131,7 @@ BWR_the_bears_of_revolution = {
 
 		name = BWR_integrate_commune
 
-		icon = generic_nationalism
+		icon = ''
 
 		allowed = {
 			original_tag = BWR
@@ -148,26 +174,52 @@ BWR_the_bears_of_revolution = {
 						is_owned_by = ROOT
 					}
 					NOT = {
-						state = 41
-						state = 165
-						state = 166
-						state = 167
-						state = 168
-						state = 169
-						state = 170
-						state = 171
-						state = 172
-						state = 173
-						state = 174
-						state = 175
-						state = 176
-						state = 788
-						state = 789
-						state = 790
-						state = 791
-						state = 792
-						state = 793
-						state = 794
+						state = 637
+						state = 822
+						state = 562
+						state = 644
+						state = 574
+						state = 563
+						state = 565
+						state = 564
+						state = 566
+						state = 567
+						state = 568
+						state = 576
+						state = 516
+						state = 575
+						state = 40
+						state = 570
+						state = 578
+						state = 654
+						state = 569
+						state = 824
+						state = 577
+						state = 571
+						state = 579
+						state = 580
+						state = 653
+						state = 572
+						state = 652
+						state = 651
+						state = 581
+						state = 398
+						state = 399
+						state = 573
+						state = 905
+						state = 582
+						state = 403
+						state = 214
+						state = 923
+						state = 262
+						state = 825
+						state = 397
+						state = 924
+						state = 400
+						state = 833
+						state = 249
+						state = 251
+						state = 207
 					}
 				}
 				compliance > 35
@@ -204,7 +256,7 @@ BWR_the_bears_of_revolution = {
 
 	BWR_ignite_uprising = {
 
-		icon = generic_ignite_civil_war
+		icon = ''
 
 		allowed = {
 			original_tag = BWR
@@ -1142,7 +1194,7 @@ BWR_the_bears_of_revolution = {
 
 	BWR_ignite_uprising_timer_mission = {
 
-		icon = generic_ignite_civil_war
+		icon = ''
 
 		available = {
 			hidden_trigger = { always = no }
@@ -1171,3 +1223,29 @@ BWR_the_bears_of_revolution = {
 	}
 
 }
+
+recruit_divisions = {
+	BWR_recruit_divisions = {
+
+		icon = ''
+
+		allowed = {
+			tag = BWR
+		}
+		available = {
+			has_completed_focus = force_the_humans_to_fight
+		}
+		visible = {
+			
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = { 
+				load_oob = BWR_humans
+			
+		}
+	}
+}	
