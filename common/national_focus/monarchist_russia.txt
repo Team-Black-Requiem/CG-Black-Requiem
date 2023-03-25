@@ -1581,6 +1581,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
+		set_country_flag = civilian_investment
 		}
 
 	}
@@ -1612,6 +1613,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
+		set_country_flag = inderstry_investment
 		}
 
 	}
@@ -1643,11 +1645,46 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
-		}
+		set_country_flag = public_fund
 
+		if = {
+			limit = {
+				has_country_flag = civilian_investment
+				has_country_flag = inderstry_investment
+				has_country_flag = public_fund
+			}
+			 set_country_flag = modernized_economy1 
+			}
 		
+else_if = {
+	limit = {
+	has_country_flag = civilian_investment
+	has_country_flag = production_ivestment
+	has_country_flag = public_fund
+}
+set_country_flag = modernized_economy2
+}
+else_if = {
+	limit = {
+	has_country_flag = military_investment
+	has_country_flag = production_ivestment
+	has_country_flag = public_fund
+}
+set_country_flag = modernized_economy3
+}
+else_if = {
+	limit = {
+	has_country_flag = military_investment
+	has_country_flag = inderstry_investment
+	has_country_flag = public_fund
 
+       }
+	   set_country_flag = modernized_economy4
     }
+	
+ }
+}
+
 
 	focus = {
 		id = MRU_Planned_Budget_B_I
@@ -1676,6 +1713,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
+		set_country_flag = military_investment
 		}
 
 	}
@@ -1706,6 +1744,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
+		set_country_flag = production_ivestment
 		}
 
 	}
@@ -1737,8 +1776,44 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			add_ideas = MRU_Planned_EconomyV1
-		}
+	    set_country_flag = state_fund
+		
+		if = {
+			limit = {
+				has_country_flag = civilian_investment
+				has_country_flag = inderstry_investment
+				has_country_flag = state_fund
+			}
+			 set_country_flag = modernized_economy5 
+			}
+		
+else_if = {
+	limit = {
+	has_country_flag = civilian_investment
+	has_country_flag = production_ivestment
+	has_country_flag = state_fund
+}
+set_country_flag = modernized_economy6
+}
+else_if = {
+	limit = {
+	has_country_flag = military_investment
+	has_country_flag = production_ivestment
+	has_country_flag = state_fund
+}
+set_country_flag = modernized_economy7
+}
+else_if = {
+	limit = {
+	has_country_flag = military_investment
+	has_country_flag = inderstry_investment
+	has_country_flag = state_fund
 
+       }
+	   set_country_flag = modernized_economy8
+    }
+		}
+    
 	}
 
 	focus = {
@@ -1816,6 +1891,8 @@ id = monarchist_russia_focus
 		y = 1
 		available = {
 			country_exists = MRU
+			has_completed_focus = MRU_Planned_Budget_A_III
+			has_completed_focus = MRU_Planned_Budget_b_III
 		}
 		bypass = { }
 
@@ -1829,8 +1906,67 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
-			add_ideas = MRU_Planned_EconomyV4
-
+		
+			if = {
+				limit = {
+					has_country_flag = modernized_economy1
+				
+				}
+				add_ideas = MRU_Planned_budgetV2 
+				}
+			
+	else_if = {
+		limit = {
+		has_country_flag = modernized_economy2
+		
+	}
+	add_ideas = MRU_Planned_budgetV3
+	}
+	else_if = {
+		limit = {
+		has_country_flag = modernized_economy3
+		
+	}
+	add_ideas = MRU_Planned_budgetV4
+	}
+	else_if = {
+		limit = {
+		has_country_flag = modernized_economy4
+		
+	    }
+		   add_ideas = MRU_Planned_budgetV1
+		}
+	else_if = {
+			limit = {
+			has_country_flag = modernized_economy5
+			
+		}
+		add_ideas = MRU_Planned_budgetV5
+		}
+	else_if = {
+			limit = {
+			has_country_flag = modernized_economy6
+			
+		}
+        add_ideas = MRU_Planned_budgetV7
+		}
+	else_if = {
+			limit = {
+			has_country_flag = modernized_economy7
+			
+		
+	    }
+		    add_ideas = MRU_Planned_budgetV8
+		}
+	else_if = {
+			limit = {
+				has_country_flag = modernized_economy8
+				
+			}
+			add_ideas = MRU_Planned_budgetV6
+			}
+		
+           
 			hidden_effect = {
 				remove_ideas = MRU_Planned_EconomyV3
 			}
@@ -3185,7 +3321,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.28
-			country_flag = {
+			set_country_flag = {
 				target = SRU
 				value = 0
 				flag = Monarchists_Reach_out

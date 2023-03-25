@@ -16,13 +16,6 @@ country_event = {
 			factor = 33
 		}
 
-    hidden_effect = {
-      EIZ = {
-        set_variable = {FrenchInfluence = 0}    #Sidd, these were on line 2 and were not scoped to anything
-        set_variable = {GermanInfluence = 0}    #as a result nothing was being set to zero and the variable didn't actually exist until the add_to_variable below
-        set_variable = {AustrianInfluence = 0}  #you've got to scope these to something or else it won't work. Even if that scope is "scopeless".
-      }                                         #Set_variable and other variable operators are effects, so they'd need to be inside of an option={} or immediate={} inside an event.  
-    }                                           #Not a big issue but I figured I'd leave a comment for posterity -Bob
     add_ideas = Economic_shables
     } 
 }
@@ -88,10 +81,13 @@ is_triggered_only = yes
           state = 219
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = 3
+        }
       }
 
-      add_to_variable = {FrenchInfluence = 1}
-  
+ 
   ai_chance = {
     factor = 33
   }
@@ -112,9 +108,12 @@ is_triggered_only = yes
           state = 195
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = 0
+        }
       }
-  add_to_variable = {GermanInfluence = 1}
-
+ 
   ai_chance = {
     factor = 33
   }
@@ -135,9 +134,12 @@ is_triggered_only = yes
           state = 137
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = -3
+        }
       }
-  add_to_variable = {AustrianInfluence = 1}
-
+ 
   ai_chance = {
     factor = 33
   }
@@ -155,12 +157,24 @@ country_event = {
 
   option = {
     name = EIZ.5.a
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 3
+    }
   }
   option = {
     name = EIZ.5.b
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 0
+    }
   }
   option = {
     name = EIZ.5.c
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = -3
+    }
   }
 
 }
@@ -175,12 +189,24 @@ country_event = {
 
    option = {
       name = EIZ.6.b
+      modify_country_flag = {
+        flag = eiz_leadership 
+        value = 3
+      }
     }
      option = {
        name = EIZ.6.a
+       modify_country_flag = {
+        flag = eiz_leadership 
+        value = 0
+      }
    }
    option = {
        name = EIZ.6.c
+       modify_country_flag = {
+        flag = eiz_leadership 
+        value = -3
+      }
   }
 
 }
@@ -195,12 +221,24 @@ country_event = {
 
   option = {
     name = EIZ.7.a
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 3
+    }
   }
   option = {
     name = EIZ.7.b
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 0
+    }
   }
   option = {
     name = EIZ.7.c
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = -3
+    }
   }
 
 }
