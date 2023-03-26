@@ -14,7 +14,7 @@ country = {
 
 	focus = {
 		id = remember_sonya
-		icon = "gfx\interface\goals\BWR\sonya_polish.dds"
+		icon = GFX_remember_sonya
 		prerequisite = {}
 		x = 15
 		y = 1
@@ -24,6 +24,8 @@ country = {
 		ai_will_do = {
 			factor = 1
 		}
+		visible = always 
+		
 		complete_tooltip = {
 
 		}
@@ -39,7 +41,7 @@ country = {
 
     focus = {
 		id = the_new_face_of_russia
-		icon = "gfx\interface\goals\BWR\New_face_of_russia.dds"
+		icon = GFX_the_new_face_of_russia
 		prerequisite = {focus = remember_sonya}
 		x = 15
 		y = 3
@@ -81,7 +83,7 @@ focus = {
 
     focus = {
 		id = bear_market
-		icon = "gfx\interface\goals\BWR\bear_ecnomics.dds"
+		icon = GFX_bear_market
 		prerequisite = {focus = the_new_face_of_russia}
 		x = 14
 		y = 5
@@ -158,7 +160,7 @@ focus = {
 
     focus = {
 		id = beary_good
-		icon = "gfx\interface\goals\BWR\bearry_good.dds"
+		icon = GFX_beary_good
 		prerequisite = {focus = the_new_face_of_russia}
 		x = 18
 		y = 5
