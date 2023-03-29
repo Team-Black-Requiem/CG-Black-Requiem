@@ -87,6 +87,16 @@ BWR_bearkkossky = {
 				large = "gfx\leaders\BWR\Bearkossky.dds"
 			}
 		}
+
+		portraits={
+			army={
+				small=
+			}
+			civillian={
+				small=
+			}
+		}
+
 		corps_commander = {
 			traits = {}
 			skill = 3
@@ -94,18 +104,42 @@ BWR_bearkkossky = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BWR_generic_air_idea
+			allowed = {
+				original_tag = BWR
+			}
+			traits = {
+				naval_aviation_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.500
+			}
+		}
 }
 BWR_beardolf = {
 	name = "Beardolf Betler"
 	portraits = {
 		army = {
-			large = "gfx\leaders\BWR\Beardolf_Betler.dds"
+			large = "gfx\leaders\BWR\betler.dds"
 		}
 		civilian = {
-			large = "gfx\leaders\BWR\Beardolf_Betler.dds"
+			large = "gfx\leaders\BWR\betler.dds"
 		}
 	}
+
+		portraits={
+			army={
+				small=
+			}
+			civillian={
+				small=
+			}
+		}
+
 	corps_commander = {
 		traits = {panzer_leader panzer_expert logistics_wizard aggressive_assaulter}
 		skill = 5
@@ -113,7 +147,23 @@ BWR_beardolf = {
 		defense_skill = 5
 		planning_skill = 5
 		logistics_skill = 5
-}
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = BWR_katase_idea
+			ledger = army
+			allowed = {
+				original_tag = BWR
+			}
+			traits = {
+				superior_firepower_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
 }
 
 ###Field Marshalls###
@@ -127,6 +177,16 @@ BWR_wojtek = {
 				large = "gfx\leaders\BWR\Wojtek.dds"
 			}
 		}
+
+	portraits={
+			army={
+				small=
+			}
+			civillian={
+				small=
+			}
+		}
+
 		field_marshal = {
 			traits = {}
 			skill = 4
@@ -135,7 +195,22 @@ BWR_wojtek = {
 			planning_skill = 4
 			logistics_skill = 4
 }
-}
+
+		advisor={
+			slot = army_chief
+			idea_token = BWR_tohdoh
+			allowed = {
+				original_tag = BWR
+			}
+			traits = {
+				armoured_spearhead_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 BWR_Puka_Pavlov_Marshall = {
 	name="Puka Pavlov"
 	portraits={
@@ -155,6 +230,8 @@ BWR_Puka_Pavlov_Marshall = {
 		logistics_skill = 5
 }
 }
+
+###High Command Only Characters
 
 ###Admiral###
 BWR_fur = {
