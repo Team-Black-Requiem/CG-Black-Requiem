@@ -13,6 +13,39 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	knightmare_frame_3 = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	eu_war_artillery = 1
+	support_equip = 1
+	cold_war_tank = 1
+	tank_design = 1
+	eu_war_anti_air = 1
+	armored_car1 = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_cruiser = 1
+	}
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
+	set_technology = {
+		early_submarine = 1
+		early_carrier = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
 }
 
 set_politics = {
