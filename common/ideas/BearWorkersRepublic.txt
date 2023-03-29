@@ -142,7 +142,9 @@ ideas = {
 			}
 
 			removal_cost = -1
-
+			research_bonus = {
+				air_equipment = 0.4
+			}
 			modifier = {
 				air_attack_factor = 0.2
 				air_defence_factor = 0.2
@@ -162,6 +164,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
 				army_speed_factor = 0.1
 			}
 		}
@@ -197,7 +201,9 @@ ideas = {
 
 			modifier = {
 				surrender_limit = 0.8
-
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				army_speed_factor = 0.1
 				org_loss_when_moving = -0.2
 				army_defence_factor = 0.1
 			}
@@ -213,12 +219,33 @@ ideas = {
 			}
 
 			removal_cost = -1
-
+         
 			modifier = {
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
+				surrender_limit = 0.8
+				army_attack_factor = 0.3
+				army_defence_factor = 0.4
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.2
+			
 			}
 		}
+        
+		BWR_Air = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost = -1
+            research_bonus = {
+				air_equipment = 0.6
+			}
+			
+		}
+        
+		
 	}
 }

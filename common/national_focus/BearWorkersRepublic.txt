@@ -24,13 +24,6 @@ country = {
 		ai_will_do = {
 			factor = 1
 		}
-		visible = always 
-		
-		complete_tooltip = {
-
-		}
-
-		
 		
 		completion_reward = {
 			add_political_power = 300
@@ -72,10 +65,7 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
 			add_ideas = BWR_bear_economy_idea
 		}
@@ -93,10 +83,7 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_resource = {
@@ -149,9 +136,6 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
 			add_ideas = BWR_bear_necessities_idea
@@ -170,10 +154,7 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
 			add_ideas = BWR_Beary_good_idea
 		}
@@ -192,12 +173,12 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
-			country_event = BWR.4
+			custom_effect_tooltip = 4_BWR.tt
+		    hidden_effect = {
+				country_event = BWR.4
+			}
 		}
 	}
 
@@ -214,18 +195,18 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
+			custom_effect_tooltip = 3_BWR.tt
 			country_event = BWR.5
-recruit_character = BWR_oso
+        hidden_effect = {
+			recruit_character = BWR_oso
 recruit_character = BWR_bearshev
 recruit_character = BWR_bearkov
 recruit_character = BWR_bearkkossky
 recruit_character = BWR_wojtek
 recruit_character = BWR_fur
+		}
 		}
 	}
 
@@ -240,9 +221,6 @@ recruit_character = BWR_fur
 
 		ai_will_do = {
 			factor = 1
-		}
-		complete_tooltip = {
-
 		}
 
 		completion_reward = {
@@ -263,12 +241,13 @@ recruit_character = BWR_fur
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
 
 		completion_reward = {
-			load_oob = BWR_navy
+	    custom_effect_tooltip = 2_BWR.tt
+
+			hidden_effect = {
+				load_oob = BWR_navy
+			}
 		}
 	}
 
@@ -283,9 +262,6 @@ recruit_character = BWR_fur
 
 		ai_will_do = {
 			factor = 1
-		}
-		complete_tooltip = {
-
 		}
 
 		completion_reward = {
@@ -310,12 +286,16 @@ recruit_character = BWR_fur
 		}
 
 		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = knightmare_mass_prod_1
-				amount = 1200
-			}
-			load_oob = BWR_knightmares
+			custom_effect_tooltip = 1_BWR.tt
 			add_ideas = BWR_Bear_Knightmares
+
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = knightmare_mass_prod_1
+					amount = 1200
+				}
+				load_oob = BWR_knightmares
+			}
 		}
 	}
 
@@ -331,16 +311,10 @@ recruit_character = BWR_fur
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
-			add_tech_bonus = {
-                category = air_equipment
-                uses = 3
-                bonus = 0.5
-            }
+		
+			add_ideas = BWR_air
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_0
 				amount = 200
@@ -398,6 +372,10 @@ recruit_character = BWR_fur
 
 		completion_reward = {
 			add_ideas = BWR_Bear_Air_Two
+
+			hidden_effect = {
+				remove_ideas = BWR_air
+			}
 		}
 	}
 
@@ -441,6 +419,10 @@ recruit_character = BWR_fur
 
 		completion_reward = {
 			add_ideas = BWR_bears_are_unpawable_idea
+		
+		hidden_effect = {
+			remove_ideas = BWR_War_Bears
+		}
 		}
 	}
 
@@ -456,11 +438,9 @@ recruit_character = BWR_fur
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
+			custom_effect_tooltip = 8_BWR.tt
 		}
 	}
         focus = {
@@ -482,7 +462,10 @@ recruit_character = BWR_fur
 		completion_reward = {
 			add_ideas = BWR_sonya_will_be_avenged_idea
 			add_country_leader_trait = BWR_sonya_will_be_avanged
-			recruit_character = BWR_Puka_Pavlov_Marshall
+			custom_effect_tooltip = 5_BWR.tt
+			hidden_effect = {
+				recruit_character = BWR_Puka_Pavlov_Marshall
+			}
 		}
 	}
 
@@ -505,6 +488,7 @@ recruit_character = BWR_fur
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = 6_BWR.tt
 			country_event = BWR.7
 		}
 	}
@@ -523,11 +507,9 @@ recruit_character = BWR_fur
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
-		}
-
+	
 		completion_reward = {
+			custom_effect_tooltip = 7_BWR.tt
 			country_event = BWR.8
 		}
 	}

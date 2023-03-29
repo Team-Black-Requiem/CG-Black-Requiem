@@ -178,6 +178,7 @@ country_event = {
 			factor = 100
 		}
 		add_ideas = BWR_War_Bears
+		remove_ideas = BWR_Trained_Bears_Idea
 		create_wargoal = { type = annex_everything target = JAP}
 		create_wargoal = { type = annex_everything target = AST}
 		create_wargoal = { type = annex_everything target = EUR}
@@ -376,6 +377,8 @@ country_event = {
 			factor = 100
 		}
 		add_ideas = BWR_beartality
-
+        hidden_effect = {
+			remove_ideas = BWR_bears_are_unpawable_idea
+		}
     }     
 }
