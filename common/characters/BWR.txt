@@ -375,4 +375,84 @@ BWR_intelligence ={
 			}
 			cancel_if_invalid = no
 		}	
+
+BWR_blaire={
+		name="Blaire Lionheart"
+		portraits={
+			civilian={
+				small=
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = BWR_Bulganin_idea
+			allowed = {
+					original_tag = BWR
+				}
+				traits = {
+					oligarchy_guy expert_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+BWR_yogi ={
+		name = "Yogi Bear"
+		portraits = {
+			civilian = {
+				small = 
+			}
+		}
+		advisor={
+			cost = 2000
+			slot = economy_minister
+			idea_token = BWR_generic_picnic_idea
+			allowed  = {
+				original_tag  = BWR
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BWR
+			}
+			cancel_if_invalid = no
+			traits  = {
+			}
+		}
+
+}
+
+BWR_kuma ={
+		name = "Kuma Yamamoto"
+		portraits={
+			civilian={
+				small=
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = BWR_schneizel_idea
+			allowed  = {
+				original_tag  = BWR
+			}
+			available = {
+				NOT = {
+				has_country_flag = government_change
+			    }
+				original_tag  = BWR
+			}
+			cancel_if_invalid = no
+			traits  = {
+				conservative_guy white_prince
+			}
+		}
+	}
+
 }
