@@ -1,0 +1,146 @@
+ideas = {
+    country = { 
+
+		GEN_Navy_Development = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = 0.05
+			}
+		}
+
+		GEN_Lessons_Learned = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   production_speed_dockyard_factor = 0.1
+			   industrial_capacity_dockyard = 0.05
+		   }
+	   }
+
+	   GEN_Naval_Academy = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+		   		production_speed_dockyard_factor = 0.1
+		   		industrial_capacity_dockyard = 0.05
+		   		navy_leader_start_level = 2
+	   		}
+   		}
+		
+		GEN_The_New_Front_Of_Warfare = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+			}
+		}
+
+		GEN_Cutting_Corners = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   naval_torpedo_screen_penetration_factor = 0.05
+			   production_cost_max_ship_hull_submarine = -0.10
+		   }
+	   }
+
+	   GEN_Dreadnaught = {
+		
+			allowed = {
+			   always = no
+		   	}
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+		   }
+		   equipment_bonus = { battleship = { instant = yes build_cost_ic = -0.10 } }
+	   }
+
+	   GEN_The_future_of_warfare = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+	   		}
+	   		equipment_bonus = { carrier = { instant = yes build_cost_ic = -0.10 } }
+   		}
+
+		GEN_Used_Ships = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+			   	production_cost_max_ship_hull_submarine = -0.10
+	   		}
+	   		equipment_bonus = { submarine = { instant = yes build_cost_ic = -0.10 } }
+   		}
+	}
+}
