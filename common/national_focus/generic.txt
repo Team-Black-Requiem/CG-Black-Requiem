@@ -3227,7 +3227,8 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			navy_experience = 50
+			add_ideas = GEN_Navy_Development
 		}
 	
 	}
@@ -3253,7 +3254,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
 		}
 	
 	}
@@ -3279,7 +3285,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
 		}
 	
 	}
@@ -3305,7 +3316,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
 		}
 	
 	}
@@ -3331,7 +3347,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_Lessons_Learned
 		}
 	
 	}
@@ -3357,7 +3373,10 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_Lessons_Learned
+				add_idea = GEN_Naval_Academy
+			}
 		}
 	
 	}
@@ -3407,7 +3426,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				category = naval_doctrine
+				uses = 2
+			}
 		}
 	
 	}
@@ -3432,7 +3455,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				category = naval_doctrine
+				uses = 2
+			}
 		}
 	
 	}
@@ -3457,7 +3484,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				category = naval_doctrine
+				uses = 2
+			}
 		}
 	
 	}
@@ -3482,7 +3513,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				category = naval_doctrine
+				uses = 2
+			}
 		}
 	
 	}
@@ -3507,7 +3542,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				category = naval_doctrine
+				uses = 2
+			}
 		}
 	
 	}
@@ -3535,7 +3574,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = destroyer
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
 		}
 	
 	}
@@ -3560,7 +3604,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = light_cruiser
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
 		}
 	
 	}
@@ -3588,7 +3637,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = carrier
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
 		}
 	
 	}
@@ -3613,7 +3667,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_The_New_Front_Of_Warfare
 		}
 	
 	}
@@ -3640,7 +3694,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = battleship
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
 		}
 	
 	}
@@ -3666,10 +3725,10 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+            add_ideas = GEN_Dreadnaught
 		}
-	
 	}
+
 	focus = {
 
 		id = gen_Submarine_Tree
@@ -3693,7 +3752,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = submarine
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
 		}
 	
 	}
@@ -3718,7 +3782,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_The_New_Front_Of_Warfare
 		}
 	
 	}
@@ -3743,7 +3807,10 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_The_New_Front_Of_Warfare
+				add_idea = GEN_Cutting_Corners
+			}
 		}
 	
 	}
@@ -3768,7 +3835,10 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_Cutting_Corners
+				add_idea = GEN_Used_Ships
+			}
 		}
 	
 	}
