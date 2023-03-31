@@ -30426,108 +30426,354 @@ spriteTypes = {
 	##pucas republic###
 
     SpriteType = {
-		name =  GFX_remember_sonya		
-		texturefile = "gfx\interface\goals\BWR\sonya_polish.dds"			
+		name =  "GFX_remember_sonya_shine"
+		texturefile = "gfx/interface/goals/BWR/sonya_polish.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	 
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/sonya_polish.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/sonya_polish.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_the_new_face_of_russia		
-		texturefile = "gfx\interface\goals\BWR\New_face_of_russia.dds"			
+		name =  "GFX_the_new_face_of_russia_shine"
+		texturefile = "gfx/interface/goals/BWR/New_face_of_russia.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/New_face_of_russia.dds"		
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/New_face_of_russia.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_bear_economy		
-		texturefile = "gfx\interface\goals\BWR\bear_ecnomics.dds"			
+		name =  "GFX_bear_economy_shine"
+		texturefile = "gfx/interface/goals/BWR/bear_ecnomics.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_ecnomics.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
-	
-
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_ecnomics.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 	legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_bear_market		
-		texturefile = "gfx\interface\goals\BWR\bear_marketxcf.dds"			
+		name =  "GFX_bear_market_shine"
+		texturefile = "gfx/interface/goals/BWR/bear_marketxcf.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_marketxcf.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
-		
-
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_marketxcf.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_bear_necessities		
-		texturefile = "gfx\interface\goals\BWR\bear_necasiciityes.dds"			
+		name =  "GFX_bear_necessities_shine"
+		texturefile = "gfx/interface/goals/BWR/bear_necasiciityes.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_necasiciityes.dds"		
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_necasiciityes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_beary_good		
-		texturefile = "gfx\interface\goals\BWR\bearry_good.dds"			
+		name =  "GFX_beary_good_shine"
+		texturefile = "gfx/interface/goals/BWR/bearry_good.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bearry_good.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bearry_good.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =   GFX_train_the_bears_for_war		
-		texturefile = "gfx\interface\goals\BWR\train_the_bears_for_war.dds"			
+		name =   "GFX_train_the_bears_for_war_shine"
+		texturefile = "gfx/interface/goals/BWR/train_the_bears_for_war.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	
-		
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/train_the_bears_for_war.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/train_the_bears_for_war.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_call_out_to_the_international_bears		
-		texturefile = "gfx\interface\goals\BWR\calling_out_to_the_international_bears.dds"			
+		name =  "GFX_call_out_to_the_international_bears_shine"
+		texturefile = "gfx/interface/goals/BWR/calling_out_to_the_international_bears.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-        
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/calling_out_to_the_international_bears.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/calling_out_to_the_international_bears.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_bear_revolution		
-		texturefile = "gfx\interface\goals\BWR\bear_revolution.dds"			
+		name =  "GFX_bear_revolution_shine"
+		texturefile = "gfx/interface/goals/BWR/bear_revolution.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-	    
-		
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_revolution.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_revolution.dds"	
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_establish_the_polar_fleet		
-		texturefile = "gfx\interface\goals\BWR\bears_on_boats_polar_portoype.dds"			
+		name =  "GFX_establish_the_polar_fleet_shine"
+		texturefile = "gfx/interface/goals/BWR/bears_on_boats_polar_portoype.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bears_on_boats_polar_portoype.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
-	
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bears_on_boats_polar_portoype.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 	legacy_lazy_load = no
 	}
 
 	SpriteType = {
-		name =  GFX_establish_knightbears		
-		texturefile = "gfx\interface\goals\BWR\bear_frames_protoype.dds"			
+		name =  "GFX_establish_knightbears_shine"
+		texturefile = "gfx/interface/goals/BWR/bear_frames_protoype.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
-        
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_frames_protoype.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 
-
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BWR/bear_frames_protoype.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 		legacy_lazy_load = no
 	}
 
