@@ -14,7 +14,7 @@
 
 focus_tree = {
 
-	continuous_focus_position = { x = 20 y = 1600 }
+	continuous_focus_position = { x = 20 y = 1100}
 
 	id = generic_focus
 	
@@ -28,12 +28,17 @@ focus_tree = {
 	initial_show_position = {
 		focus = industrial_effort
 	}
-
+     
+	
 		focus = {
 		id = tech_army_1
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 42
 		y = 0
+        
+		allow_branch = {
+			has_country_flag = country.
+	   }
 
 		cost = 5
 
@@ -479,13 +484,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = tech_air_1
-		icon = GFX_goal_generic_build_airforce
+		id = tech_air_1 
+        allow_branch = {
+			 has_country_flag = country.
+		}
+		icon = GFX_goal_generic_build_airforce 
 		x = 50
 		y = 0
 
 		cost = 5
-
 		ai_will_do = {
 			factor = 5
 		}
@@ -772,6 +779,10 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 42
 		y = 6
+        
+		allow_branch = {
+			has_country_flag = country.
+	   }
 
 		cost = 5
 
@@ -1140,9 +1151,13 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_1
 		x = -25
 		y = 1
+        
+		allow_branch = {
+			has_country_flag = country.
+	   }
 
 		cost = 3
-
+       
 		ai_will_do = {
 			factor = 40
 		}
@@ -1611,7 +1626,7 @@ focus_tree = {
 			factor = 100
 		}
 
-		x = 12
+		x = 15
 		y = 1
 		cost = 8
 
@@ -1631,24 +1646,37 @@ focus_tree = {
 
 		id = gen_third_way
 		icon = GFX_goal_generic_demand_territory
-			mutually_exclusive = { focus = gen_authoritarianism }
-		mutually_exclusive = { focus = gen_liberalism}
+	
+		mutually_exclusive = { focus = gen_authoritarianism }
+	
+			mutually_exclusive = { focus = gen_liberalism}
+	
 		relative_position_id = gen_exploring_our_options
+	
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = gen_exploring_our_options }
+
 		
+		x = 0
+		y = 1
+		cost = 8
 						available = {
 				country_exists = ROOT
 		}
 		
 				ai_will_do = {
-			factor = 100
-		}
-
-		x = 0
-		y = 1
-		cost = 8
-
-		available_if_capitulated = yes
-		prerequisite = { focus = gen_exploring_our_options }
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = moderate_conservatism
+						has_government = moderate_liberalism
+						has_government = moderate_socialism 
+						}
+					}
+				}
+			}   
 
 		completion_reward = {
 		hidden_effect = {
@@ -1665,7 +1693,17 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		mutually_exclusive = { focus = gen_authoritarian_dem }
 
-		
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = hardline_socialism
+						}
+					}
+				}
+			}   
+
 						available = {
 				country_exists = ROOT
 		}
@@ -1768,7 +1806,7 @@ focus_tree = {
 			factor = 100
 		}
 
-		x = 2
+		x = 1
 		y = 2
 		cost = 8
 
@@ -1786,6 +1824,32 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
+	focus = {
+
+		id = gen_One_Party_One_State
+		icon = GFX_goal_generic_demand_territory
+		
+		available = {
+			country_exists = ROOT
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_one_party_one_state focus = gen_individual_rights focus = gen_state_first_mentality}
+	  relative_position_id = gen_one_party_one_state
+
+	completion_reward = {
+		
+	}	
+}
+
 
 	focus = {
 
@@ -1798,8 +1862,16 @@ focus_tree = {
 		}
 		
 				ai_will_do = {
-			factor = 100
-		}
+			factor = 40
+			modifier = { factor = 3
+					if = {
+						limit = {
+							has_government = authoritarian_democracy
+							}
+						}
+					}
+				}   
+		
 
 		x = 1
 		y = 1
@@ -1887,42 +1959,51 @@ focus_tree = {
 				prerequisite = { focus = gen_exploring_our_options }
 			mutually_exclusive = { focus = gen_liberalism }
 		mutually_exclusive = { focus = gen_third_way }
-	
-	
-	
-							available = {
-				country_exists = ROOT
-				
-				OR = {
-				has_government = autocracy
-				has_government = ultra_nationalism
-				has_government = authoritarian_democracy
-				has_government = totalitarian_socialism
-				}
-		}
-
+		available = {
+			country_exists = ROOT
+     	}
+		
 	relative_position_id = gen_exploring_our_options
-		x = 6
-		y = 1
-		cost = 8
-}
+	x = 6
+	y = 1
+	cost = 8
+
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+			if = {
+				limit = {
+					has_government = moderate_conservatism
+					has_government = moderate_liberalism
+					has_government = moderate_socialism 
+					}
+				}
+			}
+    	}   
+	}
+		
+	
+
 
 focus = {
 	id = gen_moderate_socialism
 	prerequisite = { focus = gen_liberalism }
 	icon = GFX_goal_generic_demand_territory
+
 	available = {
 	country_exists = ROOT
-	
-	OR = {
-	has_government = autocracy
-	has_government = ultra_nationalism
-	has_government = authoritarian_democracy
-	has_government = totalitarian_socialism
-	}	
-
 }
 
+ai_will_do = {
+	factor = 40
+	modifier = { factor = 3
+		if = {
+			limit = {
+				has_government = moderate_socialism
+				}
+			}
+		}
+	}   
 completion_reward = {
 	
 }
@@ -1998,7 +2079,22 @@ cost = 8
 		prerequisite = { focus = gen_exploring_our_options }
 		mutually_exclusive = { focus = gen_liberalism }
 		mutually_exclusive = { focus = gen_third_way }
-
+ 
+		ai_will_do = {
+			factor = 40
+            modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = autocracy
+						has_government = ultra_nationalism
+						has_government = totalitarian_socialism 
+						}
+					
+					}
+				
+			}
+		}
+		
 
 		relative_position_id = gen_exploring_our_options
 		x = -6
@@ -2022,10 +2118,20 @@ cost = 8
 		icon = GFX_goal_support_democracy
 
 		available = {
-					country_exists = ROOT
-
+			country_exists = ROOT
 		}
-
+       
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = moderate_conservatism
+						}
+					}
+				}
+			}   
+		
 		prerequisite = { focus = gen_liberalism }
 		x = -2
 		y = 1
@@ -2045,19 +2151,6 @@ cost = 8
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
-		relative_position_id = gen_authoritarianism
-		x = 12
-		y = 0
-		cost = 8
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-
-
-			add_stability = 0.10
-			add_war_support = -0.05
-		}
 
 		focus = {
 			id = gen_corruption_free_statesmen
@@ -2086,20 +2179,6 @@ cost = 8
 			search_filters = { FOCUS_FILTER_POLITICAL }
 		}
 	
-			relative_position_id = gen_authoritarianism
-			x = 12
-			y = 0
-			cost = 8
-	
-			available_if_capitulated = yes
-	
-			completion_reward = {
-	
-	
-				add_stability = 0.10
-				add_war_support = -0.05
-			}
-
 			focus = {
 				id = gen_fear_of_change
 				icon = GFX_goal_support_democracy
@@ -2243,13 +2322,24 @@ cost = 8
 		y = 1
 		cost = 8
 
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = autocracy
+						}
+					}
+				}
+			}   
+
 		available_if_capitulated = yes
-								available = {
+
+		available = {
 				country_exists = ROOT
 		}
 
 		completion_reward = {
-
 
 			add_manpower = 60000
 
@@ -2318,10 +2408,19 @@ cost = 8
 
 		prerequisite = { focus = gen_authoritarianism }
 		
-										available = {
-				country_exists = ROOT
+		available = {
+	    	country_exists = ROOT
 		}
-
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = totalitarian_socialism
+						}
+					}
+				}
+			}   
 		relative_position_id = gen_authoritarianism
 		x = -2
 		y = 1
@@ -2361,9 +2460,20 @@ cost = 8
 		mutually_exclusive = { focus = gen_autocracy }
 		prerequisite = { focus = gen_authoritarianism }
 		
-												available = {
-				country_exists = ROOT
+		available = {
+			country_exists = ROOT
 		}
+        
+		ai_will_do = {
+			factor = 40
+			modifier = { factor = 3
+				if = {
+					limit = {
+						has_government = ultra_nationalism
+						}
+					}
+				}
+			}   
 
 		relative_position_id = gen_authoritarianism
 		x = 2
@@ -2543,7 +2653,7 @@ cost = 8
 		}
 
 		relative_position_id = gen_exploring_our_options
-		x = -20
+		x = -13
 		y = 0
 		cost = 8
 
@@ -2563,7 +2673,9 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        prerequisite = {
+			focus = gen_Industrial_Development
+		}
 		relative_position_id = gen_Industrial_Development
 		x = -2
 		y = 1
@@ -2586,7 +2698,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Civillian_Sector
+		}
 		relative_position_id = Civillian_Sector
 		x = 0
 		y = 1
@@ -2610,7 +2725,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Civilian_Sector_2
+		}
 		relative_position_id = Civilian_Sector_2
 		x = 0
 		y = 1
@@ -2633,7 +2751,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Civilian_Sector_3
+		}
 		relative_position_id = Civilian_Sector_3
 		x = 0
 		y = 1
@@ -2656,7 +2777,9 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        prerequisite = {
+			focus = gen_Industrial_Development
+		}
 		relative_position_id = gen_Industrial_Development
 		x = 0
 		y = 1
@@ -2678,7 +2801,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Infastructure_Sector
+		}
 		relative_position_id = Infastructure_Sector
 		x = 0
 		y = 1
@@ -2700,7 +2826,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Infastructure_Sector_2
+		}
 		relative_position_id = Infastructure_Sector_2
 		x = 0
 		y = 1
@@ -2722,7 +2851,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Infastructure_Sector_3
+		}
 		relative_position_id = Infastructure_Sector_3
 		x = 0
 		y = 1
@@ -2745,7 +2877,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = gen_Industrial_Development
+		}
 		relative_position_id = gen_Industrial_Development
 		x = 2
 		y = 1
@@ -2767,7 +2902,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Military_Sector
+		}
 		relative_position_id = Military_Sector
 		x = 0
 		y = 1
@@ -2789,7 +2927,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Military_Sector_2
+		}
 		relative_position_id = Military_Sector_2
 		x = 0
 		y = 1
@@ -2811,7 +2952,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Military_Sector_3
+		}
 		relative_position_id = Military_Sector_3
 		x = 0
 		y = 1
@@ -2836,7 +2980,10 @@ cost = 8
 		available = {
 				country_exists = ROOT
 		}
-
+        
+		prerequisite = {
+			focus = Civillian_Sector_4 focus = Infastructure_Sector_4 focus = Military_Sector_4
+		}
 		relative_position_id = Military_Sector_4
 		x = -2
 		y = 2
@@ -2849,5 +2996,1656 @@ cost = 8
 		}
 	
 	}
+
+	focus = {
+
+		id = Civillian_Sector_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = New_Technical_Institute
+		}
+
+		relative_position_id = New_Technical_Institute
+		x = -2
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Prosperous_Nation
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = Civillian_Sector_5
+		}
+
+		relative_position_id = Civillian_Sector_5
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+	
+
+	focus = {
+
+		id = Pink_Saphires?
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = New_Technical_Institute
+		}
+
+		relative_position_id = New_Technical_Institute
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = New_Railways
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = Pink_Saphires?
+		}
+
+		relative_position_id = Pink_Saphires?
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Military_Sector_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = New_Technical_Institute
+		}
+
+		relative_position_id = New_Technical_Institute
+		x = 2
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Military_Industrial_Complex
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = Military_Sector_5
+		}
+
+		relative_position_id = Military_Sector_5
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Advanced_Technical_Institute
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = New_Railways focus = Military_Industrial_Complex focus = Prosperous_Nation
+		}
+
+		relative_position_id = New_Railways
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Synthethic_Sources
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = Advanced_Technical_Institute
+		}
+
+		relative_position_id = Advanced_Technical_Institute
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+    
+
+	###GENERIC REVAMP NAVY
+
+	focus = {
+
+		id = gen_Navy_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_Industrial_Development
+		x = -11
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = gen_Dockyards
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Navy_Development
+		}
+		relative_position_id = gen_Navy_Development
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = gen_Dockyards_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Dockyards
+		}
+		relative_position_id = gen_Dockyards
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = gen_Navy_Development_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+       
+		prerequisite = {
+			focus = gen_Dockyards_2
+		}
+		relative_position_id = gen_Dockyards_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = gen_Lessons_Learned
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Navy_Development_3
+		}
+		relative_position_id = gen_Navy_Development_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = gen_Naval_Academy
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Lessons_Learned
+		}
+		relative_position_id = gen_Lessons_Learned
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+    
+	focus = {
+
+		id = gen_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Navy_Development
+		}
+		relative_position_id = gen_Navy_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Doctrine_School_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Doctrine_School
+		}
+		relative_position_id = gen_Doctrine_School
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Doctrine_School_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Doctrine_School_2
+		}
+		relative_position_id = gen_Doctrine_School_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Doctrine_School_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Doctrine_School_3
+		}
+		relative_position_id = gen_Doctrine_School_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Doctrine_School_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Doctrine_School_4
+		}
+		relative_position_id = gen_Doctrine_School_4
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Navy_Development
+		}
+		relative_position_id = gen_Navy_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Surface_Fleet
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = gen_Submarine_Tree
+		}
+		prerequisite = {
+			focus = gen_Navy_Development
+		}
+		relative_position_id = gen_Navy_Development
+		x = 3
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Cruisers
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Surface_Fleet
+		}
+		relative_position_id = gen_Surface_Fleet
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+    
+	focus = {
+
+		id = gen_Carriers
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = gen_Battleships
+		}
+		prerequisite = {
+			focus = gen_Cruisers
+		}
+		relative_position_id = gen_Cruisers
+		x = 1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_future_of_warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Carriers
+		}
+		relative_position_id = gen_Carriers
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Battleships
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        mutually_exclusive = {
+			focus = gen_Carriers
+		}
+		prerequisite = {
+			focus = gen_Cruisers
+		}
+		relative_position_id = gen_Cruisers
+		x = -1
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Dreadnaught
+
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Battleships
+		}
+		relative_position_id = gen_Battleships
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+	focus = {
+
+		id = gen_Submarine_Tree
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = gen_Surface_Fleet
+		}
+		prerequisite = {
+			focus = gen_Navy_Development
+		}
+		relative_position_id = gen_Navy_Development
+		x = 6
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_New_Front_Of_Warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Submarine_Tree
+		}
+		relative_position_id = gen_Submarine_Tree
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Cutting_Corners
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_The_New_Front_Of_Warfare
+		}
+		relative_position_id = gen_The_New_Front_Of_Warfare
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Used_Ships
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Cutting_Corners
+		}
+		relative_position_id = gen_Cutting_Corners
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+
+
+	###GENERIC REVAMP MILITARY####
+
+	focus = {
+
+		id = gen_Army_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_exploring_our_options
+		x = 13
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+	
+	focus = {
+
+		id = gen_Artillery_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_Army_Development
+		}
+		relative_position_id = gen_Army_Development
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Motorized_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Artillery_Development
+		}
+		relative_position_id = gen_Artillery_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Firearms_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Motorized_Development
+		}
+		relative_position_id = gen_Motorized_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Armor_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Firearms_Development
+		}
+		relative_position_id = gen_Firearms_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_New_RND_Department
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Armor_Development
+		}
+		relative_position_id = gen_Armor_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_army_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_Army_Development
+		}
+		relative_position_id = gen_Army_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_army_Doctrine_School_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_army_Doctrine_School
+		}
+		relative_position_id = gen_army_Doctrine_School
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_army_Doctrine_School_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_army_Doctrine_School_2
+		}
+		relative_position_id = gen_army_Doctrine_School_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_army_Doctrine_School_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_army_Doctrine_School_3
+		}
+		relative_position_id = gen_army_Doctrine_School_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_army_Doctrine_School_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = gen_army_Doctrine_School_4
+		}
+		relative_position_id = gen_army_Doctrine_School_4
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Knightmare_Warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = gen_Conventional_Warfare
+		}
+
+		prerequisite = {
+			focus = gen_Army_Development
+		}
+
+		relative_position_id = gen_Army_Development
+		x = 3
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_Facts
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Knightmare_Warfare
+		}
+
+		relative_position_id = gen_Knightmare_Warfare
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+	focus = {
+
+		id = gen_Knightmared_Police
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_The_Facts
+		}
+
+		relative_position_id = gen_The_Facts
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Buy_Used_Stock
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Knightmared_Police
+		}
+
+		relative_position_id = gen_Knightmared_Police
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Our_Own_Roundtable
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Buy_Used_Stock
+		}
+
+		relative_position_id = gen_Buy_Used_Stock
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Conventional_Warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = gen_Knightmare_Warfare
+		}
+		prerequisite = {
+			focus = gen_Army_Development
+		}
+
+		relative_position_id = gen_Army_Development
+		x = 5
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_Real_Engines_of_war
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Conventional_Warfare
+		}
+
+		relative_position_id = gen_Conventional_Warfare
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_Stuff_That_Matters
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_The_Real_Engines_of_war
+		}
+
+		relative_position_id = gen_The_Real_Engines_of_war
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Protecting_The_Men_On_The_Front
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_The_Stuff_That_Matters
+		}
+
+		relative_position_id = gen_The_Stuff_That_Matters
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_The_Drums_Of_War
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Protecting_The_Men_On_The_Front
+		}
+
+		relative_position_id = gen_Protecting_The_Men_On_The_Front
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+
+
+	####GENERIC REVAMP AIR
+
+    focus = {
+
+		id = gen_Air_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_exploring_our_options
+		x = 23
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Airbases
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_Air_Development
+		}
+
+		relative_position_id = gen_Air_Development
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Air_Academy
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Airbases
+		}
+		relative_position_id = gen_Airbases
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Transport_Supplies
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = gen_Air_Academy
+		}
+		relative_position_id = gen_Air_Academy
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+    
+	focus = {
+
+		id = gen_aviation_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_Air_Development
+		}
+
+		relative_position_id = gen_Air_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_aviation_Doctrine_School_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_aviation_Doctrine_School
+		}
+
+		relative_position_id = gen_aviation_Doctrine_School
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_aviation_Doctrine_School_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_aviation_Doctrine_School_2
+		}
+
+		relative_position_id = gen_aviation_Doctrine_School_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_aviation_Doctrine_School_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_aviation_Doctrine_School_3
+		}
+
+		relative_position_id = gen_aviation_Doctrine_School_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_aviation_Doctrine_School_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_aviation_Doctrine_School_4
+		}
+
+		relative_position_id = gen_aviation_Doctrine_School_4
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+    focus = {
+
+		id = gen_Fighter_Focus
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		mutually_exclusive = {
+			focus = gen_Bomber_Focus
+		}
+		prerequisite = {
+			focus = gen_Air_Development
+		}
+
+		relative_position_id = gen_Air_Development
+		x = 3
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Close_Air_Support
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_Fighter_Focus
+		}
+
+		relative_position_id = gen_Fighter_Focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Bomber_Focus
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		mutually_exclusive = {
+			focus = gen_Fighter_Focus
+		}
+		prerequisite = {
+			focus = gen_Air_Development
+		}
+
+		relative_position_id = gen_Air_Development
+		x = 5
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Nothing_But_Ash
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = gen_Bomber_Focus
+		}
+
+		relative_position_id = gen_Bomber_Focus
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
 
 }
