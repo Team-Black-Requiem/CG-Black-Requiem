@@ -29,7 +29,7 @@ focus_tree = {
 		focus = {
 		id = tech_army_1
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 15
+		x = 20
 		y = 0
 
 		cost = 5
@@ -767,7 +767,7 @@ focus_tree = {
 	focus = {
 		id = tech_navy_1
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 15
+		x = 20
 		y = 6
 
 		cost = 5
@@ -1135,7 +1135,7 @@ focus_tree = {
 			focus = {
 		id = industry_1
 		icon = GFX_focus_generic_industry_1
-		x = 3.5
+		x = -10
 		y = 1
 
 		cost = 3
@@ -1597,7 +1597,7 @@ focus_tree = {
 	
 		focus = {
 
-		id = generic_political_effort
+		id = gen_exploring_our_options
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
@@ -1625,6 +1625,265 @@ focus_tree = {
 	}
 
 	focus = {
+
+		id = gen_third_way
+		icon = GFX_goal_generic_demand_territory
+			mutually_exclusive = { focus = gen_authoritarianism }
+		mutually_exclusive = { focus = gen_liberalism}
+		relative_position_id = gen_exploring_our_options
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_exploring_our_options }
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+		focus = {
+		id = gen_hardline_socialism
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive = { focus = gen_authoritarian_dem }
+
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_third_way }
+	  relative_position_id = gen_third_way
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+		focus = {
+
+		id = gen_government_unions
+		icon = GFX_goal_generic_demand_territory
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_hardline_socialism }
+	  relative_position_id = gen_hardline_socialism
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+		focus = {
+
+		id = gen_the_means_of_production
+		icon = GFX_goal_generic_demand_territory
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_government_unions }
+	  relative_position_id = gen_government_unions
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	
+		focus = {
+
+		id = gen_one_party_one_state
+		icon = GFX_goal_generic_demand_territory
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 2
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_the_means_of_production focus = gen_regulating_entry }
+	  relative_position_id = gen_the_means_of_production
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+	focus = {
+
+		id = gen_authoritarian_dem
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive = { focus = gen_hardline_socialism }
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_third_way }
+	  relative_position_id = gen_third_way
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+
+		id = gen_getting_the_logs
+		icon = GFX_goal_generic_demand_territory
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_authoritarian_dem }
+	  relative_position_id = gen_authoritarian_dem
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+
+		id = gen_regulating_entry
+		icon = GFX_goal_generic_demand_territory
+		
+						available = {
+				country_exists = ROOT
+		}
+		
+				ai_will_do = {
+			factor = 100
+		}
+
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_getting_the_logs }
+	    relative_position_id = gen_getting_the_logs
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+	focus = {
+				id = gen_liberalism
+				prerequisite = { focus = gen_exploring_our_options }
+			mutually_exclusive = { focus = gen_liberalism }
+		mutually_exclusive = { focus = gen_third_way }
 	
 	
 	
@@ -1639,14 +1898,43 @@ focus_tree = {
 				}
 		}
 
-		id = militarism_1
+	relative_position_id = gen_exploring_our_options
+		x = 6
+		y = 1
+		cost = 8
+}
+
+focus = {
+	id = gen_moderate_socialism
+	prerequisite = { focus = gen_liberalism }
+				available = {
+	country_exists = ROOT
+	
+	OR = {
+	has_government = autocracy
+	has_government = ultra_nationalism
+	has_government = authoritarian_democracy
+	has_government = totalitarian_socialism
+	}
+}
+
+relative_position_id = gen_liberalism
+x = 2
+y = 1
+cost = 8
+}
+
+ focus = {
+		id = gen_authoritarianism
 		icon = GFX_goal_generic_political_pressure
 
-		prerequisite = { focus = generic_political_effort }
-		mutually_exclusive = { focus = democracy_1 }
+		prerequisite = { focus = gen_exploring_our_options }
+		mutually_exclusive = { focus = gen_liberalism }
+		mutually_exclusive = { focus = gen_third_way }
 
-		relative_position_id = generic_political_effort
-		x = -1
+
+		relative_position_id = gen_exploring_our_options
+		x = -6
 		y = 1
 		cost = 8
 
@@ -1663,7 +1951,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = democracy_1
+		id = gen_moderate_conservatism
 		icon = GFX_goal_support_democracy
 
 		available = {
@@ -1678,12 +1966,28 @@ focus_tree = {
 			}
 		}
 
-		prerequisite = { focus = generic_political_effort }
-		mutually_exclusive = { focus = militarism_1 }
-
-		relative_position_id = generic_political_effort
-		x = 1
+		prerequisite = { focus = gen_liberalism }
+		x = -2
 		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = { focus = gen_liberalism }
+	  relative_position_id = gen_liberalism
+
+		completion_reward = {
+		hidden_effect = {
+		add_ideas = avoid_global_wars
+        }
+
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+		relative_position_id = gen_authoritarianism
+		x = 12
+		y = 0
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1694,17 +1998,202 @@ focus_tree = {
 			add_stability = 0.10
 			add_war_support = -0.05
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
+
+		focus = {
+			id = gen_corruption_free_statesmen
+			icon = GFX_goal_support_democracy
+	
+			available = {
+						country_exists = ROOT
+	
+				OR = {
+	
+					has_government = moderate_socialism
+					has_government = moderate_liberalism
+					has_government = moderate_conservatism
+					has_government = hardline_socialism
+				}
+			}
+	
+			prerequisite = { focus = gen_moderate_conservatism }
+			x = 0
+			y = 1
+			cost = 8
+	
+			available_if_capitulated = yes
+		  relative_position_id = gen_moderate_conservatism
+	
+			completion_reward = {
+			hidden_effect = {
+			add_ideas = avoid_global_wars
+			}
+	
+				add_political_power = 200
+			}
+			search_filters = { FOCUS_FILTER_POLITICAL }
+		}
+	
+			relative_position_id = gen_authoritarianism
+			x = 12
+			y = 0
+			cost = 8
+	
+			available_if_capitulated = yes
+	
+			completion_reward = {
+	
+	
+				add_stability = 0.10
+				add_war_support = -0.05
+			}
+
+			focus = {
+				id = gen_fear_of_change
+				icon = GFX_goal_support_democracy
+		
+				available = {
+							country_exists = ROOT
+		
+					OR = {
+		
+						has_government = moderate_socialism
+						has_government = moderate_liberalism
+						has_government = moderate_conservatism
+						has_government = hardline_socialism
+					}
+				}
+		
+				prerequisite = { focus = gen_corruption_free_statesmen }
+				x = 0
+				y = 1
+				cost = 8
+		
+				available_if_capitulated = yes
+			  relative_position_id = gen_corruption_free_statesmen
+		
+				completion_reward = {
+				hidden_effect = {
+				add_ideas = avoid_global_wars
+				}
+		
+					add_political_power = 200
+				}
+				search_filters = { FOCUS_FILTER_POLITICAL }
+			}
+
+			focus = {
+				id = gen_moderate_liberalism
+				icon = GFX_goal_support_democracy
+		
+				available = {
+							country_exists = ROOT
+		
+					OR = {
+		
+						has_government = moderate_socialism
+						has_government = moderate_liberalism
+						has_government = moderate_conservatism
+						has_government = hardline_socialism
+					}
+				}
+		
+				prerequisite = { focus = gen_liberalism }
+				x = 0
+				y = 1
+				cost = 8
+		
+				available_if_capitulated = yes
+			  relative_position_id = gen_liberalism
+		
+				completion_reward = {
+				hidden_effect = {
+				add_ideas = avoid_global_wars
+				}
+		
+					add_political_power = 200
+				}
+				search_filters = { FOCUS_FILTER_POLITICAL }
+			}
+
+			focus = {
+				id = gen_employment_as_a_right
+				icon = GFX_goal_support_democracy
+		
+				available = {
+							country_exists = ROOT
+		
+					OR = {
+		
+						has_government = moderate_socialism
+						has_government = moderate_liberalism
+						has_government = moderate_conservatism
+						has_government = hardline_socialism
+					}
+				}
+		
+				prerequisite = { focus = gen_moderate_liberalism }
+				x = 0
+				y = 1
+				cost = 8
+		
+				available_if_capitulated = yes
+			  relative_position_id = gen_moderate_liberalism
+		
+				completion_reward = {
+				hidden_effect = {
+				add_ideas = avoid_global_wars
+				}
+		
+					add_political_power = 200
+				}
+				search_filters = { FOCUS_FILTER_POLITICAL }
+			}
+
+			focus = {
+				id = gen_times_of_change
+				icon = GFX_goal_support_democracy
+		
+				available = {
+							country_exists = ROOT
+		
+					OR = {
+		
+						has_government = moderate_socialism
+						has_government = moderate_liberalism
+						has_government = moderate_conservatism
+						has_government = hardline_socialism
+					}
+				}
+		
+				prerequisite = { focus = gen_employment_as_a_right }
+				x = 0
+				y = 1
+				cost = 8
+		
+				available_if_capitulated = yes
+			  relative_position_id = gen_employment_as_a_right
+		
+				completion_reward = {
+				hidden_effect = {
+				add_ideas = avoid_global_wars
+				}
+		
+					add_political_power = 200
+				}
+				search_filters = { FOCUS_FILTER_POLITICAL }
+			}
+
 
 	focus = {
-		id = militarism_2
+		id = gen_autocracy
 		icon = GFX_goal_generic_more_territorial_claims
+					mutually_exclusive = { focus = gen_tolalitarian_socialism}
+		mutually_exclusive = { focus = gen_nationalism }
 
-		prerequisite = { focus = militarism_1 }
-		relative_position_id = generic_political_effort
-		x = -1
-		y = 2
+		prerequisite = { focus = gen_authoritarianism}
+		relative_position_id = gen_authoritarianism
+		x = 0
+		y = 1
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1723,14 +2212,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = militarism_3
+		id = gen_command_economy
 		icon = GFX_goal_generic_defence
 
-		prerequisite = { focus = militarism_2 }
+		prerequisite = { focus = gen_secret_police}
 
-		relative_position_id = generic_political_effort
-		x = -1
-		y = 3
+		relative_position_id = gen_tolalitarian_socialism
+		x = 0
+		y = 2
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1749,17 +2238,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = militarism_4
+		id = gen_I_am_the_law
 		icon = GFX_goal_generic_demand_territory
 								available = {
 				country_exists = ROOT
 		}
 
-		prerequisite = { focus = militarism_3 }
+		prerequisite = { focus = gen_autocracy }
 
-		relative_position_id = generic_political_effort
-		x = -1
-		y = 4
+		relative_position_id = gen_autocracy
+		x = 0
+		y = 1
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1775,19 +2264,20 @@ focus_tree = {
 	}
 
 	focus = {
-
-		id = democracy_2
+		mutually_exclusive = { focus = gen_nationalism}
+		mutually_exclusive = { focus = gen_autocracy }
+		id = gen_tolalitarian_socialism
 		icon = GFX_goal_generic_propaganda
 
-		prerequisite = { focus = democracy_1 }
+		prerequisite = { focus = gen_authoritarianism }
 		
 										available = {
 				country_exists = ROOT
 		}
 
-		relative_position_id = generic_political_effort
-		x = 1
-		y = 2
+		relative_position_id = gen_authoritarianism
+		x = -2
+		y = 1
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1818,17 +2308,19 @@ focus_tree = {
 
 	focus = {
 
-		id = democracy_3
+		id = gen_nationalism
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = democracy_2 }
+						mutually_exclusive = { focus = gen_tolalitarian_socialism}
+		mutually_exclusive = { focus = gen_autocracy }
+		prerequisite = { focus = gen_authoritarianism }
 		
 												available = {
 				country_exists = ROOT
 		}
 
-		relative_position_id = generic_political_effort
-		x = 1
-		y = 3
+		relative_position_id = gen_authoritarianism
+		x = 2
+		y = 1
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1844,7 +2336,87 @@ focus_tree = {
 
 	focus = {
 
-		id = democracy_4
+		id = gen_mandated_draft
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = gen_nationalism }
+		
+												available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_nationalism
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+			add_stability = 0.05
+			add_ideas = equal_conscription
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+
+		id = gen_expansionist_economy
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = gen_mandated_draft }
+		
+												available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_mandated_draft
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+			add_stability = 0.05
+			add_ideas = equal_conscription
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+
+		id = gen_state_first_mentality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = gen_appointed_ministers focus = gen_command_economy focus = gen_expansionist_economy }
+		
+												available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_appointed_ministers
+		x = 0
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+
+			add_stability = 0.05
+			add_ideas = equal_conscription
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+
+
+	focus = {
+
+		id = gen_secret_police
 		icon = GFX_goal_generic_consumer_goods
 		
 				
@@ -1860,12 +2432,11 @@ focus_tree = {
 		}
 
 
-		prerequisite = { focus = democracy_3 }
+		prerequisite = { focus = gen_tolalitarian_socialism }
 
-		relative_position_id = generic_political_effort
-		x = 1
-		y = 4
-		cost = 8
+		relative_position_id = gen_tolalitarian_socialism
+		y = 1
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -1884,7 +2455,7 @@ focus_tree = {
 
 	focus = {
 
-		id = generic_national_identity
+		id = gen_appointed_ministers
 		icon = GFX_goal_anschluss
 		
 				
@@ -1893,11 +2464,11 @@ focus_tree = {
 		}
 
 
-		prerequisite = { focus = militarism_4 focus = democracy_4 }
+		prerequisite = { focus = gen_I_am_the_law }
 
-		relative_position_id = generic_political_effort
+		relative_position_id = gen_autocracy
 		x = 0
-		y = 5
+		y = 2
 		cost = 8
 
 		available_if_capitulated = yes
@@ -1910,7 +2481,4 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
-
-	
-
 }
