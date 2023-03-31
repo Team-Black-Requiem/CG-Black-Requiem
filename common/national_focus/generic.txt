@@ -13,6 +13,9 @@
 }
 
 focus_tree = {
+
+	continuous_focus_position = { x = 20 y = 1600 }
+
 	id = generic_focus
 	
 	country = {
@@ -29,7 +32,7 @@ focus_tree = {
 		focus = {
 		id = tech_army_1
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 20
+		x = 42
 		y = 0
 
 		cost = 5
@@ -478,7 +481,7 @@ focus_tree = {
 	focus = {
 		id = tech_air_1
 		icon = GFX_goal_generic_build_airforce
-		x = 25
+		x = 50
 		y = 0
 
 		cost = 5
@@ -767,7 +770,7 @@ focus_tree = {
 	focus = {
 		id = tech_navy_1
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 20
+		x = 42
 		y = 6
 
 		cost = 5
@@ -1135,7 +1138,7 @@ focus_tree = {
 			focus = {
 		id = industry_1
 		icon = GFX_focus_generic_industry_1
-		x = -10
+		x = -25
 		y = 1
 
 		cost = 3
@@ -1608,7 +1611,7 @@ focus_tree = {
 			factor = 100
 		}
 
-		x = 9
+		x = 12
 		y = 1
 		cost = 8
 
@@ -1671,7 +1674,7 @@ focus_tree = {
 			factor = 100
 		}
 
-		x = -2
+		x = -1
 		y = 1
 		cost = 8
 
@@ -1798,7 +1801,7 @@ focus_tree = {
 			factor = 100
 		}
 
-		x = 2
+		x = 1
 		y = 1
 		cost = 8
 
@@ -1907,7 +1910,8 @@ focus_tree = {
 focus = {
 	id = gen_moderate_socialism
 	prerequisite = { focus = gen_liberalism }
-				available = {
+	icon = GFX_goal_generic_demand_territory
+	available = {
 	country_exists = ROOT
 	
 	OR = {
@@ -1915,7 +1919,12 @@ focus = {
 	has_government = ultra_nationalism
 	has_government = authoritarian_democracy
 	has_government = totalitarian_socialism
-	}
+	}	
+
+}
+
+completion_reward = {
+	
 }
 
 relative_position_id = gen_liberalism
@@ -1923,6 +1932,64 @@ x = 2
 y = 1
 cost = 8
 }
+
+focus = {
+	id = gen_a_united_front
+	prerequisite = { focus = gen_moderate_socialism }
+	icon = GFX_goal_generic_demand_territory
+	available = {
+	country_exists = ROOT
+	
+}
+
+completion_reward = {
+	
+}
+
+relative_position_id = gen_moderate_socialism
+x = 0
+y = 1
+cost = 8
+}
+
+focus = {
+	id = gen_international_trade
+	prerequisite = { focus = gen_a_united_front }
+	icon = GFX_goal_generic_demand_territory
+	available = {
+	country_exists = ROOT
+	
+}
+
+completion_reward = {
+	
+}
+
+relative_position_id = gen_a_united_front
+x = 0
+y = 1
+cost = 8
+}
+
+focus = {
+	id = gen_individual_rights 
+	prerequisite = { focus = gen_international_trade focus = gen_fear_of_change focus = gen_times_of_change}
+	icon = GFX_goal_generic_demand_territory
+	available = {
+	country_exists = ROOT
+	
+}
+
+completion_reward = {
+	
+}
+
+relative_position_id = gen_international_trade
+x = -2
+y = 2
+cost = 8
+}
+
 
  focus = {
 		id = gen_authoritarianism
@@ -1957,13 +2024,6 @@ cost = 8
 		available = {
 					country_exists = ROOT
 
-			OR = {
-
-				has_government = moderate_socialism
-				has_government = moderate_liberalism
-				has_government = moderate_conservatism
-				has_government = hardline_socialism
-			}
 		}
 
 		prerequisite = { focus = gen_liberalism }
@@ -2006,13 +2066,6 @@ cost = 8
 			available = {
 						country_exists = ROOT
 	
-				OR = {
-	
-					has_government = moderate_socialism
-					has_government = moderate_liberalism
-					has_government = moderate_conservatism
-					has_government = hardline_socialism
-				}
 			}
 	
 			prerequisite = { focus = gen_moderate_conservatism }
@@ -2088,13 +2141,7 @@ cost = 8
 				available = {
 							country_exists = ROOT
 		
-					OR = {
-		
-						has_government = moderate_socialism
-						has_government = moderate_liberalism
-						has_government = moderate_conservatism
-						has_government = hardline_socialism
-					}
+	
 				}
 		
 				prerequisite = { focus = gen_liberalism }
@@ -2481,4 +2528,326 @@ cost = 8
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
+
+
+
+	####GEN REVAMP ECONOMY###
+
+	focus = {
+
+		id = gen_Industrial_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_exploring_our_options
+		x = -20
+		y = 0
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Civillian_Sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_Industrial_Development
+		x = -2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = Civilian_Sector_2 
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Civillian_Sector
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+	
+	focus = {
+
+		id = Civilian_Sector_3 
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Civilian_Sector_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = Civillian_Sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Civilian_Sector_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+	focus = {
+
+		id = Infastructure_Sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_Industrial_Development
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+	
+	focus = {
+
+		id = Infastructure_Sector_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Infastructure_Sector
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Infastructure_Sector_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Infastructure_Sector_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Infastructure_Sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Infastructure_Sector_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+	focus = {
+
+		id = Military_Sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = gen_Industrial_Development
+		x = 2
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Military_Sector_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Military_Sector
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Military_Sector_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Military_Sector_2
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+	focus = {
+
+		id = Military_Sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Military_Sector_3
+		x = 0
+		y = 1
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
+
+	###GENERIC REVAMP ECONOMY PART 2####
+
+	focus = {
+
+		id = New_Technical_Institute
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = Military_Sector_4
+		x = -2
+		y = 2
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	
+	}
+
 }
