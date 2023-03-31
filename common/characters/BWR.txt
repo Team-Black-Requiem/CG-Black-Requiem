@@ -5,10 +5,10 @@ characters = {
 		name="Puka Pavlov"
 		portraits={
 			civilian={
-				large="gfx\leaders\BWR\puka_pavlov.dds"
+				large="gfx/leaders/BWR/puka_pavlov.dds"
 			}
 			army = {
-				large = "gfx\leaders\BWR\puka_pavlov.dds"
+				large = "gfx/leaders/BWR/puka_pavlov.dds"
 			}
 		}
 		country_leader={
@@ -24,10 +24,10 @@ characters = {
 		name = "Oso Alvarado"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\oso_alvarado.dds"
+				large = "gfx/leaders/BWR/oso_alvarado.dds"
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\oso_alvarado.dds"
+				large = "gfx/leaders/BWR/oso_alvarado.dds"
 			}
 		}
 		corps_commander = {
@@ -43,10 +43,10 @@ BWR_bearshev = {
 		name = "Bear Bearshev"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\Bear_bearshev.dds"
+				large = "gfx/leaders/BWR/Bear_bearshev.dds"
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\Bear_bearshev.dds"
+				large = "gfx/leaders/BWR/Bear_bearshev.dds"
 			}
 		}
 		corps_commander = {
@@ -62,10 +62,10 @@ BWR_bearkov = {
 		name = "Comrade Bearkov"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\bearkov.dds"
+				large = "gfx/leaders/BWR/bearkov.dds"
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\bearkov.dds"
+				large = "gfx/leaders/BWR/bearkov.dds"
 			}
 		}
 		corps_commander = {
@@ -81,19 +81,19 @@ BWR_bearkkossky = {
 		name = "Comrade Bearkossky"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\Bearkossky.dds"
+				large = "gfx/leaders/BWR/Bearkossky.dds"
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\Bearkossky.dds"
+				large = "gfx/leaders/BWR/Bearkossky.dds"
 			}
 		}
 
 		portraits={
 			army={
-				small=
+				#small=
 			}
 			civillian={
-				small=
+				#small=
 			}
 		}
 
@@ -124,21 +124,15 @@ BWR_beardolf = {
 	name = "Beardolf Betler"
 	portraits = {
 		army = {
-			large = "gfx\leaders\BWR\betler.dds"
+			large = "gfx/leaders/BWR/betler.dds"
+			#small =
 		}
 		civilian = {
-			large = "gfx\leaders\BWR\betler.dds"
+			large = "gfx/leaders/BWR/betler.dds"
+			#small = 
 		}
 	}
 
-		portraits={
-			army={
-				small=
-			}
-			civillian={
-				small=
-			}
-		}
 
 	corps_commander = {
 		traits = {panzer_leader panzer_expert logistics_wizard aggressive_assaulter}
@@ -171,19 +165,12 @@ BWR_wojtek = {
 		name = "Comrade Wojtek"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\Wojtek.dds"
+				large = "gfx/leaders/BWR/Wojtek.dds"
+				#small =
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\Wojtek.dds"
-			}
-		}
-
-	portraits={
-			army={
-				small=
-			}
-			civillian={
-				small=
+				large = "gfx/leaders/BWR/Wojtek.dds"
+				#small =
 			}
 		}
 
@@ -215,10 +202,10 @@ BWR_Puka_Pavlov_Marshall = {
 	name="Puka Pavlov"
 	portraits={
 		army = {
-			large = "gfx\leaders\BWR\puka_pavlov.dds"
+			large = "gfx/leaders/BWR/puka_pavlov.dds"
 		}
 		civilian={
-			large="gfx\leaders\BWR\puka_pavlov.dds"
+			large="gfx/leaders/BWR/puka_pavlov.dds"
 		}
 	}
 	field_marshal = {
@@ -237,10 +224,10 @@ BWR_beartov={
 		name="Beartov Bearington"
 		portraits={
 			army={
-				small=
+				#small=
 			}
 			army={
-				large=
+				#large=
 			}
 		}
 		advisor={
@@ -265,7 +252,7 @@ BWR_beartov={
 		name= "Jean Bearie"
 		portraits={
 			army={
-				small=
+				#small=
 			}
 		}
 		advisor={
@@ -291,16 +278,16 @@ BWR_fur = {
 		name = "Brown Fur"
 		portraits = {
 			army = {
-				large = "gfx\leaders\BWR\brown_fur.dds"
+				large = "gfx/leaders/BWR/brown_fur.dds"
 			}
 			civilian = {
-				large = "gfx\leaders\BWR\brown_fur.dds"
+				large = "gfx/leaders/BWR/brown_fur.dds"
 			}
 
 		}
 		portraits = {
 			army = {
-				small="gfx\interface\ideas\BWR\Bear.dds"
+				small="gfx/interface/ideas/BWR/Bear.dds"
 			}
 		}
 			navy_leader={
@@ -333,7 +320,7 @@ BWR_beria={
 		name="Levanti Beria"
 		portraits={
 			civilian={
-				small=
+				#small=
 			}
 		}
 		advisor={
@@ -346,7 +333,7 @@ BWR_beria={
 			available = {
 				original_tag  = BWR
 			}
-			cancel_if_invalid = no
+			
 			traits  = {
 			BWR_world_conqueror	
 			}
@@ -357,7 +344,7 @@ BWR_intelligence ={
 		name="T’ik’uri dibi"
 		portraits={
 			civilian={
-				small=
+				#small=
 			}
 		}
 		advisor={
@@ -370,14 +357,14 @@ BWR_intelligence ={
 			traits  = {head_of_intelligence}
 					
 			}
-			cancel_if_invalid = no
+			
 		}	
 
 BWR_blaire={
 		name="Blaire Lionheart"
 		portraits={
 			civilian={
-				small=
+				#small=
 			}
 		}
 		advisor={
@@ -402,7 +389,7 @@ BWR_yogi ={
 		name = "Yogi Bear"
 		portraits = {
 			civilian = {
-				small = 
+				#small = 
 			}
 		}
 		advisor={
@@ -418,7 +405,7 @@ BWR_yogi ={
 			    }
 				original_tag  = BWR
 			}
-			cancel_if_invalid = no
+			
 			traits  = { BWR_stealing_picnic_baskets
 			}
 		}
@@ -429,7 +416,7 @@ BWR_kuma ={
 		name = "Kuma Yamamoto"
 		portraits={
 			civilian={
-				small=
+				#small=
 			}
 		}
 		advisor={
@@ -445,7 +432,7 @@ BWR_kuma ={
 			    }
 				original_tag  = BWR
 			}
-			cancel_if_invalid = no
+			
 			traits  = {
 				conservative_guy white_prince
 			}
