@@ -138,9 +138,101 @@ ideas = {
 	   
 	   		modifier = {
 				naval_torpedo_screen_penetration_factor = 0.05
-			   	production_cost_max_ship_hull_submarine = -0.10
 	   		}
 	   		equipment_bonus = { submarine = { instant = yes build_cost_ic = -0.20 } }
    		}
+
+		GEN_New_Technical_Institute = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		GEN_Prosperus_Nation = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.025
+		   }
+	   }
+
+	   GEN_New_Railways = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+			}
+		}
+
+		GEN_Military_Industrial_Complex = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+		   }
+	   }
+
+	   GEN_Advanced_Technical_Institute = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 }

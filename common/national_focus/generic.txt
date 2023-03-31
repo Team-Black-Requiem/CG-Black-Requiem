@@ -2660,7 +2660,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			capital = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2684,7 +2696,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2710,7 +2734,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2737,7 +2773,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2763,7 +2811,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2788,7 +2848,20 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			capital = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
 		}
 	
 	}
@@ -2813,7 +2886,20 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			capital = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
 		}
 	
 	}
@@ -2838,7 +2924,20 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			capital = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
 		}
 	
 	}
@@ -2863,7 +2962,20 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			capital = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
 		}
 	
 	}
@@ -2889,7 +3001,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.1
+				uses = 1
+				category = infantry_weapons
+			}
 		}
 	
 	}
@@ -2914,7 +3038,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.1
+				uses = 1
+				category = artillery
+			}
 		}
 	
 	}
@@ -2939,7 +3075,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = air_equipment
+				bonus = 0.1
+				uses = 1
+				category = air_equipment
+			}
 		}
 	
 	}
@@ -2964,7 +3112,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.1
+				uses = 3
+				category = infantry_weapons
+			}
 		}
 	
 	}
@@ -2992,7 +3152,8 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_research_slot = 1
+			add_ideas = GEN_New_Technical_Institute
 		}
 	
 	}
@@ -3018,7 +3179,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -3044,7 +3217,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_Prosperus_Nation
 		}
 	
 	}
@@ -3071,7 +3244,12 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			capital = {
+				add_resource = {
+					type = sakuradite
+					amount = 8
+				}
+			}
 		}
 	
 	}
@@ -3097,7 +3275,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_New_Railways
 		}
 	
 	}
@@ -3123,7 +3301,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = armor
+				bonus = 0.1
+				uses = 1
+				category = armor
+			}
 		}
 	
 	}
@@ -3149,7 +3339,7 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_Military_Industrial_Complex
 		}
 	
 	}
@@ -3175,7 +3365,11 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_research_slot = 1
+			remove_ideas = GEN_Prosperus_Nation
+			remove_ideas = GEN_New_Railways
+			remove_ideas = GEN_Military_Industrial_Complex
+			add_ideas = GEN_Advanced_Technical_Institute
 		}
 	
 	}
@@ -3187,6 +3381,7 @@ cost = 8
 				
 		available = {
 				country_exists = ROOT
+				has_tech = synth_oil_experiments
 		}
         
 		prerequisite = {
@@ -3201,7 +3396,19 @@ cost = 8
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
