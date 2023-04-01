@@ -10,7 +10,7 @@
 
 focus_tree = {
 
-	continuous_focus_position = { x = 20 y = 1100}
+	continuous_focus_position = { x = 20 y = 2000}
 
 	id = generic_focus
 	
@@ -22,467 +22,9 @@ focus_tree = {
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = industrial_effort
+		focus = gen_exploring_our_options
 	}
      
-	
-		focus = {
-		id = tech_army_1
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 42
-		y = 0
-        
-		allow_branch = {
-			has_country_flag = country.
-	   }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 100
-		}
-	}
-
-	focus = {
-		id = tech_equip_1
-		icon = GFX_goal_generic_small_arms
-		x = -2
-		y = 1
-		relative_position_id = tech_army_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_army_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = {
-		id = tech_equip_2
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 1
-		relative_position_id = tech_equip_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_equip_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-		}
-	}
-
-	focus = {
-		id = tech_equip_3
-		icon = GFX_goal_generic_army_artillery2
-		x = 0
-		y = 1
-		relative_position_id = tech_equip_2
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-		prerequisite = {
-			focus = tech_equip_2
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = tech_doc_1
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 2
-		relative_position_id = tech_army_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_army_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = tech_doc_2
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 2
-		relative_position_id = tech_doc_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_doc_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = tech_mot_1
-		icon = GFX_goal_generic_army_motorized
-		x = 2
-		y = 1
-		relative_position_id = tech_army_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_army_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = motorized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = tech_mec_1
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 1
-		relative_position_id = tech_mot_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_mot_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = tech_arm_1
-		icon = GFX_goal_generic_army_tanks
-		x = 0
-		y = 1
-		relative_position_id = tech_mec_1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-		}
-
-		prerequisite = {
-			focus = tech_mec_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = tech_knight_1
-		icon = GFX_focus_knightmare_research
-		x = 4
-		y = 1
-		relative_position_id = tech_army_1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-				available = {
-				country_exists = ROOT
-
-		}
-
-		prerequisite = {
-			focus = tech_army_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = knightmare_mass_production
-			}
-		}
-	}
-
-	focus = {
-		id = tech_knight_2
-		icon = GFX_focus_knightmare_research
-		x = 0
-		y = 1
-		relative_position_id = tech_knight_1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-						available = {
-				country_exists = ROOT
-
-		}
-
-		prerequisite = {
-			focus = tech_knight_1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = knightmare_mass_production
-			}
-		}
-	}
-
-	focus = {
-		id = tech_knight_3
-		icon = GFX_focus_knightmare_research
-		x = 0
-		y = 1
-		relative_position_id = tech_knight_2
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		bypass = {
-		}
-
-						available = {
-				country_exists = ROOT
-
-		}
-
-		prerequisite = {
-			focus = tech_knight_2
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = knightmare_mass_production
-			}
-		}
-	}
-
-
-	
-
-	
 	##POLITICS
 	
 	
@@ -2564,6 +2106,115 @@ cost = 5
 	}
 
 	focus = {
+
+		id = gen_Standardized_Designs
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Honorable_Battle
+		 }
+
+
+		relative_position_id = gen_Honorable_Battle
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+	focus = {
+
+		id = gen_Flagship_for_the_Fleet
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Heavy_Ship_Design focus = gen_Install_the_Repair_Yards
+		 }
+
+		
+
+		relative_position_id = gen_Standardized_Designs
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Heavy_Ship_Design
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Honorable_Battle
+		 }
+
+		
+
+		relative_position_id = gen_Honorable_Battle
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
+
+		id = gen_Install_the_Repair_Yards
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Honorable_Battle
+		 }
+
+
+		relative_position_id = gen_Honorable_Battle
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
 		id = gen_Hidden_War
 		icon = GFX_goal_anschluss
 				
@@ -2592,6 +2243,113 @@ cost = 5
 		}
 	
 	}
+
+	focus = {
+		id = gen_Lock_Down_the_Ocean
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Hidden_War
+		 }
+
+
+		relative_position_id = gen_Hidden_War
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	
+
+	focus = {
+		id = gen_Mass-Produce_Parts
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Hidden_War
+		 }
+
+
+		relative_position_id = gen_Hidden_War
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
+		id = gen_Fear_the_Unseen
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Hidden_War
+		 }
+
+
+		relative_position_id = gen_Hidden_War
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
+		id = gen_Deploy_the_Prototypes
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = gen_Lock_Down_the_Ocean
+		 }
+
+
+		relative_position_id = gen_Lock_Down_the_Ocean
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	
+	}
+
 
 
 
@@ -3233,7 +2991,7 @@ cost = 5
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = transport_plane
+				type = transport_plane_equipment
 				amount = 160
 			}
 		}
