@@ -2100,7 +2100,28 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = frigate
+                bonus = 0.5
+                uses = 1
+                category = fg_tech
+            }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = basic_battery
+					bonus = 0.5
+					uses = 1
+					category = ship_modules_tech
+				}
+				else = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = naval_equipment
+					}
+				}
+			}
 		}
 	
 	}
@@ -2127,7 +2148,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = GEN_Standardized_Designs
+				days = 550
+			}
 		}
 	
 	}
@@ -2182,7 +2206,24 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = light_cruiser
+                bonus = 0.5
+                uses = 1
+                category = cl_tech
+            }
+			add_tech_bonus = {
+				name = battleship
+                bonus = 0.5
+                uses = 1
+                category = bb_tech
+            }
+			add_tech_bonus = {
+				name = carrier
+                bonus = 0.5
+                uses = 1
+                category = cv_tech
+            }
 		}
 	
 	}
@@ -2209,7 +2250,13 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2239,7 +2286,24 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = submarine
+                bonus = 0.5
+                uses = 1
+                category = ss_tech
+            }
+			add_tech_bonus = {
+				name = basic_torpedo
+                bonus = 0.5
+                uses = 2
+                category = ship_modules_tech
+            }
+			add_tech_bonus = {
+				name = naval_mines
+                bonus = 0.5
+                uses = 2
+                category = naval_mines
+            }
 		}
 	
 	}
@@ -2265,7 +2329,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = mine_layer
+                bonus = 0.5
+                uses = 2
+                category = naval_minelaying
+            }
 		}
 	
 	}
@@ -2293,7 +2362,14 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_ideas = GEN_Mass_Produce_Parts
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	
 	}
@@ -2319,7 +2395,13 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+			add_ideas = GEN_Fear_the_Unseen
+			add_tech_bonus = {
+				name = basic_torpedo
+                bonus = 0.5
+                uses = 1
+                category = ship_modules_tech
+            }
 		}
 	
 	}

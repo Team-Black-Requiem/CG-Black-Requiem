@@ -391,5 +391,88 @@ ideas = {
 				}
 	   		}
    		}
+
+		GEN_Install_the_Repair_Yards = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				repair_speed_factor = 0.1
+				refit_speed = 0.1
+				refit_ic_cost = -0.1
+	   		}
+   		}
+
+		GEN_Standardized_Designs = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				
+	   		}
+	   		equipment_bonus = {
+				ship_hull_light = { 
+					instant = yes 
+					build_cost_ic = -0.25
+				}
+	   		}
+   		}
+
+		GEN_Fear_the_Unseen = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+	   		}
+   		}
+
+		   GEN_Mass_Produce_Parts = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+
+	   		}
+
+			equipment_bonus = {
+				submarine = { 
+					instant = yes 
+					build_cost_ic = -0.1
+				}
+	   		}
+   		}
 	}
 }
