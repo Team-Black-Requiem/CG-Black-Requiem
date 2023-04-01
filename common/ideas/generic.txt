@@ -451,7 +451,7 @@ ideas = {
 	   		}
    		}
 
-		   GEN_Mass_Produce_Parts = {
+		GEN_Mass_Produce_Parts = {
 		
 			allowed = {
 		   		always = no
@@ -471,6 +471,223 @@ ideas = {
 				submarine = { 
 					instant = yes 
 					build_cost_ic = -0.1
+				}
+	   		}
+   		}
+
+		GEN_New_RND_Department = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				research_speed_factor = 0.15
+	   		}
+   		}
+
+		GEN_Knightmared_Police = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+
+	   		}
+
+			equipment_bonus = {
+				knightmare_mass_prod_unit = { 
+					instant = yes 
+					build_cost_ic = -0.15
+				}
+	   		}
+   		}
+
+		GEN_Our_Own_Roundtable = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = -0.05
+	   		}
+
+			equipment_bonus = {
+				knightmare_mass_prod_unit = { 
+					instant = yes 
+					build_cost_ic = -0.25
+				}
+	   		}
+   		}
+
+		GEN_Conventional_Warfare = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = 0.45
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.1
+				}
+	   		}
+   		}
+
+		GEN_The_Real_Engines_of_war = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = 0.45
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.1
+				}
+				modern_armor = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+	   		}
+   		}
+
+		GEN_The_Stuff_That_Matters = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = 0.45
+				army_org = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.1
+				}
+				modern_armor = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+	   		}
+   		}
+
+		GEN_The_Drums_Of_War = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = 0.45
+				army_org = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.1
+					build_cost_ic = -0.05
+				}
+				modern_armor = {
+					instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.05
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				knightmare_mass_prod_unit = { 
+					instant = yes 
+					build_cost_ic = 0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_kn_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
 				}
 	   		}
    		}

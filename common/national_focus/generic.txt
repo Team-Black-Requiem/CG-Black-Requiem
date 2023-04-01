@@ -2455,7 +2455,13 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_tech_bonus = {
+				name = armored_car
+                bonus = 0.5
+                uses = 1
+                category = motorized_equipment
+            }
 		}
 	
 	}
@@ -2479,7 +2485,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = artillery
+                bonus = 0.25
+                uses = 2
+                category = artillery
+            }
 		}
 	
 	}
@@ -2504,7 +2515,18 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = motorized_equipment
+                bonus = 0.5
+                uses = 1
+                category = motorized_equipment
+            }
+			add_tech_bonus = {
+				name = mechanized
+                bonus = 0.25
+                uses = 1
+                category = cat_mechanized_equipment
+            }
 		}
 	
 	}
@@ -2529,7 +2551,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = infantry_weapons
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
 		}
 	
 	}
@@ -2554,7 +2581,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = modern_armor
+                bonus = 0.5
+                uses = 2
+                category = armor
+            }
 		}
 	
 	}
@@ -2579,7 +2611,8 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_research_slot = 1
+			add_ideas = GEN_New_RND_Department
 		}
 	
 	}
@@ -2603,7 +2636,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	
 	}
@@ -2627,7 +2665,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	
 	}
@@ -2651,7 +2694,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	
 	}
@@ -2675,7 +2723,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	
 	}
@@ -2699,7 +2752,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	
 	}
@@ -2729,7 +2787,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = knightmare_mass_prod
+                bonus = 0.5
+                uses = 2
+                category = knightmare_mass_production
+            }
 		}
 	
 	}
@@ -2755,7 +2818,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = knightmare_mass_prod
+                bonus = 0.5
+                uses = 2
+                category = knightmare_mass_production
+            }
 		}
 	
 	}
@@ -2782,7 +2850,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_Knightmared_Police
 		}
 	
 	}
@@ -2808,7 +2876,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_1
+				amount = 300
+			}
 		}
 	
 	}
@@ -2834,7 +2905,16 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_Knightmared_Police
+				add_idea = GEN_Our_Own_Roundtable
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = sakuradite
+					amount = 10
+				}
+			}
 		}
 	
 	}
@@ -2863,7 +2943,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_ideas = GEN_Conventional_Warfare
 		}
 	
 	}
@@ -2889,7 +2969,16 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_Conventional_Warfare
+				add_idea = GEN_The_Real_Engines_of_war
+			}
+			add_tech_bonus = {
+				name = maintenance_company
+                bonus = 0.5
+                uses = 1
+                category = maintenance_company_tech
+            }
 		}
 	
 	}
@@ -2915,7 +3004,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_The_Real_Engines_of_war
+				add_idea = GEN_The_Stuff_That_Matters
+			}
 		}
 	
 	}
@@ -2941,7 +3033,16 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 600
+			}
+			add_tech_bonus = {
+				name = field_hospital_company_tech
+                bonus = 0.5
+                uses = 1
+                category = hospital_tech
+            }
 		}
 	
 	}
@@ -2967,7 +3068,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_The_Stuff_That_Matters
+				add_idea = GEN_The_Drums_Of_War
+			}
+			add_war_support = 0.3
+			upgrade_economy_law = yes
 		}
 	
 	}
