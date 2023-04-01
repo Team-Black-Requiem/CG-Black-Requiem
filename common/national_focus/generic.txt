@@ -2912,6 +2912,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = GEN_Air_Development
 			air_experience = 50
 		}
 	
@@ -2937,13 +2938,22 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			random_owned_controlled_state = {add_building_construction = {
+			random_owned_controlled_state = {
+				add_building_construction = {
 					type = air_base
 					level = 2
-					instant_build = yes }
+					instant_build = yes 
 				}
-			}	
-	   }
+			}
+			capital = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}	
+	}
 
 	focus = {
 
@@ -2965,7 +2975,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = GEN_Air_Development
+				add_idea = GEN_Air_Academy
+			}
 		}
 	
 	}
@@ -2990,6 +3003,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEN_Air_Development
+				add_idea = GEN_Transport_Supplies
+			}
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment
 				amount = 160
@@ -3113,10 +3130,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = GEN_Fighter_Focus
 			add_tech_bonus = {
-                bonus = 1
+				name = light_fighter
+                bonus = 0.5
                 uses = 1
-                category = light_air
+                category = light_fighter
             }
 		}
 	
@@ -3142,10 +3161,15 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEN_Fighter_Focus
+				add_idea = GEN_Close_Air_Support
+			}
 			add_tech_bonus = {
-                bonus = 1
-                uses = 1
-                category = light_air
+				name = cas_bomber
+                bonus = 0.5
+                uses = 2
+                category = cas_bomber
             }
 		}
 	
@@ -3175,10 +3199,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = GEN_Bomber_Focus
 			add_tech_bonus = {
-                bonus = 1
+				name = cat_strategic_bomber
+                bonus = 0.5
                 uses = 1
-                category = medium_air
+                category = cat_strategic_bomber
             }
 		}
 	
@@ -3204,10 +3230,15 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GEN_Bomber_Focus
+				add_idea = GEN_Nothing_But_Ash
+			}
 			add_tech_bonus = {
-                bonus = 1
+				name = cat_strategic_bomber
+                bonus = 0.3
                 uses = 1
-                category = medium_air
+                category = cat_strategic_bomber
             }
 		}
 	
