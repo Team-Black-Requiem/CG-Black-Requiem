@@ -2313,7 +2313,6 @@ cost = 5
 	}
 
 	focus = {
-
 		id = gen_Standardized_Designs
 		icon = GFX_goal_anschluss
 				
@@ -2323,6 +2322,12 @@ cost = 5
 
 		prerequisite = {
 			focus = gen_Honorable_Battle
+		 }
+		 prerequisite = {
+			focus = gen_Heavy_Ship_Design
+		 }
+		 prerequisite = {
+			focus = gen_Install_the_Repair_Yards
 		 }
 
 
@@ -2351,7 +2356,7 @@ cost = 5
 		}
 
 		prerequisite = {
-			focus = gen_Heavy_Ship_Design focus = gen_Install_the_Repair_Yards
+			focus = gen_Standardized_Designs
 		}
 
 		
@@ -2364,8 +2369,9 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			country_event = GEN.1
-			
+			ROOT = {
+				country_event = GEN.1
+			}
 		}
 	
 	}
