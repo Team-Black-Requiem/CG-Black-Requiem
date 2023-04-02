@@ -756,12 +756,11 @@ cost = 5
 
 		completion_reward = {
 
-			add_manpower = 60000
+			add_war_support = 0.05
 
 			army_experience = 40
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESISTANCE }
-	}
+}
 
 	focus = {
 		id = gen_command_economy
@@ -807,8 +806,8 @@ cost = 5
 
 		completion_reward = {
 
-
-		add_ideas = generic_expansionism
+		
+		add_ideas =GEN_autocracy_idea_1
 	}
 	
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -845,26 +844,8 @@ cost = 5
 
 		completion_reward = {
 
-
-			add_political_power = 150
 			
-			
-			add_popularity = {
-    ideology = moderate_conservatism
-    popularity = 0.03
-}
-
-			add_popularity = {
-    ideology = moderate_socialism
-    popularity = 0.03
-}
-
-			add_popularity = {
-    ideology = moderate_liberalism
-    popularity = 0.03
-}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -898,12 +879,9 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
-
-			add_stability = 0.05
-			add_ideas = equal_conscription
+          
+			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -925,11 +903,8 @@ cost = 5
 
 		completion_reward = {
 
-
-			add_stability = 0.05
-			add_ideas = equal_conscription
+			add_ideas = GEN_Ultra_nationalism_1
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -950,13 +925,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
-
-			add_stability = 0.05
-			add_ideas = equal_conscription
+             
+		add_ideas = GEN_Ultra_nationalism_2
+	    hidden_effect = {	remove_ideas = GEN_Ultra_nationalism_1
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
+		}
+}
 
 	focus = {
 
@@ -1046,10 +1020,12 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus generic_national_identity"
+		add_ideas = GEN_autocracy_idea_2
 
-			add_stability = 0.05
-
+		hidden_effect = {
+		remove_ideas =  GEN_autocracy_idea_1
+		}
+		
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -2166,7 +2142,7 @@ cost = 5
 
 		prerequisite = {
 			focus = gen_Heavy_Ship_Design focus = gen_Install_the_Repair_Yards
-		 }
+		}
 
 		
 
@@ -2178,7 +2154,8 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+        
+		
 		}
 	
 	}
@@ -2257,6 +2234,7 @@ cost = 5
 					instant_build = yes
 				}
 			}
+			
 		}
 	
 	}
