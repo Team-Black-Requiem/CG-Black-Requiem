@@ -76,32 +76,33 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-						available = {
-				country_exists = ROOT
+		available = {
+			country_exists = ROOT
 		}
 		
-				ai_will_do = {
-			factor = 40
-			modifier = { factor = 3
-				if = {
-					limit = {
-						has_government = moderate_conservatism
-						has_government = moderate_liberalism
-						has_government = moderate_socialism 
+		ai_will_do = {
+		factor = 40
+		modifier = { factor = 3
+			if = {
+				limit = {
+					has_government = moderate_conservatism
+					has_government = moderate_liberalism
+					has_government = moderate_socialism 
 						}
-					}
 				}
-			}   
+			}
+		}   
 
 		completion_reward = {
 		hidden_effect = {
 		add_ideas = avoid_global_wars
         }
+		add_political_power = 200
 
-			add_political_power = 200
 		}
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
+}
 
 		focus = {
 		id = gen_hardline_socialism
@@ -123,7 +124,7 @@ focus_tree = {
 				country_exists = ROOT
 		}
 		
-				ai_will_do = {
+		ai_will_do = {
 			factor = 100
 		}
 
@@ -139,8 +140,7 @@ focus_tree = {
 		hidden_effect = {
 		add_ideas = avoid_global_wars
         }
-
-			add_political_power = 200
+		add_ideas = GEN_hardline_socialism_idea_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -171,7 +171,10 @@ focus_tree = {
 		add_ideas = avoid_global_wars
         }
 
-			add_political_power = 200
+		swap_ideas = {
+			remove_idea = GEN_hardline_socialism_idea_1
+			add_idea = GEN_hardline_socialism_idea_2
+		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -202,7 +205,10 @@ focus_tree = {
 		add_ideas = avoid_global_wars
         }
 
-			add_political_power = 200
+		swap_ideas = {
+			remove_idea = GEN_hardline_socialism_idea_2
+			add_idea = GEN_hardline_socialism_idea_3
+		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -234,14 +240,14 @@ focus_tree = {
 		add_ideas = avoid_global_wars
         }
 
-			add_political_power = 200
+		stability = 0.15
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
 
-		id = gen_One_Party_One_State
+		id = gen_our_own_block
 		icon = GFX_goal_generic_demand_territory
 		
 		available = {
@@ -261,7 +267,10 @@ focus_tree = {
 	  relative_position_id = gen_one_party_one_state
 
 	completion_reward = {
-		
+		set_rule = can_create_factions
+		stability = 0.15
+		war_support = 0.15
+		add_ideas = 
 	}	
 }
 
@@ -301,7 +310,7 @@ focus_tree = {
 		add_ideas = avoid_global_wars
         }
 
-			add_political_power = 200
+		add_ideas = GEN_auth_dem_idea_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -331,8 +340,11 @@ focus_tree = {
 		hidden_effect = {
 		add_ideas = avoid_global_wars
         }
-
-			add_political_power = 200
+		swap_ideas = {
+			remove_idea = GEN_auth_dem_idea_1
+			add_idea = GEN_auth_dem_idea_2
+		}
+		
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -362,8 +374,10 @@ focus_tree = {
 		hidden_effect = {
 		add_ideas = avoid_global_wars
         }
-
-			add_political_power = 200
+		swap_ideas = {
+			remove_idea = GEN_auth_dem_idea_2
+			add_idea = GEN_auth_dem_idea_3
+		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -371,6 +385,7 @@ focus_tree = {
 
 	focus = {
 				id = gen_liberalism
+				icon = GFX_goal_generic_demand_territory
 				prerequisite = { focus = gen_exploring_our_options }
 			mutually_exclusive = { focus = gen_liberalism }
 		mutually_exclusive = { focus = gen_third_way }
@@ -2313,7 +2328,6 @@ cost = 5
 	}
 
 	focus = {
-
 		id = gen_Standardized_Designs
 		icon = GFX_goal_anschluss
 				
@@ -2323,6 +2337,12 @@ cost = 5
 
 		prerequisite = {
 			focus = gen_Honorable_Battle
+		 }
+		 prerequisite = {
+			focus = gen_Heavy_Ship_Design
+		 }
+		 prerequisite = {
+			focus = gen_Install_the_Repair_Yards
 		 }
 
 
@@ -2351,7 +2371,7 @@ cost = 5
 		}
 
 		prerequisite = {
-			focus = gen_Heavy_Ship_Design focus = gen_Install_the_Repair_Yards
+			focus = gen_Standardized_Designs
 		}
 
 		
@@ -2364,8 +2384,9 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-        
-		
+			ROOT = {
+				country_event = GEN.1
+			}
 		}
 	
 	}
@@ -2622,7 +2643,131 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			create_equipment_variant = {
+				name = "Predator Class"
+				type = ship_hull_submarine_2
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					fixed_ship_engine_slot = sub_ship_engine_2
+					rear_1_custom_slot = ship_torpedo_sub_2
 
+				}
+			}
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}
 		}
 	
 	}

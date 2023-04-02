@@ -777,7 +777,7 @@ economy_cost_factor = -0.1
 }
 }
 
-GEN_autocracy_idea_1 = {
+GEN_autocracy_idea_3 = {
 		
 	allowed = {
 		   always = no
@@ -795,7 +795,7 @@ modifier = {
 }
 }
 
-GEN_autocracy_idea_1 = {
+GEN_autocracy_idea_4 = {
 		
 	allowed = {
 		   always = no
@@ -813,6 +813,91 @@ modifier = {
 }
 }
 
-
+GEN_hardline_socialism_idea_1 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+	}
+}
+GEN_hardline_socialism_idea_2 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.03
+	}
+}
+GEN_hardline_socialism_idea_3 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.03
+		industrial_capacity_factory = 0.05
+	}
+}
+GEN_auth_dem_idea_1 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		stability_factor = 0.05
+	}
+}
+GEN_auth_dem_idea_2 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		if = {
+			limit = {has_dlc = "La Resistance"}
+			decryption_power = 0.05
+			operative_slot = 1
+		}
+		else = {
+			decryption_factor = 0.05
+		}
+		stability_factor = 0.05
+	}
+}
+GEN_auth_dem_idea_3 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		if = {
+			limit = {has_dlc = "La Resistance"}
+			crypto_strength = 0.05
+			decryption_power = 0.05
+			operative_slot = 2
+		}
+		else = {
+			encryption_factor = 0.05
+			decryption_factor = 0.05
+		}
+		stability_factor = 0.05
+	}
+}
+GEN_our_own_bloc_idea = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		compliance_growth = 0.05
+		resistance_activity = 0.05
+		resistance_growth_on_our_occupied_states = -0.05
+	}
+}
 }
 }
