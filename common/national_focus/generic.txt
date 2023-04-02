@@ -2070,7 +2070,217 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			create_equipment_variant = {
+				name = "Sentinal Class"
+				type = ship_hull_light_1
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = empty
+				}
+			}
+			create_equipment_variant = {
+				name = "Guardian Class"
+				type = ship_hull_cruiser_1
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_light_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = empty
+					front_1_custom_slot = empty
+					front_2_custom_slot = empty
+					mid_1_custom_slot = ship_light_medium_battery_1
+					mid_2_custom_slot = empty
+					mid_3_custom_slot = empty
+					rear_1_custom_slot = empty
+					rear_2_custom_slot = empty
+				}
+			}
+			hidden_effect = {
 
+				##### Replace with For Loop
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+
+				##### Replace with For Loop Later
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinal Class"
+					}
+					name = "Sentinal" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}		
 		}
 	
 	}
@@ -2319,6 +2529,13 @@ cost = 5
 		prerequisite = {
 			focus = gen_Hidden_War
 		 }
+		 prerequisite = {
+			focus = gen_Fear_the_Unseen
+		 }
+		 prerequisite = {
+			focus = gen_Mass-Produce_Parts
+		 }
+
 
 
 		relative_position_id = gen_Hidden_War
