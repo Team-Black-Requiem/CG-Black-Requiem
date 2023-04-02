@@ -2364,9 +2364,8 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-        
-		
-		}
+        country_event = GEN.1
+	}
 	
 	}
 
@@ -2622,7 +2621,131 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			create_equipment_variant = {
+				name = "Predator Class"
+				type = ship_hull_submarine_2
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					fixed_ship_engine_slot = sub_ship_engine_2
+					rear_1_custom_slot = ship_torpedo_sub_2
 
+				}
+			}
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}
 		}
 	
 	}
