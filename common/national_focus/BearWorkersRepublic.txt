@@ -571,11 +571,11 @@ focus = {
 	focus = {
 
 		id = BWR_Industrial_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_economy
 				
 		allow_branch = {
-			has_completed_focus = beartality
-		}
+		has_completed_focus = beartality
+	  }
 		available = {
 				country_exists = ROOT
 		}
@@ -608,7 +608,7 @@ focus = {
 	focus = {
 
 		id = BWR_Civillian_sector
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -645,7 +645,7 @@ focus = {
 	focus = {
 
 		id = BWR_Civillian_sector_2 
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -684,7 +684,7 @@ focus = {
 	focus = {
 
 		id = BWR_Civillian_sector_3 
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -722,7 +722,7 @@ focus = {
 	focus = {
 
 		id = BWR_Civillian_sector_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -760,7 +760,7 @@ focus = {
 	focus = {
 
 		id = BWR_infastructure_sector
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_steel
 				
 		available = {
 				country_exists = ROOT
@@ -797,7 +797,7 @@ focus = {
 	focus = {
 
 		id = BWR_infastructure_sector_2
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_tungsten
 				
 		available = {
 				country_exists = ROOT
@@ -834,7 +834,7 @@ focus = {
 	focus = {
 
 		id = BWR_infastructure_sector_3
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_aluminium
 				
 		available = {
 				country_exists = ROOT
@@ -872,7 +872,7 @@ focus = {
 	focus = {
 
 		id = BWR_infastructure_sector_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_Synthethic
 				
 		available = {
 				country_exists = ROOT
@@ -911,7 +911,7 @@ focus = {
 	focus = {
 
 		id = BWR_military_sector
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -948,7 +948,7 @@ focus = {
 	focus = {
 
 		id = BWR_military_sector_2
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -985,7 +985,7 @@ focus = {
 	focus = {
 
 		id = BWR_military_sector_3
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1022,7 +1022,7 @@ focus = {
 	focus = {
 
 		id = BWR_military_sector_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1062,7 +1062,7 @@ focus = {
 	focus = {
 
 		id = BWR_New_Technical_Institute
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
@@ -1088,7 +1088,7 @@ focus = {
 	focus = {
 
 		id = BWR_Civillian_sector_5
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1126,7 +1126,7 @@ focus = {
 	focus = {
 
 		id = BWR_Prosperous_Nation
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1184,7 +1184,7 @@ focus = {
 	focus = {
 
 		id = BWR_New_Railways
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_infastructure
 				
 		available = {
 				country_exists = ROOT
@@ -1210,7 +1210,7 @@ focus = {
 	focus = {
 
 		id = BWR_military_sector_5
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1248,7 +1248,7 @@ focus = {
 	focus = {
 
 		id = BWR_Military_Industrial_Complex
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_military_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1274,15 +1274,21 @@ focus = {
 	focus = {
 
 		id = BWR_Advanced_Technical_Institute
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
 		}
         
 		prerequisite = {
-	       focus = New_Railways focus = BWR_Military_Industrial_Complex focus = BWR_Prosperous_Nation
+	    focus = BWR_Military_Industrial_Complex}
+		prerequisite = {
+		focus = BWR_Prosperous_Nation
 		}
+		prerequisite = {
+			focus = BWR_New_Railways
+		}
+
 
 		relative_position_id = BWR_New_Railways
 		x = 0
@@ -1307,7 +1313,7 @@ focus = {
 	focus = {
 
 		id = BWR_Synthethic
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_Synthethic
 				
 		available = {
 				country_exists = ROOT
@@ -1350,7 +1356,7 @@ focus = {
 	focus = {
 
 		id = BWR_Establish_Admiralty
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_admiralty
 			allow_branch = {
 				has_completed_focus = beartality
 			}	
@@ -1379,7 +1385,7 @@ focus = {
 	focus = {
 
 		id = BWR_Naval_School
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_navy_school
 				
 		available = {
 				country_exists = ROOT
@@ -1410,7 +1416,7 @@ focus = {
 	focus = {
 
 		id = BWR_Confiscate_Dockyards
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_dockyards
 				
 		available = {
 				country_exists = ROOT
@@ -1533,7 +1539,7 @@ focus = {
 	focus = {
 
 		id = BWR_New_Age
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_new_age
 				
 		available = {
 				country_exists = ROOT
@@ -1568,7 +1574,7 @@ focus = {
 	focus = {
 
 		id = BWR_Coastal_Defense_Fleet
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_coastal_fleet
 				
 		available = {
 				country_exists = ROOT
@@ -1805,7 +1811,7 @@ focus = {
 	focus = {
 
 		id = BWR_Honorable_Battle
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_honor
 				
 		available = {
 				country_exists = ROOT
@@ -1856,7 +1862,7 @@ focus = {
 
 	focus = {
 		id = BWR_Standardized_Designs
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_navy_school
 				
 		available = {
 				country_exists = ROOT
@@ -1885,7 +1891,7 @@ focus = {
 	focus = {
 
 		id = BWR_Flagship_for_the_Fleet
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_flagship
 				
 		available = {
 				country_exists = ROOT
@@ -1915,7 +1921,7 @@ focus = {
 	focus = {
 
 		id = BWR_Heavy_Ship_Design
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_heavy_ship_design
 				
 		available = {
 				country_exists = ROOT
@@ -1960,7 +1966,7 @@ focus = {
 	focus = {
 
 		id = BWR_Install_the_Repair_Yards
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_repair_yards
 				
 		available = {
 				country_exists = ROOT
@@ -1994,7 +2000,7 @@ focus = {
 
 	focus = {
 		id = BWR_Hidden_War
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_hidden_war
 				
 		available = {
 				country_exists = ROOT
@@ -2041,7 +2047,7 @@ focus = {
 
 	focus = {
 		id = BWR_Lock_Down_the_Ocean
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_lock
 				
 		available = {
 				country_exists = ROOT
@@ -2075,7 +2081,7 @@ focus = {
 
 	focus = {
 		id = BWR_Mass-Produce_Parts
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_mass_produce
 				
 		available = {
 				country_exists = ROOT
@@ -2108,7 +2114,7 @@ focus = {
 
 	focus = {
 		id = BWR_Fear_the_Unseen
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_fear_unseen
 				
 		available = {
 				country_exists = ROOT
@@ -2140,7 +2146,7 @@ focus = {
 
 	focus = {
 		id = BWR_Deploy_the_Prototypes
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_deploy_prototype
 				
 		available = {
 				country_exists = ROOT
@@ -2297,7 +2303,7 @@ focus = {
 	focus = {
 
 		id = BWR_Army_Development
-		icon = GFX_goal_anschluss
+		icon =  GFX_GEN_army_development
 				allow_branch = {
 					has_completed_focus = beartality
 				}
@@ -2327,7 +2333,7 @@ focus = {
 	focus = {
 
 		id = BWR_Artillery_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_artillery
 				
 		available = {
 				country_exists = ROOT
@@ -2356,7 +2362,7 @@ focus = {
 	focus = {
 
 		id = BWR_Motorized_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_motorized
 				
 		available = {
 				country_exists = ROOT
@@ -2392,7 +2398,7 @@ focus = {
 	focus = {
 
 		id = BWR_Firearms_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_gun
 				
 		available = {
 				country_exists = ROOT
@@ -2422,7 +2428,7 @@ focus = {
 	focus = {
 
 		id = BWR_Armor_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_armor
 				
 		available = {
 				country_exists = ROOT
@@ -2452,7 +2458,7 @@ focus = {
 	focus = {
 
 		id = BWR_New_RND_Department
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
@@ -2478,7 +2484,7 @@ focus = {
 	focus = {
 
 		id = BWR_army_Doctrine_School
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
 				country_exists = ROOT
@@ -2507,7 +2513,7 @@ focus = {
 	focus = {
 
 		id = BWR_army_Doctrine_School_2
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
 				country_exists = ROOT
@@ -2536,7 +2542,7 @@ focus = {
 	focus = {
 
 		id = BWR_army_Doctrine_School_3
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
 				country_exists = ROOT
@@ -2565,7 +2571,7 @@ focus = {
 	focus = {
 
 		id = BWR_army_Doctrine_School_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
 				country_exists = ROOT
@@ -2594,7 +2600,7 @@ focus = {
 	focus = {
 
 		id = BWR_army_Doctrine_School_5
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
 				country_exists = ROOT
@@ -2623,7 +2629,7 @@ focus = {
 	focus = {
 
 		id = BWR_Knightmare_Warfare
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_knightmare_warfare
 				
 		available = {
 				country_exists = ROOT
@@ -2658,7 +2664,7 @@ focus = {
 	focus = {
 
 		id = BWR_The_Facts
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_knightmare
 				
 		available = {
 				country_exists = ROOT
@@ -2690,7 +2696,7 @@ focus = {
 	focus = {
 
 		id = BWR_Knightmared_Police
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_knight_police
 				
 		available = {
 				country_exists = ROOT
@@ -2716,7 +2722,7 @@ focus = {
 	focus = {
 
 		id = BWR_Buy_Used_Stock
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_knightmare
 				
 		available = {
 				country_exists = ROOT
@@ -2760,7 +2766,7 @@ focus = {
 	focus = {
 
 		id = BWR_Our_Own_Roundtable
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_roundtable
 				
 		available = {
 				country_exists = ROOT
@@ -2795,7 +2801,7 @@ focus = {
 	focus = {
 
 		id = BWR_Conventional_Warfare
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_conventional
 				
 		available = {
 				country_exists = ROOT
@@ -2859,7 +2865,7 @@ focus = {
 	focus = {
 
 		id = BWR_The_Stuff_That_Matters
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_engines_of_war
 				
 		available = {
 				country_exists = ROOT
@@ -2888,7 +2894,7 @@ focus = {
 	focus = {
 
 		id = BWR_Protecting_The_Men_On_The_Front
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_matters
 				
 		available = {
 				country_exists = ROOT
@@ -2923,7 +2929,7 @@ focus = {
 	focus = {
 
 		id = BWR_The_Drums_Of_War
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_drums_of_war
 				
 		available = {
 				country_exists = ROOT
@@ -2959,7 +2965,7 @@ focus = {
     focus = {
 
 		id = BWR_Air_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_air_development
 				allow_branch = {
 					has_completed_focus = beartality
 				}
@@ -2984,7 +2990,7 @@ focus = {
 	focus = {
 
 		id = BWR_Airbases
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_airbase
 				
 		available = {
 				country_exists = ROOT
@@ -3021,7 +3027,7 @@ focus = {
 	focus = {
 
 		id = BWR_Air_Academy
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_academy
 				
 		available = {
 				country_exists = ROOT
@@ -3049,7 +3055,7 @@ focus = {
 	focus = {
 
 		id = BWR_Transport_Supplies
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_transport
 				
 		available = {
 				country_exists = ROOT
@@ -3081,7 +3087,7 @@ focus = {
 	focus = {
 
 		id = BWR_aviation_Doctrine_School
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_air_doctrine
 				
 		available = {
 				country_exists = ROOT
@@ -3112,7 +3118,7 @@ focus = {
 	focus = {
 
 		id = BWR_aviation_Doctrine_School_2
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_air_doctrine
 				
 		available = {
 				country_exists = ROOT
@@ -3142,7 +3148,7 @@ focus = {
 	focus = {
 
 		id = BWR_aviation_Doctrine_School_3
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_air_doctrine
 				
 		available = {
 				country_exists = ROOT
@@ -3172,7 +3178,7 @@ focus = {
     focus = {
 
 		id = BWR_Fighter_Focus
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_fighter
 				
 		available = {
 				country_exists = ROOT
@@ -3207,7 +3213,7 @@ focus = {
 	focus = {
 
 		id = BWR_Close_Air_Support
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_cas
 				
 		available = {
 				country_exists = ROOT
@@ -3241,7 +3247,7 @@ focus = {
 	focus = {
 
 		id = BWR_Bomber_Focus
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_bomber
 				
 		available = {
 				country_exists = ROOT
@@ -3276,7 +3282,7 @@ focus = {
 	focus = {
 
 		id = BWR_Nothing_But_Ash
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_ash
 				
 		available = {
 				country_exists = ROOT
