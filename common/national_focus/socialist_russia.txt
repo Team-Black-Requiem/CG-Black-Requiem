@@ -1,550 +1,5195 @@
-﻿#focus_tree = {
-id = socialist_russia_focus
+﻿focus_tree = {
+	id = pre_pre_cw_russia_focus
 	
 	country = {
 		factor = 0
 		modifier = {
-			add = 5
-			#tag = SRU
+			add = 10
+			tag = SRU
 		}
 	}
 	
 
 	default = no
-
-	continuous_focus_position = { x = 20 y = 2500 }
-
-	focus = {
-		id = SRU_wild_siberia
-		icon = GFX_SRU_wild_siberia
-		cost = 3
-		x = 15
-		y = 0
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_political_power = 100
-		SRU = { country_event = SRU.1 }
-		}
-
-
-	}
-
-	focus = {
-		id = SRU_red_flame
-		icon = GFX_SRU_red_flame
-		relative_position_id = SRU_wild_siberia
-		prerequisite = {
-			focus = SRU_wild_siberia
-		}
-		cost = 3
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		
-		add_ideas = { SRU_flame_socialism }
-		}
-
-
-	}
-
-
-	focus = {
-		id = SRU_destroy_RUS_institutions
-		icon = GFX_SRU_destroy_RUS_institutions
-		relative_position_id = SRU_red_flame
-		prerequisite = {
-			focus = SRU_red_flame
-		}
-		cost = 3
-		x = 2
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		swap_ideas = {
-		remove_idea = SRU_unstable_government
-		add_idea = SRU_unstable_government_2}
-		}
-
-
-	}
-
-
-	focus = {
-		id = SRU_form_united_front
-		icon = GFX_SRU_form_united_front
-		relative_position_id = SRU_destroy_RUS_institutions
-		prerequisite = {
-			focus = SRU_destroy_RUS_institutions
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		SRU = {country_event = SRU.2}
-		}
-
-
-	}
-
-	focus = {
-		id = SRU_full_mobilization
-		icon = GFX_SRU_full_mobilization
-		relative_position_id = SRU_red_flame
-		prerequisite = {
-			focus = SRU_red_flame
-		}
-		cost = 3
-		x = -2
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		swap_ideas = {
-		remove_idea = SRU_unprofessional_army
-		add_idea = SRU_unprofessional_army_2}
-		}
-
-
-	}
-
-
-	focus = {
-		id = SRU_sabotage_enemy
-		icon = GFX_SRU_sabotage_enemy
-		relative_position_id = SRU_full_mobilization
-		prerequisite = {
-			focus = SRU_full_mobilization
-		}
-		cost = 3
-		x = 2
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		EUR = {
-		add_timed_idea={
-		idea = EUR_sabotage
-		days = 365}}
-		
-		574 = {damage_building = {
-				type = infrastructure
-				damage = 2}
-		}
-		644 = {damage_building = {
-				type = infrastructure
-				damage = 2}
-		}
-	}
-	}
-
-
-	focus = {
-		id = SRU_irregular_tactics
-		icon = GFX_SRU_irregular_tactics
-		relative_position_id = SRU_full_mobilization
-		prerequisite = {
-			focus = SRU_full_mobilization
-		}
-		cost = 3
-		x = -2
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		army_experience = 50
-				add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				name = cat_mass_assault
-				category = cat_mass_assault
+				focus = {
+			id = focus_1
+			icon = GFX
+			cost = 5
+			x = 12
+			y = 0
+			available = {
+                           country_exists = SRU
 			}
-		}
-
-
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
 	}
 
-
-	focus = {
-		id = SRU_recruit_mongol_exiles
-		icon = GFX_SRU_recruit_mongol_exiles
-		relative_position_id = SRU_full_mobilization
-		prerequisite = {
-			focus = SRU_full_mobilization
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		load_oob = SRU_Mongol_exiles
-		recruit_character = SRU_Mongol_commander
-		}
-
-
-	}
-
-
-	
-	focus = {
-		id = SRU_support_turkestan
-		icon = GFX_SRU_support_turkestan
-		relative_position_id = SRU_irregular_tactics
-		prerequisite = {
-			focus = SRU_irregular_tactics
-		}
-		prerequisite = {
-			focus = SRU_sabotage_enemy
-		}
-		cost = 3
-		x = 2
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		TAS = {country_event = SRU.3}
-		}
-
-
-	}
-
-
-		
-	focus = {
-		id = SRU_support_china
-		icon = GFX_SRU_support_china
-		relative_position_id = SRU_support_turkestan
-		prerequisite = {
-			focus = SRU_support_turkestan
-		}
-
-		cost = 3
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		CHI = {country_event = SRU.4}
-		}
-
-
-	}
-
-
-	focus = {
-		id = SRU_exploit_RUS_equipment
-		icon = GFX_SRU_exploit_RUS_equipment
-		relative_position_id = SRU_support_turkestan
-		prerequisite = {
-			focus = SRU_support_china
-		}
-		prerequisite = {
-			focus = SRU_continue_confederacy
-		}
-		cost = 3
-		x = 2
-		y = 2
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 3000
+	continuous_focus_position = { x = 20 y = 3500 }
+				focus = {
+			id = focus_2
+			icon = GFX
+			cost = 3
+			x = -2
+			y = 2
+			prerequisite = { focus = focus_1 }
+			relative_position_id = focus_1
+			available = {
+                           country_exists = SRU
 			}
-		army_experience = 50
-		}
-
-
-	}
-
-
-	focus = {
-		id = SRU_right_chance
-		icon = GFX_SRU_right_chance
-		relative_position_id = SRU_exploit_RUS_equipment
-		prerequisite = {
-			focus = SRU_exploit_RUS_equipment
-		}
-
-		cost = 3
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		swap_ideas = {
-		remove_idea = SRU_unprofessional_army_2
-		add_idea = SRU_second_chance}
-		}
-
-
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
 	}
 
 
 
-
-
-	
-	focus = {
-		id = SRU_march_east
-		icon = GFX_SRU_march_east
-		relative_position_id = SRU_right_chance
-
-		prerequisite = {
-			focus = SRU_right_chance
-		}
-		cost = 3
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = SRU_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-				create_wargoal = {
-				type = take_state_focus
-				target = EUR
-				expire = 0
+				focus = {
+			id = focus_3 
+			icon = GFX
+			cost = 10
+			x = 2
+			y = 2
+			prerequisite = { focus = focus_1 }
+			relative_position_id = focus_1
+			available = {
+                           country_exists = SRU
 			}
-		}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = focus_4
+			icon = GFX
+			cost = 5
+			x = -2
+			y = 2
+			prerequisite = { focus = focus_2 }
+			prerequisite = { focus = focus_3 }
+			relative_position_id = focus_2
+			relative_position_id = focus_3
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = focus_5
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 1
+			prerequisite = { focus = focus_4 }
+			relative_position_id = focus_4
+			mutually_exclusive = { focus = RUS_Centralization_of_state_assets }
+			available = {
+                           country_exists = SRU}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = focus_6
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 1
+			prerequisite = { 
+				focus = focus_5
+			 }
 
+			relative_position_id = focus_5
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = focus_7
+			icon = GFX
+			cost = 5
+			x = -2
+			y = 2
+			prerequisite = { focus = focus_6 }
 
+			relative_position_id = focus_6
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+					focus = {
+			id = focus_8
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 2
+			prerequisite = { focus = focus_6 }
+
+			relative_position_id = focus_6
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+						focus = {
+			id = focus_9
+			icon = GFX
+			cost = 5
+			x = 2
+			y = 2
+			prerequisite = { focus = focus_6 }
+
+			relative_position_id = focus_6
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+					focus = {
+			id = focus_10
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 2
+			prerequisite = { focus = focus_7
+		                     focus = focus_8
+							 focus = focus_9 }
+			relative_position_id =focus_8
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_Politburo
+			icon = GFX
+			cost = 5
+			x = 12
+			y = 12
+			prerequisite = { focus = focus_10 }
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_
+			icon = GFX
+			cost = 3
+			x = 0
+			y = 2
+			prerequisite = { focus = RUS_Politburo }
+			relative_position_id = RUS_Politburo
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_qwe
+			icon = GFX
+			cost = 5
+			x = 2
+			y = 1
+			prerequisite = { focus = RUS_ }
+			relative_position_id = RUS_
+			available = {
+				has_completed_focus = RUS_
+				country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_4231
+			icon = GFX
+			cost = 5
+			x = -2
+			y = 1
+			prerequisite = { focus = RUS_ }
+			relative_position_id = RUS_
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_654
+			icon = GFX
+			cost = 5
+			x = 2
+			y = 1
+			prerequisite = { focus = RUS_4231 
+			                 focus = RUS_qwe }
+			relative_position_id = RUS_4231
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_industrialization 
+			icon = GFX
+			cost = 5
+			x = -3
+			y = 1
+			prerequisite = { focus = RUS_654 }
+			relative_position_id = RUS_654
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_Development
+			icon = GFX
+			cost = 5
+			x = 3
+			y = 1
+			prerequisite = { focus = RUS_654 }
+			relative_position_id = RUS_654
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_Creation
+			icon = GFX
+			cost = 5
+			x = 1
+			y = 1
+			prerequisite = { focus = RUS_Development }
+			relative_position_id = RUS_Development
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+					focus = {
+			id = RUS_Project
+			icon = GFX
+			cost = 5
+			x = 1
+			y = 1
+			prerequisite = { focus = RUS_industrialization }
+			relative_position_id = RUS_industrialization
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+						focus = {
+			id = RUS_Electrification
+			icon = GFX
+			cost = 5
+			x = -1
+			y = 1
+			prerequisite = { focus = RUS_industrialization }
+			relative_position_id = RUS_industrialization
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
 	}
 
-
-
-
-
-
-	focus = {
-		id = SRU_secure_left_flank
-		icon = GFX_SRU_secure_left_flank
-		relative_position_id = SRU_form_united_front
-		prerequisite = {
-			focus = SRU_form_united_front
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		LRU = { country_event = SRU.5}
-		}
-
-
+				focus = {
+			id = RUS_Chekhovs_Gun 
+			icon = GFX
+			cost = 3
+			x = -6
+			y = 5
+			prerequisite = { focus = focus_5}
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
 	}
-
-
-	focus = {
-		id = SRU_continue_confederacy
-		icon = GFX_SRU_continue_confederacy
-		relative_position_id = SRU_secure_left_flank
-		prerequisite = {
-			focus = SRU_secure_left_flank
-		}
-		cost = 5
-		x = 0
-		y = 1
-		available = {
-			country_exists = SRU
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_timed_idea = {
-		idea = SRU_their_small_help
-		days = 365}
-		}
-
-
+				focus = {
+			id = RUS_colleagues 
+			icon = GFX
+			cost = 3
+			x = 1
+			y = 1
+			prerequisite = { focus = RUS_Electrification 
+			focus_RUS_Project_ }
+			relative_position_id = RUS_Electrification
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
 	}
+				focus = {
+			id = RUS_airfields 
+			icon = GFX
+			cost = 5
+			x = -1
+			y = 1
+			prerequisite = { focus = RUS_Development }
+			relative_position_id = RUS_Development
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+					focus = {
+			id = RUS_jet_engines 
+			icon = GFX
+			cost = 5
+			x = 1
+			y = 1
+			prerequisite = { focus = RUS_airfields 
+			                 Focus = RUS_Creation }
+			relative_position_id = RUS_airfields
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_The
+			icon = GFX
+			cost = 5
+			x = 3
+			y = 1
+			prerequisite = { focus = RUS_colleagues
+		focus = RUS_jet_engines }
+			relative_position_id = RUS_colleagues
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_vehicles 
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 1
+			prerequisite = { focus = RUS_Chekhovs_Gun }
+			relative_position_id = RUS_Chekhovs_Gun
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_cadet 
+			icon = GFX
+			cost = 5
+			x = -1
+			y = 1
+			prerequisite = { focus = RUS_vehicles }
+			relative_position_id = RUS_vehicles
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_military
+			icon = GFX
+			cost = 5
+			x = 1
+			y = 1
+			prerequisite = { focus = RUS_vehicles }
+			relative_position_id = RUS_vehicles
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = Total_war
+			icon = GFX
+			cost = 5
+			x = -1
+			y = 1
+			prerequisite = { focus = RUS_cadet }
+			prerequisite = { focus = RUS_military }
+			relative_position_id = RUS_military
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+				focus = {
+			id = RUS_Deal_with_the_unions
+			icon = GFX
+			cost = 5
+			x = -10
+			y = 1
+			prerequisite = { focus = Total_war }
+			relative_position_id = Total_war
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+			focus = {
+			id = Jacobin_all_the_way
+			icon = GFX
+			cost = 5
+			x = -5
+			y = 2
+			prerequisite = { focus = RUS_Deal_with_the_unions }
+			relative_position_id = RUS_Deal_with_the_unions
+			mutually_exclusive focus = { focus = Jacobin_all_the_way}
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+	}
+			focus = {
+			id = RUS_Purchase 
+			icon = o
+			cost = 5
+			x = -2
+			y = 1
+			prerequisite = { focus = Jacobin_all_the_way }
+			relative_position_id = Jacobin_all_the_way
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+			} 
+			focus = {
+			id = new
+			icon = GFX
+			cost = 5
+			x = 0
+			y = 1
+			prerequisite { focus = Jacobin_all_the_way }
+			relative_position_id = Jacobin_all_the_way
+			available = {
+			                country_exists = SRU 
+			}
+			ai_will_do = {
+			        factor = 100 
+				}
+			available_if_capitulated = no
+			completion_reward = {}
+			}
+			focus = {
+				id = cat
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Jacobin_all_the_way }
+				relative_position_id = Jacobin_all_the_way
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+				
+			}
+			focus = {
+				id = that
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = new
+			                   focus = cat
+							   focus = RUS_Purchase }
+				relative_position_id = new
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fear
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = that }
+				relative_position_id = that
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Scary
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Fear }
+				relative_position_id = Fear
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = insane
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Fear }
+				relative_position_id = Fear
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Death
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Fear }
+				relative_position_id = Fear
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = list
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Scary }
+				relative_position_id = Scary
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = no
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = insane }
+				relative_position_id = insane
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Luka
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = list
+			                   focus = no }
+				relative_position_id = list
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = mend
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 2
+				prerequisite { focus = RUS_Deal_with_the_unions }
+				relative_position_id = RUS_Deal_with_the_unions
+				mutually_exclusive = { focus = Jacobin_all_the_way }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = people
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = mend }
+				relative_position_id = mend
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Middle_ground
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = people }
+				relative_position_id = people
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Ass
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Middle_ground }
+				relative_position_id = Middle_ground
+				mutually_exclusive = { focus = tites }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = tites
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Middle_ground }
+				relative_position_id = Middle_ground
+				mutually_exclusive focus = { focus = Ass }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Enough
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Ass }
+				relative_position_id = Ass
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Deliget
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Ass }
+				relative_position_id = Ass
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = beyond
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = tites }
+				relative_position_id = tites
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = open
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = beyond }
+				relative_position_id = beyond
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Lead
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Enough }
+				relative_position_id = Enough
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = United
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Lead }
+				relative_position_id = Lead
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Position
+				icon = GFX
+				cost = 5
+				x = 4
+				y = 1
+				prerequisite { focus = United 
+			                   focus = Luka }
+				relative_position_id = Luka
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = C.C.S
+				icon = GFX
+				cost = 5
+				x = -3
+				y = 9
+				prerequisite { focus = Total_war }
+				relative_position_id = Total_war
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Coo
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = C.C.S  }
+				relative_position_id = C.C.S
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Purge
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Coo }
+				relative_position_id = Coo
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Tann
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Purge }
+				relative_position_id = Purge
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = strike
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Tann }
+				relative_position_id = Tann
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Restr
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = C.C.S }
+				relative_position_id = C.C.S
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = move
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Restr  }
+				relative_position_id = Restr
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Food
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = move }
+				relative_position_id = move
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+			
+			}
+			focus = {
+				id = Jacobin_army
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Total_war }
+				relative_position_id = Total_war
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Makrov
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Jacobin_army }
+				relative_position_id = Jacobin_army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Kovalev
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Jacobin_army }
+				mutually_exclusive { focus = Makrov }
+				relative_position_id = Jacobin_army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = P_loyal
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Makrov }
+				relative_position_id = Makrov
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Mod_air
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = P_loyal }
+				relative_position_id = P_loyal
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Indep_army
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Kovalev }
+				relative_position_id = Kovalev
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Mech_army
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Indep_army }
+				relative_position_id = Indep_army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = AK_Tank
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Mech_army
+			                   Focus = Mod_air }
+				relative_position_id = Mech_army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Punch_Hard
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Mech_army }
+				relative_position_id = Mech_army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_blitz
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Punch_Hard }
+				relative_position_id = Punch_Hard
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Bombs_away
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Mod_air }
+				relative_position_id = Mod_air
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_sky
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Bombs_away }
+				relative_position_id = Bombs_away
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_dawn
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Red_blitz 
+			                   focus = C.C.S }
+				relative_position_id = Red_blitz
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Chaos_est
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Red_dawn }
+				relative_position_id = Red_dawn
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fund
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Chaos_est }
+				relative_position_id = Chaos_est
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = People_rise
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Fund }
+				relative_position_id = Fund
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Zaytsev
+				icon = GFX
+				cost = 5
+				x = 7
+				y = 1
+				prerequisite { focus = Total_war }
+				relative_position_id = Total_war
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Cent_planing
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Zaytsev }
+				relative_position_id = Zaytsev
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Economic_heart
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 2
+				prerequisite { focus = Zaytsev
+			                   focus = Cent_planing }
+				relative_position_id = Zaytsev
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = War_matchen
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 2
+				prerequisite { focus = Zaytsev 
+			                   focus = Cent_planing }
+				mutually_exclusive { focus = Economic_heart }
+				relative_position_id = Zaytsev
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Asimble_line
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = War_matchen }
+				relative_position_id = War_matchen
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = state_Fac
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Asimble_line }
+				relative_position_id = Asimble_line
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Cut_conors
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = fire_power }
+				relative_position_id = fire_power
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Foced_labour
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = War_matchen
+			                   focus = Economic_heart }
+				relative_position_id = War_matchen
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Penal_battalion
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Foced_labour }
+				relative_position_id = Foced_labour
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Gulag
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Penal_battalion }
+				relative_position_id = Penal_battalion
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = fire_power
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = state_Fac }
+				relative_position_id = state_Fac
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = State_pro
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Economic_heart }
+				relative_position_id = Economic_heart
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = New_life
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = State_pro }
+				relative_position_id = State_pro
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Zaytsevist_in
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = New_life }
+				relative_position_id = New_life
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = State_own
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Zaytsevist_in }
+				relative_position_id = Zaytsevist_in
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Gov_slave
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = State_own }
+				relative_position_id = State_own
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = War_matchen_over
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Cut_conors }
+				relative_position_id = Cut_conors
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Zaytsev_miracle
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 4
+				prerequisite { focus = Cut_conors
+			                   focus = Gulag
+							   focus = State_own }
+				relative_position_id = Penal_battalion
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Grand_Embassy
+				icon = GFX
+				cost = 5
+				x = 12
+				y = 2
+				prerequisite { focus = focus_10 }
+				relative_position_id = focus_10
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = First_contact
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Grand_Embassy }
+				relative_position_id = Grand_Embassy
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Unthinkable_alliance
+				icon = GFX
+				cost = 5
+				x = -3
+				y = 2
+				prerequisite { focus = First_contact }
+				relative_position_id = First_contact
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Embassy_Esta
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Unthinkable_alliance }
+				relative_position_id = Unthinkable_alliance
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Smirnovs_intent
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Embassy_Esta }
+				relative_position_id = Embassy_Esta
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sonyas_intent
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Embassy_Esta }
+				relative_position_id = Embassy_Esta
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Shared_inve
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Smirnovs_intent }
+				relative_position_id = Smirnovs_intent
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Joint_military
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Sonyas_intent }
+				relative_position_id = Sonyas_intent
+				mutually_exclusive = { focus = Shared_inve }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Monarchist_mach
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Shared_inve }
+				relative_position_id = Shared_inve
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = best_of_both
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Monarchist_mach }
+				relative_position_id = Monarchist_mach
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Monarchist_Vet
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Joint_military }
+				relative_position_id = Joint_military
+				mutually_exclusive = { focus = Monarchist_mach }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Formalized_combined_arms
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Monarchist_Vet }
+				relative_position_id = Monarchist_Vet
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Civilian_design
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Monarchist_mach }
+				relative_position_id = Monarchist_mach
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Military_design
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Monarchist_Vet }
+				relative_position_id = Monarchist_Vet
+				mutually_exclusive { focus = Civilian_design }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Nationalise_banks
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Civilian_design }
+				relative_position_id = Civilian_design
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Merged_railway_net
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Nationalise_banks }
+				relative_position_id = Nationalise_banks
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Intergrated_com
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Military_design }
+				relative_position_id = Military_design
+				mutually_exclusive = { focus = Nationalise_banks }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Combined_gen
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Intergrated_com }
+				relative_position_id = Intergrated_com
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Peoples_state
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Nationalise_banks }
+				relative_position_id = Nationalise_banks
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = State_first
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Intergrated_com }
+				relative_position_id = Intergrated_com
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Bouquet_of_thorns
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Peoples_state }
+				relative_position_id = Peoples_state
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Cannot_bend
+				icon = GFX
+				cost = 5
+				x = 4
+				y = 2
+				prerequisite { focus = First_contact }
+				relative_position_id = First_contact
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Establish_res_shar
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Cannot_bend }
+				relative_position_id = Cannot_bend
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Tech_sharing
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Cannot_bend }
+				relative_position_id = Cannot_bend
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Decentralized_zone
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Cannot_bend }
+				relative_position_id = Cannot_bend
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Draw_close
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Establish_res_shar }
+				relative_position_id = Establish_res_shar
+				mutually_exclusive = {focus = Keep_our_distance }
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Merged_railways
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Draw_close }
+				relative_position_id = Draw_close
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Joint_military_Training
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Draw_close }
+				relative_position_id = Draw_close
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Serf
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Draw_close }
+				relative_position_id = Draw_close
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Friends_foes
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Merged_railways
+			                   focus = Joint_military_Training
+							   focus = Serf }
+				relative_position_id = Merged_railways
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Keep_our_distance
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Decentralized_zone }
+				relative_position_id = Decentralized_zone
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = State_security
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Keep_our_distance }
+				relative_position_id = Keep_our_distance
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Taking_skies
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Keep_our_distance }
+				relative_position_id = Keep_our_distance
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = AA_inita
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Keep_our_distance }
+				relative_position_id = Keep_our_distance
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Keep_arm_length
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = State_security
+			                   focus = Taking_skies
+							   focus = AA_inita }
+				relative_position_id = State_security
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = comrades_in_arms
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Friends_foes
+			                   focus = Keep_arm_length }
+				relative_position_id = Friends_foes
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = We_might_as_Fight_alone
+				icon = GFX
+				cost = 5
+				x = 12
+				y = 2
+				prerequisite { focus = First_contact }
+				relative_position_id = First_contact
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Feed_the_Troops
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = We_might_as_Fight_alone }
+				relative_position_id = We_might_as_Fight_alone
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = First_Push
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = We_might_as_Fight_alone }
+				relative_position_id = We_might_as_Fight_alone
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = N0_ground_given
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = We_might_as_Fight_alone }
+				relative_position_id = We_might_as_Fight_alone
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Its_Russian_time
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Feed_the_Troops }
+				mutually_exclusive = { focus = Show_Tsar_how_done }
+				relative_position_id = Feed_the_Troops
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = People_before_state
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Its_Russian_time }
+				relative_position_id = Its_Russian_time
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Socialists_among_them
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Its_Russian_time }
+				relative_position_id = Its_Russian_time
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Rather_Red_than_dead
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Its_Russian_time }
+				relative_position_id = Its_Russian_time
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Reach_out_to_the_EIZ
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = People_before_state
+			                   focus = Socialists_among_them
+							   focus = Rather_Red_than_dead }
+				relative_position_id = People_before_state
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Show_Tsar_how_done
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = N0_ground_given }
+				relative_position_id = N0_ground_given
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = preempt_our_invasion
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Show_Tsar_how_done }
+				relative_position_id = Show_Tsar_how_done
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sofen_fronts
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Show_Tsar_how_done }
+				relative_position_id = Show_Tsar_how_done
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = prep_the_line
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Show_Tsar_how_done }
+				relative_position_id = Show_Tsar_how_done
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = fortify_the_front
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = preempt_our_invasion
+			                   focus = Sofen_fronts
+							   focus = prep_the_line }
+				relative_position_id = preempt_our_invasion
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = WE_will_not_falter
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Reach_out_to_the_EIZ
+			                   focus = fortify_the_front }
+				relative_position_id = Reach_out_to_the_EIZ
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sokolos_mili_Refor
+				icon = GFX
+				cost = 5
+				x = 42
+				y = 1
+				prerequisite { focus = focus_10 }
+				relative_position_id = focus_10
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Peasant_Militias
+				icon = GFX
+				cost = 5
+				x = -8
+				y = 1
+				prerequisite { focus = Sokolos_mili_Refor }
+				relative_position_id = Sokolos_mili_Refor
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Recruit_more_Peasants
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Peasant_Militias }
+				relative_position_id = Peasant_Militias
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Tankovyy
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Peasant_Militias }
+				relative_position_id = Peasant_Militias
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Danger_close
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Recruit_more_Peasants
+			                   focus = Tankovyy }
+				relative_position_id = Recruit_more_Peasants
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Spirit_Of_The_People
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Danger_close }
+				relative_position_id = Danger_close
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Crimson_Steel
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Sokolos_mili_Refor }
+				relative_position_id = Sokolos_mili_Refor
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Make_Stalinium
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Crimson_Steel }
+				mutually_exclusive { focus = Clean_up_Knightmare_pro }
+				relative_position_id = Crimson_Steel
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Experienced_pilots_only
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Make_Stalinium }
+				relative_position_id = Make_Stalinium
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Keep_best_Online
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Make_Stalinium }
+				relative_position_id = Make_Stalinium
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Knights_of_socialism
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Experienced_pilots_only
+			                   focus = Keep_best_Online }
+				relative_position_id = Experienced_pilots_only
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Clean_up_Knightmare_pro
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Crimson_Steel }
+				relative_position_id = Crimson_Steel
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Manuale_even_privates_could_read
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Clean_up_Knightmare_pro }
+				relative_position_id = Clean_up_Knightmare_pro
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Reinforcing_the_legs
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Clean_up_Knightmare_pro }
+				relative_position_id = Clean_up_Knightmare_pro
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Mastering_Knightmare_production
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Manuale_even_privates_could_read
+			                   focus = Reinforcing_the_legs }
+				relative_position_id = Manuale_even_privates_could_read
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_Army
+				icon = GFX
+				cost = 5
+				x = 4
+				y = 1
+				prerequisite { focus = Sokolos_mili_Refor }
+				relative_position_id = Sokolos_mili_Refor
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Standerdizing_Basic_Training
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Red_Army }
+				relative_position_id = Red_Army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Aviation_inttergration
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Red_Army }
+				relative_position_id = Red_Army
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Load_Up_the_Troops
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Standerdizing_Basic_Training 
+			                   focus = Aviation_inttergration }
+				relative_position_id = Standerdizing_Basic_Training
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_War_Machine
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Load_Up_the_Troops }
+				relative_position_id = Load_Up_the_Troops
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Through_Blood_and_Iron
+				icon = GFX
+				cost = 5
+				x = 6
+				y = 2
+				prerequisite { focus = Spirit_Of_The_People
+			                   focus = Knights_of_socialism
+							   focus = Mastering_Knightmare_production
+							   focus = Red_War_Machine }
+				relative_position_id = Spirit_Of_The_People
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_struggle
+				icon = GFX
+				cost = 5
+				x = 6
+				y = 5
+				prerequisite { focus = RUS_The 
+			                   focus = Through_Blood_and_Iron }
+				relative_position_id = RUS_The
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sonyas_March_Forward
+				icon = GFX
+				cost = 5
+				x = 54
+				y = 1
+				prerequisite { focus = focus_10 }
+				relative_position_id = focus_10
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Communal_Planning
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Sonyas_March_Forward }
+				relative_position_id = Sonyas_March_Forward
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Battle_Economy
+				icon = GFX
+				cost = 5
+				x = -3
+				y = 1
+				prerequisite { focus = Communal_Planning }
+				mutually_exclusive = { focus = A_Social_Econonmy }
+				relative_position_id = Communal_Planning
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = A_Social_Econonmy
+				icon = GFX
+				cost = 5
+				x = 3
+				y = 1
+				prerequisite { focus = Communal_Planning }
+				relative_position_id = Communal_Planning
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Patriotic_Workers
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Battle_Economy }
+				relative_position_id = Battle_Economy
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Productive_Cities
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Patriotic_Workers }
+				relative_position_id = Patriotic_Workers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Working_On_Overtime
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Productive_Cities }
+				relative_position_id = Productive_Cities
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fudge_the_Numbers
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Working_On_Overtime }
+				relative_position_id = Working_On_Overtime
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Militaristic_Solution
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Fudge_the_Numbers }
+				relative_position_id = Fudge_the_Numbers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Trans_Siberian_Highway
+				icon = GFX
+				cost = 5
+				x = 3
+				y = 1
+				prerequisite { focus = Battle_Economy
+			                   focus = A_Social_Econonmy }
+				relative_position_id = Battle_Economy
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Universal_Employment
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Trans_Siberian_Highway }
+				relative_position_id = Trans_Siberian_Highway
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = State_Mandated_Kazakstan_Vaction
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Universal_Employment }
+				relative_position_id = Universal_Employment
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Capitalism_with_Socialist_Char
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = A_Social_Econonmy }
+				relative_position_id = A_Social_Econonmy
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Utopianism_Architecture
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Expand_The_Industrial_Estates }
+				relative_position_id = Expand_The_Industrial_Estates
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Mandatory_Trade_Unions
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Utopianism_Architecture }
+				relative_position_id = Utopianism_Architecture
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Productive_Cities
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Patriotic_Workers }
+				relative_position_id = Patriotic_Workers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Expand_The_Industrial_Estates
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Capitalism_with_Socialist_Char }
+				relative_position_id = Capitalism_with_Socialist_Char
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Indepemdent_workers
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Mandatory_Trade_Unions }
+				relative_position_id = Mandatory_Trade_Unions
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sonyas_Economic_Miracle
+				icon = GFX
+				cost = 5
+				x = 3
+				y = 1
+				prerequisite { focus = Fudge_the_Numbers
+			                   focus = Mandatory_Trade_Unions }
+				relative_position_id = Fudge_the_Numbers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Sonyas_Victory
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 19
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fith_Internationale
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Sonyas_Victory }
+				relative_position_id = Sonyas_Victory
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_great_Leap_Forward
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Sonyas_Victory }
+				relative_position_id = Sonyas_Victory
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Returning_to_Moscow
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Sonyas_Victory }
+				relative_position_id = Sonyas_Victory
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Intervene_in_the_East
+				icon = GFX
+				cost = 5
+				x = 5
+				y = 21
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Backing_the_socialists
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Intervene_in_the_East }
+				relative_position_id = Intervene_in_the_East
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Feeding_Their_military_Industry
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Backing_the_socialists }
+				relative_position_id = Backing_the_socialists
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Revolutions_Fuel_are_soldiers
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Backing_the_socialists }
+				relative_position_id = Backing_the_socialists
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Suppling_the_Red_War_Machine
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Feeding_Their_military_Industry }
+				relative_position_id = Feeding_Their_military_Industry
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Cutting_Lions_Communication_Lines
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Revolutions_Fuel_are_soldiers }
+				relative_position_id = Revolutions_Fuel_are_soldiers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Bear_stands_United
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Suppling_the_Red_War_Machine }
+				mutually_exclusive = { focus = Resistance_untill_last_man }
+				relative_position_id = Suppling_the_Red_War_Machine
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Resistance_untill_last_man
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Cutting_Lions_Communication_Lines }
+				relative_position_id = Cutting_Lions_Communication_Lines
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Death_is_betrayers_Punishment
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Bear_stands_United }
+				               focus = Resistance_untill_last_man
+				relative_position_id = Bear_stands_United
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Backing_the_Euro_Brits
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Intervene_in_the_East }
+				relative_position_id = Intervene_in_the_East
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Lion_needs_our_Strength
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Backing_the_Euro_Brits }
+				relative_position_id = Backing_the_Euro_Brits
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Enemy_of_my_Enemy_gets_Supplies
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Lion_needs_our_Strength }
+				relative_position_id = Lion_needs_our_Strength
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Lion_and_Bear_United
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Enemy_of_my_Enemy_gets_Supplies }
+				mutually_exclusive = { focus = Price_Of_Revolution }
+				relative_position_id = Enemy_of_my_Enemy_gets_Supplies
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Send_them_Lapdogs
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Backing_the_Euro_Brits }
+				relative_position_id = Backing_the_Euro_Brits
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Socialists_Little_Hell
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Send_them_Lapdogs }
+				relative_position_id = Send_them_Lapdogs
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Price_Of_Revolution
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Socialists_Little_Hell }
+				relative_position_id = Socialists_Little_Hell
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Red_Flag_burns
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Lion_and_Bear_United
+			                   focus = Price_Of_Revolution }
+				relative_position_id = Lion_and_Bear_United
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Siberia_burns_and_now_we_wait...
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Death_is_betrayers_Punishment
+			                   focus = Red_Flag_burns }
+				relative_position_id = Death_is_betrayers_Punishment
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_East_falls
+				icon = GFX
+				cost = 5
+				x = 8
+				y = 29
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Siberian_Rejuvenation
+				icon = GFX
+				cost = 5
+				x = -6
+				y = 2
+				prerequisite { focus = The_East_falls }
+				relative_position_id = The_East_falls
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fortify_Western_Siberia
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Siberian_Rejuvenation }
+				relative_position_id = Siberian_Rejuvenation
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Difficult_Future
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Fortify_Western_Siberia }
+				relative_position_id = Fortify_Western_Siberia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Hard_Times
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Difficult_Future }
+				relative_position_id = Difficult_Future
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = ProductivNational_Struggle 
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Difficult_Future }
+				relative_position_id = Difficult_Future
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Building_A_East_Siberia
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Siberian_Rejuvenation }
+				relative_position_id = Siberian_Rejuvenation
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Better_Tommorrow
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Building_A_East_Siberia }
+				relative_position_id = Building_A_East_Siberia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Megacities_in_Siberia
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Better_Tommorrow }
+				relative_position_id = Better_Tommorrow
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Trans-Siberian_Railway
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Better_Tommorrow }
+				relative_position_id = Better_Tommorrow
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Russian_National_Rejuvenation
+				icon = GFX
+				cost = 5
+				x = 3
+				y = 1
+				prerequisite { focus = Hard_Times
+			                   focus = ProductivNational_Struggle
+							   focus = Megacities_in_Siberia
+							   focus = Trans-Siberian_Railway }
+				relative_position_id = Hard_Times
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Russo-Sino_Relations
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 2
+				prerequisite { focus = The_East_falls }
+				relative_position_id = The_East_falls
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Ask_For_Sakhalin
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Russo-Sino_Relations }
+				relative_position_id = Russo-Sino_Relations
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Ask_For_Vladivostok
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Russo-Sino_Relations }
+				relative_position_id = Russo-Sino_Relations
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Consolidate_The_New_Territories
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Ask_For_Vladivostok
+			                   focus = Ask_For_Sakhalin }
+				relative_position_id = Ask_For_Vladivostok
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Chinese_Inversment
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Consolidate_The_New_Territories }
+				relative_position_id = Consolidate_The_New_Territories
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Forging_A_New_Russia
+				icon = GFX
+				cost = 5
+				x = 5
+				y = 1
+				prerequisite { focus = Russian_National_Rejuvenation
+			                   focus = Chinese_Inversment }
+				relative_position_id = Russian_National_Rejuvenation
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Productive_Cities
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Patriotic_Workers }
+				relative_position_id = Patriotic_Workers
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+			}
+			focus = {
+				id = Crush_the_West
+				icon = GFX
+				cost = 5
+				x = 6
+				y = 1
+				prerequisite { focus = The_East_falls }
+				relative_position_id = The_East_falls
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Let_The_Guillotines_Fall
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Crush_the_West }
+				relative_position_id = Crush_the_West
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Seize_The_Winter_Palace
+				icon = GFX
+				cost = 5
+				x = -3
+				y = 3
+				prerequisite { focus = Crush_the_West }
+				relative_position_id = Crush_the_West
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Arrest_The_Tsar
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Seize_The_Winter_Palace }
+				relative_position_id = Seize_The_Winter_Palace
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Charge_The_Imperial_Family_For_Treason
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Arrest_The_Tsar }
+				relative_position_id = Arrest_The_Tsar
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_Tsars_Fate
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Arrest_The_Tsar }
+				relative_position_id = Arrest_The_Tsar
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Seize_The_Ural_Fortress
+				icon = GFX
+				cost = 5
+				x = 3
+				y = 3
+				prerequisite { focus = Crush_the_West }
+				relative_position_id = Crush_the_West
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Arrest_the_Provisional_government
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Seize_The_Ural_Fortress }
+				relative_position_id = Seize_The_Ural_Fortress
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Fate_Of_The_President
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Arrest_the_Provisional_government }
+				relative_position_id = Arrest_the_Provisional_government
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Trt_The_Cabinet_For_Treason
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Arrest_the_Provisional_government }
+				relative_position_id = Arrest_the_Provisional_government
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Heros_of_the_revo
+				icon = GFX
+				cost = 5
+				x = 8
+				y = 1
+				prerequisite { focus = Crush_the_West }
+				relative_position_id = Crush_the_West
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Loyalty_to_Luka
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Heros_of_the_revo }
+				relative_position_id = Heros_of_the_revo
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Obedience_to_the_party
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Loyalty_to_Luka }
+				relative_position_id = Loyalty_to_Luka
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = All_hail_Luka
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Obedience_to_the_party }
+				relative_position_id = Obedience_to_the_party
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Lukas_right_hand
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Obedience_to_the_party }
+				relative_position_id = Obedience_to_the_party
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Saviour_of_Russia
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Obedience_to_the_party }
+				relative_position_id = Obedience_to_the_party
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Long_live_Luka
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 0
+				prerequisite { focus = Saviour_of_Russia }
+				relative_position_id = Saviour_of_Russia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = God_Bless_Mother_Russia
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 0
+				prerequisite { focus = Saviour_of_Russia }
+				relative_position_id = Saviour_of_Russia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Worker_Of_The_World_Unite
+				icon = GFX
+				cost = 5
+				x = 30
+				y = 23
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Britannia
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Worker_Of_The_World_Unite }
+				relative_position_id = Worker_Of_The_World_Unite
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = South_Britannian_Areas
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Britannia }
+				relative_position_id = Britannia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = New_Anglia
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = South_Britannian_Areas }
+				relative_position_id = South_Britannian_Areas
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Japan
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = New_Anglia }
+				relative_position_id = New_Anglia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = China
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Worker_Of_The_World_Unite }
+				relative_position_id = Worker_Of_The_World_Unite
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = India
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = China }
+				relative_position_id = China
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Korea
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = India }
+				relative_position_id = India
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Indonesia
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Korea }
+				relative_position_id = Korea
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = France
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Worker_Of_The_World_Unite }
+				relative_position_id = Worker_Of_The_World_Unite
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Germany
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = France }
+				relative_position_id = France
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Austria
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Germany }
+				relative_position_id = Germany
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Africa
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Austria }
+				relative_position_id = Austria
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Foreign_Volunteers
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 2
+				prerequisite { focus = Japan
+			                   focus = Indonesia
+							   focus = Africa }
+				relative_position_id = Indonesia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Proclaim_Victory
+				icon = GFX
+				cost = 5
+				x = -14
+				y = 30
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Lukas_Trip_to_hell
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Proclaim_Victory }
+				relative_position_id = Proclaim_Victory
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Dissolve_The_Concil
+				icon = GFX
+				cost = 5
+				x = -2
+				y = 1
+				prerequisite { focus = Lukas_Trip_to_hell }
+				relative_position_id = Lukas_Trip_to_hell
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Regimen_In_Shambles
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Lukas_Trip_to_hell }
+				relative_position_id = Lukas_Trip_to_hell
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = so_Close_Yet_so_far
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Dissolve_The_Concil
+			                   focus = Regimen_In_Shambles }
+				relative_position_id = Regimen_In_Shambles
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Invite_Zakharov_Back
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = so_Close_Yet_so_far }
+				relative_position_id = so_Close_Yet_so_far
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+
+			}
+			focus = {
+				id = Luka_Prevails
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Proclaim_Victory }
+				relative_position_id = Proclaim_Victory
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Jacobin_Saint
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Luka_Prevails }
+				relative_position_id = Luka_Prevails
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Rulling_Alone
+				icon = GFX
+				cost = 5
+				x = 2
+				y = 1
+				prerequisite { focus = Luka_Prevails }
+				relative_position_id = Luka_Prevails
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_New_Russia
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Jacobin_Saint
+			                   focus = Rulling_Alone }
+				relative_position_id = Jacobin_Saint
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Ultimate_Triumph
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = The_New_Russia }
+				relative_position_id = The_New_Russia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Interfere_in_China
+				icon = GFX
+				cost = 5
+				x = -21
+				y = 35
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Contact_the_Daiyu_sisters
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Interfere_in_China }
+				relative_position_id = Interfere_in_China
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Economic_Relief
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Contact_the_Daiyu_sisters }
+				relative_position_id = Contact_the_Daiyu_sisters
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Blank_Cheque
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Contact_the_Daiyu_sisters }
+				relative_position_id = Contact_the_Daiyu_sisters
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Military_Support
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Contact_the_Daiyu_sisters }
+				relative_position_id = Contact_the_Daiyu_sisters
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = United_We_Stand
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Economic_Relief
+			                   focus = Blank_Cheque
+							   focus = Military_Support }
+				relative_position_id = Economic_Relief
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Chinese_Intervention
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = United_We_Stand }
+				relative_position_id = United_We_Stand
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Unify_Eurasia
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Chinese_Intervention }
+				relative_position_id = Chinese_Intervention
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Purge_the_Bear
+				icon = GFX
+				cost = 5
+				x = -5
+				y = 35
+
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Adopt_the_Cub
+				icon = GFX
+				cost = 5
+				x = -1
+				y = 1
+				prerequisite { focus = Purge_the_Bear }
+				relative_position_id = Purge_the_Bear
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Comrade_Bearakov
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Adopt_the_Cub }
+				relative_position_id = Adopt_the_Cub
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = The_Bear_Strikes_Back
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Comrade_Bearakov }
+				relative_position_id = Comrade_Bearakov
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Grizzley_Exection
+				icon = GFX
+				cost = 5
+				x = 1
+				y = 1
+				prerequisite { focus = Purge_the_Bear }
+				relative_position_id = Purge_the_Bear
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = New_Bear_In_Town
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = Grizzley_Exection }
+				relative_position_id = Grizzley_Exection
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+			}
+			focus = {
+				id = Poach_bears
+				icon = GFX
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite { focus = New_Bear_In_Town }
+				relative_position_id = New_Bear_In_Town
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				available_if_capitulated = no
+				completion_reward = {}
+
+
+			}}
