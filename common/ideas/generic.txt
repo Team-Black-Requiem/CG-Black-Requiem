@@ -858,14 +858,9 @@ GEN_auth_dem_idea_2 = {
 	}
 	removal_cost = -1
 	modifier = {
-		if = {
-			limit = {has_dlc = "La Resistance"}
-			decryption_power = 0.05
-			operative_slot = 1
-		}
-		else = {
-			decryption_factor = 0.05
-		}
+		decryption_power = 0.05
+		operative_slot = 1	
+		decryption_factor = 0.05
 		stability_factor = 0.05
 	}
 }
@@ -875,16 +870,11 @@ GEN_auth_dem_idea_3 = {
 	}
 	removal_cost = -1
 	modifier = {
-		if = {
-			limit = {has_dlc = "La Resistance"}
-			crypto_strength = 0.05
-			decryption_power = 0.05
-			operative_slot = 2
-		}
-		else = {
-			encryption_factor = 0.05
-			decryption_factor = 0.05
-		}
+		crypto_strength = 0.05
+		decryption_power = 0.05
+		operative_slot = 2
+		encryption_factor = 0.05
+		decryption_factor = 0.05	
 		stability_factor = 0.05
 	}
 }
