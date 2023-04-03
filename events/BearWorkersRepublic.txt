@@ -210,7 +210,7 @@ country_event = {
 
 	
 	
-	option = {
+	option = {yes
 		name = BWR.4.a
 		ai_chance = {
 			factor = 100
@@ -235,7 +235,7 @@ country_event = {
 			factor = 100
 		}
 		if = {
-			limit = {is_ai}
+			limit = {is_ai = yes}
 			load_oob = "BWR_AI"
 		}
 		else = {load_oob = "BWR"}
@@ -440,7 +440,7 @@ country_event = {
 			factor = 100
 		}
 		if = {
-			limit = {is_ai}
+			limit = {is_ai = yes}
 			load_oob = "BWR_knightmares_AI"
 			load_oob = "BWR_knightmares_AI"
 			load_oob = "BWR_knightmares_AI"
