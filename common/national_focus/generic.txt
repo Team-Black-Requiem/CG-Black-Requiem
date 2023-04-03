@@ -1245,20 +1245,20 @@ cost = 5
 			random_owned_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 4
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 			}
-			capital = {
-				add_resource = {
-					type = steel
-					amount = 8
-				}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = capital
+			} 
 			}
 		}
+
 	
-	}
 	
 	focus = {
 
@@ -1288,11 +1288,10 @@ cost = 5
 				}
 				add_extra_state_shared_building_slots = 2
 			}
-			capital = {
-				add_resource = {
-					type = steel
-					amount = 8
-				}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = capital
 			}
 		}
 	
@@ -1326,15 +1325,15 @@ cost = 5
 				}
 				add_extra_state_shared_building_slots = 2
 			}
-			capital = {
 				add_resource = {
-					type = tungsten
-					amount = 8
+					type = aluminium
+					amount = 12
+					state = capital
+				} 
 				}
-			}
 		}
 	
-	}
+	
 
 	focus = {
 
@@ -1364,11 +1363,11 @@ cost = 5
 				}
 				add_extra_state_shared_building_slots = 3
 			}
-			capital = {
-				add_resource = {
-					type = aluminium
-					amount = 12
-				}
+		    
+			add_resource = {
+				type = oil
+				amount = 12
+				state = capital
 			}
 		}
 	
@@ -1567,7 +1566,7 @@ cost = 5
 
 		relative_position_id = New_Technical_Institute
 		x = -2
-		y = 2
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1632,17 +1631,17 @@ cost = 5
 
 		relative_position_id = New_Technical_Institute
 		x = 0
-		y = 2
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			capital = {
-				add_resource = {
-					type = sakuradite
-					amount = 8
-				}
+			
+			add_resource = {
+				type = sakuradite
+				amount = 8
+				state = capital
 			}
 		}
 	
@@ -1689,7 +1688,7 @@ cost = 5
 
 		relative_position_id = New_Technical_Institute
 		x = 2
-		y = 2
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1782,10 +1781,10 @@ cost = 5
 		}
         
 		prerequisite = {
-	       focus = Advanced_Technical_Institute
+	       focus = New_Technical_Institute
 		}
 
-		relative_position_id = Advanced_Technical_Institute
+		relative_position_id = New_Technical_Institute
 		x = 0
 		y = 1
 		cost = 5
