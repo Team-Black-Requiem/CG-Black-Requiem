@@ -234,7 +234,11 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		load_oob = BWR
+		if = {
+			limit = {is_ai}
+			load_oob = "BWR_AI"
+		}
+		else = {load_oob = "BWR"}
 		recruit_character = BWR_bearshev
 		add_ideas = BWR_International_Bears
     }     
@@ -258,6 +262,7 @@ country_event = {
 		remove_ideas = BWR_Trained_Bears_Idea
 	    remove_ideas = BWR_International_Bears
 		remove_ideas = BWR_Weekly_Bears
+		hidden_effect = {
 		create_wargoal = { type = annex_everything target = JAP}
 		create_wargoal = { type = annex_everything target = AST}
 		create_wargoal = { type = annex_everything target = EUR}
@@ -396,7 +401,7 @@ country_event = {
 		create_wargoal = { type = annex_everything target = SHI}
 		create_wargoal = { type = annex_everything target = HOK}
 		create_wargoal = { type = annex_everything target = TOH}
-
+		}
 
     }     
 }
@@ -434,9 +439,18 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		load_oob = BWR_knightmares
-		load_oob = BWR_knightmares
-		load_oob = BWR_knightmares
+		if = {
+			limit = {is_ai}
+			load_oob = "BWR_knightmares_AI"
+			load_oob = "BWR_knightmares_AI"
+			load_oob = "BWR_knightmares_AI"
+		}
+		else = {
+			load_oob = "BWR_knightmares"
+			load_oob = "BWR_knightmares"
+			load_oob = "BWR_knightmares"
+		}
+		
 
     }     
 }
