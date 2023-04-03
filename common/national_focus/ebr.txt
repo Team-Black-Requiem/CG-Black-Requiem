@@ -2699,7 +2699,7 @@ focus_tree = {
 		id = EUR_Guinevere_Support
 		icon = GFX_goal_unknown
 		cost = 3
-		x = -18
+		x = -26
 		y = 1
 		relative_position_id = EUR_Britannian_ultimatum
 		prerequisite = {
@@ -2766,6 +2766,1039 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+####################################Guinevere Caring hand
+	focus = {
+		id = EUR_Prepare_for_prime_minister_visit
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -10
+		y = 1
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Creating_Okhotsk_settlement
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Expand_industrial_district
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Creating_Okhotsk_settlement
+		mutually_exclusive = { focus = EUR_Expand_administrative_district}
+		prerequisite = {
+			focus = EUR_Creating_Okhotsk_settlement
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Support_open_britannian_labs
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Expand_industrial_district
+		prerequisite = {
+			focus = EUR_Expand_industrial_district
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Expand_administrative_district
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Creating_Okhotsk_settlement
+		mutually_exclusive = { focus = EUR_Expand_industrial_district}
+		prerequisite = {
+			focus = EUR_Creating_Okhotsk_settlement
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Better_region_organisation
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Expand_administrative_district
+		prerequisite = {
+			focus = EUR_Expand_administrative_district
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Withdraw_all_lands_of_Russian_nobles
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Nationalize_all_railroads_and_trains_in_region
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Withdraw_all_lands_of_Russian_nobles
+		prerequisite = {
+			focus = EUR_Withdraw_all_lands_of_Russian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Create_modern_excavation_company
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Nationalize_all_railroads_and_trains_in_region
+		prerequisite = {
+			focus = EUR_Nationalize_all_railroads_and_trains_in_region
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Strengthen_the_proBrittanian_police
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Send_opposition_to_Kolima
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Strengthen_the_proBrittanian_police
+		prerequisite = {
+			focus = EUR_Strengthen_the_proBrittanian_police
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Clear_all_administration_from_Russians
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Send_opposition_to_Kolima
+		prerequisite = {
+			focus = EUR_Send_opposition_to_Kolima
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_The_long_awaited_meeting
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Clear_all_administration_from_Russians
+		prerequisite = {
+			focus = EUR_Clear_all_administration_from_Russians
+		}
+		prerequisite = {
+			focus = EUR_Create_modern_excavation_company
+		}
+		prerequisite = {
+			focus = EUR_Better_region_organisation
+			focus = EUR_Support_open_britannian_labs
+		}
+		
+		
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#########################################Guinevere Army (Use the doctrine of non-retreat at the front)
+	focus = {
+		id = EUR_Use_doctrine_of_non_retreat
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_doctrine_of_non_retreat
+		prerequisite = {
+			focus = EUR_Use_doctrine_of_non_retreat
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Propaganda_of_weakness_of_Socialists
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		prerequisite = {
+			focus = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael2
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Propaganda_of_weakness_of_Socialists
+		prerequisite = {
+			focus = EUR_Propaganda_of_weakness_of_Socialists
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Our_own_genius2
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael2
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael2
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_An_army_worth_of_duke
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 3
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+		}
+		mutually_exclusive = {focus = EUR_Recruit_honorable_britannians_from_areas}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Claws_of_Britannia
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_An_army_worth_of_duke
+		prerequisite = {
+			focus = EUR_An_army_worth_of_duke
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Claws_of_Britannia
+		prerequisite = {
+			focus = EUR_Claws_of_Britannia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Monthly_deliveries
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		prerequisite = {
+			focus = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Wings_of_Emperor
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_An_army_worth_of_duke
+		prerequisite = {
+			focus = EUR_An_army_worth_of_duke
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Best_aces
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Wings_of_Emperor
+		prerequisite = {
+			focus = EUR_Wings_of_Emperor
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_Recruit_honorable_britannians_from_areas
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 3
+		relative_position_id = EUR_Reach_Out_To_The_Proper_Areas
+		prerequisite = {
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		mutually_exclusive = {focus = EUR_An_army_worth_of_duke}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Asking_areas_for_help
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Recruit_honorable_britannians_from_areas
+		prerequisite = {
+			focus = EUR_Recruit_honorable_britannians_from_areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_advisor
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Asking_areas_for_help
+		prerequisite = {
+			focus = EUR_Asking_areas_for_help
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Use_experience_of_war_in_rough_terrain
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Recruit_honorable_britannians_from_areas
+		prerequisite = {
+			focus = EUR_Recruit_honorable_britannians_from_areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_insructors_from_honorable_britannia_academies
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_experience_of_war_in_rough_terrain
+		prerequisite = {
+			focus = EUR_Use_experience_of_war_in_rough_terrain
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Invite_foreign_legion
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Invite_insructors_from_honorable_britannia_academies
+		prerequisite = {
+			focus = EUR_Invite_insructors_from_honorable_britannia_academies
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#################################################
+focus = {
+		id = EUR_Scrapping_barrel
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 10
+		y = 1
+		relative_position_id = EUR_Reach_Out_To_The_Proper_Areas
+		prerequisite = {
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Organise_volunteers_from_Area_3_and_8
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_them_in_factories
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Organise_volunteers_from_Area_3_and_8
+		mutually_exclusive = { focus = EUR_Use_them_on_the_railroads}
+		prerequisite = {
+			focus = EUR_Organise_volunteers_from_Area_3_and_8
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Asking_for_more_factory_equipment
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_them_in_factories
+		prerequisite = {
+			focus = EUR_Use_them_in_factories
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Use_them_on_the_railroads
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Organise_volunteers_from_Area_3_and_8
+		mutually_exclusive = { focus = EUR_Use_them_in_factories}
+		prerequisite = {
+			focus = EUR_Organise_volunteers_from_Area_3_and_8
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Improve_logistics_chains
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_them_on_the_railroads
+		prerequisite = {
+			focus = EUR_Use_them_on_the_railroads
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Steel_of_Area_7
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_scientists_from_Area_11
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Steel_of_Area_7
+		prerequisite = {
+			focus = EUR_Steel_of_Area_7
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_industry_of_New_Anglia
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_scientists_from_Area_11
+		prerequisite = {
+			focus = EUR_Use_scientists_from_Area_11
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Strengthen_the_proBrittanian_police1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Send_opposition_to_Kolima1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Strengthen_the_proBrittanian_police1
+		prerequisite = {
+			focus = EUR_Strengthen_the_proBrittanian_police1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Clear_all_administration_from_Russians1
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Send_opposition_to_Kolima1
+		prerequisite = {
+			focus = EUR_Send_opposition_to_Kolima1
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Advance_our_own_economy
+		icon = GFX_goal_unknown
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Clear_all_administration_from_Russians1
+		prerequisite = {
+			focus = EUR_Clear_all_administration_from_Russians1
+		}
+		prerequisite = {
+			focus = EUR_Use_industry_of_New_Anglia
+		}
+		prerequisite = {
+			focus = EUR_Asking_for_more_factory_equipment
+			focus = EUR_Improve_logistics_chains
+		}
+		
+		
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
 
 
+	
+	
 }
