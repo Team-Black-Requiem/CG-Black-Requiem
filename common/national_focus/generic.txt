@@ -413,8 +413,14 @@ ai_will_do = {
 			}
 		}
 	}   
+
+	mutually_exclusive = {
+		focus = gen_moderate_conservatism
+		focus = gen_moderate_liberalism
+	}
 completion_reward = {
 	add_ideas = GEN_hardline_socialism_idea_1
+
 }
 
 relative_position_id = gen_liberalism
@@ -556,6 +562,10 @@ cost = 5
 		prerequisite = { focus = gen_liberalism }
 	  relative_position_id = gen_liberalism
 
+	  mutually_exclusive = {
+		focus = gen_moderate_liberalism 
+		focus = gen_moderate_socialism
+	  }
 		completion_reward = {
 		    add_stability = 10
 		
@@ -643,6 +653,10 @@ cost = 5
 				available_if_capitulated = yes
 			  relative_position_id = gen_liberalism
 		
+			  mutually_exclusive = {
+				focus = gen_moderate_conservatism
+				focus = gen_moderate_socialism
+			  }
 				completion_reward = {
 		            add_ideas = GEN_liberalism_1
 				}
