@@ -1040,7 +1040,7 @@ cost = 5
 	focus = {
 
 		id = gen_Industrial_Development
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_infastructure_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1074,7 +1074,7 @@ cost = 5
 	focus = {
 
 		id = Civillian_Sector
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1111,7 +1111,7 @@ cost = 5
 	focus = {
 
 		id = Civilian_Sector_2 
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1150,7 +1150,7 @@ cost = 5
 	focus = {
 
 		id = Civilian_Sector_3 
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1188,7 +1188,7 @@ cost = 5
 	focus = {
 
 		id = Civillian_Sector_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1226,7 +1226,7 @@ cost = 5
 	focus = {
 
 		id = Infastructure_Sector
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_steel
 				
 		available = {
 				country_exists = ROOT
@@ -1263,7 +1263,7 @@ cost = 5
 	focus = {
 
 		id = Infastructure_Sector_2
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_tungsten
 				
 		available = {
 				country_exists = ROOT
@@ -1300,7 +1300,7 @@ cost = 5
 	focus = {
 
 		id = Infastructure_Sector_3
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_aluminium
 				
 		available = {
 				country_exists = ROOT
@@ -1338,7 +1338,7 @@ cost = 5
 	focus = {
 
 		id = Infastructure_Sector_4
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_Synthethic
 				
 		available = {
 				country_exists = ROOT
@@ -1377,7 +1377,7 @@ cost = 5
 	focus = {
 
 		id = Military_Sector
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1414,7 +1414,7 @@ cost = 5
 	focus = {
 
 		id = Military_Sector_2
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1451,7 +1451,7 @@ cost = 5
 	focus = {
 
 		id = Military_Sector_3
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1488,7 +1488,7 @@ cost = 5
 	focus = {
 
 		id = Military_Sector_4
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1528,7 +1528,7 @@ cost = 5
 	focus = {
 
 		id = New_Technical_Institute
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
@@ -1554,7 +1554,7 @@ cost = 5
 	focus = {
 
 		id = Civillian_Sector_5
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1592,7 +1592,7 @@ cost = 5
 	focus = {
 
 		id = Prosperous_Nation
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_civillian_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1619,7 +1619,7 @@ cost = 5
 	focus = {
 
 		id = Pink_Saphires
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_sakuradite
 				
 		available = {
 				country_exists = ROOT
@@ -1650,7 +1650,7 @@ cost = 5
 	focus = {
 
 		id = New_Railways
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_infastructure_industry
 				
 		available = {
 				country_exists = ROOT
@@ -1676,7 +1676,7 @@ cost = 5
 	focus = {
 
 		id = Military_Sector_5
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1714,7 +1714,7 @@ cost = 5
 	focus = {
 
 		id = Military_Industrial_Complex
-		icon = GFX_goal_anschluss
+		icon = "GFX_GEN_military_industry"
 				
 		available = {
 				country_exists = ROOT
@@ -1740,14 +1740,22 @@ cost = 5
 	focus = {
 
 		id = Advanced_Technical_Institute
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
 		}
         
 		prerequisite = {
-	       focus = New_Railways focus = Military_Industrial_Complex focus = Prosperous_Nation
+	    focus = Prosperous_Nation
+		}
+
+		prerequisite = {
+			focus = New_Railways focus
+		}
+
+		prerequisite = {
+			focus = Military_Industrial_Complex
 		}
 
 		relative_position_id = New_Railways
@@ -1758,7 +1766,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_research_slot = 1
+		add_research_slot = 1
 		hidden_effect = {
 			remove_ideas = GEN_Prosperus_Nation
 			remove_ideas = GEN_New_Railways
@@ -1773,7 +1781,7 @@ cost = 5
 	focus = {
 
 		id = Synthethic_Sources
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_Synthethic
 				
 		available = {
 				country_exists = ROOT
@@ -1808,8 +1816,6 @@ cost = 5
 		}
 	
 	}
-
-    
 
 	###GENERIC REVAMP NAVY
 
@@ -2913,7 +2919,7 @@ cost = 5
 	focus = {
 
 		id = gen_New_RND_Department
-		icon = GFX_goal_anschluss
+		icon = GFX_GEN_science
 				
 		available = {
 				country_exists = ROOT
