@@ -860,7 +860,7 @@ GEN_auth_dem_idea_2 = {
 	modifier = {
 		decryption_power_factor = 0.05
 		operative_slot = 1	
-		decryption_factor = 2
+		decryption_factor = 0.05
 		stability_factor = 0.05
 	}
 }
@@ -870,11 +870,10 @@ GEN_auth_dem_idea_3 = {
 	}
 	removal_cost = -1
 	modifier = {
-		crypto_strength = 0.05
+		crypto_strength = 0.5
 		decryption_power_factor = 0.05
 		operative_slot = 2
-		encryption_factor = 1
-		decryption_factor = 1
+		encryption_factor = 10
 		stability_factor = 0.05
 	}
 }
