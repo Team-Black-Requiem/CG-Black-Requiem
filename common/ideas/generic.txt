@@ -922,6 +922,8 @@ GEN_Conservative_2 = {
 modifier = {
 
 army_core_defence_factor = 0.05
+encryption = 0.05
+drift_defence_factor = 0.1
 
 }
 }
@@ -1019,7 +1021,7 @@ political_power_gain = 0.2
 }
 }
 
-GEN_liberalism_1 = {
+gen_individual_rights = {
 		
 	allowed = {
 		   always = no
@@ -1032,8 +1034,7 @@ GEN_liberalism_1 = {
 	   removal_cost = -1
 modifier = {
 
-party_popularity_stability_factor = 0.10
-political_power_gain = 0.2
+stability_weekly = 0.01
 
 }
 }

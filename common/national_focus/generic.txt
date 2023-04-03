@@ -48,10 +48,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
-
+	
 			add_political_power = 200
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -94,9 +91,7 @@ focus_tree = {
 		}   
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 		add_political_power = 200
 
 		}
@@ -137,9 +132,7 @@ focus_tree = {
 	  relative_position_id = gen_third_way
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 		add_ideas = GEN_hardline_socialism_idea_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -167,9 +160,7 @@ focus_tree = {
 	  relative_position_id = gen_hardline_socialism
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 
 		swap_ideas = {
 			remove_idea = GEN_hardline_socialism_idea_1
@@ -201,9 +192,7 @@ focus_tree = {
 	  relative_position_id = gen_government_unions
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 
 		swap_ideas = {
 			remove_idea = GEN_hardline_socialism_idea_2
@@ -236,9 +225,7 @@ focus_tree = {
 	  relative_position_id = gen_the_means_of_production
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 
 		stability = 0.15
 		}
@@ -306,10 +293,7 @@ focus_tree = {
 	  relative_position_id = gen_third_way
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
-
+	
 		add_ideas = GEN_auth_dem_idea_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -337,9 +321,7 @@ focus_tree = {
 	  relative_position_id = gen_authoritarian_dem
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+	
 		swap_ideas = {
 			remove_idea = GEN_auth_dem_idea_1
 			add_idea = GEN_auth_dem_idea_2
@@ -371,9 +353,7 @@ focus_tree = {
 	    relative_position_id = gen_getting_the_logs
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
+		
 		swap_ideas = {
 			remove_idea = GEN_auth_dem_idea_2
 			add_idea = GEN_auth_dem_idea_3
@@ -435,7 +415,7 @@ ai_will_do = {
 		}
 	}   
 completion_reward = {
-	
+	add_ideas = GEN_hardline_socialism_idea_1
 }
 
 relative_position_id = gen_liberalism
@@ -454,7 +434,11 @@ focus = {
 }
 
 completion_reward = {
-	
+	add_ideas = GEN_hardline_socialism_idea_2
+
+	hidden_effect = {
+		remove_ideas = GEN_hardline_socialism_idea_1
+	}
 }
 
 relative_position_id = gen_moderate_socialism
@@ -473,7 +457,9 @@ focus = {
 }
 
 completion_reward = {
-	
+	add_ideas = GEN_hardline_socialism_idea_3
+
+	remove_ideas = GEN_hardline_socialism_idea_3
 }
 
 relative_position_id = gen_a_united_front
@@ -572,11 +558,8 @@ cost = 5
 	  relative_position_id = gen_liberalism
 
 		completion_reward = {
-		hidden_effect = {
-		add_ideas = avoid_global_wars
-        }
-
-			add_political_power = 200
+		    add_stability = 10
+		
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -600,11 +583,10 @@ cost = 5
 		  relative_position_id = gen_moderate_conservatism
 	
 			completion_reward = {
-			hidden_effect = {
-			add_ideas = avoid_global_wars
-			}
-	
-				add_political_power = 200
+		    
+				add_ideas = GEN_Conservative_1
+			
+			  
 			}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 		}
@@ -634,11 +616,12 @@ cost = 5
 			  relative_position_id = gen_corruption_free_statesmen
 		
 				completion_reward = {
-				hidden_effect = {
-				add_ideas = avoid_global_wars
-				}
-		
-					add_political_power = 200
+		        
+					add_ideas = GEN_Conservative_2
+
+					hidden_effect = {
+						remove_ideas = GEN_Conservative_1
+					}
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 			}
@@ -662,11 +645,7 @@ cost = 5
 			  relative_position_id = gen_liberalism
 		
 				completion_reward = {
-				hidden_effect = {
-				add_ideas = avoid_global_wars
-				}
-		
-					add_political_power = 200
+		            add_ideas = GEN_liberalism_1
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 			}
@@ -696,11 +675,11 @@ cost = 5
 			  relative_position_id = gen_moderate_liberalism
 		
 				completion_reward = {
-				hidden_effect = {
-				add_ideas = avoid_global_wars
-				}
-		
-					add_political_power = 200
+					add_ideas = GEN_liberalism_2
+
+					hidden_effect = {
+						remove_ideas = GEN_liberalism_1
+					}
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 			}
@@ -730,11 +709,11 @@ cost = 5
 			  relative_position_id = gen_employment_as_a_right
 		
 				completion_reward = {
+		        add_ideas = GEN_liberalism_3
+
 				hidden_effect = {
-				add_ideas = avoid_global_wars
+					remove_ideas = GEN_liberalism_2
 				}
-		
-					add_political_power = 200
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 			}
@@ -2458,6 +2437,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = GEN_Install_the_Repair_Yards
 			random_owned_controlled_state = {
 				add_building_construction = {
 					type = dockyard
