@@ -67,7 +67,7 @@ focus = {
 		}
 	
 		completion_reward = {
-			add_ideas = GEN_bear_economy_idea
+			add_ideas = BWR_bear_economy_idea
 		}
 	}
 
@@ -138,7 +138,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_bear_necessities_idea
+			add_ideas = BWR_bear_necessities_idea
 		}
 	}
 
@@ -156,7 +156,7 @@ focus = {
 		}
 	
 		completion_reward = {
-			add_ideas = GEN_Beary_good_idea
+			add_ideas = BWR_Beary_good_idea
 		}
 	}
 
@@ -239,7 +239,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_Weekly_Bears
+			add_ideas = BWR_Weekly_Bears
 		}
 	}
 
@@ -280,7 +280,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_Bear_Navy
+			add_ideas = BWR_Bear_Navy
 		}
 	}
 
@@ -302,7 +302,7 @@ focus = {
 
 		completion_reward = {
 			custom_effect_tooltip = 1_BWR.tt
-			add_ideas = GEN_Bear_Knightmares
+			add_ideas = BWR_Bear_Knightmares
 
 			hidden_effect = {
 				add_equipment_to_stockpile = {
@@ -342,7 +342,7 @@ focus = {
 	
 		completion_reward = {
 		
-			add_ideas = GEN_air
+			add_ideas = BWR_air
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_0
 				amount = 200
@@ -399,7 +399,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_Bear_Air_Two
+			add_ideas = BWR_Bear_Air_Two
 
 			hidden_effect = {
 				remove_ideas = BWR_air
@@ -446,7 +446,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_bears_are_unpawable_idea
+			add_ideas = BWR_bears_are_unpawable_idea
 		
 		hidden_effect = {
 			remove_ideas = BWR_War_Bears
@@ -488,7 +488,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = GEN_sonya_will_be_avenged_idea
+			add_ideas = BWR_sonya_will_be_avenged_idea
 			add_country_leader_trait = BWR_sonya_will_be_avanged
 			custom_effect_tooltip = 5_BWR.tt
 			hidden_effect = {
@@ -563,16 +563,9 @@ focus = {
 		completion_reward = {
 			country_event = BWR.9
 		}
-	}
-search_filter_prios = {
-	FOCUS_FILTER_POLITICAL = 1010
-
-	FOCUS_FILTER_RESEARCH = 522
-
 	
-	FOCUS_FILTER_INDUSTRY = 509
+	}
 
-}
 	####GEN REVAMP ECONOMY###
 
 	focus = {
@@ -580,13 +573,16 @@ search_filter_prios = {
 		id = BWR_Industrial_Development
 		icon = GFX_goal_anschluss
 				
+		allow_branch = {
+			has_completed_focus = beartality
+		}
 		available = {
 				country_exists = ROOT
 		}
 
 		relative_position_id = remember_sonya
-		x = -13
-		y = 0
+		x = 0
+		y = 22
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1084,7 +1080,7 @@ search_filter_prios = {
 
 		completion_reward = {
 			add_research_slot = 1
-			add_ideas = GEN_BWR_New_Technical_Institute
+			add_ideas = gen_New_Technical_Institute
 		}
 	
 	}
@@ -1298,9 +1294,9 @@ search_filter_prios = {
 		completion_reward = {
 			add_research_slot = 1
 		hidden_effect = {
-			remove_ideas = BWR_Prosperus_Nation
-			remove_ideas = BWR_New_Railways
-			remove_ideas = BWR_Military_Industrial_Complex
+			remove_ideas = gen_Prosperus_Nation
+			remove_ideas = gen_New_Railways
+			remove_ideas = gen_Military_Industrial_Complex
 		
 		}	
 			add_ideas = GEN_Advanced_Technical_Institute
@@ -1355,7 +1351,9 @@ search_filter_prios = {
 
 		id = BWR_Establish_Admiralty
 		icon = GFX_goal_anschluss
-				
+			allow_branch = {
+				has_completed_focus = beartality
+			}	
 		available = {
 				country_exists = ROOT
 				any_state = {
@@ -1365,8 +1363,8 @@ search_filter_prios = {
 		}
 
 		relative_position_id = remember_sonya
-		x = -22
-		y = 2
+		x = -8
+		y = 22
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1845,6 +1843,7 @@ search_filter_prios = {
 				}
 				else = {
 					add_tech_bonus = {
+						name = naval_investment
 						bonus = 0.5
 						uses = 1
 						category = naval_equipment
@@ -1877,7 +1876,7 @@ search_filter_prios = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = BWR_Standardized_Designs
+				idea = gen_Standardized_Designs
 				days = 550
 			}
 		}
@@ -2299,14 +2298,16 @@ search_filter_prios = {
 
 		id = BWR_Army_Development
 		icon = GFX_goal_anschluss
-				
+				allow_branch = {
+					has_completed_focus = beartality
+				}
 		available = {
 				country_exists = ROOT
 		}
 
 		relative_position_id = remember_sonya
-		x = 13
-		y = 0
+		x = 8
+		y = 22
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2778,8 +2779,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Knightmared_Police
-				add_idea = BWR_Our_Own_Roundtable
+				remove_idea = gen_Knightmared_Police
+				add_idea = gen_Our_Own_Roundtable
 			}
 			random_owned_controlled_state = {
 				add_resource = {
@@ -2842,8 +2843,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Conventional_Warfare
-				add_idea = BWR_The_Real_Engines_of_war
+				remove_idea = gen_Conventional_Warfare
+				add_idea = gen_The_Real_Engines_of_war
 			}
 			add_tech_bonus = {
 				name = maintenance_company
@@ -2877,8 +2878,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_The_Real_Engines_of_war
-				add_idea = BWR_The_Stuff_That_Matters
+				remove_idea = gen_The_Real_Engines_of_war
+				add_idea = gen_The_Stuff_That_Matters
 			}
 		}
 	
@@ -2941,8 +2942,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_The_Stuff_That_Matters
-				add_idea = BWR_The_Drums_Of_War
+				remove_idea = gen_The_Stuff_That_Matters
+				add_idea = gen_The_Drums_Of_War
 			}
 			add_war_support = 0.3
 			upgrade_economy_law = yes
@@ -2959,14 +2960,16 @@ search_filter_prios = {
 
 		id = BWR_Air_Development
 		icon = GFX_goal_anschluss
-				
+				allow_branch = {
+					has_completed_focus = beartality
+				}
 		available = {
 				country_exists = ROOT
 		}
 
 		relative_position_id = remember_sonya
-		x = 23
-		y = 0
+		x = 18
+		y = 22
 		cost = 5
 
 		available_if_capitulated = yes
@@ -3036,8 +3039,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Air_Development
-				add_idea = BWR_Air_Academy
+				remove_idea = gen_Air_Development
+				add_idea = gen_Air_Academy
 			}
 		}
 	
@@ -3064,8 +3067,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Air_Development
-				add_idea = BWR_Transport_Supplies
+				remove_idea = gen_Air_Development
+				add_idea = gen_Transport_Supplies
 			}
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment
@@ -3222,8 +3225,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Fighter_Focus
-				add_idea = BWR_Close_Air_Support
+				remove_idea = gen_Fighter_Focus
+				add_idea = gen_Close_Air_Support
 			}
 			add_tech_bonus = {
 				name = cas_bomber
@@ -3291,8 +3294,8 @@ search_filter_prios = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = BWR_Bomber_Focus
-				add_idea = BWR_Nothing_But_Ash
+				remove_idea = gen_Bomber_Focus
+				add_idea = gen_Nothing_But_Ash
 			}
 			add_tech_bonus = {
 				name = cat_strategic_bomber
