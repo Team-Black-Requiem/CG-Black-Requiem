@@ -1,6 +1,6 @@
 focus_tree = {
 	id = BWR
-	continuous_focus_position = { x = 1500 y = 2000}
+	continuous_focus_position = { x = 0 y = 2000}
 country = {
 		factor = 0
 		modifier = {
@@ -67,7 +67,7 @@ focus = {
 		}
 	
 		completion_reward = {
-			add_ideas = BWR_bear_economy_idea
+			add_ideas = GEN_bear_economy_idea
 		}
 	}
 
@@ -138,7 +138,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_bear_necessities_idea
+			add_ideas = GEN_bear_necessities_idea
 		}
 	}
 
@@ -156,7 +156,7 @@ focus = {
 		}
 	
 		completion_reward = {
-			add_ideas = BWR_Beary_good_idea
+			add_ideas = GEN_Beary_good_idea
 		}
 	}
 
@@ -239,7 +239,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_Weekly_Bears
+			add_ideas = GEN_Weekly_Bears
 		}
 	}
 
@@ -280,7 +280,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_Bear_Navy
+			add_ideas = GEN_Bear_Navy
 		}
 	}
 
@@ -302,7 +302,7 @@ focus = {
 
 		completion_reward = {
 			custom_effect_tooltip = 1_BWR.tt
-			add_ideas = BWR_Bear_Knightmares
+			add_ideas = GEN_Bear_Knightmares
 
 			hidden_effect = {
 				add_equipment_to_stockpile = {
@@ -342,7 +342,7 @@ focus = {
 	
 		completion_reward = {
 		
-			add_ideas = BWR_air
+			add_ideas = GEN_air
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_0
 				amount = 200
@@ -399,7 +399,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_Bear_Air_Two
+			add_ideas = GEN_Bear_Air_Two
 
 			hidden_effect = {
 				remove_ideas = BWR_air
@@ -446,7 +446,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_bears_are_unpawable_idea
+			add_ideas = GEN_bears_are_unpawable_idea
 		
 		hidden_effect = {
 			remove_ideas = BWR_War_Bears
@@ -488,7 +488,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = BWR_sonya_will_be_avenged_idea
+			add_ideas = GEN_sonya_will_be_avenged_idea
 			add_country_leader_trait = BWR_sonya_will_be_avanged
 			custom_effect_tooltip = 5_BWR.tt
 			hidden_effect = {
@@ -564,4 +564,2745 @@ focus = {
 			country_event = BWR.9
 		}
 	}
+search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+
+	FOCUS_FILTER_RESEARCH = 522
+
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+}
+	####GEN REVAMP ECONOMY###
+
+	focus = {
+
+		id = BWR_Industrial_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = remember_sonya
+		x = -13
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			capital = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Civillian_sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_Industrial_Development
+		}
+		relative_position_id = BWR_Industrial_Development
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = BWR_Civillian_sector_2 
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Civillian_sector
+		}
+		relative_position_id = BWR_Civillian_sector
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+
+	
+	focus = {
+
+		id = BWR_Civillian_sector_3 
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Civillian_sector_2
+		}
+		relative_position_id = BWR_Civillian_sector_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+	
+	focus = {
+
+		id = BWR_Civillian_sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Civillian_sector_3
+		}
+		relative_position_id = BWR_Civillian_sector_3
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.5
+				uses = 3
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+
+	focus = {
+
+		id = BWR_infastructure_sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_Industrial_Development
+		}
+		relative_position_id = BWR_Industrial_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = capital
+			} 
+			}
+		}
+
+	
+	
+	focus = {
+
+		id = BWR_infastructure_sector_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_infastructure_sector
+		}
+		relative_position_id = BWR_infastructure_sector
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = capital
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_infastructure_sector_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_infastructure_sector_2
+		}
+		relative_position_id = BWR_infastructure_sector_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+				add_resource = {
+					type = aluminium
+					amount = 12
+					state = capital
+				} 
+				}
+		}
+	
+	
+
+	focus = {
+
+		id = BWR_infastructure_sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_infastructure_sector_3
+		}
+		relative_position_id = BWR_infastructure_sector_3
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		    
+			add_resource = {
+				type = oil
+				amount = 12
+				state = capital
+			}
+		}
+	
+	}
+
+
+	focus = {
+
+		id = BWR_military_sector
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Industrial_Development
+		}
+		relative_position_id = BWR_Industrial_Development
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_military_sector_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_military_sector
+		}
+		relative_position_id = BWR_military_sector
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = artillery
+				bonus = 0.1
+				uses = 1
+				category = artillery
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_military_sector_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_military_sector_2
+		}
+		relative_position_id = BWR_military_sector_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = air_equipment
+				bonus = 0.1
+				uses = 1
+				category = air_equipment
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_military_sector_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_military_sector_3
+		}
+		relative_position_id = BWR_military_sector_3
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 0.1
+				uses = 3
+				category = infantry_weapons
+			}
+		}
+	
+	}
+
+
+	###GENERIC REVAMP ECONOMY PART 2####
+
+	focus = {
+
+		id = BWR_New_Technical_Institute
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Civillian_sector_4 focus = BWR_infastructure_sector_4 focus = BWR_military_sector_4
+		}
+		relative_position_id = BWR_military_sector_4
+		x = -2
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = GEN_BWR_New_Technical_Institute
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Civillian_sector_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_Synthethic
+		}
+
+		relative_position_id = BWR_New_Technical_Institute
+		x = -2
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Prosperous_Nation
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_Civillian_sector_5
+		}
+
+		relative_position_id = BWR_Civillian_sector_5
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Prosperus_Nation
+		}
+	
+	}
+	
+
+	focus = {
+
+		id = BWR_Pink_Saphires
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_Synthethic
+		}
+
+		relative_position_id = BWR_New_Technical_Institute
+		x = 0
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			add_resource = {
+				type = sakuradite
+				amount = 8
+				state = capital
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_New_Railways
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_Pink_Saphires
+		}
+
+		relative_position_id = BWR_Pink_Saphires
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_New_Railways
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_military_sector_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_Synthethic
+		}
+
+		relative_position_id = BWR_New_Technical_Institute
+		x = 2
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = armor
+				bonus = 0.1
+				uses = 1
+				category = armor
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Military_Industrial_Complex
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = BWR_military_sector_5
+		}
+
+		relative_position_id = BWR_military_sector_5
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Military_Industrial_Complex
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Advanced_Technical_Institute
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+	       focus = New_Railways focus = BWR_Military_Industrial_Complex focus = BWR_Prosperous_Nation
+		}
+
+		relative_position_id = BWR_New_Railways
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		hidden_effect = {
+			remove_ideas = BWR_Prosperus_Nation
+			remove_ideas = BWR_New_Railways
+			remove_ideas = BWR_Military_Industrial_Complex
+		
+		}	
+			add_ideas = GEN_Advanced_Technical_Institute
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Synthethic
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+				has_tech = synth_oil_experiments
+		}
+        
+		prerequisite = {
+	       focus = BWR_New_Technical_Institute
+		}
+
+		relative_position_id = BWR_New_Technical_Institute
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+    
+
+	###GENERIC REVAMP NAVY
+
+	focus = {
+
+		id = BWR_Establish_Admiralty
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+		}
+
+		relative_position_id = remember_sonya
+		x = -22
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = GEN_Navy_Development
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Naval_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Establish_Admiralty
+		 }
+
+		relative_position_id = BWR_Establish_Admiralty
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}	
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Confiscate_Dockyards
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+		}
+
+		prerequisite = {
+			focus = BWR_Establish_Admiralty
+		 }
+
+		relative_position_id = BWR_Establish_Admiralty
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+						type = dockyard
+						level = 6
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+						type = dockyard
+						level = 6
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+						type = dockyard
+						level = 6
+						instant_build = yes
+					}
+				}
+			}	
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_New_Age
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Confiscate_Dockyards
+		 }
+
+		 prerequisite = {
+			focus = BWR_Naval_School
+		 }
+
+		relative_position_id = BWR_Establish_Admiralty
+		x = -0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}	
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Coastal_Defense_Fleet
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_New_Age
+		 }
+
+
+		relative_position_id = BWR_New_Age
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Sentinel Class"
+				type = ship_hull_light_1
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = empty
+				}
+			}
+			create_equipment_variant = {
+				name = "Guardian Class"
+				type = ship_hull_cruiser_1
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_light_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = empty
+					front_1_custom_slot = empty
+					front_2_custom_slot = empty
+					mid_1_custom_slot = ship_light_medium_battery_1
+					mid_2_custom_slot = empty
+					mid_3_custom_slot = empty
+					rear_1_custom_slot = empty
+					rear_2_custom_slot = empty
+				}
+			}
+			hidden_effect = {
+
+				##### Replace with For Loop
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_1
+						creator = root
+						version_name = "Guardian Class"
+					}
+					name = "Guardian" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+
+				##### Replace with For Loop Later
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_1
+						creator = root
+						version_name = "Sentinel Class"
+					}
+					name = "Sentinel" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}		
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Honorable_Battle
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Coastal_Defense_Fleet
+		 }
+
+		 mutually_exclusive = {
+			focus = BWR_Hidden_War
+		 }
+
+		relative_position_id = BWR_Coastal_Defense_Fleet
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = frigate
+                bonus = 0.5
+                uses = 1
+                category = fg_tech
+            }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				add_tech_bonus = {
+					name = basic_battery
+					bonus = 0.5
+					uses = 1
+					category = ship_modules_tech
+				}
+				else = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = naval_equipment
+					}
+				}
+			}
+		}
+	
+	}
+
+	focus = {
+		id = BWR_Standardized_Designs
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Honorable_Battle
+		 }
+	
+
+		relative_position_id = BWR_Honorable_Battle
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = BWR_Standardized_Designs
+				days = 550
+			}
+		}
+	
+	}
+	focus = {
+
+		id = BWR_Flagship_for_the_Fleet
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Standardized_Designs
+		}
+
+		
+
+		relative_position_id = BWR_Standardized_Designs
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ROOT = {
+				country_event = GEN.1
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Heavy_Ship_Design
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Honorable_Battle
+		 }
+
+		
+
+		relative_position_id = BWR_Honorable_Battle
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_cruiser
+                bonus = 0.5
+                uses = 1
+                category = cl_tech
+            }
+			add_tech_bonus = {
+				name = battleship
+                bonus = 0.5
+                uses = 1
+                category = bb_tech
+            }
+			add_tech_bonus = {
+				name = carrier
+                bonus = 0.5
+                uses = 1
+                category = cv_tech
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Install_the_Repair_Yards
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Honorable_Battle
+		 }
+
+
+		relative_position_id = BWR_Honorable_Battle
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Install_the_Repair_Yards
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	
+	}
+
+	focus = {
+		id = BWR_Hidden_War
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Coastal_Defense_Fleet
+		 }
+
+		 mutually_exclusive = {
+			focus = BWR_Honorable_Battle
+		 }
+
+
+		relative_position_id = BWR_Coastal_Defense_Fleet
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = submarine
+                bonus = 0.5
+                uses = 1
+                category = ss_tech
+            }
+			add_tech_bonus = {
+				name = basic_torpedo
+                bonus = 0.5
+                uses = 2
+                category = ship_modules_tech
+            }
+			add_tech_bonus = {
+				name = naval_mines
+                bonus = 0.5
+                uses = 2
+                category = naval_mines
+            }
+		}
+	
+	}
+
+	focus = {
+		id = BWR_Lock_Down_the_Ocean
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Hidden_War
+		 }
+
+
+
+		relative_position_id = BWR_Hidden_War
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = mine_layer
+                bonus = 0.5
+                uses = 2
+                category = naval_minelaying
+            }
+		}
+	
+	}
+
+	
+
+	focus = {
+		id = BWR_Mass-Produce_Parts
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Hidden_War
+		 }
+
+
+		relative_position_id = BWR_Hidden_War
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Mass_Produce_Parts
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+
+	focus = {
+		id = BWR_Fear_the_Unseen
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Hidden_War
+		 }
+
+
+		relative_position_id = BWR_Hidden_War
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Fear_the_Unseen
+			add_tech_bonus = {
+				name = basic_torpedo
+                bonus = 0.5
+                uses = 1
+                category = ship_modules_tech
+            }
+		}
+	
+	}
+
+	focus = {
+		id = BWR_Deploy_the_Prototypes
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Lock_Down_the_Ocean
+		 }
+
+
+		relative_position_id = BWR_Lock_Down_the_Ocean
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Predator Class"
+				type = ship_hull_submarine_2
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					fixed_ship_engine_slot = sub_ship_engine_2
+					rear_1_custom_slot = ship_torpedo_sub_2
+
+				}
+			}
+			hidden_effect = {
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_submarine_2
+						creator = root
+						version_name = "Predator Class"
+					}
+					name = "Predator" 
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}
+		}
+	
+	}
+
+
+
+
+
+	###GENERIC REVAMP MILITARY####
+
+	focus = {
+
+		id = BWR_Army_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = remember_sonya
+		x = 13
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = armored_car
+                bonus = 0.5
+                uses = 1
+                category = motorized_equipment
+            }
+		}
+	
+	}
+	
+	focus = {
+
+		id = BWR_Artillery_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_Army_Development
+		}
+		relative_position_id = BWR_Army_Development
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery
+                bonus = 0.25
+                uses = 2
+                category = artillery
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Motorized_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Artillery_Development
+		}
+		relative_position_id = BWR_Artillery_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_equipment
+                bonus = 0.5
+                uses = 1
+                category = motorized_equipment
+            }
+			add_tech_bonus = {
+				name = mechanized
+                bonus = 0.25
+                uses = 1
+                category = cat_mechanized_equipment
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Firearms_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Motorized_Development
+		}
+		relative_position_id = BWR_Motorized_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Armor_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Firearms_Development
+		}
+		relative_position_id = BWR_Firearms_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = modern_armor
+                bonus = 0.5
+                uses = 2
+                category = armor
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_New_RND_Department
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Armor_Development
+		}
+		relative_position_id = BWR_Armor_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = GEN_New_RND_Department
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_army_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_Army_Development
+		}
+		relative_position_id = BWR_Army_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_army_Doctrine_School_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_army_Doctrine_School
+		}
+		relative_position_id = BWR_army_Doctrine_School
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_army_Doctrine_School_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_army_Doctrine_School_2
+		}
+		relative_position_id = BWR_army_Doctrine_School_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_army_Doctrine_School_4
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_army_Doctrine_School_3
+		}
+		relative_position_id = BWR_army_Doctrine_School_3
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_army_Doctrine_School_5
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        prerequisite = {
+			focus = BWR_army_Doctrine_School_4
+		}
+		relative_position_id = BWR_army_Doctrine_School_4
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Knightmare_Warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = BWR_Conventional_Warfare
+		}
+
+		prerequisite = {
+			focus = BWR_Army_Development
+		}
+
+		relative_position_id = BWR_Army_Development
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = knightmare_mass_prod
+                bonus = 0.5
+                uses = 2
+                category = knightmare_mass_production
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_The_Facts
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Knightmare_Warfare
+		}
+
+		relative_position_id = BWR_Knightmare_Warfare
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = knightmare_mass_prod
+                bonus = 0.5
+                uses = 2
+                category = knightmare_mass_production
+            }
+		}
+	
+	}
+
+
+	focus = {
+
+		id = BWR_Knightmared_Police
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_The_Facts
+		}
+
+		relative_position_id = BWR_The_Facts
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Knightmared_Police
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Buy_Used_Stock
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+				has_tech = knightmare_frame_3
+		}
+
+		prerequisite = {
+			focus = BWR_Knightmared_Police
+		}
+
+		relative_position_id = BWR_Knightmared_Police
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+      
+		completion_reward = {
+			custom_effect_tooltip = 1_GEN.tt
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_1
+				amount = 300
+			}
+
+			add_equipment_to_stockpile = {
+				type = factspheres
+				amount = 300
+			}
+
+			add_equipment_to_stockpile = {
+				type = landspinner
+				amount = 300
+			}
+			hidden_effect = {
+				load_oob = "GEN Knight"
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Our_Own_Roundtable
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Buy_Used_Stock
+		}
+
+		relative_position_id = BWR_Buy_Used_Stock
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Knightmared_Police
+				add_idea = BWR_Our_Own_Roundtable
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = sakuradite
+					amount = 10
+				}
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Conventional_Warfare
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		mutually_exclusive = {
+			focus = BWR_Knightmare_Warfare
+		}
+		prerequisite = {
+			focus = BWR_Army_Development
+		}
+
+		relative_position_id = BWR_Army_Development
+		x = 5
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Conventional_Warfare
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_The_Real_Engines_of_war
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Conventional_Warfare
+		}
+
+		relative_position_id = BWR_Conventional_Warfare
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Conventional_Warfare
+				add_idea = BWR_The_Real_Engines_of_war
+			}
+			add_tech_bonus = {
+				name = maintenance_company
+                bonus = 0.5
+                uses = 1
+                category = maintenance_company_tech
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_The_Stuff_That_Matters
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_The_Real_Engines_of_war
+		}
+
+		relative_position_id = BWR_The_Real_Engines_of_war
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_The_Real_Engines_of_war
+				add_idea = BWR_The_Stuff_That_Matters
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Protecting_The_Men_On_The_Front
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_The_Stuff_That_Matters
+		}
+
+		relative_position_id = BWR_The_Stuff_That_Matters
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 600
+			}
+			add_tech_bonus = {
+				name = field_hospital_company_tech
+                bonus = 0.5
+                uses = 1
+                category = hospital_tech
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_The_Drums_Of_War
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		prerequisite = {
+			focus = BWR_Protecting_The_Men_On_The_Front
+		}
+
+		relative_position_id = BWR_Protecting_The_Men_On_The_Front
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_The_Stuff_That_Matters
+				add_idea = BWR_The_Drums_Of_War
+			}
+			add_war_support = 0.3
+			upgrade_economy_law = yes
+		}
+	
+	}
+
+
+
+
+	####GENERIC REVAMP AIR
+
+    focus = {
+
+		id = BWR_Air_Development
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		relative_position_id = remember_sonya
+		x = 23
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Air_Development
+			air_experience = 50
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Airbases
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_Air_Development
+		}
+
+		relative_position_id = BWR_Air_Development
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+			capital = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}	
+	}
+
+	focus = {
+
+		id = BWR_Air_Academy
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Airbases
+		}
+		relative_position_id = BWR_Airbases
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Air_Development
+				add_idea = BWR_Air_Academy
+			}
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Transport_Supplies
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+        
+		prerequisite = {
+			focus = BWR_Air_Academy
+		}
+		relative_position_id = BWR_Air_Academy
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Air_Development
+				add_idea = BWR_Transport_Supplies
+			}
+			add_equipment_to_stockpile = {
+				type = transport_plane_equipment
+				amount = 160
+			}
+		}
+	
+	}
+    
+	focus = {
+
+		id = BWR_aviation_Doctrine_School
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_Air_Development
+		}
+
+		relative_position_id = BWR_Air_Development
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {		
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+		}
+
+			
+		}
+
+	focus = {
+
+		id = BWR_aviation_Doctrine_School_2
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_aviation_Doctrine_School
+		}
+
+		relative_position_id = BWR_aviation_Doctrine_School
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_aviation_Doctrine_School_3
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_aviation_Doctrine_School_2
+		}
+
+		relative_position_id = BWR_aviation_Doctrine_School_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+		}
+	
+	}
+
+    focus = {
+
+		id = BWR_Fighter_Focus
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		mutually_exclusive = {
+			focus = BWR_Bomber_Focus
+		}
+		prerequisite = {
+			focus = BWR_Air_Development
+		}
+
+		relative_position_id = BWR_Air_Development
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Fighter_Focus
+			add_tech_bonus = {
+				name = light_fighter
+                bonus = 0.5
+                uses = 1
+                category = light_fighter
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Close_Air_Support
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_Fighter_Focus
+		}
+
+		relative_position_id = BWR_Fighter_Focus
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Fighter_Focus
+				add_idea = BWR_Close_Air_Support
+			}
+			add_tech_bonus = {
+				name = cas_bomber
+                bonus = 0.5
+                uses = 2
+                category = cas_bomber
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Bomber_Focus
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+
+		mutually_exclusive = {
+			focus = BWR_Fighter_Focus
+		}
+		prerequisite = {
+			focus = BWR_Air_Development
+		}
+
+		relative_position_id = BWR_Air_Development
+		x = 5
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GEN_Bomber_Focus
+			add_tech_bonus = {
+				name = cat_strategic_bomber
+                bonus = 0.5
+                uses = 1
+                category = cat_strategic_bomber
+            }
+		}
+	
+	}
+
+	focus = {
+
+		id = BWR_Nothing_But_Ash
+		icon = GFX_goal_anschluss
+				
+		available = {
+				country_exists = ROOT
+		}
+		prerequisite = {
+			focus = BWR_Bomber_Focus
+		}
+
+		relative_position_id = BWR_Bomber_Focus
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BWR_Bomber_Focus
+				add_idea = BWR_Nothing_But_Ash
+			}
+			add_tech_bonus = {
+				name = cat_strategic_bomber
+                bonus = 0.3
+                uses = 1
+                category = cat_strategic_bomber
+            }
+		}
+	
+	}
+
+
 }
