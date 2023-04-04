@@ -196,6 +196,7 @@ focus_tree = {
 		}
 		
 		available = {
+		has_country_flag = EUR_Britannians_proposal_flag
 		}
 		
 		ai_will_do = {
@@ -203,6 +204,21 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+		hidden_effect = {
+		remove_country_leader_role = {
+		character = EUR_Mil_Coun
+		ideology = paternal_autocracy}}
+		add_country_leader_role = {
+		character = EUR_Augusta_Henry
+		promote_leader = yes
+		country_leader = {
+        ideology = paternal_autocracy
+        expire = "2020.1.1.1"
+        traits = { }
+		}}
+		set_cosmetic_tag = EUR_EB
+		recruit_character = EUR_Edward_Laurier
+		recruit_character = EUR_Michele_Manfredi
 		}
 	}
 	focus = {
@@ -233,7 +249,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = EUR_Invite_Britannian_generals
+		id = EUR_Britannian_ultimatum
 		icon = GFX_goal_unknown
 		cost = 3
 		x = 0
@@ -261,9 +277,9 @@ focus_tree = {
 		cost = 3
 		x = -1
 		y = 1
-		relative_position_id = EUR_Invite_Britannian_generals
+		relative_position_id = EUR_Britannian_ultimatum
 		prerequisite = {
-			focus = EUR_Invite_Britannian_generals
+			focus = EUR_Britannian_ultimatum
 		}
 		search_filters = {
 		}
@@ -285,9 +301,9 @@ focus_tree = {
 		cost = 3
 		x = 1
 		y = 1
-		relative_position_id = EUR_Invite_Britannian_generals
+		relative_position_id = EUR_Britannian_ultimatum
 		prerequisite = {
-			focus = EUR_Invite_Britannian_generals
+			focus = EUR_Britannian_ultimatum
 		}
 		search_filters = {
 		}
@@ -303,7 +319,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = EUR_Britannian_ultimatum
+		id = EUR_An_End_To_Madness
 		icon = GFX_goal_unknown
 		cost = 3
 		x = -1
@@ -335,9 +351,9 @@ focus_tree = {
 		cost = 3
 		x = -3
 		y = 1
-		relative_position_id = EUR_Britannian_ultimatum
+		relative_position_id = EUR_An_End_To_Madness
 		prerequisite = {
-			focus = EUR_Britannian_ultimatum
+			focus = EUR_An_End_To_Madness
 		}
 		search_filters = {
 		}
@@ -506,9 +522,9 @@ focus_tree = {
 		cost = 3
 		x = 3
 		y = 1
-		relative_position_id = EUR_Britannian_ultimatum
+		relative_position_id = EUR_An_End_To_Madness
 		prerequisite = {
-			focus = EUR_Britannian_ultimatum
+			focus = EUR_An_End_To_Madness
 		}
 		search_filters = {
 		}
@@ -602,9 +618,9 @@ focus_tree = {
 		cost = 3
 		x = 26
 		y = 1
-		relative_position_id = EUR_Britannian_ultimatum
+		relative_position_id = EUR_An_End_To_Madness
 		prerequisite = {
-			focus = EUR_Britannian_ultimatum
+			focus = EUR_An_End_To_Madness
 		}
 		search_filters = {
 		}
@@ -2708,9 +2724,9 @@ focus_tree = {
 		cost = 3
 		x = -26
 		y = 1
-		relative_position_id = EUR_Britannian_ultimatum
+		relative_position_id = EUR_An_End_To_Madness
 		prerequisite = {
-			focus = EUR_Britannian_ultimatum
+			focus = EUR_An_End_To_Madness
 		}
 		search_filters = {
 		}

@@ -264,37 +264,76 @@ characters = {
 
 
 	### HIGH COMMAND
-
-
-	EUR_generic_high_command = {
-		name = "High Command Feller"
-
-		#portraits = {
-		#	
-		#}
-
-		advisor = {
-			slot = high_command
-			ledger = army
-			idea_token = EUR_generic_high_command_1
-			traits = { 
-				army_artillery_1
-			}
-			allowed = {
-				tag = EUR
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+	EUR_Anton_Kozlov={
+		name= "Anton Kozlov"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={infantry_leader }
+				skill=4
+				attack_skill=4
+				defense_skill=2
+				planning_skill=4
+				logistics_skill=2
 		}
-
-		field_marshal = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+	}
+	EUR_Vyacheslav_Pushkin={
+		name= "Vyacheslav Pushkin"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={  }
+				skill=4
+				attack_skill=6
+				defense_skill=1
+				planning_skill=3
+				logistics_skill=1
+		}
+	}
+	EUR_Aleksandr_Petrov={
+		name= "Aleksandr Petrov"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={  }
+				skill=4
+				attack_skill=2
+				defense_skill=5
+				planning_skill=2
+				logistics_skill=4
+		}
+	}
+	EUR_Mikhail_Fedorov={
+		name= "Mikhail Fedorov"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={ infantry_leader winter_expert}
+				skill=4
+				attack_skill=4
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=1
 		}
 	}
 	EUR_Michele_Manfredi={
@@ -307,32 +346,109 @@ characters = {
 	##		}}
 	
 			field_marshal = {
-				traits={  }
-				skill=4
-				attack_skill=4
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=2
+				traits={ armor_expert winter_expert}
+				skill=6
+				attack_skill=5
+				defense_skill=5
+				planning_skill=4
+				logistics_skill=4
 		}
 	}
+	EUR_Edward_Laurier={
+		name= "Edward R. Laurier;"
+		
+	##	portraits={
+	##		army = {
+	##			large = 
+	##			small = 
+	##		}}
+	
+			field_marshal = {
+				traits={ }
+				skill=5
+				attack_skill=3
+				defense_skill=6
+				planning_skill=4
+				logistics_skill=4
+		}
+	}
+	
 
 
 	### GENERALS
 
-	EUR_generic_corps_commander = {
-		name = "Corps Commander"
+	EUR_Fedor_Nikolaev = {
+		name = "Fedor Nikolaev"
 		#portraits = {
 		#	
 		#}
 
 		corps_commander = {
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	EUR_Nikolay_Frolov = {
+		name = "Nikolay Frolov"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			traits = {infantry_leader}
+			skill = 1
+			attack_skill = 3
 			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	EUR_Venedikt_Vinogradov = {
+		name = "Venedikt Vinogradov"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	EUR_Stefan_Kuzmin = {
+		name = "Stefan Kuzmin"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
 			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	EUR_Naum_Nikolaev = {
+		name = "Naum Nikolaev"
+		#portraits = {
+		#	
+		#}
+
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 	}
+
 
 
 }
