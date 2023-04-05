@@ -1535,7 +1535,14 @@ cost = 5
 		}
         
 		prerequisite = {
-			focus = Civillian_Sector_4 focus = Infastructure_Sector_4 focus = Military_Sector_4
+			focus = Civillian_Sector_4
+		}   
+		
+		prerequisite = {
+			focus = Military_Sector_4
+		}
+		prerequisite = {
+			focus = Infastructure_Sector_4
 		}
 		relative_position_id = Military_Sector_4
 		x = -2
@@ -2332,6 +2339,13 @@ cost = 5
 			focus = gen_Honorable_Battle
 		 }
 	
+        prerequisite = {
+			focus = gen_Heavy_Ship_Design
+		} 
+        
+		prerequisite = {
+			focus = gen_Install_the_Repair_Yards
+		}
 
 		relative_position_id = gen_Honorable_Battle
 		x = 0
@@ -2517,7 +2531,13 @@ cost = 5
 			focus = gen_Hidden_War
 		 }
 
+        prerequisite = {
+			focus = gen_Fear_the_Unseen
+		}
 
+		prerequisite = {
+			focus = gen_Mass-Produce_Parts
+		}
 
 		relative_position_id = gen_Hidden_War
 		x = 0
@@ -2630,8 +2650,7 @@ cost = 5
 				type = ship_hull_submarine_2
 				name_group = JAP_BB_HISTORICAL
 				parent_version = 0
-				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-				modules = {
+			    modules = {
 					fixed_ship_torpedo_slot = ship_torpedo_sub_2
 					fixed_ship_engine_slot = sub_ship_engine_2
 					rear_1_custom_slot = ship_torpedo_sub_2

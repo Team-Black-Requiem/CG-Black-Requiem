@@ -191,7 +191,9 @@ focus = {
 		y = 6
 
 		cost = 3
-
+        available = {
+			has_tech = mechanised_infantry  
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -200,6 +202,10 @@ focus = {
 			custom_effect_tooltip = 3_BWR.tt
 			country_event = BWR.5
         hidden_effect = {
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment_1
+				amount = 1000
+			}
 			recruit_character = BWR_oso
 			recruit_character = BWR_bearshev
 			recruit_character = BWR_bearkov
@@ -296,27 +302,29 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-
+		available = {
+			has_tech = knightmare_frame_3
+			has_tech = factspheres
+			has_tech = landspinner
 		}
 
 		completion_reward = {
 			custom_effect_tooltip = 1_BWR.tt
 			add_ideas = BWR_Bear_Knightmares
-
+            
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = factspheres
-					amount = 1200
+					amount = 15000
 				}
 
 				add_equipment_to_stockpile = {
 					type = landspinner
-					amount = 1200
+					amount = 15000
 				}
 				add_equipment_to_stockpile = {
 					type = knightmare_mass_prod_1
-					amount = 1200
+					amount = 15000
 				}
 				if = {
 					limit = {is_ai = yes}
