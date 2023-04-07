@@ -980,8 +980,8 @@
 				id = C.C.S
 				icon = GFX
 				cost = 5
-				x = -3
-				y = 9
+				x = -4
+				y = 10
 				prerequisite { focus = Total_war }
 				relative_position_id = Total_war
 				available = {
@@ -3425,76 +3425,10 @@
 				completion_reward = {}
 
 			}
-			focus = {
-				id = Sonyas_Victory
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 19
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Fith_Internationale
-				icon = GFX
-				cost = 5
-				x = -2
-				y = 1
-				prerequisite { focus = Sonyas_Victory }
-				relative_position_id = Sonyas_Victory
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
-
-			}
-			focus = {
-				id = The_great_Leap_Forward
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite { focus = Sonyas_Victory }
-				relative_position_id = Sonyas_Victory
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Returning_to_Moscow
-				icon = GFX
-				cost = 5
-				x = 2
-				y = 1
-				prerequisite { focus = Sonyas_Victory }
-				relative_position_id = Sonyas_Victory
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
-
-			}
+	
+	
+		
+		
 			focus = {
 				id = Intervene_in_the_East
 				icon = GFX
@@ -4478,6 +4412,9 @@
 				cost = 5
 				x = 30
 				y = 23
+				allow_branch = {
+					has_country_flag = 3rd_phase_global_revolution.
+				}
 				available = {
 								country_exists = SRU 
 				}
