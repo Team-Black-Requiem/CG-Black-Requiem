@@ -7,6 +7,12 @@ technology_categories = {
 	MBT_armour
  	armor
 
+	#NSB
+
+	main_battle_tank_destroyer_chassis
+	main_battle_tank_artillery_chassis
+	main_battle_tank_assault_gun_chassis
+
 	#Knightmares
 
 	knightmare_mass_production
@@ -142,18 +148,18 @@ technology_folders = {
 	}
 	armour_folder = {
 		ledger = army
-		#available = {
-		#	NOT = {
-		#		has_dlc = "No Step Back"
-		#	}
-		#}
+		available = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
 	}
-	#nsb_armour_folder = {
-	#	ledger = army
-	#	available = {
-	#		has_dlc = "No Step Back"
-	#	}
-	#}
+	nsb_armour_folder = {
+		ledger = army
+		available = {
+			has_dlc = "No Step Back"
+		}
+	}
 	artillery_folder = {
 		ledger = army
 	}

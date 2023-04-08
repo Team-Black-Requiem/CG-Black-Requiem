@@ -1,0 +1,749 @@
+technologies = {
+
+
+
+
+	# NOTE TO SELF, ADD A NEW TAB CALLED TRANSPORATION LOAD OR SOMETHING
+	# TO CHOSE BETWEEN WHEELS AND TRACKS SINCE CODE GEASS HAD WHEEL TANKS
+	# Probably add a section to chose thickness of armor between 3 types
+	# Like Minimal, Meidum, Heavy kind of thing
+
+	#X Values
+	@chassis = -4
+	@bases = 3
+
+
+	#Y Vaules
+	@1970 = 0
+	@2009 = 2
+
+	@2011 = 4
+	@2012 = 6
+
+	@2014 = 8
+	@2015 = 10
+
+	@2017 = 12
+	@2018 = 14
+
+	###  ###  ### #   #  ##  ###  #   #    ###  #### #### ####  ##  ###   ### #  #
+	#  # #  #  #  ## ## #  # #  # #   #    #  # #    #    #    #  # #  # #    #  #
+	###  ###   #  # # # #### ###   ###     ###  #### #### #### #### ###  #    ####
+	#    #  #  #  #   # #  # #  #   #      #  # #       # #    #  # #  # #    #  #
+	#    #  # ### #   # #  # #  #   #      #  # #### #### #### #  # #  #  ### #  #
+
+
+	nsb_tank_design = { 
+		research_cost = 1.5
+		start_year = 1970
+
+		enable_equipment_modules = {
+			tank_cast_armor
+			tank_improved_cast_armor
+			tank_rivet_armor
+			tank_weld_armor
+			tank_gasoline_engine_1
+			tank_disel_engine_1
+			tank_well_balanced_armor
+			tank_composite_armor
+			early_smoothbore
+			early_rifled
+			early_cannon
+			early_assault_gun
+			early_mbt_rounded_turret
+			early_mbt_composite_turret
+			basic_mbt_rounded_turret
+			basic_mbt_composite_turret
+			early_mbt_super_structure
+			early_smoothbore
+			basic_smoothbore
+			early_rifled
+			basic_rifled
+			early_cannon
+			basic_cannon
+			early_assault_gun
+			basic_assault_gun
+			early_mbt_artillery_structure
+			basic_mbt_artillery_structure
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = UNLOCK_DIVISION_TANK_TEMPLATE
+		}
+
+		enable_subunits = {
+			nsb_modern_armor
+			nsb_modern_spg_brigade
+			nsb_modern_tank_destroyer_brigade
+			nsb_modern_assault_gun_brigade
+		}
+	
+		path = {
+			leads_to_tech = early_main_battle_tank
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = @1970 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "1970.1.1"
+			}
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+	
+	early_main_battle_tank = { 
+		research_cost = 2
+		start_year = 2009
+
+		enable_equipments = {
+			early_mbt_chassis
+			main_battle_tank_artillery_chassis_1
+			main_battle_tank_destroyer_chassis_1
+		}
+
+		enable_equipment_modules = {
+			rifled_90
+			rifled_122
+			cannon_203
+		}
+
+		enable_subunits = {
+			modern_armor
+		}
+
+		path = {
+			leads_to_tech = nsb_mobile_bases
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = basic_main_battle_tank
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -0.5 y = @2009 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+
+	basic_main_battle_tank = {
+		research_cost = 2
+		start_year = 2011
+
+		enable_equipments = {
+			basic_mbt_chassis
+		}
+
+		enable_equipment_modules = {
+			smoothbore_105
+		}
+
+		path = {
+			leads_to_tech = improved_main_battle_tank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_gun_improvement
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_tank_armor_variations
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = @2011 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+
+	improved_main_battle_tank = {
+		research_cost = 2
+		start_year = 2014
+
+		enable_equipments = {
+			improved_mbt_chassis
+		}
+
+		enable_equipment_modules = {
+			smoothbore_120
+		}
+
+		path = {
+			leads_to_tech = advanced_main_battle_tank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = gun_improvement
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tank_armor_variations
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = @2014 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2014.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	advanced_main_battle_tank = {
+		research_cost = 2
+		start_year = 2017
+
+		enable_equipments = {
+			advanced_mbt_chassis
+		}
+
+		enable_equipment_modules = {
+			smoothbore_125
+		}
+
+		#path = {
+		#	leads_to_tech = TBD
+		#	research_cost_coeff = 1
+		#}
+		path = {
+			leads_to_tech = advanced_gun_improvement
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = advanced_tank_armor_variations
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = @2017 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2017.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	#### ####  ###  ##  #   # ###   ##  ###  #   #    ###  #### #### ####  ##  ###   ### #  #
+	#    #    #    #  # ##  # #  # #  # #  # #   #    #  # #    #    #    #  # #  # #    #  #
+	#### #### #    #  # # # # #  # #### ###   ###     ###  #### #### #### #### ###  #    ####
+	   # #    #    #  # #  ## #  # #  # #  #   #      #  # #       # #    #  # #  # #    #  #
+	#### ####  ###  ##  #   # ###  #  # #  #   #      #  # #### #### #### #  # #  #  ### #  #
+
+
+	basic_gun_improvement = {
+		research_cost = 1.5
+		start_year = 2011
+
+		enable_equipments = {
+			main_battle_tank_artillery_chassis_2
+			main_battle_tank_destroyer_chassis_2
+		}
+
+		enable_equipment_modules = {
+			rifled_105
+			cannon_155
+		}
+
+		path = {
+			leads_to_tech = basic_muintion_improvement
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2011 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	basic_muintion_improvement = {
+		research_cost = 1.5
+		start_year = 2012
+
+		enable_equipment_modules = {
+			apfsds
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2012 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2012.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	basic_tank_armor_variations = {
+		research_cost = 1.5
+		start_year = 2011
+
+		enable_equipment_modules = {
+			
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -1 y = @2011 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+
+
+
+
+	gun_improvement = {
+		research_cost = 1.5
+		start_year = 2014
+
+		enable_equipments = {
+			main_battle_tank_artillery_chassis_3
+			main_battle_tank_destroyer_chassis_3
+		}
+
+		enable_equipment_modules = {
+			rifled_120
+			cannon_152
+		}
+
+		path = {
+			leads_to_tech = muintion_improvement
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2014 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2014.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	muintion_improvement = {
+		research_cost = 1.5
+		start_year = 2015
+
+		enable_equipments = {
+
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2015 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2015.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	tank_armor_variations = {
+		research_cost = 1.5
+		start_year = 2014
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -1 y = @2014 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2014.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+	
+
+
+
+
+	advanced_gun_improvement = {
+		research_cost = 1.5
+		start_year = 2017
+
+		enable_equipments = {
+			main_battle_tank_artillery_chassis_4
+			main_battle_tank_destroyer_chassis_4
+		}
+
+		enable_equipment_modules = {
+			rifled_125
+			cannon_155_imp
+		}
+
+		path = {
+			leads_to_tech = advanced_muintion_improvement
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2017 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2017.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	advanced_muintion_improvement = {
+		research_cost = 1.5
+		start_year = 2018
+
+		enable_equipment_modules = {
+			sakuradite_charges
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -7 y = @2018 }
+		}
+
+		ai_will_do = {
+			factor = 2	
+			modifier = {
+				factor = 5
+				date > "2018.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	advanced_tank_armor_variations = {
+		research_cost = 1.5
+		start_year = 2017
+
+		enable_equipment_modules = {
+			
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -1 y = @2017 }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2017.1.1"
+			}
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	 ###  ##  ###  ####     ### ####  ##  #### ####
+	#    #  # #  # #       #    #    #  # #    #
+	#    #  # #  # ####    # ## #### #### #### ####
+	#    #  # #  # #       #  # #    #  #    #    #
+	 ###  ##  ###  ####     ### #### #  # #### ####
+
+	nsb_mobile_bases = {
+		research_cost = 3
+		start_year = 2011
+
+		enable_equipments = {
+			mobile_bases
+		}
+		enable_subunits = {
+			mobile_bases
+		}
+		
+		path = {
+			leads_to_tech = improved_mobility
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = additional_machine_guns
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = reinforced_structure
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = @bases y = @2011 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+
+	improved_mobility = {
+		research_cost = 2
+		start_year = 2012
+
+		category_all_armor = {
+			maximum_speed = 0.05
+			max_organisation = 0.04
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 5 y = @2012 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+
+	additional_machine_guns = {
+		research_cost = 2
+		start_year = 2012
+
+		category_all_armor = {
+			soft_attack = 0.03
+			breakthrough = 0.01
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 1 y = @2012 }
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	reinforced_structure = {
+		research_cost = 2
+		start_year = 2014
+
+		path = {
+			research_cost_coeff = 1
+			leads_to_tech = advanced_mobile_bases
+		}
+
+		category_all_armor = {
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = @bases y = @2014 }
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			MBT_armour
+		}
+	}
+
+	advanced_mobile_bases = {
+		research_cost = 3
+		start_year = 2017
+
+		enable_equipments = {
+			mobile_bases
+		}
+		
+		path = {
+			leads_to_tech = advanced_base_mobility
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = advanced_base_defence
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = advanced_base_plating
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = @bases y = @2017 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2011.1.1"
+			}
+		}
+		
+		categories = {
+			MBT_armour
+		}
+	}
+
+	advanced_base_mobility = {
+		research_cost = 2
+		start_year = 2018
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 5 y = @2018 }
+		}
+	}
+
+	advanced_base_defence = {
+		research_cost = 2
+		start_year = 2018
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 1 y = @2018 }
+		}
+	}
+
+	advanced_base_plating = {
+		research_cost = 2
+		start_year = 2018
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = @bases y = @2018 }
+		}
+	}
+}
