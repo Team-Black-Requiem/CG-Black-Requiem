@@ -1,17 +1,8 @@
-BWR_strategy = {
+ai_strategy_plan = {
+	name = invasion_plan
+	enable = { tag = BWR}
 
-    allowed = {
-        tag = BWR
-         
-    }
-    enable = {
-          
-         has_completed_focus = release_the_war_bears
-	
-}
- 
-
-	 ai_strategy = {
+	ai_strategy = {
 	 
         type = declare_war
         id = IRN
@@ -284,5 +275,46 @@ ai_strategy = {
 }
 
 
+
+
+
 }
 
+focus = {
+	name = research_priorities
+    enable = {tag = BWR}
+	research = {
+		
+		ship_modules_tech = -2
+		naval_equipment = -2
+		dd_tech = -2
+		cl_tech = -2
+		ca_tech = -2
+		cv_tech = -2
+		bc_tech = -2
+		bb_tech = -2
+		shbb_tech = -2
+		ss_tech = -2
+		tp_tech = -2
+		fg_tech = -2
+		asw_tech = -2
+		naval_mines = -2
+		naval_minesweeping = -2
+		naval_minelaying = -2
+		infantry_tech = 5
+		armor = 5
+		nuclear = -2
+		naval_equipment = -2
+		air_equipment = -2
+		knightmare_all = 4
+	
+	}
+	weight = {
+		modifier = {
+			factor = 2
+			date > 2010.1.1
+		}
+	}
+	
+	
+	}
