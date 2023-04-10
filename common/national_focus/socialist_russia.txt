@@ -388,8 +388,7 @@
 			cost = 3
 			x = 1
 			y = 1
-			prerequisite = { focus = RUS_Electrification 
-			focus_RUS_Project_ }
+			prerequisite = { focus = RUS_Electrification }
 			relative_position_id = RUS_Electrification
 			available = {
                            country_exists = SRU
@@ -547,7 +546,7 @@
 			y = 2
 			prerequisite = { focus = RUS_Deal_with_the_unions }
 			relative_position_id = RUS_Deal_with_the_unions
-			mutually_exclusive focus = { focus = Jacobin_all_the_way}
+			mutually_exclusive = { focus = Jacobin_all_the_way}
 			available = {
                            country_exists = SRU
 			}
@@ -689,7 +688,7 @@
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite { focus = Fear }
+				prerequisite = { focus = Fear }
 				relative_position_id = Fear
 				available = {
 								country_exists = SRU 
@@ -836,9 +835,9 @@
 				cost = 5
 				x = 2
 				y = 1
-				prerequisite { focus = Middle_ground }
+				prerequisite = { focus = Middle_ground }
 				relative_position_id = Middle_ground
-				mutually_exclusive focus = { focus = Ass }
+				mutually_exclusive { focus = Ass }
 				available = {
 								country_exists = SRU 
 				}
@@ -855,7 +854,7 @@
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite { focus = Ass }
+				prerequisite = { focus = Ass }
 				relative_position_id = Ass
 				available = {
 								country_exists = SRU 
@@ -873,7 +872,7 @@
 				cost = 5
 				x = 2
 				y = 1
-				prerequisite { focus = Ass }
+				prerequisite = { focus = Ass }
 				relative_position_id = Ass
 				available = {
 								country_exists = SRU 
