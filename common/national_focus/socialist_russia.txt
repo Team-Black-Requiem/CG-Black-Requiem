@@ -1,5 +1,5 @@
 ﻿focus_tree = {
-	id = pre_pre_cw_russia_focus
+	id = socialist_russia_focus
 	
 	country = {
 		factor = 0
@@ -12,8 +12,8 @@
 
 	default = no
 				focus = {
-			id = focus_1
-			icon = GFX
+			id = SRU_era_of_chaos
+			icon = GFX_SRU_era_of_chaos
 			cost = 5
 			x = 12
 			y = 0
@@ -29,13 +29,13 @@
 
 	continuous_focus_position = { x = 20 y = 3500 }
 				focus = {
-			id = focus_2
-			icon = GFX
+			id = SRU_red_shooting_star
+			icon = GFX_SRU_red_shooting_star
 			cost = 3
-			x = -2
-			y = 2
-			prerequisite = { focus = focus_1 }
-			relative_position_id = focus_1
+			x = -1
+			y = 1
+			prerequisite = { focus = SRU_era_of_chaos }
+			relative_position_id = SRU_era_of_chaos
 			available = {
                            country_exists = SRU
 			}
@@ -49,13 +49,13 @@
 
 
 				focus = {
-			id = focus_3 
-			icon = GFX
+			id = SRU_dawn_red_sun 
+			icon = GFX_SRU_dawn_red_sun 
 			cost = 10
-			x = 2
-			y = 2
-			prerequisite = { focus = focus_1 }
-			relative_position_id = focus_1
+			x = 1
+			y = 1
+			prerequisite = { focus = SRU_era_of_chaos }
+			relative_position_id = SRU_era_of_chaos
 			available = {
                            country_exists = SRU
 			}
@@ -66,15 +66,15 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = focus_4
-			icon = GFX
+			id = SRU_vision_utopia
+			icon = GFX_SRU_vision_utopia
 			cost = 5
-			x = -2
-			y = 2
-			prerequisite = { focus = focus_2 }
-			prerequisite = { focus = focus_3 }
-			relative_position_id = focus_2
-			relative_position_id = focus_3
+			x = -1
+			y = 1
+			prerequisite = { focus = SRU_red_shooting_star }
+			prerequisite = { focus = SRU_dawn_red_sun }
+			relative_position_id = SRU_red_shooting_star
+			relative_position_id = SRU_dawn_red_sun 
 			available = {
                            country_exists = SRU
 			}
@@ -85,13 +85,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = focus_5
-			icon = GFX
+			id = SRU_sonya_leadership
+			icon = GFX_SRU_sonya_leadership
 			cost = 5
 			x = 0
 			y = 1
-			prerequisite = { focus = focus_4 }
-			relative_position_id = focus_4
+			prerequisite = { focus = SRU_crimson_moon }
+			relative_position_id = SRU_crimson_moon
 			mutually_exclusive = { focus = RUS_Centralization_of_state_assets }
 			available = {
                            country_exists = SRU}
@@ -102,16 +102,16 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = focus_6
-			icon = GFX
+			id = SRU_crimson_moon
+			icon = GFX_SRU_crimson_moon
 			cost = 5
 			x = 0
 			y = 1
 			prerequisite = { 
-				focus = focus_5
+				focus = SRU_vision_utopia
 			 }
 
-			relative_position_id = focus_5
+			relative_position_id = SRU_vision_utopia
 			available = {
                            country_exists = SRU
 			}
@@ -122,14 +122,14 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = focus_7
-			icon = GFX
+			id = SRU_economic_mobilisation
+			icon = GFX_SRU_economic_mobilisation
 			cost = 5
 			x = -2
-			y = 2
-			prerequisite = { focus = focus_6 }
+			y = 1
+			prerequisite = { focus = SRU_sonya_leadership }
 
-			relative_position_id = focus_6
+			relative_position_id = SRU_sonya_leadership
 			available = {
                            country_exists = SRU
 			}
@@ -140,14 +140,14 @@
 			completion_reward = {}
 	}
 					focus = {
-			id = focus_8
-			icon = GFX
+			id = SRU_arm_militias
+			icon = GFX_SRU_arm_militias
 			cost = 5
 			x = 0
-			y = 2
-			prerequisite = { focus = focus_6 }
+			y = 1
+			prerequisite = { focus = SRU_sonya_leadership }
 
-			relative_position_id = focus_6
+			relative_position_id = SRU_sonya_leadership
 			available = {
                            country_exists = SRU
 			}
@@ -158,14 +158,14 @@
 			completion_reward = {}
 	}
 						focus = {
-			id = focus_9
-			icon = GFX
+			id = SRU_prospect_resources
+			icon = GFX_SRU_prospect_resources
 			cost = 5
 			x = 2
-			y = 2
-			prerequisite = { focus = focus_6 }
+			y = 1
+			prerequisite = { focus = SRU_sonya_leadership }
 
-			relative_position_id = focus_6
+			relative_position_id = SRU_sonya_leadership
 			available = {
                            country_exists = SRU
 			}
@@ -176,15 +176,15 @@
 			completion_reward = {}
 	}
 					focus = {
-			id = focus_10
-			icon = GFX
+			id = SRU_overthrow_aristocracy
+			icon = GFX_SRU_overthrow_aristocracy
 			cost = 5
 			x = 0
 			y = 2
-			prerequisite = { focus = focus_7
-		                     focus = focus_8
-							 focus = focus_9 }
-			relative_position_id =focus_8
+			prerequisite = { focus = SRU_economic_mobilisation
+		                     focus = SRU_arm_militias
+							 focus = SRU_prospect_resources }
+			relative_position_id =SRU_arm_militias
 			available = {
                            country_exists = SRU
 			}
@@ -200,7 +200,7 @@
 			cost = 5
 			x = 12
 			y = 12
-			prerequisite = { focus = focus_10 }
+			prerequisite = { focus = SRU_overthrow_aristocracy }
 			available = {
                            country_exists = SRU
 			}
@@ -372,7 +372,7 @@
 			cost = 3
 			x = -6
 			y = 5
-			prerequisite = { focus = focus_5}
+
 			available = {
                            country_exists = SRU
 			}
@@ -1747,8 +1747,8 @@
 				cost = 5
 				x = 12
 				y = 2
-				prerequisite { focus = focus_10 }
-				relative_position_id = focus_10
+				prerequisite { focus = SRU_overthrow_aristocracy }
+				relative_position_id = SRU_overthrow_aristocracy
 				available = {
 								country_exists = SRU 
 				}
@@ -2681,8 +2681,8 @@
 				cost = 5
 				x = 42
 				y = 1
-				prerequisite { focus = focus_10 }
-				relative_position_id = focus_10
+				prerequisite { focus = SRU_overthrow_aristocracy }
+				relative_position_id = SRU_overthrow_aristocracy
 				available = {
 								country_exists = SRU 
 				}
@@ -3086,8 +3086,8 @@
 				cost = 5
 				x = 54
 				y = 1
-				prerequisite { focus = focus_10 }
-				relative_position_id = focus_10
+				prerequisite { focus = SRU_overthrow_aristocracy }
+				relative_position_id = SRU_overthrow_aristocracy
 				available = {
 								country_exists = SRU 
 				}
