@@ -1891,12 +1891,22 @@ else_if = {
 		y = 1
 		available = {
 			country_exists = MRU
-			has_completed_focus = MRU_Planned_Budget_A_III
-			has_completed_focus = MRU_Planned_Budget_b_III
+			if = {
+				limit = {
+					has_completed_focus =  MRU_Planned_Budget_A_III
+		
+				}
+				OR = {
+					has_completed_focus =  MRU_Planned_Budget_b_III
+	
+				}
+			}
+		
 		}
 		bypass = { }
 
 		prerequisite = {
+			
 			focus = MRU_Military_Bonds
 		}
 
