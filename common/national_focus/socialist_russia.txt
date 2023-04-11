@@ -9,12 +9,13 @@
 		}
 	}
 	
+	continuous_focus_position = { x = 20 y = 3500 }
 
 	default = no
 				focus = {
 			id = SRU_era_of_chaos
 			icon = GFX_SRU_era_of_chaos
-			cost = 5
+			cost = 1
 			x = 12
 			y = 0
 			available = {
@@ -24,14 +25,18 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_stability = -0.1
+				add_political_power = 200
+				country_event = SRU.6
+			}
 	}
 
-	continuous_focus_position = { x = 20 y = 3500 }
+
 				focus = {
 			id = SRU_red_shooting_star
 			icon = GFX_SRU_red_shooting_star
-			cost = 3
+			cost = 1
 			x = -1
 			y = 1
 			prerequisite = { focus = SRU_era_of_chaos }
@@ -43,7 +48,11 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_stability = 0.2
+				country_event = SRU.7
+
+			}
 	}
 
 
@@ -51,7 +60,7 @@
 				focus = {
 			id = SRU_dawn_red_sun 
 			icon = GFX_SRU_dawn_red_sun 
-			cost = 10
+			cost = 1
 			x = 1
 			y = 1
 			prerequisite = { focus = SRU_era_of_chaos }
@@ -63,12 +72,15 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_war_support = 0.2
+				country_event = SRU.8
+			}
 	}
 				focus = {
 			id = SRU_vision_utopia
 			icon = GFX_SRU_vision_utopia
-			cost = 5
+			cost = 1
 			x = -1
 			y = 1
 			prerequisite = { focus = SRU_red_shooting_star }
@@ -82,12 +94,15 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_ideas = SRU_dream_of_utopia
+				country_event = SRU.9
+			}
 	}
 				focus = {
 			id = SRU_sonya_leadership
 			icon = GFX_SRU_sonya_leadership
-			cost = 5
+			cost = 1
 			x = 0
 			y = 1
 			prerequisite = { focus = SRU_crimson_moon }
@@ -104,7 +119,7 @@
 				focus = {
 			id = SRU_crimson_moon
 			icon = GFX_SRU_crimson_moon
-			cost = 5
+			cost = 1
 			x = 0
 			y = 1
 			prerequisite = { 
@@ -119,7 +134,9 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				country_event = SRU.10
+			}
 	}
 				focus = {
 			id = SRU_economic_mobilisation
@@ -368,8 +385,8 @@
 
 				focus = {
 			id = SRU_Chekhovs_Gun 
-			icon = GFX
-			cost = 3
+			icon = GFX_SRU_Chekhovs_Gun
+			cost = 1
 			x = 8
 			y = 4
 
@@ -382,7 +399,9 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				country_event = SRU.11
+			}
 	}
 				focus = {
 			id = SRU_Arrest_Collaborators
@@ -456,8 +475,8 @@
 	}
 				focus = {
 			id = SRU_Take_Families_Hostage 
-			icon = GFX
-			cost = 5
+			icon = GFX_SRU_Take_Families_Hostage
+			cost = 2
 			x = -12
 			y = 1
 			prerequisite = { focus = SRU_Chekhovs_Gun }
@@ -469,12 +488,14 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				country_event = SRU.12
+			}
 	}
 				focus = {
 			id = SRU_Establish_Regional_Communities 
-			icon = GFX
-			cost = 5
+			icon = GFX_SRU_Establish_Regional_Communities
+			cost = 2
 			x = -1
 			y = 1
 			prerequisite = { focus = SRU_Take_Families_Hostage }
@@ -490,8 +511,8 @@
 	}
 				focus = {
 			id = SRU_Rapid_Industrialisation
-			icon = GFX
-			cost = 5
+			icon = GFX_SRU_Rapid_Industrialisation
+			cost = 2
 			x = 1
 			y = 1
 			prerequisite = { focus = SRU_Take_Families_Hostage }
@@ -507,8 +528,8 @@
 	}
 				focus = {
 			id = SRU_Total_War
-			icon = GFX
-			cost = 5
+			icon = GFX_SRU_Total_War
+			cost = 3
 			x = -1
 			y = 1
 			prerequisite = { focus = SRU_Establish_Regional_Communities }
@@ -1123,7 +1144,7 @@
 			}
 			focus = {
 				id = SRU_The_Jacobin_Army
-				icon = GFX
+				icon = GFX_SRU_The_Jacobin_Army
 				cost = 5
 				x = 0
 				y = 1
