@@ -84,8 +84,9 @@ country_event = {
 		
     } 	
 }
+
 country_event = {  
-	id = EUR.7 ####Ace in the hole
+	id = EUR.7 ####Britannian ultimatum
 	title = EUR.7.t
 	desc = EUR.7.d
 	fire_only_once = yes
@@ -95,7 +96,28 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = EUR_Britannians_proposal_flag
-		hidden_effect = {recruit_character = EUR_Augusta_Henry}
+		hidden_effect = {
+		retire_character = EUR_Anton_Kozlov
+		retire_character = EUR_Aleksandr_Petrov
+		retire_character = EUR_Vyacheslav_Pushkin
+		retire_character = EUR_Mikhail_Fedorov}
+    } 	
+}
+
+country_event = {  
+	id = EUR.8 ####An End To Madness
+	title = EUR.8.t
+	desc = EUR.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.8.a
+		ai_chance = {
+			factor = 100
+		}
+	declare_war_on = {
+    target = SRU
+    type = annex_everything
+    }
     } 	
 }

@@ -204,21 +204,11 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-		hidden_effect = {
-		remove_country_leader_role = {
-		character = EUR_Mil_Coun
-		ideology = paternal_autocracy}}
-		add_country_leader_role = {
-		character = EUR_Augusta_Henry
-		promote_leader = yes
-		country_leader = {
-        ideology = paternal_autocracy
-        expire = "2020.1.1.1"
-        traits = { }
-		}}
+		
 		set_cosmetic_tag = EUR_EB
 		recruit_character = EUR_Edward_Laurier
 		recruit_character = EUR_Michele_Manfredi
+		recruit_character = EUR_Augusta_Henry
 		}
 	}
 	focus = {
@@ -269,6 +259,19 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+		hidden_effect = {
+		remove_country_leader_role = {
+		character = EUR_Mil_Coun
+		ideology = paternal_autocracy}
+		country_event = { days = 3 id = eur.7}}
+		add_country_leader_role = {
+		character = EUR_Augusta_Henry
+		promote_leader = yes
+		country_leader = {
+        ideology = paternal_autocracy
+        expire = "2020.1.1.1"
+        traits = { }
+		}}
 		}
 	}
 	focus = {
@@ -292,6 +295,28 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+		add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = HBE
+				}
+		add_equipment_to_stockpile = {
+                        type = knightmare_mass_prod
+                        amount = 200
+						producer = HBE
+                    }
+		hidden_effect = {
+		add_equipment_to_stockpile = {
+                        type = landspinner_equip
+                        amount = 200
+						producer = HBE
+                    }
+		add_equipment_to_stockpile = {
+                        type = factspheres_equip
+                        amount = 200
+						producer = HBE
+                    }
+		}
 		}
 	}
 	#Create special rights for Britannia soldiers
