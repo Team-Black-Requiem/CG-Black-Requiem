@@ -178,13 +178,13 @@
 					focus = {
 			id = SRU_overthrow_aristocracy
 			icon = GFX_SRU_overthrow_aristocracy
-			cost = 5
+			cost = 3
 			x = 0
 			y = 1
 			prerequisite = { focus = SRU_economic_mobilisation
 		                     focus = SRU_arm_militias
 							 focus = SRU_prospect_resources }
-			relative_position_id =SRU_arm_militias
+			relative_position_id = SRU_arm_militias
 			available = {
                            country_exists = SRU
 			}
@@ -195,9 +195,9 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_Politburo
-			icon = GFX
-			cost = 5
+			id = SRU_Politburo
+			icon = GFX_SRU_Politburo
+			cost = 2
 			x = 12
 			y = 8
 			prerequisite = { focus = SRU_overthrow_aristocracy }
@@ -211,13 +211,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_
-			icon = GFX
+			id = SRU_Establish_Political_Commissariat
+			icon = GFX_SRU_Establish_Political_Commissariat
 			cost = 3
 			x = 0
 			y = 2
-			prerequisite = { focus = RUS_Politburo }
-			relative_position_id = RUS_Politburo
+			prerequisite = { focus = SRU_Politburo }
+			relative_position_id = SRU_Politburo
 			available = {
                            country_exists = SRU
 			}
@@ -228,15 +228,15 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_qwe
-			icon = GFX
-			cost = 5
+			id = SRU_State_Oversight_In_The_Civil_Service
+			icon = GFX_SRU_State_Oversight_In_The_Civil_Service
+			cost = 2
 			x = 2
 			y = 1
-			prerequisite = { focus = RUS_ }
-			relative_position_id = RUS_
+			prerequisite = { focus = SRU_Establish_Political_Commissariat }
+			relative_position_id = SRU_Establish_Political_Commissariat
 			available = {
-				has_completed_focus = RUS_
+				has_completed_focus = SRU_Establish_Political_Commissariat
 				country_exists = SRU
 			}
 			ai_will_do = {
@@ -246,13 +246,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_4231
-			icon = GFX
-			cost = 5
+			id = SRU_Appoint_The_Chief_Political_Commissar
+			icon = GFX_SRU_Appoint_The_Chief_Political_Commissar
+			cost = 2
 			x = -2
 			y = 1
-			prerequisite = { focus = RUS_ }
-			relative_position_id = RUS_
+			prerequisite = { focus = SRU_Establish_Political_Commissariat }
+			relative_position_id = SRU_Establish_Political_Commissariat
 			available = {
                            country_exists = SRU
 			}
@@ -263,14 +263,14 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_654
-			icon = GFX
-			cost = 5
+			id = SRU_The_Peoples_Bureaucracy
+			icon = GFX_SRU_The_Peoples_Bureaucracy
+			cost = 2
 			x = 2
 			y = 1
-			prerequisite = { focus = RUS_4231 
-			                 focus = RUS_qwe }
-			relative_position_id = RUS_4231
+			prerequisite = { focus = SRU_Appoint_The_Chief_Political_Commissar 
+			                 focus = SRU_State_Oversight_In_The_Civil_Service }
+			relative_position_id = SRU_Appoint_The_Chief_Political_Commissar
 			available = {
                            country_exists = SRU
 			}
@@ -281,13 +281,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_industrialization 
-			icon = GFX
-			cost = 5
+			id = SRU_Establish_The_CSS
+			icon = GFX_SRU_Establish_The_CSS
+			cost = 3
 			x = -3
 			y = 1
-			prerequisite = { focus = RUS_654 }
-			relative_position_id = RUS_654
+			prerequisite = { focus = SRU_The_Peoples_Bureaucracy }
+			relative_position_id = SRU_The_Peoples_Bureaucracy
 			available = {
                            country_exists = SRU
 			}
@@ -298,13 +298,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_Development
-			icon = GFX
-			cost = 5
+			id = SRU_Establish_The_Cheka
+			icon = GFX_SRU_Establish_The_Cheka
+			cost = 3
 			x = 3
 			y = 1
-			prerequisite = { focus = RUS_654 }
-			relative_position_id = RUS_654
+			prerequisite = { focus = SRU_The_Peoples_Bureaucracy }
+			relative_position_id = SRU_The_Peoples_Bureaucracy
 			available = {
                            country_exists = SRU
 			}
@@ -315,13 +315,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_Creation
-			icon = GFX
-			cost = 5
+			id = SRU_Secure_The_State
+			icon = GFX_SRU_Secure_The_State
+			cost = 2
 			x = 1
 			y = 1
-			prerequisite = { focus = RUS_Development }
-			relative_position_id = RUS_Development
+			prerequisite = { focus = SRU_Establish_The_Cheka }
+			relative_position_id = SRU_Establish_The_Cheka
 			available = {
                            country_exists = SRU
 			}
@@ -331,14 +331,14 @@
 			available_if_capitulated = no
 			completion_reward = {}
 	}
-					focus = {
-			id = RUS_Project
-			icon = GFX
-			cost = 5
+				focus = {
+			id = SRU_Expose_Enemy_Agents
+			icon = GFX_SRU_Expose_Enemy_Agents
+			cost = 2
 			x = 1
 			y = 1
-			prerequisite = { focus = RUS_industrialization }
-			relative_position_id = RUS_industrialization
+			prerequisite = { focus = SRU_Establish_The_CSS }
+			relative_position_id = SRU_Establish_The_CSS
 			available = {
                            country_exists = SRU
 			}
@@ -348,14 +348,14 @@
 			available_if_capitulated = no
 			completion_reward = {}
 	}
-						focus = {
-			id = SRU_Isolate_The_Liberalsion
-			icon = GFX
-			cost = 5
+				focus = {
+			id = SRU_Appoint_The_Director_Of_CSS
+			icon = GFX_SRU_Appoint_The_Director_Of_CSS
+			cost = 1
 			x = -1
 			y = 1
-			prerequisite = { focus = RUS_industrialization }
-			relative_position_id = RUS_industrialization
+			prerequisite = { focus = SRU_Establish_The_CSS }
+			relative_position_id = SRU_Establish_The_CSS
 			available = {
                            country_exists = SRU
 			}
@@ -385,13 +385,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_colleagues 
-			icon = GFX
-			cost = 3
+			id = SRU_Arrest_Collaborators
+			icon = GFX_SRU_Arrest_Collaborators
+			cost = 2
 			x = 1
 			y = 1
-			prerequisite = { focus = SRU_Isolate_The_Liberalsion }
-			relative_position_id = SRU_Isolate_The_Liberalsion
+			prerequisite = { focus = SRU_Appoint_The_Director_Of_CSS focus = SRU_Expose_Enemy_Agents }
+			relative_position_id = SRU_Appoint_The_Director_Of_CSS
 			available = {
                            country_exists = SRU
 			}
@@ -402,13 +402,13 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_airfields 
-			icon = GFX
-			cost = 5
+			id = SRU_Appoint_The_Director_Of_Cheka 
+			icon = GFX_SRU_Appoint_The_Director_Of_Cheka
+			cost = 1
 			x = -1
 			y = 1
-			prerequisite = { focus = RUS_Development }
-			relative_position_id = RUS_Development
+			prerequisite = { focus = SRU_Establish_The_Cheka }
+			relative_position_id = SRU_Establish_The_Cheka
 			available = {
                            country_exists = SRU
 			}
@@ -419,14 +419,14 @@
 			completion_reward = {}
 	}
 					focus = {
-			id = RUS_jet_engines 
-			icon = GFX
-			cost = 5
+			id = SRU_Purge_Dissidents
+			icon = GFX_SRU_Purge_Dissidents
+			cost = 2
 			x = 1
 			y = 1
-			prerequisite = { focus = RUS_airfields 
-			                 Focus = RUS_Creation }
-			relative_position_id = RUS_airfields
+			prerequisite = { focus = SRU_Appoint_The_Director_Of_Cheka 
+			                 Focus = SRU_Secure_The_State }
+			relative_position_id = SRU_Appoint_The_Director_Of_Cheka
 			available = {
                            country_exists = SRU
 			}
@@ -437,14 +437,14 @@
 			completion_reward = {}
 	}
 				focus = {
-			id = RUS_The
-			icon = GFX
-			cost = 5
+			id = SRU_Peoples_Congress
+			icon = GFX_SRU_Peoples_Congress
+			cost = 3
 			x = 3
 			y = 1
-			prerequisite = { focus = RUS_colleagues
-		focus = RUS_jet_engines }
-			relative_position_id = RUS_colleagues
+			prerequisite = { focus = SRU_Arrest_Collaborators
+		focus = SRU_Purge_Dissidents }
+			relative_position_id = SRU_Arrest_Collaborators
 			available = {
                            country_exists = SRU
 			}
@@ -3010,14 +3010,14 @@
 
 			}
 			focus = {
-				id = The_struggle
-				icon = GFX
+				id = SRU_The_Struggle
+				icon = GFX_SRU_The_Struggle
 				cost = 5
 				x = 6
 				y = 5
-				prerequisite = { focus = RUS_The 
+				prerequisite = { focus = SRU_Peoples_Congress 
 			                   focus = Through_Blood_and_Iron }
-				relative_position_id = RUS_The
+				relative_position_id = SRU_Peoples_Congress
 				available = {
 								country_exists = SRU 
 				}
