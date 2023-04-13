@@ -235,9 +235,17 @@ country_event = { #Crimson moon
 	option = {
 		name = SRU.10.a 
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
 	}
+	option = {
+		name = SRU.10.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = has_picked_luka
+	}
+
 }
 
 country_event = { #Chekhov's gun
