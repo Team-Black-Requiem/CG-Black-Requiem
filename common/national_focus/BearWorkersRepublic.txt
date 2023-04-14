@@ -431,7 +431,11 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = BWR.6
+			if = {
+					limit = {is_ai = yes}
+					country_event = BWR.11
+				}
+				else = {country_event = BWR.6}
 		}
 	}
 
