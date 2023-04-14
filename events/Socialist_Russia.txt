@@ -237,6 +237,7 @@ country_event = { #Crimson moon
 		ai_chance = {
 			factor = 50
 		}
+		set_country_flag = has_picket_Sonya
 	}
 	option = {
 		name = SRU.10.b
@@ -277,6 +278,31 @@ country_event = { #Take families hostage
 		}
 	}
 }
+
+country_event = { #Deal_with_the_unions
+	id = SRU.13
+	title = SRU.13.t
+	desc = SRU.13.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.13.a 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Purges
+	}
+
+	option = {
+		name = SRU.13.a 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Comprimise
+	}
+}
+
 
 
 ### GRAND EMBASSY EVENT CHAIN##
