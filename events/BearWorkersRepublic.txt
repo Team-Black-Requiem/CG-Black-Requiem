@@ -441,18 +441,8 @@ country_event = {
 			factor = 100
 		}
 		hidden_effect = {
-			add_equipment_to_stockpile = 
-			{ factospheres = 40000
-			  landspinner = 40000
-			  knightmare_frame_1 = 40000
-			  knightmare_frame_2 = 40000
-			  knightmare_frame_2 = 40000
-			  mechanized_equipment_1 = 40000
-			  motorized_equipment = 40000
-			  infantry_weapons1 = 40000
-			  support_equipment = 40000
-				}		
-						}
+	
+						
 		if = {
 			limit = {is_ai = yes}
 			load_oob = "Knightmare Bear Squadron AI"
@@ -501,6 +491,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+
+		
 		controls_province = 11931 
 		controls_province = 11506
 		controls_province = 10783
@@ -530,6 +522,7 @@ country_event = {
 			factor = 100
 		}
         hidden_effect = {
+			
 create_wargoal = { type = annex_everything target = IRN}
 create_wargoal = { type = annex_everything target = IRQ}
 create_wargoal = { type = annex_everything target = RUB}
@@ -540,7 +533,38 @@ create_wargoal = { type = annex_everything target = PAL}
 create_wargoal = { type = annex_everything target = NEJ}
 create_wargoal = { type = annex_everything target = HEZ}
 create_wargoal = { type = annex_everything target = UAE}
-		}
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_3
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+}
 	}     
 }
 
@@ -575,7 +599,45 @@ create_wargoal = { type = annex_everything target = POR}
 create_wargoal = { type = annex_everything target = ENG}
 create_wargoal = { type = annex_everything target = KAL}
 create_wargoal = { type = annex_everything target = FIN}
-		}
+	
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_3
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_4
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+
+}
 		
 	}     
 }
@@ -611,7 +673,45 @@ create_wargoal = { type = annex_everything target = CAM}
 create_wargoal = { type = annex_everything target = LAO}
 create_wargoal = { type = annex_everything target = VIN}
 create_wargoal = { type = annex_everything target = INS}
-		}
+		
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_4
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_5
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+
+}
 		
 	}     
 }
@@ -648,6 +748,34 @@ create_wargoal = { type = annex_everything target = AR5}
 create_wargoal = { type = annex_everything target = A10}
 create_wargoal = { type = annex_everything target = A11}
 create_wargoal = { type = annex_everything target = JAP}
-	}     
+	
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_5
+	amount = 50000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+
+}     
 }
 }
