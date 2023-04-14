@@ -441,11 +441,23 @@ country_event = {
 			factor = 100
 		}
 		hidden_effect = {
+			add_equipment_to_stockpile = 
+			{ factospheres = 40000
+			  landspinner = 40000
+			  knightmare_frame_1 = 40000
+			  knightmare_frame_2 = 40000
+			  knightmare_frame_2 = 40000
+			  mechanized_equipment_1 = 40000
+			  motorized_equipment = 40000
+			  infantry_weapons1 = 40000
+			  support_equipment = 40000
+				}		
+						}
 		if = {
 			limit = {is_ai = yes}
-			load_oob = "BWR_knightmares_AI"
-			load_oob = "BWR_knightmares_AI"
-			load_oob = "BWR_knightmares_AI"
+			load_oob = "Knightmare Bear Squadron AI"
+			load_oob = "Knightmare Bear Squadron AI"
+			load_oob = "Knightmare Bear Squadron AI"
 		}
 		else = {
 			load_oob = "BWR_knightmares"
