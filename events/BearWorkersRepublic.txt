@@ -446,8 +446,7 @@ country_event = {
 		if = {
 			limit = {is_ai = yes}
 			load_oob = "Knightmare Bear Squadron AI"
-			load_oob = "Knightmare Bear Squadron AI"
-			load_oob = "Knightmare Bear Squadron AI"
+			
 		}
 		else = {
 			load_oob = "BWR_knightmares"
@@ -547,8 +546,8 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-type = mechanized_equipment_1
-	amount = 40000
+type = mechanized_equipment 
+	amount = 60000
 }
 
 add_equipment_to_stockpile = {
@@ -565,8 +564,7 @@ add_equipment_to_stockpile = {
 	amount = 40000
 }
 load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
+
 }
 	}     
 }
@@ -577,13 +575,13 @@ country_event = {
 	title = BWR.12.t
 	desc = BWR.12.d
 	#picture =
-	mean_time_to_happen = {
-        days = 100 }
+	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	trigger = {
-		controls_province = 10840
+		controls_state = 678
+		is_ai = yes
 	}
 	
 	option = {
@@ -592,6 +590,7 @@ country_event = {
 			factor = 100
 		}
 		    hidden_effect = {
+	
 create_wargoal = { type = annex_everything target = FRA}
 create_wargoal = { type = annex_everything target = UKR}
 create_wargoal = { type = annex_everything target = RUB}
@@ -640,12 +639,11 @@ add_equipment_to_stockpile = {
 	amount = 40000
 }
 load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
 }
+				}
 		
-	}     
-}
+			}
+
 
 country_event = {
 	
@@ -654,7 +652,7 @@ country_event = {
 	desc = BWR.13.d
 	#picture =
 	mean_time_to_happen = {
-        days = 100 }
+        days = 10 }
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -716,8 +714,6 @@ add_equipment_to_stockpile = {
 	amount = 40000
 }
 load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
 
 }
 		
@@ -731,7 +727,7 @@ country_event = {
 	desc = BWR.14.d
 	#picture =
 	mean_time_to_happen = {
-        days = 100 }
+        days = 10 }
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -784,8 +780,7 @@ add_equipment_to_stockpile = {
 	amount = 40000
 }
 load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
-load_oob = "Knightmare Bear Squadron AI"
+
 }     
 }
 }
