@@ -546,7 +546,7 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-type = mechanized_equipment 
+type = mechanized_equipment_1
 	amount = 60000
 }
 
@@ -575,15 +575,16 @@ country_event = {
 	title = BWR.12.t
 	desc = BWR.12.d
 	#picture =
-	
-	fire_only_once = yes
-	is_triggered_only = yes
 
+	fire_only_once = yes
 	trigger = {
-		controls_state = 678
+		tag = BWR
+	  BWR =	{owns_state = 678
 		is_ai = yes
 	}
+	}
 	
+
 	option = {
 		name = BWR.12.a
 		ai_chance = {
@@ -654,12 +655,13 @@ country_event = {
 	mean_time_to_happen = {
         days = 10 }
 	fire_only_once = yes
-	is_triggered_only = yes
+
 
 	trigger = {
-		controls_province = 11805
+		BWR = {owns_state = 417
+		  is_ai = yes
+	  }
 	}
-	
 	option = {
 		name = BWR.13.a
 		ai_chance = {
@@ -729,12 +731,12 @@ country_event = {
 	mean_time_to_happen = {
         days = 10 }
 	fire_only_once = yes
-	is_triggered_only = yes
-
-	trigger = {
-		controls_province = 7408
-	}
 	
+	trigger = {
+		BWR =	{controls_province = 7488
+		  is_ai = yes
+	  }
+	}
 	option = {
 		name = BWR.14.a
 		ai_chance = {

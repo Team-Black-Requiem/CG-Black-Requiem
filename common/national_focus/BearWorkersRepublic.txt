@@ -204,6 +204,11 @@ focus = {
 				type = mechanized_equipment_1
 				amount = 4000
 			}
+
+			add_equipment_to_stockpile = {
+				type = mbt_2
+				amount = 4000
+			}
 			recruit_character = BWR_oso
 			recruit_character = BWR_bearshev
 			recruit_character = BWR_bearkov
@@ -307,7 +312,8 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = 1_BWR.tt
 			add_ideas = BWR_Bear_Knightmares
-            
+			load_oob = "BWR_Knightmare_AI"		
+			
 			hidden_effect = {
 			
 				add_equipment_to_stockpile = {
@@ -323,11 +329,10 @@ focus = {
 					type = knightmare_mass_prod_1
 					amount = 15000
 				}
-				if = {
-					limit = {is_ai = yes}
-					load_oob = "BWR_knightmares_AI"
-				}
-				else = {load_oob = "BWR_knightmares"}
+				
+			 
+		    	
+			 
 			}
 		}
 	}
