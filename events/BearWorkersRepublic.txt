@@ -575,14 +575,14 @@ country_event = {
 	title = BWR.12.t
 	desc = BWR.12.d
 	#picture =
-
 	fire_only_once = yes
+
 	trigger = {
-		tag = BWR
-	  BWR =	{owns_state = 678
-		is_ai = yes
-	}
-	}
+        tag = BWR
+        BWR =    {owns_state = 678}
+        is_ai = yes
+		
+    }
 	
 
 	option = {
@@ -591,18 +591,7 @@ country_event = {
 			factor = 100
 		}
 		    hidden_effect = {
-	
-create_wargoal = { type = annex_everything target = FRA}
-create_wargoal = { type = annex_everything target = UKR}
-create_wargoal = { type = annex_everything target = RUB}
-create_wargoal = { type = annex_everything target = DAN}
-create_wargoal = { type = annex_everything target = ITA}
-create_wargoal = { type = annex_everything target = SPR}
-create_wargoal = { type = annex_everything target = POR}
-create_wargoal = { type = annex_everything target = ENG}
-create_wargoal = { type = annex_everything target = KAL}
-create_wargoal = { type = annex_everything target = FIN}
-	
+		
 add_equipment_to_stockpile = {
 	type = factspheres_1
 	amount = 40000
@@ -640,11 +629,37 @@ add_equipment_to_stockpile = {
 	amount = 40000
 }
 load_oob = "Knightmare Bear Squadron AI"
-}
+
 				}
 		
 			}
-
+		}
+			country_event = {
+	
+				id = BWR.16
+				title = BWR.16.t
+				desc = BWR.16.d
+				#picture =
+				fire_only_once = yes
+			
+				trigger = {
+					date = 2011.1.1
+				    is_ai = yes
+					tag = BWR
+				}
+			
+				option = {
+					name = BWR.16.a
+					ai_chance = {
+						factor = 100
+					}
+						hidden_effect = {
+							declare_war_on = {
+								target = FRA
+							 } 
+						}
+					}
+				}							
 
 country_event = {
 	
@@ -652,32 +667,20 @@ country_event = {
 	title = BWR.13.t
 	desc = BWR.13.d
 	#picture =
-	mean_time_to_happen = {
-        days = 10 }
 	fire_only_once = yes
 
 
 	trigger = {
-		BWR = {owns_state = 417
-		  is_ai = yes
-	  }
+		BWR = {owns_state = 16}
+	    is_ai = yes
+	  
 	}
 	option = {
 		name = BWR.13.a
 		ai_chance = {
 			factor = 100
 		}
-		    hidden_effect = {
-create_wargoal = { type = annex_everything target = CHI}
-create_wargoal = { type = annex_everything target = AFG}
-create_wargoal = { type = annex_everything target = KAZ}
-create_wargoal = { type = annex_everything target = IND}
-create_wargoal = { type = annex_everything target = THA}
-create_wargoal = { type = annex_everything target = BRM}
-create_wargoal = { type = annex_everything target = CAM}
-create_wargoal = { type = annex_everything target = LAO}
-create_wargoal = { type = annex_everything target = VIN}
-create_wargoal = { type = annex_everything target = INS}
+		    hidden_effect = {		
 		
 add_equipment_to_stockpile = {
 	type = factspheres_1
@@ -724,18 +727,42 @@ load_oob = "Knightmare Bear Squadron AI"
 
 country_event = {
 	
+	id = BWR.17
+	title = BWR.17.t
+	desc = BWR.17.d
+	#picture =
+	fire_only_once = yes
+
+
+	trigger = {
+		date = 2014.1.1
+	}
+	option = {
+		name = BWR.17.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+
+declare_war_on = {
+	target = CHI
+}				
+}
+}
+}
+
+country_event = {
+	
 	id = BWR.14
 	title = BWR.14.t
 	desc = BWR.14.d
 	#picture =
-	mean_time_to_happen = {
-        days = 10 }
 	fire_only_once = yes
 	
 	trigger = {
-		BWR =	{controls_province = 7488
+		BWR =	{controls_province = 7488}
 		  is_ai = yes
-	  }
+	  
 	}
 	option = {
 		name = BWR.14.a
@@ -743,18 +770,11 @@ country_event = {
 			factor = 100
 		}
 		    hidden_effect = {
-create_wargoal = { type = annex_everything target = BRT}
-create_wargoal = { type = annex_everything target = NAN}
-create_wargoal = { type = annex_everything target = AR2}
-create_wargoal = { type = annex_everything target = AR3}
-create_wargoal = { type = annex_everything target = AR4}
-create_wargoal = { type = annex_everything target = AR7}
-create_wargoal = { type = annex_everything target = AR6}
-create_wargoal = { type = annex_everything target = AR5}
-create_wargoal = { type = annex_everything target = A10}
-create_wargoal = { type = annex_everything target = A11}
-create_wargoal = { type = annex_everything target = JAP}
-	
+				
+		declare_war_on = {
+			target = BRT
+		} 
+
 add_equipment_to_stockpile = {
 	type = factspheres_1
 	amount = 40000
@@ -784,5 +804,31 @@ add_equipment_to_stockpile = {
 load_oob = "Knightmare Bear Squadron AI"
 
 }     
+}
+}
+
+country_event = {
+	
+	id = BWR.14
+	title = BWR.14.t
+	desc = BWR.14.d
+	#picture =
+	fire_only_once = yes
+	
+	trigger = {
+		date = 2016.1.1
+	}
+	option = {
+		name = BWR.14.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+				
+		declare_war_on = {
+			target = BRT
+		} 
+
+	}
 }
 }
