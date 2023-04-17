@@ -1257,7 +1257,7 @@ BWR_force_the_humans_to_fight = {
 
 
 BWR_ai_war= {
-	visible_when_empty = yes
+	
 
 	BWR_eu_prep = {
 
@@ -1265,14 +1265,14 @@ BWR_ai_war= {
         fire_only_once = yes
 		allowed = {
 			tag = BWR
-			
+		
 		}
 		available = {
 			owns_state = 417
-			is_ai = yes	
+		
 		}
 		visible = {
-			always = yes
+			
 		}
 		cost = 0
 		
@@ -1324,24 +1324,253 @@ BWR_ai_war= {
 				amount = 40000
 			}
 			
-			load_oob = "BWR_Knightmare_AI"	
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
 		}
 	}
 
-	BWR_eu_war = {
+
+	
+
+        BWR_eu_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			owns_state = 678
+			date = 2010.1.1
+
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		priority = {
+			base = 3
+			modifier = {
+				add = 50
+			}
+		}
+		complete_effect = { 
+					declare_war_on = {
+						target = FRA
+					}
+		}
+	}
+
+	
+
+	BWR_chi_prep = {
 
 		icon = ''
         fire_only_once = yes
 		allowed = {
 			tag = BWR
-			is_ai = yes
+		
 		}
 		available = {
-			owns_state = 678
-			date = 2011.1.1
+			owns_state = 16
+		
 		}
 		visible = {
-			always = yes
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		priority = {
+			base = 3
+			modifier = {
+				add = 50
+			}
+		}
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+				type = factspheres_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = landspinner_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_3
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_4
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment_1
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 40000
+			}
+			
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
+		}
+	}
+
+        BWR_chi_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			owns_state = 16
+			date = 2013.1.1
+			
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		priority = {
+			base = 3
+			modifier = {
+				add = 50
+			}
+		}
+		complete_effect = { 
+					declare_war_on = {
+						target = CHI
+					}
+		}
+	}
+	
+
+
+
+	
+
+	BWR_brt_prep = {
+
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			controls_province = 7488
+		
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		priority = {
+			base = 3
+			modifier = {
+				add = 50
+			}
+		}
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+				type = factspheres_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = landspinner_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_3
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_4
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment_1
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 40000
+			}
+			
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
+		}
+	}
+
+
+
+
+		
+        BWR_brt_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			controls_province = 7488
+			date = 2015.1.1
+			
+		}
+		visible = {
+			
 		}
 		cost = 0
 		
