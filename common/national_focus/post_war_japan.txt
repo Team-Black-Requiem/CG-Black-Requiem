@@ -447,7 +447,9 @@ id = japan_focus_2
 		prerequisite = {
 			focus = tokyo_strike
 		}
-
+        allow_branch = {
+			has_country_flag = Jap.1
+		}
 		cost = 2
 		x = -2
 		y = 2
@@ -481,7 +483,7 @@ id = japan_focus_2
 		}
 
 		cost = 2
-		x = 2
+		x = 0
 		y = 2
 		available = {
 			country_exists = JAP
@@ -593,6 +595,38 @@ id = japan_focus_2
 		completion_reward = {
 		}
 
+	}
+
+	focus = {
+		id = New_day_for_Japan
+		icon = GFX_kirihara_steps_in
+		relative_position_id = chaos_expand
+		prerequisite = {
+			focus = kirihara_steps_in focus = it_falls_down focus = military_rule
+		}
+
+		cost = 2
+		x = 0
+		y = 4
+		available = {
+			country_exists = JAP
+		}
+		bypass = { }
+	
+
+		mutually_exclusive = {
+		}
+
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_focus_tree = generic_focus
+		}
 
 	}
+
+	
 }	

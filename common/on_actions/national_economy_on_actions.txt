@@ -2,6 +2,14 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+
+			every_country = {
+                limit = {
+                    is_ai = no
+                }
+                country_event = WRD.1
+            }
+
             #### sets initial country GDP
 			set_variable = {GDP = 0}
 			set_variable = {GDP_Army = 0.20}

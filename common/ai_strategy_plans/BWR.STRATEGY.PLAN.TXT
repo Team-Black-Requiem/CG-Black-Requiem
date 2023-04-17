@@ -1,0 +1,320 @@
+ai_strategy_plan = {
+	name = invasion_plan
+	enable = { tag = BWR}
+    allowed = {tag = BWR}
+	ai_strategy = {
+	 
+        type = declare_war
+        id = IRN
+        value = 50000
+		
+   }
+
+	 ai_strategy = {
+		
+        type = ignore_claim 
+        id = KAZ
+        value = 50000
+   }
+  
+   ai_strategy = {
+		
+	type = declare_war
+	id = KAZ
+	value = -50000
+}
+
+		
+			
+	 ai_strategy = {
+		
+        type = avoid_starting_wars 
+        value = 1
+	     }
+
+	
+   ai_strategy = {
+		
+	type = ignore_claim 
+	id = THA
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = THA
+	value = -50000
+}
+
+   ai_strategy = {
+	
+	type = ignore_claim
+	id = BUK
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = BUK
+	value = -50000
+}
+
+ai_strategy = {
+
+	type = ignore_claim
+	id = TMS
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = TMS
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = AFG
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = AFG
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = BAL
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = BAL
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = IND
+	value = 50000
+}
+ai_strategy = {
+	
+	type = ignore_claim
+	id = NEP
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = NEP
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = BHU
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = BHU
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = VIN
+	value = 50000
+}
+
+ai_strategy = {
+		
+	type = declare_war
+	id = VIN
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = LAO
+	value = 50000
+}
+Ai_strategy = {
+		
+	type = declare_war
+	id = LAO
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = CAM
+	value = 50000
+}
+
+Ai_strategy = {
+		
+	type = declare_war
+	id = CAM
+	value = -50000
+}
+ai_strategy = {
+	
+	type = ignore_claim
+	id = INS
+	value = 50000
+}
+
+ai_strategy = {
+	
+	type = declare_war
+	id = INS
+	value = -50000
+}
+
+
+ai_strategy = {
+	
+	type = ignore_claim
+	id = PHI
+	value = 50000
+}
+ai_strategy = {
+	
+	type = declare_war
+	id = PHI
+	value = -50000
+}
+
+ai_strategy = {
+	
+	type = conquer
+	id = FRA
+	value = 100
+}
+
+ai_strategy = {
+
+	type = ignore_claim
+	id = KOR
+	value = 50000
+}
+ai_strategy = {
+	
+	type = declare_war
+	id = KOR
+	value = -50000
+}
+ai_strategy = {
+
+	type = ignore_claim
+	id = BRT
+	value = 50000
+}
+ai_strategy = {
+	
+	type = declare_war
+	id = BRT
+	value = -50000
+}
+ai_strategy = {
+
+	type = ignore_claim
+	id = CHI
+	value = 50000
+}
+
+ai_strategy = {
+
+	type = declare_war
+	id = CHI
+	value = -50000
+}
+
+ai_strategy = {
+	type = ignore_claim
+	id = RUS
+	value = 500000
+}
+
+ai_strategy = {
+	type = declare_war
+	id = RUS
+	value = -50000
+}
+
+ai_strategy = {
+	type = declare_war
+	id = NAN
+	value = -50000
+}
+
+ai_strategy = {
+	type = ignore_claim
+	id = NAN
+	value = 50000	
+}
+
+
+
+
+
+}
+
+focus = {
+	name = research_priorities
+    enable = {tag = BWR}
+	research = {
+		
+		ship_modules_tech = -2
+		naval_equipment = -10
+		dd_tech = -2
+		cl_tech = -2
+		ca_tech = -2
+		cv_tech = -2
+		bc_tech = -2
+		bb_tech = -2
+		shbb_tech = -2
+		ss_tech = -2
+		tp_tech = -2
+		fg_tech = -2
+		asw_tech = -2
+		naval_mines = -2
+		naval_minesweeping = -2
+		naval_minelaying = -2
+		infantry_tech = 5
+		MBT_armour = 5
+		nuclear = -5
+		naval_equipment = -2
+		air_equipment = -2
+		knightmare_mass_production = 10
+	    cat_mechanized_equipment = 10
+	}
+	weight = {
+		modifier = {
+			factor = 2
+			date > 2010.1.1
+		}
+	}
+	
+	
+	}

@@ -1,0 +1,1595 @@
+BWR_the_bears_of_revolution = {
+
+	BWR_integrate_commune_1 = {
+
+		name = BWR_integrate_commune
+
+		icon = ''
+
+		allowed = {
+			original_tag = BWR
+		}
+
+		available = {
+			FROM = {
+				compliance > 50
+				OR = {
+					is_island_state = yes
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		#targets = {  }
+
+		target_array = controlled_states
+
+		target_trigger = {
+			has_completed_focus = beartial_law
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				OR = {
+					is_island_state = yes
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+				}
+				OR = {
+					NOT = {
+						is_owned_by = ROOT
+					}
+					NOT = {
+						state = 637
+						state = 822
+						state = 562
+						state = 644
+						state = 574
+						state = 563
+						state = 565
+						state = 564
+						state = 566
+						state = 567
+						state = 568
+						state = 576
+						state = 516
+						state = 575
+						state = 40
+						state = 570
+						state = 578
+						state = 654
+						state = 569
+						state = 824
+						state = 577
+						state = 571
+						state = 579
+						state = 580
+						state = 653
+						state = 572
+						state = 652
+						state = 651
+						state = 581
+						state = 398
+						state = 399
+						state = 573
+						state = 905
+						state = 582
+						state = 403
+						state = 214
+						state = 923
+						state = 262
+						state = 825
+						state = 397
+						state = 924
+						state = 400
+						state = 833
+						state = 249
+						state = 251
+						state = 207
+					}
+				}
+				compliance > 35
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			political_power_gain = -1
+		}
+
+		visible = {
+			tag = BWR
+			has_completed_focus = beartial_law
+			always = yes
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+			transfer_state = FROM
+		}
+	}
+
+	BWR_integrate_commune_2 = {
+
+		name = BWR_integrate_commune
+
+		icon = ''
+
+		allowed = {
+			original_tag = BWR
+		}
+
+		available = {
+			FROM = {
+				compliance > 50
+				NOT = {
+					is_island_state = yes
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		#targets = {  }
+
+		target_array = controlled_states
+
+		target_trigger = {
+			has_completed_focus = beartial_law
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_island_state = yes
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+				}
+				OR = {
+					NOT = {
+						is_owned_by = ROOT
+					}
+					NOT = {
+						state = 637
+						state = 822
+						state = 562
+						state = 644
+						state = 574
+						state = 563
+						state = 565
+						state = 564
+						state = 566
+						state = 567
+						state = 568
+						state = 576
+						state = 516
+						state = 575
+						state = 40
+						state = 570
+						state = 578
+						state = 654
+						state = 569
+						state = 824
+						state = 577
+						state = 571
+						state = 579
+						state = 580
+						state = 653
+						state = 572
+						state = 652
+						state = 651
+						state = 581
+						state = 398
+						state = 399
+						state = 573
+						state = 905
+						state = 582
+						state = 403
+						state = 214
+						state = 923
+						state = 262
+						state = 825
+						state = 397
+						state = 924
+						state = 400
+						state = 833
+						state = 249
+						state = 251
+						state = 207
+					}
+				}
+				compliance > 35
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		modifier = {
+			political_power_gain = -1
+		}
+
+		visible = {
+			tag = BWR
+			has_completed_focus = beartial_law
+			always = yes
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+			transfer_state = FROM
+		}
+	}
+
+	BWR_ignite_uprising = {
+
+		icon = ''
+
+		allowed = {
+			original_tag = BWR
+		}
+
+		available = {
+			FROM = {
+				has_civil_war = no
+				any_controlled_state = {
+					is_in_home_area = yes
+					is_capital = no
+				}
+			}
+			has_equipment = {
+			    infantry_equipment > 19999
+			}
+			any_controlled_state = {
+				NOT = { has_state_flag = anarchist_uprising }
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				exists = yes
+				has_war_with = ROOT
+				any_controlled_state = {
+					is_in_home_area = yes
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		modifier = {
+			
+		}
+
+		visible = {
+			tag = BWR
+			has_completed_focus = bear_revolution
+			FROM = {
+				exists = yes
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -20000
+			}
+			hidden_effect = {
+				FROM = {
+					set_country_flag = BWR_ignite_uprising_timer_flag
+					activate_mission = BWR_ignite_uprising_timer_mission
+				}
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					FROM = {
+						any_controlled_state = {
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = anarchist_uprising }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = anarchist_uprising }
+							distance_to = {
+								target = PREV
+								value < 750
+							}
+						}
+					}
+					set_state_flag = anarchist_uprising
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						any_controlled_state = {
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = anarchist_uprising }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = anarchist_uprising }
+							distance_to = {
+								target = PREV
+								value < 1500
+							}
+						}
+					}
+					set_state_flag = anarchist_uprising
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						is_controlled_by = FROM
+						is_in_home_area = yes
+						is_capital = no
+						NOT = { has_state_flag = anarchist_uprising }
+						any_state = {
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = anarchist_uprising }
+						}
+					}
+					set_state_flag = anarchist_uprising
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 4 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 1500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 7 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 1500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 11 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 1500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { num_of_controlled_states > 19 }
+				}
+				if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 750
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 750
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							any_controlled_state = {
+								is_in_home_area = yes
+								is_capital = no
+								NOT = { has_state_flag = anarchist_uprising }
+								any_state = {
+									is_controlled_by = ROOT
+									NOT = { has_state_flag = anarchist_uprising }
+									distance_to = {
+										target = PREV
+										value < 1500
+									}
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+								distance_to = {
+									target = PREV
+									value < 1500
+								}
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				else = {
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = FROM
+							is_in_home_area = yes
+							is_capital = no
+							NOT = { has_state_flag = anarchist_uprising }
+							any_state = {
+								is_controlled_by = ROOT
+								NOT = { has_state_flag = anarchist_uprising }
+							}
+						}
+						set_state_flag = anarchist_uprising
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Anarchist Militia\" start_experience_factor = 0.1" 
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	BWR_ignite_uprising_timer_mission = {
+
+		icon = ''
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 90
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = BWR_ignite_uprising_timer_flag
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		timeout_effect = {
+			clr_country_flag = BWR_ignite_uprising_timer_flag
+			custom_effect_tooltip = BWR_ignite_uprising_timer_mission_tt
+		}
+	}
+
+}
+
+BWR_force_the_humans_to_fight = {
+	BWR_recruit_divisions = {
+
+		icon = ''
+
+		allowed = {
+			tag = BWR
+		}
+		available = {
+			has_completed_focus = force_the_humans_to_fight
+			has_equipment = {
+				infantry_equipment_0 > 19999
+			}
+			has_manpower > 19999
+		}
+		visible = {
+			
+		}
+		cost = 0
+		days_re_enable = 30
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = { 
+				load_oob = "BWR_humans"
+				add_manpower = -20000
+				
+		}
+	}
+}	
+
+
+BWR_ai_war= {	
+
+	BWR_eu_prep = {
+
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			owns_state = 417
+		
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+				type = factspheres_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = landspinner_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_3
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_4
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment_1
+				amount = 8000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 60000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 10000
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 15
+			}
+
+			add_offsite_building = {
+				type = synthetic_refinery
+				level = 5
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
+		}
+	}
+
+        BWR_eu_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			owns_state = 678
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 120
+
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = GER}
+		}
+
+		remove_effect = { 
+
+			create_wargoal = { type = annex_everything target = FRA}
+			
+			create_wargoal = { type = annex_everything target = FRA}
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+
+	BWR_chi_prep = {
+
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			owns_state = 16
+		
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = { 
+		
+			add_equipment_to_stockpile = {
+				type = factspheres_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = landspinner_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_3
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_4
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment_1
+				amount = 8000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 40000
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 20
+			}
+
+			add_offsite_building = {
+				type = synthetic_refinery
+				level = 5
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
+			set_technology = {
+				oil_processing = 1
+				synth_oil_experiments = 1
+				modern_oil_processing = 1
+				advanced_oil_processing = 1
+				improved_oil_processing = 1
+			}
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
+		}
+	}
+
+        BWR_chi_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			owns_state = 16
+			
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 120
+		remove_effect = { 
+			create_wargoal = { type = annex_everything target = CHI}
+	
+		}
+	}
+
+	BWR_brt_prep = {
+
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			controls_province = 7488
+		
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+				type = factspheres_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = landspinner_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_3
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = knightmare_mass_prod_4
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+			type = mechanized_equipment_1
+				amount = 8000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 40000
+			}
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 40000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 40000
+			}
+			
+			add_offsite_building = {
+				type = arms_factory
+				level = 30
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
+			load_oob = "BWR_ai_Humans"	
+			load_oob = "BWR_ai_armor"
+			load_oob = "BWR_knightmares"
+		}
+	}
+
+        BWR_brt_war = {
+		icon = ''
+        fire_only_once = yes
+		allowed = {
+			tag = BWR
+		
+		}
+		available = {
+			tag = BWR
+			controls_province = 7488
+		
+			
+		}
+		visible = {
+			
+		}
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 120
+		remove_effect = { 
+			create_wargoal = { type = annex_everything target = BRT}
+			create_wargoal = { type = annex_everything target = A11}
+			create_wargoal = { type = annex_everything target = JAP}
+	
+	
+		}
+	}
+}	
