@@ -1358,10 +1358,12 @@ BWR_ai_war= {
 		days_remove = 120
 
 		complete_effect = {
-			create_wargoal = { type = annex_everything target = FRA}
+			create_wargoal = { type = annex_everything target = GER}
 		}
 
 		remove_effect = { 
+
+			create_wargoal = { type = annex_everything target = FRA}
 			
 			create_wargoal = { type = annex_everything target = FRA}
 			declare_war_on = {
