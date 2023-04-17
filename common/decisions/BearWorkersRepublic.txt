@@ -1315,7 +1315,21 @@ BWR_ai_war= {
 				type = support_equipment_1
 				amount = 40000
 			}
-			
+			add_offsite_building = {
+				type = arms_factory
+				level = 15
+			}
+
+			add_offsite_building = {
+				type = synthetic_refinery
+				level = 5
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
 			load_oob = "BWR_ai_Humans"	
 			load_oob = "BWR_ai_armor"
 			load_oob = "BWR_knightmares"
@@ -1332,8 +1346,6 @@ BWR_ai_war= {
 		available = {
 			tag = BWR
 			owns_state = 678
-			date = 2010.1.1
-
 		}
 		visible = {
 			
@@ -1343,10 +1355,14 @@ BWR_ai_war= {
 		ai_will_do = {
 			factor = 10
 		}
-		complete_effect = { 
-					declare_war_on = {
-						target = FRA
-					}
+		days_remove = 120
+		remove_effect = { 
+			
+			create_wargoal = { type = annex_everything target = FRA}
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
 		}
 	}
 
@@ -1371,6 +1387,7 @@ BWR_ai_war= {
 			factor = 10
 		}
 		complete_effect = { 
+		
 			add_equipment_to_stockpile = {
 				type = factspheres_1
 				amount = 40000
@@ -1407,7 +1424,28 @@ BWR_ai_war= {
 				type = support_equipment_1
 				amount = 40000
 			}
-			
+			add_offsite_building = {
+				type = arms_factory
+				level = 20
+			}
+
+			add_offsite_building = {
+				type = synthetic_refinery
+				level = 5
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
+			set_technology = {
+				oil_processing = 1
+				synth_oil_experiments = 1
+				modern_oil_processing = 1
+				advanced_oil_processing = 1
+				improved_oil_processing = 1
+			}
 			load_oob = "BWR_ai_Humans"	
 			load_oob = "BWR_ai_armor"
 			load_oob = "BWR_knightmares"
@@ -1424,7 +1462,6 @@ BWR_ai_war= {
 		available = {
 			tag = BWR
 			owns_state = 16
-			date = 2013.1.1
 			
 		}
 		visible = {
@@ -1435,10 +1472,11 @@ BWR_ai_war= {
 		ai_will_do = {
 			factor = 10
 		}
-		complete_effect = { 
-					declare_war_on = {
-						target = CHI
-					}
+
+		days_remove = 120
+		remove_effect = { 
+			create_wargoal = { type = annex_everything target = CHI}
+	
 		}
 	}
 
@@ -1500,6 +1538,16 @@ BWR_ai_war= {
 				amount = 40000
 			}
 			
+			add_offsite_building = {
+				type = arms_factory
+				level = 30
+			}
+
+			add_offsite_building = {
+				type = fuel_silo
+				level = 10
+			}
+
 			load_oob = "BWR_ai_Humans"	
 			load_oob = "BWR_ai_armor"
 			load_oob = "BWR_knightmares"
@@ -1516,7 +1564,7 @@ BWR_ai_war= {
 		available = {
 			tag = BWR
 			controls_province = 7488
-			date = 2015.1.1
+		
 			
 		}
 		visible = {
@@ -1527,10 +1575,14 @@ BWR_ai_war= {
 		ai_will_do = {
 			factor = 10
 		}
-		complete_effect = { 
-					declare_war_on = {
-						target = BRT
-					}
+
+		days_remove = 120
+		remove_effect = { 
+			create_wargoal = { type = annex_everything target = BRT}
+			create_wargoal = { type = annex_everything target = A11}
+			create_wargoal = { type = annex_everything target = JAP}
+	
+	
 		}
 	}
 }	
