@@ -1,0 +1,2830 @@
+Characters = {
+
+    ###Military
+    AR3_field_marshall = {
+	name = "Antonio Perez"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR3_katase_idea
+			ledger = army
+			allowed = { original_tag = AR3
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR3_general_1 = {
+	name = "Juan Fernandez"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR3_katase_idea
+			ledger = army
+			allowed = { original_tag = AR3
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR3_general_3 = {
+	name = "Felix Alvarado"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR3_general_2 = {
+	name = "Bartholomeo Sotomayor"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR3
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR3_police_chief={
+		name="Pedro Salazar"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR3_sawasaki_idea
+			allowed  = {
+				original_tag  = AR3
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR3_prime_minister ={
+		name = "Gustavo Fring"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR3_schneizel_idea
+			allowed  = {
+				original_tag  = AR3
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR3_economy_minister = {
+		name = "Wanda Rodriguez"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR3_economy
+			allowed  = {
+				original_tag  = AR3
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR3_intelligence ={
+		name="Diego Hernandez"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR3_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR3
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR3_foreign_affairs={
+		name="Juan Carlos"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR3_Bulganin_idea
+			allowed = {
+					original_tag = AR3
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR3_admiral = {
+		name = "Rolando Guerra"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+    AR2_field_marshall = {
+	name = "Gerald Montgomerry"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR2_katase_idea
+			ledger = army
+			allowed = { original_tag = AR2
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR2_general_1 = {
+	name = "Clark Smith"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR2_katase_idea
+			ledger = army
+			allowed = { original_tag = AR2
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR2_general_3 = {
+	name = "Jean Sanders"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR2_general_2 = {
+	name = "Peter Petain"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR2
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR2_police_chief={
+		name="John De Gaulle"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR2_sawasaki_idea
+			allowed  = {
+				original_tag  = AR2
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR2_prime_minister ={
+		name = "Dario Brando"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR2_schneizel_idea
+			allowed  = {
+				original_tag  = AR2
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR2_economy_minister = {
+		name = "Matilda Schmit"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR2_economy
+			allowed  = {
+				original_tag  = AR2
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR2_intelligence ={
+		name="Joseph Goodman"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR2_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR2
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR2_foreign_affairs={
+		name="Marvin Joffre"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR2_Bulganin_idea
+			allowed = {
+					original_tag = AR2
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR2_admiral = {
+		name = "Jimmy De Santa"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+AR4_field_marshall = {
+	name = "Mario Padilla"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR4_katase_idea
+			ledger = army
+			allowed = { original_tag = AR4
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR4_general_1 = {
+	name = "Jack De Paris"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR4_katase_idea
+			ledger = army
+			allowed = { original_tag = AR4
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR4_general_3 = {
+	name = "Waldo Van Strika"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR4_general_2 = {
+	name = "William Smith"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR4
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR4_police_chief={
+		name="Leon Soto"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR4_sawasaki_idea
+			allowed  = {
+				original_tag  = AR4
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR4_prime_minister ={
+		name = "Paul Waterson"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR4_schneizel_idea
+			allowed  = {
+				original_tag  = AR4
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR4_economy_minister = {
+		name = "Luisa Tortuga"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR4_economy
+			allowed  = {
+				original_tag  = AR4
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR4_intelligence ={
+		name="Juan Schmo"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR4_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR4
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR4_foreign_affairs={
+		name="Horatio Colon"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR4_Bulganin_idea
+			allowed = {
+					original_tag = AR4
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR4_admiral = {
+		name = "Roland Emerich"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+    AR5_field_marshall = {
+	name = "Anthony Indiano"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR5_katase_idea
+			ledger = army
+			allowed = { original_tag = AR5
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR5_general_1 = {
+	name = "Juan Manuel López"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR5_katase_idea
+			ledger = army
+			allowed = { original_tag = AR5
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR5_general_3 = {
+	name = "Dylan Cortés"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR5_general_2 = {
+	name = "Arturo Moya"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR5
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR5_police_chief={
+		name="Alberto Santángel"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR5_sawasaki_idea
+			allowed  = {
+				original_tag  = AR5
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR5_prime_minister ={
+		name = "Julian Carballal"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR5_schneizel_idea
+			allowed  = {
+				original_tag  = AR5
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR5_economy_minister = {
+		name = "Luz Prats"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR5_economy
+			allowed  = {
+				original_tag  = AR5
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR5_intelligence ={
+		name="Emmanuel Sancho"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR5_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR5
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR5_foreign_affairs={
+		name="Martín Valerio"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR5_Bulganin_idea
+			allowed = {
+					original_tag = AR5
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR5_admiral = {
+		name = "Serafín Espina"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+    AR6_field_marshall = {
+	name = "Alex Carballo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR6_katase_idea
+			ledger = army
+			allowed = { original_tag = AR6
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR6_general_1 = {
+	name = "Isidoro Gallo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR6_katase_idea
+			ledger = army
+			allowed = { original_tag = AR6
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR6_general_3 = {
+	name = "Ricardo Pinto"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR6_general_2 = {
+	name = "Ernesto Pliego"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR6
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR6_police_chief={
+		name="Elías Leguizamo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR6_sawasaki_idea
+			allowed  = {
+				original_tag  = AR6
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR6_prime_minister ={
+		name = "Juan Diego Sáez"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR6_schneizel_idea
+			allowed  = {
+				original_tag  = AR6
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR6_economy_minister = {
+		name = "Raquel Graciani"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR6_economy
+			allowed  = {
+				original_tag  = AR6
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR6_intelligence ={
+		name="Víctor Saelices"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR6_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR6
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR6_foreign_affairs={
+		name="Macos Rubio"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR6_Bulganin_idea
+			allowed = {
+					original_tag = AR6
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR6_admiral = {
+		name = "Maximiliano Arrabal"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+    AR7_field_marshall = {
+	name = "Carmelo Atenas"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR7_katase_idea
+			ledger = army
+			allowed = { original_tag = AR7
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR7_general_1 = {
+	name = "Ramon Dávalos"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR7_katase_idea
+			ledger = army
+			allowed = { original_tag = AR7
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR7_general_3 = {
+	name = "Sebastian Tafalla"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR7_general_2 = {
+	name = "Milagros Pliego"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR7
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR7_police_chief={
+		name="Valentino Sarmiento"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR7_sawasaki_idea
+			allowed  = {
+				original_tag  = AR7
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR7_prime_minister ={
+		name = "Juan Martín Arrabal"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR7_schneizel_idea
+			allowed  = {
+				original_tag  = AR7
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR7_economy_minister = {
+		name = "Octavia Pliego"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR7_economy
+			allowed  = {
+				original_tag  = AR7
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR7_intelligence ={
+		name="Max Romero"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR7_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR7
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR7_foreign_affairs={
+		name="Miguel Aguinaldo"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR7_Bulganin_idea
+			allowed = {
+					original_tag = AR7
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR7_admiral = {
+		name = "Alberto García"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+    AR8_field_marshall = {
+	name = "Gonzalo Nores"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR8_katase_idea
+			ledger = army
+			allowed = { original_tag = AR8
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR8_general_1 = {
+	name = "Alex Venegas"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR8_katase_idea
+			ledger = army
+			allowed = { original_tag = AR8
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR8_general_3 = {
+	name = "Luca Mastache"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR8_general_2 = {
+	name = "Israel Montreal"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR8
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR8_police_chief={
+		name="Bautista Sáez"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR8_sawasaki_idea
+			allowed  = {
+				original_tag  = AR8
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR8_prime_minister ={
+		name = "Marco Gayoso"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR8_schneizel_idea
+			allowed  = {
+				original_tag  = AR8
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR8_economy_minister = {
+		name = "Alejandra Madrid"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR8_economy
+			allowed  = {
+				original_tag  = AR8
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR8_intelligence ={
+		name="Juan David Carvallo"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR8_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR8
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR8_foreign_affairs={
+		name="Juan Manuel Illescas"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR8_Bulganin_idea
+			allowed = {
+					original_tag = AR8
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR8_admiral = {
+		name = "David Japón"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+    AR9_field_marshall = {
+	name = "Aletona Kaleo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR9_katase_idea
+			ledger = army
+			allowed = { original_tag = AR9
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ AR9_general_1 = {
+	name = "Iukekini Kahoiwai"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = AR9_katase_idea
+			ledger = army
+			allowed = { original_tag = AR9
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+AR9_general_3 = {
+	name = "'Ala Ailani"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ AR9_general_2 = {
+	name = "Kuali'i Pilis"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = AR9
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    AR9_police_chief={
+		name="Alaka'i Kamakeoaina"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = AR9_sawasaki_idea
+			allowed  = {
+				original_tag  = AR9
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR9_prime_minister ={
+		name = "Kamuela Alohilani"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = AR9_schneizel_idea
+			allowed  = {
+				original_tag  = AR9
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    AR9_economy_minister = {
+		name = "Kanoa Makaiwi"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = AR9_economy
+			allowed  = {
+				original_tag  = AR9
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+AR9_intelligence ={
+		name="Ewekapu Elikapeka"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = AR9_generic_intelligence_idea
+			allowed  = {
+				original_tag  = AR9
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        AR9_foreign_affairs={
+		name="Kamalani Alika"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = AR9_Bulganin_idea
+			allowed = {
+					original_tag = AR9
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+AR9_admiral = {
+		name = "Kei Alohilani"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+    A10_field_marshall = {
+	name = "Shimizu Kayo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = A10_katase_idea
+			ledger = army
+			allowed = { original_tag = A10
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ A10_general_1 = {
+	name = "Miyashiro Masuyo"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = A10_katase_idea
+			ledger = army
+			allowed = { original_tag = A10
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+A10_general_3 = {
+	name = "Otake Kiyoko"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ A10_general_2 = {
+	name = "Kuali'i Pilis"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = A10
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    A10_police_chief={
+		name="Onaga Ryoko"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = A10_sawasaki_idea
+			allowed  = {
+				original_tag  = A10
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    A10_prime_minister ={
+		name = "Kamuela Alohilani"
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = A10_schneizel_idea
+			allowed  = {
+				original_tag  = A10
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    A10_economy_minister = {
+		name = "Toyama Izumi"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = A10_economy
+			allowed  = {
+				original_tag  = A10
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+A10_intelligence ={
+		name="Takenaka Katashi"
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = A10_generic_intelligence_idea
+			allowed  = {
+				original_tag  = A10
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        A10_foreign_affairs={
+		name="Izumi Ken'Ichi"
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = A10_Bulganin_idea
+			allowed = {
+					original_tag = A10
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+A10_admiral = {
+		name = "Ide Kyo"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+    NAN_field_marshall = {
+	name = "Leonardo Schinner"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = NAN_katase_idea
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ NAN_general_1 = {
+	name = "Davin Jacobson"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = NAN_katase_idea
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+NAN_general_3 = {
+	name = "Rowan Turcotte"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ NAN_general_2 = {
+	name = "Marcelino Mills "
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    NAN_police_chief={
+		name="Alberto Weissnat"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = NAN_sawasaki_idea
+			allowed  = {
+				original_tag  = NAN
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    NAN_prime_minister ={
+		name = "Trevion Effertz "
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = NAN_schneizel_idea
+			allowed  = {
+				original_tag  = NAN
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    NAN_economy_minister = {
+		name = "Shemar Adams "
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = NAN_economy
+			allowed  = {
+				original_tag  = NAN
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+NAN_intelligence ={
+		name="Robbie Ryan "
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = NAN_generic_intelligence_idea
+			allowed  = {
+				original_tag  = NAN
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        NAN_foreign_affairs={
+		name="Toney Lang "
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = NAN_Bulganin_idea
+			allowed = {
+					original_tag = NAN
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+NAN_admiral = {
+		name = "Otho Schulist"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
+
+}

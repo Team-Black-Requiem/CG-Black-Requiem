@@ -1,0 +1,282 @@
+    NAN_field_marshall = {
+	name = "Leonardo Schinner"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_Field_Marshall_Generic.dds"
+			small = "gfx/leaders/Area/Brittanian_Field_Marshall_High_command.dds"
+		}
+	}
+
+	field_marshal = {
+		traits = {organizer expert_delegator skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = NAN_katase_idea
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+ NAN_general_1 = {
+	name = "Davin Jacobson"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_1.dds"
+			small = "gfx/leaders/Area/Brittanian_Generic_Highcommand_1.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {skilled_staffer infantry_officer}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			idea_token = NAN_katase_idea
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+NAN_general_3 = {
+	name = "Rowan Turcotte"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small ="gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_General_Generic_3.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {camouflage_expert}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+}
+
+ NAN_general_2 = {
+	name = "Marcelino Mills "
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+		civilian = {
+			large = "gfx/leaders/Area/Brittanian_General_Generic_2.dds"
+			small = "gfx/leaders/Area/Brittanian_generic_highcommand_2.dds"
+		}
+	}
+
+	corps_commander = {
+		traits = {panzer_leader trait_reckless}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = { original_tag = NAN
+			}
+			traits = {
+	 army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+    NAN_police_chief={
+		name="Alberto Weissnat"
+	portraits = {
+		army = {
+			large = "gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small ="gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+		civilian = {
+			large ="gfx/leaders/Area/Brittanian_Chief_Of Police_Generic.dds"
+			small = "gfx/leaders/Area/Chief_Of_Police_Advisor.dds"
+		}
+	}
+    	corps_commander = {
+		traits = {}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+		advisor={
+			cost = 100
+			slot = minister_of_interior
+			idea_token = NAN_sawasaki_idea
+			allowed  = {
+				original_tag  = NAN
+			}	
+			traits  = {
+			police_chief
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    NAN_prime_minister ={
+		name = "Trevion Effertz "
+		portraits={
+			civilian={
+				small= "gfx/leaders/Area/Generic_Brittanian_Priminister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = head_of_government
+			idea_token = NAN_schneizel_idea
+			allowed  = {
+				original_tag  = NAN
+			}	
+			traits  = {
+				prime_minister
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+    NAN_economy_minister = {
+		name = "Shemar Adams "
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/Area/Generic_brittanian_economy_minister.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = economy_minister
+			idea_token = NAN_economy
+			allowed  = {
+				original_tag  = NAN
+			}
+			traits  = { generic_economy_minster
+			}
+            ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+
+NAN_intelligence ={
+		name="Robbie Ryan "
+		portraits = {
+			civilian = {
+				small="gfx/leaders/Area/Generic_brittanian_intelligence.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = intelligence
+			idea_token = NAN_generic_intelligence_idea
+			allowed  = {
+				original_tag  = NAN
+			}
+			traits  = {head_of_intelligence}
+					ai_will_do = {
+				factor = 0.200
+			}
+			}
+			
+		}	
+
+        NAN_foreign_affairs={
+		name="Toney Lang "
+		portraits={
+			civilian={
+				small="gfx/leaders/Area/Generic_foreign_affairs_minster.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = foreign_minister
+			idea_token = NAN_Bulganin_idea
+			allowed = {
+					original_tag = NAN
+				}
+				traits = {
+					mediocre_diplomat
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+}
+
+NAN_admiral = {
+		name = "Otho Schulist"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/Area/Brittanian_Admiral_Generic.dds"
+			}
+
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+
+}
