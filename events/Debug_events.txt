@@ -1,10 +1,9 @@
-
-add_namespace = ROOT
+add_namespace = DEV
 
 country_event = {  
 	id = DEV.1
-	title = dev.1.t
-	desc = dev.1.d
+	title = DEV.1.t
+	desc = DEV.1.d
 	#picture =
 	fire_only_once = no
 	
@@ -13,19 +12,15 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		complete_effect = {
-       add_ideas =  DEV_Military_Might
-       add_ideas =  DEV_Economic_Might
-        }
+       	add_ideas = DEV_Military_Might
+       	add_ideas = DEV_Economic_Might
     }
         option = {
 		name = DEV.1.b
 		ai_chance = {
 			factor = 0
 		}
-		complete_effect = {
-        add_ideas =  DEV_Military_Might
-        }
+        add_ideas = DEV_Military_Might
     }
 
     option = {
@@ -33,16 +28,14 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		complete_effect = {
-       add_ideas =  DEV_Economic_Might
-        }
+       	add_ideas = DEV_Economic_Might
     }
 }
 
 country_event = {  
 	id = DEV.2
-	title = dev.2.t
-	desc = dev.2.d
+	title = DEV.2.t
+	desc = DEV.2.d
 	#picture =
 	fire_only_once = no
 	
@@ -51,27 +44,21 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		complete_effect = {
-     remove_ideas = DEV_Military_Might
-     remove_ideas = DEV_Economic_Might
-        }
+     	remove_ideas = DEV_Military_Might
+     	remove_ideas = DEV_Economic_Might
     }
     option = {
 		name = DEV.2.b
 		ai_chance = {
 			factor = 0
 		}
-     complete_effect = {
-    remove_ideas = DEV_Military_Might
-        }
+    	remove_ideas = DEV_Military_Might
     }
     option = {
 		name = DEV.2.c
 		ai_chance = {
 			factor = 0
 		}
-		complete_effect = {
-        remove_ideas = DEV_Economic_Might
-        }
+    	remove_ideas = DEV_Economic_Might
     }
 }
