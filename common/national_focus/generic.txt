@@ -34,7 +34,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -74,7 +74,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
-			country_exists = ROOT
+			exists = yes
 		}
 		
 		ai_will_do = {
@@ -116,7 +116,7 @@ focus_tree = {
 			}   
 
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		x = -1
@@ -140,7 +140,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -172,7 +172,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -205,7 +205,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -234,7 +234,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 		available = {
-			country_exists = ROOT
+			exists = yes
 		}
 		
 		ai_will_do = {
@@ -265,7 +265,7 @@ focus_tree = {
 		mutually_exclusive = { focus = gen_hardline_socialism }
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -301,7 +301,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -333,7 +333,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		
 						available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 				ai_will_do = {
@@ -366,7 +366,7 @@ focus_tree = {
 			mutually_exclusive = { focus = gen_liberalism }
 		mutually_exclusive = { focus = gen_third_way }
 		available = {
-			country_exists = ROOT
+			exists = yes
      	}
 		
 	relative_position_id = gen_exploring_our_options
@@ -400,7 +400,7 @@ focus = {
 	icon = GFX_goal_generic_demand_territory
 
 	available = {
-	country_exists = ROOT
+	exists = yes
 }
 
 ai_will_do = {
@@ -434,7 +434,7 @@ focus = {
 	prerequisite = { focus = gen_moderate_socialism }
 	icon = GFX_goal_generic_demand_territory
 	available = {
-	country_exists = ROOT
+	exists = yes
 	
 }
 
@@ -457,7 +457,7 @@ focus = {
 	prerequisite = { focus = gen_a_united_front }
 	icon = GFX_goal_generic_demand_territory
 	available = {
-	country_exists = ROOT
+	exists = yes
 	
 }
 
@@ -478,7 +478,7 @@ focus = {
 	prerequisite = { focus = gen_international_trade focus = gen_fear_of_change focus = gen_times_of_change}
 	icon = GFX_goal_generic_demand_territory
 	available = {
-	country_exists = ROOT
+	exists = yes
 	
 }
 
@@ -539,7 +539,7 @@ cost = 5
 		icon = GFX_goal_support_democracy
 
 		available = {
-			country_exists = ROOT
+			exists = yes
 		}
        
 		ai_will_do = {
@@ -579,7 +579,7 @@ cost = 5
 			icon = GFX_goal_support_democracy
 	
 			available = {
-						country_exists = ROOT
+						exists = yes
 	
 			}
 	
@@ -605,7 +605,7 @@ cost = 5
 				icon = GFX_goal_support_democracy
 		
 				available = {
-							country_exists = ROOT
+							exists = yes
 		
 					OR = {
 		
@@ -640,7 +640,7 @@ cost = 5
 				icon = GFX_goal_support_democracy
 		
 				available = {
-							country_exists = ROOT
+							exists = yes
 		
 	
 				}
@@ -668,7 +668,7 @@ cost = 5
 				icon = GFX_goal_support_democracy
 		
 				available = {
-							country_exists = ROOT
+							exists = yes
 		
 					OR = {
 					has_government = moderate_liberalism
@@ -698,7 +698,7 @@ cost = 5
 				icon = GFX_goal_support_democracy
 		
 				available = {
-							country_exists = ROOT
+							exists = yes
 		
 					OR = {
 		
@@ -754,7 +754,7 @@ cost = 5
 		available_if_capitulated = yes
 
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		completion_reward = {
@@ -778,7 +778,7 @@ cost = 5
 
 		available_if_capitulated = yes
 								available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		completion_reward = {
@@ -795,7 +795,7 @@ cost = 5
 		id = gen_I_am_the_law
 		icon = GFX_goal_generic_demand_territory
 								available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = { focus = gen_autocracy }
@@ -826,7 +826,7 @@ cost = 5
 		prerequisite = { focus = gen_authoritarianism }
 		
 		available = {
-	    	country_exists = ROOT
+	    	exists = yes
 		}
 		ai_will_do = {
 			factor = 40
@@ -860,7 +860,7 @@ cost = 5
 		prerequisite = { focus = gen_authoritarianism }
 		
 		available = {
-			country_exists = ROOT
+			exists = yes
 		}
         
 		ai_will_do = {
@@ -894,7 +894,7 @@ cost = 5
 		prerequisite = { focus = gen_nationalism }
 		
 												available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_nationalism
@@ -917,7 +917,7 @@ cost = 5
 		prerequisite = { focus = gen_mandated_draft }
 		
 												available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_mandated_draft
@@ -942,7 +942,7 @@ cost = 5
 		prerequisite = { focus = gen_appointed_ministers focus = gen_command_economy focus = gen_expansionist_economy }
 		
 												available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_appointed_ministers
@@ -970,7 +970,7 @@ cost = 5
 		
 				
 												available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		
 		
@@ -1009,7 +1009,7 @@ cost = 5
 		
 				
 												available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 
@@ -1043,7 +1043,7 @@ cost = 5
 		icon = GFX_GEN_economy
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_exploring_our_options
@@ -1077,7 +1077,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_Industrial_Development
@@ -1114,7 +1114,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1153,7 +1153,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1191,7 +1191,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1229,7 +1229,7 @@ cost = 5
 		icon = GFX_GEN_steel
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_Industrial_Development
@@ -1266,7 +1266,7 @@ cost = 5
 		icon = GFX_GEN_tungsten
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1303,7 +1303,7 @@ cost = 5
 		icon = GFX_GEN_aluminium
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1341,7 +1341,7 @@ cost = 5
 		icon = GFX_GEN_Synthethic
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1380,7 +1380,7 @@ cost = 5
 		icon = "GFX_GEN_military_industry"
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1417,7 +1417,7 @@ cost = 5
 		icon = "GFX_GEN_military_industry"
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1454,7 +1454,7 @@ cost = 5
 		icon = "GFX_GEN_military_industry"
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1491,7 +1491,7 @@ cost = 5
 		icon = "GFX_GEN_military_industry"
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1531,7 +1531,7 @@ cost = 5
 		icon = GFX_GEN_science
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1564,7 +1564,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1602,7 +1602,7 @@ cost = 5
 		icon = GFX_GEN_civillian_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1629,7 +1629,7 @@ cost = 5
 		icon = GFX_GEN_sakuradite
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1660,7 +1660,7 @@ cost = 5
 		icon = GFX_GEN_infastructure
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1686,7 +1686,7 @@ cost = 5
 		icon = GFX_GEN_military_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1724,7 +1724,7 @@ cost = 5
 		icon = GFX_GEN_military_industry
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -1750,7 +1750,7 @@ cost = 5
 		icon = GFX_GEN_science
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 	    focus = Prosperous_Nation
@@ -1788,7 +1788,7 @@ cost = 5
 		icon = GFX_GEN_Synthethic
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 				has_tech = synth_oil_experiments
 		}
         
@@ -1829,10 +1829,10 @@ cost = 5
 		icon = GFX_GEN_admiralty
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 				any_state = {
 					is_coastal = yes
-					is_controlled_by = ROOT
+					controls_or_subject_of = yes
 				}
 		}
 
@@ -1856,7 +1856,7 @@ cost = 5
 		icon = GFX_GEN_navy_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -1887,10 +1887,10 @@ cost = 5
 		icon = GFX_GEN_dockyards
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 				any_state = {
 					is_coastal = yes
-					is_controlled_by = ROOT
+					controls_or_subject_of = yes
 				}
 		}
 
@@ -2010,7 +2010,7 @@ cost = 5
 		icon = GFX_GEN_new_age
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2045,7 +2045,7 @@ cost = 5
 		icon = GFX_GEN_coastal_fleet
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2107,7 +2107,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_cruiser_1
-						creator = root
+						
 						version_name = "Guardian Class"
 					}
 					name = "Guardian" 
@@ -2118,7 +2118,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_cruiser_1
-						creator = root
+						
 						version_name = "Guardian Class"
 					}
 					name = "Guardian" 
@@ -2129,7 +2129,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_cruiser_1
-						creator = root
+						
 						version_name = "Guardian Class"
 					}
 					name = "Guardian" 
@@ -2142,7 +2142,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2153,7 +2153,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2164,7 +2164,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2175,7 +2175,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2186,7 +2186,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2197,7 +2197,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2208,7 +2208,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2219,7 +2219,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2230,7 +2230,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2241,7 +2241,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2252,7 +2252,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2263,7 +2263,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_1
-						creator = root
+						
 						version_name = "Sentinel Class"
 					}
 					name = "Sentinel" 
@@ -2282,7 +2282,7 @@ cost = 5
 		icon = GFX_GEN_honor
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2332,7 +2332,7 @@ cost = 5
 		icon = GFX_GEN_navy_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2368,7 +2368,7 @@ cost = 5
 		icon = GFX_GEN_flagship
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2398,7 +2398,7 @@ cost = 5
 		icon = GFX_GEN_heavy_ship_design
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2443,7 +2443,7 @@ cost = 5
 		icon = GFX_GEN_repair_yards
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2477,7 +2477,7 @@ cost = 5
 		icon = GFX_GEN_hidden_war
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2524,7 +2524,7 @@ cost = 5
 		icon = GFX_GEN_lock
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2564,7 +2564,7 @@ cost = 5
 		icon = GFX_GEN_mass_produce
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2597,7 +2597,7 @@ cost = 5
 		icon = GFX_GEN_fear_unseen
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2629,7 +2629,7 @@ cost = 5
 		icon = GFX_GEN_deploy_prototype
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -2661,7 +2661,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2672,7 +2672,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2683,7 +2683,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2694,7 +2694,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2705,7 +2705,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2716,7 +2716,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2727,7 +2727,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2738,7 +2738,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2749,7 +2749,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2760,7 +2760,7 @@ cost = 5
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_submarine_2
-						creator = root
+						
 						version_name = "Predator Class"
 					}
 					name = "Predator" 
@@ -2781,7 +2781,7 @@ cost = 5
 		icon = GFX_GEN_army_development
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_exploring_our_options
@@ -2809,7 +2809,7 @@ cost = 5
 		icon = GFX_GEN_artillery
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_Army_Development
@@ -2838,7 +2838,7 @@ cost = 5
 		icon = GFX_GEN_motorized
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -2874,7 +2874,7 @@ cost = 5
 		icon = GFX_GEN_gun
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -2904,7 +2904,7 @@ cost = 5
 		icon = GFX_GEN_armor
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -2934,7 +2934,7 @@ cost = 5
 		icon = GFX_GEN_science
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -2960,7 +2960,7 @@ cost = 5
 		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_Army_Development
@@ -2989,7 +2989,7 @@ cost = 5
 		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_army_Doctrine_School
@@ -3018,7 +3018,7 @@ cost = 5
 		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_army_Doctrine_School_2
@@ -3047,7 +3047,7 @@ cost = 5
 		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_army_Doctrine_School_3
@@ -3076,7 +3076,7 @@ cost = 5
 		icon = GFX_GEN_army_doctrine_school
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         prerequisite = {
 			focus = gen_army_Doctrine_School_4
@@ -3105,7 +3105,7 @@ cost = 5
 		icon = GFX_GEN_knightmare_warfare
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		mutually_exclusive = {
@@ -3140,7 +3140,7 @@ cost = 5
 		icon = GFX_GEN_knightmare
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3172,7 +3172,7 @@ cost = 5
 		icon = GFX_GEN_knight_police
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3198,7 +3198,7 @@ cost = 5
 		icon = GFX_GEN_knightmare
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 				has_tech = knightmare_frame_3
 		}
 
@@ -3242,7 +3242,7 @@ cost = 5
 		icon = GFX_GEN_roundtable
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3277,7 +3277,7 @@ cost = 5
 		icon = GFX_GEN_conventional
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		mutually_exclusive = {
@@ -3306,7 +3306,7 @@ cost = 5
 		icon = GFX_GEN_engines_of_war
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3341,7 +3341,7 @@ cost = 5
 		icon = GFX_GEN_matters
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3370,7 +3370,7 @@ cost = 5
 		icon = GFX_GEN_protecting_troop
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3405,7 +3405,7 @@ cost = 5
 		icon = GFX_GEN_drums_of_war
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		prerequisite = {
@@ -3441,7 +3441,7 @@ cost = 5
 		icon = GFX_GEN_air_development
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		relative_position_id = gen_exploring_our_options
@@ -3464,7 +3464,7 @@ cost = 5
 		icon = GFX_GEN_airbase
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_Air_Development
@@ -3501,7 +3501,7 @@ cost = 5
 		icon = GFX_GEN_academy
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -3529,7 +3529,7 @@ cost = 5
 		icon = GFX_GEN_transport
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
         
 		prerequisite = {
@@ -3561,7 +3561,7 @@ cost = 5
 		icon = GFX_GEN_air_doctrine
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_Air_Development
@@ -3592,7 +3592,7 @@ cost = 5
 		icon = GFX_GEN_air_doctrine
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_aviation_Doctrine_School
@@ -3622,7 +3622,7 @@ cost = 5
 		icon = GFX_GEN_air_doctrine
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_aviation_Doctrine_School_2
@@ -3652,7 +3652,7 @@ cost = 5
 		icon = GFX_GEN_fighter
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		mutually_exclusive = {
@@ -3687,7 +3687,7 @@ cost = 5
 		icon = GFX_GEN_cas
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_Fighter_Focus
@@ -3721,7 +3721,7 @@ cost = 5
 		icon = GFX_GEN_bomber
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 
 		mutually_exclusive = {
@@ -3756,7 +3756,7 @@ cost = 5
 		icon = GFX_GEN_ash
 				
 		available = {
-				country_exists = ROOT
+				exists = yes
 		}
 		prerequisite = {
 			focus = gen_Bomber_Focus

@@ -449,7 +449,7 @@ propaganda_efforts = {
 			}
 			if = {
 				limit = {
-					NOT = { has_government = fascism }
+					NOT = { has_government = autocracy }
 				}
 				threat > 0.5
 			}
@@ -1374,18 +1374,18 @@ special_projects = {
 			modifier = {
 				factor = 0 # Don't bother if your navy is weak AND not USA
 				has_navy_size = { size < 50 }
-				NOT = { tag = USA }
+				NOT = { tag = BRT }
 				has_war = yes
 			}
 			modifier = {
 				factor = 200 # Prioritize if you decisively beat USA's navy
-				has_war_with = USA
-				USA = { has_navy_size = { size < 50 } }
+				has_war_with = BRT
+				BRT = { has_navy_size = { size < 50 } }
 				has_navy_size = { size > 100 }
 			}
 			modifier = {
 				factor = 200 # Prioritize if USA
-				tag = USA
+				tag = BRT
 			}
 			modifier = {
 				factor = 10 # Prioritize if not at war
@@ -1549,7 +1549,7 @@ war_measures = {
 		complete_effect = {
 			if = {
 				limit = {
-					tag = CAN
+					tag = AR2
 				}
 				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
 			}
