@@ -196,6 +196,8 @@ characters = {
 	}
 
 	MRU_generic_air_chief = {
+	name = "Generic Genericus"
+
 
 		#portraits = {
 		#	
@@ -223,19 +225,24 @@ characters = {
 	### HIGH COMMAND
 
 
-	MRU_generic_high_command = {
-		name = "High Command Feller"
+	MRU_gusev = {
+		name = "Aleksandr Gusev"
 
-		#portraits = {
-		#	
-		#}
-
+		portraits = {
+			army = {
+				large = "gfx\leaders\MRU\Aleksandr_Gusev.png"
+			}
+			civilian = {
+				large = "gfx\leaders\MRU\Aleksandr_Gusev.png"
+			}
+		}
+		
 		advisor = {
 			slot = high_command
 			ledger = army
-			idea_token = MRU_generic_high_command_1
+			idea_token = MRU_gusev_high_command_1
 			traits = { 
-				army_artillery_1
+			army_chief_reform_3	
 			}
 			allowed = {
 				tag = MRU
@@ -247,11 +254,90 @@ characters = {
 		}
 
 		field_marshal = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {brilliant_strategist trickster engineer}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	MRU_nikitin= {
+		name = "Viktor_Nikitin"
+
+		portraits = {
+			army = {
+				large ="gfx\leaders\MRU\Viktor_Nikitin.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\MRU\Viktor_Nikitin.dds"
+			}
+		}
+
+		
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = MRU_nikitin_high_command_1
+			traits = { 
+				army_chief_morale_3
+			}
+			allowed = {
+				tag = MRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {old_guard inflexible_strategist thorough_planner }
+			skill = 4
+			attack_skill = 2 
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+
+	MRU_Illin= {
+		name = "Rostislav Illin"
+
+		portraits = {
+			army = {
+				large = "gfx\leaders\MRU\Rostislav_Illin.dds"
+			}
+			civilian = {
+				large = "gfx\leaders\MRU\Rostislav_Illin.dds"
+			}
+		}
+
+		
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = MRU_Illin_high_command_1
+			traits = { 
+		
+			}
+			allowed = {
+				tag = MRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {}
+			skill = 
+			attack_skill =  
+			defense_skill = 
+			planning_skill = 
+			logistics_skill = 
 		}
 	}
 
