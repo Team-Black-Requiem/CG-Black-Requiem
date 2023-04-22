@@ -1359,10 +1359,10 @@ BWR_ai_war= {
 
 		complete_effect = {
 			create_wargoal = { type = annex_everything target = GER}
-		}
+	}
 
 		remove_effect = { 
-
+         
 			create_wargoal = { type = annex_everything target = FRA}
 			
 			create_wargoal = { type = annex_everything target = FRA}
@@ -1483,7 +1483,11 @@ BWR_ai_war= {
 		days_remove = 120
 		remove_effect = { 
 			create_wargoal = { type = annex_everything target = CHI}
-	
+	     
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
 		}
 	}
 
@@ -1589,7 +1593,10 @@ BWR_ai_war= {
 			create_wargoal = { type = annex_everything target = A11}
 			create_wargoal = { type = annex_everything target = JAP}
 	
-	
+	    declare_war_on = {
+			target = BRT
+			type = annex_everything
+		}
 		}
 	}
 }	
