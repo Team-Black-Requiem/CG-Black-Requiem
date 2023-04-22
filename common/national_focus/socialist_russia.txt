@@ -406,6 +406,7 @@
 		    
 			available_if_capitulated = no
 			completion_reward = {
+				add_war_support = 0.1
 				country_event = SRU.11
 			}
 	}
@@ -495,6 +496,21 @@
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 3000
+				}
+				every_army_leader = {
+					add_attack = 2
+				}
 				country_event = SRU.12
 			}
 	}
@@ -513,7 +529,17 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 300
+				}
+
+			}
 	}
 				focus = {
 			id = SRU_Rapid_Industrialisation
@@ -530,7 +556,44 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				every_core_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				564 = {
+					add_resource = {
+						type = chromium
+						amount = 4
+					}
+					add_resource = {
+						type = tungsten
+						amount = 5
+					}
+				}
+				566 = {
+					add_resource = {
+						type = steel
+						amount = 18
+					}
+				}
+				567 = {
+					add_resource = {
+						type = aluminium
+						amount = 14
+					}
+					add_resource = {
+						type = sakuradite
+						amount = 8
+					}
+				}
+			}
 	}
 				focus = {
 			id = SRU_Total_War
@@ -548,7 +611,15 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			will_lead_to_war_with = MRU
+			completion_reward = {
+				country_event = SRU.14
+				add_manpower = 50000
+				add_war_support = 0.3
+				declare_war_on = {
+					target = MRU
+				}
+			}
 	}
 				focus = {
 			id = SRU_Deal_With_The_Unions
