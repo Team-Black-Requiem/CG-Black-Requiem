@@ -68,14 +68,14 @@ set_popularities = {
 }
 
 add_ideas = {
-##RUS_Agrarian_economy
-##RUS_Army_committees
-##RUS_Weak_Republican_army
-##RUS_Corrupt_government
-##RUS_Russian_nationalism
-##RUS_low_level_education
-##RUS_Economical_crisis
-#RUS_EU_loans
+RUS_Agrarian_economy
+RUS_Army_committees
+RUS_Weak_Republican_army
+RUS_Corrupt_government
+RUS_Russian_nationalism
+RUS_low_level_education
+RUS_Economical_crisis
+RUS_EU_loans
 }
 
 
@@ -106,10 +106,21 @@ create_country_leader = {
 	desc = "POLITICS_CHARLES_DESC"
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
-	ideology = social-capitalism
+	ideology = social_democracy
 	traits = {
 	}
 }
+
+create_country_leader = {
+	name = "Vladislav Zakharov"
+	desc = "POLITICS_ZAKHAROV_DESC"
+	picture = "GFX_portrait_RUS_vladislav"
+	expire = "2030.1.1"
+	ideology = military_dictatorship
+	traits = {
+	}
+}
+
 
 
 recruit_character = RUS_officer_2
@@ -127,7 +138,6 @@ recruit_character = RUS_generic_army_chief_2
 recruit_character = RUS_generic_army_chief_3
 recruit_character = RUS_generic_navy_chief
 recruit_character = RUS_generic_air_chief
-recruit_character = RUS_vladislav
 recruit_character = RUS_schmo
 recruit_character = RUS_Jschmo
 recruit_character = RUS_JJschmo
