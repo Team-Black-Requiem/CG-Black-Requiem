@@ -284,14 +284,16 @@ country_event = { #Deal_with_the_unions
 			factor = 100
 		}
 		set_country_flag = Purges
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = {
-		name = SRU.13.a 
+		name = SRU.13.b
 		ai_chance = {
 			factor = 100
 		}
 		set_country_flag = Comprimise
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -310,6 +312,80 @@ country_event = { #Total War
 	}
 }
 
+country_event = { #Jacobin all the way
+	id = SRU.15
+	title = SRU.15.t
+	desc = SRU.15.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.15.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Purge democrats
+	id = SRU.16
+	title = SRU.16.t
+	desc = SRU.16.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.16.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Control Trade unions
+	id = SRU.17
+	title = SRU.17.t
+	desc = SRU.17.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.17.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Isolate Liberals
+	id = SRU.18
+	title = SRU.18.t
+	desc = SRU.18.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.18.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Age of Terror
+	id = SRU.19
+	title = SRU.19.t
+	desc = SRU.19.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.19.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
 
 ### GRAND EMBASSY EVENT CHAIN##
 
