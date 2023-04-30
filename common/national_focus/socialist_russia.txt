@@ -618,6 +618,7 @@
 				add_war_support = 0.3
 				declare_war_on = {
 					target = MRU
+					type = annex_everything
 				}
 			}
 	}
@@ -637,13 +638,18 @@
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				add_popularity = {
+					ideology = totalitarian_socialism
+					popularity = 0.2
+				}
+				add_stability = 0.15
 				country_event = SRU.13
 			}
 	}
 			focus = {
 			id = SRU_Jacobin_All_The_Way
 			icon = GFX_SRU_Jacobin_All_The_Way
-			cost = 5
+			cost = 0
 			x = 0
 			y = 1
 			prerequisite = { focus = SRU_Deal_With_The_Unions }
@@ -660,7 +666,11 @@
 				has_country_flag = Purges
 			}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_country_leader_trait = propagandist
+				add_country_leader_trait = nihilist
+				country_event = SRU.15
+			}
 	}
 			focus = {
 			id = SRU_Purge_The_Democrats
@@ -677,8 +687,11 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			completion_reward = {}
-			} 
+			completion_reward = {
+				country_event = SRU.16
+			}
+			}
+
 			focus = {
 			id = SRU_Control_The_Trade_Unions
 			icon = GFX_SRU_Control_The_Trade_Unions
@@ -694,7 +707,10 @@
 			        factor = 100 
 				}
 			available_if_capitulated = no
-			completion_reward = {}
+			completion_reward = {
+				add_ideas = SRU_control_the_trade_unions
+				country_event = SRU.17
+			}
 			}
 			focus = {
 				id = SRU_Isolate_The_Liberals
@@ -711,7 +727,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.18
+				}
 				
 			}
 			focus = {
@@ -731,7 +749,10 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_age_of_terror
+					country_event = SRU.19
+				}
 
 			}
 			focus = {
@@ -864,7 +885,7 @@
 			focus = {
 				id = SRU_Mend_Internal_Divisions
 				icon = GFX_SRU_Mend_Internal_Divisions
-				cost = 5
+				cost = 0
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Deal_With_The_Unions }
