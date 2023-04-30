@@ -22,9 +22,7 @@ focus_tree = {
 		y = 1
 		completion_reward = { 
 
-			# Below here, add in a simple modifier that gives stability +10%, and -3% consumer goods, the resources provided have the necessary help. DONE
-			add_stability = 0.1
-			consumer_goods_factor = 0.03
+			# Below here, add in a simple modifier that gives stability +10%, and -3% consumer goods, the resources provided have the necessary help.
 
 		}
 	}
@@ -45,11 +43,6 @@ focus_tree = {
 			
 
 			# Make a specific modifier, that for example gives you technology research bonus or adds a resource in a province 
-			add_resource = {
-				type = aluminium
-				amount = 15
-				state = 284
-			}
 
 			
 		 }
@@ -100,7 +93,6 @@ focus_tree = {
 		completion_reward = {
 
 			# Create an event from scratch, and link it here. This was already done in the Linking Events focus, so, if need be, go there for inspiration.
-			country_event = { id = anglia.3 }
 
 		 }
 	}
@@ -119,7 +111,6 @@ focus_tree = {
 			# Make another event, or change the event before this, and link it again. And this time give it localisation, this means to give it a title, description, and also name the options of an event
 			# Localisation for focuses needs to be done too, but that's for later, but it's done in the same way
 			# You can find the localisation folder under localisation/english/NewAnglia_l_english
-			country_event = { id = anglia.4 }
 
 		}
 	}
@@ -134,7 +125,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = { 
-			country_event = anglia.5
+			country_event = anglia.4
 		}
 	}
 
@@ -149,7 +140,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = { 
-			add_ideas = first_implemented_idea
+			add_ideas = basic_idea_implementation
 		}
 	}
 	focus = {
@@ -231,7 +222,7 @@ focus_tree = {
 		prerequisite = {
 			focus = framework_start # Needs framework_start to be able to be done
 		}
-		cost = 1 # How long it will take to do in weeks
+		cost = 0 # How long it will take to do in weeks
 		x = x
 		y = 1
 		completion_reward = { }
@@ -249,7 +240,7 @@ focus_tree = {
 		completion_reward = { }
 	}
 	focus = {
-		id = framework.3 ## Mutually Exclusive 1 Please make this mutually exclusive with framework.4 (Users Note The fuck? I only assume this is an intentional error I have to fix)
+		id = framework.3 ## Mutually Exclusive 1 Please make this mutually exclusive with framework.4
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework_start
 		prerequisite = { ## Either or
@@ -267,9 +258,6 @@ focus_tree = {
 		prerequisite = {
 			focus = framework.3
 		}
-		mutually_exclusive = {
-			focus = framework.5
-		}
 		cost = 0
 		x = 1
 		y = 1
@@ -282,9 +270,6 @@ focus_tree = {
 		prerequisite = {
 			focus = framework.3
 		}
-		mutually_exclusive = {
-			focus = framework.4
-		}
 		cost = 0
 		x = -1
 		y = 1
@@ -295,7 +280,10 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.4
 		prerequisite = {
-			focus = framework.4 focus = framework.5
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
 		}
 		cost = 0
 		x = 1
@@ -307,7 +295,10 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.4
 		prerequisite = {
-			focus = framework.4 focus = framework.5
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
 		}
 		cost = 0
 		x = -1
@@ -317,12 +308,15 @@ focus_tree = {
 	focus = {
 		id = framework.8 ## There are errors in this, fix them so it looks normal, either change relative_position_id to framework.5, or just change the x and y coordinates so it's in line with the others
 		icon = GFX_goal_generic_occupy_start_war
-		relative_position_id = framework.5
+		relative_position_id = framework.4
 		prerequisite = {
-			focus = framework.4 focus = framework.5
+			focus = framework.4
+		}
+		prerequisite = {
+			focus = framework.5
 		}
 		cost = 0
-		x = -1
+		x = -4
 		y = 1
 		completion_reward = { 
 			add_political_power = 500	
@@ -332,9 +326,6 @@ focus_tree = {
 		id = framework.final
 		icon = GFX_goal_generic_occupy_start_war
 		relative_position_id = framework.4
-		prerequisite = { ## Either or
-			focus = framework.8 focus = framework.7 focus = framework.6 
-		}
 
 		cost = 0
 		x = -1
@@ -346,15 +337,11 @@ focus_tree = {
 		id = country_creation_and_framework ## Start of country creation
 		relative_position_id = framework.final
 		# Make it so this is only available after you've done framework.final
-		has_completed_focus = { framework.final 
-	    }
 
 		cost = 0
 		x = 0
 		y = 2
-		completion_reward = {
-			country_event = anglia.6
-		 }
+		completion_reward = { }
 	}
 
 
