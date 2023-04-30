@@ -6,9 +6,11 @@ equipment_modules = {
 	#    #  ## #  #  #  #  ## #
 	#### #   #  ### ### #   # ####
 
+	### ALL STATS ARE EITHER PLACEHOLDER OR BASE GAME STATS PLEASE CHANGE IF NEEDED ###
+
 	tank_gasoline_engine_1 = {
 		abbreviation = "gas1"
-		category = tank_engine_type
+		category = tank_gasoline_engine_type
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
@@ -24,7 +26,7 @@ equipment_modules = {
 
 	tank_gasoline_engine_2 = {
 		abbreviation = "gas2"
-		category = tank_engine_type
+		category = tank_gasoline_engine_type
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
@@ -40,7 +42,7 @@ equipment_modules = {
 
 	tank_gasoline_engine_3 = {
 		abbreviation = "gas3"
-		category = tank_engine_type
+		category = tank_gasoline_engine_type
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
@@ -56,7 +58,7 @@ equipment_modules = {
 
 	tank_gasoline_engine_4 = {
 		abbreviation = "gas4"
-		category = tank_engine_type
+		category = tank_gasoline_engine_type
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
@@ -245,7 +247,7 @@ equipment_modules = {
 
 	sakuradite_tank_armor = {
 		abbreviation = "sakar"
-		category = tank_armor_type
+		category = tank_sakuradite_armor_type
 		sfx = sfx_nsb_sd_module_armor
 
 		add_stats = {
@@ -285,7 +287,7 @@ equipment_modules = {
 	tank_minimal_armor = {
 		abbreviation = "min"
 		category = tank_armor_focus
-		sfx_nsb_sd_module_armor
+		sfx = sfx_nsb_sd_module_armor
 
 		xp_cost = 1
 	}
@@ -353,7 +355,7 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	wheel__4x8 = { # Car
+	wheel_4x8 = { # Car
 		abbreviation = "4x8"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_engine
@@ -547,61 +549,61 @@ equipment_modules = {
 	### Assault Gun ###
 	###################
 
-	early_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket
-		forbid_equipment_type = armor
-
-		category = assault_weapon
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	basic_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket
-		forbid_equipment_type = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	improved_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket
-		forbid_equipment_type = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	advanced_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket
-		forbid_equipment_type = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
+#	early_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type = armor
+#
+#		category = assault_weapon
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	basic_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	improved_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	advanced_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
 
 
 	##### #  # ###  ###  #### #####    ##### #   # ###  #### ####
@@ -621,6 +623,12 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
+			}
 		}
 
 		xp_cost = 1
@@ -633,13 +641,19 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_composite_armor
+			}
 		}
 
 		xp_cost = 1
 	}
 
 	early_mbt_super_structure = {
-		allow_equipment_type = assault_gun
+		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type = armor
 		abbreviation = "esuper"
@@ -648,6 +662,12 @@ equipment_modules = {
 			main_armament_slot = {
 				rifled_weapon
 				assault_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -662,6 +682,12 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				artillery_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -679,6 +705,12 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
+			}
 		}
 
 		xp_cost = 1
@@ -691,13 +723,19 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_composite_armor
+			}
 		}
 
 		xp_cost = 1
 	}
 
 	basic_mbt_super_structure = {
-		allow_equipment_type = assault_gun
+		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type = armor
 		abbreviation = "bsuper"
@@ -706,6 +744,12 @@ equipment_modules = {
 			main_armament_slot = {
 				rifled_weapon
 				assault_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -720,6 +764,12 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				artillery_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -737,6 +787,12 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
+			}
 		}
 
 		xp_cost = 1
@@ -749,13 +805,19 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_composite_armor
+			}
 		}
 
 		xp_cost = 1
 	}
 
 	improved_mbt_super_structure = {
-		allow_equipment_type = assault_gun
+		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type = armor
 		abbreviation = "isuper"
@@ -764,6 +826,12 @@ equipment_modules = {
 			main_armament_slot = {
 				rifled_weapon
 				assault_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -778,6 +846,12 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				artillery_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -795,8 +869,12 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+				tank_sakuradite_armor_type
+			}
 			armor_thickness_slot = {
-				
+				tank_armor_focus
 			}
 		}
 
@@ -810,8 +888,12 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
+			armor_construction_slot = {
+				tank_armor_type
+				tank_sakuradite_armor_type
+			}
 			armor_thickness_slot = {
-				
+				tank_composite_armor
 			}
 		}
 
@@ -819,7 +901,7 @@ equipment_modules = {
 	}
 
 	advanced_mbt_super_structure = {
-		allow_equipment_type = assault_gun
+		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type = armor
 		abbreviation = "asuper"
@@ -828,6 +910,13 @@ equipment_modules = {
 			main_armament_slot = {
 				rifled_weapon
 				assault_weapon
+			}
+			armor_construction_slot = {
+				tank_armor_type
+				tank_sakuradite_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
@@ -843,65 +932,15 @@ equipment_modules = {
 			main_armament_slot = {
 				artillery_weapon
 			}
-		}
-
-		xp_cost = 1
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	rounded_turret = { # MBT/TD
-		abbreviation = "round"
-		category = tank_turret
-
-		xp_cost = 1
-	}
-
-	open_roof_turret = { # SPG/TD
-		abbreviation = "open"
-		category = tank_turret
-
-		xp_cost = 1
-	}
-
-	composite_turret = { # MBT
-		abbreviation = "comp"
-		category = tank_turret
-		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
+			armor_construction_slot = {
+				tank_armor_type
+				tank_sakuradite_armor_type
+			}
+			armor_thickness_slot = {
+				tank_armor_focus
 			}
 		}
 
-		xp_cost = 1
-	}
-
-	casemate = { # SPG/TD
-		allow_equipment_type = artillery
-		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
-		abbreviation = "case"
-		category = tank_casemate
-		allowed_module_categories = {
-			main_armament_slot = {
-				artillery_weapon
-				rifled_weapon
-			}
-			suspension_type_slot = {
-				tank_suspension
-			}
-		}
 		xp_cost = 1
 	}
 
@@ -911,31 +950,204 @@ equipment_modules = {
 	   # #    #    #     #  #  # #       #   # #  # #  # #  # #    #       #
 	#### #    ####  ### ### #  # ####    #   #  ##  ###  #### #### #### ####
 
-	basic_tank_radio = { # Radio 1
-		abbreviation = "rad"
-		category = tank_radio_module
+	### Radios 
 
+	tank_radio_1 = {
+		abbreviation = "rad1"
+		category = tank_radio_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.20
+			breakthrough = 0.15
+		}
+	}
+
+	tank_radio_2 = {
+		abbreviation = "rad2"
+		category = tank_radio_module
+		parent = tank_radio_1
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 1.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.40
+			breakthrough = 0.25
+		}
+	}
+
+	tank_radio_3 = {
+		abbreviation = "rad3"
+		category = tank_radio_module
+		parent = tank_radio_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.60
+			breakthrough = 0.40
+		}
+	}
+
+	### Base Game
+
+#	amphibious_drive = {
+#		abbreviation = "amph"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#		allow_equipment_type = amphibious
+#		forbid_equipment_type_exact_match = armor
+#		forbid_equipment_type = {
+#			anti_air
+#			artillery
+#			anti_tank
+#			flame
+#		}
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			reliability = -0.15
+#		}
+#		xp_cost = 1
+#		multiply_stats = {
+#			build_cost_ic = 0.1
+#		}
+#	}
+
+	stabilizer = {
+		abbreviation = "stab"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2
+			breakthrough = 5
+		}
 		xp_cost = 1
 	}
 
-	tank_radio = { # Radio 2
-		abbreviation = "radi"
-		category = tank_radio_module
+	extra_ammo_storage = {
+		abbreviation = "extra"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
 
+		add_stats = {
+			reliability = -0.1
+			breakthrough = 2
+			defense = 4
+		}
 		xp_cost = 1
 	}
 
-	encrypted_tank_radio = { # Radio 3
-		abbreviation = "radioo" # gave a warining just as radio
-		category = tank_radio_module
+	wet_ammo_storage = {
+		abbreviation = "wet"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
 
+		add_stats = {
+			reliability = 0.15
+			build_cost_ic = 1
+		}
 		xp_cost = 1
 	}
 
-	smoke_launcher = {
-		abbreviation = "smoke"
-		category = tank_defensive_modules
+	armor_skirts = {
+		abbreviation = "skirt"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
 
+		add_stats = {
+			armor_value = 2
+			breakthrough = 3
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+	}
+
+	dozer_blade = {
+		abbreviation = "dozer"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			entrenchment = 1
+			build_cost_ic = 1
+		}
+		xp_cost = 1
+	}
+
+	auto_loader = {
+		abbreviation = "auto"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2.5
+			breakthrough = 4
+			defense = 4
+		}
+		xp_cost = 1
+	}
+
+	coaxial_machine_gun = {
+		abbreviation = "mg"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 1
+			defense = 2
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+	}
+
+	aa_machine_gun = {
+		abbreviation = "aamg"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 1
+			defense = 2
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+	}
+	
+	expanded_fuel_tank = {
+		abbreviation = "fuel"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			fuel_capacity = 100
+			build_cost_ic = 1
+			maximum_speed = -0.25
+		}
+		xp_cost = 1
+	}
+
+	smoke_launchers = {
+		abbreviation = "smok"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0.5
+			defense = 2
+			breakthrough = 1
+		}
 		xp_cost = 1
 	}
 
@@ -967,7 +1179,7 @@ equipment_modules = {
 	}
 
 	hesh = { # High Explosive Squash Head
-		abbreviation = "hesh"
+		abbreviation = "besh"
 		category = rifled_ammunition
 
 		xp_cost = 1
@@ -989,7 +1201,7 @@ equipment_modules = {
 
 	sakuradite_charges = { # Sakuradite Propellant
 		abbreviation = "saka"
-		category = sakuradite_ammunition #Implemtation needed still
+		category = sakuradite_ammunition #Implemented-ish
 
 		xp_cost = 1
 	}

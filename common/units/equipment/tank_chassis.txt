@@ -1,4 +1,7 @@
 equipments = {
+
+	### ALL STATS ARE EITHER PLACEHOLDER OR BASE GAME STATS PLEASE CHANGE IF NEEDED ###
+
 	main_battle_tank_chassis = {
 		year = 1970
 		is_archetype = yes
@@ -26,14 +29,14 @@ equipments = {
 				}
 			}
 			suspension_type_slot = {
-				required = no #yes
+				required = yes #yes
 				allowed_module_categories = {
 					tank_suspension
 					tank_wheel_suspension
 				}
 			}
 			ammunition_type = {
-				required = no
+				required = no #no
 				allowed_module_categories = {
 					smoothbore_ammunition
 					rifled_ammunition
@@ -41,51 +44,51 @@ equipments = {
 				}
 			}
 			armor_construction_slot = {
-				required = no #yes
+				required = yes #yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
 			armor_thickness_slot = {
-				required = no #yes
+				required = yes #yes
 				allowed_module_categories = {
 					tank_armor_focus
 					tank_composite_armor
 				}
 			}
 			engine_type_slot = {
-				required = no #yes
+				required = yes #yes
 				allowed_module_categories = {
-					tank_engine_type
+					tank_gasoline_engine_type
 					tank_disel_engine_type
 				}
 			}
 			special_type_slot_1 = {
-				required = no
+				required = no #no
 				allowed_module_categories = {
 					tank_radio_module
-					tank_defensive_modules
+					tank_special_module
 				}
 			}
 			special_type_slot_2 = {
-				required = no
+				required = no #no
 				allowed_module_categories = {
 					tank_radio_module
-					tank_defensive_modules
+					tank_special_module
 				}
 			}
 			special_type_slot_3 = {
-				required = no
+				required = no #no
 				allowed_module_categories = {
 					tank_radio_module
-					tank_defensive_modules
+					tank_special_module
 				}
 			}
 			special_type_slot_4 = {
-				required = no
+				required = no #no
 				allowed_module_categories = {
 					tank_radio_module
-					tank_defensive_modules
+					tank_special_module
 				}
 			}
 		}
@@ -94,9 +97,44 @@ equipments = {
 			category = tank_radio_module
 			count < 2
 		}
-
 		module_count_limit = {
-			module = smoke_launcher
+			module = stabilizer
+			count < 2
+		}
+		module_count_limit = {
+			module = extra_ammo_storage
+			count < 2
+		}
+		module_count_limit = {
+			module = wet_ammo_storage
+			count < 2
+		}
+		module_count_limit = {
+			module = armor_skirts
+			count < 2
+		}
+		module_count_limit = {
+			module = dozer_blade
+			count < 2
+		}
+		module_count_limit = {
+			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = coaxial_machine_gun
+			count < 2
+		}
+		module_count_limit = {
+			module = aa_machine_gun
+			count < 2
+		}
+		module_count_limit = {
+			module = expanded_fuel_tank
+			count < 2
+		}
+		module_count_limit = {
+			module = smoke_launchers
 			count < 2
 		}
 
@@ -244,8 +282,22 @@ equipments = {
 				}
 			}
 			suspension_type_slot = inherit
-			ammunition_type = inherit
-			armor_construction_slot = inherit
+			ammunition_type = {
+				required = no
+				allowed_module_categories = {
+					smoothbore_ammunition
+					rifled_ammunition
+					cannon_ammunition
+					sakuradite_ammunition
+				}
+			}
+			armor_construction_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+					tank_sakuradite_armor_type
+				}
+			}
 			armor_thickness_slot = inherit
 			engine_type_slot = inherit
 			special_type_slot_1 = inherit
