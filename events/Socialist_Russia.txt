@@ -387,7 +387,7 @@ country_event = { #Age of Terror
 	}
 }
 
-### GRAND EMBASSY EVENT CHAIN##
+### GRAND EMBASSY EVENT CHAIN ###
 
 country_event = {
 	id = SRU.28
@@ -675,5 +675,147 @@ country_event = {
 			factor = 100
 		}
 		
+	}
+}
+
+### SONYA ECONOMIC EVENTS ###
+
+country_event = {
+	id = SRU.35
+	title = SRU.35.t
+	desc = SRU.35.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.35.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_sonyas_march_forward
+	}
+}
+
+country_event = {
+	id = SRU.36
+	title = SRU.36.t
+	desc = SRU.36.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.36.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = {
+	id = SRU.37
+	title = SRU.37.t
+	desc = SRU.37.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.37.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = {
+	id = SRU.38
+	title = SRU.38.t
+	desc = SRU.38.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.38.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_militaristic_solution
+	}
+}
+
+country_event = {
+	id = SRU.39
+	title = SRU.39.t
+	desc = SRU.39.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.39.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = {
+	id = SRU.40
+	title = SRU.40.t
+	desc = SRU.40.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.40.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_independent_workers
+	}
+}
+
+country_event = {
+	id = SRU.41
+	title = SRU.41.t
+	desc = SRU.41.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.41.a 
+		ai_chance = {
+			factor = 100
+		}
+		IF = {
+			limit = { has_idea = SRU_patriotic_workers2 }
+			swap_ideas = {
+				remove_idea = SRU_patriotic_workers2
+				add_idea = SRU_sonyas_economic_miracle_mil
+			}
+		}
+
+		IF = {
+			limit = { has_idea = SRU_capitalism_with_socialist_char1 }
+			swap_ideas = {
+				remove_idea = SRU_capitalism_with_socialist_char1
+				add_idea = SRU_sonyas_economic_miracle_civ
+			}
+		}
 	}
 }

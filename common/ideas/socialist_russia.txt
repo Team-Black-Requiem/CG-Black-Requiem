@@ -213,6 +213,238 @@ ideas = {
 			}
 	   }
 
+	   SRU_sonyas_march_forward = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				conversion_cost_civ_to_mil_factor = 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
+			}
+   		}
+
+		SRU_patriotic_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+   		}
+
+		SRU_patriotic_workers1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+			}
+   		}
+
+		SRU_patriotic_workers2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+   		}
+
+		SRU_militaristic_solution = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+   		}
+
+		SRU_universal_employment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_building_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+   		}
+
+		SRU_universal_employment1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_building_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+   		}
+
+		SRU_capitalism_with_socialist_char = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				local_resources_factor = 0.15
+			}
+   		}
+
+		SRU_capitalism_with_socialist_char1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				local_resources_factor = 0.15
+				production_speed_building_factor = 0.1
+			}
+   		}
+
+		SRU_independent_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.05
+			}
+   		}
+
+		SRU_sonyas_economic_miracle_mil = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_building_factor = 0.05
+				political_power_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+			}
+   		}
+
+		   SRU_sonyas_economic_miracle_civ = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_building_factor = 0.15
+				local_resources_factor = 0.15
+			}
+   		}
+
     }
 	
 	
@@ -316,5 +548,31 @@ ideas = {
 				light_aircraft_manufacturer
 			}
 		}
+	}
+
+	materiel_manufacture = {
+	
+		SRU_mandatory_trade_unions = {
+	
+			allowed = {
+				original_TAG = SRU
+			}
+	
+			visible = {
+				has_completed_focus = Mandatory_Trade_Unions
+			}
+	
+			picture = arthur_the_generic
+	
+			traits = { infantry_equipment_manufacturer }
+	
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+	
+	
 	}
 }

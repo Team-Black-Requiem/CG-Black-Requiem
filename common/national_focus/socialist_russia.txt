@@ -3144,7 +3144,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.35
+				}
 
 			}
 			focus = {
@@ -3162,13 +3164,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_research_slot = 1
+				}
 
 			}
 			focus = {
 				id = Battle_Economy
 				icon = GFX
-				cost = 5
+				cost = 1
 				x = -3
 				y = 1
 				prerequisite = { focus = Communal_Planning }
@@ -3181,13 +3185,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.36
+				}
 
 			}
 			focus = {
 				id = A_Social_Econonmy
 				icon = GFX
-				cost = 5
+				cost = 1
 				x = 3
 				y = 1
 				prerequisite = { focus = Communal_Planning }
@@ -3199,7 +3205,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.37
+				}
 
 			}
 			focus = {
@@ -3217,7 +3225,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_patriotic_workers
+				}
 
 			}
 			focus = {
@@ -3235,7 +3245,32 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					563 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 6
+							instant_build = yes
+						}
+					}
+					40 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 6
+							instant_build = yes
+						}
+					}
+				}
 
 			}
 			focus = {
@@ -3253,7 +3288,12 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = { 
+						remove_idea = SRU_patriotic_workers
+						add_idea = SRU_patriotic_workers1
+					}
+				}
 
 			}
 			focus = {
@@ -3271,13 +3311,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = { 
+						remove_idea = SRU_patriotic_workers1
+						add_idea = SRU_patriotic_workers2
+					}
+				}
 
 			}
 			focus = {
 				id = Militaristic_Solution
 				icon = GFX
-				cost = 5
+				cost = 2
 				x = -2
 				y = 1
 				prerequisite = { focus = Fudge_the_Numbers }
@@ -3289,7 +3334,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.38
+				}
 
 			}
 			focus = {
@@ -3308,7 +3355,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.39
+				}
 
 			}
 			focus = {
@@ -3326,7 +3375,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_universal_employment
+				}
 
 			}
 			focus = {
@@ -3344,7 +3395,13 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_stability = 0.05
+					swap_ideas = { 
+						remove_idea = SRU_universal_employment
+						add_idea = SRU_universal_employment1
+					}
+				}
 
 			}
 			focus = {
@@ -3362,7 +3419,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_capitalism_with_socialist_char
+				}
 
 			}
 			focus = {
@@ -3380,7 +3439,12 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = { 
+						remove_idea = SRU_capitalism_with_socialist_char
+						add_idea = SRU_capitalism_with_socialist_char1
+					}
+				}
 
 			}
 			focus = {
@@ -3398,25 +3462,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Productive_Cities
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Patriotic_Workers }
-				relative_position_id = Patriotic_Workers
-				available = {
-								country_exists = SRU 
+				completion_reward = {
+					# this focus unlocks new production company
 				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
 
 			}
 			focus = {
@@ -3434,13 +3482,30 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					563 = {
+						local_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 6
+							instant_build = yes
+						}
+					}
+					40 = {
+						local_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 6
+							instant_build = yes
+						}
+					}
+				}
 
 			}
 			focus = {
-				id = Indepemdent_workers
+				id = Independent_workers
 				icon = GFX
-				cost = 5
+				cost = 2
 				x = 2
 				y = 1
 				prerequisite = { focus = Mandatory_Trade_Unions }
@@ -3452,13 +3517,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.40
+				}
 
 			}
 			focus = {
 				id = Sonyas_Economic_Miracle
 				icon = GFX
-				cost = 5
+				cost = 1
 				x = 3
 				y = 2
 				prerequisite = { focus = Fudge_the_Numbers
@@ -3471,7 +3538,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.41
+				}
 
 			}
 	
@@ -4117,23 +4186,6 @@
 				available_if_capitulated = no
 				completion_reward = {}
 
-			}
-			focus = {
-				id = Productive_Cities
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Patriotic_Workers }
-				relative_position_id = Patriotic_Workers
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				available_if_capitulated = no
-				completion_reward = {}
 			}
 			focus = {
 				id = Crush_the_West
