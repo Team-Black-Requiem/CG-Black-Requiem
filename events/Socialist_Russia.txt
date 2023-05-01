@@ -819,3 +819,25 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = SRU.42
+	title = SRU.42.t
+	desc = SRU.42.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.42.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.05
+		swap_ideas = { 
+			remove_idea = SRU_universal_employment
+			add_idea = SRU_universal_employment1
+		}
+	}
+}
