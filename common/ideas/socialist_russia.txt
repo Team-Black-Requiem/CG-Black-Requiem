@@ -445,6 +445,8 @@ ideas = {
 			}
    		}
 
+		
+
     }
 	
 	
@@ -468,7 +470,62 @@ ideas = {
 			}
 
 		}
-	}
+
+		SRU_recruit_more_peasants = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			conscription = 0.03
+			}
+	   }
+
+	     SRU_tankovyy_desent = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+            equipment_bonus = {
+			MBT_armour = {
+			armor_value = 0.05
+				}
+			}
+			}
+	   }
+
+	   	   SRU_danger_close = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+            
+			}
+	   }
+    }
 
 	industrial_concern = {
 		designer = yes
