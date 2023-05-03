@@ -62,6 +62,81 @@ ideas = {
 			moderate_liberalism_drift = -0.01
 			}
 		}
+		SRU_peasant_army = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+		   experience_gain_army_factor = -0.05
+		   conscription_factor = 0.05
+		   
+		   }
+	   }
+	   SRU_peoples_army = {
+		
+		allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+	   experience_gain_army_factor = 0.05
+	   conscription_factor = 0.1
+	   army_defence_factor = 0.1
+	   
+	   }
+   }
+	   SRU_peoples_army = {
+		
+		allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+	   experience_gain_army_factor = 0.05
+	   conscription_factor = 0.1
+	   army_defence_factor = 0.1
+	   
+	   }
+   }
+   	   SRU_red_army = {
+		
+		allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+		army_attack_factor = 0.15
+		army_speed_factor = 0.05
+	   
+	   }
+   }
+  
 		
 		SRU_unprofessional_army = {
 		
@@ -444,34 +519,223 @@ ideas = {
 				local_resources_factor = 0.15
 			}
    		}
-
-		
-
-    }
-	
-	
-	
-		tank_manufacturer = {
-		designer = yes
-
-		SOC_SIB_gen_tank_man = {
-			# picture = 
+		   SRU_standardising_basic_training = {
 
 			allowed = {
-				original_tag = SRU
+				always = no
 			}
 
-			research_bonus = {
-				armor = 0.05
+			allowed_civil_war = {
+				always = yes
 			}
 
-			traits = {
-				fast_tank_manufacturer
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability_factor = 0.05
+				}
 			}
 
+			modifier = {
+			army_org_factor = 0.05
+			}
+	   }
+	   SRU_make_stalinium = {
+
+		allowed = {
+			always = no
 		}
 
-		SRU_recruit_more_peasants = {
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+   }
+        SRU_experienced_pilots_only = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		#Requested modifiers depend on a system and unit type we haven't even added in yet
+   }
+        SRU_keeping_our_best_online = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+			#Once again, dependant system is yet to be implemented
+		}
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+   }
+   SRU_knights_of_socialism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+			army_leader_start_level = 1
+		}
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+		}
+   }
+   SRU_cleaning_up_knightmare_production = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+		}
+   }
+   SRU_manuals_even_privates_could_read = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+			army_leader_start_level = 1
+			experience_gain_knightmares_combat_factor = 0.1
+			army_org_factor = 0.05
+		}
+   }
+   SRU_reinforcing_the_legs = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+		}
+   }
+   SRU_mastered_knightmare_production = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+			knightmares_equipment = {
+				instant = yes
+				build_cost_ic = -0.15
+				reliability = -0.05
+			}
+		}
+   }
+   
+	   SRU_aviation_intergration = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		air_cas_efficiency = 0.1
+		}
+   }
+       SRU_load_up_troops = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			mechanized_equipment = {
+				instant = yes
+				build_cost_ic = -0.1
+			}
+		}
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.1
+			}
+		}
+   }
+		   SRU_recruit_more_peasants = {
 
 			allowed = {
 				always = no
@@ -500,13 +764,13 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
+			
             equipment_bonus = {
 			MBT_armour = {
-			armor_value = 0.05
+			defense = 0.05
 				}
 			}
-			}
+			
 	   }
 
 	   	   SRU_danger_close = {
@@ -521,10 +785,58 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
-            
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+				}
 			}
 	   }
+	   SRU_through_blood_and_iron = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+            modifier = {
+				war_support_weekly_factor = 0.2
+				recruitable_population_factor = 0.1
+
+			}
+	   }
+
+		
+
+    
+	
+	
+	
+		tank_manufacturer = {
+		designer = yes
+
+		SOC_SIB_gen_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				fast_tank_manufacturer
+			}
+
+		}
+
     }
 
 	industrial_concern = {

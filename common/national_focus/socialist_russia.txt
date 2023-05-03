@@ -2757,7 +2757,10 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_peasant_army
+					country_event = SRU.43
+				}
 
 			}
 			focus = {
@@ -2765,8 +2768,9 @@
 				icon = GFX
 				cost = 5
 				x = -6
-				y = 3
+				y = 1
 				prerequisite = { focus = Sokolos_mili_Refor }
+				mutually_exclusive = { focus = Red_Army}
 				relative_position_id = Sokolos_mili_Refor
 				available = {
 								country_exists = SRU 
@@ -2775,7 +2779,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.44
+				}
 
 			}
 			focus = {
@@ -2793,7 +2799,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_recruit_more_peasants
+				}
 
 			}
 			focus = {
@@ -2811,7 +2819,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_tankovyy_desent
+				}
 
 			}
 			focus = {
@@ -2830,7 +2840,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_danger_close
+				}
 
 			}
 			focus = {
@@ -2838,7 +2850,7 @@
 				icon = GFX
 				cost = 5
 				x = 0
-				y = 1
+				y = 2
 				prerequisite = { focus = Danger_close }
 				relative_position_id = Danger_close
 				available = {
@@ -2848,7 +2860,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					if = {
+						limit = {
+							has_idea = SRU_peasant_army
+						}
+						swap_ideas = {
+							remove_idea = SRU_peasant_army
+							add_idea = SRU_peoples_army
+						}
+					}
+					country_event = SRU.45
+				}
 
 			}
 			focus = {
@@ -2856,7 +2879,8 @@
 				icon = GFX
 				cost = 5
 				x = 0
-				y = 1
+				y = 2
+
 				prerequisite = { focus = Sokolos_mili_Refor }
 				relative_position_id = Sokolos_mili_Refor
 				available = {
@@ -2866,7 +2890,11 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					#Asks for a knightmare advisor? Since it's a science person rather than military I don't know what it would classify as
+					#This needs doing down the line
+					country_event = SRU.46
+				}
 
 			}
 			focus = {
@@ -2876,7 +2904,7 @@
 				x = -2
 				y = 1
 				prerequisite = { focus = Crimson_Steel }
-				mutually_exclusive { focus = Clean_up_Knightmare_pro }
+				mutually_exclusive = { focus = Clean_up_Knightmare_pro }
 				relative_position_id = Crimson_Steel
 				available = {
 								country_exists = SRU 
@@ -2885,7 +2913,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_make_stalinium
+				}
 
 			}
 			focus = {
@@ -2903,7 +2933,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_experienced_pilots_only
+				}
 
 			}
 			focus = {
@@ -2921,7 +2953,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_keeping_our_best_online
+				}
 
 			}
 			focus = {
@@ -2940,7 +2974,10 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_knights_of_socialism
+					country_event = SRU.47
+				}
 
 			}
 			focus = {
@@ -2958,7 +2995,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_cleaning_up_knightmare_production
+				}
 
 			}
 			focus = {
@@ -2976,7 +3015,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_manuals_even_privates_could_read
+				}
 
 			}
 			focus = {
@@ -2994,7 +3035,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_reinforcing_the_legs
+				}
 
 			}
 			focus = {
@@ -3013,7 +3056,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					if = {
+						limit = { 
+							has_idea = SRU_cleaning_up_knightmare_production
+						}
+						swap_ideas = {
+							remove_idea = SRU_cleaning_up_knightmare_production
+							add_idea = SRU_mastered_knightmare_production
+						}
+					}
+					country_event = SRU.48
+				}
 
 			}
 			focus = {
@@ -3021,8 +3075,9 @@
 				icon = GFX
 				cost = 5
 				x = 6
-				y = 3
+				y = 1
 				prerequisite = { focus = Sokolos_mili_Refor }
+				mutually_exclusive = { focus = Peasant_Militias}
 				relative_position_id = Sokolos_mili_Refor
 				available = {
 								country_exists = SRU 
@@ -3031,7 +3086,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.49
+				}
 
 			}
 			focus = {
@@ -3049,7 +3106,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_standardising_basic_training
+				}
 
 			}
 			focus = {
@@ -3067,7 +3126,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_aviation_intergration
+				}
 
 			}
 			focus = {
@@ -3086,7 +3147,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_load_up_troops
+				}
 
 			}
 			focus = {
@@ -3094,7 +3157,7 @@
 				icon = GFX
 				cost = 5
 				x = 0
-				y = 1
+				y = 2
 				prerequisite = { focus = Load_Up_the_Troops }
 				relative_position_id = Load_Up_the_Troops
 				available = {
@@ -3104,7 +3167,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					if = {
+						limit = {
+							has_idea = SRU_peasant_army
+						}
+						swap_ideas = {
+							remove_idea = SRU_peasant_army
+							add_idea = SRU_red_army
+						}
+					}
+					country_event = SRU.50
+				}
 
 			}
 			focus = {
@@ -3112,7 +3186,7 @@
 				icon = GFX
 				cost = 5
 				x = 6
-				y = 1
+				y = 2
 				prerequisite = { focus = Spirit_Of_The_People
 			                   focus = Knights_of_socialism
 							   focus = Mastering_Knightmare_production
@@ -3125,7 +3199,10 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_through_blood_and_iron
+					country_event = SRU.51
+				}
 
 			}
 
