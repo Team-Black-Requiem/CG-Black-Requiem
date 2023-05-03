@@ -23,14 +23,14 @@ duplicate_archetypes = {
 		}
 	}
 
-	#main_battle_tank_assault_gun_chassis = {
-	#	archetype = main_battle_tank_chassis
-	#	type = { armor rocket }
-	#	for_each = {
-	#		variant_name = { find_and_replace = { "chassis" "equipment" } }
-	#		hardness = { set = 0.80 }
-	#	}
-	#}
+	main_battle_tank_assault_gun_chassis = {
+		archetype = main_battle_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.80 }
+		}
+	}
 
 	# Sakuradite MBT #
 
@@ -42,134 +42,134 @@ duplicate_archetypes = {
 	#    #  # #  #  #  #    #   # #    #  ##   #      #
 	####  ### #### ### #    #   # #### #   #   #   ####
 
-equipments = {
-
-	main_battle_tank_equipment_1 = {
-		year = 2009
-
-		archetype = main_battle_tank_chassis
-		priority = 50
-		visual_level = 0
-		is_convertable = yes
-		upgrades = {
-			tank_reliability_upgrade
-			tank_engine_upgrade
-			tank_armor_upgrade
-			tank_gun_upgrade
-		}
-		#Misc Abilities
-		maximum_speed = 8
-		reliability = 0.8
-
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 36
-		hardness = 0.9
-		armor_value = 60
-
-		#Offensive Abilities
-		soft_attack = 19
-		hard_attack = 14
-		ap_attack = 61
-		air_attack = 0
-
-		#Space taken in convoy
-		lend_lease_cost = 12
-		
-		build_cost_ic = 12 
-		resources = {
-			#oil = 1
-			tungsten = 2
-			steel = 2
-		}
-		
-		fuel_consumption = 3.6
-	}
-
-
-	### NOTE : the TD, SPG, and AG all share the same stats because I am Lazy and
-	### I also don't know how to balance things in terms of stats as well
-	
-	main_battle_tank_destroyer_equipment_1 = {
-		year = 2009
-
-		archetype = main_battle_tank_destroyer_chassis
-		visual_level = 0
-		can_convert_from = {
-			main_battle_tank_equipment_1
-		}
-		upgrades = {
-			tank_reliability_upgrade
-			tank_engine_upgrade
-			tank_armor_upgrade
-			tank_art_upgrade
-		}
-		#Misc Abilities
-		maximum_speed = 8
-		reliability = 0.8
-
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 3
-		hardness = 0.65
-		armor_value = 45
-
-		#Offensive Abilities
-		soft_attack = 42
-		hard_attack = 1
-		ap_attack = 5
-		air_attack = 0
-
-		build_cost_ic = 12
-		
-		resources = {
-			#oil = 1
-			tungsten = 3
-			steel = 2
-		}
-		fuel_consumption = 1.8
-	}
-
-	main_battle_tank_artillery_equipment_1 = {
-		year = 2009
-
-		archetype = main_battle_tank_artillery_chassis
-		visual_level = 0
-		can_convert_from = {
-			main_battle_tank_equipment_1
-		}
-		upgrades = {
-			tank_reliability_upgrade
-			tank_engine_upgrade
-			tank_armor_upgrade
-			tank_art_upgrade
-		}
-		#Misc Abilities
-		maximum_speed = 8
-		reliability = 0.8
-
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 3
-		hardness = 0.65
-		armor_value = 45
-
-		#Offensive Abilities
-		soft_attack = 42
-		hard_attack = 1
-		ap_attack = 5
-		air_attack = 0
-
-		build_cost_ic = 12
-		
-		resources = {
-			#oil = 1
-			tungsten = 3
-			steel = 2
-		}
-		fuel_consumption = 1.8
-	}
-
+#equipments = {
+#
+#	main_battle_tank_equipment_1 = {
+#		year = 2009
+#
+#		archetype = main_battle_tank_chassis
+#		priority = 50
+#		visual_level = 0
+#		is_convertable = yes
+#		upgrades = {
+#			tank_reliability_upgrade
+#			tank_engine_upgrade
+#			tank_armor_upgrade
+#			tank_gun_upgrade
+#		}
+#		#Misc Abilities
+#		maximum_speed = 8
+#		reliability = 0.8
+#
+#		#Defensive Abilities
+#		defense = 5
+#		breakthrough = 36
+#		hardness = 0.9
+#		armor_value = 60
+#
+#		#Offensive Abilities
+#		soft_attack = 19
+#		hard_attack = 14
+#		ap_attack = 61
+#		air_attack = 0
+#
+#		#Space taken in convoy
+#		lend_lease_cost = 12
+#		
+#		build_cost_ic = 12 
+#		resources = {
+#			#oil = 1
+#			tungsten = 2
+#			steel = 2
+#		}
+#		
+#		fuel_consumption = 3.6
+#	}
+#
+#
+#	### NOTE : the TD, SPG, and AG all share the same stats because I am Lazy and
+#	### I also don't know how to balance things in terms of stats as well
+#	
+#	main_battle_tank_destroyer_equipment_1 = {
+#		year = 2009
+#
+#		archetype = main_battle_tank_destroyer_chassis
+#		visual_level = 0
+#		can_convert_from = {
+#			main_battle_tank_equipment_1
+#		}
+#		upgrades = {
+#			tank_reliability_upgrade
+#			tank_engine_upgrade
+#			tank_armor_upgrade
+#			tank_art_upgrade
+#		}
+#		#Misc Abilities
+#		maximum_speed = 8
+#		reliability = 0.8
+#
+#		#Defensive Abilities
+#		defense = 5
+#		breakthrough = 3
+#		hardness = 0.65
+#		armor_value = 45
+#
+#		#Offensive Abilities
+#		soft_attack = 42
+#		hard_attack = 1
+#		ap_attack = 5
+#		air_attack = 0
+#
+#		build_cost_ic = 12
+#		
+#		resources = {
+#			#oil = 1
+#			tungsten = 3
+#			steel = 2
+#		}
+#		fuel_consumption = 1.8
+#	}
+#
+#	main_battle_tank_artillery_equipment_1 = {
+#		year = 2009
+#
+#		archetype = main_battle_tank_artillery_chassis
+#		visual_level = 0
+#		can_convert_from = {
+#			main_battle_tank_equipment_1
+#		}
+#		upgrades = {
+#			tank_reliability_upgrade
+#			tank_engine_upgrade
+#			tank_armor_upgrade
+#			tank_art_upgrade
+#		}
+#		#Misc Abilities
+#		maximum_speed = 8
+#		reliability = 0.8
+#
+#		#Defensive Abilities
+#		defense = 5
+#		breakthrough = 3
+#		hardness = 0.65
+#		armor_value = 45
+#
+#		#Offensive Abilities
+#		soft_attack = 42
+#		hard_attack = 1
+#		ap_attack = 5
+#		air_attack = 0
+#
+#		build_cost_ic = 12
+#		
+#		resources = {
+#			#oil = 1
+#			tungsten = 3
+#			steel = 2
+#		}
+#		fuel_consumption = 1.8
+#	}
+#
 #	main_battle_tank_assault_gun_equipment_1 = {
 #		year = 2009
 #
@@ -209,4 +209,4 @@ equipments = {
 #		}
 #		fuel_consumption = 1.8
 #	}
-}
+#}
