@@ -288,6 +288,27 @@ ideas = {
 			}
 	   }
 
+	   SRU_age_of_terror_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			add_stability = -0.1
+			add_war_support = 0.15
+			compliance_gain = 0.05
+			resitance_stregth = 0.05
+		}
+   }
+
+
 	   SRU_sonyas_march_forward = {
 
 			allowed = {
@@ -553,7 +574,39 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_mass_prod_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_all_pur_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_artillery_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_fortress_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_melee_unit = {
 				instant = yes
 				reliability = 0.05
 				armor_value = 0.05
@@ -588,7 +641,35 @@ ideas = {
 			#Once again, dependant system is yet to be implemented
 		}
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_mass_prod_unit = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_all_pur_unit = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_artillery_unit = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_fortress_unit = {
+				instant = yes
+				reliability = 0.05
+			}
+		}
+
+		equipment_bonus = {
+			knightmare_melee_unit = {
 				instant = yes
 				reliability = 0.05
 			}
@@ -609,7 +690,39 @@ ideas = {
 			army_leader_start_level = 1
 		}
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_all_pur_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			} 
+				
+			knightmare_artillery_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+			
+			knightmare_mass_prod_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+
+		    knightmare_melee_unit = {
 				instant = yes
 				soft_attack = 0.05
 				hard_attack = 0.05
@@ -630,7 +743,31 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_all_pur_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_artillery_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_mass_prod_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_melee_unit = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
@@ -666,7 +803,35 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_all_pur_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_artillery_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_mass_prod_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_melee_unit = {
 				instant = yes
 				armor_value = 0.05
 				hardness = 0.05
@@ -686,14 +851,37 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+			knightmare_mass_prod_unit = {
 				instant = yes
 				build_cost_ic = -0.15
 				reliability = -0.05
 			}
-		}
+
+			knightmare_all_pur_unit = {
+				instant = yes
+				build_cost_ic = -0.15
+				reliability = -0.05
+			}
+
+			knightmare_artillery_unit = {
+				instant = yes
+				build_cost_ic = -0.15
+				reliability = -0.05
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				build_cost_ic = -0.15
+				reliability = -0.05
+			}
+
+			knightmare_melee_unit = {
+				instant = yes
+				build_cost_ic = -0.15
+				reliability = -0.05
+			}
    }
-   
+}
 	   SRU_aviation_intergration = {
 
 		allowed = {
@@ -766,7 +954,7 @@ ideas = {
 
 			
             equipment_bonus = {
-			MBT_armour = {
+			modern_armor = {
 			defense = 0.05
 				}
 			}
@@ -944,4 +1132,6 @@ ideas = {
 	
 	
 	}
+	
+}
 }
