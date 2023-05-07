@@ -287,6 +287,26 @@ ideas = {
 				add_war_support = 0.15
 			}
 	   }
+    
+	   SRU_age_of_terror_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			add_stability = -0.1
+			add_war_support = 0.15
+			compliance_gain = 0.05
+			resitance_stregth = 0.05
+		}
+   }
 
 	   SRU_sonyas_march_forward = {
 
@@ -501,7 +521,7 @@ ideas = {
    		}
 
 		   SRU_sonyas_economic_miracle_civ = {
-
+         
 			allowed = {
 				always = no
 			}
@@ -519,6 +539,8 @@ ideas = {
 				local_resources_factor = 0.15
 			}
    		}
+
+		
 		   SRU_standardising_basic_training = {
 
 			allowed = {
@@ -531,17 +553,47 @@ ideas = {
 
 			removal_cost = -1
 			equipment_bonus = {
-				infantry_equipment = {
+				
+				knightmare_mass_prod_unit = {
 					instant = yes
-					reliability_factor = 0.05
+					reliability = 0.05
+					
 				}
+			
+				knightmare_all_pur_unit = {
+					instant = yes
+					reliability = 0.05
+					
+				}
+			
+	
+				knightmare_artillery_unit = {
+					instant = yes
+					reliability = 0.05
+					
+				}
+			
+	
+			
+				knightmare_fortress_unit = {
+					instant = yes
+					reliability = 0.05
+					
+				}
+			
+				knightmare_melee_unit = {
+					instant = yes
+					reliability = 0.05
+				}
+		
 			}
-
 			modifier = {
 			army_org_factor = 0.05
 			}
 	   }
-	   SRU_make_stalinium = {
+	}
+
+	SRU_make_stalinium = {
 
 		allowed = {
 			always = no
@@ -553,13 +605,38 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+		
+			knightmare_mass_prod_unit = {
 				instant = yes
 				reliability = 0.05
 				armor_value = 0.05
 			}
-		}
+	
+			knightmare_all_pur_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		
+			knightmare_artillery_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		
+			knightmare_fortress_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
+			}
+		
+			knightmare_melee_unit = {
+				instant = yes
+				reliability = 0.05
+				armor_value = 0.05
    }
+}
+	}
         SRU_experienced_pilots_only = {
 
 		allowed = {
@@ -588,12 +665,40 @@ ideas = {
 			#Once again, dependant system is yet to be implemented
 		}
 		equipment_bonus = {
-			knightmares_equipment = {
+			
+			knightmare_mass_prod_unit = {
 				instant = yes
 				reliability = 0.05
+				
 			}
-		}
-   }
+	
+			knightmare_all_pur_unit = {
+				instant = yes
+				reliability = 0.05
+			
+			}
+		
+			knightmare_artillery_unit = {
+				instant = yes
+				reliability = 0.05
+			
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				reliability = 0.05
+			
+			}
+		
+
+	
+			knightmare_melee_unit = {
+				instant = yes
+				reliability = 0.05
+				
+            }
+        }
+	}
    SRU_knights_of_socialism = {
 
 		allowed = {
@@ -609,15 +714,46 @@ ideas = {
 			army_leader_start_level = 1
 		}
 		equipment_bonus = {
-			knightmares_equipment = {
+		
+			knightmare_all_pur_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			} 
+				
+			knightmare_artillery_unit = {
 				instant = yes
 				soft_attack = 0.05
 				hard_attack = 0.05
 				ap_attack = 0.05
 				defence = -0.1
 			}
-		}
-   }
+
+			knightmare_fortress_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+			
+			knightmare_mass_prod_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.05
+				defence = -0.1
+			}
+
+		    knightmare_melee_unit = {
+				instant = yes
+				soft_attack = 0.05
+				hard_attack = 0.05
+       }
+	}
+}
    SRU_cleaning_up_knightmare_production = {
 
 		allowed = {
@@ -630,13 +766,38 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+		
+			knightmare_all_pur_unit = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
 			}
-		}
-   }
+
+			knightmare_artillery_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_mass_prod_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_melee_unit = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+       }
+	}
+}
    SRU_manuals_even_privates_could_read = {
 
 		allowed = {
@@ -666,14 +827,42 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			knightmares_equipment = {
+			
+			knightmare_all_pur_unit = {
 				instant = yes
 				armor_value = 0.05
 				hardness = 0.05
 				reliability = 0.05
 			}
-		}
-   }
+
+			knightmare_artillery_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_fortress_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_mass_prod_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+				reliability = 0.05
+			}
+
+			knightmare_melee_unit = {
+				instant = yes
+				armor_value = 0.05
+				hardness = 0.05
+       }
+	}
+}
    SRU_mastered_knightmare_production = {
 
 		allowed = {
@@ -685,14 +874,43 @@ ideas = {
 		}
 
 		removal_cost = -1
-		equipment_bonus = {
-			knightmares_equipment = {
-				instant = yes
-				build_cost_ic = -0.15
-				reliability = -0.05
+		
+			equipment_bonus = {
+				knightmare_mass_prod_unit = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+				}
+	
+				knightmare_all_pur_unit = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+				}
+	
+				knightmare_artillery_unit = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+				}
+	
+				knightmare_fortress_unit = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+				}
+	
+				knightmare_melee_unit = {
+					instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+				}
 			}
-		}
-   }
+	   }
+	
+	
+		
+   
    
 	   SRU_aviation_intergration = {
 
@@ -727,8 +945,6 @@ ideas = {
 				instant = yes
 				build_cost_ic = -0.1
 			}
-		}
-		equipment_bonus = {
 			motorized_equipment = {
 				instant = yes
 				build_cost_ic = -0.1
@@ -872,7 +1088,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				infantry_equipment = 0.05
+				infantry_tech = 0.05
 			}
 
 			traits = {
