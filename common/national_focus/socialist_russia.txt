@@ -633,8 +633,6 @@
 			available = {
                            country_exists = SRU
 			}
-
-			
 			ai_will_do = {
 					factor = 100
 				}
@@ -660,13 +658,13 @@
 			available = {
                            country_exists = SRU
 			}
-
-
 			ai_will_do = {
 					factor = 100
 				}
             
-		 
+		    allow_branch = {
+				has_country_flag = Purges
+			}
 			available_if_capitulated = no
 			completion_reward = {
 				add_country_leader_trait = propagandist
@@ -772,10 +770,7 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-                   add_ideas =   SRU_age_of_terror_2 
-
-				}
+				completion_reward = {}
 
 			}
 			focus = {
@@ -900,16 +895,14 @@
 								country_exists = SRU 
 				}
                 
-				allow_branch = {
-					has_country_flag = concession
+		        allow_branch = {
+					has_country_flag = Comprimise
 				}
 				ai_will_do = {
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-					country_event = SRU.52
-				}
+				completion_reward = {}
 
 			}
 			focus = {
@@ -927,9 +920,7 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-					country_event = SRU.53
-				}
+				completion_reward = {}
 
 			}
 			focus = {
@@ -947,9 +938,7 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-					country_event = SRU.54
-				}
+				completion_reward = {}
 
 			}
 			focus = {
@@ -1095,9 +1084,7 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-					country_event = SRU.55
-				}
+				completion_reward = {}
 
 			}
 			focus = {
@@ -1134,9 +1121,7 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {
-					country_event = SRU.56
-				}
+				completion_reward = {}
 
 			}
 			focus = {
