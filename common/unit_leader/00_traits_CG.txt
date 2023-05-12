@@ -1,0 +1,364 @@
+leader_traits = {
+
+	fast_learner = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			experience_gain_factor = 0.25
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+
+	chessmaster = {  #Lelouch and Schneizel
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			max_planning = 0.5
+			planning_speed = 0.50
+			army_org = 5
+			army_org_regain = 0.2
+			org_loss_when_moving = -0.25
+			terrain_penalty_reduction = 0.5
+		}
+		
+
+		planning_skill_factor = 1
+
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	#####################
+	########Geass########
+	
+	##some of these might need unique leader abilities
+	##maybe unique tactics next update? Is that possible?
+	
+	code = {	#C.C and V.V
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			wounded_chance_factor = -1		#never gets wounded
+			experience_gain_factor = 0.15   #they've seen everything
+		}
+	}
+	
+	absolute_obedience = {
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_morale_factor = -0.05
+			recon_factor = 0.50
+			supply_consumption_factor = -0.5
+			equipment_capture_factor = 0.1
+		}
+
+		attack_skill_factor = 1
+		logistics_skill_factor = 1
+
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	live = { ##Suzaku?
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			wounded_chance_factor = -1		#he's probably Reckless or make a unique suicidal trait that will detract from this so he can still be wounded.
+			experience_loss_factor = -0.25
+			army_armor_speed_factor = 0.25
+		}	
+
+		defense_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	
+	}
+	
+	cyborg = {	#Orange Boi
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			wounded_chance_factor = -0.75
+			army_armor_speed_factor = 0.1
+			army_armor_defense_factor = 0.1
+		}
+		
+		defense_skill = 1		
+
+		defense_skill_factor = 1
+		attack_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	
+	geass_canceller = {	#make event for this somehow?
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			recon_factor = 0.15
+			army_org_regain = 0.15
+			army_core_defence_factor = 0.1
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	
+	## so at this point I'm just going to add other geass that may or may not get used.
+	
+	absolute_prediction = { ##Bismarck Waldstein
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_armor_speed_factor = 0.15
+			army_armor_attack_factor = 0.15
+			army_org_regain = 0.1
+		}
+		
+		attack_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	marianne = { #Anya possessed
+		type = army
+		trait_type = personality_trait
+		modifier = {
+			army_armor_speed_factor = 0.2
+			army_armor_attack_factor = 0.2
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	absolute_suspension_1 = { #Rolo as general
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_armor_speed_factor = 0.15
+			planning_speed = 0.1
+			wounded_chance_factor = 0.25 #Rolo's arrhythmia
+		}
+		
+		planning_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	absolute_suspension_2 = { # Rolo as operative
+		type = operative
+		trait_type = personality_trait
+		modifier = {
+			target_sabotage_factor = 0.25
+			target_sabotage_risk = -0.25
+			operation_rescue_operative_risk = -0.1
+			operation_rescue_operative_cost = -0.1
+			own_operative_detection_chance_factor = -0.25
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	absolute_sound = { ##Mao's gonna be a superspy
+		type = operative
+		trait_type = personality_trait
+		modifier = {
+			own_operative_detection_chance_factor = -0.25
+			operation_infiltrate_outcome = 0.25
+			operation_infiltrate_risk = -0.25
+			operation_capture_cipher_outcome = 0.25
+			operation_steal_tech_risk = -0.25
+			operation_steal_tech_outcome = 0.25
+		}
+		new_commander_weight = {
+			factor = 0 
+		}	
+	}
+	
+	transformation = { #Orpheus Zevon - he also needs vanilla "double agent" trait as he's both Brittanian and EU
+		type = operative
+		trait_type = personality_trait
+		modifier = {
+			own_operative_detection_chance_factor = -0.3
+			operation_infiltrate_outcome = 0.25
+			operation_infiltrate_risk = -0.25
+		}
+		new_commander_weight = {
+			factor = 0 
+		}	
+	}
+	
+	forgetting = {	#Toto Thompson - weaker memory erasure
+		type = operative
+		trait_type = personality_trait
+		modifier = {
+			own_operative_detection_chance_factor = -0.5
+		}
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	absolute_submission = { #Marrybell mel Britannia
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_attack_factor = 0.15
+			army_morale_factor = -0.15
+			supply_consumption_factor = -0.2
+			equipment_capture_factor = 0.05
+		}
+
+		logistics_skill_factor = 1
+
+		new_commander_weight = {
+			factor = 0 
+		}
+	
+	}
+	
+	cursed_life = {	#Shin Hyuga Shaing's cursed geass
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			#needs something cool, maybe something event-driven?
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	die = {
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			wounded_chance_factor = 0.25
+			army_armor_speed_factor = 0.1
+			army_armor_attack_factor = 0.1
+		}
+		
+		attack_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	fragment_of_geass = {	#Leila Malcal I have no idea how to portary this... moral bonus I guess?
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_org = 5
+			army_org_regain = 0.15
+			army_morale_factor = 0.15
+		}
+		
+		planning_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	iff_geass = {	#Swaile Qujappat from Resurrection
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_morale_factor = 0.05
+			recon_factor = 0.25
+		}
+		
+		planning_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	absolute_seer = {	#Shamna's ability to see thought time.
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			recon_factor = 0.5
+			max_planning = 0.25
+			planning_speed = 0.25
+			army_org_regain = 0.5
+			org_loss_when_moving = -0.25
+			terrain_penalty_reduction = 0.25
+		}
+		
+		planning_skill_factor = 1
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	
+	}
+	
+	#####################
+	########Knights######
+	
+	###going to wait to get icons for these
+	
+	knight_rounds = {
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_org_factor = 0.15
+			army_morale_factor = 0.15
+			army_armor_attack_factor = 0.1
+			army_armor_speed_factor = 0.1
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	glynda_knights = {
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_morale_factor = 0.05
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+	
+	glaston_knights = {
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			army_morale_factor = 0.05
+		}
+		
+		new_commander_weight = {
+			factor = 0 
+		}
+	}
+
+	
+	
+}
