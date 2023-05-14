@@ -688,6 +688,8 @@
 				}
 			available_if_capitulated = no
 			completion_reward = {
+				add_war_support = -0.05
+				add_political_power = 100
 				country_event = SRU.16
 			}
 			}
@@ -728,6 +730,8 @@
 					}
 				available_if_capitulated = no
 				completion_reward = {
+					add_ideas = SRU_isolate_the_liberals
+					add_political_power = 100
 					country_event = SRU.18
 				}
 				
@@ -750,7 +754,8 @@
 					}
 				available_if_capitulated = no
 				completion_reward = {
-					add_ideas = SRU_age_of_terror
+					add_stability = -0.1
+					add_war_support = 0.15
 					country_event = SRU.19
 				}
 
@@ -788,7 +793,11 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_war_support = 0.2
+					add_ideas = SRU_terrify_the_people
+					country_event = SRU.20
+				}
 
 			}
 			focus = {
@@ -806,7 +815,14 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_stability = -0.1
+					add_political_power = 200
+					set_political_party = {
+						ideology = totalitarian_socialism
+						popularity = 100
+					}
+				}
 
 			}
 			focus = {
