@@ -310,7 +310,7 @@ focus_tree = {
             country_exists = EIZ
             has_country_flag = {
                 flag = eiz_leadership
-                value < 6
+                value > 6
                }
             }
     
@@ -333,7 +333,7 @@ focus_tree = {
     focus = {
         id = EIZ_FredericaVictory
         icon = GFX_EIZ_FredericaVictory
-        x = 50
+        x = 70
         y = 3
 
         cost = 1
@@ -347,13 +347,13 @@ focus_tree = {
             NOT = {
 				has_country_flag = {
 					flag = eiz_leadership
-					value > 6
+					value < 6
 				  }
 
                   	
               has_country_flag = {
 				flag = eiz_leadership
-				value < -6
+				value > -6
 			   }
 			}
             }
@@ -377,7 +377,7 @@ focus_tree = {
     focus = {
         id = EIZ_OskarVictory
         icon = GFX_EIZ_OskarVictory
-        x = 85
+        x = 100
         y = 3
 
         cost = 1
@@ -1859,7 +1859,7 @@ focus_tree = {
         id = EIZ_Lyon_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
         x = -1
-        y = 10
+        y = 12
 
         prerequisite = { 
             focus = EIZ_Lyon_Gain_Aces 
@@ -1871,7 +1871,7 @@ focus_tree = {
             focus = EIZ_lyons_magnum_opus
         }
         prerequisite = { 
-            focus = EIZ_Portugal_Volunteer_Quality focus = EIZ_Portugal_Volunteer_Quantity 
+            focus = EIZ_multinational_volunteers 
         }
 
         relative_position_id = EIZ_Destroy_The_Monarchists
@@ -1904,7 +1904,7 @@ focus_tree = {
     focus = {
         id = EIZ_Frederica_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
-        x = 31
+        x = 51
         y = 0
 
         prerequisite = { 
@@ -2080,7 +2080,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+               add_offsite_building = {
+                type = arms_factory
+                level = 4
+               }
         }
     }
     focus = {
@@ -2120,7 +2123,16 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+                production_factory_efficiency_gain_factor = 0.05
+                add_offsite_building = {
+                    type = arms_factory
+                    level = 2
+                }
+
+                add_offsite_building = {
+                    type = industrial_complex
+                    level = 2
+                }
         }
     }
     focus = {
@@ -2157,7 +2169,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+                add_offsite_building = {
+                    type = industrial_complex
+                    level = 4
+                }
         }
     }
     focus = {
@@ -2190,7 +2205,9 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+               add_stability = 0.05
+               add_political_power_gain = 0.05
+               add_manpower = -300
         }
     }
     focus = {
@@ -2223,7 +2240,19 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+               add_resource = {
+                type = oil 
+                amount = 20
+                state = 206
+               } 
+               
+               add_resource = {
+                type = rubber 
+                amount = 10
+                state = 206
+               } 
+
+             
         }
     }
     focus = {
@@ -2256,7 +2285,35 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+               add_equipment_to_stockpile = {
+                type = infantry_equipment_2
+                amount = 2000
+               }
+
+               add_equipment_to_stockpile = {
+                type = mechanized_equipment_1
+                amount = 700
+               }
+
+               add_equipment_to_stockpile = {
+                type = motorized_equipment_1
+                amount = 700
+               }
+
+               add_equipment_to_stockpile = {
+                type = sp_artillery_2
+                amount = 700
+               }
+
+               add_equipment_to_stockpile = {
+                type = support_equipment_1
+                amount = 700
+               }
+
+               add_offsite_building = {
+                type = industrial_complex
+                level = 2
+               }
         }
     }
     focus = {
@@ -2289,7 +2346,9 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+               add_stability = 0.05
+               building_production = 0.1
+
         }
     }
     focus = {
@@ -2365,9 +2424,8 @@ focus_tree = {
         x = 1
         y = 1
 
-        prerequisite = { 
-            focus = EIZ_off_the_books_trading focus = EIZ_insider_trading
-        }
+        prerequisite = { focus = EIZ_bribe_officials focus = EIZ_prepare_for_market_changes
+          }
         
         relative_position_id = EIZ_off_the_books_trading
         
@@ -2390,7 +2448,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+                
         }
     }
     focus = {
@@ -2400,8 +2458,7 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_insider_trading focus = EIZ_comb_the_prisons_and_banks
-        }
+    }
         relative_position_id = EIZ_insider_trading
         
         cost = 0 #add cost later
@@ -2833,7 +2890,7 @@ focus_tree = {
         id = EIZ_Portugal_Volunteer_Quality
         icon = GFX_EIZ_Portugal_Volunteer_Quality
         x = 0
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
@@ -2870,7 +2927,7 @@ focus_tree = {
         id = EIZ_Portugal_Volunteer_Quantity
         icon = GFX_EIZ_Portugal_Volunteer_Quantity
         x = 2
-        y = 2
+        y = 1
 
         prerequisite = { 
             focus = EIZ_Morocco_Volunteer_Quality focus = EIZ_Morocco_Volunteer_Quantity
@@ -2900,6 +2957,430 @@ focus_tree = {
                 Load_oob = "EIZ_POR_QTITY"
                 hidden_effect = {
               }
+        }
+    }
+
+    focus = {
+        id = EIZ_multinational_volunteers
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Portugal_Volunteer_Quantity focus = EIZ_Portugal_Volunteer_Quality
+        }
+        relative_position_id = EIZ_Portugal_Volunteer_Quality
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                add_manpower = 75000
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Ground_Support
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 14
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Destroy_The_Monarchists 
+        }
+        relative_position_id = EIZ_Destroy_The_Monarchists
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                add_manpower = 75000
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Grand_Battery
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Ground_Support 
+        }
+        relative_position_id = EIZ_Lyon_Ground_Support
+        
+        mutually_exclusive = {
+            focus = EIZ_Shore_Up_The_Troops
+        }
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                add_manpower = 75000
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Lyon_Increase_Artillery_Calibre
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Grand_Battery 
+        }
+        relative_position_id = EIZ_Lyon_Grand_Battery
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Ramp_up_Artillery_Production
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Increase_Artillery_Calibre 
+        }
+        relative_position_id = EIZ_Lyon_Increase_Artillery_Calibre
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_SelfPropelled_Guns
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Ramp_up_Artillery_Production 
+        }
+        relative_position_id = EIZ_Lyon_Ramp_up_Artillery_Production
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+        }
+    }
+
+    focus = {
+        id = EIZ_Lyon_Making_Napoleon_Proud
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_SelfPropelled_Guns 
+        }
+        relative_position_id = EIZ_Lyon_SelfPropelled_Guns
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+        }
+    }
+
+    focus = {
+        id = EIZ_Shore_Up_The_Troops
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyon_Ground_Support 
+        }
+
+        mutually_exclusive = {
+            focus = EIZ_Lyon_Grand_Battery
+        }
+        relative_position_id = EIZ_Lyon_Ground_Support
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = EIZ_Mass_Produce_Body-Armour
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Shore_Up_The_Troops 
+        }
+
+     
+        relative_position_id =EIZ_Shore_Up_The_Troops
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = EIZ_Armoured_Personnel_Carriers
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Mass_Produce_Body-Armour 
+        }
+
+     
+        relative_position_id =EIZ_Mass_Produce_Body-Armour
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = EIZ_Standardise_Rifles
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Armoured_Personnel_Carriers
+        }
+
+     
+        relative_position_id =EIZ_Armoured_Personnel_Carriers
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = EIZ_It_All_Comes_Down_to_The_Infantry
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Standardise_Rifles
+        }
+
+     
+        relative_position_id =EIZ_Standardise_Rifles
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
         }
     }
 
@@ -7631,7 +8112,7 @@ focus_tree = {
             id = EIZ_Let_Them_Build_Roads
             icon = GFX_EIZ_Let_Them_Build_Roads
             x = 0
-            y = 1.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_CALL_IN_THE_FAVORS
@@ -7732,7 +8213,7 @@ focus_tree = {
             id = EIZ_Get_Me_More_Money
             icon = GFX_EIZ_Get_Me_More_Money
             x = 0
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_IT_WONT_BE_ENOUGH
@@ -7773,7 +8254,7 @@ focus_tree = {
             id = EIZ_EXTRACT_EVERYTHING
             icon = GFX_EIZ_EXTRACT_EVERYTHING
             x = -2
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_IT_WONT_BE_ENOUGH
@@ -7856,7 +8337,7 @@ focus_tree = {
             id = EIZ_WE_NEED_MORE
             icon = GFX_EIZ_WE_NEED_MORE
             x = -2
-            y = 1
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Just_Find_A_Way
@@ -7898,7 +8379,7 @@ focus_tree = {
             id = EIZ_It_MIGHT_BE_ENOUGH
             icon = GFX_EIZ_It_MIGHT_BE_ENOUGH
             x = 1
-            y = 3.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Let_Them_Build_Roads
@@ -8330,7 +8811,7 @@ focus_tree = {
             id = EIZ_Dusty_Trucks
             icon = GFX_EIZ_Dusty_Trucks
             x = 2
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Hapsburgs_First_step
@@ -8378,7 +8859,7 @@ focus_tree = {
             id = EIZ_Arabian_Deal
             icon = GFX_EIZ_Arabian_Deal
             x = 0
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Hapsburgs_First_step
@@ -8418,7 +8899,7 @@ focus_tree = {
             id = EIZ_Arabian_Guns
             icon = GFX_EIZ_Arabian_Guns
             x = 0
-            y = 2
+            y = 1
     
             prerequisite = { 
                 focus = EIZ_Arabian_Deal
@@ -8546,7 +9027,7 @@ focus_tree = {
             id = EIZ_Our_Special_Relationship
             icon = GFX_EIZ_Our_Special_Relationship
             x = -0
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Kindred_Spirits
@@ -8584,7 +9065,7 @@ focus_tree = {
             id = EIZ_Foreign_Relations_Secured
             icon = GFX_EIZ_Foreign_Relations_Secured
             x = -1
-            y = 2.5
+            y = 2
     
             prerequisite = { 
                 focus = EIZ_Our_Special_Relationship
@@ -8625,7 +9106,7 @@ focus_tree = {
         focus = {
             id = EIZ_Halfway_There
             icon = GFX_EIZ_Subvert_The_Monarchists
-            x = -26
+            x = -23
             y = 8
     
             prerequisite = { 
