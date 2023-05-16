@@ -861,7 +861,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyons_Air_Force
         icon = GFX_EIZ_Lyons_Air_Force
-        x = -13
+        x = -5
         y = 1
 
         prerequisite = { 
@@ -896,16 +896,16 @@ focus_tree = {
         }
     }
 
+    
     focus = {
-        id = EIZ_Lyons_Plan_To_Modernize
-        icon = GFX_EIZ_Lyons_Plan_To_Modernize
-        x = -5
-        y = 1
+        id = EIZ_Found_The_Special_Project_Core
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 2
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
         }
-        mutually_exclusive = { focus = EIZ_Fill_The_Hangers }
         relative_position_id = EIZ_Lyons_Air_Force
         
         cost = 3
@@ -928,28 +928,23 @@ focus_tree = {
 
             completion_reward = {
 
-                add_tech_bonus = {
-                    category = air_equipment
-                    bonus = 0.15
-                    uses = 4
-                }
+               
 
                 hidden_effect = {
               }
         }
     }
-
+  
     focus = {
-        id = EIZ_Lyon_Air_Doctrine
-        icon = GFX_EIZ_Lyon_Air_Doctrine
-        x = -1
+        id = EIZ_Recruit_Unconventional_Minds
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyons_Plan_To_Modernize
+            focus = EIZ_Found_The_Special_Project_Core
         }
-
-        relative_position_id = EIZ_Lyons_Plan_To_Modernize
+        relative_position_id = EIZ_Found_The_Special_Project_Core
         
         cost = 3
 
@@ -971,67 +966,23 @@ focus_tree = {
 
             completion_reward = {
 
-                add_doctrine_cost_reduction = {
-                    cost_reduction = 0.5
-                    category = air_doctrine
-                    uses = 2
-                }
+               
 
                 hidden_effect = {
               }
         }
     }
-
+    
     focus = {
-        id = EIZ_Lyon_Ground_Pounding
-        icon = GFX_EIZ_Lyon_Ground_Pounding
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Lyons_Plan_To_Modernize
-        }
-
-        relative_position_id = EIZ_Lyon_Air_Doctrine
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ideas = EIZ_Thundering_Of_Bombs_idea
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Air_RND
-        icon = GFX_EIZ_Lyon_Air_RND
-        x = -2
+        id = EIZ_Cut_The_Red_Tape
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Air_Doctrine
+            focus = EIZ_Recruit_Unconventional_Minds
         }
-
-        relative_position_id = EIZ_Lyon_Ground_Pounding
+        relative_position_id = EIZ_Recruit_Unconventional_Minds
         
         cost = 3
 
@@ -1053,564 +1004,32 @@ focus_tree = {
 
             completion_reward = {
 
-                add_tech_bonus  = {
-                    category = air_equipment
-                    bonus = 0.5
-                    uses = 3              
-                }
-
-                add_tech_bonus = {
-                    category = air_equipment
-                    uses = 2
-                    ahead_reduction = 0.5
-                }
+               
 
                 hidden_effect = {
               }
         }
     }
 
+    
     focus = {
-        id = EIZ_Lyon_Train_Airforce
-        icon = GFX_EIZ_Lyon_Train_Airforce
-        x = 2
-        y = 0
+        id = EIZ_Summon_Sapphire_Squadron
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 2
 
         prerequisite = { 
-            focus = EIZ_Lyon_Ground_Pounding
+            focus = EIZ_Cut_The_Red_Tape
         }
 
-        relative_position_id = EIZ_Lyon_Air_RND
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                air_experience = 100
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Gain_Aces
-        icon = GFX_EIZ_Lyon_Gain_Aces
-        x = 1
-        y = 3
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Air_RND  focus = EIZ_Lyon_Death_From_Above
-        }
         prerequisite = {
-            focus = EIZ_Lyon_Aircraft_Production_Bonus focus = EIZ_Lyon_Train_Airforce
+            focus = Block_Out_The_Sky
         }
 
-
-        relative_position_id = EIZ_Lyon_Train_Airforce
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ace = {
-                    name = "Jean-Baptiste"
-                    surname = "Say"
-                    callsign = "The Entrepreneur"
-                    type = fighter_genius
-                }
-
-                add_ace = {
-                    name = "Pierre"
-                    surname = "Boulle"
-                    callsign = "Flying Monkey"
-                    type = fighter_good
-                }
-
-                add_ace = {
-                    name = "Gaston"
-                    surname = "Leroux"
-                    callsign = "The Phantom"
-                    type = bomber_genius
-                }
-
-                add_ace = {
-                    name = "Jules"
-                    surname = "Verne"
-                    callsign = "From Earth To Moon"
-                    type = fighter_good
-                }
-
-                add_ace = {
-                    name = "Victor"
-                    surname = "Hugo"
-                    callsign = "The Miserable"
-                    type = bomber_good
-                }
-
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Fill_The_Hangers
-        icon = GFX_EIZ_Fill_The_Hangers
-        x = -1
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Lyons_Air_Force
-        }
-        mutually_exclusive = { focus = EIZ_Lyons_Plan_To_Modernize }
-        relative_position_id = EIZ_Lyons_Air_Force
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_equipment_to_stockpile = {
-                    type = fighter_equipment
-                    amount = 200
-                }
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Spear_And_Shield_Program
-        icon = GFX_EIZ_Spear_And_Shield_Program
-        x = -1
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Fill_The_Hangers
-        }
-        relative_position_id = EIZ_Fill_The_Hangers
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                
-                255 = {
-                    add_building_construction = {
-                        type = air_base
-                        level = 5
-                        instant_build = yes
-                    }
-                }
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Import_Rubber
-        icon = GFX_EIZ_Lyon_Import_Rubber
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Fill_The_Hangers
-        }
-        relative_position_id = EIZ_Spear_And_Shield_Program
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                258 = {
-                    add_resource = {
-                        type = rubber
-                        amount = 25
-                    }
-                }
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Aircraft_Production_Bonus
-        icon = GFX_EIZ_Lyon_Aircraft_Production_Bonus
-        x = -2
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Spear_And_Shield_Program
-        }
-        relative_position_id = EIZ_Lyon_Import_Rubber
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ideas = EIZ_Lyon_Aircraft_Production_Bonus_idea
-                
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Death_From_Above
-        icon = GFX_EIZ_Lyon_Death_From_Above
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Import_Rubber
-        }
-        relative_position_id = EIZ_Lyon_Aircraft_Production_Bonus
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_equipment_to_stockpile = {
-                    type = jet_tac_bomber_equipment
-                    amount = 100
-                }
-                add_equipment_to_stockpile = {
-                    type = CAS_equipment_1
-                    amount = 100
-                }
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Oil_Focused
-        icon = GFX_EIZ_Lyon_Oil_Focused
-        x = 3
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Lyons_Air_Force
-        }
-        mutually_exclusive = { focus = EIZ_Lyon_Sakuradite_Focused }
-        relative_position_id = EIZ_Lyons_Air_Force
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                229 = {
-                    add_resource = {
-                        type = oil
-                        amount = 30
-                    }
-                }
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Get_Tracks_Off_Convoys
-        icon = GFX_EIZ_Lyon_Get_Tracks_Off_Convoys
-        x = -1
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Oil_Focused
-        }
-        relative_position_id = EIZ_Lyon_Oil_Focused
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ideas = EIZ_Lyon_Get_Tracks_Off_Convoys_idea
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Artilery_RND
-        icon = GFX_EIZ_Lyon_Artilery_RND
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Oil_Focused
-        }
-        relative_position_id = EIZ_Lyon_Get_Tracks_Off_Convoys
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_tech_bonus = {
-                    category = artillery
-                    uses = 3
-                    bonus = 0.5
-                }
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Tank_Designer
-        icon = GFX_EIZ_Lyon_Tank_Designer
-        x = -2
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Get_Tracks_Off_Convoys
-        }
-        relative_position_id = EIZ_Lyon_Artilery_RND
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_tech_bonus = {
-                    category = armor
-                    bonus = 0.5
-                    uses = 3
-                }
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Artilery_Focus
-        icon = GFX_EIZ_Lyon_Artilery_Focus
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Artilery_RND
-        }
-        relative_position_id = EIZ_Lyon_Tank_Designer
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                add_ideas = EIZ_Lyon_Artilery_Focus_idea
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Army_Training
-        icon = GFX_EIZ_Lyon_Army_Training
-        x = 1
-        y = 3
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Tank_Designer focus = EIZ_Lyon_Give_Russians_Knightmares
-        }
         prerequisite = {
-            focus = EIZ_Lyon_Artilery_Focus focus = EIZ_Lyon_On_The_Front
+            focus = EIZ_Knights_of_The_Sky
         }
-        relative_position_id = EIZ_Lyon_Artilery_Focus
+        relative_position_id = EIZ_Cut_The_Red_Tape
         
         cost = 3
 
@@ -1632,7 +1051,7 @@ focus_tree = {
 
             completion_reward = {
 
-                army_experience = 80
+               
 
                 hidden_effect = {
               }
@@ -1640,16 +1059,14 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_Sakuradite_Focused
-        icon = GFX_EIZ_Lyon_Sakuradite_Focused
-        x = 7
+        id = EIZ_Supremacy_in_Numbers
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = -2
         y = 1
 
         prerequisite = { 
             focus = EIZ_Lyons_Air_Force
         }
-
-        mutually_exclusive = { focus = EIZ_Lyon_Oil_Focused }
         relative_position_id = EIZ_Lyons_Air_Force
         
         cost = 3
@@ -1672,104 +1089,23 @@ focus_tree = {
 
             completion_reward = {
 
-                821 = {
-                    add_resource = {
-                        type = sakuradite
-                        amount = 20
-                    }
-                }
+                EIZ = { country_event = EIZ.5}
 
                 hidden_effect = {
               }
         }
     }
-
+  
     focus = {
-        id = EIZ_Lyon_Sakuradite_Cannons
-        icon = GFX_EIZ_Lyon_Sakuradite_Cannons
-        x = -1
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Focused
-        }
-        relative_position_id = EIZ_Lyon_Sakuradite_Focused  
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ideas = EIZ_Lyon_Sakuradite_Cannons_idea
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Sakuradite_Plating
-        icon = GFX_EIZ_Lyon_Sakuradite_Plating
-        x = 2
-        y = 0
-
-        prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Focused
-        }
-        relative_position_id = EIZ_Lyon_Sakuradite_Cannons
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-
-                add_ideas = EIZ_Lyon_Sakuradite_Plating_idea
-
-                hidden_effect = {
-              }
-        }
-    }
-
-    focus = {
-        id = EIZ_Lyon_Give_Russians_Knightmares
-        icon = GFX_EIZ_Lyon_Give_Russians_Knightmares
+        id = EIZ_Intergrate_Russian_Aircraft
+        icon = GFX_EIZ_Lyons_Air_Force
         x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Cannons
+            focus = EIZ_Supremacy_in_Numbers
         }
-        relative_position_id = EIZ_Lyon_Sakuradite_Plating
+        relative_position_id = EIZ_Supremacy_in_Numbers
         
         cost = 3
 
@@ -1790,14 +1126,6 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                add_tech_bonus = {
-                    category = armor 
-                    uses = 3
-                    bonus = 0.5
-                }
-
-                add_ideas = EIZ_Lyon_Give_Russians_Knightmares_idea
 
                 hidden_effect = {
               }
@@ -1805,15 +1133,15 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Lyon_On_The_Front
-        icon = GFX_EIZ_Lyon_On_The_Front
-        x = 2
-        y = 0
+        id = EIZ_Contacts_In_Aerospace_Manufacturing
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
 
         prerequisite = { 
-            focus = EIZ_Lyon_Sakuradite_Plating
+            focus = EIZ_Intergrate_Russian_Aircraft
         }
-        relative_position_id = EIZ_Lyon_Give_Russians_Knightmares
+        relative_position_id = EIZ_Intergrate_Russian_Aircraft
         
         cost = 3
 
@@ -1835,21 +1163,502 @@ focus_tree = {
 
             completion_reward = {
 
-                add_field_marshal_role = {
-                        character = EIZ_lyon  
-                        traits = {
-                            brilliant_strategist
-                            panzer_leader
-                            offensive_doctrine
-                            aggressive_assaulter
-                        }
-                        skill = 6
-                        attack_skill = 5
-                        defense_skill = 4
-                        planning_skill = 3
-                        logistics_skill = 3
-                    }
+                hidden_effect = {
+              }
+        }
+    }
 
+    focus = {
+        id = EIZ_Great_War_Levels_Of_Production
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Contacts_In_Aerospace_Manufacturing
+        }
+        relative_position_id = EIZ_Contacts_In_Aerospace_Manufacturing
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Streamline_Training
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Supremacy_in_Numbers
+        }
+        relative_position_id = EIZ_Supremacy_in_Numbers
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+              
+
+                hidden_effect = {
+              }
+        }
+    }
+  
+    focus = {
+        id = More_Pilots_Than_Planes
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Streamline_Training
+        }
+        relative_position_id = EIZ_Streamline_Training
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+             
+
+                hidden_effect = {
+              }
+        }
+    }
+  
+    
+    focus = {
+        id = More_Shock_And_Awe
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = More_Pilots_Than_Planes
+        }
+        relative_position_id = More_Pilots_Than_Planes
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+               
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    
+    focus = {
+        id = Block_Out_The_Sky
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = More_Shock_And_Awe
+        }
+
+        prerequisite = {
+            focus = EIZ_Great_War_Levels_Of_Production
+        }
+        relative_position_id = More_Shock_And_Awe
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Supremacy_in_Technology
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Lyons_Air_Force
+        }
+        relative_position_id = EIZ_Lyons_Air_Force
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_No_Expense_Spared
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Supremacy_in_Technology
+        }
+        relative_position_id = EIZ_Supremacy_in_Technology
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Contacts_in_Aerospace_Research
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_No_Expense_Spared
+        }
+        relative_position_id = EIZ_No_Expense_Spared
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_The_Perfect_Fighter
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Contacts_in_Aerospace_Research
+        }
+        relative_position_id = EIZ_Contacts_in_Aerospace_Research
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Encourage_the_Best
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Supremacy_in_Technology
+        }
+        relative_position_id = EIZ_Supremacy_in_Technology
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Pilots_Who_Can_Take_on_Armies
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Encourage_the_Best
+        }
+        relative_position_id = EIZ_Encourage_the_Best
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Strike_Hard_Strike_Fast
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Pilots_Who_Can_Take_on_Armies
+        }
+        relative_position_id = EIZ_Pilots_Who_Can_Take_on_Armies
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
+                hidden_effect = {
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Knights_of_The_Sky
+        icon = GFX_EIZ_Lyons_Air_Force
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Strike_Hard_Strike_Fast
+        }
+
+        prerequisite = {
+            focus = EIZ_The_Perfect_Fighter
+        }
+        relative_position_id = EIZ_Strike_Hard_Strike_Fast
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+           
                 hidden_effect = {
               }
         }
@@ -1862,10 +1671,10 @@ focus_tree = {
         y = 12
 
         prerequisite = { 
-            focus = EIZ_Lyon_Gain_Aces 
+            focus = EIZ_Lyons_High_Command 
         }
         prerequisite = {
-            focus = EIZ_Lyon_Army_Training 
+            focus = EIZ_Summon_Sapphire_Squadron 
         }
         prerequisite = {
             focus = EIZ_lyons_magnum_opus
@@ -1950,7 +1759,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Economic_Board
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 1
+        x = 5
         y = 1
 
         prerequisite = { 
@@ -2997,7 +2806,7 @@ focus_tree = {
     focus = {
         id = EIZ_Lyon_Ground_Support
         icon = GFX_EIZ_Portugal_Volunteer_Quantity
-        x = 14
+        x = -12
         y = 1
 
         prerequisite = { 
@@ -3384,6 +3193,41 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = EIZ_Lyons_High_Command
+        icon = GFX_EIZ_Portugal_Volunteer_Quantity
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_It_All_Comes_Down_to_The_Infantry
+        }
+
+     
+        relative_position_id =EIZ_It_All_Comes_Down_to_The_Infantry
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+        }
+    }
     focus = {
         id = EIZ_Lyon_Putting_Down_The_Rebels
         icon = GFX_EIZ_Lyon_Putting_Down_The_Rebels
@@ -5905,7 +5749,7 @@ focus_tree = {
     focus = {
         id = EIZ_Volunteers_From_the_French_Sphere
         icon = GFX_EIZ_Volunteers_From_the_French_Sphere
-        x = 8
+        x = 11
         y = 1
 
         prerequisite = { 
