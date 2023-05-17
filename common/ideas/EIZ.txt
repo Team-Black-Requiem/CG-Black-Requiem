@@ -150,53 +150,9 @@ ideas = {
 				war_support_factor = 0.25
 			}
 		}
-    
 
-		Lyons_RND_department = {
-			allowed = {
-				always = yes
-			}
 
-			removal_cost = -1 
-
-			modifier = {
-				add_tech_bonus = {
-					category = air_equipment {
-						base = 0.10
-					}	
-				}
-			}
-		}
-
-		Lyons_obsession = {
-			modifier = {
-		   		equipment_bonus = {
-					air_equipment = {
-				 		instant = yes
-				 		buld_cost_ic = -0.05
-			  		}
-		   		}
-			}
-		}
-
-		economy_destroyed = {
-			picture = arthur_the_generic
-
-			allowed = {
-				always = yes
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				
-			}
-
-		}
+		
 
 		significant_french_funding = {
 			picture = arthur_the_generic
@@ -350,6 +306,81 @@ ideas = {
 			}
 		}
 	}
+
+	EIZ_Supremacy_in_Numbers = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+		}
+		
+	}
+
+	EIZ_Streamline_Trainings = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			air_untrained_pilots_penalty_factor = 0.1
+		}
+		
+	}
+
+	EIZ_More_Pilots_Than_Planes = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			air_wing_xp_loss_when_killed_factor = 0.1
+		}
+		
+	}
+
+	EIZ_More_Shock_And_Awe = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			air_strategic_bomber_bombing_factor = 0.05
+	        air_cas_efficiency = 0.1
+			air_close_air_support_org_damage_factor = 0.05
+		}
+		
+	}
+
+	EIZ_Great_War_Levels_Of_Production= {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			
+		}
+		
+	}
+
 	EIZ_Sakuradite_Propellent_idea ={
 		allowed = {
 			always = yes
@@ -514,17 +545,17 @@ ideas = {
 			armor = {
 				instant = yes
 				soft_attack = 0.05
-				armor = 0.1
+				armor_value = 0.1
 			}
 			motorized_equipment = {
 				instant = yes
 				soft_attack = 0.05
-				armor = 0.1
+				armor_value = 0.1
 			}
 			mechanized_equipment = {
 				instant = yes
 				soft_attack = 0.05
-				armor = 0.1
+				armor_value = 0.1
 			}
 		}
 	}
