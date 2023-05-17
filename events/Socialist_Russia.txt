@@ -1156,3 +1156,81 @@ country_event = { #Through Blood and Iron
 		
 	}
 }
+
+### Politburo Events ###
+
+country_event = { #Establish The Political Commissariat
+	id = SRU.52
+	title = SRU.52.t
+	desc = SRU.52.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.52.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.15
+	}
+}
+
+country_event = { #Establish The C.S.S
+	id = SRU.53
+	title = SRU.53.t
+	desc = SRU.53.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.53.a 
+		ai_chance = {
+			factor = 100
+		}
+		create_intelligence_agency = {
+			name = "Committe for State Security"
+			icon = GFX_intelligence_agency_logo_agency
+		}
+	}
+}
+
+country_event = { #Establish The Cheka
+	id = SRU.54
+	title = SRU.54.t
+	desc = SRU.54.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.54.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Cheka
+	}
+}
+
+country_event = { #Peoples Congress
+	id = SRU.55
+	title = SRU.55.t
+	desc = SRU.55.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.55.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.15
+		add_ideas = SRU_Peoples_Congress
+	}
+}
