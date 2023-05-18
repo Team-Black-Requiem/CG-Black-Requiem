@@ -1088,12 +1088,13 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-           
+            
+          
                 hidden_effect = {
               }
         }
-    }
+    }   
+    
   
     focus = {
         id = EIZ_Intergrate_Russian_Aircraft
@@ -1125,7 +1126,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+              
                 hidden_effect = {
               }
         }
@@ -1818,8 +1819,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
-        }
+                country_event = EIZ.32 
+            }
     }
     focus = {
         id = EIZ_calling_the_pale_jewel
@@ -1851,7 +1852,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                #add effects
+            country_event = event.34
         }
     }
     focus = {
@@ -4774,393 +4775,694 @@ focus_tree = {
         
         #Frederica's military reform
 
-        focus = {
-            id = EIZ_A_Mechanized_Army
-            icon = EIZ_Frederica_Economic_Board
-            x = -11
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Fight_The_Monarchists 
-            }
+        
+    focus = {
+        id = EIZ_Frederikas_New_Warfare
+        
+        x = -12
+        y = 1
 
-            relative_position_id = EIZ_Fight_The_Monarchists
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    country_event = EIZ.48
-                
-                       
-                  hidden_effect = {
-                }
-            }
+        prerequisite = { 
+            focus = EIZ_Fight_The_Monarchists
         }
+        relative_position_id = EIZ_Fight_The_Monarchists
+        
+        cost = 3
 
-        focus = {
-            id = EIZ_Forming_the_S.P.C
-            icon = EIZ_Frederica_Economic_Board
-            x = -4
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_A_Mechanized_Army 
-            }
+        ai_will_do = {
+			factor = 100
+		}
 
-            mutually_exclusive = {
-                focus = EIZ_The_Bundeswehr_Model
-             }
-
-            relative_position_id = EIZ_A_Mechanized_Army
+        available = {		
+            country_exists = EIZ
     
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
             }
     
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    add_tech_bonus = {
-                        category = MBT_armour
-                        bonus = 0.5
-                        ahead_reduction = 2
-                        uses = 2
-                      }
-                    add_ideas = special_projects_corp
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Fighting_Fire_With_Fire
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Forming_the_S.P.C 
-            }
-
-            relative_position_id = EIZ_Forming_the_S.P.C
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_ideas = Fighting_Fire_With_Fire
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Looking_Back_At_history
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Fighting_Fire_With_Fire
-            }
-
-            relative_position_id = EIZ_Fighting_Fire_With_Fire
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    
-                    add_doctrine_cost_reduction = {
-                        cost_reduction = 0.5
-                        category = land_doctrine
-                        uses = 2
-                    }
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-       focus = {
-            id = EIZ_Adapting_To_Our_Environment
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Looking_Back_At_history
-            }
-
-            relative_position_id = EIZ_Looking_Back_At_history
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_ideas = Adapting_To_Our_Environment
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Experienced_Tank_Commanders
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Adapting_To_Our_Environment
-            }
-
-            relative_position_id = EIZ_Adapting_To_Our_Environment
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-            }
-        
             bypass = {
             }
-        
+    
             cancel_if_invalid = yes
             continue_if_invalid = no
             available_if_capitulated = no
-    
+
             completion_reward = {
-                
-                Load_oob = "EIZ_Tank_Commanders"
-                  
-                hidden_effect = {
-                }
+                country_event = EIZ.50
+
+              hidden_effect = {
             }
         }
+    }
 
-        focus = {
-            id = EIZ_Call_the_Young_Fox
-            icon = EIZ_Frederica_Economic_Board
-            x = 1
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Experienced_Tank_Commanders focus = EIZ_Mobilizing_German_Stockpile
-            }
+            
+    focus = {
+        id = EIZ_Battlefield_Domination
+        
+        x = 2
+        y = 1
 
-            relative_position_id = EIZ_Experienced_Tank_Commanders
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    country_event = EIZ.49
-                
-                  hidden_effect = {
-                }
-            }
+        prerequisite = { 
+            focus = EIZ_Frederikas_New_Warfare
         }
-
-        focus = {
-            id = EIZ_The_Bundeswehr_Model
-            icon = EIZ_Frederica_Economic_Board
-            x = -2
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_A_Mechanized_Army 
-            }
-
-            mutually_exclusive = {
-                focus = EIZ_Forming_the_S.P.C
-             }
-
-            relative_position_id = EIZ_A_Mechanized_Army
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
+        relative_position_id = EIZ_Frederikas_New_Warfare
         
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
+        cost = 3
 
-                country_event = EIZ.85
-                add_doctrine_cost_reduction = {
-                    cost_reduction = 1
-                    category = cat_mobile_warfare
-                    uses = 1
-                }
-                add_doctrine_cost_reduction = {
-                    cost_reduction = 0.5
-                    category = cat_mobile_warfare
-                    uses = 2
-                }
-                  hidden_effect = {
-                }
-            }
-        }
+        ai_will_do = {
+			factor = 100
+		}
 
-        focus = {
-            id = EIZ_Hybrid_Engines
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
+        available = {		
+            country_exists = EIZ
     
-            prerequisite = {
-                focus = EIZ_The_Bundeswehr_Model 
-            }
-
-            relative_position_id = EIZ_The_Bundeswehr_Model
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
             }
     
-            available = {		
-                country_exists = EIZ
-        
-            }
-        
             bypass = {
             }
-        
+    
             cancel_if_invalid = yes
             continue_if_invalid = no
             available_if_capitulated = no
+
+            completion_reward = {
+                
+              hidden_effect = {
+            }
+        }
+    }
+
+                
+    focus = {
+        id = EIZ_Heavy_Cruiser_Tank_Concept
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Battlefield_Domination
+        }
+        relative_position_id = EIZ_Battlefield_Domination
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
     
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+              hidden_effect = {
+            }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Heavy_Guns
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Absolute_Defence_Total_Attack
+        }
+        relative_position_id = EIZ_Absolute_Defence_Total_Attack
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+              
+              hidden_effect = {
+            }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Heavy_Guns
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Absolute_Defence_Total_Attack
+        }
+        relative_position_id = EIZ_Absolute_Defence_Total_Attack
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+              
+              hidden_effect = {
+            }
+        }
+    }
+
+
+    focus = {
+        id = EIZ_Absolute_Defence_Total_Attack
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Heavy_Cruiser_Tank_Concept
+        }
+        relative_position_id = EIZ_Heavy_Cruiser_Tank_Concept
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                country_event = EIZ.50
+
+              hidden_effect = {
+            }
+        }
+    }
+
+
+    focus = {
+        id = EIZ_Frederica_Found_The_Special_Project_Core
+        
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_Frederikas_New_Warfare
+        }
+        relative_position_id = EIZ_Frederikas_New_Warfare
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Fishing_For_Academy_Recruits
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Frederica_Found_The_Special_Project_Core
+        }
+        relative_position_id = EIZ_Frederica_Found_The_Special_Project_Core
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+
+              hidden_effect = {
+            }
+        }
+    }
+
+        
+    focus = {
+        id = EIZ_Codify_Rules_Of_Engagement
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Fishing_For_Academy_Recruits
+        }
+        relative_position_id = EIZ_Fishing_For_Academy_Recruits
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+               
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    
+
+    focus = {
+        id = EIZ_Mobile_Warfare
+        
+        x = -2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Frederikas_New_Warfare
+        }
+        relative_position_id = EIZ_Frederikas_New_Warfare
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+           
+              hidden_effect = {
+            }
+        }
+    }
+    
+    focus = {
+        id = EIZ_Motorise_The_Infantry
+        
+        x = -1
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Mobile_Warfare
+        }
+        relative_position_id = EIZ_Mobile_Warfare
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+           
+              hidden_effect = {
+            }
+        }
+    }
+     
+        focus = {
+        id = EIZ_Motorise_The_Infantry
+        
+        x = -2
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Mobile_Warfare
+        }
+        relative_position_id = EIZ_Mobile_Warfare
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+           
+              hidden_effect = {
+            }
+        }
+    }
+    
+    focus = {
+        id = EIZ_Mechanized_Elites
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Motorise_The_Infantry
+        }
+        relative_position_id = EIZ_Motorise_The_Infantry
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+           
+              hidden_effect = {
+            }
+        }
+    }
+    
+    
+    focus = {
+        id = EIZ_Military_Traffic_Control
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Mechanized_Elites
+        }
+        relative_position_id = EIZ_Mechanized_Elites
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+           
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id =EIZ_Main_Battle_Tank_Concept
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Mobile_Warfare
+        }
+        relative_position_id = EIZ_Mobile_Warfare
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
             completion_reward = {
 
-                add_ideas = Hybrid_Engines
-                       
-                hidden_effect = {
-                }
+              hidden_effect = {
             }
         }
+    }
+
+    
+    focus = {
+        id =EIZ_All_Round_Design
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Main_Battle_Tank_Concept
+        }
+        relative_position_id = EIZ_Main_Battle_Tank_Concept
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+              hidden_effect = {
+            }
+        }
+    }
+
+        
+    focus = {
+        id =EIZ_Speed_And_Reliability
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_All_Round_Design
+        }
+        relative_position_id = EIZ_All_Round_Design
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    
+    focus = {
+        id =EIZ_Lighting_Warfare
+        
+        x = 0
+        y = 1
+
+        prerequisite = { 
+            focus = EIZ_Speed_And_Reliability
+        }
+
+        prerequisite = {
+            focus = EIZ_Military_Traffic_Control
+        }
+        relative_position_id = EIZ_Speed_And_Reliability
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+
+              hidden_effect = {
+            }
+        }
+    }
 
         focus = {
-            id = EIZ_Standardized_Field_Manuals
+            id = EIZ_Russian_Welfare_fund
             icon = EIZ_Frederica_Economic_Board
             x = 0
-            y = 1
+            y = 2
     
             prerequisite = {
-                focus = EIZ_Hybrid_Engines 
+                focus = EIZ_Foreign_Engineers 
             }
-
-            relative_position_id = EIZ_Hybrid_Engines
+            prerequisite = {
+                focus = EIZ_Acccepting_Help_As_Offered 
+            }
+       
+            
+    
+            relative_position_id = EIZ_Russian_Self_Fulfillment
     
             cost = 3
     
@@ -5181,570 +5483,12 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-
-                add_ideas = Standardized_Field_Manuals
-                       
+                    country_event = EIZ.62
+                    remove_ideas = Economic_shables                       
                   hidden_effect = {
                 }
             }
         }
-
-        focus = {
-            id = EIZ_Automated_Tank_Refits
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Standardized_Field_Manuals 
-            }
-
-            relative_position_id = EIZ_Standardized_Field_Manuals
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_ideas = Automated_Tank_Refits
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Mobilizing_German_Stockpile
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Automated_Tank_Refits 
-            }
-
-            relative_position_id = EIZ_Automated_Tank_Refits
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    EIZ = {
-                        add_equipment_to_stockpile = {
-
-                            type = cold_war_tank_2
-                
-                            amount = 500
-                        }
-                        add_equipment_to_stockpile = {
-
-                            type = mechanized_equipment_1
-                
-                            amount = 800
-                        }    
-                    }   
-                    hidden_effect = {
-                    }
-                }
-        }
-
-        
-        focus = {
-            id = EIZ_Frederica_Oil_Focused
-            icon = EIZ_Frederica_Economic_Board
-            x = 2
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_A_Mechanized_Army 
-            }
-
-            mutually_exclusive = {
-                focus = EIZ_Frederica_Sakuradyte_Focused
-             }
-
-            relative_position_id = EIZ_A_Mechanized_Army
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                    ## NEED CLARIFICATION
-                    country_event = EIZ.82
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Rolling_Off_The_Production_Line
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Frederica_Oil_Focused 
-            }
-
-            relative_position_id = EIZ_Frederica_Oil_Focused
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_ideas = EIZ_Rolling_Off_The_Production_Line_idea
-                
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        
-        focus = {
-            id = EIZ_Pushing_Past_Their_lines
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Rolling_Off_The_Production_Line 
-            }
-
-            relative_position_id = EIZ_Rolling_Off_The_Production_Line
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-                    add_ideas = EIZ_Pushing_Past_Their_Lines_idea
-            }
-        }
-
-        focus = {
-            id = EIZ_Rethinking_Tank_Designs 
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Pushing_Past_Their_lines 
-            }
-
-            relative_position_id = EIZ_Pushing_Past_Their_lines
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_tech_bonus ={
-                    category = MBT_armour
-                    bonus = 0.25
-                    uses = 2
-                }
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Armor_from_the_Home_Front
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Rethinking_Tank_Designs 
-            }
-
-            relative_position_id = EIZ_Rethinking_Tank_Designs
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_equipment_to_stockpile ={
-                    type = cold_war_tank_2
-                    amount = 400
-                }
-                
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Frederica_Army_Training
-            icon = EIZ_Frederica_Economic_Board
-            x = 1
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Armor_from_the_Home_Front Focus = EIZ_Frau_Und_Panzer
-            }
-
-            relative_position_id = EIZ_Armor_from_the_Home_Front
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                army_experience = 80
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Frederica_Sakuradyte_Focused
-            icon = EIZ_Frederica_Economic_Board
-            x = 4
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_A_Mechanized_Army 
-            }
-
-            mutually_exclusive = {
-                focus = EIZ_Frederica_Oil_Focused
-             }
-
-            relative_position_id = EIZ_A_Mechanized_Army
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                
-                
-                country_event = EIZ.83
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Sakuradite_Propellent 
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Frederica_Sakuradyte_Focused 
-            }
-
-            relative_position_id = EIZ_Frederica_Sakuradyte_Focused
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                add_ideas = EIZ_Sakuradite_Propellent_idea
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        focus = {
-            id = EIZ_Sakuradyte_Plating
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Sakuradite_Propellent 
-            }
-
-            relative_position_id = EIZ_Sakuradite_Propellent
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                    add_ideas = EIZ_Sakuradite_Plating_idea
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-        
-        focus = {
-            id = EIZ_Give_The_Russian_Knightmares
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Sakuradyte_Plating 
-            }
-
-            relative_position_id = EIZ_Sakuradyte_Plating
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                ## NEED CLARIFICATION, Is this supposed to give bonuses for EIZ  or Russia? Bit confused
-
-                add_tech_bonus ={
-                    bonus = 0.5
-                    uses = 2
-                    ahead_reduction = 1
-                    category = armor
-                }
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-
-          
-        focus = {
-            id = EIZ_Frau_Und_Panzer
-            icon = EIZ_Frederica_Economic_Board
-            x = 0
-            y = 1
-    
-            prerequisite = {
-                focus = EIZ_Give_The_Russian_Knightmares 
-            }
-
-            relative_position_id = EIZ_Give_The_Russian_Knightmares
-    
-            cost = 3
-    
-            ai_will_do = {
-                factor = 100
-            }
-    
-            available = {		
-                country_exists = EIZ
-        
-                }
-        
-                bypass = {
-                }
-        
-                cancel_if_invalid = yes
-                continue_if_invalid = no
-                available_if_capitulated = no
-    
-                completion_reward = {
-
-                    add_field_marshal_role = {
-                        character = EIZ_frederica   
-                        traits = {
-                            brilliant_strategist
-                            panzer_leader
-                            offensive_doctrine
-                            aggressive_assaulter
-                        }
-                        skill = 6
-                        attack_skill = 5
-                        defense_skill = 2
-                        planning_skill = 3
-                        logistics_skill = 2
-                    }
-                       
-                  hidden_effect = {
-                }
-            }
-        }
-        
     focus = {
         id = EIZ_Volunteers_From_the_French_Sphere
         icon = GFX_EIZ_Volunteers_From_the_French_Sphere
