@@ -1714,19 +1714,10 @@ focus_tree = {
         id = EIZ_Frederica_West_Secured
         icon = GFX_EIZ_Lyon_West_Secured
         x = 51
-        y = 0
+        y = 4
 
         prerequisite = { 
-             focus = EIZ_Call_the_Young_Fox
-        }
-        prerequisite = {
-             focus = EIZ_Frederica_Army_Training
-        }
-        prerequisite = { 
-             focus = EIZ_Economic_Stability_Secured focus = EIZ_Russian_Welfare_fund
-        }
-        prerequisite = { 
-            focus = EIZ_Swiss_Volunteer_Quality focus = EIZ_Swiss_Volunteer_Quantity
+             focus = EIZ_russian_welfare_fund
         }
 
         relative_position_id = EIZ_Lyon_West_Secured
@@ -4172,14 +4163,17 @@ focus_tree = {
     #Fredireca tree
 
     focus = {
-        id = EIZ_Frederica_Economic_Board
-        icon = GFX_EIZ_Frederica_Economic_Board
+        id = EIZ_frederica_economic_board
+        icon = EIZ_fight_the_monarchist
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Fight_The_Monarchists
+            focus = EIZ_Frederica_Economic_Board
         }
+
+        mutually_exclusive ={}
+        
         relative_position_id = EIZ_Fight_The_Monarchists
         
         cost = 3
@@ -4201,67 +4195,25 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.50
 
               hidden_effect = {
             }
         }
     }
 
-    #European Economics
     focus = {
-        id = EIZ_Frederica_Reach_out_to_EU
-        icon = EIZ_Frederica_Economic_Board
-        x = -3
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Frederica_Economic_Board
-        }
-
-        mutually_exclusive = {
-           focus = EIZ_German_Morality
-        }
-        relative_position_id = EIZ_Frederica_Economic_Board
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.51
-
-              hidden_effect = {
-            }
-        }
-    }
-
-    
-    focus = {
-        id = EIZ_Request_German_Charity 
-        icon = EIZ_Frederica_Economic_Board
+        id = EIZ_frederica_german_morality
+          icon = EIZ_fight_the_monarchist
         x = -2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Frederica_Reach_out_to_EU
+            focus = EIZ_frederica_economic_board
         }
 
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
         
         cost = 3
 
@@ -4281,45 +4233,7 @@ focus_tree = {
             continue_if_invalid = no
             available_if_capitulated = no
 
-            completion_reward = {
-                country_event = EIZ.52
-              hidden_effect = {
-            }
-        }
-    }
-
-    focus = {
-        id = EIZ_Shame_The_French 
-        icon = EIZ_Frederica_Economic_Board
-        x = 0
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Frederica_Reach_out_to_EU
-        }
-
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.53
+            completion_reward = {   
 
               hidden_effect = {
             }
@@ -4327,17 +4241,19 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Annoy_The_Hapsburgs 
-        icon = EIZ_Frederica_Economic_Board
+        id = EIZ_Frederica_Reach_out_to_EU_economy
+        icon = EIZ_fight_the_monarchist
         x = 2
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Frederica_Reach_out_to_EU
+            focus = EIZ_frederica_economic_board
         }
 
-     
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+
         
         cost = 3
 
@@ -4358,27 +4274,29 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.54
 
               hidden_effect = {
             }
         }
     }
-    
+
     focus = {
-        id = EIZ_Creating_A_Solid_Foundation 
-        icon = EIZ_Frederica_Economic_Board
-        x = -1
-        y = 2
+        id = EIZ_request_german_charity
+          icon = EIZ_fight_the_monarchist
+        x = -3
+        y = 3
 
+        prerequisite = {  
+        focus = EIZ_frederica_german_morality
+        }
         prerequisite = { 
-            focus = EIZ_Request_German_Charity
-        }
-        prerequisite = {
-            focus = EIZ_Shame_The_French
+            focus = EIZ_Frederica_Reach_out_to_EU_economy
         }
 
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
+        mutually_exclusive ={focus = EIZ_shame_the_french}
+        mutually_exclusive ={focus = EIZ_annoy_the_habsburgs}
+        
+        relative_position_id = EIZ_frederica_economic_board
         
         cost = 3
 
@@ -4389,76 +4307,40 @@ focus_tree = {
         available = {		
             country_exists = EIZ
     
-        }
+            }
     
-        bypass = {
-        }
+            bypass = {
+            }
     
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
 
-        completion_reward = {
-            add_ideas = Creating_A_Solid_Foundation
-            hidden_effect = {
+            completion_reward = {   
+
+              hidden_effect = {
             }
         }
     }
 
     focus = {
-        id = EIZ_Streamlining_Russian_Production 
-        icon = EIZ_Frederica_Economic_Board
-        x = 1
-        y = 2
-
-        prerequisite = { 
-            focus = EIZ_Annoy_The_Hapsburgs
-        }
-        prerequisite = {
-            focus = EIZ_Shame_The_French
-        }
-
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = EIZ
-    
-        }
-    
-        bypass = {
-        }
-    
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        completion_reward = {
-            add_ideas = Streamlining_Russian_Production       
-            hidden_effect = {
-            }
-        }
-    }
-
-    focus = {
-        id = EIZ_Economic_Stability_Secured 
-        icon = EIZ_Frederica_Economic_Board
-        x = 0
+        id = EIZ_shame_the_french
+          icon = EIZ_fight_the_monarchist
+        x = -0.2
         y = 3
 
         prerequisite = { 
-            focus = EIZ_Creating_A_Solid_Foundation
-        }
-        prerequisite = {
-            focus = EIZ_Streamlining_Russian_Production
+            focus = EIZ_frederica_german_morality
         }
 
-        relative_position_id = EIZ_Frederica_Reach_out_to_EU
+        prerequisite = { 
+            focus = EIZ_Frederica_Reach_out_to_EU_economy
+        }
+
+        mutually_exclusive ={focus = EIZ_request_german_charity}
+        mutually_exclusive ={focus = EIZ_annoy_the_habsburgs}
+        
+        relative_position_id = EIZ_frederica_economic_board
         
         cost = 3
 
@@ -4469,27 +4351,462 @@ focus_tree = {
         available = {		
             country_exists = EIZ
     
-        }
+            }
     
-        bypass = {
-        }
+            bypass = {
+            }
     
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
 
-        completion_reward = {
-            country_event = EIZ.55
-            remove_ideas = Economic_shables
-            remove_ideas = Streamlining_Russian_Production
-            remove_ideas = Creating_A_Solid_Foundation
-            add_ideas = Economic_Stability_Secured1
-            hidden_effect = {
+            completion_reward = {   
+
+              hidden_effect = {
             }
         }
     }
+
+    focus = {
+        id = EIZ_annoy_the_habsburgs
+          icon = EIZ_fight_the_monarchist
+        x = 3
+        y = 3
+
+        prerequisite = { 
+            focus = EIZ_frederica_german_morality
+        }
+
+        prerequisite = { 
+            focus = EIZ_Frederica_Reach_out_to_EU_economy
+        }
+
+        mutually_exclusive ={focus = EIZ_shame_the_french}
+        mutually_exclusive ={focus = EIZ_request_german_charity}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
     
+            }
     
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_frederica_german_hearts
+          icon = EIZ_fight_the_monarchist
+        x = -1
+        y = 5
+
+        prerequisite = { 
+            focus = EIZ_shame_the_french focus = EIZ_request_german_charity
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+
+    focus = {
+        id = EIZ_creating_a_solid_foundation
+          icon = EIZ_fight_the_monarchist
+        x = -4
+        y = 5
+
+        prerequisite = { 
+        focus = EIZ_request_german_charity
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_german_minds
+          icon = EIZ_fight_the_monarchist
+        x = 1
+        y = 5
+
+        prerequisite = { 
+        focus = EIZ_shame_the_french focus = EIZ_annoy_the_habsburgs
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_streamlining_russian_administration
+          icon = EIZ_fight_the_monarchist
+        x = 4
+        y = 5
+
+        prerequisite = { 
+        focus = EIZ_annoy_the_habsburgs
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_yeti_fix_later_1
+          icon = EIZ_fight_the_monarchist
+        x = -2.5
+        y = 7
+
+        prerequisite = { 
+        focus = EIZ_creating_a_solid_foundation    focus = EIZ_frederica_german_hearts
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_yeti_fix_later_2
+          icon = EIZ_fight_the_monarchist
+        x = 2.5
+        y = 7
+
+        prerequisite = { 
+        focus = EIZ_german_minds   focus = EIZ_streamlining_russian_administration
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_russian_self_fulfillment
+          icon = EIZ_fight_the_monarchist
+        x = 0
+        y = 8
+
+        prerequisite = { 
+        focus = EIZ_yeti_fix_later_1
+        }
+
+        prerequisite = { 
+            focus = EIZ_yeti_fix_later_2
+            }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_acccepting_help_as_offered
+          icon = EIZ_fight_the_monarchist
+        x = -1.5
+        y = 10
+
+        prerequisite = { 
+        focus = EIZ_russian_self_fulfillment
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_foreign_engineers
+          icon = EIZ_fight_the_monarchist
+        x = 1.5
+        y = 10
+
+        prerequisite = { 
+        focus = EIZ_russian_self_fulfillment
+        }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+    focus = {
+        id = EIZ_russian_welfare_fund
+          icon = EIZ_fight_the_monarchist
+        x = 0
+        y = 12
+
+        prerequisite = { 
+        focus = EIZ_foreign_engineers
+        }
+
+        prerequisite = { 
+            focus =  EIZ_acccepting_help_as_offered
+            }
+
+        mutually_exclusive ={}
+        
+        relative_position_id = EIZ_frederica_economic_board
+        
+        cost = 3
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {   
+
+              hidden_effect = {
+            }
+        }
+    }
+
+
+
     #German morality path
     focus = {
         id = EIZ_German_Morality
