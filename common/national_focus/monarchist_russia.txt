@@ -4,7 +4,7 @@ id = monarchist_russia_focus
 	country = {
 		factor = 0
 		modifier = {
-			add = 5
+			add = 20
 			tag = MRU
 		}
 	}
@@ -854,6 +854,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			set_country_flag = Red_wedding
 		}
 
     }
@@ -949,6 +950,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = { 
+			set_country_flag = The_Lilyan_Wedding
 		}
 
     }
@@ -1035,6 +1037,8 @@ id = monarchist_russia_focus
 	
 		completion_reward = { 
 			country_event = MRU.20
+	       
+ 	load_focus_tree = monarchist_second_phase
 		}
 
     }
@@ -3310,7 +3314,7 @@ else_if = {
 
 		cost = 3
 		x = 0
-		y = 12
+		y = 6
 		available = {
 			country_exists = MRU
 		}

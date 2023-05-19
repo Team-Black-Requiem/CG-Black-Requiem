@@ -283,7 +283,7 @@ ideas = {
 		}
 		}
 
-		EIZ_Pushing_Past_Their_Lines_idea ={
+		EIZ_Pushing_Past_Their_Lines_idea = {
 		allowed = {
 			always = yes
 		}
@@ -319,11 +319,34 @@ ideas = {
 			production_factory_efficiency_gain_factor = 0.05
 			production_factory_max_efficiency_factor = 0.05
 			production_factory_start_efficiency_factor = 0.05
+	        
 		}
-		
+		equipment_bonus = {
+			
+		category_multirole = {
+			reliability = -0.15
+		  }
+
+		  category_cas = {
+			reliability = -0.15
+		  }
+
+		  category_tac_bomber = {
+			reliability = -0.15
+		  }
+
+		  category_strat_bomber = {
+			reliability = -0.15
+		  }
+		  
+		  category_heavy_fighter = {
+			build_cost_ic = -0.15
+			reliability = -0.15
+		  }
+		}
 	}
 
-	EIZ_Streamline_Trainings = {
+	EIZ_Supremacy_in_NumbersV2 = {
 		allowed = {
 			always = yes
 		}
@@ -332,12 +355,15 @@ ideas = {
 		}
 		removal_cost = -1
 		modifier = {
-			air_untrained_pilots_penalty_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+			air_untrained_pilots_penalty_factor = -0.1
 		}
 		
 	}
 
-	EIZ_More_Pilots_Than_Planes = {
+	EIZ_Supremacy_in_NumbersV3 = {
 		allowed = {
 			always = yes
 		}
@@ -346,12 +372,16 @@ ideas = {
 		}
 		removal_cost = -1
 		modifier = {
-			air_wing_xp_loss_when_killed_factor = 0.1
+			air_wing_xp_loss_when_killed_factor = -0.1
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+			air_untrained_pilots_penalty_factor = -0.1
 		}
 		
 	}
 
-	EIZ_More_Shock_And_Awe = {
+	EIZ_Supremacy_in_NumbersV4 = {
 		allowed = {
 			always = yes
 		}
@@ -363,46 +393,16 @@ ideas = {
 			air_strategic_bomber_bombing_factor = 0.05
 	        air_cas_efficiency = 0.1
 			air_close_air_support_org_damage_factor = 0.05
+			air_wing_xp_loss_when_killed_factor = -0.1
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+			air_untrained_pilots_penalty_factor = -0.1
 		}
 		
 	}
 
-	EIZ_More_Shock_And_Awe = {
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war ={
-			always = yes
-		}
-		removal_cost = -1
-		
-		equipment_bonus = {
-          category_multirole = {
-			build_cost_ic = 0.10
-		  }
-
-		  category_cas = {
-			build_cost_ic = 0.10
-		  }
-
-		  category_tac_bomber = {
-			build_cost_ic = 0.10
-		  }
-
-		  category_strat_bomber = {
-			build_cost_ic = 0.10
-		  }
-           
-		  category_heavy_fighter = {
-			build_cost_ic = 0.10
-		  }
- 
-		}
-		
-		
-	}
-
-	EIZ_Blocking_Out_The_sky= {
+	EIZ_Block_Out_The_Sky = {
 		allowed = {
 			always = yes
 		}
@@ -414,34 +414,106 @@ ideas = {
 			air_strategic_bomber_bombing_factor = 0.1
 	        air_cas_efficiency = 0.15
 			air_close_air_support_org_damage_factor = 0.1
-			air_wing_xp_loss_when_killed_factor = 0.15
-			air_untrained_pilots_penalty_factor = 0.15
+			air_wing_xp_loss_when_killed_factor = -0.15
 			production_factory_efficiency_gain_factor = 0.1
 			production_factory_max_efficiency_factor = 0.1
 			production_factory_start_efficiency_factor = 0.1
+			air_untrained_pilots_penalty_factor = -0.15
+		    
 		}
 		equipment_bonus = {
 			category_multirole = {
-			  build_cost_ic = 0.15
+			  build_cost_ic = -0.15
+			  reliability = -0.15
 			}
   
 			category_cas = {
-			  build_cost_ic = 0.15
+			  build_cost_ic = -0.15
+			  reliability = -0.15
 			}
   
 			category_tac_bomber = {
-			  build_cost_ic = 0.15
+			  build_cost_ic = -0.15
+			  reliability = -0.15
 			}
   
 			category_strat_bomber = {
-			  build_cost_ic = 0.15
+			  build_cost_ic = -0.15
+			  reliability = -0.15
 			}
 			 
 			category_heavy_fighter = {
-			  build_cost_ic = 0.15
+			  build_cost_ic = -0.15
+			  reliability = -0.15
 			}
    
 		  }
+	}
+	EIZ_Great_War_Levels_Of_Production = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		
+		equipment_bonus = {
+          category_multirole = {
+			build_cost_ic = -0.10
+		  }
+
+		  category_cas = {
+			build_cost_ic = -0.10
+		  }
+
+		  category_tac_bomber = {
+			build_cost_ic = -0.10
+		  }
+
+		  category_strat_bomber = {
+			build_cost_ic = -0.10
+		  }
+           
+		  category_heavy_fighter = {
+			build_cost_ic = -0.10
+		  }
+ 
+		}
+		
+		
+	}
+
+
+	EIZ_Contacts_In_The_ESA = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	    
+		modifier = {
+			decryption = 0.1
+			recon_factor = 0.25
+		}
+	}
+	
+	EIZ_Loosen_Rules_of_Engagement = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	    
+		modifier = {
+			air_strategic_bomber_bombing_factor = 0.2
+			air_cas_efficiency = 0.1
+            
+		}
 	}
 
 	EIZ_Supremacy_in_Technology = {
@@ -452,7 +524,10 @@ ideas = {
 			always = yes
 		}
 		removal_cost = -1
-	
+		research_bonus = {
+			air_equipment = 0.1
+			
+           }
 	}
 
 	EIZ_Encourage_the_Best = {
@@ -466,7 +541,13 @@ ideas = {
 	
 		modifier = {
 			air_ace_generation_chance_factor = 0.1
+	
 		}
+
+		research_bonus = {
+			air_equipment = 0.1
+			
+           }
 		equipment_bonus = {
 			category_multirole = {
 				reliability = 0.1
@@ -503,34 +584,40 @@ ideas = {
 		removal_cost = -1
 	   modifier = {
 		air_ace_bonuses_factor = 0.1
+		air_ace_generation_chance_factor = 0.1
+	   }
+	   research_bonus = {
+		air_equipment = 0.1
 	   }
 	   equipment_bonus = {
 		category_multirole = {
 			air_attack = 0.1
+			reliability = 0.1
 		}
 		category_cas = {
 			air_attack = 0.1
-
+            reliability = 0.1
 		}
 		category_heavy_fighter = {
 			air_attack = 0.1
-
+            reliability = 0.1
 		}
 		category_strat_bomber = {
 			air_attack = 0.1
-
+            reliability = 0.1
 		}
 		category_tac_bomber = {
 			air_attack = 0.1
-
+            reliability = 0.1
 		}
 		category_fighter = {
 			air_attack = 0.1
+			reliability = 0.1
 		}
 	}
 	}
 
-	EIZ_Supremacy_in_Technology = {
+	EIZ_Strike_Hard_Strike_Fast = {
 		allowed = {
 			always = yes
 		}
@@ -539,32 +626,256 @@ ideas = {
 		}
 		removal_cost = -1
 	
+		modifier = {
+			air_ace_bonuses_factor = 0.1
+			air_ace_generation_chance_factor = 0.1
+		   }
+		   research_bonus = {
+			air_equipment = 0.1
+		   }
+
 		equipment_bonus = {
 			category_multirole = {
 				air_agility  = 0.1
+				maximum_speed = 0.1
+				air_attack = 0.1
+				reliability = 0.1
 			}
 			category_cas = {
+				air_agility  = 0.1
+				maximum_speed = 0.1
 				air_attack = 0.1
-	
+				reliability = 0.1
 			}
 			category_heavy_fighter = {
+				air_agility  = 0.1
+				maximum_speed = 0.1
 				air_attack = 0.1
-	
+				reliability = 0.1
 			}
 			category_strat_bomber = {
+				air_agility  = 0.1
+				maximum_speed = 0.1
 				air_attack = 0.1
-	
+				reliability = 0.1
 			}
 			category_tac_bomber = {
+				air_agility  = 0.1
+				maximum_speed = 0.1
 				air_attack = 0.1
-	
+				reliability = 0.1
 			}
 			category_fighter = {
+				air_agility  = 0.1
+				maximum_speed = 0.1
 				air_attack = 0.1
+				reliability = 0.1
 			}
 		}
 		
 	}
+
+	EIZ_Pilots_Who_Can_Take_on_Armies = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	  
+	   equipment_bonus = {
+		category_multirole = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_cas = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_heavy_fighter = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_strat_bomber = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_tac_bomber = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_fighter = {
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+	}
+	}
+
+	EIZ_French_oil_giants = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+	    equipment_bonus = {
+		category_multirole = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_cas = {
+			fuel_consumption_factor = 0.1
+		    reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_heavy_fighter = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_strat_bomber = {
+			fuel_consumption_factor = 0.1
+		    reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_tac_bomber = {
+			fuel_consumption_factor = 0.1
+		    reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+		category_fighter = {
+			fuel_consumption_factor = 0.1
+		    reliability = 0.1
+            build_cost_ic  = 0.1
+		}
+	}
+	}
+
+	EIZ_The_Perfect_Fighter = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		modifier = {
+		
+		}
+		 
+
+	    equipment_bonus = {
+		category_multirole = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+			build_cost_ic = 0.1
+		}
+		category_cas = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+			build_cost_ic = 0.1
+		}
+		category_heavy_fighter = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+			build_cost_ic = 0.1
+		}
+		category_strat_bomber = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+			build_cost_ic = 0.1
+		}
+		category_tac_bomber = {
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+			build_cost_ic = 0.1
+		}		
+		category_fighter = {
+			defense = 0.1
+			build_cost_ic = 0.15
+			fuel_consumption_factor = 0.1
+			reliability = 0.1
+		}
+	}
+	}
+
+	EIZ_Knights_of_The_Sky = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+			research_bonus = {
+				air_equipment = 0.15
+				
+			   }
+		modifier = {
+			air_ace_generation_chance_factor = 0.15
+			air_ace_bonuses_factor = 0.15
+		}
+	    equipment_bonus = {
+		category_multirole = {
+			build_cost_ic = 0.1
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			air_attack = 0.1
+			reliability = 0.15
+		}
+		category_cas = {
+			build_cost_ic = 0.1
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			air_attack = 0.1
+			reliability = 0.15
+		}
+		category_heavy_fighter = {
+			build_cost_ic = 0.1
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			air_attack = 0.1
+			reliability = 0.15
+		}
+		category_strat_bomber = {
+			build_cost_ic = 0.1
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			air_attack = 0.1
+			reliability = 0.15
+		}
+		category_tac_bomber = {
+			build_cost_ic = 0.1
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			air_attack = 0.1
+			reliability = 0.15
+		}
+		category_fighter = {
+			air_agility  = 0.15
+			maximum_speed = 0.15
+			fuel_consumption_factor = 0.1
+			reliability = 0.15
+			build_cost_ic = 0.1
+			air_attack = 0.1
+			defense = 0.1
+		}
+	}
+	}
+	
+	
+	
+
 	EIZ_More_Shock_And_Awe = {
 		allowed = {
 			always = yes
