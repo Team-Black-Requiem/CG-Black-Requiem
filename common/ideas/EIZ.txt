@@ -367,7 +367,42 @@ ideas = {
 		
 	}
 
-	EIZ_Great_War_Levels_Of_Production= {
+	EIZ_More_Shock_And_Awe = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		
+		equipment_bonus = {
+          category_multirole = {
+			build_cost_ic = 0.10
+		  }
+
+		  category_cas = {
+			build_cost_ic = 0.10
+		  }
+
+		  category_tac_bomber = {
+			build_cost_ic = 0.10
+		  }
+
+		  category_strat_bomber = {
+			build_cost_ic = 0.10
+		  }
+           
+		  category_heavy_fighter = {
+			build_cost_ic = 0.10
+		  }
+ 
+		}
+		
+		
+	}
+
+	EIZ_Blocking_Out_The_sky= {
 		allowed = {
 			always = yes
 		}
@@ -376,7 +411,172 @@ ideas = {
 		}
 		removal_cost = -1
 		modifier = {
-			
+			air_strategic_bomber_bombing_factor = 0.1
+	        air_cas_efficiency = 0.15
+			air_close_air_support_org_damage_factor = 0.1
+			air_wing_xp_loss_when_killed_factor = 0.15
+			air_untrained_pilots_penalty_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+		}
+		equipment_bonus = {
+			category_multirole = {
+			  build_cost_ic = 0.15
+			}
+  
+			category_cas = {
+			  build_cost_ic = 0.15
+			}
+  
+			category_tac_bomber = {
+			  build_cost_ic = 0.15
+			}
+  
+			category_strat_bomber = {
+			  build_cost_ic = 0.15
+			}
+			 
+			category_heavy_fighter = {
+			  build_cost_ic = 0.15
+			}
+   
+		  }
+	}
+
+	EIZ_Supremacy_in_Technology = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	
+	}
+
+	EIZ_Encourage_the_Best = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	
+		modifier = {
+			air_ace_generation_chance_factor = 0.1
+		}
+		equipment_bonus = {
+			category_multirole = {
+				reliability = 0.1
+	    	}
+			category_cas = {
+				reliability = 0.1
+
+			}
+			category_heavy_fighter = {
+				reliability = 0.1
+
+			}
+			category_strat_bomber = {
+				reliability = 0.1
+
+			}
+			category_tac_bomber = {
+				reliability = 0.1
+
+			}
+			category_fighter = {
+				reliability = 0.1
+			}
+		}
+	}
+
+	EIZ_Pilots_Who_Can_Take_on_Armies = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	   modifier = {
+		air_ace_bonuses_factor = 0.1
+	   }
+	   equipment_bonus = {
+		category_multirole = {
+			air_attack = 0.1
+		}
+		category_cas = {
+			air_attack = 0.1
+
+		}
+		category_heavy_fighter = {
+			air_attack = 0.1
+
+		}
+		category_strat_bomber = {
+			air_attack = 0.1
+
+		}
+		category_tac_bomber = {
+			air_attack = 0.1
+
+		}
+		category_fighter = {
+			air_attack = 0.1
+		}
+	}
+	}
+
+	EIZ_Supremacy_in_Technology = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+	
+		equipment_bonus = {
+			category_multirole = {
+				air_agility  = 0.1
+			}
+			category_cas = {
+				air_attack = 0.1
+	
+			}
+			category_heavy_fighter = {
+				air_attack = 0.1
+	
+			}
+			category_strat_bomber = {
+				air_attack = 0.1
+	
+			}
+			category_tac_bomber = {
+				air_attack = 0.1
+	
+			}
+			category_fighter = {
+				air_attack = 0.1
+			}
+		}
+		
+	}
+	EIZ_More_Shock_And_Awe = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			air_strategic_bomber_bombing_factor = 0.05
+	        air_cas_efficiency = 0.1
+			air_close_air_support_org_damage_factor = 0.05
 		}
 		
 	}
@@ -413,69 +613,6 @@ ideas = {
 			}
 		}
 		
-	}
-	EIZ_Lyon_Artilery_Focus_idea ={
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-		removal_cost = -1
-		equipment_bonus = {
-			artillery_equipment = {
-				instant = yes
-				soft_attack = 0.1
-				ap_attack = 0.05
-			}
-		}
-	}
-	EIZ_Lyon_Sakuradite_Plating_idea ={
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-		removal_cost = -1
-		equipment_bonus = {
-			armor ={
-				armor_value = 0.05
-			}
-		}
-	}
-	EIZ_Lyon_Sakuradite_Cannons_idea ={
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-		removal_cost = -1
-		equipment_bonus = {
-			artillery_equipment ={
-				hard_attack = 0.1
-				ap_attack = 0.05
-				soft_attack = 0.05
-			}
-		}
-	}
-	EIZ_Lyon_Aircraft_Production_Bonus_idea ={
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-		removal_cost = -1
-		equipment_bonus = {
-			fighter ={
-				build_cost_ic = -0.1
-			}
-			cas ={
-				build_cost_ic = -0.1
-			}
-		}
 	}
 
 	tank_manufacturer_1 = {
