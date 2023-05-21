@@ -10,8 +10,9 @@ news_event = { #Fall of Japan
 	is_triggered_only = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = JAP_invasion
+			set_country_flag = SUPER_JAP_invasion							#country flag that handles title, should always be prefixed with SUPER_
+			set_country_flag = SUPER_JAP_invasion_TEXT						#country flag that handles description should always be identical to the previous flag, but end in _TEXT
+			set_variable = {BR_Super_Event_Var = token:SUPER_JAP_invasion}  #variable that stores the name of the country flag for the title so we can do some voodoo
 		}
 }
 
@@ -21,8 +22,9 @@ news_event = { #Russia CW Start
 	is_triggered_only = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = RUS_Civil_War_Start
+		set_country_flag = SUPER_RCW_start
+		set_country_flag = SUPER_RCW_start_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_start}
 		}
 }
 
@@ -32,8 +34,9 @@ news_event = { #Russia CW End
 	is_triggered_only = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = RUS_Civil_War_End
+		set_country_flag = SUPER_RCW_end
+		set_country_flag = SUPER_RCW_end_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_end}
 		}
 }
 

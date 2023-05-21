@@ -17,28 +17,16 @@ guiTypes = {
 
 		iconType = {
 			name ="Super_Event_Image"
-			#spriteType = "[get_super_event_image]"
+			#spriteType = "[get_super_event_image]" 	#we do this over in the scripted gui file, not here
 			position = { x = 58 y = 38 }
 		}
-
-		#instantTextBoxType = {
-		#	name = "Super_Event_Title_textbox"
-		#	position = { x = 150 y = 290 }
-		#	font = "newsfeed_body"
-		#	borderSize = {x = 0 y = 0}
-		#	text = "[get_super_event_title]"
-		#	maxWidth = 290
-		#	maxHeight = 20
-		#	fixedsize = yes	
-		#	format = center
-		#}
 
 		instantTextBoxType = {
 			name = "Super_Event_Quote_textbox"
 			position = { x = 110 y = 320 }
 			font = "newsfeed_body"
 			borderSize = {x = 0 y = 0}
-			text = "[get_superevent_quote]"
+			text = "[get_superevent_quote]"				#grabs scripted localization and ships the correct loc to the text box UI
 			maxWidth = 370
 			maxHeight = 79
 			fixedsize = yes	
@@ -52,7 +40,7 @@ guiTypes = {
             clicksound = click_scroll
 			oversound = ui_menu_over
 			buttonFont = "newsfeed_body"
-			buttonText = "[get_super_event_title]"
+			buttonText = "[get_super_event_title]"		#grabs scripted localization and ships the correct loc to the button UI
 			format = center
         }
 	}
