@@ -758,13 +758,13 @@
 					factor = 100
 				}
 			available_if_capitulated = no
-			will_lead_to_war_with = MRU
+			will_lead_to_war_with = EUR
 			completion_reward = {
 				country_event = SRU.14
 				add_manpower = 50000
 				add_war_support = 0.3
 				declare_war_on = {
-					target = MRU
+					target = EUR
 					type = annex_everything
 				}
 			}
@@ -801,7 +801,7 @@
 			y = 1
 			prerequisite = { focus = SRU_Deal_With_The_Unions }
 			relative_position_id = SRU_Deal_With_The_Unions
-			mutually_exclusive = { focus = SRU_Jacobin_All_The_Way}
+			mutually_exclusive = { focus = SRU_Mend_Internal_Divisions }
 			available = {
                            country_exists = SRU
 			}
@@ -987,7 +987,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_death_incarnate
+				}
 
 			}
 			focus = {
@@ -1005,7 +1007,10 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_stability = 0.25
+					country_event = SRU.22
+				}
 
 			}
 			focus = {
@@ -1023,7 +1028,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_stability = -0.15
+					remove_advisor_role = {
+						character = SRU_Tatyana_Kuznetsova
+						slot = minister_of_interior
+					}
+					remove_advisor_role = {
+						character = SRU_Andrei_Smirnov
+						slot = head_of_government
+					}
+					country_event = SRU.23
+				}
 
 			}
 			focus = {
@@ -1042,7 +1058,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.24
+				}
 
 			}
 			focus = {
@@ -1265,7 +1283,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_stability = 0.15
+				}
 
 			}
 
