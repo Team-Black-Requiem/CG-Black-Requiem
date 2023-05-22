@@ -38,6 +38,40 @@ ideas = {
       			production_speed_arms_factory_factor = 0.05
 			}
 		}
+		EIZ_casablanca_proposal = {
+
+			allowed = {
+				always = yes
+			}
+
+   			allowed_civil_war = {
+	   			always = yes
+   			}
+
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			}
+		}
+
+		EIZ_calling_the_pale_jewel = {
+
+			allowed = {
+				always = yes
+			}
+
+   			allowed_civil_war = {
+	   			always = yes
+   			}
+
+			removal_cost = -1
+
+			modifier = {
+		    production_speed_buildings_factor = 0.1
+			consumer_goods_factor = 0.02
+			}
+		}
 
 		Appease_german_pride = {
 
@@ -131,26 +165,45 @@ ideas = {
 			}
 		}
 
-		economic_stability_secured = {
+		EIZ_comb_the_prisons_and_banks = {
 
 			allowed = {
-	   			always = yes
-   			}
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			    production_speedSS_factor = 0.1	
+			}
+		}
+
+
+		EIZ_lyons_magnum_opus = {
+
+			allowed = {
+				always = yes
+			}
 
    			allowed_civil_war = {
 	   			always = yes
    			}
 
-   			removal_cost = -1
+			removal_cost = -1
 
-   			modifier = {
-				stability_weekly = 0.0075
-				war_support_weekly = 0.0075
-				stability_factor = 0.25
-				war_support_factor = 0.25
+			modifier = {
+				
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_factor = 0.05
+			    production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.1 
 			}
 		}
-
 
 		
 
@@ -512,7 +565,8 @@ ideas = {
 		modifier = {
 			air_strategic_bomber_bombing_factor = 0.2
 			air_cas_efficiency = 0.1
-            
+			decryption = 0.1
+			recon_factor = 0.25
 		}
 	}
 
@@ -675,7 +729,7 @@ ideas = {
 		
 	}
 
-	EIZ_Pilots_Who_Can_Take_on_Armies = {
+	EIZ_No_Expense_Spared = {
 		allowed = {
 			always = yes
 		}
@@ -712,7 +766,7 @@ ideas = {
 	}
 	}
 
-	EIZ_French_oil_giants = {
+	EIZ_French_Oil_Giants = {
 		allowed = {
 			always = yes
 		}
@@ -924,6 +978,208 @@ ideas = {
 			}
 		}
 		
+	}
+
+	EIZ_Holding_The_Line = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			dig_in_speed_factor = 0.05
+			max_dig_in_factor = 0.05
+		}
+		
+	}
+
+	EIZ_Drafting_Russians = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			dig_in_speed_factor = 0.05
+			max_dig_in_factor = 0.05
+			recruitable_population = 0.03
+		}
+		
+	}
+
+	EIZ_Ramp_Up_Rifle_Production = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			dig_in_speed_factor = 0.05
+			max_dig_in_factor = 0.05
+			recruitable_population = 0.03
+		}
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+			}
+		}
+		
+	}
+
+	EIZ_Standadize_Field_Artillery = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			dig_in_speed_factor = 0.05
+			max_dig_in_factor = 0.05
+			recruitable_population = 0.03
+		}
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+			}
+			artillery_equipment = {
+				soft_attack = 0.1
+			}
+		}
+		
+	}
+
+	EIZ_Stand_firm = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+		modifier = {
+			dig_in_speed_factor = 0.1
+			max_dig_in_factor = 0.1
+			recruitable_population = 0.05
+			army_defence_factor = 0.1
+		}
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.15
+				defense = 0.1
+				reliability = 0.1
+			}
+			artillery_equipment = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+		}
+		
+	}
+
+	EIZ_Giving_The_Army_Wings ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		modifier = {
+			pocket_penalty = -0.15
+            extra_paratrooper_supply_grace = 0.15
+		}
+	}
+
+	EIZ_Air_Mobile_Infantry ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		modifier = {
+			pocket_penalty = -0.15
+            extra_paratrooper_supply_grace = 0.15
+		    paradrop_organization_factor = 0.1	
+		}
+		
+	}
+
+	EIZ_Aerial_Logistics ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		modifier = {
+			pocket_penalty = -0.15
+            extra_paratrooper_supply_grace = 0.15
+		    paradrop_organization_factor = 0.1	
+			transport_capacity = -0.1
+		}
+		
+	
+	}
+
+	EIZ_Valkyrie_Doctrine ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		modifier = {
+			pocket_penalty = -0.15
+            extra_paratrooper_supply_grace = 0.15
+		    paradrop_organization_factor = 0.1	
+			transport_capacity = 0.1
+		paratrooper_count_per_plane = 0.15
+		special_forces_cap = 0.15
+		}
+		equipment_bonus = {
+			paratrooper = {
+				maximum_speed = 0.1
+				breakthrough = 0.1
+			}
+		}
+	
+	}
+
+	
+
+	EIZ_Lyons_High_Command ={
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war ={
+			always = yes
+		}
+		removal_cost = -1
+
+		
+		equipment_bonus = {
+			paratrooper = {
+				maximum_speed = 0.1
+				breakthrough = 0.1
+			}
+		}
+	
 	}
 
 	tank_manufacturer_1 = {
