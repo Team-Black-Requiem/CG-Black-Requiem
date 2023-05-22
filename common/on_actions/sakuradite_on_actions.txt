@@ -27,9 +27,9 @@ on_actions = {
 
 			##### sets fuel gain
 			set_variable = {sakuradite_fuel_modifier = 100}
-			set_variable = {temp_sakuradite_fuel_gain = country_sakuradite}
-			multiply_variable = {temp_sakuradite_fuel_gain = sakuradite_fuel_modifier}
-			set_variable = {sakuradite_fuel_gain = temp_sakuradite_fuel_gain}
+			set_variable = {sakuradite_fuel_gain = country_sakuradite}
+			multiply_variable = {sakuradite_fuel_gain = sakuradite_fuel_modifier}
+
 
 
 
@@ -55,6 +55,10 @@ on_actions = {
 				min = 0
 				max = sakuradite_capacity_var
 			}
+
+			set_variable = { sakuradite_ratio_var = sakuradite_fuel_current}
+			divide_variable = { sakuradite_ratio_var = sakuradite_capacity_var }
+			multiply_variable = { sakuradite_ratio_var = 100 }
 
         }
     }

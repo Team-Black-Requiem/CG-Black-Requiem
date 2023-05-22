@@ -2,32 +2,33 @@ defined_text = {
 	name = GetSakuraditeFilling
 	text = {
 		trigger = {
-			AND = {
-				check_variable = { sakuradite_variable = root.sakuradite_capacity_k }
-				NOT = {
-					check_variable = { sakuradite_variable = 0 }
-				}
+			check_variable = { sakuradite_fuel_current = root.sakuradite_capacity_k }
+			NOT = {
+				check_variable = { sakuradite_fuel_current = 0 }
 			}
 		}
 		localization_key = sakuradite_full
 	}
 	text = {
 		trigger = {
-			check_variable = { sakuradite_variable = 0 }
+			check_variable = { sakuradite_fuel_current = 0 }
 		}
 		localization_key = sakuradite_empty
 	}
-	text = {
-		trigger = {
-			check_variable = { sakuradite_balance < 0 }
-		}
-		localization_key = sakuradite_dwindles
-	}
-	text = {
-		trigger = {
-			check_variable = { sakuradite_balance > 0 }
-		}
-		localization_key = sakuradite_filling
-	}
+	#text = {
+	#	trigger = {
+    #       }
+	#		check_variable = {
+	#			sakuradite_balance <
+	#		}
+	#	}
+	#	localization_key = sakuradite_dwindles
+	#}
+	#text = {
+	#	trigger = {
+	#		check_variable = { sakuradite_balance > 0 }
+	#	}
+	#	localization_key = sakuradite_filling
+	#}
 	
 }
