@@ -6,24 +6,30 @@ guiTypes = {
 		position = { x=0 y=0 }
 		Orientation = center
 		Origo = center
-		clipping = no	
+		clipping = no
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_Super_Background"
+		}	
 		moveable = yes
 
-		iconType = {
-			name = "Super_Event_Background"
-			spriteType = "GFX_Super_Background"
-			position = { x = 35 y = 0 }
-		}
+		#iconType = {
+		#	name = "Super_Event_Background"
+		#	spriteType = "GFX_Super_Background"
+		#	position = { x = 35 y = 0 }
+		#	alwaystransparent = yes
+		#}
 
 		iconType = {
 			name ="Super_Event_Image"
 			#spriteType = "[get_super_event_image]" 	#we do this over in the scripted gui file, not here
-			position = { x = 58 y = 38 }
+			position = { x = 23 y = 38 }
+			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "Super_Event_Quote_textbox"
-			position = { x = 110 y = 320 }
+			position = { x = 75 y = 320 }
 			font = "newsfeed_body"
 			borderSize = {x = 0 y = 0}
 			text = "[get_superevent_quote]"				#grabs scripted localization and ships the correct loc to the text box UI
@@ -35,7 +41,7 @@ guiTypes = {
 
 		buttonType = {
             name = "Super_Event_Close"
-			position = { x = 205 y = 280 }
+			position = { x = 170 y = 280 }
             quadTextureSprite ="GFX_Super_Button"
             clicksound = click_scroll
 			oversound = ui_menu_over
