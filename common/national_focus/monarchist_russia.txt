@@ -92,7 +92,7 @@ id = monarchist_russia_focus
 		}
 	
 		completion_reward = {
-			country_event = MRU.3
+		
 		}
 
     }
@@ -162,7 +162,7 @@ id = monarchist_russia_focus
 	
 		completion_reward = {
 			add_ideas = MRU_Russian_Conscription
-			
+			country_event = MRU.3
 		}
 
     }
@@ -510,6 +510,7 @@ id = monarchist_russia_focus
 
 		prerequisite = {
 			focus = MRU_Return_Of_The_Patriarchs
+			focus = MRU_Loyalty_Above_All
 		}
         prerequisite = {
 			focus = MRU_Anointing_A_Saint
@@ -3334,12 +3335,12 @@ else_if = {
 		}
 	
 		completion_reward = { 
-			country_event = MRU.28
-			set_country_flag = {
-				target = SRU
-				value = 0
-				flag = Monarchists_Reach_out
-			}
+			#country_event = MRU.28
+			#set_country_flag = {
+			#	target = SRU
+			#	value = 0
+			#	flag = Monarchists_Reach_out
+			#}
 		}
 
 }
@@ -3377,6 +3378,9 @@ else_if = {
 		icon = GFX_MRU_Unthinkable_alliance
 		relative_position_id = MRU_First_Contact
 
+		allow_branch = {
+			has_country_flag  = Grand_Embassy
+		}
 		cost = 3
 		x = 0
 		y = 1
@@ -3982,7 +3986,7 @@ else_if = {
 		relative_position_id = MRU_First_Contact
 
 		cost = 3
-		x = 14
+		x = 7
 		y = 1
 		available = {
 			country_exists = MRU
@@ -4407,7 +4411,7 @@ else_if = {
 		relative_position_id = MRU_First_Contact
 
 		cost = 3
-		x = -12
+		x = -7
 		y = 1
 		available = {
 			country_exists = MRU
