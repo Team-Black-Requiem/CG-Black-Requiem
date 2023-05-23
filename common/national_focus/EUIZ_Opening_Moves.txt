@@ -78,6 +78,7 @@ focus_tree = {
             completion_reward = {
                 country_event = EIZ.2
                 hidden_effect = {
+                    news_event = super.2
               }
         }
     }
@@ -309,8 +310,8 @@ focus_tree = {
         available = {		
             country_exists = EIZ
             has_country_flag = {
-                flag = eiz_leadership
-                value > 6
+       S         flag = eiz_leadership
+                value > 3
                }
             }
     
@@ -1030,7 +1031,7 @@ focus_tree = {
         }
 
         prerequisite = {
-            focus = Block_Out_The_Sky
+            focus = EIZ_Block_Out_The_Sky
         }
 
         prerequisite = {
@@ -1275,7 +1276,7 @@ focus_tree = {
     }
   
     focus = {
-        id = More_Pilots_Than_Planes
+        id = EIZ_More_Pilots_Than_Planes
         icon = GFX_EIZ_Lyons_Air_Force
         x = 0
         y = 1
@@ -1316,15 +1317,15 @@ focus_tree = {
   
     
     focus = {
-        id = More_Shock_And_Awe
+        id = EIZ_Shock_And_Awe
         icon = GFX_EIZ_Lyons_Air_Force
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = More_Pilots_Than_Planes
+            focus = EIZ_More_Pilots_Than_Planes
         }
-        relative_position_id = More_Pilots_Than_Planes
+        relative_position_id = EIZ_More_Pilots_Than_Planes
         
         cost = 3
 
@@ -1357,19 +1358,19 @@ focus_tree = {
 
     
     focus = {
-        id = Block_Out_The_Sky
+        id = EIZ_Block_Out_The_Sky
         icon = GFX_EIZ_Lyons_Air_Force
         x = 0
         y = 1
 
         prerequisite = { 
-            focus = More_Shock_And_Awe
+            focus = EIZ_Shock_And_Awe
         }
 
         prerequisite = {
             focus = EIZ_Great_War_Levels_Of_Production
         }
-        relative_position_id = More_Shock_And_Awe
+        relative_position_id = EIZ_Shock_And_Awe
         
         cost = 3
 
@@ -1391,7 +1392,7 @@ focus_tree = {
 
             completion_reward = {
 
-             add_ideas = EIZ_Block_Out_The_Sky
+             add_ideas = EIZ_EIZ_Block_Out_The_Sky
                 hidden_effect = {
                  remove_ideas = EIZ_Supremacy_in_NumbersV4
         
@@ -1487,7 +1488,7 @@ focus_tree = {
 
     
     focus = {
-        id = EIZ_French_oil_giants
+        id = EIZ_Contacts_In_Aerospace_Research
         icon = GFX_EIZ_Lyons_Air_Force
         x = 0
         y = 1
@@ -1518,8 +1519,7 @@ focus_tree = {
             completion_reward = {
              
                 
-                    remove_idea = EIZ_No_Expense_Spared
-                    add_ideas = EIZ_French_Oil_Giants_idea
+                    #Add research bonus later
                 
          
                 hidden_effect = {
@@ -1535,9 +1535,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_French_oil_giants
+            focus = EIZ_Contacts_In_Aerospace_Research
         }
-        relative_position_id = EIZ_French_oil_giants
+        relative_position_id = EIZ_Contacts_In_Aerospace_Research
         
         cost = 3
 
@@ -1560,7 +1560,7 @@ focus_tree = {
             completion_reward = {
 
             swap_ideas = {
-                remove_idea = EIZ_French_Oil_Giants_idea
+                remove_idea = EIZ_Contacts_In_Aerospace_Research_idea
                 add_idea = EIZ_The_Perfect_Fighter_idea
             }
                 hidden_effect = {
