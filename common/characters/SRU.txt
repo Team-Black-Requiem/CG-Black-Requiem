@@ -5,6 +5,7 @@ characters = {
 
 	SRU_Bunina = {
 		name="Sonya Bunina"
+		gender = female
 		portraits={
 			civilian={
 				large="GFX_portrait_SRU_Bunina"
@@ -12,10 +13,9 @@ characters = {
 		}
 		country_leader={
 			desc = "	"
-			ideology=left_libertarianism
+			ideology = left_libertarianism
 			traits={  }
 			expire="2020.1.1.1"
-			id = -1
 		}
 	}
 
@@ -31,7 +31,6 @@ characters = {
 			ideology = national_bolshevism
 			traits = {  }
 			expire = "2020.1.1.1"
-			id = -1
 		}
 	}
 
@@ -452,9 +451,9 @@ SRU_kirova = {
 	portraits = {
 			civilian = {
 				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
-			army = {
-				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
-			}
+		}
+		army = {
+			large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
 		}
 	}
 		corps_commander = {
@@ -472,13 +471,13 @@ SRU_sonin = {
 	portraits = {
 			civilian = {
 				large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
-			army = {
-				large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
-			}
+		}
+		army = {
+			large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
 		}
 	}
 		corps_commander = {
-		traits = {engineer}
+		traits = {} #engineer
 			skill = 4
 			attack_skill = 1
 			defense_skill = 4
