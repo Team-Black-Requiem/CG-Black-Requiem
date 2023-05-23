@@ -3991,10 +3991,10 @@ else_if = {
 		available = {
 			country_exists = MRU
 		
-              has_country_flag = {
-                  flag = Grand_Embassy
-                  value < -10
-                 }
+           #   has_country_flag = {
+             #     flag = Grand_Embassy
+             #     value < -10
+             #    }
             
         }
 		bypass = { }
@@ -4415,18 +4415,18 @@ else_if = {
 		y = 1
 		available = {
 			country_exists = MRU
-			NOT = {
-				has_country_flag = {
-					flag = Grand_Embassy
-					value > 10
-				  }
+		#	NOT = {
+		#		has_country_flag = {
+			#		flag = Grand_Embassy
+			#		value > 10
+			#	  }
 
                   	
-              has_country_flag = {
-				flag = Grand_Embassy
-				value < -10
-			   }
-			}
+         #     has_country_flag = {
+		#		flag = Grand_Embassy
+		#		value < -10
+		#	   }
+		#	}
 		}
 		bypass = { }
 
