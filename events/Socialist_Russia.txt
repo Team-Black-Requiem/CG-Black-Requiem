@@ -1249,3 +1249,90 @@ country_event = { #Peoples Congress
 		add_ideas = SRU_Peoples_Congress
 	}
 }
+
+### The Jacobin Army Events ###
+
+country_event = { #The Jacobin Army
+	id = SRU.56
+	title = SRU.56.t
+	desc = SRU.56.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.56.a 
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = SRU_Kovalevs_Plan
+	}
+
+	option = {
+		 
+		name = SRU.56.b 
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = SRU_Makarovs_Plan
+	}
+}
+
+country_event = { #An Independent Military
+	id = SRU.57
+	title = SRU.57.t
+	desc = SRU.57.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.57.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_An_Independent_Military
+	}
+}
+
+country_event = { #Notify The CSS
+	id = SRU.58
+	title = SRU.58.t
+	desc = SRU.58.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.58.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Political Loyalty
+	id = SRU.59
+	title = SRU.59.t
+	desc = SRU.59.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.59.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Political_Loyalty
+			days = 35
+		}
+	}
+}

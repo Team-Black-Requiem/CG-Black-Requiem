@@ -1181,6 +1181,61 @@ ideas = {
 	   		}
    		}
 
+		SRU_An_Independent_Military = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_org = 10
+	   		}
+   		}
+
+		SRU_Political_Loyalty = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = -0.5
+				army_attack_factor = -0.1
+	   		}
+   		}
+
+		SRU_Rapid_Modernisation_Of_The_Airforce = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				category_cas = {
+					air_attack = 0.15
+				}
+			}
+   		}
+
 		
 
     

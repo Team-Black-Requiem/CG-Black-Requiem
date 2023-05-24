@@ -1326,7 +1326,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.58
+				}
 
 			}
 			focus = {
@@ -1442,13 +1444,17 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.56
+					add_command_power = 30
+					upgrade_conscription_law = 1
+				}
 
 			}
 			focus = {
 				id = SRU_Makarovs_Plan
 				icon = GFX_SRU_Makarovs_Plan
-				cost = 5
+				cost = 1
 				x = 2
 				y = 1
 				prerequisite = { focus = SRU_The_Jacobin_Army }
@@ -1466,7 +1472,7 @@
 			focus = {
 				id = SRU_Kovalevs_Plan
 				icon = GFX_SRU_Kovalevs_Plan
-				cost = 5
+				cost = 1
 				x = -2
 				y = 1
 				prerequisite = { focus = SRU_The_Jacobin_Army }
@@ -1497,7 +1503,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.59
+				}
 
 			}
 			focus = {
@@ -1515,7 +1523,13 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					set_technology = { 
+						fighter2 = 1
+						bomber2 = 1
+					}
+					add_ideas = SRU_Rapid_Modernisation_Of_The_Airforce
+				}
 
 			}
 			focus = {
@@ -1533,7 +1547,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.57
+				}
 
 			}
 			focus = {
@@ -1551,7 +1567,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_tech_bonus = {
+						name = motorised_infantry
+						bonus = 2
+						uses = 1
+						category = motorized_equipment
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment_1
+						amount = 300
+					}
+				}
 
 			}
 			focus = {
@@ -1570,7 +1597,12 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					set_technology = { 
+						mbt_1 = 1
+					}
+					load_oob = SRU_SUPERTANKS
+				}
 
 			}
 			focus = {
@@ -3956,8 +3988,8 @@
 				cost = 5
 				x = 1
 				y = 1
-				prerequisite = { focus = Bear_stands_United }
-				               focus = Resistance_untill_last_man
+				prerequisite = { focus = Bear_stands_United 
+				focus = Resistance_untill_last_man }
 				relative_position_id = Bear_stands_United
 				available = {
 								country_exists = SRU 
@@ -5375,5 +5407,4 @@
 				completion_reward = {}
 
 			}
-	
-			}
+}
