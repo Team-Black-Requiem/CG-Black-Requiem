@@ -1336,3 +1336,66 @@ country_event = { #Political Loyalty
 		}
 	}
 }
+
+country_event = { #Punch Harder and Red Blizt
+	id = SRU.60
+	title = SRU.60.t
+	desc = SRU.60.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.60.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Punch_Harder
+			days = 70
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Red_Blitz
+			days = 120
+		}
+	}
+}
+
+country_event = { #Bombs Away and Red Sky
+	id = SRU.61
+	title = SRU.61.t
+	desc = SRU.61.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.61.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_0
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = strat_bomber_equipment_1
+			amount = 200
+		}
+
+		add_equipment_to_stockpile = {
+			type = transport_plane_equipment
+			amount = 100
+		}
+
+		set_technology = { 
+			paratroopers = 1
+		}
+		load_oob = SRU_PARATROOPERS
+	}
+}
