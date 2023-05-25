@@ -1438,3 +1438,172 @@ country_event = { #Strike The Leader!
 		}
 	}
 }
+
+### Zaytsev Vision Events ###
+
+country_event = { #Zaytsevs Vision
+	id = SRU.64
+	title = SRU.64.t
+	desc = SRU.64.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.64.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Zaytsev_Plan
+		upgrade_economy_law = yes
+	}
+}
+
+country_event = { #The War Machine
+	id = SRU.65
+	title = SRU.65.t
+	desc = SRU.65.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.65.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_The_War_Machine
+	}
+}
+
+country_event = { #War Machine In Overdrive
+	id = SRU.66
+	title = SRU.66.t
+	desc = SRU.66.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.66.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_The_War_Machine4
+			add_idea = SRU_The_War_Machine5
+		}
+		upgrade_economy_law = yes
+	}
+}
+
+country_event = { #Implement A Forced Labour Program
+	id = SRU.67
+	title = SRU.67.t
+	desc = SRU.67.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.67.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Implement_A_Forced_Labour_Program
+	}
+}
+
+country_event = { #Establish The Gulag
+	id = SRU.68
+	title = SRU.68.t
+	desc = SRU.68.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.68.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Penal_Battallions_In_The_Army
+			add_idea = SRU_Establish_The_Gulag
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = { #The Economic Heart
+	id = SRU.69
+	title = SRU.69.t
+	desc = SRU.69.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.69.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_The_Economic_Heart
+	}
+}
+
+country_event = { #Goverment Slaves
+	id = SRU.70
+	title = SRU.70.t
+	desc = SRU.70.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.70.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_The_Economic_Heart3
+			add_idea = SRU_The_Economic_Heart4
+		}
+		add_tech_bonus = {
+			name = excavation_tech
+			bonus = 3
+			uses = 1
+			category = excavation_tech
+		}
+	}
+}
+
+country_event = { #Zaytsev Economic Miracle
+	id = SRU.71
+	title = SRU.71.t
+	desc = SRU.71.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.71.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Plan
+			add_idea = SRU_Zaytsev_Economic_Miracle
+		}
+		add_ideas = SRU_Zaytsev_Plan
+		upgrade_economy_law = yes
+	}
+}

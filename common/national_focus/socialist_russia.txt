@@ -1584,7 +1584,7 @@
 				completion_reward = {
 					country_event = SRU.56
 					add_command_power = 30
-					upgrade_conscription_law = 1
+					upgrade_conscription_law = yes
 				}
 
 			}
@@ -1867,9 +1867,9 @@
 
 			}
 			focus = {
-				id = SRU_Zayatsevs_Vision
+				id = SRU_Zaytsevs_Vision
 				icon = GFX_SRU_Zayatsevs_Vision
-				cost = 5
+				cost = 3
 				x = 11
 				y = 1
 				prerequisite = { focus = SRU_Total_War }
@@ -1881,7 +1881,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.64
+				}
 
 			}
 			focus = {
@@ -1890,8 +1892,8 @@
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_Zayatsevs_Vision }
-				relative_position_id = SRU_Zayatsevs_Vision
+				prerequisite = { focus = SRU_Zaytsevs_Vision }
+				relative_position_id = SRU_Zaytsevs_Vision
 				available = {
 								country_exists = SRU 
 				}
@@ -1899,18 +1901,20 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_research_slot = 1
+				}
 
 			}
 			focus = {
 				id = SRU_The_Economic_Heart
 				icon = GFX_SRU_The_Economic_Heart
-				cost = 5
+				cost = 3
 				x = 2
 				y = 2
-				prerequisite = { focus = SRU_Zayatsevs_Vision }
+				prerequisite = { focus = SRU_Zaytsevs_Vision }
 				prerequisite = { focus = SRU_Central_Planning }
-				relative_position_id = SRU_Zayatsevs_Vision
+				relative_position_id = SRU_Zaytsevs_Vision
 				available = {
 								country_exists = SRU 
 				}
@@ -1918,20 +1922,22 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.69
+				}
 
 			}
 			focus = {
 				id = SRU_The_War_Machine
 				icon = GFX_SRU_The_War_Machine
-				cost = 5
+				cost = 3
 				x = -2
 				y = 2
-				prerequisite = { focus = SRU_Zayatsevs_Vision }
+				prerequisite = { focus = SRU_Zaytsevs_Vision }
 			    prerequisite = { focus = SRU_Central_Planning }
 
 				mutually_exclusive = { focus = SRU_The_Economic_Heart }
-				relative_position_id = SRU_Zayatsevs_Vision
+				relative_position_id = SRU_Zaytsevs_Vision
 				available = {
 								country_exists = SRU 
 				}
@@ -1939,13 +1945,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.65
+				}
 
 			}
 			focus = {
 				id = SRU_Aerial_Assembly_Lines
 				icon = GFX_SRU_Aerial_Assembly_Lines
-				cost = 5
+				cost = 2
 				x = -1
 				y = 1
 				prerequisite = { focus = SRU_The_War_Machine }
@@ -1957,13 +1965,25 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_War_Machine
+						add_idea = SRU_The_War_Machine1
+					}
+					add_war_support = 0.1
+					add_tech_bonus = {
+						name = air_equipment
+						bonus = 1
+						uses = 1
+						category = air_equipment
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_State_Factories
 				icon = GFX_SRU_State_Factories
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Aerial_Assembly_Lines }
@@ -1975,13 +1995,21 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_War_Machine1
+						add_idea = SRU_The_War_Machine2
+					}
+					add_offsite_building = { 
+						type = arms_factory level = 5
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_Cut_Corners
 				icon = GFX_SRU_Cut_Corners
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Military_Firepower }
@@ -1993,13 +2021,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_War_Machine3
+						add_idea = SRU_The_War_Machine4
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_Implement_A_Forced_Labour_Program
 				icon = GFX_SRU_Implement_A_Forced_Labour_Program
-				cost = 5
+				cost = 2
 				x = 2
 				y = 1
 				prerequisite = { focus = SRU_The_War_Machine
@@ -2012,13 +2045,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.67
+				}
 
 			}
 			focus = {
 				id = SRU_Penal_Battallions_In_The_Army
 				icon = GFX_SRU_Penal_Battallions_In_The_Army
-				cost = 5
+				cost = 1
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Implement_A_Forced_Labour_Program }
@@ -2030,13 +2065,19 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_Implement_A_Forced_Labour_Program
+						add_idea = SRU_Penal_Battallions_In_The_Army
+					}
+					load_oob = SRU_MILITIA
+				}
 
 			}
 			focus = {
 				id = SRU_Establish_The_Gulag
 				icon = GFX_SRU_Establish_The_Gulag
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Penal_Battallions_In_The_Army }
@@ -2048,13 +2089,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.68
+				}
 
 			}
 			focus = {
 				id = SRU_Military_Firepower
 				icon = GFX_SRU_Military_Firepower
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_State_Factories }
@@ -2066,13 +2109,30 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_War_Machine2
+						add_idea = SRU_The_War_Machine3
+					}
+					add_tech_bonus = {
+						name = infantry_weapons
+						bonus = 1
+						uses = 2
+						category = infantry_weapons
+					}
+					add_tech_bonus = {
+						name = artillery
+						bonus = 1
+						uses = 2
+						category = artillery
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_State_Production_Companies
 				icon = GFX_SRU_State_Production_Companies
-				cost = 5
+				cost = 2
 				x = 1
 				y = 1
 				prerequisite = { focus = SRU_The_Economic_Heart }
@@ -2084,13 +2144,18 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_Economic_Heart
+						add_idea = SRU_The_Economic_Heart1
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_New_Life_Initiative
 				icon = GFX_SRU_New_Life_Initiative
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_State_Production_Companies }
@@ -2102,13 +2167,17 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					every_core_state = {
+						local_building_slots = 3
+					}
+				}
 
 			}
 			focus = {
-				id = SRU_Zayatsevist_Architecture
+				id = SRU_Zaytsevist_Architecture
 				icon = GFX_SRU_Zayatsevist_Architecture
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
 				prerequisite = { focus = SRU_New_Life_Initiative }
@@ -2120,17 +2189,25 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_Economic_Heart1
+						add_idea = SRU_The_Economic_Heart2
+					}
+					add_offsite_building = { 
+						type = industrial_complex level = 5
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_State_Owned_Unions
 				icon = GFX_SRU_State_Owned_Unions
-				cost = 5
+				cost = 2
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_Zayatsevist_Architecture }
-				relative_position_id = SRU_Zayatsevist_Architecture
+				prerequisite = { focus = SRU_Zaytsevist_Architecture }
+				relative_position_id = SRU_Zaytsevist_Architecture
 				available = {
 								country_exists = SRU 
 				}
@@ -2138,13 +2215,24 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					swap_ideas = {
+						remove_idea = SRU_The_Economic_Heart2
+						add_idea = SRU_The_Economic_Heart3
+					}
+					add_tech_bonus = {
+						name = industry
+						bonus = 1
+						uses = 2
+						category = industry
+					}
+				}
 
 			}
 			focus = {
 				id = SRU_Government_Slaves
 				icon = GFX_SRU_Government_Slaves
-				cost = 5
+				cost = 3
 				x = 2
 				y = 1
 				prerequisite = { focus = SRU_State_Owned_Unions }
@@ -2156,13 +2244,15 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.70
+				}
 
 			}
 			focus = {
 				id = SRU_War_Machine_In_Overdrive
 				icon = GFX_SRU_War_Machine_In_Overdrive
-				cost = 5
+				cost = 3
 				x = -2
 				y = 1
 				prerequisite = { focus = SRU_Cut_Corners }
@@ -2174,11 +2264,13 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.66
+				}
 
 			}
 			focus = {
-				id = SRU_Zayatsev_Economic_Miracle
+				id = SRU_Zaytsev_Economic_Miracle
 				icon = GFX_SRU_Zayatsev_Economic_Miracle
 				cost = 5
 				x = 0
@@ -2194,7 +2286,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.71
+				}
 
 			}
 			focus = {
