@@ -1399,3 +1399,42 @@ country_event = { #Bombs Away and Red Sky
 		load_oob = SRU_PARATROOPERS
 	}
 }
+
+country_event = { #Contact Agent Tannenbaum
+	id = SRU.62
+	title = SRU.62.t
+	desc = SRU.62.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.62.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Strike The Leader!
+	id = SRU.63
+	title = SRU.63.t
+	desc = SRU.63.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.63.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Strike_The_Leader
+			days = 180
+		}
+	}
+}

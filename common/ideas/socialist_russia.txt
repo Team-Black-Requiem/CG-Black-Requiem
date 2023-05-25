@@ -1316,6 +1316,62 @@ ideas = {
 	   		}
    		}
 
+		SRU_Purge_Resistance_Fighters = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+	   		}
+   		}
+
+		SRU_Rely_On_Cheka = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.2
+				enemy_operative_detection_chance_factor = 0.2
+	   		}
+   		}
+
+		SRU_Strike_The_Leader = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				targeted_modifier = {
+					tag = EUR
+					stability_factor = -0.4
+					war_support_factor = -0.4
+				}
+	   		}
+   		}
+
     
 	
 	

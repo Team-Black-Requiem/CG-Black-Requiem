@@ -1346,7 +1346,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_ideas = SRU_Rely_On_Cheka
+				}
 
 			}
 			focus = {
@@ -1364,7 +1366,13 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					add_timed_idea = {
+						idea = SRU_Purge_Resistance_Fighters
+						days = 180
+					}
+					add_stability = 0.05
+				}
 
 			}
 			focus = {
@@ -1382,7 +1390,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.62
+				}
 
 			}
 			focus = {
@@ -1400,7 +1410,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					country_event = SRU.63
+				}
 
 			}
 			focus = {
@@ -1418,7 +1430,132 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					SRU = {
+
+						limit = {	
+							State = 637
+							State = 822
+							State = 562
+							State = 644
+							State = 574
+							State = 563
+							State = 565
+							State = 564
+							State = 566
+							State = 567
+							State = 568
+							State = 576
+							State = 516
+							State = 575
+							State = 40
+							State = 570
+							State = 578
+							State = 654
+							State = 569
+							State = 824
+							State = 577
+							State = 571
+							State = 579
+							State = 580
+							State = 653
+							State = 572
+							State = 652
+							State = 651
+							State = 581
+							State = 398
+							State = 399
+							State = 573
+							State = 905
+							State = 582
+							State = 403
+							State = 214
+							State = 923
+							State = 262
+							State = 825
+							State = 397
+							State = 924
+							State = 400
+							State = 833
+							State = 249
+							State = 251
+							State = 207
+							State = 213
+							State = 722
+							State = 215
+							State = 216
+							State = 351
+							State = 264
+							State = 244
+							State = 195
+							State = 208
+							State = 209
+							State = 263
+							State = 246
+							State = 247
+							State = 248
+							State = 925
+							State = 252
+							State = 253
+							State = 219
+							State = 242
+							State = 210
+							State = 886
+							State = 94
+							State = 95
+							State = 96
+							State = 206
+							State = 906
+							State = 204
+							State = 194
+							State = 241
+							State = 242
+							State = 243
+							State = 224
+							State = 205
+							State = 223
+							State = 254
+							State = 255
+							State = 926
+							State = 256
+							State = 250
+							State = 401
+							State = 829
+							State = 239
+							State = 257
+							State = 258
+							State = 222
+							State = 220
+							State = 240
+							State = 260
+							State = 265
+							State = 217
+							State = 245
+							State = 228
+							State = 227
+							State = 218
+							State = 238
+							State = 237
+							State = 236
+							State = 137
+							State = 234
+							State = 235
+							State = 232
+							State = 821
+							State = 827
+							State = 233
+							State = 826
+							State = 231
+							State = 828
+							State = 229
+							State = 230
+						}
+						
+						resistance_growth = -0.5
+						resistance_decay = 0.5
+						
+						}
+				}
 
 			}
 		
@@ -1703,17 +1840,14 @@
 				available_if_capitulated = no
 				completion_reward = {
 					if = {
-						limit = {
-							has_completed_focus = SRU_Red_Blitz
-						}
 						SRU = {
+							limit = {
+								has_completed_focus = SRU_Red_Blitz
+							}
 							country_event = SRU.60
 						}
 					}
-					if = {
-						limit = {
-							has_completed_focus = SRU_Bombs_Away
-						}
+					else = {
 						SRU = {
 							country_event = SRU.61
 						}
@@ -1721,6 +1855,12 @@
 					add_timed_idea = {
 						idea = SRU_Enact_Operation_Red_Dawn
 						days = 120
+					}
+					SRU = {
+						declare_war_on = {
+						target = EUR
+						type = annex_everything
+						}
 					}
 					# Do decisions for Operation Red Dawn later
 				}
