@@ -1,6 +1,6 @@
 EUR_arms_supply = {		
 	priority = 9		
-	icon =	
+	#icon =	
 	
 	allowed = {
 		original_tag = EUR
@@ -20,5 +20,42 @@ allowed = {
 	visible = {
 		tag = EUR
 		has_completed_focus = EUR_under_our_management
+	}
+}
+
+EUR_secure_sites = {
+	#icon = 
+	scripted_gui = EUR_secure_sites_gui
+	priority = 50
+
+	allowed = {
+		tag = EUR
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Secure_First_Site
+	}
+}
+
+EUR_britannia_favor = {
+	#icon = 
+	scripted_gui = EUR_britannia_favor_gui
+	priority = 100
+
+	allowed = {
+		tag = EUR
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = EUR
+		or = {
+			has_completed_focus = EUR_Schneizels_Playground
+			has_completed_focus = EUR_Attract_investment_from_British_nobles
+			has_completed_focus = EUR_Prepare_for_prime_minister_visit
+			has_completed_focus = EUR_Scrapping_barrel
+		}
+		
+		
 	}
 }
