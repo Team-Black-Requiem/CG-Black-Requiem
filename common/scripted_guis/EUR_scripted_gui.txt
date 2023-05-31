@@ -1,0 +1,34 @@
+scripted_gui = {
+	EUR_secure_sites_gui = {
+		context_type = decision_category
+		window_name = "EUR_site_decision_ui_window"
+		visible = {
+            always = yes
+        }
+		ai_enabled = {
+			is_ai = yes
+		}
+		effects = {
+			First_Site_button_click = {}
+			Second_Site_button_click = {}
+			Third_Site_button_click = {}
+			Fourth_Site_button_click = {}
+			Complete_Site_button_click = {}
+		}
+		properties = {
+			#First_Site_button = {image = "[]"}
+			Second_Site_button = {image = "[]"}
+			Third_Site_button = {image = "[]"}
+			Fourth_Site_button = {image = "[]"}
+			Complete_Site_button = {image = "[]"}
+		}
+	}
+
+	EUR_britannia_favor_gui = {
+		context_type = decision_category
+		window_name = "EUR_britannia_first_decision_ui_window"
+		visible = {
+            always = yes
+        }
+	}
+}

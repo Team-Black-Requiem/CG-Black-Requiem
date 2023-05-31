@@ -17,8 +17,8 @@ scripted_gui = {
 
 		effects = {									#clears country flags and the variable on window close so things don't get confused
 			Super_Event_Close_click = {
-				clr_country_flag = "[?BR_Super_Event_Var.GetTokenKey]"
 				clr_country_flag = "[?BR_Super_Event_Var.GetTokenKey]_TEXT"
+				clr_country_flag = "[?BR_Super_Event_Var.GetTokenKey]"
 				clear_variable = BR_Super_Event_Var
 			}
 		}
