@@ -1,0 +1,3623 @@
+focus_tree = {
+	id = EUIZ_Opening_Moves
+	country = {
+		factor = 0
+		
+    }
+
+    default = no
+
+	continuous_focus_position = { x = 20 y = 2500 }
+
+    ###FREDERICA####
+	focus = {
+        id = EIZ_The_End_of_The_Beginning
+        icon = GFX_EIZ_European_Invasion
+        x = 15
+        y = 0
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_German_Counter_Insurgency_Methods
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = EIZ_The_End_of_The_Beginning
+
+		prerequisite = { focus = EIZ_The_End_of_The_Beginning }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+
+            completion_reward = {
+           
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_Trial_of_The_Royalists
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_The_End_of_The_Beginning
+
+		prerequisite = { focus = EIZ_The_End_of_The_Beginning}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+    
+
+            completion_reward = {
+              
+
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_Victory_in_Sight
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Trial_of_The_Royalists
+
+	    prerequisite = { focus = EIZ_German_Counter_Insurgency_Methods
+                         focus = EIZ_Trial_of_The_Royalists }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+                country_event = EIZ.1
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	#### SPC ####
+
+	focus = {
+        id = EIZ_Checking_up_on_The_SPC
+        icon = GFX_EIZ_European_Invasion
+        x = -7
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Victory_in_Sight
+
+		prerequisite = { focus = EIZ_Victory_in_Sight }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+        
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_Well_That_Got_Out_of_Hand_Quickly
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Checking_up_on_The_SPC
+
+		prerequisite = { focus = EIZ_Checking_up_on_The_SPC } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_Realistic_Expectations
+        icon= GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Well_That_Got_Out_of_Hand_Quickly
+
+		prerequisite = { focus = EIZ_Well_That_Got_Out_of_Hand_Quickly }
+
+        mutually_exclusive = {
+            focus = EIZ_Project_Landcruiser
+        }
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+        
+
+            completion_reward = {
+               
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+	focus = {
+        id = EIZ_Sakuradite_Tanks
+        icon= GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Realistic_Expectations
+
+		prerequisite = { focus = EIZ_Realistic_Expectations }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+               
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Scaling_Down_Railguns
+        icon= GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Sakuradite_Tanks
+
+		prerequisite = { focus = EIZ_Sakuradite_Tanks }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+               
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Sakuradite_Tipped_Rounds
+        icon= GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Scaling_Down_Railguns
+
+		prerequisite = { focus = EIZ_Scaling_Down_Railguns }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+               
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+        
+    focus = {
+        id = EIZ_Sakuradite_Reactive_Armour
+        icon= GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Sakuradite_Tipped_Rounds
+
+		prerequisite = { focus = EIZ_Sakuradite_Tipped_Rounds }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+               
+                hidden_effect = {
+                
+              }
+        }
+    }
+        
+    focus = {
+        id = EIZ_Advanced_Tank_Warfare
+        icon= GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id = EIZ_Sakuradite_Reactive_Armour
+
+		prerequisite = { focus = EIZ_Sakuradite_Reactive_Armour }
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+               
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Project_Landcruiser
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Well_That_Got_Out_of_Hand_Quickly
+
+		prerequisite = { focus = EIZ_Well_That_Got_Out_of_Hand_Quickly } 
+
+        mutually_exclusive = {
+            focus = EIZ_Realistic_Expectations
+        }
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Formalise_Hull_Design
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Project_Landcruiser
+
+		prerequisite = { focus = EIZ_Project_Landcruiser } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Perfecting_Sakuradite_Engines
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Formalise_Hull_Design
+
+		prerequisite = { focus = EIZ_Formalise_Hull_Design } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Armament_Choice
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Perfecting_Sakuradite_Engines
+
+		prerequisite = { focus = EIZ_Perfecting_Sakuradite_Engines } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    focus = {
+        id = EIZ_Mission_Purpose
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Armament_Choice
+
+		prerequisite = { focus = EIZ_Armament_Choice } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    
+    focus = {
+        id = EIZ_Dreadnoughts_on_Land
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+		relative_position_id  = EIZ_Mission_Purpose
+
+		prerequisite = { focus = EIZ_Mission_Purpose } 
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+
+            completion_reward = {
+              
+           
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+##### NATIONBUILDING ###
+
+
+focus = {
+    id = EIZ_The_Art_Of_Nationbuilding
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Victory_in_Sight
+
+    prerequisite = { focus = EIZ_Victory_in_Sight }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+     
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+focus = {
+    id = EIZ_Found_The_Russian_Administrative_Council
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_The_Art_Of_Nationbuilding
+
+    prerequisite = { focus = EIZ_The_Art_Of_Nationbuilding }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+      
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Hope_For_The_Future
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Found_The_Russian_Administrative_Council
+
+    prerequisite = { focus = EIZ_Found_The_Russian_Administrative_Council }
+
+    mutually_exclusive = {
+        focus = EIZ_Security_of_The_Past
+    }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Russian_Enterprise_Scheme
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Hope_For_The_Future
+
+    prerequisite = { focus = EIZ_Hope_For_The_Future }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Start_up_Investments
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Russian_Enterprise_Scheme
+
+    prerequisite = { focus = EIZ_Russian_Enterprise_Scheme }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_re_Open_The_Universities
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Start_up_Investments
+
+    prerequisite = { focus = EIZ_Start_up_Investments }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Anti_Corruption_Agency
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_re_Open_The_Universities
+
+    prerequisite = { focus = EIZ_re_Open_The_Universities }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Loosen_Emergency_Restrictions
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Hope_For_The_Future
+
+    prerequisite = { focus = EIZ_Hope_For_The_Future }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+focus = {
+    id = EIZ_Open_up_Russian_Society
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Loosen_Emergency_Restrictions
+
+    prerequisite = { focus = EIZ_Loosen_Emergency_Restrictions }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Fix_The_Mistakes_of_The_Past
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Open_up_Russian_Society
+
+    prerequisite = { focus = EIZ_Open_up_Russian_Society }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Promise_a_Better_Future
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Fix_The_Mistakes_of_The_Past
+
+    prerequisite = { focus = EIZ_Fix_The_Mistakes_of_The_Past }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}focus = {
+    id = EIZ_Foundations_of_a_Better_Tommorow
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Promise_a_Better_Future
+
+    prerequisite = { focus = EIZ_Promise_a_Better_Future
+                     focus = EIZ_Anti_Corruption_Agency }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Security_of_The_Past
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Found_The_Russian_Administrative_Council
+
+    prerequisite = { focus = EIZ_Found_The_Russian_Administrative_Council }
+
+    mutually_exclusive = {
+        focus = EIZ_Hope_For_The_Future
+    }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Found_a_Russian_Police_Force
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Security_of_The_Past
+
+    prerequisite = { focus = EIZ_Security_of_The_Past }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Promote_Political_Unity
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Found_a_Russian_Police_Force
+
+    prerequisite = { focus = EIZ_Found_a_Russian_Police_Force }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_a_Russian_Broadcasting_Company
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Promote_Political_Unity
+
+    prerequisite = { focus = EIZ_Promote_Political_Unity }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Groundworks_Of_The_Russian_Democratic_Party
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_a_Russian_Broadcasting_Company
+
+    prerequisite = { focus = EIZ_a_Russian_Broadcasting_Company }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Restarting_The_Economy
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Security_of_The_Past
+
+    prerequisite = { focus = EIZ_Security_of_The_Past }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Privatise_EIZ_Held_Civilian_Assets
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Restarting_The_Economy
+
+    prerequisite = { focus = EIZ_Restarting_The_Economy }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Funnel_Money_To_The_EIZ_Administration
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Privatise_EIZ_Held_Civilian_Assets
+
+    prerequisite = { focus = EIZ_Privatise_EIZ_Held_Civilian_Assets }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Support_From_The_New_Oligarchs
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Funnel_Money_To_The_EIZ_Administration
+
+    prerequisite = { focus = EIZ_Funnel_Money_To_The_EIZ_Administration }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+focus = {
+    id = EIZ_Back_In_Business
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Support_From_The_New_Oligarchs
+
+    prerequisite = { focus = EIZ_Support_From_The_New_Oligarchs
+                     focus = EIZ_Groundworks_Of_The_Russian_Democratic_Party
+                     }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+
+##### EXPANDING THE STSG #####
+
+
+focus = {
+    id = EIZ_Expanding_The_STSG
+    icon = GFX_EIZ_European_Invasion
+    x = 7
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Victory_in_Sight
+
+    prerequisite = { focus = EIZ_Victory_in_Sight }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_a_School_For_European_Warfare
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Expanding_The_STSG
+
+    prerequisite = { focus = EIZ_Expanding_The_STSG }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Expand_The_Strategic_Study_Department
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_a_School_For_European_Warfare
+
+    prerequisite = { focus = EIZ_a_School_For_European_Warfare }
+    mutually_exclusive = {
+        focus = EIZ_a_Expand_The_Tactical_Experimentation_Group
+    }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_German_Study_Group
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Expand_The_Strategic_Study_Department
+
+    prerequisite = { focus = EIZ_Expand_The_Strategic_Study_Department }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Austrian_Study_Group
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_German_Study_Group
+
+    prerequisite = { focus = EIZ_German_Study_Group }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_French_Study_Group
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Austrian_Study_Group
+
+    prerequisite = { focus = EIZ_Austrian_Study_Group }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Russian_Study_Group
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_French_Study_Group
+
+    prerequisite = { focus = EIZ_French_Study_Group }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Pan_European_Training_Initiatives
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Russian_Study_Group
+
+    prerequisite = { focus = EIZ_Russian_Study_Group }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_a_Expand_The_Tactical_Experimentation_Group
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_a_School_For_European_Warfare
+
+    prerequisite = { focus = EIZ_a_School_For_European_Warfare }
+    mutually_exclusive = {
+        focus = EIZ_Expand_The_Strategic_Study_Department
+    }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Armoured_Warfare_Experiments
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_a_Expand_The_Tactical_Experimentation_Group
+
+    prerequisite = { focus = EIZ_a_Expand_The_Tactical_Experimentation_Group }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Special_Forces_Experiments
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Armoured_Warfare_Experiments
+
+    prerequisite = { focus = EIZ_Armoured_Warfare_Experiments }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Air_Land_Battle_Study
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Special_Forces_Experiments
+
+    prerequisite = { focus = EIZ_Special_Forces_Experiments }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Infantry_Squad_Tactics
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Air_Land_Battle_Study
+
+    prerequisite = { focus = EIZ_Air_Land_Battle_Study }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Worlds_Largest_Military_Testing_Ground
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Infantry_Squad_Tactics
+
+    prerequisite = { focus = EIZ_Infantry_Squad_Tactics }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Our_Triumph
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+
+    ai_will_do = {
+        factor = 100
+    }
+
+    relative_position_id  = EIZ_Foundations_of_a_Better_Tommorow
+
+    prerequisite = { focus = EIZ_Foundations_of_a_Better_Tommorow
+                     focus = EIZ_Back_In_Business 
+                     focus = EIZ_Advanced_Tank_Warfare
+                     focus = EIZ_Dreadnoughts_on_Land
+                     focus = EIZ_Pan_European_Training_Initiatives
+                     focus = EIZ_Worlds_Largest_Military_Testing_Ground
+                    }
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+
+        completion_reward = {
+            country_event = EIZ.1
+       
+            hidden_effect = {
+            
+          }
+    }
+}
+	######LYON#####
+
+    focus = {
+        id = EIZ_Halfway_to_Victory
+        icon = GFX_EIZ_European_Invasion
+        x = 35
+        y = 0
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }  focus = {
+        id = EIZ_a_Brewing_Insurgency
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Halfway_to_Victory
+        prerequisite = {
+            focus = EIZ_Halfway_to_Victory
+        }
+        ai_will_do = {
+			factor = 100
+		}
+         
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+     focus = {
+        id = EIZ_Deal_With_The_Royalists
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Halfway_to_Victory
+        prerequisite = {
+            focus = EIZ_Halfway_to_Victory
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_The_Final_Push
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Deal_With_The_Royalists
+        prerequisite = {
+            focus = EIZ_Deal_With_The_Royalists
+            focus = EIZ_a_Brewing_Insurgency
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+    #### SPC OVERSIGHT ####
+    focus = {
+        id = EIZ_What_Have_The_SPC_Been_up_Too
+        icon = GFX_EIZ_European_Invasion
+        x = -7
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_The_Final_Push
+        prerequisite = {
+            focus = EIZ_The_Final_Push
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }  
+    focus = {
+        id = EIZ_Throw_Money_at_The_Madmen
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_What_Have_The_SPC_Been_up_Too
+        prerequisite = {
+            focus = EIZ_What_Have_The_SPC_Been_up_Too
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_PROJECT_WINGMAN
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Throw_Money_at_The_Madmen
+        prerequisite = {
+            focus = EIZ_Throw_Money_at_The_Madmen
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Sakuradite_Afterburners
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_PROJECT_WINGMAN
+        prerequisite = {
+            focus = EIZ_PROJECT_WINGMAN
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Advanced_Avionics
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Sakuradite_Afterburners
+        prerequisite = {
+            focus = EIZ_Sakuradite_Afterburners
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Sakuradite_Railguns
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Advanced_Avionics
+        prerequisite = {
+            focus = EIZ_Advanced_Avionics
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Electronic_Stealth_Systems
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Sakuradite_Railguns
+        prerequisite = {
+            focus = EIZ_Sakuradite_Railguns
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_ASF_X_Chimera
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Electronic_Stealth_Systems
+        prerequisite = {
+            focus = EIZ_Electronic_Stealth_Systems
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_PROJECT_SKYCRUISER
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Throw_Money_at_The_Madmen
+        prerequisite = {
+            focus = EIZ_Throw_Money_at_The_Madmen
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Sakuradite_Superjet_Engines
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_PROJECT_SKYCRUISER
+        prerequisite = {
+            focus = EIZ_PROJECT_SKYCRUISER
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Vast_Aircraft_Hulls
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Sakuradite_Superjet_Engines
+        prerequisite = {
+            focus = EIZ_Sakuradite_Superjet_Engines
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Heavy_Railguns
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Vast_Aircraft_Hulls
+        prerequisite = {
+            focus = EIZ_Vast_Aircraft_Hulls
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Experimental_Shielding
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Heavy_Railguns
+        prerequisite = {
+            focus = EIZ_Heavy_Railguns
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_ACS-I_Vanguard
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Experimental_Shielding
+        prerequisite = {
+            focus = EIZ_Experimental_Shielding
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+
+   ##### BREWING UNREST #####
+
+   focus = {
+    id = EIZ_The_Brewing_Unrest_of_Russia
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_The_Final_Push
+    prerequisite = {
+        focus = EIZ_The_Final_Push
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+ id = EIZ_Hearts_And_Minds
+ icon = GFX_EIZ_European_Invasion
+ x = -1
+ y = 1
+
+ cost = 1
+ relative_position_id = EIZ_The_Brewing_Unrest_of_Russia
+ prerequisite = {
+     focus = EIZ_The_Brewing_Unrest_of_Russia
+ }
+ ai_will_do = {
+     factor = 100
+ }
+
+ available = {		
+     country_exists = EIZ
+     
+     }
+
+     bypass = {
+     }
+
+     completion_reward = {
+      
+         hidden_effect = {
+         
+       }
+ }
+}
+focus = {
+ id = EIZ_Increase_Security_Patrols
+ icon = GFX_EIZ_European_Invasion
+ x = 1
+ y = 1
+
+ cost = 1
+ relative_position_id = EIZ_The_Brewing_Unrest_of_Russia
+ prerequisite = {
+     focus = EIZ_The_Brewing_Unrest_of_Russia
+ }
+ ai_will_do = {
+     factor = 100
+ }
+
+ available = {		
+     country_exists = EIZ
+     
+     }
+
+     bypass = {
+     }
+
+     completion_reward = {
+      
+         hidden_effect = {
+         
+       }
+ }
+}
+focus = {
+ id = EIZ_Pour_Money_Into_The_Problem
+ icon = GFX_EIZ_European_Invasion
+ x = -1
+ y = 1
+
+ cost = 1
+ relative_position_id = EIZ_Increase_Security_Patrols
+ prerequisite = {
+     focus = EIZ_Increase_Security_Patrols
+     focus = EIZ_Hearts_And_Minds
+ }
+ ai_will_do = {
+     factor = 100
+ }
+
+ available = {		
+     country_exists = EIZ
+     
+     }
+
+     bypass = {
+     }
+
+     completion_reward = {
+      
+         hidden_effect = {
+         
+       }
+ }
+}
+focus = {
+ id = EIZ_WHY_ISNT_THIS_WORKING
+ icon = GFX_EIZ_European_Invasion
+ x = 0
+ y = 1
+
+ cost = 1
+ relative_position_id = EIZ_Pour_Money_Into_The_Problem
+ prerequisite = {
+     focus = EIZ_Pour_Money_Into_The_Problem
+ }
+ ai_will_do = {
+     factor = 100
+ }
+
+ available = {		
+     country_exists = EIZ
+     
+     }
+
+     bypass = {
+     }
+
+     completion_reward = {
+      
+         hidden_effect = {
+         
+       }
+ }
+}
+focus = {
+    id = EIZ_Starve_The_Insurgency
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+   
+    cost = 1
+    relative_position_id = EIZ_WHY_ISNT_THIS_WORKING
+    prerequisite = {
+        focus = EIZ_WHY_ISNT_THIS_WORKING
+    }
+    ai_will_do = {
+        factor = 100
+    }
+   
+    available = {		
+        country_exists = EIZ
+        
+        }
+   
+        bypass = {
+        }
+   
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+   }
+   focus = {
+       id = EIZ_Resettlement_Camps
+       icon = GFX_EIZ_European_Invasion
+       x = 0
+       y = 1
+      
+       cost = 1
+       relative_position_id = EIZ_Starve_The_Insurgency
+       prerequisite = {
+           focus = EIZ_Starve_The_Insurgency
+       }
+       ai_will_do = {
+           factor = 100
+       }
+      
+       available = {		
+           country_exists = EIZ
+           
+           }
+      
+           bypass = {
+           }
+      
+           completion_reward = {
+            
+               hidden_effect = {
+               
+             }
+       }
+      }
+      focus = {
+          id = EIZ_Aerial_Strikes_Against_Insurgents
+          icon = GFX_EIZ_European_Invasion
+          x = 0
+          y = 1
+         
+          cost = 1
+          relative_position_id = EIZ_Resettlement_Camps
+          prerequisite = {
+              focus = EIZ_Resettlement_Camps
+          }
+          ai_will_do = {
+              factor = 100
+          }
+         
+          available = {		
+              country_exists = EIZ
+              
+              }
+         
+              bypass = {
+              }
+         
+              completion_reward = {
+               
+                  hidden_effect = {
+                  
+                }
+          }
+         }
+         focus = {
+             id = EIZ_Carte_Blanche_Security_Powers
+             icon = GFX_EIZ_European_Invasion
+             x = 0
+             y = 1
+            
+             cost = 1
+             relative_position_id = EIZ_Aerial_Strikes_Against_Insurgents
+             prerequisite = {
+                 focus = EIZ_Aerial_Strikes_Against_Insurgents
+             }
+             ai_will_do = {
+                 factor = 100
+             }
+            
+             available = {		
+                 country_exists = EIZ
+                 
+                 }
+            
+                 bypass = {
+                 }
+            
+                 completion_reward = {
+                  
+                     hidden_effect = {
+                     
+                   }
+             }
+            }
+            focus = {
+             id = EIZ_Draconian_Anti-Partisan_Measures
+             icon = GFX_EIZ_European_Invasion
+             x = 1
+             y = 1
+            
+             cost = 1
+             relative_position_id = EIZ_WHY_ISNT_THIS_WORKING
+             prerequisite = {
+                 focus = EIZ_WHY_ISNT_THIS_WORKING
+             }
+             ai_will_do = {
+                 factor = 100
+             }
+            
+             available = {		
+                 country_exists = EIZ
+                 
+                 }
+            
+                 bypass = {
+                 }
+            
+                 completion_reward = {
+                  
+                     hidden_effect = {
+                     
+                   }
+             }
+            }
+            focus = {
+             id =EIZ_Firelight_Raids
+             icon = GFX_EIZ_European_Invasion
+             x = 0
+             y = 1
+            
+             cost = 1
+             relative_position_id = EIZ_Draconian_Anti-Partisan_Measures
+             prerequisite = {
+                 focus = EIZ_Draconian_Anti-Partisan_Measures
+             }
+             ai_will_do = {
+                 factor = 100
+             }
+            
+             available = {		
+                 country_exists = EIZ
+                 
+                 }
+            
+                 bypass = {
+                 }
+            
+                 completion_reward = {
+                  
+                     hidden_effect = {
+                     
+                   }
+             }
+            }
+            focus = {
+             id =EIZ_FPsychological_Warfare
+             icon = GFX_EIZ_European_Invasion
+             x = 0
+             y = 1
+            
+             cost = 1
+             relative_position_id = EIZ_Firelight_Raids
+             prerequisite = {
+                 focus = EIZ_Firelight_Raids
+             }
+             ai_will_do = {
+                 factor = 100
+             }
+            
+             available = {		
+                 country_exists = EIZ
+                 
+                 }
+            
+                 bypass = {
+                 }
+            
+                 completion_reward = {
+                  
+                     hidden_effect = {
+                     
+                   }
+             }
+            }
+            focus = {
+             id =EIZ_Deploy_Chemical_Weapons_Against_Insurgents
+             icon = GFX_EIZ_European_Invasion
+             x = 0
+             y = 1
+            
+             cost = 1
+             relative_position_id = EIZ_FPsychological_Warfare
+             prerequisite = {
+                 focus = EIZ_FPsychological_Warfare
+             }
+             ai_will_do = {
+                 factor = 100
+             }
+            
+             available = {		
+                 country_exists = EIZ
+                 
+                 }
+            
+                 bypass = {
+                 }
+            
+                 completion_reward = {
+                  
+                     hidden_effect = {
+                     
+                   }
+             }
+            }
+
+
+
+    #### ENTERPRISES ####
+
+    
+    focus = {
+        id = EIZ_Our_Massive_Racket
+        icon = GFX_EIZ_European_Invasion
+        x = 2
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_The_Final_Push
+        prerequisite = {
+            focus = EIZ_The_Final_Push
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }   
+    focus = {
+        id = EIZ_Growing_Greed
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Our_Massive_Racket
+        prerequisite = {
+            focus = EIZ_Our_Massive_Racket
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }
+    focus = {
+        id = EIZ_Jean-Maries_Ambitions
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Our_Massive_Racket
+        prerequisite = {
+            focus = EIZ_Our_Massive_Racket
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }   
+    focus = {
+        id = EIZ_Its_Bigger_Than_Russia_Now
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Jean-Maries_Ambitions
+        prerequisite = {
+            focus = EIZ_Jean-Maries_Ambitions
+            focus = EIZ_Growing_Greed
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+    focus = {
+        id = EIZ_Its_Bigger_Than_Russia_Nowv2
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Its_Bigger_Than_Russia_Now
+        prerequisite = {
+            focus = EIZ_Its_Bigger_Than_Russia_Now
+
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+    focus = {
+        id = EIZ_Securing_Our_Gains
+        icon = GFX_EIZ_European_Invasion
+        x = -1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Its_Bigger_Than_Russia_Nowv2
+        prerequisite = {
+            focus = EIZ_Its_Bigger_Than_Russia_Nowv2
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }     
+    focus = {
+        id = EIZ_Contacts_In_Switzerland
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Securing_Our_Gains
+        prerequisite = {
+            focus = EIZ_Securing_Our_Gains
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }      
+    focus = {
+        id = EIZ_Outsource_The_Action
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Contacts_In_Switzerland
+        prerequisite = {
+            focus = EIZ_Contacts_In_Switzerland
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }     
+    focus = {
+        id = EIZ_Our_Private_Reserves
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Outsource_The_Action
+        prerequisite = {
+            focus = EIZ_Outsource_The_Action
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }      
+    focus = {
+        id = EIZ_The_Deals_Changed
+        icon = GFX_EIZ_European_Invasion
+        x = 1
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Its_Bigger_Than_Russia_Nowv2
+        prerequisite = {
+            focus = EIZ_Its_Bigger_Than_Russia_Nowv2
+
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    }  
+    focus = {
+        id = EIZ_Oil_From_The_Middle_East
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_The_Deals_Changed
+        prerequisite = {
+            focus = EIZ_The_Deals_Changed
+
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+    focus = {
+        id = EIZ_Jewels_From_The_Confederation
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Oil_From_The_Middle_East
+        prerequisite = {
+            focus = EIZ_Oil_From_The_Middle_East
+
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+    focus = {
+        id = EIZ_Deal_With_Corrupt_German_Companies
+        icon = GFX_EIZ_European_Invasion
+        x = 0
+        y = 1
+
+        cost = 1
+        relative_position_id = EIZ_Jewels_From_The_Confederation
+        prerequisite = {
+            focus = EIZ_Jewels_From_The_Confederation
+
+        }
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = EIZ
+            
+            }
+    
+            bypass = {
+            }
+    
+            completion_reward = {
+             
+                hidden_effect = {
+                
+              }
+        }
+    } 
+
+#### RACE TO THE PACIFIC ####
+
+
+focus = {
+    id = EIZ_Race_To_The_Pacific
+    icon = GFX_EIZ_European_Invasion
+    x = 7
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_The_Final_Push
+    prerequisite = {
+        focus = EIZ_The_Final_Push
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Wait_We_Need_An_Army_For_This?
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Race_To_The_Pacific
+    prerequisite = {
+        focus = EIZ_Race_To_The_Pacific
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Makes_Russians_Fight_Their_War
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Wait_We_Need_An_Army_For_This?
+    prerequisite = {
+        focus = EIZ_Wait_We_Need_An_Army_For_This?
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_General_Draft
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Makes_Russians_Fight_Their_War
+    prerequisite = {
+        focus = EIZ_Makes_Russians_Fight_Their_War
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Amnesty_For_Criminals
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_General_Draft
+    prerequisite = {
+        focus = EIZ_General_Draft
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_European_Officers
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Amnesty_For_Criminals
+    prerequisite = {
+        focus = EIZ_Amnesty_For_Criminals
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Discourage_Cowardice
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_European_Officers
+    prerequisite = {
+        focus = EIZ_European_Officers
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Fight_For_Russia
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Discourage_Cowardice
+    prerequisite = {
+        focus = EIZ_Discourage_Cowardice
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Call_Out_For_Mercenaries
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Wait_We_Need_An_Army_For_This?
+    prerequisite = {
+        focus = EIZ_Wait_We_Need_An_Army_For_This?
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Call_Up_The_Big_Three...
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Call_Out_For_Mercenaries
+    prerequisite = {
+        focus = EIZ_Call_Out_For_Mercenaries
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_And_The_Smaller_Outfits...
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id = EIZ_Call_Up_The_Big_Three...
+    prerequisite = {
+        focus = EIZ_Call_Up_The_Big_Three...
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_And_The_Scum_Of_The_Earth
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id =EIZ_And_The_Smaller_Outfits...
+    prerequisite = {
+        focus = EIZ_And_The_Smaller_Outfits...
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_Pay_Them_With_Guns...
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id =EIZ_And_The_Scum_Of_The_Earth
+    prerequisite = {
+        focus = EIZ_And_The_Scum_Of_The_Earth
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+focus = {
+    id = EIZ_And_The_Loot_Of_Siberia
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 1
+
+    cost = 1
+    relative_position_id =EIZ_Pay_Them_With_Guns...
+    prerequisite = {
+        focus = EIZ_Pay_Them_With_Guns...
+    }
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+
+
+
+
+	#####OSCAR####
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
