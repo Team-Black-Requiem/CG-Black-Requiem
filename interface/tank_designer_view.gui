@@ -641,16 +641,26 @@ guiTypes = {
 			clicksound = "ui_tank_designer_save"
 		}
 
+
+
+
+		### Important?###
+
+
+
+
+
+
 		# drop down for equipment variants
 		dropDownBoxType = {
 			name = "equipments"
 			position = { x = 20 y = 60 }
 			size = { width = 285 height = 30 }
-
+		
 			containerWindowType = {
 				name = "equipment_name_bg"
 				size = { width = 100% height = 100% }
-
+			
 				background = {
 					name = "name_bg"
 					quadTextureSprite = "GFX_generic_background"
@@ -658,14 +668,14 @@ guiTypes = {
 					alwaystransparent = yes
 				}
 			}
-
+		
 			editBoxType = {
 				name = "name"
 				position = { x = 35 y = 5 }
 				font = "hoi_18mbs"
 				size = { x=230 y=20 }
 			}
-
+		
 			buttonType = {
 				name = "name_reset"
 				position = { x = -31 y = -1 }
@@ -673,14 +683,14 @@ guiTypes = {
 				clicksound = "ui_tank_designer_reset"
 				orientation = "upper_right"
 			}
-
+		
 			iconType = {
 				name = "tank_design_icon"
 				spriteType = "GFX_tank_design_icon"
 				position = { x = 5 y = 1 }
 				alwaystransparent = yes
 			}
-
+		
 			expandedWindow = {
 				name = "expanded_window"
 				position = { x=10 y= -300 }
@@ -692,13 +702,13 @@ guiTypes = {
 				verticalScrollbar = "right_vertical_slider"
 				margin = { top = 7 bottom = 7 right = 6 }
 				#clipping = no
-
+			
 				background = {
 					name = "Background"
 					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
 					position = { x = 0 y = 0 }
 				}
-
+			
 				gridBoxType = {
 					name = "equipments_grid"
 					position = { x = 8 y = 0 }
@@ -706,13 +716,13 @@ guiTypes = {
 					slotsize = { width = 220 height = 60 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-
+				
 					# contains designer_equipment_entry
-
+				
 				}
 			}
 		}
-
+		
 		# chassi name
 		instantTextboxType = {
 			name = "blueprint_type_name"
@@ -728,25 +738,25 @@ guiTypes = {
 			name = "dropdown_tank_roles"
 			position = { x = 20 y = 95 }
 			size = { width = 285 height = 40 }
-
+		
 			containerWindowType = {
 				name = "equipment_name_bg"
 				size = { width = 100% height = 100% }
-
+			
 				background = {
 					name = "name_bg"
 					quadTextureSprite = "GFX_generic_background"
 					alwaystransparent = yes
 				}
 			}
-
+		
 			iconType = {
 				name = "tank_role_icon"
 				spriteType = "GFX_land_equipment_role_icons"
 				position = { x = 4 y = 2 }
 				alwaystransparent = yes
 			}
-
+		
 			instantTextboxType = {
 				name = "role_text"
 				position = { x = 48 y = 10 }
@@ -755,7 +765,7 @@ guiTypes = {
 				maxHeight = 18
 				alwaystransparent = yes
 			}
-
+		
 			expandButton = {
 				name = "expand_button"
 				position = { x = -25 y = 10 }
@@ -766,7 +776,7 @@ guiTypes = {
 				pdx_disabled_tooltip = "EQUIPMENT_DESIGNER_ROLE_CHANGE_DISALLOWED"
 				pdx_disabled_tooltip_delayed = "EQUIPMENT_DESIGNER_ROLE_CHANGE_DISALLOWED_LICENSED"
 			}
-
+		
 			expandedWindow = {
 				name = "expanded_window"
 				position = { x = 0 y = -250 }
@@ -776,22 +786,22 @@ guiTypes = {
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 300
-
+			
 				background = {
 					name = "Background"
 					quadTextureSprite ="GFX_generic_background"
 					position = { x = 0 y = 0 }
 				}
-
+			
 				gridBoxType = {
 					name = "tank_role_grid"
 					size = { width = 100% height = 100% }
 					slotsize = { width = 100% height = 50 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-
+				
 					# contains tank_designer_role_entry
-
+				
 				}
 			}
 		}

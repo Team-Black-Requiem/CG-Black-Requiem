@@ -1,19 +1,79 @@
-#equipment_modules = {
-#	
-#	###  #     ##  #   # #### ####
-#	#  # #    #  # ##  # #    #
-#	###  #    #### # # # #### ####
-#	#    #    #  # #  ## #       #
-#	#    #### #  # #   # #### ####
-#
-#		#### #   #  ### ### #   # #### ####
-#		#    ##  # #     #  ##  # #    #
-#		#### # # # # ##  #  # # # #### ####
-#		#    #  ## #  #  #  #  ## #       #
-#		#### #   #  ### ### #   # #### ####
-#
-#	### Tier 1 Jet Engines
-#
+equipment_modules = {
+	
+	#  # #### #    ###  ###  ##  ###  ##### #### ###
+	#  # #    #     #  #    #  # #  #   #   #    #  #
+	#### #### #     #  #    #  # ###    #   #### ###
+	#  # #    #     #  #    #  # #      #   #    #  #
+	#  # #### #### ###  ###  ##  #      #   #### #  #
+
+		#### #   #  ### ### #   # #### ####
+		#    ##  # #     #  ##  # #    #
+		#### # # # # ##  #  # # # #### ####
+		#    #  ## #  #  #  #  ## #       #
+		#### #   #  ### ### #   # #### ####
+
+		### Great War
+
+		helicopter_engine_1_1x = { ### 1 Propeller
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+		helicopter_engine_1_2x = { ### 2 Propellers
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+		### VTOL
+
+		helicopter_engine_2_1x = { ### 1 Propeller
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+		helicopter_engine_2_2x = { ### 2 Propellers
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+		### Sakuradite Engines
+
+		helicopter_engine_3_1x = { ### 1 Propeller
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+		helicopter_engine_3_2x = { ### 2 Propellers
+			category = helicopter_engine_slot
+			sfx = sfx_ui_sd_module_engine
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	###  #     ##  #   # #### ####
+	#  # #    #  # ##  # #    #
+	###  #    #### # # # #### ####
+	#    #    #  # #  ## #       #
+	#    #### #  # #   # #### ####
+
+		#### #   #  ### ### #   # #### ####
+		#    ##  # #     #  ##  # #    #
+		#### # # # # ##  #  # # # #### ####
+		#    #  ## #  #  #  #  ## #       #
+		#### #   #  ### ### #   # #### ####
+
+	### Tier 1 Jet Engines
+
 #	engine_1_1x = {
 #		category = plane_jet_engine_type
 #		sfx = sfx_ui_sd_module_engine
@@ -202,15 +262,15 @@
 #			
 #		}
 #	}
-#
-#	#   # ####  ##  ###   ##  #   # ####
-#	#   # #    #  # #  # #  # ##  # #
-#	# # # #### #### ###  #  # # # # ####
-#	# # # #    #  # #    #  # #  ##    #
-#	####  #### #  # #     ##  #   # ####
-#
-#	### Tier 1 Fighter Weapons ###
-#
+
+	#   # ####  ##  ###   ##  #   # ####
+	#   # #    #  # #  # #  # ##  # #
+	# # # #### #### ###  #  # # # # ####
+	# # # #    #  # #    #  # #  ##    #
+	####  #### #  # #     ##  #   # ####
+
+	### Tier 1 Fighter Weapons ###
+
 #	fighter_weapon_1 = {
 #		category = fighter_weapon
 #		sfx = sfx_ui_sd_module_turret
@@ -344,8 +404,6 @@
 #			interception
 #		}
 #	}
-#
-#	### Sakuradite Fighter Weapons
 #
 #	### Tier 1 CAS Weapons ###
 #
@@ -498,57 +556,11 @@
 #		}
 #		dismantle_cost_ic = 0.5
 #	}
-#
-#	### Sakuradite CAS Weapons ###
-#
-#	### Tier 1 Multirole Weapons ###
-#	### Basically, stats between a fighter and CAS weapon so it can provide both roles but worse | You can then choose to equip CAS or AAM missles for the secondary ###
-#	### Having Problems implementing Multiroles so I am commenting it out for the patch ###
-#
-#	multirole_cannon_1 = {
-#		category = multi_weapon
-#		sfx = sfx_ui_sd_module_turret
-#		add_equipment_type = interceptor
-#
-#		allow_mission_type = {
-#			cas
-#			attack_logistics
-#			air_superiority
-#			interception
-#		}
-#
-#		add_stats = {
-#			air_ground_attack = 50
-#			air_attack = 20
-#			build_cost_ic = 20
-#		}
-#	}
-#	### Tier 2 Multirole Weapons ###
-#	multirole_cannon_2 = {
-#		category = multi_weapon
-#		sfx = sfx_ui_sd_module_turret
-#		add_equipment_type = multirole
-#		add_stats = {
-#			
-#		}
-#	}
-#	### Tier 3 Multirole Weapons ###
-#	multirole_cannon_3 = {
-#		category = multi_weapon
-#		sfx = sfx_ui_sd_module_turret
-#		add_equipment_type = multirole
-#		add_stats = {
-#			
-#		}
-#	}
-#	### Tier 4 Multirole Weapons ###
-#	multirole_cannon_4 = {
-#		category = multi_weapon
-#		sfx = sfx_ui_sd_module_turret
-#		add_equipment_type = multirole
-#		add_stats = {
-#			
-#		}
-#	}
-#	### Sakuradite Multirole Weapons ###
-#}
+
+	####  ##  #  # #  # ###   ##  ###  ### ##### ####
+	#    #  # # #  #  # #  # #  # #  #  #    #   #
+	#### #### ###  #  # ###  #### #  #  #    #   ####
+	   # #  # #  # #  # #  # #  # #  #  #    #   #
+	#### #  # #  # #### #  # #  # ###  ###   #   ####
+	
+}

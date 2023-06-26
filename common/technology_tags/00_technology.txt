@@ -55,6 +55,7 @@ technology_categories = {
 	light_fighter
 	cat_heavy_fighter
 	cas_bomber
+
 	#multirole
 
 	tactical_bomber
@@ -68,6 +69,14 @@ technology_categories = {
 	heavy_air
 	air_equipment
 	air_modules
+
+	#Helicopter
+
+	helicopter
+	helicopter_utility
+	helicopter_attack
+	helicopter_transport
+	helicopter_modules
 
 	#Doctrines
 	
@@ -165,18 +174,18 @@ technology_folders = {
 	}
 	air_techs_folder = {
 		ledger = air
-		#available = {
-		#	NOT = { 
-		#		has_dlc = "By Blood Alone" 
-		#	} 
-		#}
+		available = {
+			NOT = { 
+				has_dlc = "By Blood Alone" 
+			} 
+		}
 	}
-	#bba_conventional_air_techs_folder = {
-	#	ledger = air
-	#	available = {
-	#		has_dlc = "By Blood Alone"
-	#	}
-	#}
+	bba_standard_folder = {
+		ledger = air
+		available = {
+			has_dlc = "By Blood Alone"
+		}
+	}
 	#bba_geass_air_techs_folder = {
 	#	ledger = air
 	#	available = {
