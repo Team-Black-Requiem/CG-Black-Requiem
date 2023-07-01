@@ -204,12 +204,12 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-		
 		set_cosmetic_tag = EUR_EB
 		recruit_character = EUR_Michele_Manfredi
 		recruit_character = EUR_Augusta_Henry
 		}
 	}
+
 	focus = {
 		id = EUR_Finding_alternatives #(WIP)
 		icon = GFX_goal_unknown
@@ -241,8 +241,8 @@ focus_tree = {
 		id = EUR_Britannian_ultimatum
 		icon = GFX_goal_unknown
 		cost = 3
-		x = 0
-		y = 1
+		x = 10
+		y = 2
 		relative_position_id = EUR_Britannians_proposal
 		prerequisite = {
 			focus = EUR_Britannians_proposal
@@ -262,7 +262,9 @@ focus_tree = {
 		remove_country_leader_role = {
 		character = EUR_Mil_Coun
 		ideology = paternal_autocracy}
-		country_event = { days = 3 id = EUR.7}}
+
+		country_event = { days = 3 id = EUR.7}
+	}
 		add_country_leader_role = {
 		character = EUR_Augusta_Henry
 		promote_leader = yes
@@ -270,7 +272,8 @@ focus_tree = {
         ideology = paternal_autocracy
         expire = "2020.1.1.1"
         traits = { }
-		}}
+		}
+	}
 		}
 	}
 	focus = {
@@ -756,6 +759,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			set_country_flag = Industry_Schnizel_3
 		}
 	}
 	focus = {
@@ -1764,6 +1768,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			set_country_flag = Industry_Schnizel_1
 		}
 	}
 	focus = {
@@ -1955,6 +1960,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			set_country_flag = Industry_Schnizel_2
 		}
 	}
 	focus = {
@@ -3847,7 +3853,58 @@ focus = {
 		}
 	}
 	
+	focus = {
+		id = EUR_Schnizel_East_Secured
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 14
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = Russia_EIZ_Victory
+			load_focus_tree = EUR_Schnizel_Phase_2
+		}
+	}
 
+	focus = {
+		id = EUR_Schnizel_East_Secured_2
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 2
+		y = 14
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+			load_focus_tree = EUR_Schnizel_Phase_2
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = Russia_Monarchist_Victory
+			load_focus_tree = EUR_Schnizel_Phase_2
+		}
+	}
 
 	
 	
