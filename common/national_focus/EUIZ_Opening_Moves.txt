@@ -39,10 +39,8 @@ focus_tree = {
 
             completion_reward = {
                 country_event = EIZ.1
-            set_country_flag = {
-                flag = eiz_leadership 
-                value = -3
-            }
+            set_country_flag = eiz_leadership 
+        
                 hidden_effect = {
                 
               }
@@ -310,7 +308,7 @@ focus_tree = {
         available = {		
             country_exists = EIZ
             has_country_flag = {
-       S         flag = eiz_leadership
+             flag = eiz_leadership
                 value > 3
                }
             }
@@ -348,17 +346,16 @@ focus_tree = {
             NOT = {
 				has_country_flag = {
 					flag = eiz_leadership
-					value < 6
+					value < 3
 				  }
-
-                  	
+          
               has_country_flag = {
 				flag = eiz_leadership
-				value > -6
+				value > -3
 			   }
-			}
-            }
-    
+            
+        }
+        }
             bypass = {
             }
     
@@ -3345,7 +3342,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                load_focus_tree = EUIZ_Phase_2
+                load_focus_tree = EIZ_Phase_2
                 hidden_effect = {
               }
         }
