@@ -2225,7 +2225,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = EUR_Steel_for_Britannia1
+		id = EUR_Oil_for_Britannia1
 		icon = GFX_goal_unknown
 		cost = 3
 		x = 1
@@ -2245,6 +2245,16 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = Oil
+				amount = 8
+				state = 722
+			}
+			add_resource = {
+				type = Oil
+				amount = 10
+				state = 917
+			}
 		}
 	}
 	focus = {
@@ -2253,9 +2263,9 @@ focus_tree = {
 		cost = 3
 		x = 0
 		y = 1
-		relative_position_id = EUR_Steel_for_Britannia1
+		relative_position_id = EUR_Oil_for_Britannia1
 		prerequisite = {
-			focus = EUR_Steel_for_Britannia1
+			focus = EUR_Oil_for_Britannia1
 		}
 		search_filters = {
 		}
