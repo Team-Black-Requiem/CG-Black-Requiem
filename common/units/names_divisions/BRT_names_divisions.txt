@@ -74,7 +74,7 @@ BRT_INF_01 = {
 BRT_INF_02 = {
 	name = "Honorary Britannians"
 
-	for_countries = { AR2 AR3 AR4 AR5 AR6 AR7 AR8 AR9 A10 A11 }				# Also includes releasable Portuguese colonlies
+	for_countries = { BRT AR2 AR3 AR4 AR5 AR6 AR7 AR8 AR9 A10 A11 }				# Also includes releasable Portuguese colonlies
 
 	can_use = { always = yes }
 
@@ -83,32 +83,32 @@ BRT_INF_02 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { BRA_INF_01 }
 
-	fallback_name = "%d Number Battalion"
+	fallback_name = "%d Honorary Battalion"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d Number Battalion" }
-		2 = { "%d Number Battalion" }
-		3 = { "%d Number Battalion" }
-		4 = { "%d Number Battalion" }
-		5 = { "%d Number Battalion" }
-		6 = { "%d Number Battalion" }
-		7 = { "%d Number Battalion" }
-		8 = { "%d Number Battalion" }
-		9 = { "%d Number Battalion" }
-		10 = { "%d Number Battalion" }
-		11 = { "%d Number Battalion" }
-		12 = { "%d Number Battalion" }
-		13 = { "%d Number Battalion" }
-		14 = { "%d Number Battalion" }
-		15 = { "%d Number Battalion" }
-		16 = { "%d Number Battalion" }
-		17 = { "%d Number Battalion" }
-		18 = { "%d Number Battalion" }
-		19 = { "%d Number Battalion" }
-		20 = { "%d Number Battalion" }		
+		1 = { "%d Honorary Battalion" }
+		2 = { "%d Honorary Battalion" }
+		3 = { "%d Honorary Battalion" }
+		4 = { "%d Honorary Battalion" }
+		5 = { "%d Honorary Battalion" }
+		6 = { "%d Honorary Battalion" }
+		7 = { "%d Honorary Battalion" }
+		8 = { "%d Honorary Battalion" }
+		9 = { "%d Honorary Battalion" }
+		10 = { "%d Honorary Battalion" }
+		11 = { "%d Honorary Battalion" }
+		12 = { "%d Honorary Battalion" }
+		13 = { "%d Honorary Battalion" }
+		14 = { "%d Honorary Battalion" }
+		15 = { "%d Honorary Battalion" }
+		16 = { "%d Honorary Battalion" }
+		17 = { "%d Honorary Battalion" }
+		18 = { "%d Honorary Battalion" }
+		19 = { "%d Honorary Battalion" }
+		20 = { "%d Honorary Battalion" }		
 	}
 }
 
@@ -145,9 +145,40 @@ BRT_MOT_01 = {
 	}
 }
 
+BRT_MOT_02 = {
+	name = "Honorary Britannian Mechanized Division"
+
+	for_countries = { BRT AR2 AR3 AR4 AR5 AR6 AR7 AR8 AR9 A10 A11 }			# Also includes releasable Portuguese colonlies
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { BRT_INF_02 }
+
+	fallback_name = "%d Mechanized Honorary Battalion"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d Mechanized Honorary Battalion" }
+		2 = { "%d Mechanized Honorary Battalion" }
+		3 = { "%d Mechanized Honorary Battalion" }
+		4 = { "%d Mechanized Honorary Battalion" }
+		5 = { "%d Mechanized Honorary Battalion" }
+		6 = { "%d Mechanized Honorary Battalion" }
+		7 = { "%d Mechanized Honorary Battalion" }
+		8 = { "%d Mechanized Honorary Battalion" }
+		9 = { "%d Mechanized Honorary Battalion" }
+		10 = { "%d Mechanized Honorary Battalion" }
+	}
+}
+
 
 BRT_ARM_01 = {
-	name = "Armored Division"
+	name = "Royal Armored Divisions"
 
 	for_countries = { BRT }			# Also includes releasable Portuguese colonlies
 
@@ -174,6 +205,37 @@ BRT_ARM_01 = {
 		8 = { "%d Armored Royal Battalion" }
 		9 = { "%d Armored Royal Battalion" }
 		10 = { "%d Armored Royal Battalion" }
+	}
+}
+
+BRT_ARM_02 = {
+	name = "Honorary Armored Divisions"
+
+	for_countries = { BRT AR2 AR3 AR4 AR5 AR6 AR7 AR8 AR9 A10 A11 }			# Also includes releasable Portuguese colonlies
+
+	can_use = { always = yes }
+
+	division_types = { "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { BRA_INF_01 }
+
+	fallback_name = "%d Armored Honorary Battalion"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d Armored Honorary Battalion" }
+		2 = { "%d Armored Honorary Battalion" }
+		3 = { "%d Armored Honorary Battalion" }
+		4 = { "%d Armored Honorary Battalion" }
+		5 = { "%d Armored Honorary Battalion" }
+		6 = { "%d Armored Honorary Battalion" }
+		7 = { "%d Armored Honorary Battalion" }
+		8 = { "%d Armored Honorary Battalion" }
+		9 = { "%d Armored Honorary Battalion" }
+		10 = { "%d Armored Honorary Battalion" }
 	}
 }
 
