@@ -2374,8 +2374,13 @@
 		}
 	
 		completion_reward = {
+			add_ideas = {
+				EUR_discontent_in_the_army_ranks
+				EUR_shortage_of_trusted_officers
+			}
 		}
 	}
+	## Don't know how and what officers to add
 	focus = {
 		id = EUR_New_officier_corps1
 		icon = GFX_goal_unknown
@@ -2421,6 +2426,12 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+			remove_ideas = EUR_shortage_of_trusted_officers
 		}
 	}
 	focus = {
@@ -2444,13 +2455,43 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
-		id = EUR_Ask_Japan
+		id = EUR_Rely_On_Infantrymen
 		icon = GFX_goal_unknown
 		cost = 3
 		x = -1
+		y = 1
+		relative_position_id = EUR_Our_own_tactics
+		prerequisite = {
+			focus = EUR_Our_own_tactics
+		}
+		search_filters = {
+		}
+		mutually_exclusive = { focus = EUR_Rely_On_Officers}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Siberian_Man
+		}
+	}
+	focus = {
+		id = EUR_Rely_On_Officers
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 1
 		y = 1
 		relative_position_id = EUR_Our_own_tactics
 		prerequisite = {
@@ -2467,17 +2508,18 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Siberian_Mind
 		}
 	}
 	focus = {
-		id = EUR_Ask_China
+		id = EUR_Improve_Army_Rations
 		icon = GFX_goal_unknown
 		cost = 3
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = EUR_Our_own_tactics
+		relative_position_id = EUR_Rely_On_Infantrymen
 		prerequisite = {
-			focus = EUR_Our_own_tactics
+			focus = EUR_Rely_On_Infantrymen
 		}
 		search_filters = {
 		}
@@ -2490,18 +2532,60 @@
 		}
 	
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = EUR_Siberian_Man
+				}
+				swap_ideas = {
+					remove_idea = EUR_Siberian_Man
+					add_idea = EUR_Siberian_Man2
+				}
+			}
 		}
 	}
 	focus = {
-		id = EUR_Return_army_hierarchy
+		id = EUR_Unified_Command
+		icon = GFX_goal_unknown
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rely_On_Officers
+		prerequisite = {
+			focus = EUR_Rely_On_Officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+			completion_reward = {
+				if = {
+					limit = {
+						has_idea = EUR_Siberian_Mind
+					}
+					swap_ideas = {
+						remove_idea = EUR_Siberian_Mind
+						add_idea = EUR_Siberian_Mind2
+					}
+				}
+			}
+		
+	}
+	focus = {
+		id = EUR_Reform_The_Hierarchy
 		icon = GFX_goal_unknown
 		cost = 3
 		x = 1
 		y = 1
-		relative_position_id = EUR_Ask_Japan
+		relative_position_id = EUR_Improve_Army_Rations
 		prerequisite = {
-			focus = EUR_Ask_China
-			focus = EUR_Ask_Japan
+			focus = EUR_Improve_Army_Rations
+			focus = EUR_Unified_Command
 		}
 		search_filters = {
 		}
@@ -2514,17 +2598,20 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = EUR_discontent_in_the_army_ranks
+			load_oob = "EUR_Rus_Battalions"
+			
 		}
 	}
 	focus = {
-		id = EUR_Develop_new_rifles_for_army
+		id = EUR_Developing_Rifles
 		icon = GFX_goal_unknown
 		cost = 3
 		x = -1
 		y = 1
-		relative_position_id = EUR_Return_army_hierarchy
+		relative_position_id = EUR_Reform_The_Hierarchy
 		prerequisite = {
-			focus = EUR_Return_army_hierarchy
+			focus = EUR_Reform_The_Hierarchy
 		}
 		search_filters = {
 		}
@@ -2537,17 +2624,22 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
 		}
 	}
 	focus = {
-		id = EUR_Artillery_training
+		id = EUR_Artillery_Training
 		icon = GFX_goal_unknown
 		cost = 3
 		x = 1
 		y = 1
-		relative_position_id = EUR_Return_army_hierarchy
+		relative_position_id = EUR_Reform_The_Hierarchy
 		prerequisite = {
-			focus = EUR_Return_army_hierarchy
+			focus = EUR_Reform_The_Hierarchy
 		}
 		search_filters = {
 		}
@@ -2560,20 +2652,30 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = modern_artillery_90
+				amount = 1200
+				producer = BRT
+			}
 		}
 	}
 	focus = {
-		id = EUR_New_Russian_army
+		id = EUR_A_New_Russian_Army
 		icon = GFX_goal_unknown
 		cost = 3
 		x = -1
 		y = 1
-		relative_position_id = EUR_Artillery_training
+		relative_position_id = EUR_Artillery_Training
 		prerequisite = {
-			focus = EUR_Artillery_training
+			focus = EUR_Artillery_Training
 		}
 		prerequisite = {
-			focus = EUR_Develop_new_rifles_for_army
+			focus = EUR_Developing_Rifles
 		}
 		search_filters = {
 		}
@@ -2586,6 +2688,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_A_New_Russian_Army_Idea
 		}
 	}
 	
