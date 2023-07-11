@@ -1,8 +1,12 @@
 guiTypes = {
 	containerWindowType = {
 		name = "EUR_site_decision_ui_window"
-		position = { x = 0 y = 0 }
-		size = { width = 275 height = 300 }
+		position = { x = 0 y = -10 }
+		size = { width = 490 height = 320 }
+		background = {
+			name = "EUR_background"
+			quadTextureSprite ="GFX_EUR_Background"
+		}
 
         buttonType = {
 			name = "First_Site_button"
@@ -19,7 +23,7 @@ guiTypes = {
 			position = { x = 130 y = 0 }
             clicksound = click_scroll
 			oversound = ui_menu_over
-			spriteType = "First_Site_button"
+			spriteType = "Second_Site_button"
 			pdx_tooltip = ""
 		}
         buttonType = {
@@ -28,7 +32,7 @@ guiTypes = {
 			position = { x = 250 y = 0 }
             clicksound = click_scroll
 			oversound = ui_menu_over
-			spriteType = "First_Site_button"
+			spriteType = "Second_Site_button"
 			pdx_tooltip = ""
 		}
         buttonType = {
@@ -37,7 +41,7 @@ guiTypes = {
 			position = { x = 370 y = 0 }
             clicksound = click_scroll
 			oversound = ui_menu_over
-			spriteType = "First_Site_button"
+			spriteType = "Second_Site_button"
 			pdx_tooltip = ""
 		}
         buttonType = {
@@ -47,6 +51,62 @@ guiTypes = {
             clicksound = click_scroll
 			oversound = ui_menu_over
 			spriteType = "Complete_Site_button"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Component_Status_1"
+			orientation = upper_left
+			position = {x = 50 y = 150}
+			spriteType = "Site_Component_Red"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Site_Component1"
+			orientation = upper_left
+			position = {x = 100 y = 145}
+			spriteType = "Site_Component_1"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Component_Status_2"
+			orientation = upper_left
+			position = {x = 50 y = 225}
+			spriteType = "Site_Component_Red"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Site_Component2"
+			orientation = upper_left
+			position = {x = 100 y = 220}
+			spriteType = "Site_Component_1"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Component_Status_3"
+			orientation = upper_left
+			position = {x = 250 y = 150}
+			spriteType = "Site_Component_Red"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Site_Component3"
+			orientation = upper_left
+			position = {x = 300 y = 145}
+			spriteType = "Site_Component_1"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Component_Status_4"
+			orientation = upper_left
+			position = {x = 250 y = 225}
+			spriteType = "Site_Component_Red"
+			pdx_tooltip = ""
+		}
+		iconType = {
+			name = "Site_Component4"
+			orientation = upper_left
+			position = {x = 300 y = 220}
+			spriteType = "Site_Component_1"
 			pdx_tooltip = ""
 		}
     }

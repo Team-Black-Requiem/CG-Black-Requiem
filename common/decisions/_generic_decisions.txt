@@ -1210,7 +1210,7 @@ operations = {
 			effect_tooltip = {
 				if = {
 					limit = {
-						USA = { owns_state = 685 }
+						BRT = { owns_state = 685 }
 					}
 					add_war_support = -0.05
 					add_stability = -0.05
@@ -1220,7 +1220,7 @@ operations = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0 # Don't blow up the canal as USA. Ever.
+				factor = 0 # Don't blow up the canal as BRT. Ever.
 				tag = BRT
 			}
 			modifier = {
@@ -1237,7 +1237,7 @@ operations = {
 				}
 			}
 			modifier = {
-				factor = 200 # Always blow up the canal as JAP or GER when at war with USA (priority)
+				factor = 200 # Always blow up the canal as JAP or GER when at war with BRT (priority)
 				OR = {
 					is_in_faction_with = JAP
 					is_in_faction_with = GER
@@ -1372,19 +1372,19 @@ special_projects = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0 # Don't bother if your navy is weak AND not USA
+				factor = 0 # Don't bother if your navy is weak AND not BRT
 				has_navy_size = { size < 50 }
 				NOT = { tag = BRT }
 				has_war = yes
 			}
 			modifier = {
-				factor = 200 # Prioritize if you decisively beat USA's navy
+				factor = 200 # Prioritize if you decisively beat BRT's navy
 				has_war_with = BRT
 				BRT = { has_navy_size = { size < 50 } }
 				has_navy_size = { size > 100 }
 			}
 			modifier = {
-				factor = 200 # Prioritize if USA
+				factor = 200 # Prioritize if BRT
 				tag = BRT
 			}
 			modifier = {
