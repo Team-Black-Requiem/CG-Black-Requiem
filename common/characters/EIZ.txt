@@ -281,7 +281,75 @@ EIZ_pablo={
 			}
 		}
 	}
+    
+	EIZ_martin={
+		name= "User"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = minister_of_interior
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
+	EIZ_martin={
+		name= "Bob"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = economy_minister
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EIZ_German_Minds={
+		name= "Sidd"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+		slot = economy_minister
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	EIZ_Hatem_Ganim = {
 		name = EIZ_Hatem_Ganim
 		portraits = {

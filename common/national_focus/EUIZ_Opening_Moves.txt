@@ -1968,10 +1968,7 @@ focus_tree = {
         prerequisite = { 
             focus = EIZ_calling_the_pale_jewel
         }
-        mutually_exclusive = { 
-            focus = EIZ_cook_the_books
-            focus = EIZ_international_banking_fraud 
-        }
+      
         relative_position_id = EIZ_casablanca_proposal
         
         cost = 0 #add cost later
@@ -2087,7 +2084,7 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_cook_the_books focus = EIZ_the_contract
+            focus = EIZ_cook_the_books 
         }
         relative_position_id = EIZ_cook_the_books
         
@@ -2132,7 +2129,7 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_international_banking_fraud focus = EIZ_the_contract
+            focus = EIZ_international_banking_fraud 
         }
         relative_position_id = EIZ_international_banking_fraud
         
@@ -4408,7 +4405,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+                add_offsite_building = {
+                type = industrial_complex
+                level = 4
+            }
               hidden_effect = {
             }
         }
@@ -4452,7 +4452,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+                add_offsite_building = {
+                type = arms_factory
+                level = 4
+            }
               hidden_effect = {
             }
         }
@@ -4496,7 +4499,14 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+                add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
               hidden_effect = {
             }
         }
@@ -4535,7 +4545,19 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+                add_ideas = German_Hearts
+                add_equipment_to_stockpile = {
+                    type = motorized_equipment_1
+                    amount = 400
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment_1
+                    amount = 500
+                }
+                add_offsite_building = {
+                    type = industrial_complex
+                    level = 2
+                }
               hidden_effect = {
             }
         }
@@ -4575,7 +4597,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+             add_ideas = Creating_A_Solid_Foundation
               hidden_effect = {
             }
         }
@@ -4614,7 +4636,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            add_ideas = tank_manufacturer
               hidden_effect = {
             }
         }
@@ -4653,14 +4675,14 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            add_ideas = Streamlining_Russian_Production
               hidden_effect = {
             }
         }
     }
 
     focus = {
-        id = EIZ_yeti_fix_later_1
+        id = EIZA_brick_for_every_corner
           icon = EIZ_fight_the_monarchist
         x = -2.5
         y = 4
@@ -4690,14 +4712,14 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            add_ideas = A_brick_for_every_corner
               hidden_effect = {
             }
         }
     }
 
     focus = {
-        id = EIZ_yeti_fix_later_2
+        id = not_a_euro_wasted
           icon = EIZ_fight_the_monarchist
         x = 2.5
         y = 4
@@ -4727,7 +4749,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            add_ideas = not_a_euro_wasted
               hidden_effect = {
             }
         }
@@ -4740,7 +4762,7 @@ focus_tree = {
         y = 4
 
         prerequisite = { 
-        focus = EIZ_frederica_german_hearts focus = EIZ_German_Minds
+        focus = EIZ_frederica_german_hearts focus = EIZ_German_Minds focus = EIZ_german_minds
         }
 
 
@@ -4766,7 +4788,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            
               hidden_effect = {
             }
         }
@@ -4779,7 +4801,7 @@ focus_tree = {
         y = 5
 
         prerequisite = { 
-        focus = EIZ_russian_self_fulfillment focus = EIZ_yeti_fix_later_1
+        focus = EIZ_russian_self_fulfillment focus = EIZA_brick_for_every_corner
         }
 
      
@@ -4817,7 +4839,7 @@ focus_tree = {
         y = 5
 
         prerequisite = { 
-        focus = EIZ_russian_self_fulfillment focus = EIZ_yeti_fix_later_2
+        focus = EIZ_russian_self_fulfillment focus = not_a_euro_wasted
         }
 
  
@@ -4842,7 +4864,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            
               hidden_effect = {
             }
         }
@@ -6696,7 +6718,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-           
+                    add_manpower = 75000
                     hidden_effect = {
                   }
             }

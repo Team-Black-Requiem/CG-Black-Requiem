@@ -56,6 +56,23 @@ ideas = {
       			production_speed_arms_factory_factor = 0.05
 			}
 		}
+		german_hearts = {
+
+			allowed = {
+				always = yes
+			}
+
+   			allowed_civil_war = {
+	   			always = yes
+   			}
+
+			removal_cost = -1
+
+			modifier = {
+		    consumer_goods_factor = -0.2
+			local_resources_factor = 0.1
+		}
+		}
 		EIZ_casablanca_proposal = {
 
 			allowed = {
@@ -1880,4 +1897,27 @@ tank_manufacturer = {
 		}
 	}
 }
+
+tank_manufacturer = {
+	designer = yes
+	
+	German_Tank_Company = {
+		allowed = {
+			original_tag = EIZ
+			has_completed_focus = EIZ_German_Minds
+		}
+
+		research_bonus = {
+			MBT_armour = 0.15
+		}
+
+		equipment_bonus = {
+			armor = {
+				soft_attack = 0.15
+				reliability = 0.15
+			}
+		}
+	}
+}
+
 }
