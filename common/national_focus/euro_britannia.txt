@@ -1258,6 +1258,15 @@
 		}
 	
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = EUR_shortage_of_trusted_officers
+				}
+				swap_ideas = {
+					remove_idea = EUR_shortage_of_trusted_officers
+					add_idea = EUR_shortage_of_trusted_officers2
+				}
+			}
 		}
 	}
 	focus = {
@@ -1281,6 +1290,11 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
 		}
 	}
 #########################Invite Communications officers and  logistics officers from Britannia
@@ -1305,6 +1319,12 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = signal_company_tech
+			}
+			remove_ideas = EUR_discontent_in_the_army_ranks
 		}
 	}
 	focus = {
@@ -1449,6 +1469,13 @@
 		}
 	
 		completion_reward = {
+			set_technology = {
+				knightmare_frame_1 = 1
+				factspheres = 1
+				landspinner = 1
+				knightmare_frame_2 = 1
+				knightmare_frame_3 = 1
+			}
 		}
 	}
 	focus = {
@@ -1472,6 +1499,7 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
 		}
 	}
 	focus = {
@@ -1495,6 +1523,7 @@
 		}
 	
 		completion_reward = {
+			army_experience = 100
 		}
 	}
 	focus = {
@@ -1519,6 +1548,20 @@
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 19
+				state = 917
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 19
+				state = 822
+			}
+			add_timed_idea = {
+				idea = EUR_Sakuradite_Extraction_Costs
+				days = 80
+			}
 		}
 	}
 	focus = {
@@ -2715,6 +2758,15 @@
 		}
 	
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = EUR_shortage_of_trusted_officers
+				}
+				swap_ideas = {
+					remove_idea = EUR_shortage_of_trusted_officers
+					add_idea = EUR_shortage_of_trusted_officers2
+				}
+			}
 		}
 	}
 	focus = {
@@ -2738,6 +2790,11 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
 		}
 	}
 	focus = {
@@ -2761,6 +2818,12 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = signal_company_tech
+			}
+			remove_ideas = EUR_discontent_in_the_army_ranks
 		}
 	}
 	focus = {
@@ -2785,6 +2848,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Cheap_Tanks
 		}
 	}
 	focus = {
@@ -2930,6 +2994,13 @@
 		}
 	
 		completion_reward = {
+			set_technology = {
+				knightmare_frame_1 = 1
+				factspheres = 1
+				landspinner = 1
+				knightmare_frame_2 = 1
+				knightmare_frame_3 = 1
+			}
 		}
 	}
 	focus = {
@@ -2953,6 +3024,7 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
 		}
 	}
 	focus = {
@@ -2976,6 +3048,7 @@
 		}
 	
 		completion_reward = {
+			army_experience = 100
 		}
 	}
 	focus = {
@@ -3000,6 +3073,20 @@
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 19
+				state = 917
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 19
+				state = 822
+			}
+			add_timed_idea = {
+				idea = EUR_Sakuradite_Extraction_Costs
+				days = 80
+			}
 		}
 	}
 	focus = {
