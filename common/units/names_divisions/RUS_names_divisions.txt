@@ -1872,24 +1872,3 @@ RUS_INF_03 =
 
 	}
 }
-
-RUS_JAP_INF = {
-	name = "Japanese Expeditionary Force"
-
-	for_countries = {  }
-
-	can_use = { 
-		ROOT = { has_country_flag = RUS_CSW_transfer_vladivostok_flag }
-	}
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { RUS_INF_01 }
-
-	fallback_name = "%d Japanese Expeditionary Division"
-
-	# Names with numbers (only one number per entry). 
-	# It's okay to have gaps in numbering.
-	#ordered = {}
-}
