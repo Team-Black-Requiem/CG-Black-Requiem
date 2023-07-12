@@ -1,4 +1,4 @@
-ideas = {
+﻿ideas = {
     country = {
 
 		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
@@ -308,6 +308,22 @@ EUR_shortage_of_trusted_officers = {
 	land_doctrine_cost_factor = 1
    }
 }
+EUR_shortage_of_trusted_officers2 = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	land_doctrine_cost_factor = 0.25
+   }
+}
 EUR_Siberian_Man = {
 		
 	allowed = {
@@ -403,6 +419,49 @@ EUR_A_New_Russian_Army_Idea = {
 	conscription = 0.02
 	army_core_attack_factor = 0.1
 	army_core_defence_factor = 0.1
+   }
+   
+}
+EUR_Sakuradite_Extraction_Costs = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	consumer_goods_factor = 0.15
+   }
+   
+}
+EUR_Cheap_Tanks = {
+		
+	allowed = {
+	   always = no
+   }
+   cancel = {
+	  SRU = {
+		exists = no
+	  }
+   }
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	consumer_goods_factor = 0.15
+   }
+   equipment_bonus = {
+	MBT_armour = {
+		build_cost_ic = -0.25
+	}
    }
    
 }
