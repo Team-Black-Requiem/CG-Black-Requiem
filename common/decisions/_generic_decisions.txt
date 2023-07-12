@@ -1087,7 +1087,7 @@ operations = {
 				}
 				set_country_flag = blew_up_suez
 				set_global_flag = SUEZ_CANAL_BLOCKED
-				country_event = { id = wtt_news.40 hours = 6}
+				#country_event = { id = wtt_news.40 hours = 6}
 			}
 			effect_tooltip = {
 				if = {
@@ -1205,7 +1205,7 @@ operations = {
 				}
 				set_country_flag = blew_up_panama
 				set_global_flag = PANAMA_CANAL_BLOCKED
-				country_event = { id = wtt_news.41 hours = 6}
+				#country_event = { id = wtt_news.41 hours = 6}
 			}
 			effect_tooltip = {
 				if = {
@@ -1285,7 +1285,7 @@ special_projects = {
 				}
 				set_country_flag = rebuilt_suez
 				clr_global_flag = SUEZ_CANAL_BLOCKED
-				country_event = { id = wtt_news.42 hours = 6}
+				#country_event = { id = wtt_news.42 hours = 6}
 			}
 		}
 
@@ -1366,7 +1366,7 @@ special_projects = {
 				}
 				set_country_flag = rebuilt_panama
 				clr_global_flag = PANAMA_CANAL_BLOCKED
-				country_event = { id = wtt_news.43 hours = 6 }
+				#country_event = { id = wtt_news.43 hours = 6 }
 			}
 		}
 		ai_will_do = {
@@ -1500,28 +1500,28 @@ war_measures = {
         available = {
             has_war = yes
             has_idea = tot_economic_mobilisation
-            OR = {
-                AND = {
-                    has_government = democratic
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = communism
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = fascism
-                    OR = {
-                        has_war_support > 0.89
-                        surrender_progress > 0
-                    }
-                }
-                AND = {
-                    has_government = neutrality
-                    has_war_support > 0.84
-                    has_stability > 0.7
-                }
-            }
+            #OR = {
+            #    AND = {
+            #        has_government = democratic
+            #        has_war_support > 0.79
+            #    }
+            #    AND = {
+            #        has_government = communism
+            #        has_war_support > 0.79
+            #    }
+            #    AND = {
+            #        has_government = fascism
+            #        OR = {
+            #            has_war_support > 0.89
+            #            surrender_progress > 0
+            #        }
+            #    }
+            #    AND = {
+            #        has_government = neutrality
+            #        has_war_support > 0.84
+            #        has_stability > 0.7
+            #    }
+            #}
         }
         visible = {
             has_war = yes
@@ -1566,32 +1566,32 @@ war_measures = {
 
         available = {
             has_war = yes
-            OR = {
-                AND = {
-                    has_government = democratic
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = communism
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = fascism
-                    OR = {
-                        has_war_support > 0.89
-                        surrender_progress > 0
-                    }
-                }
-                AND = {
-                    has_government = neutrality
-                    has_war_support > 0.84
-                    has_stability > 0.7
-                }
-            }
+            #OR = {
+            #    AND = {
+            #        has_government = democratic
+            #        has_war_support > 0.79
+            #    }
+            #    AND = {
+            #        has_government = communism
+            #        has_war_support > 0.79
+            #    }
+            #    AND = {
+            #        has_government = fascism
+            #        OR = {
+            #            has_war_support > 0.89
+            #            surrender_progress > 0
+            #        }
+            #    }
+            #    AND = {
+            #        has_government = neutrality
+            #        has_war_support > 0.84
+            #        has_stability > 0.7
+            #    }
+            #}
         }
         visible = {
             has_war = yes
-            NOT = { tag = SPC }
+            #NOT = { tag = SPC }
         }
 
         fire_only_once = no
@@ -1611,11 +1611,11 @@ war_measures = {
 				factor = 0 #use as pp dump
 			}
 
-			modifier = {
-				factor = 0
-				original_tag = SOV
-				SOV_save_pp_for_manpower_trouble = yes
-			}
+			#modifier = {
+			#	factor = 0
+			#	original_tag = SOV
+			#	SOV_save_pp_for_manpower_trouble = yes
+			#}
 		}
 
 		remove_effect = {

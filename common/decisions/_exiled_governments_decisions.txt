@@ -309,10 +309,10 @@ governments_in_exile = {
 		available = {
 		    FROM = {
 		    	has_legitimacy > 50
-		    	OR = {
-		    		fascism > 0.1
-		    		communism > 0.1
-		    	}
+		    	#OR = {
+		    	#	fascism > 0.1
+		    	#	communism > 0.1
+		    	#}
 		    }
 		}
 
@@ -320,10 +320,10 @@ governments_in_exile = {
 			FROM = {
 				is_exiled_in = ROOT
 		    	has_legitimacy > 40
-		    	OR = {
-		    		fascism > 0.05
-		    		communism > 0.05
-		    	}
+		    	#OR = {
+		    	#	fascism > 0.05
+		    	#	communism > 0.05
+		    	#}
 		    }
 		}
 
@@ -333,10 +333,10 @@ governments_in_exile = {
 			FROM = {
 				is_exiled_in = ROOT
 		    	has_legitimacy > 40
-		    	OR = {
-		    		fascism > 0.05
-		    		communism > 0.05
-		    	}
+		    	#OR = {
+		    	#	fascism > 0.05
+		    	#	communism > 0.05
+		    	#}
 		    }
 		}
 
@@ -515,12 +515,12 @@ category_exile_forces = {
 				type = infantry_equipment
 				amount = resistance_equipment_needed
 			}
-			FROM = {
-				add_timed_idea = {
-					idea = idea_weapons_for_the_resistance
-					days = 120
-				}
-			}
+			#FROM = {
+			#	add_timed_idea = {
+			#		idea = idea_weapons_for_the_resistance
+			#		days = 120
+			#	}
+			#}
 		}
 
 		ai_will_do = {

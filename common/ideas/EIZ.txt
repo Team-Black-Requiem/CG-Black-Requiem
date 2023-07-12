@@ -1199,28 +1199,6 @@ ideas = {
 	
 	}
 
-	tank_manufacturer_1 = {
-		designer = yes
-		
-		German_Tank_Company = {
-			allowed = {
-				original_tag = EIZ
-				has_completed_focus = EIZ_German_Minds
-			}
-
-			research_bonus = {
-				MBT_armour = 0.15
-			}
-
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.15
-					reliability = 0.15
-				}
-			}
-		}
-	}
-
 	special_projects_corp = {
 		allowed = {
 			always = no
@@ -1879,5 +1857,26 @@ materiel_manufacturer = {
 	
 
 
+}
+tank_manufacturer = {
+	designer = yes
+	
+	German_Tank_Company = {
+		allowed = {
+			original_tag = EIZ
+			has_completed_focus = EIZ_German_Minds
+		}
+
+		research_bonus = {
+			MBT_armour = 0.15
+		}
+
+		equipment_bonus = {
+			armor = {
+				soft_attack = 0.15
+				reliability = 0.15
+			}
+		}
+	}
 }
 }
