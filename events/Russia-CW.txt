@@ -680,15 +680,54 @@ country_event = {
 
 	option = {
 		name = russiaCW.7.a
-		hidden_effect = {
-			country_event = {id = russiaCW.9 hours = 1}
-			EIZ = {
+			#country_event = {id = russiaCW.9 hours = 1}
+				ROOT = {set_cosmetic_tag = EIZ}
+				load_oob = "Prov_RUS"
+				leave_faction = yes
+				end_puppet = UKR
+				delete_unit = {
+					template = "Police Garrison"
+				}
+				delete_unit = {
+					template = "Russian Garrison"
+				}
+				delete_unit = {
+					template = "Russian Light Infantry"
+				}
+				delete_unit = {
+					template = "Russian Infantry Division"
+				}
 				load_focus_tree = EUIZ_Opening_Moves
-				transfer_state = 886
-				change_tag_from = RUS
-				inherit_technology = RUS
-			}
-		}
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "2008.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					autocracy = 32
+					ultra_nationalism  = 24
+					authoritarian_democracy = 42
+					moderate_socialism = 2
+				}
+				remove_country_leader_role = {
+					character = RUS_vladislav
+					ideology = military_dictatorship
+				}
+				add_country_leader_role = {
+					character = EIZ_military_council
+					promote_leader = yes
+					country_leader = {
+					ideology = military_dictatorship
+					expire = "3000.01.01.01"
+					traits = { }
+					}
+				}
+				load_oob = "EIZ_Starting_Units"
+				#transfer_state = 886
+				#change_tag_from = RUS
+				#inherit_technology = RUS
+			
 		ai_chance = {
 			factor = 20
 		}
@@ -720,13 +759,13 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		EIZ = {
+		#EIZ = {
 			annex_country = {target = RUS}
 			set_capital = {
 				state = 206
 				remember_old_capital = no
 			}
 			load_oob = "EIZ_Starting_Units"
-		}
+		#}
 	}
 }

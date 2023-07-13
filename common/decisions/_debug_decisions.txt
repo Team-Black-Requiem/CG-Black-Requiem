@@ -260,32 +260,56 @@ debug_decisions = {
 				}
 			}	
 		}
-		RUS = {	
-			set_technology = { mechanised_infantry = 1 }
-			set_technology = { mbt_1 = 1 }
-			set_technology = { cold_war_tank = 1 }
+		ROOT = {set_cosmetic_tag = EIZ}
+		load_oob = "Prov_RUS"
+		leave_faction = yes
+		end_puppet = UKR
+		delete_unit = {
+			template = "Police Garrison"
+		}
+		delete_unit = {
+			template = "Russian Garrison"
+		}
+		delete_unit = {
+			template = "Russian Light Infantry"
+		}
+		delete_unit = {
+			template = "Russian Infantry Division"
+		}
+		load_focus_tree = EUIZ_Opening_Moves
+		set_politics = {
+			ruling_party = authoritarian_democracy
+			last_election = "2008.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			autocracy = 32
+			ultra_nationalism  = 24
+			authoritarian_democracy = 42
+			moderate_socialism = 2
+		}
+		remove_country_leader_role = {
+			character = RUS_vladislav
+			ideology = military_dictatorship
+		}
+		add_country_leader_role = {
+			character = EIZ_military_council
+			promote_leader = yes
+			country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.01.01.01"
+			traits = { }
 			}
-			RUS = {	load_oob = "Prov_RUS" }
-
-
-			country_event = {id = russiaCW.9 hours = 1}
-			EIZ = {
-				load_focus_tree = EUIZ_Opening_Moves
-				transfer_state = 886
-				change_tag_from = RUS
-				inherit_technology = RUS
-			}
-		
-				EIZ = {
-			annex_country = {target = RUS}
+		}
+		load_oob = "EIZ_Starting_Units"
 			set_capital = {
 				state = 206
 				remember_old_capital = no
 			}
-			load_oob = "EIZ_Starting_Units"
 		}
 	}
-}
+
 	create_operative_debug = {
 
 		icon = generic_research

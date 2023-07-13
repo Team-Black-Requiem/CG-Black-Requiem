@@ -11,7 +11,8 @@ characters = {
 				large = "GFX_portrait_EIZ_Military_Council"
 			}
 		}
-		country_leader={
+		visible = {has_cosmetic_tag = EIZ}
+		country_leader = {
 			desc = "When the Russian Civil War began, the collective body of the EU rushed to the aid of their friends in the Government. This body is comprised of Generals and Politicians united towards the goal of liberating Russia!"
 			ideology = military_dictatorship
 			traits={}
@@ -88,13 +89,14 @@ EIZ_natasha= {
 			}
 		}
 		corps_commander = {
-		traits = { infantry_officer}
+		
+			traits = { infantry_officer}
 			skill = 4
 			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
-}
+		}
 }
 EIZ_allard = {
 		name = "Philipie Allard"
@@ -199,7 +201,7 @@ EIZ_conroy = {
 			slot = navy_chief
 			idea_token = EIZ_generic_navy_idea
 			allowed = {
-				original_tag = EIZ
+				country_exists = RUS has_cosmetic_tag = EIZ
 			}
 			traits = {
 				decisive_battle_doctrine
@@ -223,7 +225,7 @@ EIZ_pablo={
 			idea_token = EIZ_pablo_idea
 			ledger = air
 			allowed = {
-				original_tag = EIZ
+				country_exists = RUS has_cosmetic_tag = EIZ
 			}
 			traits = {
 				static_defence_doctrine
@@ -247,7 +249,7 @@ EIZ_pablo={
 			slot = air_chief
 			idea_token = EIZ_generic_air_idea
 			allowed = {
-				original_tag = EIZ
+				country_exists = RUS has_cosmetic_tag = EIZ
 			}
 			traits = {
 				naval_aviation_doctrine
@@ -270,7 +272,7 @@ EIZ_pablo={
 			slot = army_chief
 			idea_token = EIZ_generic_army_chief
 			allowed = {
-				original_tag = EIZ
+				country_exists = RUS has_cosmetic_tag = EIZ
 			}
 			traits = {
 				armoured_spearhead_doctrine
