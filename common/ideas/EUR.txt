@@ -1,0 +1,584 @@
+@ -1,583 +0,0 @@
+ideas = {
+    country = {
+
+		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+	
+	    EUR_poor_logistics = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			out_of_supply_factor = 0.15
+			army_org_factor = -0.10
+			army_speed_factor = -0.10
+			consumer_goods_factor = 0.02
+			}
+		}
+		EUR_poor_logistics_1 = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_org_factor = -0.10
+			army_speed_factor = -0.10
+			}
+		}
+		
+		EUR_legitimate_cause = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			political_power_gain = 0.50
+			stability_factor = 0.10
+			offensive_war_stability_factor = 0.30
+			}
+		}
+		
+		EUR_crisis_authority = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly_factor = -0.0010
+			resistance_growth = 0.05
+			autocracy_drift = -0.01
+			}
+		}
+		EUR_crisis_authority_1 = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly_factor = -0.002
+			autocracy_drift = -0.01
+			}
+		}
+		EUR_provisional_senate = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.05
+			political_power_gain = 0.2
+			}
+		}
+		EUR_everything_for_new_life = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			weekly_manpower = 400
+			stability_factor = -0.05
+			}
+		}
+		EUR_fight_in_Siberia = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			weekly_manpower = 1200
+			army_attack_factor = 0.05
+			army_org_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+		}
+	}
+		EUR_Waiting_for_the_future = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.05
+			ultra_nationalism_drift = 0.02
+			}
+		}
+
+EUR_Britannian_Military_Administration = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+
+   }
+}
+	
+EUR_Establish_The_Free_Port = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+  
+   }
+}
+
+EUR_Establish_the_Okhotsk_Drydocks = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   
+   }
+}
+
+EUR_Form_the_trans_pacific_trade_association= {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   
+   }
+}
+
+EUR_Establishing_our_Brand = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   
+   }
+}
+
+
+EUR_Economic_Stability_Secured = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+  
+   }
+}
+
+## Army Ideas Phase 1
+EUR_test_1 = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	
+}
+EUR_discontent_in_army = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	army_org_factor = -0.1
+	army_attack_factor = -0.05
+   }
+}
+EUR_shortage_of_trusted_officers = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	max_command_power = -100
+	land_doctrine_cost_factor = 1
+   }
+}
+EUR_shortage_of_trusted_officers2 = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	land_doctrine_cost_factor = 0.25
+   }
+}
+EUR_Siberian_Man = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	 
+   }
+   equipment_bonus = {
+	infantry_equipment = {
+		soft_attack = 0.1
+	}
+   }
+}
+EUR_Siberian_Man2 = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	winter_attrition = -0.2
+   }
+   equipment_bonus = {
+	infantry_equipment = {
+		soft_attack = 0.1
+	}
+   }
+   
+}
+EUR_Siberian_Mind = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	planning_speed = 0.2
+   }
+   
+}
+EUR_Siberian_Mind2 = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	planning_speed = 0.2
+	command_power_gain_mult = 0.1
+	command_abilities_cost_factor = -0.5
+   }
+   
+}
+EUR_A_New_Russian_Army_Idea = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	conscription = 0.02
+	army_core_attack_factor = 0.1
+	army_core_defence_factor = 0.1
+   }
+   
+}
+EUR_Sakuradite_Extraction_Costs = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	consumer_goods_factor = 0.15
+   }
+   
+}
+EUR_Cheap_Tanks = {
+		
+	allowed = {
+	   always = yes
+   }
+   cancel = {
+	  SRU = {
+		exists = no
+	  }
+   }
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	consumer_goods_factor = 0.15
+   }
+   equipment_bonus = {
+	cold_war_tank_equip = {
+		build_cost_ic = -0.25
+	}
+   }
+   
+}
+}
+
+	tank_manufacturer = {
+		designer = yes
+
+		EUR_BRI_gen_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = EUR
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				fast_tank_manufacturer
+			}
+
+		}
+	}
+
+	industrial_concern = {
+		designer = yes
+
+		EUR_BRI_gen_industrial_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = EUR
+			}
+
+			research_bonus = {
+				industry = 0.05
+			}
+
+			traits = {
+				resource_extration_industry
+			}
+
+
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		EUR_BRI_gen_mater_man = {
+			# picture =
+
+			allowed = {
+				original_tag = EUR
+			}
+
+			research_bonus = {
+				infantry_tech = 0.05
+			}
+
+			traits = {
+				artillery_producer_mass_1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		EUR_BRI_gen_naval_man = {
+			# picture =
+
+			allowed = {
+				original_tag = EUR
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
+			traits = {
+				submarine_producer_offense_1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		EUR_Britannian_Military_Administration = {
+			# picture = 
+
+			allowed = {
+				original_tag = EUR
+			}
+			research_bonus = {
+				heavy_air = 0.05
+			}
+
+			traits = {
+				light_aircraft_manufacturer
+			}
+		}
+	}
+
+
+
+}
