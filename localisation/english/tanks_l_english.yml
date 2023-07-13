@@ -1,24 +1,46 @@
 ﻿l_english:
  ### Moving everything NSB Update related here to help organzie things maybe?
  ### Tank Chassis
- main_battle_tank_destroyer_chassis:0 "Modern Tank Destroyer (TD)"
- main_battle_tank_artillery_chassis:0 "Modern Self-Propelled Artillery (SPG)"
- main_battle_tank_assault_gun_chassis:0 "Modern Assault Gun (Sturmgeschütz)"
  early_mbt_chassis:0 "1st Generation Main Battle Tank (MBT)"
  basic_mbt_chassis:0 "2nd Generation Main Battle Tank (MBT)"
  improved_mbt_chassis:0 "3rd Generation Main Battle Tank (MBT)"
  advanced_mbt_chassis:0 "4th Generation Main Battle Tank (MBT)"
  sakuradite_main_battle_tank_chassis:0 "5th Generation MBT (Anti-KN MBT)"
+ ### Tank Chassis TD
+ main_battle_tank_destroyer_chassisearly_mbt_chassis:0 "1st Generation Tank Destroyer (TD)"
+ main_battle_tank_destroyer_chassisbasic_mbt_chassis:0 "2nd Generation Tank Destroyer (TD)"
+ main_battle_tank_destroyer_chassisimproved_mbt_chassis:0 "3rd Generation Tank Destroyer (TD)"
+ main_battle_tank_destroyer_chassisadvanced_mbt_chassis:0 "4th Generation Tank Destroyer (TD)"
+ ### Tank Chassis Artillery
+ main_battle_tank_artillery_chassisearly_mbt_chassis:0 "1st Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassisbasic_mbt_chassis:0 "2nd Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassisimproved_mbt_chassis:0 "3rd Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassisadvanced_mbt_chassis:0 "4th Generation Tank Artillery (SPG)"
+ ### Tank Chassis Sturmgeschütz
+ main_battle_tank_assault_gun_chassisearly_mbt_chassis:0 "A Modern Assault Gun (Sturmgeschütz)"
+ main_battle_tank_assault_gun_chassisbasic_mbt_chassis:0 "B Modern Assault Gun (Sturmgeschütz)"
+ main_battle_tank_assault_gun_chassisimproved_mbt_chassis:0 "C Modern Assault Gun (Sturmgeschütz)"
+ main_battle_tank_assault_gun_chassisadvanced_mbt_chassis:0 "D Modern Assault Gun (Sturmgeschütz)"
+
  ### Modules
  
  ### Engines/Suspension
- torsion_bar:0 "Trosion Bar"
- interleaved_suspension:0 "Interleaved"
- christie_suspension:0 "Christie Suspension"
- leaf_spring_suspension:0 "Leaf Spring"
+ tank_torsion_bar_suspension:0 "Torsion Bar"
+ tank_torsion_bar_suspension_desc:0 "A fairly reliable suspension system of metal bars fixed to the vehicle chassis that provides a smoother ride than other suspension types."
+ tank_interleaved_suspension:0 "Interleaved Roadwheels"
+ tank_interleaved_suspension_desc:0 "By overlapping the roadwheels, more of them can be fit in the same length of the hull, thereby improving mobility as well as providing some additional protection in the flanks."
+ tank_christie_suspension:0 "Christie Suspension"
+ tank_christie_suspension_desc:0 "Developed by an American inventor, this supension allows for exceptionally high speeds."
+ tank_bogie_suspension:0 "Bogie Suspension"
+ tank_bogie_suspension_desc:0 "A simple and fairly cheap type of suspension in which the roadwheels are mounted individually, allowing them to be easily replaced if damaged."
+
  hydropneumatic_suspension:0 "Hydropneumatic Suspension"
- wheel_4x8:0 "8x8 Wheeled Suspension"
- half_track:0 "Half-track Layout"
+ hydropneumatic_suspension_desc:0 "Filler text because I don't know how to write good."
+
+ tank_wheeled_suspension:0 "Wheeled Suspension"
+ tank_wheeled_suspension_desc:0 "Derived from a truck chassis, this suspension is very limited in its carrying capacity and has limited cross-country performance, but has the advantage of being very cheap to make."
+ tank_half_track_suspension:0 "Half-track Suspension"
+ tank_half_track_suspension_desc:0 "A hybrid between a fully-tracked vehicle and a regular wheeled suspension, this setup has a pair of wheels up front for steering and a tracked rear axle to improve cross-country performance. While limited in its carrying capacity, it is still cheaper than a fully-tracked design."
  ### Weapons
  
  ### Super Structure
@@ -37,6 +59,7 @@
  ### Special Modules/Ammunition
  apfsds:0 "APFSDS Rounds"
  apfsds_desc:0 "Armor-piercing Fin-stabilized Discarding Sabot (AFDSDS) sacrifices the fragmentation produced by HE found in typical rounds like APHEBC to achieve speeds up to 1,800 m/s. APFSDS also sacrifice some post spalling due to a decreased surface area that would be penetrated but is mostly made up by the penetrator and fins. Combining the shell's increased shell speed, reduced drag, and Depleted Uranium penetrator, the shell boosts an impressive penetration value of around 800mm vs flat steel."
+ ### Stuff I never finished writing because of Ammunition potenitally being removed
  aphecbc:0 "APHECBC Rounds"
  aphecbc_desc:0 "Armor-piercing High-Explosive Capped ballistic Capped (APHECBC)"
  heatfs:0 "HEATFS Rounds"
@@ -44,7 +67,8 @@
  hesh:0 "HESH Rounds"
  hesh_desc:0 "High-Explosive Squash Head (HESH)"
  proximity:0 "Proximity Fuse Warheads"
- proximity_desc:0 "Proximity Rounds are the modern version of old "
+ proximity_desc:0 "Proximity Rounds are the modern version of old | I never finished writing this apparently"
+ ### End of section I didn't finish writing
  fragmentation:0 "Fragmentation Rounds"
  fragmentation_desc:0 "Fragmentation Rounds are similar to artillery Rounds with the exception that they aren't made to destroy terrain and fortifications but, rather litter large areas with tons of fragmentation."
  sakuradite_charges:0 "Sakuradite Enhanced Rounds"
@@ -77,9 +101,16 @@
  tank_designer_main_battle_tank_chassis_role_disallowed:0 "Remove the module that forbids the $tank_designer_main_battle_tank_chassis|H$ role to be able to switch to it."
  tank_designer_main_battle_tank_assault_gun_chassis:0 "Assault Gun"
  tank_designer_main_battle_tank_assault_gun_chassis_role_disallowed:0 "Add a module that allows the §HAssault Gun§! role to be able to switch to it."
+ ### Equipment
+ early_main_battle_tank_equipment_0:0 "1st Generation Main Battle Tank"
+ basic_main_battle_tank_equipment_0:0 "2nd Generation Main Battle Tank"
+ improved_main_battle_tank_equipment_0:0 "3rd Generation Main Battle Tank"
+ advanced_main_batttle_tank_equipment_0:0 "4th Generation Main Battle Tank"
+ ### Variant Equipment
+ main_battle_tank_destroyer_equipment_0:0 "Tank Destroyer"
+ main_battle_tank_destroyer_equipment_1:0 "test"
+ main_battle_tank_artillery_equipment_0:0 "Artillery"
+ main_battle_tank_assault_gun_chassis_0:0 "Assault Gun"
 
  ### Division Brigade Thingys
  nsb_modern_tank_destroyer_brigade:0 "Tank Destroyer"
-
- main_battle_tank_destroyer_chassis_0:0 "please work"
- main_battle_tank_destroyer_equipment:0 "pretty please?"

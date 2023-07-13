@@ -7,7 +7,8 @@ equipment_modules = {
 	#### #   #  ### ### #   # ####
 
 	### ALL STATS ARE EITHER PLACEHOLDER OR BASE GAME STATS PLEASE CHANGE IF NEEDED ###
-
+	### Maybe we should add an gas engine turbine as well since that makes since in
+	### a modern day perspective?
 	tank_gasoline_engine_1 = {
 		abbreviation = "gas1"
 		category = tank_gasoline_engine_type
@@ -135,7 +136,7 @@ equipment_modules = {
 		}
 		xp_cost = 1
 	}
-
+	### I don't remember if these are properly implemented into tanks or not
 	tank_sakuradite_engine = {
 		abbreviation = "sak1"
 		category = tank_sakuradite_engine_type
@@ -210,7 +211,7 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	tank_rivet_armor = {
+	tank_riveted_armor = {
 		abbreviation = "riv"
 		category = tank_armor_type
 		sfx = sfx_nsb_sd_module_armor
@@ -229,7 +230,7 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	tank_weld_armor = {
+	tank_welded_armor = {
 		abbreviation = "weld"
 		category = tank_armor_type
 		sfx = sfx_nsb_sd_module_armor
@@ -244,7 +245,7 @@ equipment_modules = {
 		}
 		xp_cost = 1
 	}
-
+	### This one maybe pushing it. It can be thought of as ERA in my opnion though
 	sakuradite_tank_armor = {
 		abbreviation = "sakar"
 		category = tank_sakuradite_armor_type
@@ -267,7 +268,7 @@ equipment_modules = {
 	#### ###  # # # #  # ###       #   ####  #  #    ###  # # # #### #### ####
 	#  # #  # #   # #  # #  #      #   #  #  #  #    #  # #  ## #       #    #
 	#  # #  # #   #  ##  #  #      #   #  # ###  ### #  # #   # #### #### ####
-
+	### Maybe too much and needs name changing in loc to not sound stupid
 	tank_well_balanced_armor = {
 		abbreviation = "bal"
 		category = tank_armor_focus
@@ -306,7 +307,7 @@ equipment_modules = {
 	   # #  #    # #    #    #  ##    #  #  #  # #  ##
 	#### #### #### #    #### #   # #### ###  ##  #   #
 
-	torsion_bar = { # Tank
+	tank_torsion_bar_suspension = { # Tank
 		abbreviation = "tor"
 		category = tank_suspension
 		sfx = sfx_ui_sd_module_engine
@@ -314,23 +315,24 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	interleaved_suspension = { # Tank
+	tank_interleaved_suspension = { # Tank
 		abbreviation = "inter"
 		category = tank_suspension
 		sfx = sfx_ui_sd_module_engine
 
 		xp_cost = 1
 	}
-
-	christie_suspension = { # Tank, maybe Wheeled
-		abbreviation = "chr"
-		category = tank_suspension
-		sfx = sfx_ui_sd_module_engine
-
-		xp_cost = 1
-	}
-
-	leaf_spring_suspension = { # Tank
+#	Don't know if this fits into the lore well. A well known American Invention in
+#	a mod with no America... Unless we can just swap if for Britannia
+#	tank_christie_suspension = { # Tank, maybe Wheeled
+#		abbreviation = "chr"
+#		category = tank_suspension
+#		sfx = sfx_ui_sd_module_engine
+#
+#		xp_cost = 1
+#	}
+	### Leaf Spring maybe?
+	tank_bogie_suspension = { # Tank
 		abbreviation = "lef"
 		category = tank_suspension
 		sfx = sfx_ui_sd_module_engine
@@ -347,7 +349,7 @@ equipment_modules = {
 	}
 
 
-	wheel_4x4 = { # Car
+	tank_wheeled_suspension = { # Car
 		abbreviation = "4x4"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_engine
@@ -355,15 +357,15 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	wheel_4x8 = { # Car
-		abbreviation = "4x8"
-		category = tank_wheel_suspension
-		sfx = sfx_ui_sd_module_engine
+#	wheel_4x8 = { # Car
+#		abbreviation = "4x8"
+#		category = tank_wheel_suspension
+#		sfx = sfx_ui_sd_module_engine
+#
+#		xp_cost = 1
+#	}
 
-		xp_cost = 1
-	}
-
-	half_track = { # Car
+	tank_half_track_suspension = { # Car
 		abbreviation = "htr"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_engine
@@ -657,7 +659,7 @@ equipment_modules = {
 	}
 
 	early_mbt_super_structure = {
-		#allow_equipment_type = rocket
+		allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "esuper"
@@ -665,7 +667,7 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				rifled_weapon
-				#assault_weapon
+				assault_weapon
 			}
 			armor_construction_slot = {
 				tank_armor_type
@@ -739,7 +741,7 @@ equipment_modules = {
 	}
 
 	basic_mbt_super_structure = {
-		#allow_equipment_type = rocket
+		allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "bsuper"
@@ -747,7 +749,7 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				rifled_weapon
-				#assault_weapon
+				assault_weapon
 			}
 			armor_construction_slot = {
 				tank_armor_type
@@ -821,7 +823,7 @@ equipment_modules = {
 	}
 
 	improved_mbt_super_structure = {
-		#allow_equipment_type = rocket
+		allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "isuper"
@@ -829,7 +831,7 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				rifled_weapon
-				#assault_weapon
+				assault_weapon
 			}
 			armor_construction_slot = {
 				tank_armor_type
@@ -905,7 +907,7 @@ equipment_modules = {
 	}
 
 	advanced_mbt_super_structure = {
-		#allow_equipment_type = rocket
+		allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "asuper"
@@ -913,7 +915,7 @@ equipment_modules = {
 		allowed_module_categories = {
 			main_armament_slot = {
 				rifled_weapon
-				#assault_weapon
+				assault_weapon
 			}
 			armor_construction_slot = {
 				tank_armor_type
