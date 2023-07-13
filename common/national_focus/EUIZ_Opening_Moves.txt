@@ -4637,6 +4637,7 @@ focus_tree = {
 
             completion_reward = {   
             add_ideas = tank_manufacturer
+         
               hidden_effect = {
             }
         }
@@ -4991,7 +4992,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                
+                add_tech_bonus = {
+                    name = Heavy_tank_designs 
+                    category = MBT_armour
+                    uses = 2
+                    bonus = 0.5
+                }
               hidden_effect = {
             }
         }
@@ -5028,7 +5034,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                
+                add_ideas = Heavy_infantry_support
               hidden_effect = {
             }
         }
@@ -5066,7 +5072,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                
+                add_equipment_to_stockpile = {
+                    type = jet_fighter_equipment
+                    amount = 100
+                }
+                add_ideas = Clear_the_skies
               hidden_effect = {
             }
         }
@@ -5103,7 +5113,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                
+                swap_ideas = {
+                    remove_idea = Heavy_infantry_support
+                    add_idea = Heavy_infantry_support_2
+                }
+              
               hidden_effect = {
             }
         }
@@ -5139,7 +5153,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               
+            add_ideas = Battlefield_Domination
               hidden_effect = {
             }
         }
@@ -5213,8 +5227,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-              
-              hidden_effect = {
+                swap_ideas = {
+                    remove_idea = Battlefield_Domination_2
+                    add_idea = Battlefield_Domination_4
+                }
+                hidden_effect = {
             }
         }
     }
@@ -5251,7 +5268,13 @@ focus_tree = {
 
             completion_reward = {
               
+             add_ideas = Unstoppables_Force
+              
               hidden_effect = {
+                remove_ideas = Battlefield_Domination_4
+                remove_ideas = Clear_the_skies
+                remove_ideas = Heavy_infantry_support_2
+            
             }
         }
     }
@@ -5288,7 +5311,11 @@ focus_tree = {
 
             completion_reward = {
                 country_event = EIZ.50
-
+                swap_ideas = {
+                    remove_idea = Battlefield_Domination
+                    add_idea = Battlefield_Domination_2
+                }
+                
               hidden_effect = {
             }
         }
@@ -5363,7 +5390,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               
+               add_manpower = 25000
+               army_experience = 25
 
               hidden_effect = {
             }
@@ -5401,7 +5429,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               
+               add_war_support = 10
 
               hidden_effect = {
             }
@@ -5442,7 +5470,7 @@ focus_tree = {
 
             completion_reward = {
                
-
+            recruit_character = EIZ_rommel
               hidden_effect = {
             }
         }
@@ -5960,7 +5988,13 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-           
+            add_tech_bonus = {
+                name = modern_armor
+                category = armor
+                uses = 2
+                bonus = 0.5
+            }
+            add_ideas = Modern_armor_1
               hidden_effect = {
             }
         }
@@ -5996,7 +6030,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-           
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_1
+                amount = 1000
+            }
+            add_ideas = Motorized_Infantry
               hidden_effect = {
             }
         }
@@ -6032,7 +6070,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-           
+            load_oob = "EIZ_2nd_German_Aid"
               hidden_effect = {
             }
         }
@@ -6069,7 +6107,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-           
+           add_ideas = Motorized_Infantry_2
               hidden_effect = {
             }
         }
@@ -6105,7 +6143,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+                add_tech_bonus = {
+                    name = Main_Battle_Tank_Concept
+                    category = armor
+                    uses = 2
+                    bonus = 0.5
+                }
               hidden_effect = {
             }
         }
@@ -6142,7 +6185,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+            swap_ideas = {
+                remove_idea = Modern_armor_1
+                add_idea = Modern_armor_2
+            }
               hidden_effect = {
             }
         }
@@ -6179,7 +6225,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+            swap_ideas = {
+                remove_idea = Modern_armor_2
+                add_idea = Modern_armor_3
+            }
               hidden_effect = {
             }
         }
@@ -6220,7 +6269,9 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+            remove_ideas = Modern_armor_3
+            remove_ideas = Motorized_Infantry_2
+            add_ideas = Lightning_Warfare_1   
               hidden_effect = {
             }
         }
