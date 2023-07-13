@@ -1,8 +1,5 @@
 ﻿capital = 483
 
-oob = "BRITANNIA"
-
-
 set_research_slots = 4
 set_stability = 0.58
 set_war_support = 0.40
@@ -55,7 +52,12 @@ if = {
 
 
 	### Ship Variants ###
-	create_equipment_variant = {
+
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		create_equipment_variant = {
 		name = "Edward Class"
 		type = ship_hull_light_1
 		name_group = JAP_BB_HISTORICAL
@@ -99,17 +101,21 @@ if = {
 
 	create_equipment_variant = {
 		name = "Darwin Class"
-		type = ship_hull_submarine_2
+		type = ship_hull_submarine_1
 		name_group = JAP_BB_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = ship_torpedo_sub_2
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
 
 		}
 	}
+	oob = "Britannia_Navy_MTG"
+}
 
+if = {
+	limit = { not = { has_dlc = "Man the Guns" }}
 	create_equipment_variant = {
 		name = "Darwin Class"
 		type = submarine_1
@@ -144,8 +150,10 @@ if = {
 			ship_reliability_upgrade = 1
 		}
 	}
-
-
+	oob = "Britannia_Navy_NoMTG"
+}
+	
+oob = "BRITANNIA_Starting_Army"
 
 
 create_faction = Holy_Britannian_Empire
