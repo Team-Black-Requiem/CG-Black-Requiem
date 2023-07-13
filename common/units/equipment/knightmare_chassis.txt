@@ -1,0 +1,184 @@
+equipments = {
+	
+	### ALL STATS ARE EITHER PLACEHOLDER OR BASE GAME STATS PLEASE CHANGE IF NEEDED ###
+
+	knightmare_base_equipment = { ### Base means that this is the base template every knightmare designer will have
+		year = 2000
+		is_archetype = yes
+		is_buildable = no
+		picture = archetype_modern_armour ### temp picture have no picture...
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		#priority = gonna leave this to someone smarter
+
+		module_slots = {
+			main_armament_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			turret_type_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			suspension_type_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			ammunition_type = {
+				required = no #no
+				allowed_module_categories = {
+					
+				}
+			}
+			armor_construction_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			armor_thickness_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			engine_type_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_1 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_2 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_3 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_4 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+		}
+
+		#module_count_limit = {
+		#	count = x
+		#}
+
+		default_modules = {
+			main_armament_slot = empty
+			turret_type_slot = empty
+			suspension_type_slot = empty
+			ammunition_type = empty
+			armor_construction_slot = empty
+			armor_thickness_slot = empty
+			engine_type_slot = empty
+		}
+
+		### These are the base stats given to the equipment with no modules
+
+		fuel_consumption = 0
+		maximum_speed = 8
+		build_cost_ic = 5
+		reliability = 1
+		armor_value = 40
+		hardness = 0.85
+		resources = {
+			steel = 2
+			chromium = 1
+			tungsten = 1
+		}
+		manpower = 2
+
+	}
+
+	knightmare_test_equipment = {
+		abbreviation = "knz"
+		derived_variant_name = "temporary name"
+		visual_level = 0
+		year = 2000
+		archetype = knightmare_base_equipment
+		priority = 2000
+
+		module_slots = {
+			main_armament_slot = inherit
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+
+				}
+			}
+			suspension_type_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			ammunition_type = inherit
+			armor_construction_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			armor_thickness_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			engine_type_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_1 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_2 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_3 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_4 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+		}
+	}
+
+	
+}

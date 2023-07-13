@@ -1,6 +1,23 @@
 technologies = {
-	knightmare_frame_1 = { 
 
+	knightmare_test = {
+		research_cost = 2
+		start_year = 2000
+		enable_equipments = {
+			knightmare_test_equipment
+			knightmare_base_equipment
+		}
+		enable_subunits = {
+			knightmare_test_division
+		}
+		folder = {
+			name = knightmares_folder
+			position = { x = 16 y = 0.5 }
+		}
+	}
+
+	knightmare_frame_1 = { 
+		
         dependencies = {
             mbt_1 = 1
         }
@@ -19,6 +36,11 @@ technologies = {
 
 		path = {
 			leads_to_tech = factspheres
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = knightmare_test
 			research_cost_coeff = 1
 		}
 
@@ -50,6 +72,7 @@ technologies = {
 			knightmare_mass_production
 		}
 	}
+
 
 	knightmare_police = { 
 

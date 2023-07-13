@@ -16,7 +16,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 1.2
 			fuel_consumption = 3.0
-			maximum_speed = 0.30
+			maximum_speed = 5
 		}
 		multiply_stats = {
 
@@ -435,7 +435,7 @@ equipment_modules = {
 
 	early_rifled = { # Early TD MBT
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "r122"
 		category = rifled_weapon
 
@@ -448,7 +448,7 @@ equipment_modules = {
 
 	basic_rifled = { # Basic TD MBT
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "r105"
 		category = rifled_weapon
 
@@ -462,7 +462,7 @@ equipment_modules = {
 
 	improved_rifled = { # Improved TD MBT
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "r120"
 		category = rifled_weapon
 
@@ -476,7 +476,7 @@ equipment_modules = {
 
 	advanced_rifled = { # Advanced TD MBT
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "r125"
 		category = rifled_weapon
 
@@ -495,7 +495,7 @@ equipment_modules = {
 
 	early_cannon = { # Early SPG MBT
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "c203"
 		category = artillery_weapon
 
@@ -508,7 +508,7 @@ equipment_modules = {
 
 	basic_cannon = { # Basic SPG MBT
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "c155"
 		category = artillery_weapon
 
@@ -522,7 +522,7 @@ equipment_modules = {
 
 	improved_cannon = { # Improved SPG MBT
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "c152"
 		category = artillery_weapon
 
@@ -536,7 +536,7 @@ equipment_modules = {
 
 	advanced_cannon = { # Advanced SPG MBT
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "u155"
 		category = artillery_weapon
 
@@ -553,61 +553,61 @@ equipment_modules = {
 	### Assault Gun ###
 	###################
 
-#	early_assault_gun = { # Basic Assault Gun
-#		allow_equipment_type = rocket 
-#		forbid_equipment_type = armor
-#
-#		category = assault_weapon
-#		allowed_module_categories = {
-#			ammunition_type = {
-#				
-#			}
-#		}
-#
-#		xp_cost = 1
-#	}
-#
-#	basic_assault_gun = { # Basic Assault Gun
-#		allow_equipment_type = rocket 
-#		forbid_equipment_type = armor
-#
-#		category = assault_weapon 
-#		allowed_module_categories = {
-#			ammunition_type = {
-#				
-#			}
-#		}
-#
-#		xp_cost = 1
-#	}
-#
-#	improved_assault_gun = { # Basic Assault Gun
-#		allow_equipment_type = rocket 
-#		forbid_equipment_type = armor
-#
-#		category = assault_weapon 
-#		allowed_module_categories = {
-#			ammunition_type = {
-#				
-#			}
-#		}
-#
-#		xp_cost = 1
-#	}
-#
-#	advanced_assault_gun = { # Basic Assault Gun
-#		allow_equipment_type = rocket 
-#		forbid_equipment_type = armor
-#
-#		category = assault_weapon 
-#		allowed_module_categories = {
-#			ammunition_type = {
-#				
-#			}
-#		}
-#
-#		xp_cost = 1
-#	}
+	early_assault_gun = { # Basic Assault Gun
+		allow_equipment_type = rocket 
+		forbid_equipment_type_exact_match = armor
+
+		category = assault_weapon
+		allowed_module_categories = {
+			ammunition_type = {
+				
+			}
+		}
+
+		xp_cost = 1
+	}
+
+	basic_assault_gun = { # Basic Assault Gun
+		allow_equipment_type = rocket 
+		forbid_equipment_type_exact_match = armor
+
+		category = assault_weapon 
+		allowed_module_categories = {
+			ammunition_type = {
+				
+			}
+		}
+
+		xp_cost = 1
+	}
+
+	improved_assault_gun = { # Basic Assault Gun
+		allow_equipment_type = rocket 
+		forbid_equipment_type_exact_match = armor
+
+		category = assault_weapon 
+		allowed_module_categories = {
+			ammunition_type = {
+				
+			}
+		}
+
+		xp_cost = 1
+	}
+
+	advanced_assault_gun = { # Basic Assault Gun
+		allow_equipment_type = rocket 
+		forbid_equipment_type_exact_match = armor
+
+		category = assault_weapon 
+		allowed_module_categories = {
+			ammunition_type = {
+				
+			}
+		}
+
+		xp_cost = 1
+	}
 
 
 	##### #  # ###  ###  #### #####    ##### #   # ###  #### ####
@@ -659,7 +659,7 @@ equipment_modules = {
 	early_mbt_super_structure = {
 		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "esuper"
 		category = early_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -680,7 +680,7 @@ equipment_modules = {
 
 	early_mbt_artillery_structure = {
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "earti"
 		category = early_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -741,7 +741,7 @@ equipment_modules = {
 	basic_mbt_super_structure = {
 		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "bsuper"
 		category = basic_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -762,7 +762,7 @@ equipment_modules = {
 
 	basic_mbt_artillery_structure = {
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "barti"
 		category = basic_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -823,7 +823,7 @@ equipment_modules = {
 	improved_mbt_super_structure = {
 		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "isuper"
 		category = improved_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -844,7 +844,7 @@ equipment_modules = {
 
 	improved_mbt_artillery_structure = {
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "iarti"
 		category = improved_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -907,7 +907,7 @@ equipment_modules = {
 	advanced_mbt_super_structure = {
 		#allow_equipment_type = rocket
 		allow_equipment_type = anti_tank
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "asuper"
 		category = advanced_mbt_turret_superstructure
 		allowed_module_categories = {
@@ -929,7 +929,7 @@ equipment_modules = {
 
 	advanced_mbt_artillery_structure = {
 		allow_equipment_type = artillery
-		forbid_equipment_type = armor
+		forbid_equipment_type_exact_match = armor
 		abbreviation = "aarti"
 		category = advanced_mbt_turret_superstructure
 		allowed_module_categories = {
