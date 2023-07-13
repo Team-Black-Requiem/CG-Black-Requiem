@@ -1844,10 +1844,279 @@ ideas = {
 			political_power_factor = 0.1
 		}
 	}
+     
+	Modern_armor_1 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			armor = {
+				instant = yes
+				maximum_speed = 0.05
+				breakthrough = 0.05
+			}
+		}
+	}
 
+    Modern_armor_2 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			modern_armor = {
+				instant = yes
+				maximum_speed = 0.05
+				breakthrough = 0.05
+		        build_cost_ic = 0.1
+				defense = 0.5
+				attack = 0.5
+			}
+		}
+	}
+
+	
+    Modern_armor_3 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			modern_armor = {
+				instant = yes
+				maximum_speed = 0.15
+				breakthrough = 0.05
+		        build_cost_ic = -0.1
+				defense = 0.05
+				attack  = 0.05
+				reliability_factor  = 0.05
+			}
+		}
+	}
+    
+	Lightning_Warfare_1 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			modern_armor = {
+				instant = yes
+				maximum_speed = 0.2
+				breakthrough = 0.15
+		        build_cost_ic = -0.1
+				defense = 0.05
+				attack  = 0.05
+				reliability_factor  = 0.15
+			}
+		}
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.2
+				fuel_consumption_factor = -0.1
+				maximum_speed = 0.15
+				breakthrough = 0.1
+				reliability_factor = 0.15
+			}
+			mechanized_equipment = {
+				fuel_consumption_factor = -0.1
+				maximum_speed = 0.16
+				breakthrough = 0.1
+			    reliability_factor = 0.16
+			}
+		}
+		modifier = {
+			supply_node_range = 0.5
+
+		}
+	}
+	Motorized_Infantry = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.2
+			}
+		}
+	}
+ 
+	Motorized_Infantry_2 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.2
+				fuel_consumption_factor = -0.1
+			}
+			mechanized_equipment = {
+				fuel_consumption_factor = -0.1
+			}
+		}
+		modifier = {
+			supply_node_range = 0.5
+
+		}
+	}
+
+	 
+	Battlefield_Domination = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+		   category_tanks = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		   }
+		}
+		
+	}
+	Battlefield_Domination_2 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+		   category_tanks = {
+			armor_value = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = 0.05
+			build_cost_ic = 0.3
+		   }
+		}
+	}
+	Battlefield_Domination_4 = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+		equipment_bonus = {
+		   category_tanks = {
+			armor_value = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = 0.05
+			build_cost_ic = 0.3
+			hg_armor_piercing = 0.15
+			lg_armor_piercing = 0.15
+		   }
+		}
+	}
+
+	Heavy_infantry_support = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		removal_cost = -1
+	    equipment_bonus = {
+			category_all_infantry = {
+				entrenchment = 0.1
+				maximum_speed = 0.05
+			}
+		}
 }
 
+Heavy_infantry_support_2 = {
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+	equipment_bonus = {
+		 infantry = {
+			entrenchment = 0.1
+			maximum_speed  = 0.1
+			defense = 0.1
+		}
+	}
+}
 
+Heavy_infantry_support_2 = {
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+	
+	modifier = {
+		air_mission_efficiency = 0.1
+	}
+}
+Unstoppables_Force = {
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+	equipment_bonus = {
+	   category_tanks = {
+		armor_value = 0.1
+		soft_attack = 0.15
+		hard_attack = 0.15
+		defense = 0.05
+		build_cost_ic = 0.30
+		hg_armor_piercing = 0.15
+		lg_armor_piercing = 0.15
+	   }
+	       infantry ={
+			entrenchment = 0.1
+			maximum_speed = 0.1
+			max_organisation = 0.1
+			soft_attack = 0.1
+		}
+	}
+	modifier = {
+		air_mission_efficiency = 0.1
+	}
+}
+	}
 ## COMPANIES
 
 materiel_manufacturer = {
