@@ -13,6 +13,8 @@ characters={
 			ledger = civilian
 				allowed = {
 					original_tag = RUS
+				}
+				available = {
 					NOT = {has_completed_focus = RUS_Arrest_the_traitor}
 				}
 				traits = {
@@ -25,20 +27,20 @@ characters={
 		}
 	}
 
-	##RUS_vladislav={
-	##	name = "Vladislav Zakharov"
-		##portraits = {
-		##	civilian = {
-		##		large="GFX_portrait_RUS_vladislav"
-		##	}
-	##	}
-	##	country_leader = {
-		##	desc = ""
-		##	ideology = military_dictatorship
-		##	traits={}
-		##	expire="2100.1.1.1"
-	##	}
-##	}
+	RUS_vladislav={
+		name = "Vladislav Zakharov"
+		portraits = {
+			civilian = {
+				large="GFX_portrait_RUS_vladislav"
+			}
+		}
+		country_leader = {
+			desc = POLITICS_ZAKHAROV_DESC
+			ideology = military_dictatorship
+			traits={}
+			expire="2100.1.1.1"
+		}
+	}
 
 	RUS_generic_general_1={
 		advisor={				
@@ -157,7 +159,6 @@ characters={
 				allowed = {
 					original_tag = RUS
 				}
-				
 				traits = {
 					conservative_guy military_police
 				}
@@ -185,6 +186,11 @@ characters={
 			idea_token = RUS_generic_army_chief_idea_1
 			allowed = {
 				tag = RUS
+			}
+			visible = {
+				NOT = {
+					has_cosmetic_tag = EIZ
+				}
 			}
 			traits = { 
 				army_chief_offensive_2
