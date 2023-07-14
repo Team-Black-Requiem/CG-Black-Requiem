@@ -762,7 +762,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 10
-		y = 2
+		y = 1
 		relative_position_id = EUR_Beginning_Of_The_End
 
 		allow_branch = {has_country_flag = Industry_Schnizel_1}
@@ -947,7 +947,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 10
-		y = 2
+		y = 1
 		relative_position_id = EUR_Beginning_Of_The_End
 
 		allow_branch = {has_country_flag = Industry_Schnizel_2}
@@ -1132,7 +1132,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 10
-		y = 2
+		y = 1
 		relative_position_id = EUR_Beginning_Of_The_End
 
 		allow_branch = {has_country_flag = Industry_Schnizel_3}
@@ -1316,8 +1316,8 @@ focus_tree = {
 		id = EUR_A_Britannian_Administration
 		icon = GFX_EUR_A_Britannian_Administration
 		cost = 1
-		x = -15
-		y = 2
+		x = -14
+		y = 1
 		relative_position_id = EUR_Beginning_Of_The_End
 
 		prerequisite = {
@@ -2246,8 +2246,8 @@ focus_tree = {
 		id = EUR_A_Hybrid_Administration
 		icon = GFX_EUR_A_Hybrid_Administration
 		cost = 1
-		x = -10
-		y = 2
+		x = -14
+		y = 1
 		relative_position_id = EUR_Beginning_Of_The_End
 
 		prerequisite = {
@@ -2269,8 +2269,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = EUR_Intergrate_The_Bureaucrats
-		icon = GFX_EUR_Intergrate_The_Bureaucrats
+		id = EUR_Transfer_Power_To_Civilian_Authorities
+		icon = GFX_EUR_Transfer_Power_To_Civilian_Authorities
 		cost = 1
 		x = -1
 		y = 1
@@ -2279,6 +2279,902 @@ focus_tree = {
 		prerequisite = {
 			focus = EUR_A_Hybrid_Administration
 		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Intergrate_The_Russians
+		icon = GFX_EUR_Intergrate_The_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Hybrid_Administration
+
+		prerequisite = {
+			focus = EUR_A_Hybrid_Administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Directional_Question
+		icon = GFX_EUR_A_Directional_Question
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Transfer_Power_To_Civilian_Authorities
+
+		prerequisite = {
+			focus = EUR_Transfer_Power_To_Civilian_Authorities
+		}
+		prerequisite = {
+			focus = EUR_Intergrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Integrate_The_Russians
+		icon = GFX_EUR_Integrate_The_Russians
+		cost = 1
+		x = -4
+		y = 1
+		relative_position_id = EUR_A_Directional_Question
+
+		mutually_exclusive = {
+			focus = EUR_A_Place_For_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_A_Directional_Question
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Open_Up_More_Jobs_To_Russians
+		icon = GFX_EUR_Open_Up_More_Jobs_To_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Company_Mergers
+		icon = GFX_EUR_Company_Mergers
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_More_Than_Just_Numbers
+		icon = GFX_EUR_More_Than_Just_Numbers
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Open_Up_More_Jobs_To_Russians
+
+		prerequisite = {
+			focus = EUR_Open_Up_More_Jobs_To_Russians
+		}
+		prerequisite = {
+			focus = EUR_Company_Mergers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Increasing_Russian_Living_Standards
+		icon = GFX_EUR_Increasing_Russian_Living_Standards
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_More_Than_Just_Numbers
+
+		prerequisite = {
+			focus = EUR_More_Than_Just_Numbers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Promote_Russian_Scientists
+		icon = GFX_EUR_Promote_Russian_Scientists
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_More_Than_Just_Numbers
+
+		prerequisite = {
+			focus = EUR_More_Than_Just_Numbers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Highlight_The_Partnership
+		icon = GFX_EUR_Highlight_The_Partnership
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Increasing_Russian_Living_Standards
+
+		prerequisite = {
+			focus = EUR_Increasing_Russian_Living_Standards
+		}
+
+		prerequisite = {
+			focus = EUR_Promote_Russian_Scientists
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Enlighten_The_Russians
+		icon = GFX_EUR_Enlighten_The_Russians
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Show_The_Toil_Of_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Britannian_Culture_Classes
+		icon = GFX_EUR_Britannian_Culture_Classes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Enlighten_The_Russians
+
+		prerequisite = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Britannian_Culture_Classes
+		icon = GFX_EUR_Britannian_Culture_Classes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Enlighten_The_Russians
+
+		prerequisite = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Uplift_The_Russians
+		icon = GFX_EUR_Uplift_The_Russians
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Britannian_Culture_Classes
+
+		prerequisite = {
+			focus = EUR_Britannian_Culture_Classes
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Show_The_Toil_Of_The_Russians
+		icon = GFX_EUR_Show_The_Toil_Of_The_Russians
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Disregard_The_Honourary_Process
+		icon = GFX_EUR_Disregard_The_Honourary_Process
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Show_The_Toil_Of_The_Russians
+
+		prerequisite = {
+			focus = EUR_Show_The_Toil_Of_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+		icon = GFX_EUR_The_Beginning_Of_A_Wonderfull_Partnership
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Disregard_The_Honourary_Process
+
+		prerequisite = {
+			focus = EUR_Disregard_The_Honourary_Process
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Towards_Cultural_Harmony
+		icon = GFX_EUR_Towards_Cultural_Harmony
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+
+		prerequisite = {
+			focus = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+			focus = EUR_Uplift_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Our_Russian_Brothers
+		icon = GFX_EUR_Our_Russian_Brothers
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_Towards_Cultural_Harmony
+
+		prerequisite = {
+			focus = EUR_Towards_Cultural_Harmony
+		}
+		prerequisite = {
+			focus = EUR_Highlight_The_Partnership
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Place_For_Russians
+		icon = GFX_EUR_A_Place_For_Russians
+		cost = 1
+		x = 4 
+		y = 1
+		relative_position_id = EUR_A_Directional_Question
+
+		mutually_exclusive = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_A_Directional_Question
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Promote_Domestic_Industry
+		icon = GFX_EUR_Promote_Domestic_Industry
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Integrate_Russian_Bureaucrats
+		icon = GFX_EUR_Integrate_Russian_Bureaucrats
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Legal_Protections_For_Russians
+		icon = GFX_EUR_Legal_Protections_For_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Promote_Domestic_Industry
+
+		prerequisite = {
+			focus = EUR_Promote_Domestic_Industry
+		}
+		prerequisite = {
+			focus = EUR_Integrate_Russian_Bureaucrats
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Fund_Russian_Settlements
+		icon = GFX_EUR_Fund_Russian_Settlements
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Legal_Protections_For_Russians
+
+		prerequisite = {
+			focus = EUR_Legal_Protections_For_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Russian_Education_Drive
+		icon = GFX_EUR_Russian_Education_Drive
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Legal_Protections_For_Russians
+
+		prerequisite = {
+			focus = EUR_Legal_Protections_For_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_An_End_To_Segregation
+		icon = GFX_EUR_An_End_To_Segregation
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Fund_Russian_Settlements
+
+		prerequisite = {
+			focus = EUR_Fund_Russian_Settlements
+		}
+
+		prerequisite = {
+			focus = EUR_Russian_Education_Drive
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Allow_Russian_Culture
+		icon = GFX_EUR_Allow_Russian_Culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Young_Officers_Culture_Plan
+		}
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Stop_Cultural_Conversion_Plans
+		icon = GFX_EUR_Stop_Cultural_Conversion_Plans
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Allow_Russian_Culture
+
+		prerequisite = {
+			focus = EUR_Allow_Russian_Culture
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Leave_Them_Alone
+		icon = GFX_EUR_Leave_Them_Alone
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Stop_Cultural_Conversion_Plans
+
+		prerequisite = {
+			focus = EUR_Stop_Cultural_Conversion_Plans
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Young_Officers_Culture_Plan
+		icon = GFX_EUR_Young_Officers_Culture_Plan
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Allow_Russian_Culture
+		}
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Hand_Local_Government_To_Russians
+		icon = GFX_EUR_Hand_Local_Government_To_Russians
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Young_Officers_Culture_Plan
+
+		prerequisite = {
+			focus = EUR_Young_Officers_Culture_Plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_National_Representation_Council
+		icon = GFX_EUR_The_National_Representation_Council
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Hand_Local_Government_To_Russians
+
+		prerequisite = {
+			focus = EUR_Hand_Local_Government_To_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_No_Longer_Second_Class_Citizens
+		icon = GFX_EUR_No_Longer_Second_Class_Citizens
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Leave_Them_Alone
+
+		prerequisite = {
+			focus = EUR_Leave_Them_Alone
+			focus = EUR_The_National_Representation_Council
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Russia_For_Russians
+		icon = GFX_EUR_Russia_For_Russians
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_An_End_To_Segregation
+
+		prerequisite = {
+			focus = EUR_An_End_To_Segregation
+		}
+		prerequisite = {
+			focus = EUR_No_Longer_Second_Class_Citizens
+		}
+
 		search_filters = {
 		}
 		
