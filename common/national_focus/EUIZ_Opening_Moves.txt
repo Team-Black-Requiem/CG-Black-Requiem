@@ -4789,7 +4789,16 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-            
+            add_stability = 10
+            add_war_support = 10
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
               hidden_effect = {
             }
         }
@@ -4827,7 +4836,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-
+            add_stability = 10
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
               hidden_effect = {
             }
         }
@@ -4855,7 +4868,7 @@ focus_tree = {
 
         available = {		
             country_exists = RUS has_cosmetic_tag = EIZ
-            }
+          }
     
             bypass = {
             }
@@ -4865,7 +4878,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-            
+            add_ideas = Foreign_enginners
               hidden_effect = {
             }
         }
@@ -6933,7 +6946,11 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                    add_equipment_to_stockpile = {
+                        type = train_equipment
+                        amount = 10
+                    }
+                    add_ideas = Repurposing_Underground_Metro_Lanes
                     hidden_effect = {
                   }
             }
@@ -7267,6 +7284,7 @@ focus_tree = {
             }
     
             available = {		
+              
                 country_exists = RUS has_cosmetic_tag = EIZ
         
                 }
@@ -7351,6 +7369,7 @@ focus_tree = {
             }
     
             available = {		
+                date = 12.4.5
                 country_exists = RUS has_cosmetic_tag = EIZ
         
                 }
@@ -7706,7 +7725,7 @@ focus_tree = {
     
                 completion_reward = {
                     country_event = EIZ.68
-
+                
                     hidden_effect = {
                   }
             }

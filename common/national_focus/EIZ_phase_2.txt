@@ -3595,11 +3595,821 @@ focus = {
     }
 }
 
+####   OSCAR PHASE @ #####
+
+focus = {
+    id = EIZ_Living_on_a_Prayer
+    icon = GFX_EIZ_European_Invasion
+    x = 60
+    y = 0
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+                mark_focus_tree_layout_dirty = yes
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Rusian_Psychosis
+    icon = GFX_EIZ_European_Invasion
+    x = 0
+    y = 2
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Living_on_a_Prayer
+    prerequisite = {
+        focus = EIZ_Living_on_a_Prayer
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_An_alternative_use_for_naval_guns
+    icon = GFX_EIZ_European_Invasion
+    x = -10
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Rusian_Psychosis
+    prerequisite = {
+        focus = EIZ_Rusian_Psychosis
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+    allow_branch = {
+     #   has_completed_focus = EIZ_THEY_WONT_SEE_IT_COMING
+    }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Naval_Engines_power_for_rural_communities 
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_An_alternative_use_for_naval_guns
+    prerequisite = {
+        focus = EIZ_An_alternative_use_for_naval_guns
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+    allow_branch = {
+     #   has_completed_focus = EIZ_THEY_WONT_SEE_IT_COMING
+    }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Ship_hull_temp_housing
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Naval_Engines_power_for_rural_communities
+    prerequisite = {
+        focus = EIZ_Naval_Engines_power_for_rural_communities
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+    allow_branch = {
+     #   has_completed_focus = EIZ_THEY_WONT_SEE_IT_COMING
+    }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
+
+focus = {
+    id = EIZ_From_Bunkers_to_governor_Headquarters 
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_An_alternative_use_for_naval_guns
+    prerequisite = {
+        focus = EIZ_An_alternative_use_for_naval_guns
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Reusing_electrical_parts_for_radar_construction 
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_From_Bunkers_to_governor_Headquarters
+    prerequisite = {
+        focus = EIZ_From_Bunkers_to_governor_Headquarters
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
 
 
+focus = {
+    id = EIZ_A_concerning_discovery 
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Reusing_electrical_parts_for_radar_construction
+    prerequisite = {
+        focus = EIZ_Reusing_electrical_parts_for_radar_construction
+        focus = EIZ_Ship_hull_temp_housing
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        }
+   
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+           
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Establish_the_medical_corps
+    icon = GFX_EIZ_European_Invasion
+    x = -4
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Rusian_Psychosis
+    prerequisite = {
+        focus = EIZ_Rusian_Psychosis
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
 
 
+focus = {
+    id = EIZ_infantry_Reform
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
 
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Establish_the_medical_corps
+    prerequisite = {
+        focus = EIZ_Establish_the_medical_corps
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_AT_Capabilities
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_infantry_Reform
+    prerequisite = {
+        focus = EIZ_infantry_Reform
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_They_will_not_take_one_step_more
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_AT_Capabilities
+    prerequisite = {
+        focus = EIZ_AT_Capabilities
+        focus = EIZ_Integrate_the_Engineer_corps_into_Railway_companies
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Establish_the_Engineer_Corps
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Establish_the_medical_corps
+    prerequisite = {
+        focus = EIZ_Establish_the_medical_corps
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+focus = {
+    id = EIZ_Integrate_the_Engineer_corps_into_Railway_companies 
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Establish_the_Engineer_Corps
+    prerequisite = {
+        focus = EIZ_Establish_the_Engineer_Corps
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Repairing_What_Weve_Appropriated
+    icon = GFX_EIZ_European_Invasion
+    x = 4
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Rusian_Psychosis
+    prerequisite = {
+        focus = EIZ_Rusian_Psychosis
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Ural_Revivalization_Project 
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Repairing_What_Weve_Appropriated
+    prerequisite = {
+        focus = EIZ_Repairing_What_Weve_Appropriated
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_A_nation_connected 
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Ural_Revivalization_Project
+    prerequisite = {
+        focus = EIZ_Ural_Revivalization_Project
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Taking_Stock
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_A_nation_connected
+    prerequisite = {
+        focus = EIZ_A_nation_connected
+        focus = EIZ_tolerance_for_tax
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Seize_Tsarist_assets
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Repairing_What_Weve_Appropriated
+    prerequisite = {
+        focus = EIZ_Repairing_What_Weve_Appropriated
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_tolerance_for_tax
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Seize_Tsarist_assets
+    prerequisite = {
+        focus = EIZ_Seize_Tsarist_assets
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Oscar_makes_a_friend
+    icon = GFX_EIZ_European_Invasion
+    x = 10
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Rusian_Psychosis
+    prerequisite = {
+        focus = EIZ_Rusian_Psychosis
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Our_first_Embassy
+    icon = GFX_EIZ_European_Invasion
+    x = -2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Oscar_makes_a_friend
+    prerequisite = {
+        focus = EIZ_Oscar_makes_a_friend
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Formal_Trade_Agreement 
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Our_first_Embassy
+    prerequisite = {
+        focus = EIZ_Our_first_Embassy
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+
+focus = {
+    id = EIZ_Caucus_Enclave 
+    icon = GFX_EIZ_European_Invasion
+    x = 1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Formal_Trade_Agreement
+    prerequisite = {
+        focus = EIZ_Formal_Trade_Agreement
+        focus = EIZ_Royal-Guards_Arrive
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Declaration_of_Friendship
+    icon = GFX_EIZ_European_Invasion
+    x = 2
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Oscar_makes_a_friend
+    prerequisite = {
+        focus = EIZ_Oscar_makes_a_friend
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
+
+focus = {
+    id = EIZ_Royal-Guards_Arrive
+    icon = GFX_EIZ_European_Invasion
+    x = -1
+    y = 1
+
+    cost = 1
+  
+    ai_will_do = {
+        factor = 100
+    }
+    relative_position_id = EIZ_Declaration_of_Friendship
+    prerequisite = {
+        focus = EIZ_Declaration_of_Friendship
+    }
+    available = {		
+        country_exists = RUS has_cosmetic_tag = EIZ
+        
+        }
+
+        bypass = {
+        }
+
+        completion_reward = {
+         
+            hidden_effect = {
+            
+          }
+    }
+}
 	#####OSCAR####
 
 
