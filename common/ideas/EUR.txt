@@ -2,7 +2,7 @@
 ideas = {
     country = {
 
-		#These are together with RUS_Agrarian_economy, RUS_low_level_education and RUS_Corrupt_government
+		#Starting Ideas
 	
 	    EUR_poor_logistics = {
 		
@@ -23,7 +23,8 @@ ideas = {
 			consumer_goods_factor = 0.02
 			}
 		}
-		EUR_poor_logistics_1 = {
+
+		EUR_underdeveloped_economy = {
 		
 		 	allowed = {
 				always = yes
@@ -36,8 +37,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			army_org_factor = -0.10
-			army_speed_factor = -0.10
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.15
+				local_resources_factor = -0.10
+				consumer_goods_factor = 0.10
 			}
 		}
 		
@@ -54,65 +57,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			political_power_gain = 0.50
-			stability_factor = 0.10
-			offensive_war_stability_factor = 0.30
-			}
-		}
-		
-		EUR_crisis_authority = {
-		
-		 	allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_weekly_factor = -0.0010
-			resistance_growth = 0.05
-			autocracy_drift = -0.01
-			}
-		}
-		EUR_crisis_authority_1 = {
-		
-		 	allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_weekly_factor = -0.002
-			autocracy_drift = -0.01
-			}
-		}
-		EUR_provisional_senate = {
-		
-		 	allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
+			political_power_gain = 0.10
 			stability_factor = 0.05
-			political_power_gain = 0.2
+			army_core_defence_factor = 0.1
 			}
 		}
-		EUR_everything_for_new_life = {
+
+		EUR_national_militia = {
 		
 		 	allowed = {
 				always = yes
@@ -125,56 +76,18 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			weekly_manpower = 400
-			stability_factor = -0.05
-			}
-		}
-		EUR_fight_in_Siberia = {
-		
-		 	allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			weekly_manpower = 1200
-			army_attack_factor = 0.05
-			army_org_factor = 0.05
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-		}
-	}
-		EUR_Waiting_for_the_future = {
-		
-		 	allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_factor = 0.05
-			ultra_nationalism_drift = 0.02
+				conscription = 0.005
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_org_factor = -0.1
 			}
 		}
 
 EUR_Britannian_Military_Administration = {
 		
-	allowed = {
+   allowed = {
 	   always = yes
-   }
+    }
 
    allowed_civil_war = {
 	   always = yes
@@ -186,6 +99,8 @@ EUR_Britannian_Military_Administration = {
 
    }
 }
+		
+
 	
 EUR_Establish_The_Free_Port = {
 		
