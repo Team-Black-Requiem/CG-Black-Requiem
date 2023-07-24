@@ -86,43 +86,30 @@ country_event = {
 }
 
 country_event = {  
-	id = EUR.7 ####Britannian ultimatum
+	id = EUR.7 ####Ace in the hole
 	title = EUR.7.t
 	desc = EUR.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = EUR.7.a
+		name = EUR.7.a ##Help from Britannia
+		set_country_flag = EUR_BRT_support
 		ai_chance = {
 			factor = 100
 		}
-		hidden_effect = {
-		set_country_flag = EUR_Britannians_proposal_flag
-		retire_character = EUR_Anton_Kozlov
-		retire_character = EUR_Aleksandr_Petrov
-		retire_character = EUR_Vyacheslav_Pushkin
-		retire_character = EUR_Mikhail_Fedorov
-		complete_national_focus = EUR_Britannians_proposal
-					}
-    		} 
-	option = {
-		name = EUR.7.b
-		ai_chance = {
-			factor = 100
-		}
-		hidden_effect = {
-		set_country_flag = EUR_Britannians_proposal_flag
-		retire_character = EUR_Anton_Kozlov
-		retire_character = EUR_Aleksandr_Petrov
-		retire_character = EUR_Vyacheslav_Pushkin
-		retire_character = EUR_Mikhail_Fedorov
-		complete_national_focus = EUR_Britannians_proposal
-				}
-   		 }	
+		
+    } 
+	#option = {
+		#name = EUR.7.b  ##Help from Other Powers
+		#ai_chance = {
+			#factor = 0
+		#}
+		
+    #} 	
 }
 
 country_event = {  
-	id = EUR.8 ####An End To Madness
+	id = EUR.8 ####Finding Alternatives
 	title = EUR.8.t
 	desc = EUR.8.d
 	fire_only_once = yes
@@ -132,9 +119,138 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+		
+    } 	
+}
+
+country_event = {  
+	id = EUR.9 ####Britannian Proposal
+	title = EUR.9.t
+	desc = EUR.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.9.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+
+country_event = {  
+	id = EUR.10 ####Britannian ultimatum-1
+	title = EUR.10.t
+	desc = EUR.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.10.a
+		ai_chance = {
+			factor = 100
+		}
+				add_country_leader_role = {
+		character = EUR_Augusta_Henry
+		promote_leader = yes
+		country_leader = {
+        ideology = paternal_autocracy
+        expire = "2020.1.1.1"
+        traits = { EUR_grand_duke }
+		}
+	     }
+		hidden_effect = {
+			remove_country_leader_role = {
+		         character = EUR_Mil_Coun
+		         ideology = paternal_autocracy
+	      	}
+			country_event = {
+                 id = EUR.11
+                 days = 3
+              }
+		}	
+		
+    } 	
+}
+
+
+country_event = {  
+	id = EUR.11 ####Britannian ultimatum-2
+	title = EUR.11.t
+	desc = EUR.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.11.a
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+               remove_idea = EUR_national_militia
+               add_idea = EUR_national_militia_2
+         }
+		 custom_effect_tooltip = EUR_general_reshuffling
+		hidden_effect = {
+		#retire_character = EUR_Anton_Kozlov
+		retire_character = EUR_Fedor_Nikolaev
+		retire_character = EUR_Vyacheslav_Pushkin
+		retire_character = EUR_Mikhail_Fedorov
+		recruit_character = EUR_Michele_Manfredi
+		recruit_character = EUR_Edward_Laurier
+		#recruit_character = EUR_Elliot_Collins
+		#recruit_character = EUR_Albert_Lancaster
+		}
+    	} 	
+}
+
+country_event = {  
+	id = EUR.12 ####An End To Madness
+	title = EUR.12.t
+	desc = EUR.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.12.a
+		ai_chance = {
+			factor = 100
+		}
 	declare_war_on = {
     target = SRU
     type = annex_everything
     }
     } 	
+}
+
+country_event = {  
+	id = EUR.13 ####Schneizel Support
+	title = EUR.13.t
+	desc = EUR.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR.13.a
+		hidden_effect = {
+		complete_national_focus = EUR_By_Emperors_order
+		}
+		swap_ideas = {
+               remove_idea = EUR_legitimate_cause
+               add_idea = EUR_legitimate_cause_2
+         }
+		ai_chance = {
+			factor = 100
+        } 	
+	}
+
+	option = {
+		name = EUR.13.b
+		ai_chance = {
+			factor = 100
+        } 	
+		hidden_effect = {
+		complete_national_focus = EUR_In_memory_of_Russian_Empire
+		}
+		swap_ideas = {
+               remove_idea = EUR_legitimate_cause
+               add_idea = EUR_legitimate_cause_2
+        }
+	}
 }

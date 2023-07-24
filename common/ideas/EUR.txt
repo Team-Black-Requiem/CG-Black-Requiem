@@ -24,6 +24,26 @@ ideas = {
 			}
 		}
 
+	     EUR_poor_logistics_2 = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.10
+			out_of_supply_factor = 0.10
+			army_org_factor = -0.05
+			army_speed_factor = -0.05
+			}
+		}
+
 		EUR_underdeveloped_economy = {
 		
 		 	allowed = {
@@ -63,6 +83,22 @@ ideas = {
 			}
 		}
 
+		EUR_legitimate_cause_2 = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+
 		EUR_national_militia = {
 		
 		 	allowed = {
@@ -77,29 +113,33 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.005
-				army_attack_factor = -0.15
-				army_defence_factor = -0.15
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
 				army_org_factor = -0.1
 			}
 		}
 
-EUR_Britannian_Military_Administration = {
 		
-   allowed = {
-	   always = yes
-    }
-
-   allowed_civil_war = {
-	   always = yes
-   }
-
-   removal_cost = -1
-   
-   modifier = {
-
-   }
-}
+		EUR_national_militia_2 = {
 		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_org_factor = -0.15
+				planning_speed = -0.30
+			}
+		}	
+
 
 	
 EUR_Establish_The_Free_Port = {
@@ -396,29 +436,30 @@ EUR_Cheap_Tanks = {
 	tank_manufacturer = {
 		designer = yes
 
-		EUR_BRI_gen_tank_man = {
-			# picture = 
-
-			allowed = {
-				original_tag = EUR
+			EUR_gen_tank_man = {
+				picture = BRT_gen_tank_man
+		
+				
+				allowed = {
+					original_tag = EUR
+				  }
+				research_bonus = {
+					armor = 0.05
+					infantry_tech = 0.05
+				}
+				
+			
+							
+				traits = { infantry_equipment_manufacturer }
+				
 			}
-
-			research_bonus = {
-				armor = 0.05
-			}
-
-			traits = {
-				fast_tank_manufacturer
-			}
-
-		}
 	}
 
 	industrial_concern = {
 		designer = yes
 
-		EUR_BRI_gen_industrial_man = {
-			# picture = 
+		EUR_gen_industrial_man = {
+			 picture = BRT_gen_industry
 
 			allowed = {
 				original_tag = EUR
@@ -426,10 +467,11 @@ EUR_Cheap_Tanks = {
 
 			research_bonus = {
 				industry = 0.05
+				infrastructure = 0.02
 			}
 
 			traits = {
-				resource_extration_industry
+				railway_company
 			}
 
 
@@ -439,19 +481,18 @@ EUR_Cheap_Tanks = {
 	materiel_manufacturer = {
 		designer = yes
 
-		EUR_BRI_gen_mater_man = {
-			# picture =
+		EUR_gen_mater_man = {
+			picture = BRT_generic_materiel
 
 			allowed = {
 				original_tag = EUR
 			}
 
 			research_bonus = {
-				infantry_tech = 0.05
 			}
 
 			traits = {
-				artillery_producer_mass_1
+				artillery_producer_mass_2
 			}
 		}
 	}
@@ -459,8 +500,8 @@ EUR_Cheap_Tanks = {
 	naval_manufacturer = {
 		designer = yes
 
-		EUR_BRI_gen_naval_man = {
-			# picture =
+		EUR_gen_naval_man = {
+	        picture = BRT_gen_naval
 
 			allowed = {
 				original_tag = EUR
@@ -470,7 +511,7 @@ EUR_Cheap_Tanks = {
 			}
 
 			traits = {
-				submarine_producer_offense_1
+				submarine_producer_offense_2 
 			}
 		}
 	}
@@ -478,14 +519,15 @@ EUR_Cheap_Tanks = {
 	aircraft_manufacturer = {
 		designer = yes
 
-		EUR_Britannian_Military_Administration = {
-			# picture = 
+		EUR_gen_aircraft = {
+	        picture = BRT_gen_air
 
 			allowed = {
 				original_tag = EUR
 			}
 			research_bonus = {
-				heavy_air = 0.05
+				heavy_air = 0.02
+				light_air = 0.05
 			}
 
 			traits = {
