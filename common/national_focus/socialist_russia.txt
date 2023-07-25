@@ -1606,7 +1606,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					set_country_flag = SRU_makarov_army_plan
+				}
 
 			}
 			focus = {
@@ -1625,7 +1627,9 @@
 						factor = 100 
 					}
 				available_if_capitulated = no
-				completion_reward = {}
+				completion_reward = {
+					set_country_flag = SRU_kovalev_army_plan
+				}
 
 			}
 			focus = {
@@ -1842,6 +1846,7 @@
 					}
 				available_if_capitulated = no
 				completion_reward = {
+					load_focus_tree = SRU_socialist_russia_phase_2
 					if = {
 						SRU = {
 							limit = {

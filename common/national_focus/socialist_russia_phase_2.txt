@@ -1,0 +1,1888 @@
+﻿focus_tree = {
+	id = SRU_socialist_russia_phase_2
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SRU
+		}
+	}
+
+	continuous_focus_position = { x = 20 y = 3500 }
+
+	focus = {
+		id = SRU_Victory_For_The_People
+		icon = GFX_SRU_Victory_For_The_People
+		cost = 1
+		x = 0
+		y = 1
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+        allow_branch = {has_country_flag = SRU_Sonya_In_Control}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Blood_Stained_Requiem
+		icon = GFX_SRU_Blood_Stained_Requiem
+		cost = 1
+		x = 0
+		y = 1
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+        allow_branch = {has_country_flag = SRU_Luka_In_Control}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Loot_Abandoned_Britannian_Equipment
+		icon = GFX_SRU_Loot_Abandoned_Britannian_Equipment
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_Blood_Stained_Requiem
+		prerequisite = {
+			focus = SRU_Blood_Stained_Requiem
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Raiding_Britannian_Research_Labs
+		icon = GFX_SRU_Raiding_Britannian_Research_Labs
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_Loot_Abandoned_Britannian_Equipment
+		prerequisite = {
+			focus = SRU_Loot_Abandoned_Britannian_Equipment
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Ashes_Of_The_East
+		icon = GFX_SRU_Ashes_Of_The_East
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_Blood_Stained_Requiem
+		prerequisite = {
+			focus = SRU_Blood_Stained_Requiem
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Resettle_The_East_With_True_Patriots
+		icon = GFX_SRU_Resettle_The_East_With_True_Patriots
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_Ashes_Of_The_East
+		prerequisite = {
+			focus = SRU_Ashes_Of_The_East
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_Reprogramme_Euro_Britannian_Scientists
+		icon = GFX_SRU_Reprogramme_Euro_Britannian_Scientists
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_Raiding_Britannian_Research_Labs
+		prerequisite = {
+			focus = SRU_Raiding_Britannian_Research_Labs
+		}
+		prerequisite = {
+			focus = SRU_Resettle_The_East_With_True_Patriots
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_The_Slaughter_Continues
+		icon = GFX_SRU_The_Slaughter_Continues
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_Reprogramme_Euro_Britannian_Scientists
+		prerequisite = {
+			focus = SRU_Reprogramme_Euro_Britannian_Scientists
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_siberian_rejuvination_project
+		icon = GFX_SRU_siberian_rejuvination_project
+		cost = 1
+		x = -14
+		y = 1
+		relative_position_id = SRU_The_Slaughter_Continues
+		prerequisite = {
+			focus = SRU_The_Slaughter_Continues
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_novosibirsk_research_complex
+		icon = GFX_SRU_novosibirsk_research_complex
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_siberian_rejuvination_project
+		prerequisite = {
+			focus = SRU_siberian_rejuvination_project
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_perfect_siberia
+		icon = GFX_SRU_perfect_siberia
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_novosibirsk_research_complex
+		mutually_exclusive = {
+			focus = SRU_redesign_the_far_east
+		}
+		prerequisite = {
+			focus = SRU_novosibirsk_research_complex
+		}
+		prerequisite = {
+			focus = SRU_siberian_rejuvination_project
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_redesign_the_far_east
+		icon = GFX_SRU_redesign_the_far_east
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_novosibirsk_research_complex
+		mutually_exclusive = {
+			focus = SRU_perfect_siberia
+		}
+		prerequisite = {
+			focus = SRU_novosibirsk_research_complex
+		}
+		prerequisite = {
+			focus = SRU_siberian_rejuvination_project
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_wipe_out_poverty
+		icon = GFX_SRU_wipe_out_poverty
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_perfect_siberia
+		prerequisite = {
+			focus = SRU_perfect_siberia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_start_construction_of_the_eurasian_railway
+		icon = GFX_SRU_start_construction_of_the_eurasian_railway
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_perfect_siberia
+		prerequisite = {
+			focus = SRU_perfect_siberia
+			focus = SRU_redesign_the_far_east
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_reconstruct_eastern_cities
+		icon = GFX_SRU_reconstruct_eastern_cities
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_redesign_the_far_east
+		prerequisite = {
+			focus = SRU_redesign_the_far_east
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_fortification_of_the_ural_frontier
+		icon = GFX_SRU_fortification_of_the_ural_frontier
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_wipe_out_poverty
+		prerequisite = {
+			focus = SRU_wipe_out_poverty
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_siberian_industrial_heartlands
+		icon = GFX_SRU_siberian_industrial_heartlands
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_fortification_of_the_ural_frontier
+		prerequisite = {
+			focus = SRU_fortification_of_the_ural_frontier
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_industrial_automation
+		icon = GFX_SRU_industrial_automation
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_wipe_out_poverty
+		prerequisite = {
+			focus = SRU_wipe_out_poverty
+		}
+		prerequisite = {
+			focus = SRU_start_construction_of_the_eurasian_railway
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_fully_utilize_siberian_resources
+		icon = GFX_SRU_fully_utilize_siberian_resources
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_start_construction_of_the_eurasian_railway
+		prerequisite = {
+			focus = SRU_reconstruct_eastern_cities
+		}
+		prerequisite = {
+			focus = SRU_start_construction_of_the_eurasian_railway
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expand_pacific_ports
+		icon = GFX_SRU_expand_pacific_ports
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_reconstruct_eastern_cities
+		prerequisite = {
+			focus = SRU_reconstruct_eastern_cities
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_industrial_northern_wastes
+		icon = GFX_SRU_industrial_northern_wastes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_expand_pacific_ports
+		prerequisite = {
+			focus = SRU_expand_pacific_ports
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_russian_national_rejuvination
+		icon = GFX_SRU_russian_national_rejuvination
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_industrial_automation
+		prerequisite = {
+			focus = SRU_industrial_automation
+			focus = SRU_fully_utilize_siberian_resources
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_forging_the_new_russia
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 5
+		y = 1
+		relative_position_id = SRU_russian_national_rejuvination
+		prerequisite = {
+			focus = SRU_russian_national_rejuvination
+		}
+		prerequisite = {
+			focus = SRU_state_visit_to_haishenwan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_make_contact_with_china
+		icon = GFX_SRU_make_contact_with_china
+		cost = 1
+		x = -4
+		y = 1
+		relative_position_id = SRU_The_Slaughter_Continues
+		prerequisite = {
+			focus = SRU_The_Slaughter_Continues
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_diplomatic_mission_to_china
+		icon = GFX_SRU_diplomatic_mission_to_china
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_make_contact_with_china
+		prerequisite = {
+			focus = SRU_make_contact_with_china
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_arrest_mongolian_seperatists
+		icon = GFX_SRU_arrest_mongolian_seperatists
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_diplomatic_mission_to_china
+		prerequisite = {
+			focus = SRU_diplomatic_mission_to_china
+		}
+		prerequisite = {
+			focus = SRU_meet_with_the_high_eunuchs
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_okhotsk_trade_route
+		icon = GFX_SRU_okhotsk_trade_route
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_diplomatic_mission_to_china
+		prerequisite = {
+			focus = SRU_diplomatic_mission_to_china
+		}
+		prerequisite = {
+			focus = SRU_meet_with_the_high_eunuchs
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_offer_harbour_to_revolutionary_exiles
+		icon = GFX_SRU_offer_harbour_to_revolutionary_exiles
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_arrest_mongolian_seperatists
+		prerequisite = {
+			focus = SRU_arrest_mongolian_seperatists
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_extradite_chinese_crimminals
+		icon = GFX_SRU_extradite_chinese_crimminals
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_arrest_mongolian_seperatists
+		prerequisite = {
+			focus = SRU_arrest_mongolian_seperatists
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_entice_chinese_companies
+		icon = GFX_SRU_entice_chinese_companies
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_okhotsk_trade_route
+		prerequisite = {
+			focus = SRU_okhotsk_trade_route
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_send_zaytsev_to_study_chinese_methods
+		icon = GFX_SRU_send_zaytsev_to_study_chinese_methods
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_okhotsk_trade_route
+		prerequisite = {
+			focus = SRU_okhotsk_trade_route
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_treaty_of_eternal_friendship
+		icon = GFX_SRU_treaty_of_eternal_friendship
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_extradite_chinese_crimminals
+		prerequisite = {
+			focus = SRU_extradite_chinese_crimminals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_joint_economic_development_with_china
+		icon = GFX_SRU_joint_economic_development_with_china
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_entice_chinese_companies
+		prerequisite = {
+			focus = SRU_entice_chinese_companies
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_an_envoy_from_china
+		icon = GFX_SRU_an_envoy_from_china
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_entice_chinese_companies
+		prerequisite = {
+			focus = SRU_entice_chinese_companies
+		}
+		prerequisite = {
+			focus = SRU_extradite_chinese_crimminals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_state_visit_to_haishenwan
+		icon = GFX_SRU_state_visit_to_haishenwan
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_an_envoy_from_china
+		prerequisite = {
+			focus = SRU_an_envoy_from_china
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expand_the_councils_emergency_powers
+		icon = GFX_SRU_expand_the_councils_emergency_powers
+		cost = 1
+		x = 5
+		y = 1
+		relative_position_id = SRU_The_Slaughter_Continues
+		prerequisite = {
+			focus = SRU_The_Slaughter_Continues
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_resolve_the_conflict
+		icon = GFX_SRU_resolve_the_conflict
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_expand_the_councils_emergency_powers
+		prerequisite = {
+			focus = SRU_expand_the_councils_emergency_powers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = SRU.72
+		}
+	}
+
+	focus = {
+		id = SRU_the_blood_soaked_chekist
+		icon = GFX_SRU_the_blood_soaked_chekist
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = SRU_resolve_the_conflict
+		mutually_exclusive = {
+			focus = SRU_the_red_princess
+		}
+		prerequisite = {
+			focus = SRU_resolve_the_conflict
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = SRU_sided_with_kulikova
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_curb_academic_expression
+		icon = GFX_SRU_curb_academic_expression
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_the_blood_soaked_chekist
+		prerequisite = {
+			focus = SRU_the_blood_soaked_chekist
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_supplant_the_militsiya
+		icon = GFX_SRU_supplant_the_militsiya
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_the_blood_soaked_chekist
+		prerequisite = {
+			focus = SRU_the_blood_soaked_chekist
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_vanguard_strengthens
+		icon = GFX_SRU_the_vanguard_strengthens
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_curb_academic_expression
+		prerequisite = {
+			focus = SRU_curb_academic_expression
+		}
+		prerequisite = {
+			focus = SRU_supplant_the_militsiya
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_red_princess
+		icon = GFX_SRU_the_red_princess
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = SRU_resolve_the_conflict
+		mutually_exclusive = {
+			focus = SRU_the_blood_soaked_chekist
+		}
+		prerequisite = {
+			focus = SRU_resolve_the_conflict
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = SRU_sided_with_sorokina
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_inspire_revolutionary_struggle
+		icon = GFX_SRU_inspire_revolutionary_struggle
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_the_red_princess
+		prerequisite = {
+			focus = SRU_the_red_princess
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_fight_bourgeois_culture
+		icon = GFX_SRU_fight_bourgeois_culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_the_red_princess
+		prerequisite = {
+			focus = SRU_the_red_princess
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_fervour_grows
+		icon = GFX_SRU_the_fervour_grows
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_inspire_revolutionary_struggle
+		prerequisite = {
+			focus = SRU_inspire_revolutionary_struggle
+		}
+		prerequisite = {
+			focus = SRU_fight_bourgeois_culture
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_unassuming_choice
+		icon = GFX_SRU_the_unassuming_choice
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SRU_resolve_the_conflict
+		prerequisite = {
+			focus = SRU_resolve_the_conflict
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = SRU_sided_with_zaytsev
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {has_country_flag = SRU_sided_with_zaytsev}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expand_gosplans_powers
+		icon = GFX_SRU_expand_gosplans_powers
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_the_unassuming_choice
+		prerequisite = {
+			focus = SRU_the_unassuming_choice
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_monopolise_sciences
+		icon = GFX_SRU_monopolise_sciences
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_the_unassuming_choice
+		prerequisite = {
+			focus = SRU_the_unassuming_choice
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_economists_grasp
+		icon = GFX_SRU_the_economists_grasp
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_expand_gosplans_powers
+		prerequisite = {
+			focus = SRU_expand_gosplans_powers
+		}
+		prerequisite = {
+			focus = SRU_monopolise_sciences
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_we_have_our_orders
+		icon = GFX_SRU_we_have_our_orders
+		cost = 1
+		x = 13
+		y = 1
+		relative_position_id = SRU_The_Slaughter_Continues
+		prerequisite = {
+			focus = SRU_The_Slaughter_Continues
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_raid_far_eastern_army_bases
+		icon = GFX_SRU_raid_far_eastern_army_bases
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_we_have_our_orders
+		prerequisite = {
+			focus = SRU_we_have_our_orders
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_raid_far_eastern_air_bases
+		icon = GFX_SRU_raid_far_eastern_air_bases
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_we_have_our_orders
+		prerequisite = {
+			focus = SRU_we_have_our_orders
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_develop_the_super_soldat
+		icon = GFX_SRU_develop_the_super_soldat
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_raid_far_eastern_army_bases
+		prerequisite = {
+			focus = SRU_raid_far_eastern_army_bases
+		}
+		prerequisite = {
+			focus = SRU_raid_far_eastern_air_bases
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_pillage_weapons_labs
+		icon = GFX_SRU_pillage_weapons_labs
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SRU_raid_far_eastern_army_bases
+		prerequisite = {
+			focus = SRU_raid_far_eastern_army_bases
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_study_far_eastern_shipyards
+		icon = GFX_SRU_study_far_eastern_shipyards
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SRU_raid_far_eastern_air_bases
+		prerequisite = {
+			focus = SRU_raid_far_eastern_air_bases
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_makarovs_army
+		icon = GFX_SRU_makarovs_army
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_pillage_weapons_labs
+		prerequisite = {
+			focus = SRU_develop_the_super_soldat
+		}
+		prerequisite = {
+			focus = SRU_pillage_weapons_labs
+		}
+		prerequisite = {
+			focus = SRU_study_far_eastern_shipyards
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		allow_branch = {has_country_flag = SRU_makarov_army_plan}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_march_of_the_one_million
+		icon = GFX_SRU_march_of_the_one_million
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_makarovs_army
+
+		prerequisite = {
+			focus = SRU_makarovs_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_red_wave
+		icon = GFX_SRU_red_wave
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_march_of_the_one_million
+
+		prerequisite = {
+			focus = SRU_march_of_the_one_million
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_implement_the_first_military_draft
+		icon = GFX_SRU_implement_the_first_military_draft
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_red_wave
+
+		prerequisite = {
+			focus = SRU_red_wave
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_death_reigns_from_above
+		icon = GFX_SRU_death_reigns_from_above
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_makarovs_army
+
+		prerequisite = {
+			focus = SRU_makarovs_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_integrate_the_red_star_group
+		icon = GFX_SRU_integrate_the_red_star_group
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_death_reigns_from_above
+
+		prerequisite = {
+			focus = SRU_death_reigns_from_above
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_blood_in_the_air
+		icon = GFX_SRU_blood_in_the_air
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_integrate_the_red_star_group
+
+		prerequisite = {
+			focus = SRU_integrate_the_red_star_group
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_trace_the_ghost_signal
+		icon = GFX_SRU_trace_the_ghost_signal
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_march_of_the_one_million
+
+		prerequisite = {
+			focus = SRU_march_of_the_one_million
+			focus = SRU_clean_up_command
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_pale_forest_incident
+		icon = GFX_SRU_the_pale_forest_incident
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_death_reigns_from_above
+
+		prerequisite = {
+			focus = SRU_death_reigns_from_above
+			focus = SRU_mechanization_doctrine
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_priority_message_from_crimson_mountain
+		icon = GFX_SRU_priority_message_from_crimson_mountain
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_trace_the_ghost_signal
+
+		prerequisite = {
+			focus = SRU_the_pale_forest_incident
+		}
+		prerequisite = {
+			focus = SRU_trace_the_ghost_signal
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_operation_red_wonderland
+		icon = GFX_SRU_operation_red_wonderland
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = SRU_implement_the_first_military_draft
+
+		prerequisite = {
+			focus = SRU_implement_the_first_military_draft
+		}
+		prerequisite = {
+			focus = SRU_priority_message_from_crimson_mountain
+		}
+		prerequisite = {
+			focus = SRU_blood_in_the_air
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_kovalevs_army
+		icon = GFX_SRU_kovalevs_army
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_pillage_weapons_labs
+		prerequisite = {
+			focus = SRU_develop_the_super_soldat
+		}
+		prerequisite = {
+			focus = SRU_pillage_weapons_labs
+		}
+		prerequisite = {
+			focus = SRU_study_far_eastern_shipyards
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		allow_branch = {has_country_flag = SRU_kovalev_army_plan}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_clean_up_command
+		icon = GFX_SRU_clean_up_command
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_kovalevs_army
+		prerequisite = {
+			focus = SRU_kovalevs_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_formal_training_structure
+		icon = GFX_SRU_formal_training_structure
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_clean_up_command
+		prerequisite = {
+			focus = SRU_clean_up_command
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_a_true_red_army
+		icon = GFX_SRU_a_true_red_army
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_formal_training_structure
+		prerequisite = {
+			focus = SRU_formal_training_structure
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_mechanization_doctrine
+		icon = GFX_SRU_mechanization_doctrine
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_kovalevs_army
+		prerequisite = {
+			focus = SRU_kovalevs_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_layered_battle_theory
+		icon = GFX_SRU_layered_battle_theory
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_mechanization_doctrine
+		prerequisite = {
+			focus = SRU_mechanization_doctrine
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_power_of_artillery
+		icon = GFX_SRU_the_power_of_artillery
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_layered_battle_theory
+		prerequisite = {
+			focus = SRU_layered_battle_theory
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_operation_red_thunder
+		icon = GFX_SRU_operation_red_thunder
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = SRU_a_true_red_army
+		prerequisite = {
+			focus = SRU_a_true_red_army
+		}
+		prerequisite = {
+			focus = SRU_priority_message_from_crimson_mountain
+		}
+		prerequisite = {
+			focus = SRU_the_power_of_artillery
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+}

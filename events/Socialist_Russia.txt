@@ -1607,3 +1607,40 @@ country_event = { #Zaytsev Economic Miracle
 		upgrade_economy_law = yes
 	}
 }
+
+country_event = { #resolve the conflict (feel free to change the number down the line since it is cut in early for framework)
+	id = SRU.72
+	title = SRU.72.t
+	desc = SRU.72.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.72.a 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = SRU_sided_with_kulikova
+		
+	}
+	option = {
+		 
+		name = SRU.72.b 
+		ai_chance = {
+			factor = 100
+		}
+        set_country_flag = SRU_sided_with_sorokina
+		
+	}
+	option = {
+		 
+		name = SRU.72.c 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = SRU_sided_with_zaytsev
+		
+	}
+}
