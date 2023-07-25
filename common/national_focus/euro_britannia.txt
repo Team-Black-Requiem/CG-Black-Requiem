@@ -19,6 +19,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -27,7 +28,7 @@
 	
 		completion_reward = {
 		country_event = EUR.1
-		add_ideas = EUR_test_1
+		add_political_power = 10
 		}
 	}
 	#Britannian`s illusions
@@ -45,6 +46,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -70,6 +72,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -78,6 +81,7 @@
 	
 		completion_reward = {
 		country_event = EUR.3
+		army_experience = 5
 		}
 	}
 	#Expedition to the North Pole
@@ -95,6 +99,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -103,6 +108,7 @@
 	
 		completion_reward = {
 		country_event = EUR.4
+		army_experience = 10
 		}
 	}
 	focus = {
@@ -119,6 +125,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -143,6 +150,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -170,6 +178,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -197,7 +206,8 @@
 		}
 		
 		available = {
-		has_country_flag = EUR_Britannians_proposal_flag
+		country_exists = EUR
+		has_country_flag = EUR_BRT_support
 		}
 		
 		ai_will_do = {
@@ -205,6 +215,7 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.9
 		
 		}
 	}
@@ -226,7 +237,7 @@
 		}
 		
 		available = {
-		has_country_flag = WIP
+		    country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -234,6 +245,8 @@
 		}
 	
 		completion_reward = {
+			custom_effect_tooltip = EUR_WIP
+			#country_event = EUR.8.t
 		}
 	}
 	focus = {
@@ -250,6 +263,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -258,24 +272,12 @@
 	
 		completion_reward = {
 			set_cosmetic_tag = EUR_EB
-		hidden_effect = {
-		recruit_character = EUR_Michele_Manfredi
-		recruit_character = EUR_Augusta_Henry
-		remove_country_leader_role = {
-		character = EUR_Mil_Coun
-		ideology = paternal_autocracy}
-
-		country_event = { days = 3 id = EUR.7}
-	}
-		add_country_leader_role = {
-		character = EUR_Augusta_Henry
-		promote_leader = yes
-		country_leader = {
-        ideology = paternal_autocracy
-        expire = "2020.1.1.1"
-        traits = { }
-		}
-	}
+			country_event = EUR.10
+			add_political_power = -50
+			swap_ideas = {
+               remove_idea = EUR_poor_logistics
+               add_idea = EUR_poor_logistics_2
+               }
 		}
 	}
 	focus = {
@@ -292,6 +294,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -299,6 +302,7 @@
 		}
 	
 		completion_reward = {
+			custom_effect_tooltip = britannia_support_EUR_increase_tt
 		add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 10000
@@ -338,6 +342,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -345,8 +350,13 @@
 		}
 	
 		completion_reward = {
-		}
-	}
+			custom_effect_tooltip = EUR_BRT_First_Aid_tt
+			hidden_effect = {
+				load_oob = EUR_Britannia_Aid_1
+				
+		    }
+	    }
+	}	
 	focus = {
 		id = EUR_An_End_To_Madness
 		icon = GFX_EUR_An_End_To_Madness
@@ -364,16 +374,18 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
 			factor = 10
 		}
 	
-		completion_reward = {declare_war_on = {
-			target = SRU
-			type = annex_everything
-		}
+		completion_reward = {
+			add_war_support = 0.07
+            add_command_power = 50
+			country_event = EUR.12
+
 	}
 	}
 ##################################CALL UPON THE OSI
@@ -391,6 +403,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -414,6 +427,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -437,6 +451,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -460,6 +475,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -486,6 +502,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -512,6 +529,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -538,6 +556,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -562,6 +581,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -585,6 +605,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -608,6 +629,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -634,6 +656,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -645,7 +668,7 @@
 	}
 #########################################################Schnizel Support
 	focus = {
-		id = EUR_Schnizel_Support
+		id = EUR_Schnizel_Support  ###IDEAS: Legitimate Cause (Muted), Army Without Commanders, Underdeveloped Economy, BRT Military Admn.
 		icon = GFX_EUR_Schnizel_Support
 		cost = 3
 		x = 26
@@ -658,6 +681,11 @@
 		}
 		
 		available = {
+			       custom_effect_tooltip = BRT_White_Prince_tt
+                   country_exists = EUR
+				   BRT = {
+					has_country_flag = BRT_White_Prince
+				   }
 		}
 		
 		ai_will_do = {
@@ -665,6 +693,7 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.13
 		}
 	}
 	focus = {
@@ -682,6 +711,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -689,7 +719,8 @@
 		}
 	
 		completion_reward = {
-			add_war_support = 0.1
+			add_war_support = 0.08
+			add_command_power = 50
 			set_country_flag = EUR_Schnizel_Harsh
 		}
 	}
@@ -708,6 +739,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -715,7 +747,8 @@
 		}
 	
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.08
+			add_political_power = 70
 			set_country_flag = EUR_Schnizel_Soft
 		}
 	}
@@ -734,6 +767,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -759,6 +793,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -784,6 +819,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -808,6 +844,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -838,6 +875,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -874,6 +912,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -904,6 +943,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -927,6 +967,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -957,6 +998,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -989,6 +1031,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1013,6 +1056,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1036,6 +1080,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1062,6 +1107,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1085,6 +1131,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1108,6 +1155,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1131,6 +1179,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1154,6 +1203,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1182,6 +1232,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1206,6 +1257,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1229,6 +1281,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1254,6 +1307,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1287,6 +1341,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1316,6 +1371,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1346,6 +1402,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1369,6 +1426,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1392,6 +1450,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1415,6 +1474,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1441,6 +1501,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1466,6 +1527,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1496,6 +1558,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1520,6 +1583,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1545,6 +1609,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1583,6 +1648,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1611,6 +1677,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1636,6 +1703,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1659,6 +1727,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1682,6 +1751,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1708,6 +1778,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1731,6 +1802,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1754,6 +1826,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1780,6 +1853,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1805,6 +1879,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1829,6 +1904,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1854,6 +1930,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1879,6 +1956,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1910,6 +1988,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1953,6 +2032,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -1990,6 +2070,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2038,6 +2119,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2063,6 +2145,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2086,6 +2169,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2121,6 +2205,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2146,6 +2231,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2209,6 +2295,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2255,6 +2342,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2280,6 +2368,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2303,6 +2392,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2326,6 +2416,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2359,6 +2450,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2392,6 +2484,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2416,6 +2509,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2441,6 +2535,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2465,6 +2560,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2495,6 +2591,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2524,6 +2621,7 @@
 		mutually_exclusive = { focus = EUR_Rely_On_Officers}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2548,6 +2646,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2572,6 +2671,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2604,6 +2704,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2638,6 +2739,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2664,6 +2766,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2692,6 +2795,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2728,6 +2832,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2755,6 +2860,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2788,6 +2894,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2816,6 +2923,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2846,6 +2954,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2870,6 +2979,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2893,6 +3003,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2917,6 +3028,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2941,6 +3053,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2967,6 +3080,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -2992,6 +3106,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3022,6 +3137,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3046,6 +3162,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3071,6 +3188,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3109,6 +3227,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3133,6 +3252,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3157,6 +3277,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3181,6 +3302,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3205,6 +3327,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3229,6 +3352,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3252,6 +3376,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3276,6 +3401,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3300,6 +3426,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3325,6 +3452,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3349,6 +3477,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3372,6 +3501,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3395,6 +3525,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3418,6 +3549,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3441,6 +3573,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3464,6 +3597,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3487,6 +3621,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3519,6 +3654,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3544,6 +3680,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3567,6 +3704,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3590,6 +3728,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3613,6 +3752,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3636,6 +3776,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3663,6 +3804,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3686,6 +3828,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3709,6 +3852,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3732,6 +3876,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3755,6 +3900,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3778,6 +3924,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3805,6 +3952,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3828,6 +3976,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3851,6 +4000,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3875,6 +4025,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3898,6 +4049,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3921,6 +4073,7 @@
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3945,6 +4098,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3968,6 +4122,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -3992,6 +4147,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4016,6 +4172,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4041,6 +4198,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4065,6 +4223,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4088,6 +4247,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4111,6 +4271,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4134,6 +4295,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4157,6 +4319,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4180,6 +4343,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4203,6 +4367,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4235,6 +4400,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4260,6 +4426,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
@@ -4287,6 +4454,7 @@ focus = {
 		}
 		
 		available = {
+                   country_exists = EUR
 		}
 		
 		ai_will_do = {
