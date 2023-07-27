@@ -326,6 +326,95 @@ characters = {
 		}
 	}
 
+	##HIGH COMMAND/RECRUITED LATER
+		EUR_Ivan_Solovev={
+		name= "Ivan Solovev"
+		
+		portraits={
+		army = {
+				small =  "GFX_idea_EUR_Ivan_Solovev"
+			    
+			}}
+
+
+			advisor = {
+			slot = army_chief
+			idea_token = EUR_Ivan_Solovev_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				army_chief_defensive_3
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		    }
+	}
+
+
+		EUR_Isai_Kiselev={
+		name= "Isai Kiselev"
+		
+		portraits={
+		army = {
+							small =  "GFX_idea_EUR_Isai_Kiselev"
+			    
+			}}
+	
+
+			advisor = {
+			slot = navy_chief
+			idea_token = EUR_Isai_Kiselev_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				navy_naval_air_defense_3
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+		EUR_Gogol_Bogdanov={
+		name= "Gogol Bogdanov"
+		
+		portraits={
+		army = {
+				small =  "GFX_idea_EUR_Gogol_Bogdanov"
+			    
+			}}
+	
+
+			advisor = {
+			slot = air_chief
+			idea_token = EUR_Gogol_Bogdanov_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				air_chief_night_operations_2
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 
 
 	### HIGH COMMAND
@@ -487,13 +576,13 @@ characters = {
 			    
 			}}
 	
-			field_marshal = {
-				traits={ armor_expert winter_expert}
-				skill=6
-				attack_skill=5
-				defense_skill=5
-				planning_skill=4
-				logistics_skill=4
+		corps_commander = {
+			traits = { organizer }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
 	EUR_Albert_Lancaster={
@@ -548,7 +637,7 @@ characters = {
 				defense_skill=6
 				planning_skill=4
 				logistics_skill=4
-		}
+		    }
 	}
 
 	EUR_Vadim_Antonov={

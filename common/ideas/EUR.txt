@@ -138,7 +138,45 @@ ideas = {
 				army_org_factor = -0.15
 				planning_speed = -0.30
 			}
+		}
+
+		EUR_national_militia_3 = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_factor = -0.10
+			}
+		}
+
+		EUR_shortage_of_trusted_officers = {
+		
+		 	allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+	           max_command_power = -100
+	           land_doctrine_cost_factor = 1
+			}
 		}	
+
 
 
 	
@@ -229,51 +267,7 @@ EUR_Economic_Stability_Secured = {
 }
 
 ## Army Ideas Phase 1
-EUR_test_1 = {
-	allowed = {
-		always = yes
-	}
 
-	allowed_civil_war = {
-		always = yes
-	}
-
-	
-}
-EUR_discontent_in_army = {
-		
-	allowed = {
-	   always = yes
-   }
-
-   allowed_civil_war = {
-	   always = yes
-   }
-
-   removal_cost = -1
-   
-   modifier = {
-	army_org_factor = -0.1
-	army_attack_factor = -0.05
-   }
-}
-EUR_shortage_of_trusted_officers = {
-		
-	allowed = {
-	   always = yes
-   }
-
-   allowed_civil_war = {
-	   always = yes
-   }
-
-   removal_cost = -1
-   
-   modifier = {
-	max_command_power = -100
-	land_doctrine_cost_factor = 1
-   }
-}
 EUR_shortage_of_trusted_officers2 = {
 		
 	allowed = {

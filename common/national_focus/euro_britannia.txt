@@ -1265,6 +1265,11 @@
 		}
 	
 		completion_reward = {
+			add_command_power = 50
+		    swap_ideas = {
+               remove_idea = EUR_national_militia_2
+               add_idea = EUR_national_militia_3
+           }
 		}
 	}
 	focus = {
@@ -2517,7 +2522,11 @@
 		}
 	
 		completion_reward = {
-			add_ideas = EUR_test_1
+		add_command_power = 50
+		swap_ideas = {
+               remove_idea = EUR_national_militia_2
+               add_idea = EUR_national_militia_3
+         }
 		}
 	}
 	## Don't know how and what officers to add
@@ -2543,6 +2552,40 @@
 		}
 	
 		completion_reward = {
+			recruit_character = EUR_Ivan_Solovev
+			recruit_character = EUR_Isai_Kiselev
+			recruit_character = EUR_Gogol_Bogdanov
+			add_country_leader_role = {
+		          character = EUR_Michele_Manfredi
+		          promote_leader = yes
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Michele_Manfredi_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				knightmare_proponent_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	       }
+			add_country_leader_role = {
+		          character = EUR_Michele_Manfredi
+		          promote_leader = yes
+			field_marshal = {
+				traits={ armor_expert winter_expert}
+				skill=4
+				attack_skill=5
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=3
+		    }
+	       }
 		}
 	}
 	focus = {
@@ -2573,8 +2616,11 @@
 				uses = 1
 				category = land_doctrine
 			}
-			remove_ideas = EUR_shortage_of_trusted_officers
 			set_country_flag = EUR_Schnizel_Young_Officers
+			recruit_character = EUR_Stefan_Kuzmin
+            recruit_character = EUR_Naum_Nikolaev
+			remove_idea = EUR_national_militia_3
+			custom_effect_tooltip = britannia_support_EUR_decrease_tt
 		}
 	}
 	focus = {
@@ -2599,6 +2645,8 @@
 		}
 	
 		completion_reward = {
+			add_command_power = 50
+			add_political_power = -20
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 2
