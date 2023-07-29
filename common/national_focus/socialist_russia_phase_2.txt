@@ -43,6 +43,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
         allow_branch = {has_country_flag = SRU_Luka_In_Control}
@@ -52,6 +53,33 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.73
+			add_stability = 0.15
+			add_war_support = 0.1
+			822 = {
+				add_manpower = -1000
+			}
+			637 = {
+				add_manpower = -2000
+			}
+			722 = {
+				add_manpower = -1000
+			}
+			917 = {
+				add_manpower = -7000
+			}
+			562 = {
+				add_manpower = -6000
+			}
+			863 = {
+				add_manpower = -10000
+			}
+			644 = {
+				add_manpower = -1000
+			}
+			574 = {
+				add_manpower = -5000
+			}
 		}
 	}
 
@@ -69,6 +97,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -76,6 +105,19 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.74
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
+				type = MBT_armour
+				amount = 750
+			}
+			add_equipment_to_stockpile = {
+				type = cat_modern_artillery
+				amount = 1500
+			}
 		}
 	}
 
@@ -90,6 +132,7 @@
 			focus = SRU_Loot_Abandoned_Britannian_Equipment
 		}
 		search_filters = {
+			country_exists = SRU
 		}
 		
 		available = {
@@ -100,6 +143,13 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.75
+			research_speed_factor = 0.02
+			add_tech_bonus = {
+				bonus = 1
+    			uses = 1
+    			category = sakuradite_research
+			}
 		}
 	}
 
@@ -114,6 +164,7 @@
 			focus = SRU_Blood_Stained_Requiem
 		}
 		search_filters = {
+			country_exists = SRU
 		}
 		
 		available = {
@@ -124,6 +175,63 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.76
+			add_timed_idea = {
+				idea = SRU_Ashes_Of_The_East
+				days = 120
+			}
+			822 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			722 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			863 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			917 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			644 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			574 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -141,6 +249,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -148,6 +257,31 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.77
+			822 = {
+				add_manpower = 10000
+			}
+			637 = {
+				add_manpower = 15000
+			}
+			722 = {
+				add_manpower = 4000
+			}
+			917 = {
+				add_manpower = 24000
+			}
+			562 = {
+				add_manpower = 20000
+			}
+			863 = {
+				add_manpower = 30000
+			}
+			644 = {
+				add_manpower = 5000
+			}
+			574 = {
+				add_manpower = 24000
+			}
 		}
 	}
 
@@ -168,6 +302,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -175,6 +310,8 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.78
+			research_speed_factor = 0.02
 		}
 	}
 
@@ -192,6 +329,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -199,13 +337,33 @@
 		}
 	
 		completion_reward = {
+			if = {
+				limit = {
+					country_exists = MRU
+				}
+				country_event = SRU.79
+				declare_war_on = {
+					target = MRU
+				}
+			}
+			else_if = {
+				limit = { 
+					country_exists = EIZ
+				}
+				country_event = SRU.80
+				declare_war_on = {
+					target = EIZ
+				}
+			}
+			army_attack_factor = 0.1
+			army_org = 5
 		}
 	}
 
 	focus = {
 		id = SRU_siberian_rejuvination_project
 		icon = GFX_SRU_siberian_rejuvination_project
-		cost = 1
+		cost = 2
 		x = -14
 		y = 1
 		relative_position_id = SRU_The_Slaughter_Continues
@@ -216,6 +374,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -223,13 +382,15 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.81
+			add_ideas = SRU_siberian_rejuvination_project
 		}
 	}
 
 	focus = {
 		id = SRU_novosibirsk_research_complex
 		icon = GFX_SRU_novosibirsk_research_complex
-		cost = 1
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SRU_siberian_rejuvination_project
@@ -240,6 +401,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -247,6 +409,9 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.82
+			add_research_slot = 1
+			research_speed_factor = 0.02
 		}
 	}
 
@@ -606,6 +771,16 @@
 		}
 	
 		completion_reward = {
+			add_political_power = 100
+			add_opinion_modifier = {
+				target = CHI
+				modifier = negotiations_with_china 
+			}
+			add_opinion_modifier = {
+				target = SRU
+				modifier = negotiations_with_socialist_russia
+			}
+			
 		}
 	}
 
@@ -1253,6 +1428,7 @@
 		}
 		
 		available = {
+			country_exists = SRU
 		}
 
 		ai_will_do = {
@@ -1260,6 +1436,9 @@
 		}
 	
 		completion_reward = {
+			army_attack_factor = 0.1
+			army_speed_factor = 0.15
+			army_defence_factor = 0.05
 		}
 	}
 
