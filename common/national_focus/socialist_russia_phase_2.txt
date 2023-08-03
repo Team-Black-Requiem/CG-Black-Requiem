@@ -205,10 +205,312 @@
 	}
 
 	focus = {
+		id = SRU_the_jacobin_cancer
+		icon = GFX_SRU_the_jacobin_cancer
+		cost = 1
+		x = -13
+		y = 1
+		relative_position_id = SRU_expand_war_measures
+		prerequisite = {
+			focus = SRU_expand_war_measures
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_all_the_power_we_need
+		icon = GFX_SRU_all_the_power_we_need
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_the_jacobin_cancer
+		prerequisite = {
+			focus = SRU_the_jacobin_cancer
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_denounce_jacobin_ideology
+		icon = GFX_SRU_denounce_jacobin_ideology
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_all_the_power_we_need
+		prerequisite = {
+			focus = SRU_all_the_power_we_need
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_drawing_up_the_lists
+		icon = GFX_SRU_drawing_up_the_lists
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_denounce_jacobin_ideology
+		prerequisite = {
+			focus = SRU_denounce_jacobin_ideology
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_unleash_the_cheka
+		icon = GFX_SRU_unleash_the_cheka
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_drawing_up_the_lists
+		prerequisite = {
+			focus = SRU_drawing_up_the_lists
+		}
+		prerequisite = {
+			focus = SRU_the_most_dangerous_game
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_work_with_the_congress
+		icon = GFX_SRU_work_with_the_congress
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_the_jacobin_cancer
+		prerequisite = {
+			focus = SRU_the_jacobin_cancer
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_yakolevs_cooperation
+		icon = GFX_SRU_yakolevs_cooperation
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_work_with_the_congress
+		prerequisite = {
+			focus = SRU_work_with_the_congress
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_militsiya_led_investigations
+		icon = GFX_SRU_militsiya_led_investigations
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_yakolevs_cooperation
+		prerequisite = {
+			focus = SRU_yakolevs_cooperation
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_vote_them_out_of_congress
+		icon = GFX_SRU_vote_them_out_of_congress
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_militsiya_led_investigations
+		prerequisite = {
+			focus = SRU_militsiya_led_investigations
+		}
+		prerequisite = {
+			focus = SRU_the_most_dangerous_game
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_breaking_their_circle
+		icon = GFX_SRU_breaking_their_circle
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SRU_the_jacobin_cancer
+		prerequisite = {
+			focus = SRU_the_jacobin_cancer
+		}
+		prerequisite = {
+			focus = SRU_all_the_power_we_need
+			focus = SRU_work_with_the_congress
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_most_dangerous_game
+		icon = GFX_SRU_the_most_dangerous_game
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_breaking_their_circle
+		prerequisite = {
+			focus = SRU_breaking_their_circle
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_a_cornered_monster
+		icon = GFX_SRU_a_cornered_monster
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SRU_the_most_dangerous_game
+		prerequisite = {
+			focus = SRU_the_most_dangerous_game
+		}
+		prerequisite = {
+			focus = SRU_unleash_the_cheka
+			focus = SRU_vote_them_out_of_congress
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = SRU_the_yamantau_campaign
 		icon = GFX_SRU_the_yamantau_campaign
 		cost = 1
-		x = 11
+		x = 0
 		y = 1
 		relative_position_id = SRU_expand_war_measures
 		prerequisite = {
@@ -914,7 +1216,7 @@
 		id = SRU_siberian_development_project
 		icon = GFX_SRU_siberian_development_project
 		cost = 1
-		x = 24
+		x = 14
 		y = 1
 		relative_position_id = SRU_expand_war_measures
 		prerequisite = {
