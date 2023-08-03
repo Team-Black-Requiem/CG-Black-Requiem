@@ -1846,7 +1846,6 @@
 					}
 				available_if_capitulated = no
 				completion_reward = {
-					load_focus_tree = SRU_socialist_russia_phase_2
 					if = {
 						SRU = {
 							limit = {
@@ -5673,4 +5672,28 @@
 				completion_reward = {}
 
 			}
+            #Dev focus, 
+			focus = {
+				id = SRU_trigger_phase_two_dev
+				icon = SRU_trigger_phase_two_dev
+				cost = 1
+				x = 0
+				y = 4
+				relative_position_id = SRU_crimson_moon
+	
+				available = {
+							   country_exists = SRU
+				}
+		
+				prerequisite = { focus = SRU_crimson_moon }
+				ai_will_do = {
+						factor = 100
+					}
+	
+				
+				available_if_capitulated = no
+				completion_reward = {
+					load_focus_tree = SRU_socialist_russia_phase_2
+				}
+		}
 }
