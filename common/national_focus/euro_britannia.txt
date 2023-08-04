@@ -4515,6 +4515,33 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = EUR_guinevere_east_secured_dev
+		icon = GFX_EUR_guinevere_east_secured_dev
+		cost = 3
+		x = 0
+		y = 11
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+			#set_country_flag = Russia_EIZ_Victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_focus_tree = EUR_guinevere_phase_2
+		}
+	}
+
 	
 	
 }
