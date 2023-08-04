@@ -294,6 +294,39 @@ focus_tree = {
     } 
 
     focus = {
+        id = EIZ_load_eiz_phase_two_dev
+        icon = GFX_EIZ_load_eiz_phase_two_dev
+        x = 0
+        y = 12
+        prerequisite = { 
+            focus = EIZ_Final_Selection
+        }
+        relative_position_id = EIZ_Setting_Up_Headquarters
+
+        cost = 1
+
+        ai_will_do = {
+			factor = 100
+		}
+
+        available = {		
+            country_exists = RUS has_cosmetic_tag = EIZ
+    
+            }
+    
+            bypass = {
+            }
+    
+            cancel_if_invalid = yes
+            continue_if_invalid = no
+            available_if_capitulated = no
+
+            completion_reward = {
+                load_focus_tree = EIZ_Phase_2
+        }
+    } 
+
+    focus = {
         id = EIZ_LyonVictory
         icon = GFX_EIZ_LyonVictory
         x = 16

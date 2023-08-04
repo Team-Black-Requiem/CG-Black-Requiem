@@ -3600,7 +3600,7 @@ focus = {
 focus = {
     id = EIZ_Living_on_a_Prayer
     icon = GFX_EIZ_European_Invasion
-    x = 60
+    x = 85
     y = 0
 
     cost = 1
@@ -4410,6 +4410,2199 @@ focus = {
           }
     }
 }
+
+focus = {
+    id = EIZ_deranged_enterprises
+    icon = GFX_EIZ_deranged_enterprises
+    cost = 1
+    x = -24
+    y = 1
+    relative_position_id = EIZ_Living_on_a_Prayer
+    prerequisite = {
+        focus = EIZ_Living_on_a_Prayer
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_contacting_the_banking_barons
+    icon = GFX_EIZ_contacting_the_banking_barons
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_deranged_enterprises
+    prerequisite = {
+        focus = EIZ_deranged_enterprises
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_taking_no_account
+    icon = GFX_EIZ_taking_no_account
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_deranged_enterprises
+    prerequisite = {
+        focus = EIZ_deranged_enterprises
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_collateral_hapsburg_properties
+    icon = GFX_EIZ_collateral_hapsburg_properties
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_contacting_the_banking_barons
+    prerequisite = {
+        focus = EIZ_contacting_the_banking_barons
+    }
+    prerequisite = {
+        focus = EIZ_taking_no_account
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_sending_construction_teams_north
+    icon = GFX_EIZ_sending_construction_teams_north
+    cost = 1
+    x = -8
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_northern_urbanization
+    icon = GFX_EIZ_northern_urbanization
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_sending_construction_teams_north
+    prerequisite = {
+        focus = EIZ_sending_construction_teams_north
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_front_cities_restoration
+    icon = GFX_EIZ_front_cities_restoration
+    cost = 1
+    x = -6
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_public_relief_project
+    icon = GFX_EIZ_public_relief_project
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_front_cities_restoration
+    prerequisite = {
+        focus = EIZ_front_cities_restoration
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_establish_the_bureau_of_commerce
+    icon = GFX_EIZ_establish_the_bureau_of_commerce
+    cost = 1
+    x = -4
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_new_breed_of_ceos
+    icon = GFX_EIZ_new_breed_of_ceos
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_establish_the_bureau_of_commerce
+    prerequisite = {
+        focus = EIZ_establish_the_bureau_of_commerce
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_protecting_our_eastern_brothers
+    icon = GFX_EIZ_protecting_our_eastern_brothers
+    cost = 1
+    x = 4
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_urban_civil_bunkers
+    icon = GFX_EIZ_urban_civil_bunkers
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_protecting_our_eastern_brothers
+    prerequisite = {
+        focus = EIZ_protecting_our_eastern_brothers
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_opening_palaces_to_the_public
+    icon = GFX_EIZ_opening_palaces_to_the_public
+    cost = 1
+    x = 6
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_russian_heritage_foundation
+    icon = GFX_EIZ_russian_heritage_foundation
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_opening_palaces_to_the_public
+    prerequisite = {
+        focus = EIZ_opening_palaces_to_the_public
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_bureau_of_agriculture
+    icon = GFX_EIZ_bureau_of_agriculture
+    cost = 1
+    x = 8
+    y = 1
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_financial_aid_towards_rural_recovery
+    icon = GFX_EIZ_financial_aid_towards_rural_recovery
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_bureau_of_agriculture
+    prerequisite = {
+        focus = EIZ_bureau_of_agriculture
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_promise_them_everything
+    icon = GFX_EIZ_promise_them_everything
+    cost = 1
+    x = -1
+    y = 3
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_promise_them_everything
+    icon = GFX_EIZ_promise_them_everything
+    cost = 1
+    x = -1
+    y = 3
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_ensure_our_powers
+    icon = GFX_EIZ_ensure_our_powers
+    cost = 1
+    x = 1
+    y = 3
+    relative_position_id = EIZ_collateral_hapsburg_properties
+    prerequisite = {
+        focus = EIZ_collateral_hapsburg_properties
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_pull_the_rug_out
+    icon = GFX_EIZ_pull_the_rug_out
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_promise_them_everything
+    prerequisite = {
+        focus = EIZ_promise_them_everything
+    }
+    prerequisite = {
+        focus = EIZ_ensure_our_powers
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_free_primary_and_secondary_schooling
+    icon = GFX_EIZ_free_primary_and_secondary_schooling
+    cost = 1
+    x = -8
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_free_tuition_for_service
+    icon = GFX_EIZ_free_tuition_for_service
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_free_primary_and_secondary_schooling
+    prerequisite = {
+        focus = EIZ_free_primary_and_secondary_schooling
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_patching_the_brain_drain
+    icon = GFX_EIZ_patching_the_brain_drain
+    cost = 1
+    x = -6
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_university_of_civil_service
+    icon = GFX_EIZ_university_of_civil_service
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_patching_the_brain_drain
+    prerequisite = {
+        focus = EIZ_patching_the_brain_drain
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_cadet_schools
+    icon = GFX_EIZ_cadet_schools
+    cost = 1
+    x = -4
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_officers_academies
+    icon = GFX_EIZ_officers_academies
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_cadet_schools
+    prerequisite = {
+        focus = EIZ_cadet_schools
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_electronics_manufacturing
+    icon = GFX_EIZ_electronics_manufacturing
+    cost = 1
+    x = 4
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_high_quality_electronics
+    icon = GFX_EIZ_high_quality_electronics
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_electronics_manufacturing
+    prerequisite = {
+        focus = EIZ_electronics_manufacturing
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_chemical_plants
+    icon = GFX_EIZ_chemical_plants
+    cost = 1
+    x = 6
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_complex_munitions_production
+    icon = GFX_EIZ_complex_munitions_production
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_chemical_plants
+    prerequisite = {
+        focus = EIZ_chemical_plants
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_allow_small_arms_production
+    icon = GFX_EIZ_allow_small_arms_production
+    cost = 1
+    x = 8
+    y = 1
+    relative_position_id = EIZ_pull_the_rug_out
+    prerequisite = {
+        focus = EIZ_pull_the_rug_out
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_ballistic_plate_production
+    icon = GFX_EIZ_ballistic_plate_production
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_allow_small_arms_production
+    prerequisite = {
+        focus = EIZ_allow_small_arms_production
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_steady_mania
+    icon = GFX_EIZ_steady_mania
+    cost = 1
+    x = 24
+    y = 1
+    relative_position_id = EIZ_Living_on_a_Prayer
+    prerequisite = {
+        focus = EIZ_Living_on_a_Prayer
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_official_support
+    icon = GFX_EIZ_official_support
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_steady_mania
+    prerequisite = {
+        focus = EIZ_steady_mania
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_hidden_benifactors
+    icon = GFX_EIZ_hidden_benifactors
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_steady_mania
+    prerequisite = {
+        focus = EIZ_steady_mania
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_greasing_palms
+    icon = GFX_EIZ_greasing_palms
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_official_support
+    prerequisite = {
+        focus = EIZ_official_support
+    }
+    prerequisite = {
+        focus = EIZ_hidden_benifactors
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_lease_old_aircraft
+    icon = GFX_EIZ_lease_old_aircraft
+    cost = 1
+    x = -8
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_backdoor_aerospace_contracts
+    icon = GFX_EIZ_backdoor_aerospace_contracts
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_lease_old_aircraft
+    prerequisite = {
+        focus = EIZ_lease_old_aircraft
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_volunteer_units
+    icon = GFX_EIZ_volunteer_units
+    cost = 1
+    x = -6
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_slip_in_the_professionals
+    icon = GFX_EIZ_slip_in_the_professionals
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_volunteer_units
+    prerequisite = {
+        focus = EIZ_volunteer_units
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_guns_of_europe
+    icon = GFX_EIZ_guns_of_europe
+    cost = 1
+    x = -4
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_informal_defense_contracts
+    icon = GFX_EIZ_informal_defense_contracts
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_guns_of_europe
+    prerequisite = {
+        focus = EIZ_guns_of_europe
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_humanitarian_aid
+    icon = GFX_EIZ_humanitarian_aid
+    cost = 1
+    x = 4
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_formalised_ngo_system
+    icon = GFX_EIZ_formalised_ngo_system
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_humanitarian_aid
+    prerequisite = {
+        focus = EIZ_humanitarian_aid
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_rebuilding_funds
+    icon = GFX_EIZ_rebuilding_funds
+    cost = 1
+    x = 6
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_development_loans
+    icon = GFX_EIZ_development_loans
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_rebuilding_funds
+    prerequisite = {
+        focus = EIZ_rebuilding_funds
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_schooling_aid
+    icon = GFX_EIZ_schooling_aid
+    cost = 1
+    x = 8
+    y = 1
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_peacefull_technology_support
+    icon = GFX_EIZ_peacefull_technology_support
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_schooling_aid
+    prerequisite = {
+        focus = EIZ_schooling_aid
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_out_of_capital
+    icon = GFX_EIZ_out_of_capital
+    cost = 1
+    x = 0
+    y = 4
+    relative_position_id = EIZ_greasing_palms
+    prerequisite = {
+        focus = EIZ_greasing_palms
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_direct_appeals
+    icon = GFX_EIZ_direct_appeals
+    cost = 1
+    x = -2
+    y = 1
+    relative_position_id = EIZ_out_of_capital
+    mutually_exclusive = {
+        focus = EIZ_a_late_night_phonecall
+    }
+    prerequisite = {
+        focus = EIZ_out_of_capital
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_balling_in_bucharest
+    icon = GFX_EIZ_balling_in_bucharest
+    cost = 1
+    x = -2
+    y = 1
+    relative_position_id = EIZ_direct_appeals
+    prerequisite = {
+        focus = EIZ_direct_appeals
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_speeches_in_sofia
+    icon = GFX_EIZ_speeches_in_sofia
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_direct_appeals
+    prerequisite = {
+        focus = EIZ_direct_appeals
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_vienna_talks
+    icon = GFX_EIZ_vienna_talks
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_balling_in_bucharest
+    prerequisite = {
+        focus = EIZ_balling_in_bucharest
+    }
+    prerequisite = {
+        focus = EIZ_speeches_in_sofia
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_roman_holiday
+    icon = GFX_EIZ_roman_holiday
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_vienna_talks
+    prerequisite = {
+        focus = EIZ_vienna_talks
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_amsterdam_deals
+    icon = GFX_EIZ_amsterdam_deals
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_vienna_talks
+    prerequisite = {
+        focus = EIZ_vienna_talks
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_parisian_connections
+    icon = GFX_EIZ_parisian_connections
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_roman_holiday
+    prerequisite = {
+        focus = EIZ_roman_holiday
+    }
+    prerequisite = {
+        focus = EIZ_amsterdam_deals
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_crowds_in_riga
+    icon = GFX_EIZ_crowds_in_riga
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_parisian_connections
+    prerequisite = {
+        focus = EIZ_parisian_connections
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_coffee_in_copenhagen
+    icon = GFX_EIZ_coffee_in_copenhagen
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_parisian_connections
+    prerequisite = {
+        focus = EIZ_parisian_connections
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_touchdown_in_berlin
+    icon = GFX_EIZ_touchdown_in_berlin
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_crowds_in_riga
+    prerequisite = {
+        focus = EIZ_crowds_in_riga
+    }
+    prerequisite = {
+        focus = EIZ_coffee_in_copenhagen
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_thank_you_for_comming_to_my_talks
+    icon = GFX_EIZ_thank_you_for_comming_to_my_talks
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_touchdown_in_berlin
+    prerequisite = {
+        focus = EIZ_touchdown_in_berlin
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_a_late_night_phonecall
+    icon = GFX_EIZ_a_late_night_phonecall
+    cost = 1
+    x = 2
+    y = 1
+    relative_position_id = EIZ_out_of_capital
+    mutually_exclusive = {
+        focus = EIZ_direct_appeals
+    }
+    prerequisite = {
+        focus = EIZ_out_of_capital
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_gold_from_the_past
+    icon = GFX_EIZ_gold_from_the_past
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_a_late_night_phonecall
+    prerequisite = {
+        focus = EIZ_a_late_night_phonecall
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_connections_from_the_present
+    icon = GFX_EIZ_connections_from_the_present
+    cost = 1
+    x = 2
+    y = 1
+    relative_position_id = EIZ_a_late_night_phonecall
+    prerequisite = {
+        focus = EIZ_a_late_night_phonecall
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_to_build_up_the_future
+    icon = GFX_EIZ_to_build_up_the_future
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_gold_from_the_past
+    prerequisite = {
+        focus = EIZ_gold_from_the_past
+    }
+    prerequisite = {
+        focus = EIZ_connections_from_the_present
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_old_money_talks
+    icon = GFX_EIZ_old_money_talks
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_to_build_up_the_future
+    prerequisite = {
+        focus = EIZ_to_build_up_the_future
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_a_council_of_wise_men
+    icon = GFX_EIZ_a_council_of_wise_men
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_to_build_up_the_future
+    prerequisite = {
+        focus = EIZ_to_build_up_the_future
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_the_recognition_we_deserve
+    icon = GFX_EIZ_the_recognition_we_deserve
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_old_money_talks
+    prerequisite = {
+        focus = EIZ_old_money_talks
+    }
+    prerequisite = {
+        focus = EIZ_a_council_of_wise_men
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_the_grey_trenchcoats
+    icon = GFX_EIZ_the_grey_trenchcoats
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_the_recognition_we_deserve
+    prerequisite = {
+        focus = EIZ_the_recognition_we_deserve
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_ask_no_questions_and_be_told_no_lies
+    icon = GFX_EIZ_ask_no_questions_and_be_told_no_lies
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_the_recognition_we_deserve
+    prerequisite = {
+        focus = EIZ_the_recognition_we_deserve
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_the_hapsburg_network
+    icon = GFX_EIZ_the_hapsburg_network
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_the_grey_trenchcoats
+    prerequisite = {
+        focus = EIZ_the_grey_trenchcoats
+    }
+    prerequisite = {
+        focus = EIZ_ask_no_questions_and_be_told_no_lies
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_a_shadow_government
+    icon = GFX_EIZ_a_shadow_government
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_the_hapsburg_network
+    prerequisite = {
+        focus = EIZ_the_hapsburg_network
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_a_peoples_russia
+    icon = GFX_EIZ_a_peoples_russia
+    cost = 1
+    x = 4
+    y = 1
+    relative_position_id = EIZ_They_will_not_take_one_step_more
+    prerequisite = {
+        focus = EIZ_They_will_not_take_one_step_more
+    }
+    prerequisite = {
+        focus = EIZ_Taking_Stock
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_praise_of_the_people
+    icon = GFX_EIZ_a_peoples_russia
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_a_peoples_russia
+    prerequisite = {
+        focus = EIZ_a_peoples_russia
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_letting_go_of_the_reigns
+    icon = GFX_EIZ_letting_go_of_the_reigns
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_praise_of_the_people
+    prerequisite = {
+        focus = EIZ_praise_of_the_people
+    }
+    prerequisite = {
+        focus = EIZ_a_peoples_russia
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_trust_goes_both_ways
+    icon = GFX_EIZ_trust_goes_both_ways
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_praise_of_the_people
+    prerequisite = {
+        focus = EIZ_praise_of_the_people
+    }
+    prerequisite = {
+        focus = EIZ_a_peoples_russia
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_cutting_out_the_middle_man
+    icon = GFX_EIZ_cutting_out_the_middle_man
+    cost = 1
+    x = -1
+    y = 1
+    relative_position_id = EIZ_letting_go_of_the_reigns
+    prerequisite = {
+        focus = EIZ_letting_go_of_the_reigns
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_replace_eiz_regional_governors
+    icon = GFX_EIZ_cutting_out_the_middle_man
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_cutting_out_the_middle_man
+    prerequisite = {
+        focus = EIZ_cutting_out_the_middle_man
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_elect_local_officials
+    icon = GFX_EIZ_elect_local_officials
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_replace_eiz_regional_governors
+    prerequisite = {
+        focus = EIZ_replace_eiz_regional_governors
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_elect_local_officials
+    icon = GFX_EIZ_elect_local_officials
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_replace_eiz_regional_governors
+    prerequisite = {
+        focus = EIZ_replace_eiz_regional_governors
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_appoint_a_russian_cabinet
+    icon = GFX_EIZ_appoint_a_russian_cabinet
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_elect_local_officials
+    prerequisite = {
+        focus = EIZ_elect_local_officials
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_combing_the_east
+    icon = GFX_EIZ_combing_the_east
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_letting_go_of_the_reigns
+    prerequisite = {
+        focus = EIZ_letting_go_of_the_reigns
+    }
+    prerequisite = {
+        focus = EIZ_trust_goes_both_ways
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_combing_the_east
+    icon = GFX_EIZ_combing_the_east
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_letting_go_of_the_reigns
+    prerequisite = {
+        focus = EIZ_letting_go_of_the_reigns
+    }
+    prerequisite = {
+        focus = EIZ_trust_goes_both_ways
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_right_under_their_noses
+    icon = GFX_EIZ_right_under_their_noses
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_combing_the_east
+    prerequisite = {
+        focus = EIZ_combing_the_east
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_king_of_the_mountain
+    icon = GFX_EIZ_king_of_the_mountain
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_right_under_their_noses
+    prerequisite = {
+        focus = EIZ_right_under_their_noses
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_recognition_of_service
+    icon = GFX_EIZ_recognition_of_service
+    cost = 1
+    x = 1
+    y = 1
+    relative_position_id = EIZ_trust_goes_both_ways
+    prerequisite = {
+        focus = EIZ_trust_goes_both_ways
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_russians_in_officer_training
+    icon = GFX_EIZ_russians_in_officer_training
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_recognition_of_service
+    prerequisite = {
+        focus = EIZ_recognition_of_service
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_open_the_way_to_high_command
+    icon = GFX_EIZ_open_the_way_to_high_command
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_russians_in_officer_training
+    prerequisite = {
+        focus = EIZ_russians_in_officer_training
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_merit_before_politics
+    icon = GFX_EIZ_merit_before_politics
+    cost = 1
+    x = 0
+    y = 1
+    relative_position_id = EIZ_open_the_way_to_high_command
+    prerequisite = {
+        focus = EIZ_open_the_way_to_high_command
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+focus = {
+    id = EIZ_rakso
+    icon = GFX_EIZ_rakso
+    cost = 1
+    x = 2
+    y = 1
+    relative_position_id = EIZ_appoint_a_russian_cabinet
+    prerequisite = {
+        focus = EIZ_appoint_a_russian_cabinet
+    }
+    prerequisite = {
+        focus = EIZ_king_of_the_mountain
+    }
+    prerequisite = {
+        focus = EIZ_merit_before_politics
+    }
+    search_filters = {
+    }
+    
+    available = {
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+
+    completion_reward = {
+    }
+}
+
+
+
 	#####OSCAR####
 
 
