@@ -2555,6 +2555,7 @@
 			recruit_character = EUR_Ivan_Solovev
 			recruit_character = EUR_Isai_Kiselev
 			recruit_character = EUR_Gogol_Bogdanov
+			custom_effect_tooltip = EUR_Manfredi_promotion_tt
 			add_country_leader_role = {
 		          character = EUR_Michele_Manfredi
 		          promote_leader = yes
@@ -2678,6 +2679,7 @@
 	
 		completion_reward = {
 			add_ideas = EUR_Siberian_Man
+			add_manpower = 50000
 		}
 	}
 	focus = {
@@ -2727,15 +2729,12 @@
 		}
 	
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = EUR_Siberian_Man
-				}
+			add_war_support = 0.10
 				swap_ideas = {
 					remove_idea = EUR_Siberian_Man
 					add_idea = EUR_Siberian_Man2
 				}
-			}
+			
 		}
 	}
 	focus = {
@@ -2760,15 +2759,12 @@
 		}
 	
 			completion_reward = {
-				if = {
-					limit = {
-						has_idea = EUR_Siberian_Mind
-					}
+				add_command_power = 50
 					swap_ideas = {
 						remove_idea = EUR_Siberian_Mind
 						add_idea = EUR_Siberian_Mind2
 					}
-				}
+				
 			}
 		
 	}
