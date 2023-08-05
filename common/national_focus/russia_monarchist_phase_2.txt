@@ -3442,7 +3442,7 @@ focus = {
 
 }
 focus = {
-	id = MRU_The_Azalean_Wedding
+	id = MRU_the_zinnan_wedding
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Prepare_For_The_Wedding_EU
 	prerequisite = {
@@ -3467,11 +3467,11 @@ focus = {
 
 }
 focus = {
-	id = MRU_Onto_Business
+	id = MRU_reopening_relations_with_the_eu
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_The_Azalean_Wedding
+	relative_position_id =MRU_the_zinnan_wedding
 	prerequisite = {
-		focus = MRU_The_Azalean_Wedding
+		focus = MRU_the_zinnan_wedding
 	}
 	cost = 3
 	x = 0
@@ -3491,11 +3491,86 @@ focus = {
 
 }
 focus = {
-	id = MRU_Russias_Crossroads
+	id = MRU_returning_eu_prisoners
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_Onto_Business
+	relative_position_id =MRU_reopening_relations_with_the_eu
 	prerequisite = {
-		focus = MRU_Onto_Business
+		focus = MRU_reopening_relations_with_the_eu
+	}
+	cost = 3
+	x = -1
+	y = 1
+	available = {
+		country_exists = MRU
+	}
+	bypass = { }
+	
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+		
+	}
+
+}
+focus = {
+	id = MRU_promising_democratic_reform
+	icon = GFX_MRU_the_FIRST_test
+	relative_position_id =MRU_reopening_relations_with_the_eu
+	prerequisite = {
+		focus = MRU_reopening_relations_with_the_eu
+	}
+	cost = 3
+	x = 1
+	y = 1
+	available = {
+		country_exists = MRU
+	}
+	bypass = { }
+	
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+		
+	}
+
+}
+focus = {
+	id = MRU_allowing_political_parties
+	icon = GFX_MRU_allowing_political_parties
+	relative_position_id = MRU_returning_eu_prisoners
+	prerequisite = {
+		focus = MRU_returning_eu_prisoners
+	}
+	prerequisite = {
+		focus = MRU_promising_democratic_reform
+	}
+	cost = 3
+	x = 1
+	y = 1
+	available = {
+		country_exists = MRU
+	}
+	bypass = { }
+	
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+		
+	}
+
+}
+focus = {
+	id = MRU_two_speeches
+	icon = GFX_MRU_two_speeches
+	relative_position_id = MRU_allowing_political_parties
+	prerequisite = {
+		focus = MRU_allowing_political_parties
 	}
 	cost = 3
 	x = 0
@@ -3515,35 +3590,11 @@ focus = {
 
 }
 focus = {
-	id = MRU_The_Oprichniki_Splits
+	id = MRU_a_house_divided
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_Russias_Crossroads
+	relative_position_id = MRU_two_speeches
 	prerequisite = {
-		focus = MRU_Russias_Crossroads
-	}
-	cost = 3
-	x = 0
-	y = 1
-	available = {
-		country_exists = MRU
-	}
-	bypass = { }
-	
-	ai_will_do = {
-		factor = 10
-	}
-
-	completion_reward = {
-		
-	}
-
-}
-focus = {
-	id = MRU_The_Oprichniki_Splits
-	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_Russias_Crossroads
-	prerequisite = {
-		focus = MRU_Russias_Crossroads
+		focus = MRU_two_speeches
 	}
 	cost = 3
 	x = 0
@@ -3568,9 +3619,9 @@ focus = {
 focus = {
 	id = MRU_Our_Instiutions
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_The_Oprichniki_Splits
+	relative_position_id =MRU_a_house_divided
 	prerequisite = {
-		focus = MRU_The_Oprichniki_Splits
+		focus = MRU_a_house_divided
 	}
 	cost = 3
 	x = -8
@@ -3617,6 +3668,9 @@ focus = {
 	id = MRU_Open_Up_To_EU_Investments
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Russias_Many_Peoples
+	mutually_exclusive = {
+		focus = MRU_Maintain_Protectionist_Barriers
+	}
 	prerequisite = {
 		focus = MRU_Russias_Many_Peoples
 	}
@@ -3665,6 +3719,9 @@ focus = {
 	id = MRU_Subsidise_Small_Business
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Encourage_Economic_Competition
+	mutually_exclusive = {
+		focus = MRU_National_Corporations
+	}
 	prerequisite = {
 		focus = MRU_Encourage_Economic_Competition
 	}
@@ -3713,6 +3770,9 @@ focus = {
 	id = MRU_Reform_The_Education_System
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Enterprise_Of_The_Future
+	mutually_exclusive = {
+		focus = MRU_Found_Imperial_Universities
+	}
 	prerequisite = {
 		focus = MRU_Enterprise_Of_The_Future
 	}
@@ -3762,6 +3822,9 @@ focus = {
 	id = MRU_Maintain_Protectionist_Barriers
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Russias_Many_Peoples
+	mutually_exclusive = {
+		focus = MRU_Open_Up_To_EU_Investments
+	}
 	prerequisite = {
 		focus = MRU_Russias_Many_Peoples
 	}
@@ -3810,6 +3873,9 @@ focus = {
 	id = MRU_National_Corporations
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Subsidise_Local_Business
+	mutually_exclusive = {
+		focus = MRU_Subsidise_Small_Business
+	}
 	prerequisite = {
 		focus = MRU_Subsidise_Local_Business
 	}
@@ -3858,6 +3924,9 @@ focus = {
 	id = MRU_Found_Imperial_Universities
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Corporatist_Economics
+	mutually_exclusive = {
+		focus = MRU_Reform_The_Education_System
+	}
 	prerequisite = {
 		focus = MRU_Corporatist_Economics
 	}
@@ -3909,9 +3978,9 @@ focus = {
 focus = {
 	id = MRU_The_Imperial_Armed_Forces
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_The_Oprichniki_Splits
+	relative_position_id =MRU_a_house_divided
 	prerequisite = {
-		focus = MRU_The_Oprichniki_Splits
+		focus = MRU_a_house_divided
 	}
 	cost = 3
 	x = 0
@@ -4375,9 +4444,9 @@ focus = {
 focus = {
 	id = MRU_Internal_Economy
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_The_Oprichniki_Splits
+	relative_position_id =MRU_a_house_divided
 	prerequisite = {
-		focus = MRU_The_Oprichniki_Splits
+		focus = MRU_a_house_divided
 	}
 	cost = 3
 	x = 8
@@ -4892,15 +4961,15 @@ focus = {
 
 
 
-#### NATIONAL IMPERIALISM ####
+#### IMPERIAL MARRIGE ####
 
 
 focus = {
-	id = MRU_An_Imperial_Coronation_MRU
-	icon = GFX_MRU_the_FIRST_test
+	id = MRU_an_imperial_coronation_selena
+	icon = GFX_MRU_an_imperial_coronation_selena
 	
 	 cost = 3
-	 x = 90
+	 x = 100
 	 y = 0
 	available = {
 		country_exists = MRU
@@ -4916,6 +4985,1063 @@ focus = {
 	}
 
 }
+
+focus = {
+	id = MRU_return_to_the_winter_palace_selena
+	icon = GFX_MRU_return_to_the_winter_palace_selena
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_an_imperial_coronation_selena
+	prerequisite = {
+		focus = MRU_An_Imperial_Coronation_selena
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_relocate_our_institutions_selena
+	icon = GFX_MRU_relocate_our_institutions_selena
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_return_to_the_winter_palace_selena
+	prerequisite = {
+		focus = MRU_return_to_the_winter_palace_selena
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_prepare_for_the_wedding_selena
+	icon = GFX_MRU_prepare_for_the_wedding_selena
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_return_to_the_winter_palace_selena
+	prerequisite = {
+		focus = MRU_return_to_the_winter_palace_selena
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_on_to_business
+	icon = GFX_MRU_on_to_business
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_relocate_our_institutions_selena
+	prerequisite = {
+		focus = MRU_relocate_our_institutions_selena
+	}
+	prerequisite = {
+		focus = MRU_prepare_for_the_wedding_selena
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_russias_crossroads
+	icon = GFX_MRU_russias_crossroads
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_on_to_business
+	prerequisite = {
+		focus = MRU_on_to_business
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_oprichniki_splits
+	icon = GFX_MRU_the_oprichniki_splits
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_russias_crossroads
+	prerequisite = {
+		focus = MRU_russias_crossroads
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_our_imperial_instutions
+	icon = GFX_MRU_our_imperial_instutions
+	cost = 1
+	x = -10
+	y = 1
+	relative_position_id = MRU_the_oprichniki_splits
+	prerequisite = {
+		focus = MRU_the_oprichniki_splits
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_russias_many_peoples
+	icon = GFX_MRU_russias_many_peoples
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_our_imperial_instutions
+	prerequisite = {
+		focus = MRU_our_imperial_instutions
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_respect_ethnic_minorities
+	icon = GFX_MRU_respect_ethnic_minorities
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_russias_many_peoples
+	mutually_exclusive = {
+		focus = MRU_promote_russian_chauvanism
+	}
+	prerequisite = {
+		focus = MRU_russias_many_peoples
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_promote_russian_chauvanism
+	icon = GFX_MRU_promote_russian_chauvanism
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_russias_many_peoples
+	mutually_exclusive = {
+		focus = MRU_respect_ethnic_minorities
+	}
+	prerequisite = {
+		focus = MRU_russias_many_peoples
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_russias_many_faiths
+	icon = GFX_MRU_russias_many_faiths
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_respect_ethnic_minorities
+	prerequisite = {
+		focus = MRU_respect_ethnic_minorities
+		focus = MRU_promote_russian_chauvanism
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_pluralistic_reforms
+	icon = GFX_MRU_pluralistic_reforms
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_russias_many_faiths
+	mutually_exclusive = {
+		focus = MRU_increase_orthodox_campaigns
+	}
+	prerequisite = {
+		focus = MRU_russias_many_faiths
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_increase_orthodox_campaigns
+	icon = GFX_MRU_increase_orthodox_campaigns
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_russias_many_faiths
+	mutually_exclusive = {
+		focus = MRU_pluralistic_reforms
+	}
+	prerequisite = {
+		focus = MRU_russias_many_faiths
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_voice_of_the_masses
+	icon = GFX_MRU_voice_of_the_masses
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_pluralistic_reforms
+	prerequisite = {
+		focus = MRU_pluralistic_reforms
+		focus = MRU_increase_orthodox_campaigns
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_press_liberalization
+	icon = GFX_MRU_press_liberalization
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_voice_of_the_masses
+	mutually_exclusive = {
+		focus = MRU_imperial_control_of_the_media
+	}
+	prerequisite = {
+		focus = MRU_voice_of_the_masses
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_imperial_control_of_the_media
+	icon = GFX_MRU_imperial_control_of_the_media
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_voice_of_the_masses
+	mutually_exclusive = {
+		focus = MRU_press_liberalization
+	}
+	prerequisite = {
+		focus = MRU_voice_of_the_masses
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_privelage_of_the_aristocracy
+	icon = GFX_MRU_privelage_of_the_aristocracy
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_press_liberalization
+	prerequisite = {
+		focus = MRU_press_liberalization
+		focus = MRU_imperial_control_of_the_media
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_equality_before_the_law
+	icon = GFX_MRU_equality_before_the_law
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_privelage_of_the_aristocracy
+	mutually_exclusive = {
+		focus = MRU_special_privelages_for_nobility
+	}
+	prerequisite = {
+		focus = MRU_privelage_of_the_aristocracy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_special_privelages_for_nobility
+	icon = GFX_MRU_special_privelages_for_nobility
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_privelage_of_the_aristocracy
+	mutually_exclusive = {
+		focus = MRU_equality_before_the_law
+	}
+	prerequisite = {
+		focus = MRU_privelage_of_the_aristocracy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_independent_deputies
+	icon = GFX_MRU_the_independent_deputies
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_equality_before_the_law
+	prerequisite = {
+		focus = MRU_equality_before_the_law
+		focus = MRU_special_privelages_for_nobility
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_allow_them_to_organise
+	icon = GFX_MRU_allow_them_to_organise
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_the_independent_deputies
+	mutually_exclusive = {
+		focus = MRU_force_political_conformity
+	}
+	prerequisite = {
+		focus = MRU_the_independent_deputies
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_force_political_conformity
+	icon = GFX_MRU_force_political_conformity
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_the_independent_deputies
+	prerequisite = {
+		focus = MRU_the_independent_deputies
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_force_political_conformity
+	icon = GFX_MRU_force_political_conformity
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_the_independent_deputies
+	mutually_exclusive = {
+		focus = MRU_allow_them_to_organise
+	}
+	prerequisite = {
+		focus = MRU_the_independent_deputies
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_internal_economy
+	icon = GFX_MRU_internal_economy
+	cost = 1
+	x = 5
+	y = 1
+	relative_position_id = MRU_the_oprichniki_splits
+	prerequisite = {
+		focus = MRU_the_oprichniki_splits
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_internal_economy
+	icon = GFX_MRU_internal_economy
+	cost = 1
+	x = 10
+	y = 1
+	relative_position_id = MRU_the_oprichniki_splits
+	prerequisite = {
+		focus = MRU_the_oprichniki_splits
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_tax_reform
+	icon = GFX_MRU_tax_reform
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_internal_economy
+	prerequisite = {
+		focus = MRU_internal_economy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_raise_common_tax
+	icon = GFX_MRU_raise_common_tax
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_tax_reform
+	prerequisite = {
+		focus = MRU_tax_reform
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_remove_noble_tax_privelages
+	icon = GFX_MRU_remove_noble_tax_privelages
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_tax_reform
+	prerequisite = {
+		focus = MRU_tax_reform
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_investing_our_surplus
+	icon = GFX_MRU_investing_our_surplus
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_raise_common_tax
+	prerequisite = {
+		focus = MRU_raise_common_tax
+		focus = MRU_remove_noble_tax_privelages
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_imperial_armouries
+	icon = GFX_MRU_imperial_armouries
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_investing_our_surplus
+	prerequisite = {
+		focus = MRU_investing_our_surplus
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_national_road_projects
+	icon = GFX_MRU_national_road_projects
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_investing_our_surplus
+	prerequisite = {
+		focus = MRU_investing_our_surplus
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_ownership_of_production
+	icon = GFX_MRU_ownership_of_production
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_imperial_armouries
+	prerequisite = {
+		focus = MRU_imperial_armouries
+		focus = MRU_national_road_projects
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_state_corporatism
+	icon = GFX_MRU_state_corporatism
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_ownership_of_production
+	prerequisite = {
+		focus = MRU_ownership_of_production
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_meritocratic_capitalism
+	icon = GFX_MRU_meritocratic_capitalism
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_ownership_of_production
+	prerequisite = {
+		focus = MRU_ownership_of_production
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_filing_the_welfare_gap
+	icon = GFX_MRU_filing_the_welfare_gap
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_state_corporatism
+	prerequisite = {
+		focus = MRU_state_corporatism
+		focus = MRU_meritocratic_capitalism
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_religious_charities
+	icon = GFX_MRU_religious_charities
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_filing_the_welfare_gap
+	prerequisite = {
+		focus = MRU_filing_the_welfare_gap
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_formalised_means_welfare
+	icon = GFX_MRU_formalised_means_welfare
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_filing_the_welfare_gap
+	prerequisite = {
+		focus = MRU_filing_the_welfare_gap
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_focus_of_science
+	icon = GFX_MRU_focus_of_science
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_religious_charities
+	prerequisite = {
+		focus = MRU_religious_charities
+		focus = MRU_formalised_means_welfare
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_militarised_academia
+	icon = GFX_MRU_militarised_academia
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_focus_of_science
+	prerequisite = {
+		focus = MRU_focus_of_science
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_encourage_civil_science
+	icon = GFX_MRU_encourage_civil_science
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_focus_of_science
+	prerequisite = {
+		focus = MRU_focus_of_science
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_imperial_armed_forces
+	icon = GFX_MRU_the_imperial_armed_forces
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_the_oprichniki_splits
+	prerequisite = {
+		focus = MRU_the_oprichniki_splits
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_a_modern_army
+	icon = GFX_MRU_a_modern_army
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_the_imperial_armed_forces
+	prerequisite = {
+		focus = MRU_the_imperial_armed_forces
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+
+
+
+
+
+
+
 
 
 
