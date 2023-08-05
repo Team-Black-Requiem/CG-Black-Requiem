@@ -1,5 +1,5 @@
 focus_tree = {
-id = monarchist_second_phase
+id = MRU_monarchist_phase_2
 	
 	country = {
 		factor = 0
@@ -354,6 +354,9 @@ id = monarchist_second_phase
 	focus = {
 		id = MRU_Resignation_to_Reality 
 		icon = GFX_MRU_the_FIRST_test
+		mutually_exclusive = {
+			focus = MRU_The_Dream_Hasnt_Died_Yet
+		}
 		
         prerequisite = {
 			 focus = MRU_Public_Address
@@ -964,6 +967,9 @@ id = monarchist_second_phase
 	focus = {
 		id = MRU_The_Dream_Hasnt_Died_Yet
 		icon = GFX_MRU_the_FIRST_test
+		mutually_exclusive = {
+			focus = MRU_Resignation_to_Reality
+		}
 		
         prerequisite = {
 			focus = MRU_Public_Address
@@ -4027,6 +4033,9 @@ focus = {
 	id = MRU_Open_Up_Artistic_Expression
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_A_Matter_Of_The_Arts
+	mutually_exclusive = {
+		focus = MRU_Imperial_Artistic_Standards
+	}
 	prerequisite = {
 		focus = MRU_A_Matter_Of_The_Arts
 	}
@@ -4051,6 +4060,9 @@ focus = {
 	id = MRU_Imperial_Artistic_Standards
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_A_Matter_Of_The_Arts
+	mutually_exclusive = {
+		focus = MRU_Open_Up_Artistic_Expression
+	}
 	prerequisite = {
 		focus = MRU_A_Matter_Of_The_Arts
 	}
@@ -4100,6 +4112,9 @@ focus = {
 	id = MRU_Open_Up_To_Critisism
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Freedom_Of_Speech
+	mutually_exclusive = {
+		focus = MRU_Anti-Imperial_Slander_Laws
+	}
 	prerequisite = {
 		focus = MRU_Freedom_Of_Speech
 	}	
@@ -4124,6 +4139,9 @@ focus = {
 	id = MRU_Anti-Imperial_Slander_Laws
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Freedom_Of_Speech
+	mutually_exclusive = {
+		focus = MRU_Open_Up_To_Critisism
+	}
 	prerequisite = {
 		focus = MRU_Freedom_Of_Speech
 		
@@ -4174,6 +4192,9 @@ focus = {
 	id = MRU_Lower_Barriers_To_Voting
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_The_Peoples_Suffrage
+	mutually_exclusive = {
+		focus = MRU_Creative_Voting_Pre-requesites
+	}
 	prerequisite = {
 		focus = MRU_The_Peoples_Suffrage
 		
@@ -4199,6 +4220,9 @@ focus = {
 	id = MRU_Creative_Voting_Pre-requesites
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_The_Peoples_Suffrage
+	mutually_exclusive = {
+		focus = MRU_Lower_Barriers_To_Voting
+	}
 	prerequisite = {
 
 		focus = MRU_The_Peoples_Suffrage
@@ -4248,6 +4272,9 @@ focus = {
 	id = MRU_Allegiance_To_Russia
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Oaths_of_Loyalty
+	mutually_exclusive = {
+		focus = MRU_Allegiance_to_The_Tsar
+	}
 	prerequisite = {
 		focus = MRU_Oaths_of_Loyalty
 	}
@@ -4272,6 +4299,9 @@ focus = {
 	id = MRU_Allegiance_to_The_Tsar
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Oaths_of_Loyalty
+	mutually_exclusive = {
+		focus = MRU_Allegiance_To_Russia
+	}
 	prerequisite = {
 		focus = MRU_Oaths_of_Loyalty
 	}
@@ -4318,9 +4348,12 @@ focus = {
 
 }
 focus = {
-	id = MRU_Pluralistic_Reforms
+	id = MRU_Recognition_Of_Minority_Faiths
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Role_Of_The_Church
+	mutually_exclusive = {
+		focus = MRU_Maintain_Orthodox_Supremacy
+	}
 	prerequisite = {
 		focus = MRU_Role_Of_The_Church
 	}
@@ -4345,6 +4378,9 @@ focus = {
 	id = MRU_Maintain_Orthodox_Supremacy
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Role_Of_The_Church
+	mutually_exclusive = {
+		focus = MRU_Recognition_Of_Minority_Faiths
+	}
 	prerequisite = {
 		focus = MRU_Role_Of_The_Church
 	}
@@ -4371,7 +4407,7 @@ focus = {
 	relative_position_id =MRU_Maintain_Orthodox_Supremacy
 	prerequisite = {
 		focus = MRU_Maintain_Orthodox_Supremacy
-		focus = MRU_Pluralistic_Reforms
+		focus = MRU_Recognition_Of_Minority_Faiths
 	}
 	cost = 3
 	x = -1
@@ -4394,6 +4430,9 @@ focus = {
 	id = MRU_a_Russia_Of_Many_Peoples
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Cultural_Issue
+	mutually_exclusive = {
+		focus = MRU_Russian_National_Supremacy
+	}
 	prerequisite = {
 		focus = MRU_Cultural_Issue
 	}
@@ -4418,6 +4457,9 @@ focus = {
 	id = MRU_Russian_National_Supremacy
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Cultural_Issue
+	mutually_exclusive = {
+		focus = MRU_a_Russia_Of_Many_Peoples
+	}
 	prerequisite = {
 		focus = MRU_Cultural_Issue
 	}
@@ -4565,6 +4607,9 @@ focus = {
 	id = MRU_European_Advisors
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Internal_Economy
+	mutually_exclusive = {
+		focus = MRU_Our_Own_Reliable_Experience
+	}
 	prerequisite = {
 		focus = MRU_Internal_Economy
 	}
@@ -4613,8 +4658,12 @@ focus = {
 	id = MRU_Study_European_MBTs
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_EOfficer_Exchange_Programmes
+	mutually_exclusive = {
+		focus = MRU_A_Russian_MBT
+	}
 	prerequisite = {
 		focus = MRU_EOfficer_Exchange_Programmes
+		focus = MRU_Open_The_Surov_Academy
 	}
 	cost = 3
 	x = 0
@@ -4661,8 +4710,12 @@ focus = {
 	id = MRU_Infantry_Body_armour
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Make_Agreements_With_European_Contractors
+	mutually_exclusive = {
+		focus = MRU_Develop_A_Russian_Assault_rifle
+	}
 	prerequisite = {
 		focus = MRU_Make_Agreements_With_European_Contractors
+		focus = MRU_Spur_Armoured_Production
 	}
 	cost = 3
 	x = 0
@@ -4711,6 +4764,9 @@ focus = {
 	id = MRU_Our_Own_Reliable_Experience
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Internal_Economy
+	mutually_exclusive = {
+		focus = MRU_European_Advisors
+	}
 	prerequisite = {
 		focus = MRU_Internal_Economy
 	}
@@ -4756,11 +4812,15 @@ focus = {
 
 }
 focus = {
-	id = MRU_A_Russian_Tank
+	id = MRU_A_Russian_MBT
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Open_The_Surov_Academy
+	mutually_exclusive = {
+		focus = MRU_Study_European_MBTs
+	}
 	prerequisite = {
 		focus = MRU_Open_The_Surov_Academy
+		focus = MRU_EOfficer_Exchange_Programmes
 	}
 	cost = 3
 	x = 0
@@ -4782,9 +4842,9 @@ focus = {
 focus = {
 	id = MRU_Spur_Armoured_Production
 	icon = GFX_MRU_the_FIRST_test
-	relative_position_id =MRU_A_Russian_Tank
+	relative_position_id =MRU_A_Russian_MBT
 	prerequisite = {
-		focus = MRU_A_Russian_Tank
+		focus = MRU_A_Russian_MBT
 	}
 	cost = 3
 	x = 0
@@ -4807,8 +4867,12 @@ focus = {
 	id = MRU_Develop_A_Russian_Assault_rifle
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id =MRU_Spur_Armoured_Production
+	mutually_exclusive = {
+		focus = MRU_Infantry_Body_armour
+	}
 	prerequisite = {
 		focus = MRU_Spur_Armoured_Production
+		focus = MRU_Make_Agreements_With_European_Contractors
 	}
 	cost = 3
 	x = 0
@@ -4948,6 +5012,45 @@ focus = {
 
 }
 
+focus = {
+	id = MRU_russia_united_at_last
+	icon = GFX_MRU_russia_united_at_last
+	cost = 1
+	x = 1
+	y = 2
+	relative_position_id = MRU_Creative_Voting_Pre-requesites
+	prerequisite = {
+		focus = MRU_School_Funding_Drive
+		focus = MRU_Encourage_Aristocratic_Scientists
+	}
+	prerequisite = {
+		focus = MRU_Lower_Barriers_To_Voting
+		focus = MRU_Creative_Voting_Pre-requesites
+	}
+	prerequisite = {
+		focus = MRU_a_Russia_Of_Many_Peoples
+		focus = MRU_Russian_National_Supremacy
+	}
+	prerequisite = {
+		focus = MRU_Combat_Headset_Overlays
+		focus = MRU_Dragunov_Rifle
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+
+
 
 
 
@@ -4994,7 +5097,7 @@ focus = {
 	y = 1
 	relative_position_id = MRU_an_imperial_coronation_selena
 	prerequisite = {
-		focus = MRU_An_Imperial_Coronation_selena
+		focus = MRU_an_imperial_coronation_selena
 	}
 	search_filters = {
 	}
@@ -5137,7 +5240,7 @@ focus = {
 	id = MRU_our_imperial_instutions
 	icon = GFX_MRU_our_imperial_instutions
 	cost = 1
-	x = -10
+	x = -11
 	y = 1
 	relative_position_id = MRU_the_oprichniki_splits
 	prerequisite = {
@@ -5579,31 +5682,7 @@ focus = {
 	id = MRU_internal_economy
 	icon = GFX_MRU_internal_economy
 	cost = 1
-	x = 5
-	y = 1
-	relative_position_id = MRU_the_oprichniki_splits
-	prerequisite = {
-		focus = MRU_the_oprichniki_splits
-	}
-	search_filters = {
-	}
-	
-	available = {
-	}
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	completion_reward = {
-	}
-}
-
-focus = {
-	id = MRU_internal_economy
-	icon = GFX_MRU_internal_economy
-	cost = 1
-	x = 10
+	x = 11
 	y = 1
 	relative_position_id = MRU_the_oprichniki_splits
 	prerequisite = {
@@ -6012,14 +6091,1046 @@ focus = {
 }
 
 focus = {
-	id = MRU_a_modern_army
-	icon = GFX_MRU_a_modern_army
+	id = MRU_an_modern_army
+	icon = GFX_MRU_an_modern_army
 	cost = 1
 	x = -1
 	y = 1
 	relative_position_id = MRU_the_imperial_armed_forces
+	mutually_exclusive = {
+		focus = MRU_an_imperial_army
+	}
 	prerequisite = {
 		focus = MRU_the_imperial_armed_forces
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_open_up_the_academies
+	icon = GFX_MRU_open_up_the_academies
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_an_modern_army
+	prerequisite = {
+		focus = MRU_an_modern_army
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_an_imperial_army
+	icon = GFX_MRU_an_imperial_army
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_the_imperial_armed_forces
+	mutually_exclusive = {
+		focus = MRU_an_modern_army
+	}
+	prerequisite = {
+		focus = MRU_the_imperial_armed_forces
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_aristocratic_comissions
+	icon = GFX_MRU_aristocratic_comissions
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_an_imperial_army
+	prerequisite = {
+		focus = MRU_an_imperial_army
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_opening_the_surov_academy
+	icon = GFX_MRU_opening_the_surov_academy
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_open_up_the_academies
+	prerequisite = {
+		focus = MRU_open_up_the_academies
+		focus = MRU_aristocratic_comissions
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_imperial_russian_navy
+	icon = GFX_MRU_the_imperial_russian_navy
+	cost = 1
+	x = -5
+	y = 1
+	relative_position_id = MRU_opening_the_surov_academy
+	prerequisite = {
+		focus = MRU_opening_the_surov_academy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_strike_above_our_weight
+	icon = GFX_MRU_strike_above_our_weight
+	cost = 1
+	x = -2
+	y = 1
+	relative_position_id = MRU_the_imperial_russian_navy
+	mutually_exclusive = {
+		focus = MRU_a_high_seas_fleet
+	}
+	prerequisite = {
+		focus = MRU_the_imperial_russian_navy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_missile_research
+	icon = GFX_MRU_missile_research
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_strike_above_our_weight
+	prerequisite = {
+		focus = MRU_strike_above_our_weight
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_destroyer_doctrine
+	icon = GFX_MRU_destroyer_doctrine
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_missile_research
+	prerequisite = {
+		focus = MRU_missile_research
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_a_high_seas_fleet
+	icon = GFX_MRU_a_high_seas_fleet
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_the_imperial_russian_navy
+	mutually_exclusive = {
+		focus = MRU_strike_above_our_weight
+	}
+	prerequisite = {
+		focus = MRU_the_imperial_russian_navy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_gunnery_developments
+	icon = GFX_MRU_gunnery_developments
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_a_high_seas_fleet
+	prerequisite = {
+		focus = MRU_a_high_seas_fleet
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_battlecruiser_drive
+	icon = GFX_MRU_battlecruiser_drive
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_gunnery_developments
+	prerequisite = {
+		focus = MRU_gunnery_developments
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_imperial_russian_airforce
+	icon = GFX_MRU_the_imperial_russian_airforce
+	cost = 1
+	x = 5
+	y = 1
+	relative_position_id = MRU_opening_the_surov_academy
+	prerequisite = {
+		focus = MRU_opening_the_surov_academy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_army_air_support
+	icon = GFX_MRU_army_air_support
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_the_imperial_russian_airforce
+	mutually_exclusive = {
+		focus = MRU_an_independent_airforce
+	}
+	prerequisite = {
+		focus = MRU_the_imperial_russian_airforce
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_affordable_designs
+	icon = GFX_MRU_affordable_designs
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_army_air_support
+	prerequisite = {
+		focus = MRU_army_air_support
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_close_air_support_doctrine
+	icon = GFX_MRU_close_air_support_doctrine
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_affordable_designs
+	prerequisite = {
+		focus = MRU_affordable_designs
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_an_independent_airforce
+	icon = GFX_MRU_an_independent_airforce
+	cost = 1
+	x = 2
+	y = 1
+	relative_position_id = MRU_the_imperial_russian_airforce
+	mutually_exclusive = {
+		focus = MRU_army_air_support
+	}
+	prerequisite = {
+		focus = MRU_the_imperial_russian_airforce
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_aerospace_research
+	icon = GFX_MRU_aerospace_research
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_an_independent_airforce
+	prerequisite = {
+		focus = MRU_an_independent_airforce
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_aerial_superiority
+	icon = GFX_MRU_aerial_superiority
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_aerospace_research
+	prerequisite = {
+		focus = MRU_aerospace_research
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_moving_fowards
+	icon = GFX_MRU_moving_fowards
+	cost = 1
+	x = -1
+	y = 1
+	relative_position_id = MRU_opening_the_surov_academy
+	mutually_exclusive = {
+		focus = MRU_reliable_methods
+	}
+	prerequisite = {
+		focus = MRU_opening_the_surov_academy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_develop_reliable_firearms
+	icon = GFX_MRU_develop_reliable_firearms
+	cost = 1
+	x = -2
+	y = 1
+	relative_position_id = MRU_moving_fowards
+	mutually_exclusive = {
+		focus = MRU_research_body_armour
+	}
+	prerequisite = {
+		focus = MRU_moving_fowards
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_research_body_armour
+	icon = GFX_MRU_research_body_armour
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_moving_fowards
+	mutually_exclusive = {
+		focus = MRU_develop_reliable_firearms
+	}
+	prerequisite = {
+		focus = MRU_moving_fowards
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_rocket_warfare
+	icon = GFX_MRU_rocket_warfare
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_develop_reliable_firearms
+	mutually_exclusive = {
+		focus = MRU_self_propelled_artillery
+	}
+	prerequisite = {
+		focus = MRU_develop_reliable_firearms
+		focus = MRU_research_body_armour
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_self_propelled_artillery
+	icon = GFX_MRU_self_propelled_artillery
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_research_body_armour
+	mutually_exclusive = {
+		focus = MRU_rocket_warfare
+	}
+	prerequisite = {
+		focus = MRU_research_body_armour
+		focus = MRU_develop_reliable_firearms
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_motorisation_drive
+	icon = GFX_MRU_motorisation_drive
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_rocket_warfare
+	mutually_exclusive = {
+		focus = MRU_develop_apcs
+	}
+	prerequisite = {
+		focus = MRU_rocket_warfare
+		focus = MRU_self_propelled_artillery
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_develop_apcs
+	icon = GFX_MRU_develop_apcs
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_self_propelled_artillery
+	mutually_exclusive = {
+		focus = MRU_motorisation_drive
+	}
+	prerequisite = {
+		focus = MRU_rocket_warfare
+		focus = MRU_self_propelled_artillery
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_mass_produced_armour
+	icon = GFX_MRU_mass_produced_armour
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_motorisation_drive
+	mutually_exclusive = {
+		focus = MRU_perfect_mbt_designs
+	}
+	prerequisite = {
+		focus = MRU_motorisation_drive
+		focus = MRU_develop_apcs
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_perfect_mbt_designs
+	icon = GFX_MRU_mass_produced_armour
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_develop_apcs
+	mutually_exclusive = {
+		focus = MRU_mass_produced_armour
+	}
+	prerequisite = {
+		focus = MRU_motorisation_drive
+		focus = MRU_develop_apcs
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_a_new_spirit_of_war
+	icon = GFX_MRU_a_new_spirit_of_war
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_perfect_mbt_designs
+	prerequisite = {
+		focus = MRU_perfect_mbt_designs
+		focus = MRU_mass_produced_armour
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_reliable_methods
+	icon = GFX_MRU_reliable_methods
+	cost = 1
+	x = 1
+	y = 1
+	relative_position_id = MRU_opening_the_surov_academy
+	mutually_exclusive = {
+		focus = MRU_moving_fowards
+	}
+	prerequisite = {
+		focus = MRU_opening_the_surov_academy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_men_of_steel
+	icon = GFX_MRU_men_of_steel
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_reliable_methods
+	mutually_exclusive = {
+		focus = MRU_a_modern_levy
+	}
+	prerequisite = {
+		focus = MRU_reliable_methods
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_a_modern_levy
+	icon = GFX_MRU_a_modern_levy
+	cost = 1
+	x = 2
+	y = 1
+	relative_position_id = MRU_reliable_methods
+	mutually_exclusive = {
+		focus = MRU_men_of_steel
+	}
+	prerequisite = {
+		focus = MRU_reliable_methods
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_cannons_to_shake_the_earth
+	icon = GFX_MRU_cannons_to_shake_the_earth
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_men_of_steel
+	mutually_exclusive = {
+		focus = MRU_mobile_artillery_intergration
+	}
+	prerequisite = {
+		focus = MRU_men_of_steel
+		focus = MRU_a_modern_levy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_mobile_artillery_intergration
+	icon = GFX_MRU_mobile_artillery_intergration
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_a_modern_levy
+	mutually_exclusive = {
+		focus = MRU_cannons_to_shake_the_earth
+	}
+	prerequisite = {
+		focus = MRU_men_of_steel
+		focus = MRU_a_modern_levy
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_new_landships
+	icon = GFX_MRU_new_landships
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_cannons_to_shake_the_earth
+	mutually_exclusive = {
+		focus = MRU_armoured_cavalry
+	}
+	prerequisite = {
+		focus = MRU_cannons_to_shake_the_earth
+		focus = MRU_mobile_artillery_intergration
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_armoured_cavalry
+	icon = GFX_MRU_armoured_cavalry
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_mobile_artillery_intergration
+	mutually_exclusive = {
+		focus = MRU_new_landships
+	}
+	prerequisite = {
+		focus = MRU_cannons_to_shake_the_earth
+		focus = MRU_mobile_artillery_intergration
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_imperial_shock_troops
+	icon = GFX_MRU_imperial_shock_troops
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_new_landships
+	mutually_exclusive = {
+		focus = MRU_modern_cossacks
+	}
+	prerequisite = {
+		focus = MRU_new_landships
+		focus = MRU_armoured_cavalry
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_modern_cossacks
+	icon = GFX_MRU_modern_cossacks
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_armoured_cavalry
+	mutually_exclusive = {
+		focus = MRU_imperial_shock_troops
+	}
+	prerequisite = {
+		focus = MRU_new_landships
+		focus = MRU_armoured_cavalry
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_spirit_of_surov
+	icon = GFX_MRU_the_spirit_of_surov
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MRU_imperial_shock_troops
+	prerequisite = {
+		focus = MRU_imperial_shock_troops
+		focus = MRU_modern_cossacks
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = MRU_the_sovereign_eagle_soars
+	icon = GFX_MRU_the_sovereign_eagle_soars
+	cost = 1
+	x = 1
+	y = 2
+	relative_position_id = MRU_a_new_spirit_of_war
+	prerequisite = {
+		focus = MRU_allow_them_to_organise
+		focus = MRU_force_political_conformity
+	}
+	prerequisite = {
+		focus = MRU_a_new_spirit_of_war
+		focus = MRU_the_spirit_of_surov
+	}
+	prerequisite = {
+		focus = MRU_militarised_academia
+		focus = MRU_encourage_civil_science
 	}
 	search_filters = {
 	}

@@ -1039,7 +1039,7 @@ id = monarchist_russia_focus
 		completion_reward = { 
 			country_event = MRU.20
 	       
- 	load_focus_tree = monarchist_second_phase
+ 	load_focus_tree = MRU_monarchist_phase_2
 		}
 
     }
@@ -4901,7 +4901,30 @@ else_if = {
 #############  END OF Socialists interactions #######
 #############  END OF Phase 2 ##########
 
+focus = {
+	id = MRU_load_phase_two_dev
+	icon = GFX_MRU_load_phase_two_dev
+	cost = 1
+	x = 0
+	y = 15
+	relative_position_id = MRU_Weathering_The_Storm
+	prerequisite = {
+		focus = MRU_Weathering_The_Storm
+	}
+	search_filters = {
+	}
+	
+	available = {
+	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
+	completion_reward = {
+		load_focus_tree = MRU_monarchist_phase_2
+	}
+}
 
 
 
