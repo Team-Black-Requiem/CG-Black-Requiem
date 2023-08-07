@@ -1196,7 +1196,7 @@ ideas = {
 		SRU = {consumer_goods_factor = 0.02}
         
 		attrition = -0.05
-        sru = {attrition = -0.05}
+        SRU = {attrition = -0.05}
 
 	}
 	}
@@ -1319,6 +1319,71 @@ ideas = {
 		}
 	}
 
+	MRU_No_Legal_Exceptions_idea = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_gain = 0.1
+		}
+	}
+
+	MRU_Brittanian_Special_Legal_Protections = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_gain = 0.05
+			enemy_operative_capture_chance_factor = 0.2
+		}
+	}
+
+	MRU_Lets_Not_Cross_That_Line = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			compliance_growth = 0.1
+		    resistance_damage_to_garrison = -0.05
+		}
+	}
+
+	MRU_OSI_Cooperation = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			resistance_growth = 0.25
+		}
+	}
 }
 	
 	
