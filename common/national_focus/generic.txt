@@ -760,7 +760,7 @@ cost = 5
 		completion_reward = {
 
 			add_war_support = 0.05
-	
+	        add_ideas = GEN_autocracy_idea_1
 			army_experience = 40
 		}
 }
@@ -784,8 +784,8 @@ cost = 5
 		completion_reward = {
 
 			swap_ideas = {
-    remove_idea = civilian_economy
-    add_idea = partial_economic_mobilisation
+    remove_idea = GEN_totalitarian_socialism_1
+    add_idea = GEN_totalitarian_socialism_2
 }
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -809,8 +809,7 @@ cost = 5
 
 		completion_reward = {
 
-		
-		add_ideas =GEN_autocracy_idea_1
+		add_ideas = GEN_autocracy_idea_1
 	}
 	
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -969,7 +968,7 @@ cost = 5
 		icon = GFX_goal_generic_consumer_goods
 		
 				
-												available = {
+		available = {
 				exists = yes
 		}
 		
@@ -990,16 +989,10 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-		
-		add_timed_idea = {
-    idea = generic_welfare_idea
-    days = 180
-}
-
-	
 			add_stability = 0.07
+			add_ideas = GEN_totalitarian_socialism_1
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1008,7 +1001,7 @@ cost = 5
 		icon = GFX_goal_anschluss
 		
 				
-												available = {
+		available = {
 				exists = yes
 		}
 
@@ -1023,10 +1016,9 @@ cost = 5
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_ideas = GEN_autocracy_idea_2
-
-		hidden_effect = {
-		remove_ideas =  GEN_autocracy_idea_1
+		swap_ideas = {
+			remove_idea = GEN_autocracy_idea_1
+			add_idea = GEN_autocracy_idea_2
 		}
 		
 		}

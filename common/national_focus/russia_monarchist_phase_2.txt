@@ -1436,7 +1436,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        set_country_flag = {
+			flag = sovereignty
+			value = 0 
+		}
 		}
 
 	}
@@ -1566,7 +1569,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        modify_country_flag = {
+			flag = sovereignty
+			value = -1
+		}
 		}
 
 	}
@@ -1592,7 +1598,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+			modify_country_flag = {
+				flag = sovereignty
+				value = 1
+			}
 		}
 
 	}
@@ -1678,6 +1687,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 2
+			}
 		}
 
 	}
@@ -1760,6 +1773,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -2
+			}
 		}
 
 	}
@@ -1842,6 +1859,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 3
+			}
 		}
 
 	}
@@ -1924,6 +1945,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -3
+			}
 		}
 
 	}
@@ -2006,6 +2031,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -1
+			}
 		}
 
 	}
@@ -2088,6 +2117,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 1
+			}
 		}
 
 	}
@@ -2172,6 +2205,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 3
+			}
 		}
 
 	}
@@ -2256,6 +2293,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -3
+			}
 		}
 
 	}
@@ -2636,6 +2677,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -1
+			}
 		}
 
 	}
@@ -2662,6 +2707,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -2
+			}
 		}
 
 	}
@@ -2688,6 +2737,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = -2
+			}
 		}
 
 	}
@@ -2766,6 +2819,13 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			random_core_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+				}
+				add_extra_state_shared_building_slots = 6
+			}
 		}
 
 	}
@@ -2874,6 +2934,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 2
+			}
 		}
 
 	}
@@ -2926,6 +2990,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        
+			modify_country_flag = {
+				flag = sovereignty
+				value = 1
+			}
 		}
 
 	}
@@ -2951,7 +3019,16 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            add_tech_bonus = {
+				name = Borrowed_blueprints
+				uses = 3
+				bonus = 0.5
+				category = industry
+			}
+			modify_country_flag = {
+				flag = sovereignty
+				value = 1
+			}
 		}
 
 	}
@@ -2977,7 +3054,17 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+         
+			add_tech_bonus = {
+				name = Replicate_Brittanian_Design
+				uses = 2
+				bonus = 0.5
+				category = electronics
+			}
+			modify_country_flag = {
+				flag = sovereignty
+				value = 2
+			}
 		}
 
 	}
@@ -3060,6 +3147,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
         add_stability = 5
+		modify_country_flag = {
+			flag = sovereignty
+			value = 1
+		}
 		}
 
 	}
@@ -3092,6 +3183,10 @@ id = MRU_monarchist_phase_2
         add_offsite_building = {
 			type = industrial_complex
 			level = 2
+		}
+		modify_country_flag = {
+			flag = sovereignty
+			value = -1
 		}
 		}
 
@@ -3158,6 +3253,10 @@ id = MRU_monarchist_phase_2
 		 137 = {
 			add_extra_state_shared_building_slots = 2
 		 }
+		 modify_country_flag = {
+			flag = sovereignty
+			value = 1
+		}
 		}
 
 	}
@@ -3193,6 +3292,10 @@ id = MRU_monarchist_phase_2
 			    random_owned_controlled_state = {
 					add_extra_state_shared_building_slots = 2
 				}
+		}
+		modify_country_flag = {
+			flag = sovereignty
+			value = -1
 		}
 	}
 	}
@@ -3247,6 +3350,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
 			add_ideas = MRU_No_Legal_Exceptions_idea
+			modify_country_flag = {
+				flag = sovereignty
+				value = 1
+			}
 		}
 
 	}
@@ -3277,12 +3384,16 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
         add_ideas = MRU_Brittanian_Special_Legal_Protections
-		}
+	    modify_country_flag = {
+			flag = sovereignty
+			value = -1
+		}	
+	}
 
 	}
 
 	focus = {
-		id = MRU_Form_The_Okharana
+		id = MRU_Intelligence_Cooperation_Proposal
 		icon = GFX_MRU_the_FIRST_test
 		
 		prerequisite = {
@@ -3312,9 +3423,9 @@ id = MRU_monarchist_phase_2
 		icon = GFX_MRU_the_FIRST_test
 		
 		prerequisite = {
-			focus = MRU_Form_The_Okharana 
+			focus = MRU_Intelligence_Cooperation_Proposal 
 		}
-		relative_position_id = MRU_Form_The_Okharana
+		relative_position_id = MRU_Intelligence_Cooperation_Proposal
      
 		mutually_exclusive = {
 			focus = MRU_OSI_Cooperation
@@ -3333,6 +3444,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
         add_ideas = MRU_Lets_Not_Cross_That_Line
+		modify_country_flag = {
+			flag = sovereignty
+			value = 1
+		}
 		}
 
 	}
@@ -3342,9 +3457,9 @@ id = MRU_monarchist_phase_2
 		icon = GFX_MRU_the_FIRST_test
 		
 		prerequisite = {
-			focus = MRU_Form_The_Okharana 
+			focus = MRU_Intelligence_Cooperation_Proposal 
 		}
-		relative_position_id = MRU_Form_The_Okharana
+		relative_position_id = MRU_Intelligence_Cooperation_Proposal
      
 		mutually_exclusive = {
 			focus = MRU_Lets_Not_Cross_That_Line
@@ -3363,6 +3478,10 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        add_ideas = MRU_OSI_Cooperation
+	   modify_country_flag = {
+		flag = sovereignty
+		value = -1
+	}
 		}
 
 	}

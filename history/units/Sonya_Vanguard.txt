@@ -1,0 +1,40 @@
+division_template = {
+	name = "Vamguard Brigade" 		
+
+	division_names_group = BRT_KN_01
+
+	regiments = {
+		knightmare_mass_prod_unit = { x = 0 y = 0 }
+		knightmare_mass_prod_unit = { x = 0 y = 1 }
+		knightmare_mass_prod_unit = { x = 1 y = 0 }
+		knightmare_mass_prod_unit = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+		recon = { x = 0 y = 1 }
+	}
+}
+
+
+units = {
+    division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 570
+		division_template = "Vamguard Brigade"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+    division= {	
+		division_name = {    
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 570
+		division_template = "Vamguard Brigade"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+}

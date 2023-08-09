@@ -570,7 +570,7 @@ ideas = {
    		}
 
 		
-		   SRU_standardising_basic_training = {
+		   Partisan_Army_Plan = {
 
 			allowed = {
 				always = no
@@ -581,48 +581,19 @@ ideas = {
 			}
 
 			removal_cost = -1
-			equipment_bonus = {
-				
-				knightmare_mass_prod_unit = {
-					instant = yes
-					reliability = 0.05
-					
-				}
-			
-				knightmare_all_pur_unit = {
-					instant = yes
-					reliability = 0.05
-					
-				}
-			
-	
-				knightmare_artillery_unit = {
-					instant = yes
-					reliability = 0.05
-					
-				}
-			
-	
-			
-				knightmare_fortress_unit = {
-					instant = yes
-					reliability = 0.05
-					
-				}
-			
-				knightmare_melee_unit = {
-					instant = yes
-					reliability = 0.05
-				}
 		
-			}
+			
 			modifier = {
-			army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				training_time_factor = 0.1
+				max_dig_in_factor = 0.1
+				pocket_penalty = 0.1
+				experience_gain_army_unit_factor = 0.1
 			}
 	   }
 	
 
-	SRU_make_stalinium = {
+	   Rocket_Propelled_Grenade = {
 
 		allowed = {
 			always = no
@@ -633,40 +604,17 @@ ideas = {
 		}
 
 		removal_cost = -1
+		
 		equipment_bonus = {
-		
-			knightmare_mass_prod_unit = {
-				instant = yes
-				reliability = 0.05
-				armor_value = 0.05
+			anti_tank_equipment = {
+				build_cost_ic = -0.20
+                soft_attack = 0.1
+                hard_attack = 0.1
 			}
-	
-			knightmare_all_pur_unit = {
-				instant = yes
-				reliability = 0.05
-				armor_value = 0.05
-			}
-		
-			knightmare_artillery_unit = {
-				instant = yes
-				reliability = 0.05
-				armor_value = 0.05
-			}
-		
-			knightmare_fortress_unit = {
-				instant = yes
-				reliability = 0.05
-				armor_value = 0.05
-			}
-		
-			knightmare_melee_unit = {
-				instant = yes
-				reliability = 0.05
-				armor_value = 0.05
-   }
-}
+		}
 	}
-        SRU_experienced_pilots_only = {
+
+	Ambush_Strategies = {
 
 		allowed = {
 			always = no
@@ -677,9 +625,42 @@ ideas = {
 		}
 
 		removal_cost = -1
-		#Requested modifiers depend on a system and unit type we haven't even added in yet
-   }
-        SRU_keeping_our_best_online = {
+		
+		equipment_bonus = {
+			anti_tank_equipment = {
+				build_cost_ic = -0.20
+                soft_attack = 0.1
+                hard_attack = 0.1
+			}
+			category_all_infantry = {
+				breakthrough = 0.1
+                defense = 0.1
+			}
+		}
+	}
+        Fast_Raiding_Jeeps = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			armored_car = {
+				
+            maximum_speed = 0.05
+            breakthrough = 0.1
+            soft_attack = 0.1
+            build_cost_ic = -0.2
+			}
+		}
+	   }
+	   Strike_And_Disperse_Doctrine = {
 
 		allowed = {
 			always = no
@@ -691,44 +672,22 @@ ideas = {
 
 		removal_cost = -1
 		modifier = {
-			#Once again, dependant system is yet to be implemented
 		}
 		equipment_bonus = {
 			
-			knightmare_mass_prod_unit = {
-				instant = yes
-				reliability = 0.05
-				
+			motorized_equipment = {
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption = -0.1 
 			}
-	
-			knightmare_all_pur_unit = {
-				instant = yes
-				reliability = 0.05
-			
+			armored_car = {
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption = -0.1
 			}
-		
-			knightmare_artillery_unit = {
-				instant = yes
-				reliability = 0.05
-			
-			}
-
-			knightmare_fortress_unit = {
-				instant = yes
-				reliability = 0.05
-			
-			}
-		
-
-	
-			knightmare_melee_unit = {
-				instant = yes
-				reliability = 0.05
-				
-            }
         }
 	}
-   SRU_knights_of_socialism = {
+	Asymmetrical_Warfare_Plan = {
 
 		allowed = {
 			always = no
@@ -740,48 +699,37 @@ ideas = {
 
 		removal_cost = -1
 		modifier = {
-			army_leader_start_level = 1
+			experience_gain_army_factor = 0.1
+            training_time_factor = 0.15
+            max_dig_in_factor = 0.15
+            pocket_penalty = 0.25
+            experience_gain_army_unit_factor = 0.20
+            army_attack_speed_factor = 0.1
 		}
+
 		equipment_bonus = {
-		
-			knightmare_all_pur_unit = {
-				instant = yes
-				soft_attack = 0.05
-				hard_attack = 0.05
-				ap_attack = 0.05
-				defence = -0.1
-			} 
-				
-			knightmare_artillery_unit = {
-				instant = yes
-				soft_attack = 0.05
-				hard_attack = 0.05
-				ap_attack = 0.05
-				defence = -0.1
-			}
-
-			knightmare_fortress_unit = {
-				instant = yes
-				soft_attack = 0.05
-				hard_attack = 0.05
-				ap_attack = 0.05
-				defence = -0.1
-			}
 			
-			knightmare_mass_prod_unit = {
-				instant = yes
-				soft_attack = 0.05
-				hard_attack = 0.05
-				ap_attack = 0.05
-				defence = -0.1
+			motorized_equipment = {
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption = -0.1 
 			}
-
-		    knightmare_melee_unit = {
-				instant = yes
-				soft_attack = 0.05
-				hard_attack = 0.05
-       }
-	}
+			armored_car = {
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption = -0.1
+			}
+			anti_tank_equipment = {
+				build_cost_ic = -0.20
+                soft_attack = 0.1
+                hard_attack = 0.1
+			}
+			category_all_infantry = {
+				breakthrough = 0.1
+                defense = 0.1
+			}
+        }
+	
 }
    SRU_cleaning_up_knightmare_production = {
 
@@ -827,7 +775,7 @@ ideas = {
        }
 	}
 }
-   SRU_manuals_even_privates_could_read = {
+Red_Army_Plans= {
 
 		allowed = {
 			always = no
@@ -839,12 +787,12 @@ ideas = {
 
 		removal_cost = -1
 		modifier = {
-			army_leader_start_level = 1
-			experience_gain_knightmares_combat_factor = 0.1
-			army_org_factor = 0.05
+			experience_gain_army_factor = 0.1
+            minimum_training_level = 0.2
+            army_org = 0.1
 		}
    }
-   SRU_reinforcing_the_legs = {
+   SRU_Emergency_Truck_Procurment = {
 
 		allowed = {
 			always = no
@@ -856,43 +804,13 @@ ideas = {
 
 		removal_cost = -1
 		equipment_bonus = {
-			
-			knightmare_all_pur_unit = {
-				instant = yes
-				armor_value = 0.05
-				hardness = 0.05
-				reliability = 0.05
+			motorized_equipment = {
+				build_cost_ic = -0.15
 			}
-
-			knightmare_artillery_unit = {
-				instant = yes
-				armor_value = 0.05
-				hardness = 0.05
-				reliability = 0.05
-			}
-
-			knightmare_fortress_unit = {
-				instant = yes
-				armor_value = 0.05
-				hardness = 0.05
-				reliability = 0.05
-			}
-
-			knightmare_mass_prod_unit = {
-				instant = yes
-				armor_value = 0.05
-				hardness = 0.05
-				reliability = 0.05
-			}
-
-			knightmare_melee_unit = {
-				instant = yes
-				armor_value = 0.05
-				hardness = 0.05
-       }
+		}
 	}
-}
-   SRU_mastered_knightmare_production = {
+
+	Red_Rockets_Glare = {
 
 		allowed = {
 			always = no
@@ -904,60 +822,18 @@ ideas = {
 
 		removal_cost = -1
 		
-			equipment_bonus = {
-				knightmare_mass_prod_unit = {
-					instant = yes
-					build_cost_ic = -0.15
-					reliability = -0.05
-				}
-	
-				knightmare_all_pur_unit = {
-					instant = yes
-					build_cost_ic = -0.15
-					reliability = -0.05
-				}
-	
-				knightmare_artillery_unit = {
-					instant = yes
-					build_cost_ic = -0.15
-					reliability = -0.05
-				}
-	
-				knightmare_fortress_unit = {
-					instant = yes
-					build_cost_ic = -0.15
-					reliability = -0.05
-				}
-	
-				knightmare_melee_unit = {
-					instant = yes
-					build_cost_ic = -0.15
-					reliability = -0.05
-				}
+		equipment_bonus = {
+			rocket_artillery = {
+				breakthrough = 0.15
+                defense = 0.15
+                soft_attack = 0.15
 			}
+		}
 	   }
 	
-	
-		
    
    
-	   SRU_aviation_intergration = {
-
-		allowed = {
-			always = no
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-
-		modifier = {
-		air_cas_efficiency = 0.1
-		}
-   }
-       SRU_load_up_troops = {
+	   Tank_Production_Drive = {
 
 		allowed = {
 			always = no
@@ -970,17 +846,35 @@ ideas = {
 		removal_cost = -1
 
 		equipment_bonus = {
-			mechanized_equipment = {
-				instant = yes
-				build_cost_ic = -0.1
-			}
-			motorized_equipment = {
-				instant = yes
-				build_cost_ic = -0.1
-			}
+		   modern_armor = {
+			build_cost_ic = -0.25
+		   }
+
 		}
    }
-		   SRU_recruit_more_peasants = {
+   SRU_Improved_T-70s = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+		 modern_armor = {
+			soft_attack = 0.05
+            hard_attack = 0.15
+            ap_attack = 0.1
+            max_strength = 0.1
+            reliability = 0.1
+		 }
+		}
+   }
+   Red_Army_Foundations = {
 
 			allowed = {
 				always = no
@@ -993,7 +887,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			conscription = 0.03
+				experience_gain_army_factor = 0.20
+				minimum_training_level = 0.25
+				land_reinforce_rate = 0.15
+				command_power_gain_mult = 0.15
+				army_org = 0.15
 			}
 	   }
 

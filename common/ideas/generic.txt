@@ -794,7 +794,7 @@ economy_cost_factor = -0.1
 }
 }
 
-GEN_autocracy_idea_3 = {
+GEN_totalitarian_socialism_1 = {
 		
 	allowed = {
 		   always = no
@@ -807,12 +807,12 @@ GEN_autocracy_idea_3 = {
 	   removal_cost = -1
 modifier = {
 
- consumer_goods_factor = 0.03
-
+ resistance_growth = -0.05
+ compliance_growth = -0.05
 }
 }
 
-GEN_autocracy_idea_4 = {
+GEN_totalitarian_socialism_2 = {
 		
 	allowed = {
 		   always = no
@@ -825,8 +825,11 @@ GEN_autocracy_idea_4 = {
 	   removal_cost = -1
 modifier = {
 
- consumer_goods_factor = 0.03
- 
+	resistance_growth = -0.05
+	compliance_growth = -0.05
+	consumer_goods_factor = 0.03
+	production_factory_efficiency_gain_factor = 0.05
+	production_factory_max_efficiency_factor = 0.05
 }
 }
 
