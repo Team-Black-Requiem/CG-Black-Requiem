@@ -586,6 +586,9 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	 
 		modifier = {
 			army_org_factor = 0.05
+			training_time_army_factor = -0.1
+			experience_gain_army_factor = 0.1
+			experience_loss_factor = 0.1
 		}
 
 	}
@@ -603,9 +606,9 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	 
 		modifier = {
 			army_org_factor = 0.05
-			training_time_army_factor = 0.05
-			max_training = -0.15
-			minimum_training_level = 0.1
+			training_time_army_factor = -0.1
+			experience_gain_army_factor = 0.1
+			experience_loss_factor = 0.1
 		}
      
 	}
@@ -759,15 +762,80 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	}
 	########## TZARIST MILITARY FIN ######
 	
+    	########## TZARIST POLITICS PATH ######
 
+        
+        Inflame_The_Infighting = {
+			allowed = {
+				always = yes
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+	
+			modifier = {
+				conscription_factor = -0.01
+                stability_factor = -0.05
+                weekly_manpower = -100
+			}
+		}
 
+		Imperialization = {
+			allowed = {
+				always = yes
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost =  -1
 
+			modifier = {
+				stability_weekly_factor = 0.1
+                war_support_weekly = 0.1
+                political_power_factor = 0.15
+			}
+		}
 
+		Titles_For_Soldiers = {
+			allowed = {
+				always = yes
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost =  -1
 
+			modifier = {
+				war_support_weekly_factor = 0.05
+                conscription_factor = 0.02
+                army_morale_factor = 0.05
+			}
+		}
+
+        Titles_For_Support = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost =  -1
+
+			modifier = {
+				political_power_factor = 0.1
+                stability_weekly_factor = 0.05
+                consumer_goods_factor = -0.01
+			}
+		}
 
 
 
