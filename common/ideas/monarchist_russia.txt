@@ -14,12 +14,13 @@ ideas = {
 		removal_cost = -1
 
 		modifier = {
-			industrial_capacity_factory = 0.1
-            industry_air_damage_factor = 0.15
-            production_speed_arms_factory_factor = 0.1
-            production_speed_industrial_complex_factor = 0.1
-            resistance_sabotage = 0.1
-            research_speed_factor = -0.05
+			iindustrial_capacity_factory = 0.1
+			industry_air_damage_factor = 0.15
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_factory_max_efficiency_factor = -0.2
+			resistance_sabotage = 0.1
+			research_speed_factor = -0.1
 		}
 	}
 	
@@ -39,6 +40,7 @@ ideas = {
             compliance_growth_on_our_occupied_states = 0.1
             authoritarian_drift = 0.1
             army_morale_factor = 0.05
+            army_core_defence_factor = 0.1
 		}
 	}
 
@@ -72,14 +74,91 @@ ideas = {
 		removal_cost = -1
 	 
 		modifier  = {
-			stability_weekly = -0.10
-            war_support_weekly_factor = 0.15 
-            national_supremacist_drift = 0.5
-            conscription_factor = 0.2
+			stability_factor = -0.25
+            war_support_weekly_factor = 0.02
+           national_supremacist_drift = 0.05
+           conscription_factor = -0.1
+
 		}
 	}
 	########## New tree ########
    
+	# opening idea changes 
+
+	Tsar_Vesvelod_Romanov  = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		modifier = {
+			stability_factor = 0.05
+			authoritarian_democracy_drift = 0.01
+			
+		}
+	}
+
+	Opprichniki_Assembling_Command_Structure  = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		modifier = {
+			army_org_factor = -0.05
+            max_planning_factor = -0.25
+            planning_speed = -0.15
+            authoritarian_democracy_drift = 0.01
+		}
+	}
+
+	Okhrana = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		modifier = {
+			resistance_activity = -0.05
+            female_random_operative_chance = 0.2
+            encryption_factor = 0.1
+            commando_trait_chance_factor = 0.1
+		}
+	}
+
+	Paramilitary_Revolt = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		modifier = {
+			national_supremacist_drift = 0.02
+            conscription_factor = -0.02
+            stability_factor = -0.25
+            weekly_manpower = -250
+		}
+	}
     ########## TZARIST ECONOMY PATH ######
 	
 	# Closing The Technology Gap path
@@ -164,6 +243,185 @@ ideas = {
 
 	}
 
+	# Closing The Technology Gap FIN
+
+	# Expand On Our Industrial Power PATH
+
+	Heavy_Industry = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	  modifier = {
+		ndustrial_capacity_factory = 0.1
+        industry_air_damage_factor = 0.15
+        production_speed_arms_factory_factor = 0.15
+        production_speed_industrial_complex_factor = 0.15
+        production_factory_max_efficiency_factor = -0.1
+        resistance_sabotage = 0.1
+        research_speed_factor = -0.1
+    }
+}
+
+Heavy_Industry = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+  modifier = {
+	ndustrial_capacity_factory = 0.1
+	industry_air_damage_factor = 0.15
+	production_speed_arms_factory_factor = 0.15
+	production_speed_industrial_complex_factor = 0.15
+	production_factory_max_efficiency_factor = -0.1
+	resistance_sabotage = 0.1
+	research_speed_factor = -0.1
+}
+
+}
+
+Northern_Resource_Extraction = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+  modifier = {
+	local_resources_factor = 0.15
+}
+
+}
+
+Nationalize_The_Construction_Industry = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+  modifier = {
+	production_speed_buildings_factor = 0.15
+}
+
+}
+
+Northern_Resource_Extraction = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+  modifier = {
+	local_resources_factor = 0.15
+}
+
+}
+
+Empower_The_Ministry_Of_Industrial_Development = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+  modifier = {
+	industrial_capacity_factory = 0.15
+    industry_air_damage_factor = 0.20
+    production_speed_arms_factory_factor = 0.2
+    production_speed_industrial_complex_factor = 0.2
+    local_resources_factor = 0.15
+}
+
+}
+
+	# Expand On Our Industrial Power FIN
+
+	# Seize Oligarchs Wealth
+
+    Oligarchs_Reserves_Seized = {
+		allowed = {
+			always = yes
+		}
+	
+		allowed_civil_war = {
+			always = yes
+		}
+	
+		removal_cost = -1
+	  modifier = {
+		consumer_goods_factor = -0.02
+	}
+	
+	}
+	
+	Anti-Corruption_Drive = {
+		allowed = {
+			always = yes
+		}
+	
+		allowed_civil_war = {
+			always = yes
+		}
+	
+		removal_cost = -1
+	  modifier = {
+		consumer_goods_factor = -0.03
+        political_power_factor = 0.15
+		authoritarian_democracy_drift = 0.04
+	}
+	
+	}
+
+	Rule_Of_Managers = {
+		allowed = {
+			always = yes
+		}
+	
+		allowed_civil_war = {
+			always = yes
+		}
+	
+		removal_cost = -1
+	  modifier = {
+		political_power_factor = 0.05
+        production_factory_efficiency_gain_factor = 0.05
+        political_advisor_cost_factor = -0.15
+	}
+	
+	}
+
+
+
+
+
+
+
+
+	#Seize Oligarchs Wealth
 	########## TZARIST ECONOMY FIN #######
 
 
