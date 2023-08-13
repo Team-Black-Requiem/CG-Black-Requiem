@@ -1,7 +1,7 @@
 guiTypes = {
 	### Modder note
 	containerWindowType = {
-		name = "knightmare_designer_view"
+		name = "equipment_designer_knightmare_frame"
 		position = { x=0 y=0 }
 		size = { width = 1091 height = 542 }
 		moveable = yes
@@ -153,6 +153,11 @@ guiTypes = {
 				position = { x=@fixed_btn_mod_col_2 y=@fixed_btn_mod_row_1 }
 			}
 
+			positionType = {
+				name = "pos_custom_module_slot_window_7" ###Test type
+				position = { x=@fixed_btn_mod_col_5 y=@fixed_btn_mod_row_1 }
+			}
+
 			######################################################################
 			# Special module slot below
 			### you don't have to seperate them like this
@@ -160,22 +165,22 @@ guiTypes = {
 			######################################################################
 
 			positionType = {
-				name = "pos_custom_module_slot_window_7"
+				name = "pos_custom_module_slot_window_8"
 				position = { x=@fixed_btn_mod_col_2 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_8"
+				name = "pos_custom_module_slot_window_9"
 				position = { x=@fixed_btn_mod_col_3 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_9"
+				name = "pos_custom_module_slot_window_10"
 				position = { x=@fixed_btn_mod_col_4 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_10"
+				name = "pos_custom_module_slot_window_11"
 				position = { x=@fixed_btn_mod_col_5 y=@fixed_btn_mod_row_0 }
 			}
 
@@ -183,90 +188,90 @@ guiTypes = {
 			# Equipment upgrades
 			######################################################################
 
-			containerWindowType = {
-				name = "equipment_upgrade_0"
-				position = { x = 220 y = 297 }
-				size = { width = 130 height = 50 } 
-			
-				buttonType = {
-					name = "btn_dec"
-					quadTextureSprite ="GFX_naval_decrease_amount"
-					position = { x = 90 y = 17 }
-					clicksound = "ui_tank_designer_decrease"
-				}
-
-				buttonType = {
-					name = "btn_inc"
-					quadTextureSprite ="GFX_naval_increase_amount"
-					position = { x = 150 y = 17 }
-					clicksound = "ui_tank_designer_increase"
-				}
-				
-
-				instantTextboxType = {
-					name = "name"
-					position = { x = 91 y = 3 }
-					font = "hoi_18mbs"
-					maxWidth = 90
-					maxHeight = 20
-					format = center
-					text = "_engine_"
-				}
-
-				instantTextboxType = {
-					name = "level"
-					position = { x = 122 y = 18 }
-					font = "hoi_18mbs"
-					maxWidth = 28
-					maxHeight = 30
-					format = center
-					vertical_alignment = center
-					text = "99"
-				}
-
-			}
-
-			containerWindowType = {
-				name = "equipment_upgrade_1"
-				position = { x = 380 y = 297 }
-				size = { width = 130 height = 50 } 
-
-				buttonType = {
-					name = "btn_dec"
-					quadTextureSprite ="GFX_naval_decrease_amount"
-					position = { x = 36 y = 17 }
-					clicksound = "ui_tank_designer_decrease"
-				}
-
-				buttonType = {
-					name = "btn_inc"
-					quadTextureSprite ="GFX_naval_increase_amount"
-					position = { x = 96 y = 17 }
-					clicksound = "ui_tank_designer_increase"
-				}
-
-				instantTextboxType = {
-					name = "name"
-					position = { x = 37 y = 3 }
-					font = "hoi_18mbs"
-					maxWidth = 90
-					maxHeight = 20
-					format = center
-					text = "_armor_"
-				}
-
-				instantTextboxType = {
-					name = "level"
-					position = { x = 68 y = 18 }
-					font = "hoi_18mbs"
-					maxWidth = 29
-					maxHeight = 30
-					format = center
-					vertical_alignment = center
-					text = "99"
-				}
-
-			}
+#			containerWindowType = {
+#				name = "equipment_upgrade_0"
+#				position = { x = 220 y = 297 }
+#				size = { width = 130 height = 50 } 
+#			
+#				buttonType = {
+#					name = "btn_dec"
+#					quadTextureSprite ="GFX_naval_decrease_amount"
+#					position = { x = 90 y = 17 }
+#					clicksound = "ui_tank_designer_decrease"
+#				}
+#
+#				buttonType = {
+#					name = "btn_inc"
+#					quadTextureSprite ="GFX_naval_increase_amount"
+#					position = { x = 150 y = 17 }
+#					clicksound = "ui_tank_designer_increase"
+#				}
+#				
+#
+#				instantTextboxType = {
+#					name = "name"
+#					position = { x = 91 y = 3 }
+#					font = "hoi_18mbs"
+#					maxWidth = 90
+#					maxHeight = 20
+#					format = center
+#					text = "_engine_"
+#				}
+#
+#				instantTextboxType = {
+#					name = "level"
+#					position = { x = 122 y = 18 }
+#					font = "hoi_18mbs"
+#					maxWidth = 28
+#					maxHeight = 30
+#					format = center
+#					vertical_alignment = center
+#					text = "99"
+#				}
+#
+#			}
+#
+#			containerWindowType = {
+#				name = "equipment_upgrade_1"
+#				position = { x = 380 y = 297 }
+#				size = { width = 130 height = 50 } 
+#
+#				buttonType = {
+#					name = "btn_dec"
+#					quadTextureSprite ="GFX_naval_decrease_amount"
+#					position = { x = 36 y = 17 }
+#					clicksound = "ui_tank_designer_decrease"
+#				}
+#
+#				buttonType = {
+#					name = "btn_inc"
+#					quadTextureSprite ="GFX_naval_increase_amount"
+#					position = { x = 96 y = 17 }
+#					clicksound = "ui_tank_designer_increase"
+#				}
+#
+#				instantTextboxType = {
+#					name = "name"
+#					position = { x = 37 y = 3 }
+#					font = "hoi_18mbs"
+#					maxWidth = 90
+#					maxHeight = 20
+#					format = center
+#					text = "_armor_"
+#				}
+#
+#				instantTextboxType = {
+#					name = "level"
+#					position = { x = 68 y = 18 }
+#					font = "hoi_18mbs"
+#					maxWidth = 29
+#					maxHeight = 30
+#					format = center
+#					vertical_alignment = center
+#					text = "99"
+#				}
+#
+#			}
 		}
 
 		iconType = {
