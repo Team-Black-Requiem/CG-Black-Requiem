@@ -623,7 +623,10 @@ naval_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			 OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+			}
 		}
 		
 		research_bonus = {
@@ -651,9 +654,11 @@ materiel_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
-		}
-		
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
+	    }
 		research_bonus = {
 			artillery = 0.10
 		}
@@ -679,7 +684,10 @@ aircraft_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
@@ -706,7 +714,10 @@ industrial_concern = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
@@ -735,7 +746,10 @@ tank_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
