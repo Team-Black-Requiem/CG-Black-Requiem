@@ -4822,8 +4822,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-            add_stability = 10
-            add_war_support = 10
+            add_stability = 0.1
+            add_war_support = 0.1
             add_offsite_building = {
                 type = industrial_complex
                 level = 2
@@ -4869,7 +4869,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
-            add_stability = 10
+            add_stability = 0.1
             add_offsite_building = {
                 type = industrial_complex
                 level = 3
@@ -5475,7 +5475,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               add_war_support = 10
+               add_war_support = 0.1
 
               hidden_effect = {
             }
@@ -5491,7 +5491,7 @@ focus_tree = {
 
         prerequisite = { 
             focus = EIZ_Codify_Rules_Of_Engagement 
-            focus = EIZ_Lighting_Warfare
+            focus = EIZ_Lightning_Warfare
             focus = EIZ_Unstoppable_Force
         }
         relative_position_id = EIZ_Codify_Rules_Of_Engagement
@@ -6153,7 +6153,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-           add_ideas = Motorized_Infantry_2
+                swap_ideas = {
+                    remove_idea = Motorized_Infantry
+                    add_idea = Motorized_Infantry_2
+            }       
               hidden_effect = {
             }
         }
@@ -6282,7 +6285,7 @@ focus_tree = {
 
     
     focus = {
-        id =EIZ_Lighting_Warfare
+        id =EIZ_Lightning_Warfare
         
         x = 0
         y = 1
@@ -6436,7 +6439,7 @@ focus_tree = {
 
         focus = {
             id = EIZ_Danish_Volunteer_Quantity
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Danish_Volunteer_Quantity
             x = 1
             y = 1
     
@@ -6477,14 +6480,12 @@ focus_tree = {
 
         focus = {
             id = EIZ_Polish_Volunteer_Quality
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Polish_Volunteer_Quality
             x = 0
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Danish_Volunteer_Quantity
-            }
-            prerequisite = {
+                focus = EIZ_Danish_Volunteer_Quantity 
                 focus = EIZ_Danish_Volunteer_Quality
             }
 
@@ -6522,14 +6523,12 @@ focus_tree = {
 
         focus = {
             id = EIZ_Polish_Volunteer_Quantity
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Polish_Volunteer_Quantity
             x = 2   
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Danish_Volunteer_Quantity
-            }
-            prerequisite = {
+                focus = EIZ_Danish_Volunteer_Quantity 
                 focus = EIZ_Danish_Volunteer_Quality
             }
 
@@ -6567,16 +6566,15 @@ focus_tree = {
 
         focus = {
             id = EIZ_Skandinavian_Volunteer_Quantity
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Skandinavian_Volunteer_Quantity
             x = 0
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Polish_Volunteer_Quality
-            }
-            prerequisite = {
+                focus = EIZ_Polish_Volunteer_Quality 
                 focus = EIZ_Polish_Volunteer_Quantity
             }
+
            
             mutually_exclusive = {focus = EIZ_Skandinavian_Volunteer_Quality
             }
@@ -6610,16 +6608,15 @@ focus_tree = {
 
         focus = {
             id = EIZ_Skandinavian_Volunteer_Quality
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Skandinavian_Volunteer_Quality
             x = 0
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Polish_Volunteer_Quality
-            }
-            prerequisite = {
+                focus = EIZ_Polish_Volunteer_Quality 
                 focus = EIZ_Polish_Volunteer_Quantity
             }
+
 
             mutually_exclusive = {focus = EIZ_Skandinavian_Volunteer_Quantity
             }
@@ -6653,14 +6650,12 @@ focus_tree = {
 
         focus = {
             id = EIZ_Baltic_Volunteer_Quality
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Baltic_Volunteer_Quality
             x = 0
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Skandinavian_Volunteer_Quantity
-            }
-            prerequisite = {
+                focus = EIZ_Skandinavian_Volunteer_Quality 
                 focus = EIZ_Skandinavian_Volunteer_Quantity
             }
            
@@ -6695,15 +6690,13 @@ focus_tree = {
 
         focus = {
             id = EIZ_Baltic_Volunteer_Quantity
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Baltic_Volunteer_Quantity
             x = 2
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Polish_Volunteer_Quality
-            }
-            prerequisite = {
-                focus = EIZ_Polish_Volunteer_Quantity
+                focus = EIZ_Skandinavian_Volunteer_Quality 
+                focus = EIZ_Skandinavian_Volunteer_Quantity
             }
 
             mutually_exclusive = { focus = EIZ_Baltic_Volunteer_Quality}
@@ -6738,14 +6731,12 @@ focus_tree = {
 
         focus = {
             id = EIZ_Swiss_Volunteer_Quantity
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Swiss_Volunteer_Quantity
             x = 2
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Baltic_Volunteer_Quantity
-            }
-            prerequisite = {
+                focus = EIZ_Baltic_Volunteer_Quantity 
                 focus = EIZ_Baltic_Volunteer_Quality
             }
 
@@ -6788,9 +6779,7 @@ focus_tree = {
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Swiss_Volunteer_Quality
-            }
-            prerequisite = {
+                focus = EIZ_Swiss_Volunteer_Quality 
                 focus = EIZ_Swiss_Volunteer_Quantity
             }
            
@@ -6823,14 +6812,12 @@ focus_tree = {
 
         focus = {
             id = EIZ_Swiss_Volunteer_Quality
-            icon = GFX_EIZ_Danish_Volunteer_Quality
+            icon = GFX_EIZ_Swiss_Volunteer_Quality
             x = 0
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Baltic_Volunteer_Quantity
-            }
-            prerequisite = {
+                focus = EIZ_Baltic_Volunteer_Quantity 
                 focus = EIZ_Baltic_Volunteer_Quality
             }
 
