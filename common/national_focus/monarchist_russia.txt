@@ -274,7 +274,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		country_event = MRU.8
+		country_event = MRU.12
 	}
 
 }
@@ -302,13 +302,13 @@ focus = {
 	}
 
 	completion_reward = { 
-		country_event = MRU.8
+		country_event = MRU.13
 	}
 
 }
 
 focus = {
-	id = MRU_Turn_Them_On_Each_Other
+	id = Inflame_The_Infighting
 	icon = GFX_MRU_the_FIRST_test
 	relative_position_id = MRU_Bringing_Our_House_In_Order
 
@@ -334,7 +334,13 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.14
+		remove_ideas = Paramilitary_Revolt
+		add_timed_idea = {
+			idea = Paramilitary_Infighting
+			days = 35
+		}	
+	
 	}
 
 }
@@ -357,14 +363,17 @@ focus = {
 	}
 
     mutually_exclusive = {
-		focus = MRU_Turn_Them_On_Each_Other
+		focus = Inflame_The_Infighting
 	}
 	ai_will_do = {
 		factor = 10
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.15
+		remove_ideas = Paramilitary_Revolt
+		add_stability = -0.15
+		add_political_power = -100
 	}
 
 }
@@ -386,14 +395,14 @@ focus = {
 		focus = MRU_Crush_The_Mutiny
 	}
     prerequisite = {
-		focus = MRU_Turn_Them_On_Each_Other
+		focus = Inflame_The_Infighting
 	}
 	ai_will_do = {
 		factor = 10
 	}
 
 	completion_reward = { 
-		
+		add_stability = 0.1
 	}
 
 }
@@ -420,7 +429,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		add_ideas = Imperialization
 	}
 
 }
@@ -447,7 +456,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.16
 	}
 
 }
@@ -501,7 +510,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.17
 	}
 
 }
@@ -528,7 +537,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.19
 	}
 
 }
@@ -555,7 +564,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.18
 	}
 
 }
@@ -582,7 +591,10 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		add_timed_idea = {
+			idea = Legal_Groundwork
+			days = 360
+		}
 	}
 
 }
@@ -614,7 +626,7 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		country_event = MRU.20
 	}
 
 }
@@ -643,7 +655,7 @@ focus = {
 		}
 	
 		completion_reward = { 
-               country_event = MRU.21
+			country_event = MRU.10
 		}
 
     }
@@ -1109,6 +1121,7 @@ focus = {
 		}
 	
 		completion_reward = { 
+			   country_event = MRU.11
                add_ideas = The_Opprichnikis_Will
 		}
 
@@ -1236,7 +1249,7 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+		country_event = MRU.8
 	}
 
 }
@@ -1264,7 +1277,10 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	    swap_ideas = {
+			remove_idea = Heartland_Of_Heavy_Industry
+			add_idea = Expandind_Heavy_Industry
+		}
 	}
 
 }
@@ -1292,7 +1308,13 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_tech_bonus = {
+		name = Borthern_resource_extraction
+		uses = 2
+		category = excavation_tech
+		bonus = 0.75
+	}
+	add_ideas = Northern_Resource_Extraction
 	}
 
 }
@@ -1320,7 +1342,14 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_offsite_building = {
+		type = industrial_complex
+		level = -4
+	}
+	add_offsite_building = {
+		type = arms_factory
+		level = 4
+	}
 	}
 
 }
@@ -1377,6 +1406,14 @@ focus = {
 
 	completion_reward = { 
 	
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 6
+		}
 	}
 
 }
@@ -1405,7 +1442,10 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_timed_idea = {
+		idea = Nationalize_The_Construction_Industry
+		days = 360
+	}
 	}
 
 }
@@ -1432,7 +1472,10 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	swap_ideas = {
+		remove_idea = Expanding_Heavy_Industry
+		add_idea = Empower_The_Ministry_Of_Industrial_Development
+	}
 	}
 
 }
@@ -1460,7 +1503,10 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	 swap_ideas = {
+		remove_idea = Heartland_Of_Heavy_Industry
+		add_idea = Modernizing_Industry
+	 }
 	}
 
 }
@@ -1488,7 +1534,12 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		add_tech_bonus = {
+			name = Refining_Advanced_Materials
+			uses = 3
+			category = excavation_tech
+			bonus = 0.5
+		}
 	}
 
 }
@@ -1516,7 +1567,11 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	# Will update when i can access the game. these factories are meant to be in the urals
+	add_offsite_building = {
+		type = arms_factory
+		level = 6
+	}
 	}
 
 }
@@ -1544,7 +1599,19 @@ focus = {
 	}
 
 	completion_reward = { 
-		
+		# to add design company later
+		add_tech_bonus = {
+			name = Electronics_Modernization
+			uses = 2
+			category = electronics
+			bonus = 0.75
+		}
+		add_tech_bonus = {
+			name = Radar_Modernization
+			uses = 2
+			category = radar_tech
+			bonus = 0.5
+		}
 	}
 
 }
@@ -1572,7 +1639,7 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_ideas = Automate_Factory_Lines
 	}
 
 }
@@ -1602,7 +1669,7 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_ideas = Engineer_and_Scientist_Drive
 	}
 
 }
@@ -1630,7 +1697,11 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+		remove_ideas = Engineer_and_Scientist_Drive
+	swap_ideas = {
+		remove_idea = Modernizing_Industry
+		add_idea = Empower_The_Ministry_Of_Trade_and_Technologys
+	}
 	}
 
 }
@@ -1658,7 +1729,11 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+		country_event = MRU.9
+		add_timed_idea = {
+			idea = Oligarchs_Reserves_Seized
+			days = 180
+		} 
 	}
 
 }
@@ -1687,6 +1762,10 @@ focus = {
 
 	completion_reward = { 
 	
+		add_timed_idea = {
+			idea = Anti-Corruption_Drive
+			days = 180
+		}
 	}
 
 }
@@ -1715,6 +1794,10 @@ focus = {
 
 	completion_reward = { 
 	
+		add_timed_idea = {
+			idea = Rule_Of_Managers
+			days = 180
+		}
 	}
 
 }
@@ -1748,7 +1831,7 @@ focus = {
 	}
 
 	completion_reward = { 
-	
+	add_stability = 0.15
 	}
 
 }

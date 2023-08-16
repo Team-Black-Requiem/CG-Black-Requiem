@@ -220,10 +220,10 @@
 		}
 	}
 				focus = {
-			id = SRU_Politburo
+			id = Politburo_War_Powers
 			icon = GFX_SRU_politburo
 			cost = 2
-			x = -11
+			x = 0
 			y = 2
 			prerequisite = { focus = SRU_overthrow_aristocracy }
 			available = {
@@ -235,19 +235,18 @@
 			relative_position_id = SRU_overthrow_aristocracy	
 			
 			completion_reward = {
-				add_ideas = SRU_the_politburo
-				add_stability = 0.15
-				recruit_character = SRU_Andrei_Smirnov
+			 country_event = SRU.6
+			 add_ideas = Politburo_War_Powers
 			}
 	}
 				focus = {
-			id = SRU_Establish_Political_Commissariat
-			icon = GFX_SRU_Establish_Political_Commissariat
+			id = Establishing_The_Peoples_Congress
+			icon = GFX_Establishing_The_Peoples_Congress
 			cost = 3
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_Politburo }
-			relative_position_id = SRU_Politburo
+			prerequisite = { focus = Politburo_War_Powers }
+			relative_position_id = Politburo_War_Powers
 			available = {
                            country_exists = SRU
 			}
@@ -260,16 +259,19 @@
 			}
 	}
 				focus = {
-			id = SRU_State_Oversight_In_The_Civil_Service
-			icon = GFX_SRU_State_Oversight_In_The_Civil_Service
+			id = Full_Congress_Elections
+			icon = GFX_Full_Congress_Elections
 			cost = 2
-			x = 2
+			x = 1
 			y = 1
-			prerequisite = { focus = SRU_Establish_Political_Commissariat }
-			relative_position_id = SRU_Establish_Political_Commissariat
+			prerequisite = { focus = Establishing_The_Peoples_Congress }
+			relative_position_id = Establishing_The_Peoples_Congress
 			available = {
-				has_completed_focus = SRU_Establish_Political_Commissariat
+				has_completed_focus = Establishing_The_Peoples_Congress
 				country_exists = SRU
+			}
+			mutually_exclusive = {
+				focus = Minority_Seat_Elections
 			}
 			ai_will_do = {
 					factor = 100
@@ -281,15 +283,18 @@
 			}
 	}
 				focus = {
-			id = SRU_Appoint_The_Chief_Political_Commissar
-			icon = GFX_SRU_Appoint_The_Chief_Political_Commissar
+			id = Minority_Seat_Elections
+			icon = GFX_Minority_Seat_Elections
 			cost = 2
-			x = -2
+			x = -1
 			y = 1
-			prerequisite = { focus = SRU_Establish_Political_Commissariat }
-			relative_position_id = SRU_Establish_Political_Commissariat
+			prerequisite = { focus = Establishing_The_Peoples_Congress }
+			relative_position_id = Establishing_The_Peoples_Congress
 			available = {
                            country_exists = SRU
+			}
+			mutually_exclusive = {
+				focus = Full_Congress_Elections
 			}
 			ai_will_do = {
 					factor = 100
@@ -300,14 +305,14 @@
 			}
 	}
 				focus = {
-			id = SRU_The_Peoples_Bureaucracy
-			icon = GFX_SRU_The_Peoples_Bureaucracy
+			id = Mobilize_The_State
+			icon = GFX_Mobilize_The_State
 			cost = 2
-			x = 2
+			x = 1
 			y = 1
-			prerequisite = { focus = SRU_Appoint_The_Chief_Political_Commissar 
-			                 focus = SRU_State_Oversight_In_The_Civil_Service }
-			relative_position_id = SRU_Appoint_The_Chief_Political_Commissar
+			prerequisite = { focus = Minority_Seat_Elections 
+			                 focus = Full_Congress_Elections }
+			relative_position_id = Minority_Seat_Elections
 			available = {
                            country_exists = SRU
 			}
@@ -435,13 +440,13 @@
 			}
 	}
 				focus = {
-			id = SRU_Establish_The_CSS
-			icon = GFX_SRU_Establish_The_CSS
+			id = The_Party_Or_The_State?
+			icon = GFX_The_Party_Or_The_State?
 			cost = 3
 			x = -3
 			y = 1
-			prerequisite = { focus = SRU_The_Peoples_Bureaucracy }
-			relative_position_id = SRU_The_Peoples_Bureaucracy
+			prerequisite = { focus = Mobilize_The_State }
+			relative_position_id = Mobilize_The_State
 			available = {
                            country_exists = SRU
 			}
@@ -454,13 +459,13 @@
 			}
 	}
 				focus = {
-			id = SRU_Establish_The_Cheka
-			icon = GFX_SRU_Establish_The_Cheka
+			id = The_Power_of_The_Media
+			icon = GFX_The_Power_of_The_Media
 			cost = 3
 			x = 3
 			y = 1
-			prerequisite = { focus = SRU_The_Peoples_Bureaucracy }
-			relative_position_id = SRU_The_Peoples_Bureaucracy
+			prerequisite = { focus = Mobilize_The_State }
+			relative_position_id = Mobilize_The_State
 			available = {
                            country_exists = SRU
 			}
@@ -472,52 +477,16 @@
 				country_event = SRU.54
 			}
 	}
+		
+
 				focus = {
-			id = SRU_Secure_The_State
-			icon = GFX_SRU_Secure_The_State
-			cost = 2
-			x = 1
-			y = 1
-			prerequisite = { focus = SRU_Establish_The_Cheka }
-			relative_position_id = SRU_Establish_The_Cheka
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
-			
-			completion_reward = {
-				add_ideas = SRU_Secure_The_State
-			}
-	}
-				focus = {
-			id = SRU_Expose_Enemy_Agents
-			icon = GFX_SRU_Expose_Enemy_Agents
-			cost = 2
-			x = 1
-			y = 1
-			prerequisite = { focus = SRU_Establish_The_CSS }
-			relative_position_id = SRU_Establish_The_CSS
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
-			
-			completion_reward = {
-				add_ideas = SRU_Socialist_Agents
-			}
-	}
-				focus = {
-			id = SRU_Appoint_The_Director_Of_CSS
-			icon = GFX_SRU_Appoint_The_Director_Of_CSS
+			id = Educational_Doctrine
+			icon = GFX_Educational_Doctrine
 			cost = 1
-			x = -1
-			y = 1
-			prerequisite = { focus = SRU_Establish_The_CSS }
-			relative_position_id = SRU_Establish_The_CSS
+			x = 0
+			y = 2
+			prerequisite = { focus = The_Party_Or_The_State? }
+			relative_position_id = The_Party_Or_The_State?
 			available = {
                            country_exists = SRU
 			}
@@ -556,13 +525,13 @@
 			}
 	}
 			focus = {
-			id = SRU_Arrest_Collaborators
-			icon = GFX_SRU_Arrest_Collaborators
+			id = Opening_The_Ministry_of_Welfare
+			icon = GFX_Opening_The_Ministry_of_Welfare
 			cost = 2
-			x = 1
-			y = 1
-			prerequisite = { focus = SRU_Appoint_The_Director_Of_CSS focus = SRU_Expose_Enemy_Agents }
-			relative_position_id = SRU_Appoint_The_Director_Of_CSS
+			x = 0
+			y = 2
+			prerequisite = { focus = Educational_Doctrine focus = SRU_Expose_Enemy_Agents }
+			relative_position_id = Educational_Doctrine
 			available = {
                            country_exists = SRU
 			}
@@ -575,13 +544,13 @@
 			}
 	}
 				focus = {
-			id = SRU_Appoint_The_Director_Of_Cheka 
-			icon = GFX_SRU_Appoint_The_Director_Of_Cheka
+			id = a_Matter_Of_Dissidents 
+			icon = GFX_a_Matter_Of_Dissidents
 			cost = 1
-			x = -1
-			y = 1
-			prerequisite = { focus = SRU_Establish_The_Cheka }
-			relative_position_id = SRU_Establish_The_Cheka
+			x = 0
+			y = 2
+			prerequisite = { focus = The_Power_of_The_Media }
+			relative_position_id = The_Power_of_The_Media
 			available = {
                            country_exists = SRU
 			}
@@ -594,14 +563,14 @@
 			}
 	}
 					focus = {
-			id = SRU_Purge_Dissidents
-			icon = GFX_SRU_Purge_Dissidents
+			id = Opening_The_Ministry_of_Information
+			icon = GFX_Opening_The_Ministry_of_Information
 			cost = 2
-			x = 1
-			y = 1
-			prerequisite = { focus = SRU_Appoint_The_Director_Of_Cheka 
-			                 Focus = SRU_Secure_The_State }
-			relative_position_id = SRU_Appoint_The_Director_Of_Cheka
+			x = 0
+			y = 2
+			prerequisite = { focus = a_Matter_Of_Dissidents 
+			            }
+			relative_position_id = a_Matter_Of_Dissidents
 			available = {
                            country_exists = SRU
 			}
@@ -614,26 +583,172 @@
 				add_war_support = 0.1
 			}
 	}
-				focus = {
-			id = SRU_Peoples_Congress
-			icon = GFX_SRU_Peoples_Congress
-			cost = 3
-			x = 3
-			y = 1
-			prerequisite = { focus = SRU_Arrest_Collaborators
-		focus = SRU_Purge_Dissidents }
-			relative_position_id = SRU_Arrest_Collaborators
-			available = {
-                           country_exists = SRU
+
+	focus = {
+		id = Rooting_The_Jacobins_Out_Of_The_Cheka
+		icon = GFX_Opening_The_Ministry_of_Information
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = { focus = Mobilize_The_State 
+					}
+		relative_position_id = Mobilize_The_State
+		available = {
+					   country_exists = SRU
+		}
+		ai_will_do = {
+				factor = 100
 			}
-			ai_will_do = {
-					factor = 100
+		
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+}
+
+focus = {
+	id = Chairman_Bakatin
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = -1
+	y = 1
+	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
 				}
-			
-			completion_reward = {
-				country_event = SRU.55
-			}
+	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	available = {
+				   country_exists = SRU
 	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	id = Making_The_Cheka_Accountable
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = 0
+	y = 2
+	prerequisite = { focus = Chairman_Bakatin 
+				}
+	relative_position_id = Chairman_Bakatin
+	available = {
+				   country_exists = SRU
+	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	id = Chairman_Kyruchkov
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = 1
+	y = 1
+	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
+				}
+	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	available = {
+				   country_exists = SRU
+	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	id = Making_The_Cheka_Our_Ally
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = 0
+	y = 2
+	prerequisite = { focus = Chairman_Kyruchkov 
+				}
+	relative_position_id = Chairman_Kyruchkov
+	available = {
+				   country_exists = SRU
+	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	id = Founding_The_State_Militsiya
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = -1
+	y = 1
+	prerequisite = {
+		 focus = Making_The_Cheka_Our_Ally 
+	}
+    prerequisite = {
+		focus = Making_The_Cheka_Accountable
+	}
+	relative_position_id = Making_The_Cheka_Our_Ally
+	available = {
+				   country_exists = SRU
+	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+focus = {
+	id = Groundwork_Of_The_Revolution
+	icon = GFX_Opening_The_Ministry_of_Information
+	cost = 2
+	x = 0
+	y = 2
+	prerequisite = {
+		 focus = Founding_The_State_Militsiya 
+	}
+    prerequisite = {
+		focus = Opening_The_Ministry_of_Welfare
+	}
+	prerequisite = {
+		focus = Opening_The_Ministry_of_Information
+	}
+	relative_position_id = Founding_The_State_Militsiya
+	available = {
+				   country_exists = SRU
+	}
+	ai_will_do = {
+			factor = 100
+		}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+	###### 
 				focus = {
 			id = SRU_Take_Families_Hostage 
 			icon = GFX_SRU_Take_Families_Hostage
@@ -2297,8 +2412,7 @@
 				icon = GFX
 				cost = 5
 				x = 0
-				y = 12
-				prerequisite = { focus = SRU_overthrow_aristocracy }
+				y = 15
 				relative_position_id = SRU_overthrow_aristocracy
 				available = {
 								country_exists = SRU 
@@ -3230,7 +3344,7 @@
 				id = SRU_Failures_Of_The_Red_Mutiny
 				icon = GFX_SRU_sokolo_mil_reforms
 				cost = 5
-				x = 14
+				x = 11
 				y = 2
 				prerequisite = { focus = SRU_overthrow_aristocracy }
 				relative_position_id = SRU_overthrow_aristocracy
@@ -3659,7 +3773,7 @@
 				id = Sonyas_March_Forward
 				icon = GFX_SRU_sonya_marches_forward
 				cost = 5
-				x = 0
+				x = -10
 				y = 2
 				prerequisite = { focus = SRU_overthrow_aristocracy }
 				relative_position_id = SRU_overthrow_aristocracy
@@ -3675,35 +3789,16 @@
 				}
 
 			}
+		
 			focus = {
-				id = Communal_Planning
-				icon = GFX_SRU_communal_planning
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Sonyas_March_Forward }
-				relative_position_id = Sonyas_March_Forward
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {
-					add_research_slot = 1
-				}
-
-			}
-			focus = {
-				id = Battle_Economy
+				id = Two_Year_Industrialization_Plan
 				icon = GFX
 				cost = 1
 				x = -3
 				y = 1
-				prerequisite = { focus = Communal_Planning }
-				mutually_exclusive = { focus = A_Social_Econonmy }
-				relative_position_id = Communal_Planning
+				prerequisite = { focus = Sonyas_March_Forward }
+				mutually_exclusive = { focus = Resource_Export_Plan }
+				relative_position_id = Sonyas_March_Forward
 				available = {
 								country_exists = SRU 
 				}
@@ -3717,13 +3812,13 @@
 
 			}
 			focus = {
-				id = A_Social_Econonmy
+				id = Resource_Export_Plan
 				icon = GFX
 				cost = 1
 				x = 3
 				y = 1
-				prerequisite = { focus = Communal_Planning }
-				relative_position_id = Communal_Planning
+				prerequisite = { focus = Sonyas_March_Forward }
+				relative_position_id = Sonyas_March_Forward
 				available = {
 								country_exists = SRU 
 				}
@@ -3737,13 +3832,13 @@
 
 			}
 			focus = {
-				id = Patriotic_Workers
+				id = Buy_Kazakh_Construction_Vehicles
 				icon = GFX
 				cost = 5
-				x = 0
+				x = -1
 				y = 1
-				prerequisite = { focus = Battle_Economy }
-				relative_position_id = Battle_Economy
+				prerequisite = { focus = Two_Year_Industrialization_Plan }
+				relative_position_id = Two_Year_Industrialization_Plan
 				available = {
 								country_exists = SRU 
 				}
@@ -3757,13 +3852,13 @@
 
 			}
 			focus = {
-				id = Productive_Cities
+				id = Re_Purpose_Extraction_Machinery
 				icon = GFX
 				cost = 5
-				x = 0
+				x = 1
 				y = 1
-				prerequisite = { focus = Patriotic_Workers }
-				relative_position_id = Patriotic_Workers
+				prerequisite = { focus = Two_Year_Industrialization_Plan }
+				relative_position_id = Two_Year_Industrialization_Plan
 				available = {
 								country_exists = SRU 
 				}
@@ -3800,13 +3895,15 @@
 
 			}
 			focus = {
-				id = Working_On_Overtime
+				id = Rapid_Industrialization
 				icon = GFX
 				cost = 5
-				x = 0
+				x = -1
 				y = 1
-				prerequisite = { focus = Productive_Cities }
-				relative_position_id = Productive_Cities
+				prerequisite = { focus = Re_Purpose_Extraction_Machinery 
+			                     focus = Buy_Kazakh_Construction_Vehicles
+			}
+								 relative_position_id = Re_Purpose_Extraction_Machinery
 				available = {
 								country_exists = SRU 
 				}
@@ -3823,13 +3920,13 @@
 
 			}
 			focus = {
-				id = Fudge_the_Numbers
+				id = Omsk_Arms_Complex
 				icon = GFX
 				cost = 5
-				x = 0
+				x = -1
 				y = 1
-				prerequisite = { focus = Working_On_Overtime }
-				relative_position_id = Working_On_Overtime
+				prerequisite = { focus = Rapid_Industrialization }
+				relative_position_id = Rapid_Industrialization
 				available = {
 								country_exists = SRU 
 				}
@@ -3846,13 +3943,13 @@
 
 			}
 			focus = {
-				id = Militaristic_Solution
+				id = Kemerovo_Tank_Factory
 				icon = GFX
 				cost = 2
-				x = -2
+				x = 0
 				y = 1
-				prerequisite = { focus = Fudge_the_Numbers }
-				relative_position_id = Fudge_the_Numbers
+				prerequisite = { focus = Omsk_Arms_Complex }
+				relative_position_id = Omsk_Arms_Complex
 				available = {
 								country_exists = SRU 
 				}
@@ -3866,14 +3963,14 @@
 
 			}
 			focus = {
-				id = Trans_Siberian_Highway
+				id = Expand_The_Tomsk_University
 				icon = GFX_SRU_transiberian_railway
 				cost = 5
-				x = 3
-				y = 1
-				prerequisite = { focus = Battle_Economy
-			                   focus = A_Social_Econonmy }
-				relative_position_id = Battle_Economy
+				x = 0
+				y = 2
+				prerequisite = { focus = Sonyas_March_Forward
+			   }
+				relative_position_id = Sonyas_March_Forward
 				available = {
 								country_exists = SRU 
 				}
@@ -3887,13 +3984,13 @@
 
 			}
 			focus = {
-				id = Universal_Employment
+				id = Opening_Public_Hospitals
 				icon = GFX_SRU_universal_employment
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite = { focus = Trans_Siberian_Highway }
-				relative_position_id = Trans_Siberian_Highway
+				prerequisite = { focus = Expand_The_Tomsk_University }
+				relative_position_id = Expand_The_Tomsk_University
 				available = {
 								country_exists = SRU 
 				}
@@ -3907,13 +4004,13 @@
 
 			}
 			focus = {
-				id = State_Mandated_Kazakstan_Vaction
+				id = Develop_Siberian_Roads
 				icon = GFX
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite = { focus = Universal_Employment }
-				relative_position_id = Universal_Employment
+				prerequisite = { focus = Opening_Public_Hospitals }
+				relative_position_id = Opening_Public_Hospitals
 				available = {
 								country_exists = SRU 
 				}
@@ -3927,13 +4024,13 @@
 
 			}
 			focus = {
-				id = Capitalism_with_Socialist_Char
+				id = Securing_A_Khazak_Route
 				icon = GFX
 				cost = 5
-				x = 0
+				x = -1
 				y = 1
-				prerequisite = { focus = A_Social_Econonmy }
-				relative_position_id = A_Social_Econonmy
+				prerequisite = { focus = Resource_Export_Plan }
+				relative_position_id = Resource_Export_Plan
 				available = {
 								country_exists = SRU 
 				}
@@ -3942,18 +4039,20 @@
 					}
 				
 				completion_reward = {
-					add_ideas = SRU_capitalism_with_socialist_char
+				
 				}
 
 			}
 			focus = {
-				id = Utopianism_Architecture
+				id = Silk_Road_To_Asia
 				icon = GFX
 				cost = 5
-				x = 0
+				x = -1
 				y = 1
-				prerequisite = { focus = Expand_The_Industrial_Estates }
-				relative_position_id = Expand_The_Industrial_Estates
+				prerequisite = { focus = State_Funded_Prospecting 
+			                     focus = Securing_A_Khazak_Route
+			    }
+				relative_position_id = State_Funded_Prospecting
 				available = {
 								country_exists = SRU 
 				}
@@ -3962,21 +4061,18 @@
 					}
 				
 				completion_reward = {
-					swap_ideas = { 
-						remove_idea = SRU_capitalism_with_socialist_char
-						add_idea = SRU_capitalism_with_socialist_char1
-					}
+					
 				}
 
 			}
 			focus = {
-				id = Mandatory_Trade_Unions
+				id = Rare_Earth_Resource_Exports
 				icon = GFX
 				cost = 5
-				x = 0
+				x = 1
 				y = 1
-				prerequisite = { focus = Utopianism_Architecture }
-				relative_position_id = Utopianism_Architecture
+				prerequisite = { focus = Silk_Road_To_Asia }
+				relative_position_id = Silk_Road_To_Asia
 				available = {
 								country_exists = SRU 
 				}
@@ -3990,13 +4086,13 @@
 
 			}
 			focus = {
-				id = Expand_The_Industrial_Estates
+				id = State_Funded_Prospecting
 				icon = GFX
 				cost = 5
-				x = 0
+				x = 1
 				y = 1
-				prerequisite = { focus = Capitalism_with_Socialist_Char }
-				relative_position_id = Capitalism_with_Socialist_Char
+				prerequisite = { focus = Resource_Export_Plan }
+				relative_position_id = Resource_Export_Plan
 				available = {
 								country_exists = SRU 
 				}
@@ -4025,13 +4121,13 @@
 
 			}
 			focus = {
-				id = Independent_workers
+				id = Import_Advanced_Industrial_Tools
 				icon = GFX
 				cost = 2
-				x = 2
+				x = 0
 				y = 1
-				prerequisite = { focus = Mandatory_Trade_Unions }
-				relative_position_id = Mandatory_Trade_Unions
+				prerequisite = { focus = Rare_Earth_Resource_Exports }
+				relative_position_id = Rare_Earth_Resource_Exports
 				available = {
 								country_exists = SRU 
 				}
@@ -4044,15 +4140,105 @@
 				}
 
 			}
+
 			focus = {
-				id = Sonyas_Economic_Miracle
+				id = Export_Surplus_Oil_And_Gas
+				icon = GFX
+				cost = 2
+				x = -1
+				y = 1
+				prerequisite = { focus = Silk_Road_To_Asia }
+				relative_position_id = Silk_Road_To_Asia
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.40
+				}
+
+			}
+
+			focus = {
+				id = Contracts_With_Chinese_Factories
+				icon = GFX
+				cost = 2
+				x = 0
+				y = 1
+				prerequisite = { focus = Export_Surplus_Oil_And_Gas }
+				relative_position_id = Export_Surplus_Oil_And_Gas
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.40
+				}
+
+			}
+
+			
+			focus = {
+				id = Resource_Export_Economy
+				icon = GFX
+				cost = 2
+				x = 1
+				y = 1
+				prerequisite = { focus = Contracts_With_Chinese_Factories 
+			                     focus = Import_Advanced_Industrial_Tools                 
+			    }
+				relative_position_id = Contracts_With_Chinese_Factories
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.40
+				}
+
+			}
+
+			focus = {
+
+				id = Krasnoyask_Machinery_Plant
 				icon = GFX
 				cost = 1
-				x = 3
-				y = 2
-				prerequisite = { focus = Fudge_the_Numbers
-			                   focus = Mandatory_Trade_Unions }
-				relative_position_id = Fudge_the_Numbers
+				x = 1
+				y = 1
+				prerequisite = { focus = Rapid_Industrialization
+			}
+				relative_position_id = Rapid_Industrialization
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.41
+				}
+
+			}
+
+			focus = {
+				id = Tomsk_Electronics_Bureau
+				icon = GFX
+				cost = 1
+				x = 0
+				y = 1
+				prerequisite = { focus = Krasnoyask_Machinery_Plant
+			}
+				relative_position_id = Krasnoyask_Machinery_Plant
 				available = {
 								country_exists = SRU 
 				}
@@ -4066,8 +4252,54 @@
 
 			}
 	
+			focus = {
+				id = Industrial_Production_Economy
+				icon = GFX
+				cost = 1
+				x = -1
+				y = 1
+				prerequisite = { focus = Tomsk_Electronics_Bureau
+			                     focus = Kemerovo_Tank_Factory
+			    }
+				relative_position_id = Tomsk_Electronics_Bureau
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.41
+				}
+
+			}
 	
-		
+			focus = {
+				id = Gosplan_Megaproject_Committee
+				icon = GFX
+				cost = 1
+				x = 0
+				y = 3
+				prerequisite = { 
+					             focus = Develop_Siberian_Roads
+			    }
+				prerequisite = {
+					             focus = Industrial_Production_Economy
+				}
+				relative_position_id = Develop_Siberian_Roads
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					country_event = SRU.41
+				}
+
+			}
 		
 			focus = {
 				id = Intervene_in_the_East
