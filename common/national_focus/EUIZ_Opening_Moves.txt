@@ -920,7 +920,7 @@ focus_tree = {
 
             completion_reward = {
 
-                EIZ = { country_event = EIZ.5}
+                RUS = { country_event = EIZ.5}
 
                 hidden_effect = {
               }
@@ -1058,11 +1058,9 @@ focus_tree = {
 
         prerequisite = {
             focus = EIZ_Block_Out_The_Sky
-        }
-
-        prerequisite = {
             focus = EIZ_Knights_of_The_Sky
         }
+
         relative_position_id =EIZ_Loosen_Rules_of_Engagement
         
         cost = 3
@@ -1809,10 +1807,16 @@ focus_tree = {
 
         prerequisite = { 
              focus = EIZ_russian_welfare_fund
-             focus = EIZ_Frederica-Multinational_volunteers     
+        }
+        prerequisite = { 
+             focus = EIZ_Frederica-Multinational_volunteers
+        }
+        prerequisite = {      
              focus = EIZ_Call_in_The_Steel_Fox
+        }
+        prerequisite = { 
              focus = EIZ_Strategic_And_Tactical_Study_Group
-            }
+        }
 
         relative_position_id = EIZ_FredericaVictory
         
@@ -2224,7 +2228,7 @@ focus_tree = {
         }
         relative_position_id = EIZ_international_banking_fraud
         
-        cost = 0 #add cost later
+        cost = 3
 
         ai_will_do = {
 			factor = 100
@@ -2298,7 +2302,7 @@ focus_tree = {
         
         relative_position_id = EIZ_off_the_books_trading
         
-        cost = 0 #add cost later
+        cost = 3
 
         ai_will_do = {
 			factor = 100
@@ -5489,9 +5493,11 @@ focus_tree = {
         y = 2
 
         prerequisite = { 
-            focus = EIZ_Codify_Rules_Of_Engagement 
             focus = EIZ_Lightning_Warfare
             focus = EIZ_Unstoppable_Force
+        }
+        prerequisite = {
+            focus = EIZ_Codify_Rules_Of_Engagement 
         }
         relative_position_id = EIZ_Codify_Rules_Of_Engagement
         
@@ -9468,7 +9474,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    EIZ = {
+                    RUS = {
                         recruit_character = EIZ_Nasr_Au
                     }
                     hidden_effect = {
@@ -9563,11 +9569,13 @@ focus_tree = {
             y = 4
     
             prerequisite = { 
-                focus = EIZ_Foreign_Relations_Secured focus = EIZ_It_MIGHT_BE_ENOUGH
+                focus = EIZ_Foreign_Relations_Secured 
+                focus = EIZ_It_MIGHT_BE_ENOUGH
             }
 
             prerequisite = {
-                focus = EIZ_Every_Peak_A_Bunker focus = EIZ_THEY_WONT_SEE_IT_COMING
+                focus = EIZ_Every_Peak_A_Bunker 
+                focus = EIZ_THEY_WONT_SEE_IT_COMING
             }
         
             relative_position_id = EIZ_Our_Special_Relationship
