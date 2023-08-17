@@ -136,8 +136,33 @@ characters = {
 		}
 	}
 
-	SRU_generic_intelligence = {
-		name = "The Intelligence Guy"
+	Vladimir_Bakatin = {
+		name = "Vladimir Bakatin"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = intelligence
+			idea_token = SRU_generic_intelligence_idea_1
+
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				conservative_guy
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	Chairman_Krychkov = {
+		name = "Krychkovs Cheka"
 		#portraits = {
 		#	
 		#}

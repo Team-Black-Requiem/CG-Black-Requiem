@@ -28,7 +28,7 @@
 			completion_reward = {
 				add_stability = -0.1
 				add_political_power = 200
-				country_event = SRU.6
+				country_event = SRU.1
 			}
 	}
 
@@ -50,12 +50,10 @@
 			
 			completion_reward = {
 				add_stability = 0.2
-				country_event = SRU.7
+				country_event = SRU.2
 
 			}
 	}
-
-
 
 				focus = {
 			id = SRU_dawn_red_sun 
@@ -74,7 +72,7 @@
 			
 			completion_reward = {
 				add_war_support = 0.2
-				country_event = SRU.8
+				country_event = SRU.3
 			}
 	}
 				focus = {
@@ -96,9 +94,32 @@
 			
 			completion_reward = {
 				add_ideas = SRU_dream_of_utopia
-				country_event = SRU.9
+				country_event = SRU.4
 			}
 	}
+	focus = {
+		id = SRU_crimson_moon
+		icon = GFX_SRU_crimson_moon
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = SRU_vision_utopia
+		 }
+
+		relative_position_id = SRU_vision_utopia
+		available = {
+					   country_exists = SRU
+		}
+		ai_will_do = {
+				factor = 100
+			}
+		
+		completion_reward = {
+			country_event = SRU.5	
+		}
+}
+		
 				focus = {
 			id = SRU_sonya_leadership
 			icon = GFX_SRU_sonya_leadership
@@ -117,32 +138,11 @@
 				}
 			
 			completion_reward = {
+				country_event = SRU.6
 				set_country_flag = SRU_Sonya_In_Control
 			}
 	}
-				focus = {
-			id = SRU_crimson_moon
-			icon = GFX_SRU_crimson_moon
-			cost = 1
-			x = 0
-			y = 1
-			prerequisite = { 
-				focus = SRU_vision_utopia
-			 }
-
-			relative_position_id = SRU_vision_utopia
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
-			
-			completion_reward = {
-				country_event = SRU.10
-			}
-	}
-				focus = {
+			focus = {
 			id = SRU_economic_mobilisation
 			icon = GFX_SRU_economic_mobilization
 			cost = 5
@@ -217,6 +217,7 @@
 				target = EUR
 				type = annex_everything
 			}
+			country_event = SRU.7
 		}
 	}
 				focus = {
@@ -245,6 +246,7 @@
 			cost = 3
 			x = 0
 			y = 1
+			
 			prerequisite = { focus = Politburo_War_Powers }
 			relative_position_id = Politburo_War_Powers
 			available = {
@@ -255,7 +257,11 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.52
+				swap_ideas = {
+					remove_idea = Democratic_Dissonance
+					add_idea = Limited_Opposition
+				}
+				country_event = SRU.7
 			}
 	}
 				focus = {
@@ -278,8 +284,11 @@
 				}
 			
 			completion_reward = {
-				add_stability = 0.05
-				add_political_power = 50
+				swap_ideas = {
+					remove_idea = Democratic_Dissonance
+					add_idea = Democratic_Opposition
+				}
+				country_event = SRU.8
 			}
 	}
 				focus = {
@@ -288,6 +297,7 @@
 			cost = 2
 			x = -1
 			y = 1
+			
 			prerequisite = { focus = Establishing_The_Peoples_Congress }
 			relative_position_id = Establishing_The_Peoples_Congress
 			available = {
@@ -301,7 +311,8 @@
 				}
 			
 			completion_reward = {
-				recruit_character = SRU_Tatyana_Kuznetsova
+			
+				country_event = SRU.8
 			}
 	}
 				focus = {
@@ -321,122 +332,7 @@
 				}
 			
 			completion_reward = {
-				add_political_power = 300
-				add_state_core = 637
-				add_state_core = 822
-				add_state_core = 562
-				add_state_core = 644
-				add_state_core = 574
-				add_state_core = 563
-				add_state_core = 565
-				add_state_core = 564
-				add_state_core = 566
-				add_state_core = 567
-				add_state_core = 568
-				add_state_core = 576
-				add_state_core = 516
-				add_state_core = 575
-				add_state_core = 40
-				add_state_core = 570
-				add_state_core = 578
-				add_state_core = 654
-				add_state_core = 569
-				add_state_core = 824
-				add_state_core = 577
-				add_state_core = 571
-				add_state_core = 579
-				add_state_core = 580
-				add_state_core = 653
-				add_state_core = 572
-				add_state_core = 652
-				add_state_core = 651
-				add_state_core = 581
-				add_state_core = 398
-				add_state_core = 399
-				add_state_core = 573
-				add_state_core = 905
-				add_state_core = 582
-				add_state_core = 403
-				add_state_core = 214
-				add_state_core = 923
-				add_state_core = 262
-				add_state_core = 825
-				add_state_core = 397
-				add_state_core = 924
-				add_state_core = 400
-				add_state_core = 833
-				add_state_core = 249
-				add_state_core = 251
-				add_state_core = 207
-				add_state_core = 213
-				add_state_core = 722
-				add_state_core = 215
-				add_state_core = 216
-				add_state_core = 351
-				add_state_core = 264
-				add_state_core = 244
-				add_state_core = 195
-				add_state_core = 208
-				add_state_core = 209
-				add_state_core = 263
-				add_state_core = 246
-				add_state_core = 247
-				add_state_core = 248
-				add_state_core = 925
-				add_state_core = 252
-				add_state_core = 253
-				add_state_core = 219
-				add_state_core = 242
-				add_state_core = 210
-				add_state_core = 886
-				add_state_core = 94
-				add_state_core = 95
-				add_state_core = 96
-				add_state_core = 206
-				add_state_core = 906
-				add_state_core = 204
-				add_state_core = 194
-				add_state_core = 241
-				add_state_core = 242
-				add_state_core = 243
-				add_state_core = 224
-				add_state_core = 205
-				add_state_core = 223
-				add_state_core = 254
-				add_state_core = 255
-				add_state_core = 926
-				add_state_core = 256
-				add_state_core = 250
-				add_state_core = 401
-				add_state_core = 829
-				add_state_core = 239
-				add_state_core = 257
-				add_state_core = 258
-				add_state_core = 222
-				add_state_core = 220
-				add_state_core = 240
-				add_state_core = 260
-				add_state_core = 265
-				add_state_core = 217
-				add_state_core = 245
-				add_state_core = 228
-				add_state_core = 227
-				add_state_core = 218
-				add_state_core = 238
-				add_state_core = 237
-				add_state_core = 236
-				add_state_core = 137
-				add_state_core = 234
-				add_state_core = 235
-				add_state_core = 232
-				add_state_core = 821
-				add_state_core = 827
-				add_state_core = 233
-				add_state_core = 826
-				add_state_core = 231
-				add_state_core = 828
-				add_state_core = 229
-				add_state_core = 230
+				# Will unlock decisions
 			}
 	}
 				focus = {
@@ -455,7 +351,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.53
+				country_event = SRU.9
 			}
 	}
 				focus = {
@@ -474,7 +370,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.54
+				country_event = SRU.13
 			}
 	}
 		
@@ -495,7 +391,8 @@
 				}
 			
 			completion_reward = {
-				recruit_character = SRU_Marianna_Sorokina
+			    country_event = SRU.18
+				
 			}
 	}
 
@@ -540,7 +437,7 @@
 				}
 			
 			completion_reward = {
-				add_ideas = SRU_Socialist_Agents_1
+				
 			}
 	}
 				focus = {
@@ -560,6 +457,7 @@
 			
 			completion_reward = {
 				recruit_character = SRU_Tasha_Kulikova
+			    country_event = SRU.14
 			}
 	}
 					focus = {
@@ -601,8 +499,7 @@
 			}
 		
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.1
+			country_event = SRU.10
 		}
 }
 
@@ -625,6 +522,7 @@ focus = {
 	completion_reward = {
 		add_political_power = 100
 		add_war_support = 0.1
+		country_event = SRU.11
 	}
 }
 
@@ -645,8 +543,10 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_political_power = 100
-		add_war_support = 0.1
+		swap_ideas = {
+			remove_idea = Purged_Cheka
+			add_idea = Bakatins_Cheka
+		}
 	}
 }
 
@@ -667,8 +567,8 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_political_power = 100
-		add_war_support = 0.1
+		
+		country_event = SRU.12
 	}
 }
 
@@ -689,10 +589,14 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_political_power = 100
-		add_war_support = 0.1
+		swap_ideas = {
+			remove_idea = Purged_Cheka
+			add_idea = Krychkovs_Cheka
+		}
+		
+		}
 	}
-}
+
 
 focus = {
 	id = Founding_The_State_Militsiya
@@ -715,8 +619,7 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_political_power = 100
-		add_war_support = 0.1
+		add_ideas = State_Militsiyas
 	}
 }
 
@@ -746,6 +649,7 @@ focus = {
 	completion_reward = {
 		add_political_power = 100
 		add_war_support = 0.1
+		country_event = SRU.15
 	}
 }
 	###### 
@@ -780,7 +684,7 @@ focus = {
 				every_army_leader = {
 					add_attack = 2
 				}
-				country_event = SRU.12
+				country_event = SRU.33
 			}
 	}
 				focus = {
@@ -882,7 +786,7 @@ focus = {
 			
 			will_lead_to_war_with = EUR
 			completion_reward = {
-				country_event = SRU.14
+				country_event = SRU.34
 				add_manpower = 50000
 				add_war_support = 0.3
 				declare_war_on = {
@@ -912,7 +816,7 @@ focus = {
 					popularity = 0.2
 				}
 				add_stability = 0.15
-				country_event = SRU.13
+				country_event = SRU.35
 			}
 	}
 			focus = {
@@ -2650,17 +2554,18 @@ focus = {
 				y = 1
 				prerequisite = { focus = Monarchist_Vet }
 				relative_position_id = Monarchist_Vet
-				mutually_exclusive { focus = Civilian_design }
+				mutually_exclusive = { focus = Civilian_design }
 				available = {
 								country_exists = SRU 
 				}
 				ai_will_do = {
 						factor = 100 
 					}
-				
-				completion_reward = {}
+					
+				completion_reward = {
 
 			}
+		}
 			focus = {
 				id = Nationalise_banks
 				icon = GFX
@@ -3379,7 +3284,7 @@ focus = {
 				
 				completion_reward = {
 					add_ideas = Partisan_Army_Plan
-					country_event = SRU.44
+					country_event = SRU.16
 				}
 
 			}
@@ -3612,7 +3517,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.49
+					country_event = SRU.17
 					add_ideas = Red_Army_Plans
 				}
 
@@ -3785,7 +3690,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.35
+					country_event = SRU.18
 				}
 
 			}
@@ -3807,7 +3712,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.36
+					country_event = SRU.19
 				}
 
 			}
@@ -3827,7 +3732,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.37
+					country_event = SRU.20
 				}
 
 			}
@@ -3979,7 +3884,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.39
+					country_event = SRU.21
 				}
 
 			}
@@ -4000,6 +3905,7 @@ focus = {
 				
 				completion_reward = {
 					add_ideas = SRU_universal_employment
+			        country_event = SRU.22
 				}
 
 			}
