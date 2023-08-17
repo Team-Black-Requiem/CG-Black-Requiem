@@ -1299,11 +1299,12 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	   modifier = {
 		consumer_goods_factor = 0.02
-		SRU = {consumer_goods_factor = 0.02}
-        
 		attrition = -0.05
-        SRU = {attrition = -0.05}
-
+	}
+	targeted_modifier = {
+		tag = SRU 
+		consumer_goods_factor = 0.02
+		attrition = -0.05
 	}
 	}
 
@@ -1486,21 +1487,13 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		designer = yes
 		EKA_mechanized_man ={
 
-		allowed ={
+		allowed = {
 			original_tag = MRU
 		}
 		visible ={
 			has_completed_focus = MRU_Assembly_lines
 		}
-
-
 			# picture = 
-
-			
-			allowed ={
-				original_tag = MRU
-			}
-
 			traits ={
 				mru_assembly_lines_mechanized_company
 			}

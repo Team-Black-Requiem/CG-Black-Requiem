@@ -238,6 +238,7 @@
 			completion_reward = {
 			 country_event = SRU.6
 			 add_ideas = Politburo_War_Powers
+			 set_country_flag = democratic_support
 			}
 	}
 				focus = {
@@ -391,7 +392,7 @@
 				}
 			
 			completion_reward = {
-			    country_event = SRU.18
+			    country_event = SRU.25
 				
 			}
 	}
@@ -417,7 +418,7 @@
 			
 			completion_reward = {
 				add_war_support = 0.1
-				country_event = SRU.11
+				country_event = SRU.55
 				set_country_flag = SRU_Luka_In_Control
 			}
 	}
@@ -457,7 +458,7 @@
 			
 			completion_reward = {
 				recruit_character = SRU_Tasha_Kulikova
-			    country_event = SRU.14
+			    country_event = SRU.26
 			}
 	}
 			focus = {
@@ -543,6 +544,10 @@ focus = {
 		}
 	
 	completion_reward = {
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
 		swap_ideas = {
 			remove_idea = Purged_Cheka
 			add_idea = Bakatins_Cheka
@@ -589,6 +594,10 @@ focus = {
 		}
 	
 	completion_reward = {
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
 		swap_ideas = {
 			remove_idea = Purged_Cheka
 			add_idea = Krychkovs_Cheka
@@ -3749,8 +3758,9 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {
-					add_ideas = SRU_patriotic_workers
+ 				completion_reward = {
+                	add_ideas = Imported_Construction_Equipment
+				
 				}
 
 			}
@@ -3770,33 +3780,9 @@ focus = {
 					}
 				
 				completion_reward = {
-					563 = {
-						add_building_construction = {
-							type = infrastructure
-							level = 4
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = arms_factory
-							level = 6
-							instant_build = yes
-						}
-					}
-					40 = {
-						add_building_construction = {
-							type = infrastructure
-							level = 4
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = arms_factory
-							level = 6
-							instant_build = yes
-						}
-					}
-				}
-
+					add_ideas = Re-Purposed_Extraction_Machinery
 			}
+		}
 			focus = {
 				id = Rapid_Industrialization
 				icon = GFX
@@ -3816,11 +3802,15 @@ focus = {
 				
 				completion_reward = {
 					swap_ideas = { 
-						remove_idea = SRU_patriotic_workers
-						add_idea = SRU_patriotic_workers1
+						remove_idea = Imported_Construction_Equipment
+						add_idea = Rapid_Industrialization
 					}
+				hidden_effect = {
+					remove_ideas = Re-Purposed_Extraction_Machinery
 				}
-
+				}
+                
+				
 			}
 			focus = {
 				id = Omsk_Arms_Complex
@@ -3838,9 +3828,9 @@ focus = {
 					}
 				
 				completion_reward = {
-					swap_ideas = { 
-						remove_idea = SRU_patriotic_workers1
-						add_idea = SRU_patriotic_workers2
+					add_offsite_building = {
+						type = arms_factory
+						level = 4
 					}
 				}
 
@@ -3861,7 +3851,10 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.38
+					add_offsite_building = {
+						type = arms_factory
+						level = 2
+					}
 				}
 
 			}
@@ -3883,6 +3876,7 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.21
+					add_ideas = Tomsk_University
 				}
 
 			}
@@ -3902,8 +3896,8 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_ideas = SRU_universal_employment
-			        country_event = SRU.22
+				    add_ideas = Public_Healthcare
+					country_event = SRU.22
 				}
 
 			}
@@ -3923,7 +3917,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.42
+					add_ideas = Siberian_Roads_Program
 				}
 
 			}
@@ -3965,7 +3959,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					
+					add_ideas = Kazakh_Trade_Economy
 				}
 
 			}
@@ -3985,7 +3979,8 @@ focus = {
 					}
 				
 				completion_reward = {
-					# this focus unlocks new production company
+                add_ideas = rare_earth_resource_exports
+                # unlock trade contract decisions about rare resource
 				}
 
 			}
@@ -4005,21 +4000,11 @@ focus = {
 					}
 				
 				completion_reward = {
-					563 = {
-						add_extra_state_shared_building_slots  = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 6
-							instant_build = yes
-						}
-					}
-					40 = {
-						add_extra_state_shared_building_slots  = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 6
-							instant_build = yes
-						}
+					add_tech_bonus = {
+						name = State_prospecting_investement 
+						uses = 2
+						bonus = 0.5
+						category = excavation_tech
 					}
 				}
 
@@ -4040,7 +4025,13 @@ focus = {
 					}
 				
 				completion_reward = {
-				
+					add_ideas = industrial_tool_imports
+				add_tech_bonus = {
+					name = reverse_engineer_foreign_equipment
+					uses = 2
+					bonus = 0.5
+					category = cat_production
+				}
 				}
 
 			}
@@ -4061,7 +4052,8 @@ focus = {
 					}
 				
 				completion_reward = {
-				
+				 add_ideas = oil_and_gas_exports
+				 # will add trade contracts in decisions tab
 				}
 
 			}
@@ -4082,7 +4074,14 @@ focus = {
 					}
 				
 				completion_reward = {
-					
+					add_offsite_building = {
+						type = arms_factory
+						level = 4
+					}
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
 				}
 
 			}
@@ -4106,7 +4105,20 @@ focus = {
 					}
 				
 				completion_reward = {
-				
+				swap_ideas = {
+					remove_idea = Kazakh_Trade_Economy
+					add_idea = Export_Oriented_Economy
+				}
+				swap_ideas = {
+					remove_idea = rare_earth_resource_exports
+					add_idea = Asian_Resource_Export_Contracts
+				}
+				hidden_effect = {
+					remove_ideas = {
+						industrial_tool_imports
+						oil_and_gas_exports
+					}
+				}
 				}
 
 			}
@@ -4129,7 +4141,10 @@ focus = {
 					}
 				
 				completion_reward = {
-			
+			     add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				 }
 				}
 
 			}
@@ -4151,7 +4166,10 @@ focus = {
 					}
 				
 				completion_reward = {
-				
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
 				}
 
 			}
@@ -4174,7 +4192,10 @@ focus = {
 					}
 				
 				completion_reward = {
-					
+					swap_ideas = {
+						remove_idea = Rapid_Industrialization
+						add_idea = Industrial_Production_Economy
+					}
 				}
 
 			}
@@ -4201,7 +4222,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.41
+					# will add mega projects in phase 2 
 				}
 
 			}

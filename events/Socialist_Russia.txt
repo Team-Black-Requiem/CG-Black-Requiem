@@ -222,6 +222,10 @@ country_event = { #Vision of utopia
 		ai_chance = {
 			factor = 100
 		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
 		add_ideas = State_Bureaucracy_Loyalty
 	}
 
@@ -229,6 +233,10 @@ country_event = { #Vision of utopia
 		name = SRU.9.b
 		ai_chance = {
 			factor = 100
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
 		}
 		add_ideas = Party_Bureaucracy_Loyalty
 	}
@@ -293,7 +301,10 @@ country_event = { #Deal_with_the_unions
 		ai_chance = {
 			factor = 100
 		}
-		
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
 	}
 
 	option = {
@@ -301,7 +312,10 @@ country_event = { #Deal_with_the_unions
 		ai_chance = {
 			factor = 100
 		}
-	
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
+		}
 	}
 }
 
@@ -506,7 +520,61 @@ country_event = { #Luka's Reign
 		}
 	}
 }
+country_event = {
+	id = SRU.25
+	title = SRU.25.t
+	desc = SRU.25.d
+    is_triggered_only = yes
 
+	option = {
+		name = SRU.25.a
+        ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
+	}
+	option = {
+		name = SRU.25.b
+        ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
+		}
+	}
+}
+
+country_event = {
+	id = SRU.26
+	title = SRU.26.t
+	desc = SRU.26.d
+    is_triggered_only = yes
+
+	option = {
+		name = SRU.26.a
+        ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
+	}
+	option = {
+		name = SRU.26.b
+        ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
+		}
+	}
+}
 #mending internal Divisions
 
 country_event = { #Mend Internal Divisions

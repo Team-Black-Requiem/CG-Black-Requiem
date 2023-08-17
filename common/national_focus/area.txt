@@ -1819,7 +1819,7 @@ focus = {
 
 		completion_reward = {
 			add_research_slot = 1
-			add_ideas = GEN_ARE_New_Technical_Institute
+			add_ideas = GEN_Advanced_Technical_Institute  
 		}
 	
 	}
@@ -2332,7 +2332,6 @@ focus = {
 				type = ship_hull_light_1
 				name_group = JAP_BB_HISTORICAL
 				parent_version = 0
-				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 				modules = {
 					fixed_ship_battery_slot = ship_light_battery_1
 					fixed_ship_anti_air_slot = ship_anti_air_1
@@ -2349,7 +2348,6 @@ focus = {
 				type = ship_hull_cruiser_1
 				name_group = JAP_BB_HISTORICAL
 				parent_version = 0
-				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 				modules = {
 					fixed_ship_battery_slot = ship_light_medium_battery_1
 					fixed_ship_anti_air_slot = ship_anti_air_1
@@ -2583,6 +2581,7 @@ focus = {
 				}
 				else = {
 					add_tech_bonus = {
+						name = surface_focus
 						bonus = 0.5
 						uses = 1
 						category = naval_equipment
@@ -2903,7 +2902,6 @@ focus = {
 				type = ship_hull_submarine_2
 				name_group = JAP_BB_HISTORICAL
 				parent_version = 0
-				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 				modules = {
 					fixed_ship_torpedo_slot = ship_torpedo_sub_2
 					fixed_ship_engine_slot = sub_ship_engine_2
