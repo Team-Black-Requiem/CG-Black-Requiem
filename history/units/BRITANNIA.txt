@@ -71,7 +71,7 @@ division_template = {
 division_template = {
 	name = "Foreign Legion" 		
 
-	division_names_group = BRT_INF_03
+	division_names_group = BRT_INF_02
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -1156,14 +1156,14 @@ units = {
 			name = "Cruisers, Battle Force"
 			location = 9814 # Los Angeles
 			# Cruiser Division 2 #			
-			ship = { name = "HMS Omaha" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class"} } }				
-			ship = { name = "HMS Milwaukee" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class"} } }				
-			ship = { name = "HMS Cincinnati" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BRT version_name = "Salomon Class"} } }				
+			ship = { name = "HMS Omaha" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class"} } }				
+			ship = { name = "HMS Milwaukee" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class"} } }				
+			ship = { name = "HMS Cincinnati" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BRT version_name = "Salomon Class"} } }				
 			# Cruiser Division 6 #		
-			ship = { name = "HMS New Orleans" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
-			ship = { name = "HMS Astoria" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
-			ship = { name = "HMS Minneapolis" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
-			ship = { name = "HMS Indianapolis" definition = ship_hull_cruiser_1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
+			ship = { name = "HMS New Orleans" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
+			ship = { name = "HMS Astoria" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
+			ship = { name = "HMS Minneapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
+			ship = { name = "HMS Indianapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BRT version_name = "Salomon Class" } } }				
 		}					
 					
 		### Destroyer Flotilla 1 ###				
@@ -1562,7 +1562,7 @@ instant_effect = {
 	
 			add_equipment_production = {
 		equipment = {
-			type = sp_artillery
+			type = sp_artillery_1
 			creator = "BRT"
 		}
 		requested_factories = 7

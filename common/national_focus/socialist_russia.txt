@@ -440,7 +440,7 @@
 				
 			}
 	}
-				focus = {
+			focus = {
 			id = a_Matter_Of_Dissidents 
 			icon = GFX_a_Matter_Of_Dissidents
 			cost = 1
@@ -460,7 +460,7 @@
 			    country_event = SRU.14
 			}
 	}
-					focus = {
+			focus = {
 			id = Opening_The_Ministry_of_Information
 			icon = GFX_Opening_The_Ministry_of_Information
 			cost = 2
@@ -634,10 +634,9 @@ focus = {
 	}
     prerequisite = {
 		focus = Opening_The_Ministry_of_Welfare
-	}
-	prerequisite = {
 		focus = Opening_The_Ministry_of_Information
 	}
+	
 	relative_position_id = Founding_The_State_Militsiya
 	available = {
 				   country_exists = SRU
@@ -647,9 +646,8 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_political_power = 100
-		add_war_support = 0.1
-		country_event = SRU.15
+		add_political_power = 250
+
 	}
 }
 	###### 
@@ -4042,7 +4040,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.40
+				
 				}
 
 			}
@@ -4063,7 +4061,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.40
+				
 				}
 
 			}
@@ -4084,7 +4082,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.40
+					
 				}
 
 			}
@@ -4108,7 +4106,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.40
+				
 				}
 
 			}
@@ -4131,7 +4129,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.41
+			
 				}
 
 			}
@@ -4153,7 +4151,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.41
+				
 				}
 
 			}
@@ -4176,7 +4174,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.41
+					
 				}
 
 			}
@@ -4192,6 +4190,7 @@ focus = {
 			    }
 				prerequisite = {
 					             focus = Industrial_Production_Economy
+				                 focus = Resource_Export_Economy
 				}
 				relative_position_id = Develop_Siberian_Roads
 				available = {

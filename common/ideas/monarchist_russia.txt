@@ -1320,11 +1320,14 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	   modifier = {
 		army_org = 10	
-		SRU = {army_org = 10}
 		army_core_attack_factor = 0.1	
-		SRU = {army_core_attack_factor = 0.10}
 		army_core_defence_factor = 0.025
-		SRU = {army_core_defence_factor = 0.025}
+	   }
+	   targeted_modifier = {
+		tag = SRU
+		army_org = 10
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.025
 	   }
 	}
         
@@ -1341,38 +1344,20 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	   modifier = {
 		consumer_goods_factor = 0.03
-		SRU = {consumer_goods_factor = 0.03}
 		production_speed_buildings_factor = 0.05
-		SRU = {production_speed_buildings_factor = 0.05}
-		days = 120
+	    days = 120
 
+	}
+	targeted_modifier = {
+		tag = SRU
+		consumer_goods_factor = 0.03
+		production_speed_buildings_factor = 0.05
+	    days = 120
 	}
 	}
 		
 		
-		R.U.M = {    
-		allowed = {
-			tag = MRU
-		}
-		visible = {
-			has_country_flag = shared_production
-		}
-		available = {
-			has_country_flag = shared_production
-
-		}
-		traits = { infantry_equipment_1 = {
-			reliability = 0.05
-			build_cost_ic = 0.05
-		}			 
-		support_equipment1 = {
-			build_cost_ic = 0.05
-		}
-		modern_artillery = {
-			soft_attack = 0.05
-		}
-	}
-	}
+	
 
 	Fighting_Alone = {
 		allowed = {
@@ -1563,4 +1548,5 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			}
 		}
 	}
+	
 }
