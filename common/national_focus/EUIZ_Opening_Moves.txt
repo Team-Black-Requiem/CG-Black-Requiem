@@ -2143,7 +2143,7 @@ focus_tree = {
     focus = {
         id = EIZ_off_the_books_trading
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 2
+        x = 1
         y = 1
 
         prerequisite = { 
@@ -2188,7 +2188,7 @@ focus_tree = {
     focus = {
         id = EIZ_insider_trading
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = -2
+        x = -1
         y = 1
 
         prerequisite = { 
@@ -2321,15 +2321,19 @@ focus_tree = {
     focus = {
         id = EIZ_ethiopian_haven
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 1
-        y = 1
+        x = 0
+        y = 2
+
+        prerequisite = { 
+            focus = EIZ_the_contract
+        }
 
         prerequisite = { 
             focus = EIZ_bribe_officials 
             focus = EIZ_prepare_for_market_changes
         }
         
-        relative_position_id = EIZ_off_the_books_trading
+        relative_position_id = EIZ_the_contract
         
         cost = 3
 
@@ -2357,7 +2361,7 @@ focus_tree = {
     focus = {
         id = EIZ_prepare_for_market_changes
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 2
+        x = 1
         y = 1
 
         prerequisite = { 
@@ -2394,14 +2398,14 @@ focus_tree = {
     focus = {
         id = EIZ_libiyan_raid
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 1
+        x = -1
         y = 1
 
         prerequisite = { 
             focus = EIZ_ethiopian_haven
         }
         
-        relative_position_id = EIZ_bribe_officials
+        relative_position_id = EIZ_ethiopian_haven
         
         cost = 3
 
@@ -2442,7 +2446,7 @@ focus_tree = {
     focus = {
         id = EIZ_loot_south_africa
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 2
+        x = 1
         y = 1
 
         prerequisite = { 
@@ -2480,7 +2484,7 @@ focus_tree = {
     focus = {
         id = EIZ_lyons_magnum_opus
         icon = GFX_EIZ_Lyon_Economic_Board
-        x = 2
+        x = 1
         y = 1
 
         prerequisite = { 
