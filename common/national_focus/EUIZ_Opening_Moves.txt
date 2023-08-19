@@ -354,6 +354,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = mechanised_infantry}}
+                    set_technology = {mechanised_infantry = 1}
+                }    
                 country_event = EIZ.9
 
                 hidden_effect = {
@@ -397,6 +401,14 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = mechanised_infantry}}
+                    set_technology = {mechanised_infantry = 1}
+                }
+                if = {
+                    limit = {NOT = {has_tech = cold_war_tank}}
+                    set_technology = {cold_war_tank = 1}
+                }
                 country_event = EIZ.10
 
                 hidden_effect = {
@@ -433,6 +445,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = mechanised_infantry}}
+                    set_technology = {mechanised_infantry = 1}
+                }   
                 country_event = EIZ.11
 
                 hidden_effect = {
@@ -764,10 +780,9 @@ focus_tree = {
 
         prerequisite = { 
             focus = EIZ_Request_Economic_Support_V1
-            focus = EIZ_Raise_Volunteers
         }
         prerequisite = { 
-            #focus = EIZ_Raise_Volunteers
+            focus = EIZ_Raise_Volunteers
         }
         relative_position_id = EIZ_A_Reasonable_War
         
@@ -1166,8 +1181,16 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = fighter1}}
+                    set_technology = {fighter1 = 1}
+                }
+                if = {
+                    limit = {NOT = {has_tech = trans1}}
+                    set_technology = {trans1 = 1}
+                }      
               add_equipment_to_stockpile = {
-                type = fighter_equipment_1
+                type = fighter_equipment_0
                 amount = 200
               }
               add_equipment_to_stockpile = {
@@ -1209,6 +1232,14 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = g_support1}}
+                    set_technology = {g_support1 = 1}
+                }
+                if = {
+                    limit = {NOT = {has_tech = bomber1}}
+                    set_technology = {bomber1 = 1}
+                }
                 add_equipment_to_stockpile = {
                     type = CAS_equipment_1
                     amount = 100
@@ -1541,10 +1572,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-             
                 
-                    #Add research bonus later
-                
+                add_ideas = EIZ_Contacts_In_Aerospace_Research_idea
          
                 hidden_effect = {
               }
@@ -2264,7 +2293,7 @@ focus_tree = {
         }
         relative_position_id = EIZ_send_accountants_to_the_front
         
-        cost = 0 #add cost later
+        cost = 3
 
         ai_will_do = {
 			factor = 100
@@ -2482,6 +2511,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+            remove_ideas = Economic_shables
              add_ideas =   EIZ_lyons_magnum_opus
         }
     }
@@ -3105,9 +3135,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               
+               swap_ideas = {
                 remove_idea = EIZ_Standadize_Field_Artillery
-                    add_idea = EIZ_Lyon_Stand_Firm
+                add_idea = EIZ_Stand_Firm
+               }
+                
                    
         }
     }
@@ -3182,7 +3214,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-              
+                if = {
+                    limit = {NOT = {has_tech = trans1}}
+                    set_technology = {trans1 = 1}
+                }
                 add_equipment_to_stockpile = {
                     type = transport_plane_equipment_1
                     amount = 100
@@ -3222,6 +3257,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = paratroopers}}
+                    set_technology = {paratroopers = 1}
+                }
                 swap_ideas = {
                     remove_idea = EIZ_Giving_The_Army_Wings
                     add_idea = EIZ_Air_Mobile_Infantry
@@ -3425,7 +3464,8 @@ focus_tree = {
         y = 3
 
         prerequisite = { 
-            focus = EIZ_Lyon_West_Secured
+            focus = EIZ_Lyon_West_Secured            
+            
         }
 
         relative_position_id = EIZ_Lyon_West_Secured
@@ -3438,7 +3478,9 @@ focus_tree = {
 
         available = {		
             country_exists = RUS has_cosmetic_tag = EIZ
-    
+            NOT = {
+                country_exists = MRU
+            }
             }
     
             bypass = {
@@ -3690,7 +3732,9 @@ focus_tree = {
 
         completion_reward = {
             
-            add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea1
+            EUR = {
+                add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea1
+            }
             
         }
     }
@@ -3726,7 +3770,9 @@ focus_tree = {
 
         completion_reward = {
 
-            add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea2
+            EUR = {
+                add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea2
+            }
             
         }
     }
@@ -3868,7 +3914,9 @@ focus_tree = {
 
             completion_reward = {
 
-                add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea3
+                EUR = {
+                    add_ideas = EIZ_Lyon_Backing_The_Socialists_debuffs_idea3
+                }
 
                 hidden_effect = {
               }
@@ -4319,7 +4367,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
+                add_ideas = Economic_board
               hidden_effect = {
             }
         }
@@ -4648,8 +4696,6 @@ focus_tree = {
         prerequisite = { 
         focus = EIZ_shame_the_french focus = EIZ_annoy_the_habsburgs
         }
-
-        mutually_exclusive ={}
         
         relative_position_id = EIZ_frederica_economic_board
         
@@ -4956,6 +5002,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {   
+                swap_ideas = {
+                    remove_idea = Economic_shables
+                    add_idea = Economic_Stability_Secured1
+                }
 
               hidden_effect = {
             }
@@ -5520,9 +5570,17 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                RUS = {
-                    recruit_character = EIZ_rommel
-                }   
+                add_corps_commander_role = {
+                    character =  EIZ_rommel
+                    traits = {war_hero armor_officer}
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 4
+                    planning_skill = 3
+                    logistics_skill = 5
+                    legacy_id=-1
+                }
+                
               hidden_effect = {
             }
         }
