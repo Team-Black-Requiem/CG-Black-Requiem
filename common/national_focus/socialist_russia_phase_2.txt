@@ -181,17 +181,42 @@
 	}
 
 	focus = {
-		id = SRU_all_the_power_we_need
-		icon = GFX_SRU_all_the_power_we_need
+		id = SRU_there_will_be_blood #Shed
+		icon = GFX_SRU_there_will_be_blood
 		cost = 1
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = SRU_the_jacobin_cancer
+		prerequisite = {
+			focus = SRU_the_jacobin_cancer
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_approaching_the_democrats
+		icon = GFX_SRU_approaching_the_democrats
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_there_will_be_blood
+		prerequisite = {
+			focus = SRU_there_will_be_blood
+		}
 		mutually_exclusive = {
-			focus = SRU_work_with_the_congress
-		}
-		prerequisite = {
-			focus = SRU_the_jacobin_cancer
+			focus = SRU_out_of_allies
+			focus = SRU_approaching_the_cheka
 		}
 		search_filters = {
 		}
@@ -208,92 +233,18 @@
 	}
 
 	focus = {
-		id = SRU_denounce_jacobin_ideology
-		icon = GFX_SRU_denounce_jacobin_ideology
+		id = SRU_out_of_allies
+		icon = GFX_SRU_out_of_allies
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_all_the_power_we_need
+		relative_position_id = SRU_there_will_be_blood
 		prerequisite = {
-			focus = SRU_all_the_power_we_need
+			focus = SRU_there_will_be_blood
 		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_drawing_up_the_lists
-		icon = GFX_SRU_drawing_up_the_lists
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_denounce_jacobin_ideology
-		prerequisite = {
-			focus = SRU_denounce_jacobin_ideology
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_unleash_the_cheka
-		icon = GFX_SRU_unleash_the_cheka
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_drawing_up_the_lists
-		prerequisite = {
-			focus = SRU_drawing_up_the_lists
-		}
-		prerequisite = {
-			focus = SRU_the_most_dangerous_game
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_work_with_the_congress
-		icon = GFX_SRU_work_with_the_congress
-		cost = 1
-		x = 2
-		y = 1
-		relative_position_id = SRU_the_jacobin_cancer
 		mutually_exclusive = {
-			focus = SRU_all_the_power_we_need
-		}
-		prerequisite = {
-			focus = SRU_the_jacobin_cancer
+			focus = SRU_approaching_the_democrats
+			focus = SRU_approaching_the_cheka
 		}
 		search_filters = {
 		}
@@ -310,14 +261,42 @@
 	}
 
 	focus = {
-		id = SRU_yakolevs_cooperation
-		icon = GFX_SRU_yakolevs_cooperation
+		id = SRU_approaching_the_cheka
+		icon = GFX_SRU_approaching_the_cheka
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_there_will_be_blood
+		prerequisite = {
+			focus = SRU_there_will_be_blood
+		}
+		mutually_exclusive = {
+			focus = SRU_approaching_the_democrats
+			focus = SRU_out_of_allies
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_assembling_our_coalition
+		icon = GFX_SRU_assembling_our_coalition
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_work_with_the_congress
+		relative_position_id = SRU_approaching_the_democrats
 		prerequisite = {
-			focus = SRU_work_with_the_congress
+			focus = SRU_approaching_the_democrats
 		}
 		search_filters = {
 		}
@@ -334,14 +313,14 @@
 	}
 
 	focus = {
-		id = SRU_militsiya_led_investigations
-		icon = GFX_SRU_militsiya_led_investigations
+		id = SRU_ready_for_decisive_action
+		icon = GFX_SRU_ready_for_decisive_action
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_yakolevs_cooperation
+		relative_position_id = SRU_out_of_allies
 		prerequisite = {
-			focus = SRU_yakolevs_cooperation
+			focus = SRU_out_of_allies
 		}
 		search_filters = {
 		}
@@ -358,17 +337,14 @@
 	}
 
 	focus = {
-		id = SRU_vote_them_out_of_congress
-		icon = GFX_SRU_vote_them_out_of_congress
+		id = SRU_sharpening_our_blades
+		icon = GFX_SRU_sharpening_our_blades
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_militsiya_led_investigations
+		relative_position_id = SRU_approaching_the_cheka
 		prerequisite = {
-			focus = SRU_militsiya_led_investigations
-		}
-		prerequisite = {
-			focus = SRU_the_most_dangerous_game
+			focus = SRU_approaching_the_cheka
 		}
 		search_filters = {
 		}
@@ -385,70 +361,16 @@
 	}
 
 	focus = {
-		id = SRU_breaking_their_circle
-		icon = GFX_SRU_breaking_their_circle
-		cost = 1
-		x = 0
-		y = 2
-		relative_position_id = SRU_the_jacobin_cancer
-		prerequisite = {
-			focus = SRU_the_jacobin_cancer
-		}
-		prerequisite = {
-			focus = SRU_all_the_power_we_need
-			focus = SRU_work_with_the_congress
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_the_most_dangerous_game
-		icon = GFX_SRU_the_most_dangerous_game
+		id = SRU_showdown
+		icon = GFX_SRU_showdown
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_breaking_their_circle
+		relative_position_id = SRU_ready_for_decisive_action
 		prerequisite = {
-			focus = SRU_breaking_their_circle
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_a_cornered_monster
-		icon = GFX_SRU_a_cornered_monster
-		cost = 1
-		x = 0
-		y = 2
-		relative_position_id = SRU_the_most_dangerous_game
-		prerequisite = {
-			focus = SRU_the_most_dangerous_game
-		}
-		prerequisite = {
-			focus = SRU_unleash_the_cheka
-			focus = SRU_vote_them_out_of_congress
+			focus = SRU_ready_for_decisive_action
+			focus = SRU_assembling_our_coalition
+			focus = SRU_sharpening_our_blades
 		}
 		search_filters = {
 		}
@@ -1331,8 +1253,8 @@
 	}
 
 	focus = {
-		id = SRU_siberian_development_project
-		icon = GFX_SRU_siberian_development_project
+		id = SRU_reforming_economic_managment
+		icon = GFX_SRU_reforming_economic_managment
 		cost = 1
 		x = 14
 		y = 1
@@ -1355,215 +1277,17 @@
 	}
 
 	focus = {
-		id = SRU_industrial_resurrection_plan
-		icon = GFX_SRU_industrial_resurrection_plan
-		cost = 1
-		x = -1
-		y = 1
-		relative_position_id = SRU_siberian_development_project
-		mutually_exclusive = {
-			focus = SRU_joint_russo_kazakh_cooperation_agreement
-		}
-		prerequisite = {
-			focus = SRU_siberian_development_project
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_repair_okhotsk
-		icon = GFX_SRU_repair_okhotsk
+		id = SRU_the_5_year_plan
+		icon = GFX_SRU_the_5_year_plan
 		cost = 1
 		x = -2
 		y = 1
-		relative_position_id = SRU_industrial_resurrection_plan
-		prerequisite = {
-			focus = SRU_industrial_resurrection_plan
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_new_worker_communes
-		icon = GFX_SRU_new_worker_communes
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_repair_okhotsk
-		prerequisite = {
-			focus = SRU_repair_okhotsk
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_revitalize_deprived_regions
-		icon = GFX_SRU_revitalize_deprived_regions
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_new_worker_communes
-		prerequisite = {
-			focus = SRU_new_worker_communes
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_utopian_economics
-		icon = GFX_SRU_utopian_economics
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_revitalize_deprived_regions
-		prerequisite = {
-			focus = SRU_revitalize_deprived_regions
-		}
-		prerequisite = {
-			focus = SRU_socialist_urban_planning
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_siberian_exploitation_group
-		icon = GFX_SRU_siberian_exploitation_group
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_industrial_resurrection_plan
-		prerequisite = {
-			focus = SRU_industrial_resurrection_plan
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_raise_production_quotas
-		icon = GFX_SRU_raise_production_quotas
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_siberian_exploitation_group
-		prerequisite = {
-			focus = SRU_siberian_exploitation_group
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_socialist_urban_planning
-		icon = GFX_SRU_socialist_urban_planning
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_raise_production_quotas
-		prerequisite = {
-			focus = SRU_raise_production_quotas
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_joint_russo_kazakh_cooperation_agreement
-		icon = GFX_SRU_joint_russo_kazakh_cooperation_agreement
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_siberian_development_project
+		relative_position_id = SRU_reforming_economic_managment
 		mutually_exclusive = {
-			focus = SRU_industrial_resurrection_plan
+			focus = SRU_the_leonova_reforms
 		}
 		prerequisite = {
-			focus = SRU_siberian_development_project
+			focus = SRU_reforming_economic_managment
 		}
 		search_filters = {
 		}
@@ -1580,14 +1304,14 @@
 	}
 
 	focus = {
-		id = SRU_nationwide_housing_scheme
-		icon = GFX_SRU_nationwide_housing_scheme
+		id = SRU_central_planning_system
+		icon = GFX_SRU_central_planning_system
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_joint_russo_kazakh_cooperation_agreement
+		relative_position_id = SRU_the_5_year_plan
 		prerequisite = {
-			focus = SRU_joint_russo_kazakh_cooperation_agreement
+			focus = SRU_the_5_year_plan
 		}
 		search_filters = {
 		}
@@ -1604,14 +1328,38 @@
 	}
 
 	focus = {
-		id = SRU_almaty_research_institute
-		icon = GFX_SRU_almaty_research_institute
+		id = SRU_heavy_industry_focus
+		icon = GFX_SRU_heavy_industry_focus
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_central_planning_system
+		prerequisite = {
+			focus = SRU_central_planning_system
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_top_down_managment
+		icon = GFX_SRU_top_down_managment
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_nationwide_housing_scheme
+		relative_position_id = SRU_central_planning_system
 		prerequisite = {
-			focus = SRU_nationwide_housing_scheme
+			focus = SRU_central_planning_system
 		}
 		search_filters = {
 		}
@@ -1628,14 +1376,38 @@
 	}
 
 	focus = {
-		id = SRU_treaty_of_mutual_peoples
-		icon = GFX_SRU_treaty_of_mutual_peoples
+		id = SRU_increase_industrial_quotas
+		icon = GFX_SRU_increase_industrial_quotas
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_central_planning_system
+		prerequisite = {
+			focus = SRU_central_planning_system
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_secondary_allocations
+		icon = GFX_SRU_secondary_allocations
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_almaty_research_institute
+		relative_position_id = SRU_heavy_industry_focus
 		prerequisite = {
-			focus = SRU_almaty_research_institute
+			focus = SRU_heavy_industry_focus
 		}
 		search_filters = {
 		}
@@ -1652,14 +1424,261 @@
 	}
 
 	focus = {
-		id = SRU_kazakh_trade_agreement
-		icon = GFX_SRU_kazakh_trade_agreement
+		id = SRU_pushing_for_statistical_accuracy
+		icon = GFX_SRU_pushing_for_statistical_accuracy
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_top_down_managment
+		prerequisite = {
+			focus = SRU_top_down_managment
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_dealing_with_incompetence
+		icon = GFX_SRU_dealing_with_incompetence
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_increase_industrial_quotas
+		prerequisite = {
+			focus = SRU_increase_industrial_quotas
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expanding_our_goals
+		icon = GFX_SRU_expanding_our_goals
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_pushing_for_statistical_accuracy
+		prerequisite = {
+			focus = SRU_secondary_allocations
+			focus = SRU_pushing_for_statistical_accuracy
+			focus = SRU_dealing_with_incompetence
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_soviet_military_industrial_complex
+		icon = GFX_SRU_soviet_military_industrial_complex
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_expanding_our_goals
+		prerequisite = {
+			focus = SRU_expanding_our_goals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_engineering_schools
+		icon = GFX_SRU_engineering_schools
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_expanding_our_goals
+		prerequisite = {
+			focus = SRU_expanding_our_goals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_encourage_patriotic_worker_culture
+		icon = GFX_SRU_encourage_patriotic_worker_culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_expanding_our_goals
+		prerequisite = {
+			focus = SRU_expanding_our_goals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_well_fueled_war_machine
+		icon = GFX_SRU_well_fueled_war_machine
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_soviet_military_industrial_complex
+		prerequisite = {
+			focus = SRU_soviet_military_industrial_complex
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_ideological_economics
+		icon = GFX_SRU_ideological_economics
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_engineering_schools
+		prerequisite = {
+			focus = SRU_engineering_schools
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_against_parasitism
+		icon = GFX_SRU_against_parasitism
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_encourage_patriotic_worker_culture
+		prerequisite = {
+			focus = SRU_encourage_patriotic_worker_culture
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_an_economy_under_our_control
+		icon = GFX_SRU_an_economy_under_our_control
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_ideological_economics
+		prerequisite = {
+			focus = SRU_well_fueled_war_machine
+			focus = SRU_ideological_economics
+			focus = SRU_against_parasitism
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_leonova_reforms
+		icon = GFX_SRU_the_leonova_reforms
 		cost = 1
 		x = 2
 		y = 1
-		relative_position_id = SRU_joint_russo_kazakh_cooperation_agreement
+		relative_position_id = SRU_reforming_economic_managment
+		mutually_exclusive = {
+			focus = SRU_the_5_year_plan
+		}
 		prerequisite = {
-			focus = SRU_joint_russo_kazakh_cooperation_agreement
+			focus = SRU_reforming_economic_managment
 		}
 		search_filters = {
 		}
@@ -1676,14 +1695,14 @@
 	}
 
 	focus = {
-		id = SRU_economic_cooperation
-		icon = GFX_SRU_economic_cooperation
+		id = SRU_the_enterprise_system
+		icon = GFX_SRU_the_enterprise_system
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_kazakh_trade_agreement
+		relative_position_id = SRU_the_leonova_reforms
 		prerequisite = {
-			focus = SRU_kazakh_trade_agreement
+			focus = SRU_the_leonova_reforms
 		}
 		search_filters = {
 		}
@@ -1700,14 +1719,38 @@
 	}
 
 	focus = {
-		id = SRU_kazakh_work_agreement
-		icon = GFX_SRU_kazakh_work_agreement
+		id = SRU_changing_gosbanks_leadership
+		icon = GFX_SRU_changing_gosbanks_leadership
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_the_enterprise_system
+		prerequisite = {
+			focus = SRU_the_enterprise_system
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_allow_managerial_autonomy
+		icon = GFX_SRU_allow_managerial_autonomy
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_economic_cooperation
+		relative_position_id = SRU_the_enterprise_system
 		prerequisite = {
-			focus = SRU_economic_cooperation
+			focus = SRU_the_enterprise_system
 		}
 		search_filters = {
 		}
@@ -1724,17 +1767,14 @@
 	}
 
 	focus = {
-		id = SRU_mission_to_astana
-		icon = GFX_SRU_mission_to_astana
+		id = SRU_profit_incentives
+		icon = GFX_SRU_profit_incentives
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_treaty_of_mutual_peoples
+		relative_position_id = SRU_the_enterprise_system
 		prerequisite = {
-			focus = SRU_treaty_of_mutual_peoples
-		}
-		prerequisite = {
-			focus = SRU_kazakh_work_agreement
+			focus = SRU_the_enterprise_system
 		}
 		search_filters = {
 		}
@@ -1750,6 +1790,298 @@
 		}
 	}
 
+	focus = {
+		id = SRU_investment_guidelines
+		icon = GFX_SRU_investment_guidelines
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_changing_gosbanks_leadership
+		prerequisite = {
+			focus = SRU_changing_gosbanks_leadership
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_individual_approach_to_growth
+		icon = GFX_SRU_individual_approach_to_growth
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_allow_managerial_autonomy
+		prerequisite = {
+			focus = SRU_allow_managerial_autonomy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_pay_reforms
+		icon = GFX_SRU_pay_reforms
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_profit_incentives
+		prerequisite = {
+			focus = SRU_profit_incentives
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expanding_our_reforms
+		icon = GFX_SRU_expanding_our_goals
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_individual_approach_to_growth
+		prerequisite = {
+			focus = SRU_investment_guidelines
+			focus = SRU_individual_approach_to_growth
+			focus = SRU_pay_reforms
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_enterprise_startup_scheme
+		icon = GFX_SRU_enterprise_startup_scheme
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_expanding_our_reforms
+		prerequisite = {
+			focus = SRU_expanding_our_reforms
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_expand_technical_universities
+		icon = GFX_SRU_expand_technical_universities
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_expanding_our_reforms
+		prerequisite = {
+			focus = SRU_expanding_our_reforms
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_worker_advisory_boards
+		icon = GFX_SRU_worker_advisory_boards
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_expanding_our_reforms
+		prerequisite = {
+			focus = SRU_expanding_our_reforms
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_yurlovs_project
+		icon = GFX_SRU_yurlovs_project
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_enterprise_startup_scheme
+		prerequisite = {
+			focus = SRU_enterprise_startup_scheme
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_teach_economic_sciences
+		icon = GFX_SRU_teach_economic_sciences
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_expand_technical_universities
+		prerequisite = {
+			focus = SRU_expand_technical_universities
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_all_level_input
+		icon = GFX_SRU_all_level_input
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_worker_advisory_boards
+		prerequisite = {
+			focus = SRU_worker_advisory_boards
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_seeds_of_the_peoples_economy
+		icon = GFX_SRU_seeds_of_the_peoples_economy
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_teach_economic_sciences
+		prerequisite = {
+			focus = SRU_yurlovs_project
+			focus = SRU_teach_economic_sciences
+			focus = SRU_all_level_input
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_economic
+		icon = GFX_SRU_economic
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_seeds_of_the_peoples_economy
+		prerequisite = {
+			focus = SRU_an_economy_under_our_control
+			focus = SRU_seeds_of_the_peoples_economy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
 
 	focus = {
 		id = SRU_Blood_Stained_Requiem
