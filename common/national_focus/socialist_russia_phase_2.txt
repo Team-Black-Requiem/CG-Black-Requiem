@@ -12,8 +12,8 @@
 	continuous_focus_position = { x = 20 y = 3500 }
 
 	focus = {
-		id = SRU_Victory_For_The_People
-		icon = GFX_SRU_Victory_For_The_People
+		id = SRU_red_banners_on_the_pacific
+		icon = GFX_SRU_red_banners_on_the_pacific
 		cost = 1
 		x = 0
 		y = 1
@@ -34,14 +34,14 @@
 	}
 
 	focus = {
-		id = SRU_prepare_for_the_inevitable
-		icon = GFX_SRU_prepare_for_the_inevitable
+		id = SRU_emergency_reconstruction_of_east
+		icon = GFX_SRU_emergency_reconstruction_of_east
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_Victory_For_The_People
+		relative_position_id = SRU_red_banners_on_the_pacific
 		prerequisite = {
-			focus = SRU_Victory_For_The_People
+			focus = SRU_red_banners_on_the_pacific
 		}
 		search_filters = {
 		}
@@ -58,14 +58,14 @@
 	}
 
 	focus = {
-		id = SRU_reinforce_western_cities
-		icon = GFX_SRU_reinforce_western_cities
+		id = SRU_integrating_the_loyal_into_the_army
+		icon = GFX_SRU_integrating_the_loyal_into_the_army
 		cost = 1
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = SRU_prepare_for_the_inevitable
+		relative_position_id = SRU_emergency_reconstruction_of_east
 		prerequisite = {
-			focus = SRU_prepare_for_the_inevitable
+			focus = SRU_emergency_reconstruction_of_east
 		}
 		search_filters = {
 		}
@@ -82,38 +82,14 @@
 	}
 
 	focus = {
-		id = SRU_fortify_the_siberian_border
-		icon = GFX_SRU_fortify_the_siberian_border
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_reinforce_western_cities
-		prerequisite = {
-			focus = SRU_reinforce_western_cities
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_resettle_the_east_with_workers
-		icon = GFX_SRU_resettle_the_east_with_workers
+		id = SRU_conter_revolutionary_suppression_drive
+		icon = GFX_SRU_conter_revolutionary_suppression_drive
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_Victory_For_The_People
+		relative_position_id = SRU_red_banners_on_the_pacific
 		prerequisite = {
-			focus = SRU_Victory_For_The_People
+			focus = SRU_red_banners_on_the_pacific
 		}
 		search_filters = {
 		}
@@ -130,65 +106,41 @@
 	}
 
 	focus = {
-		id = SRU_integrate_the_far_east_into_the_union
-		icon = GFX_SRU_integrate_the_far_east_into_the_union
+		id = SRU_bring_the_soviet_system_east
+		icon = GFX_SRU_bring_the_soviet_system_east
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_conter_revolutionary_suppression_drive
+		prerequisite = {
+			focus = SRU_conter_revolutionary_suppression_drive
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_struggle_resumes
+		icon = GFX_SRU_the_struggle_resumes
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_resettle_the_east_with_workers
+		relative_position_id = SRU_integrating_the_loyal_into_the_army
 		prerequisite = {
-			focus = SRU_resettle_the_east_with_workers
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_rebuild_from_the_ruins_of_the_east
-		icon = GFX_SRU_rebuild_from_the_ruins_of_the_east
-		cost = 1
-		x = -1
-		y = 1
-		relative_position_id = SRU_integrate_the_far_east_into_the_union
-		prerequisite = {
-			focus = SRU_integrate_the_far_east_into_the_union
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_expand_war_measures
-		icon = GFX_SRU_expand_war_measures
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_fortify_the_siberian_border
-		prerequisite = {
-			focus = SRU_fortify_the_siberian_border
+			focus = SRU_integrating_the_loyal_into_the_army
 		}
 		prerequisite = {
-			focus = SRU_rebuild_from_the_ruins_of_the_east
+			focus = SRU_bring_the_soviet_system_east
 		}
 		search_filters = {
 		}
@@ -210,9 +162,9 @@
 		cost = 1
 		x = -13
 		y = 1
-		relative_position_id = SRU_expand_war_measures
+		relative_position_id = SRU_the_struggle_resumes
 		prerequisite = {
-			focus = SRU_expand_war_measures
+			focus = SRU_the_struggle_resumes
 		}
 		search_filters = {
 		}
@@ -513,14 +465,14 @@
 	}
 
 	focus = {
-		id = SRU_the_yamantau_campaign
-		icon = GFX_SRU_the_yamantau_campaign
+		id = SRU_the_red_army_plan
+		icon = GFX_SRU_the_red_army_plan
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_expand_war_measures
+		relative_position_id = SRU_the_struggle_resumes
 		prerequisite = {
-			focus = SRU_expand_war_measures
+			focus = SRU_the_struggle_resumes
 		}
 		search_filters = {
 		}
@@ -537,17 +489,17 @@
 	}
 
 	focus = {
-		id = SRU_kovalevs_experience
-		icon = GFX_SRU_kovalevs_experience
+		id = SRU_quantity_has_its_own_quality
+		icon = GFX_SRU_quantity_has_its_own_quality
 		cost = 1
 		x = -6
 		y = 1
-		relative_position_id = SRU_the_yamantau_campaign
+		relative_position_id = SRU_the_red_army_plan
 		mutually_exclusive = {
-			focus = SRU_ryazanovs_ideas
+			focus = SRU_military_perfectionism
 		}
 		prerequisite = {
-			focus = SRU_the_yamantau_campaign
+			focus = SRU_the_red_army_plan
 		}
 		search_filters = {
 		}
@@ -564,14 +516,14 @@
 	}
 
 	focus = {
-		id = SRU_improve_army_standards
-		icon = GFX_SRU_improve_army_standards
+		id = SRU_formalized_basic_training
+		icon = GFX_SRU_formalized_basic_training
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_kovalevs_experience
+		relative_position_id = SRU_quantity_has_its_own_quality
 		prerequisite = {
-			focus = SRU_kovalevs_experience
+			focus = SRU_quantity_has_its_own_quality
 		}
 		search_filters = {
 		}
@@ -588,14 +540,14 @@
 	}
 
 	focus = {
-		id = SRU_flexible_command_structure
-		icon = GFX_SRU_flexible_command_structure
+		id = SRU_increase_the_draft
+		icon = GFX_SRU_increase_the_draft
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_improve_army_standards
+		relative_position_id = SRU_formalized_basic_training
 		prerequisite = {
-			focus = SRU_improve_army_standards
+			focus = SRU_formalized_basic_training
 		}
 		search_filters = {
 		}
@@ -612,14 +564,14 @@
 	}
 
 	focus = {
-		id = SRU_call_for_civilian_arms
-		icon = GFX_SRU_call_for_civilian_arms
+		id = SRU_centralize_the_office_of_military_production
+		icon = GFX_SRU_centralize_the_office_of_military_production
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_kovalevs_experience
+		relative_position_id = SRU_quantity_has_its_own_quality
 		prerequisite = {
-			focus = SRU_kovalevs_experience
+			focus = SRU_quantity_has_its_own_quality
 		}
 		search_filters = {
 		}
@@ -636,14 +588,14 @@
 	}
 
 	focus = {
-		id = SRU_scavange_the_battlefield
-		icon = GFX_SRU_scavange_the_battlefield
+		id = SRU_mass_produce_t70s
+		icon = GFX_SRU_mass_produce_t70s
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_call_for_civilian_arms
+		relative_position_id = SRU_centralize_the_office_of_military_production
 		prerequisite = {
-			focus = SRU_call_for_civilian_arms
+			focus = SRU_centralize_the_office_of_military_production
 		}
 		search_filters = {
 		}
@@ -660,14 +612,14 @@
 	}
 
 	focus = {
-		id = SRU_standardise_weapon_production
-		icon = GFX_SRU_standardise_weapon_production
+		id = SRU_use_federation_jet_designs
+		icon = GFX_SRU_use_federation_jet_designs
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_scavange_the_battlefield
+		relative_position_id = SRU_mass_produce_t70s
 		prerequisite = {
-			focus = SRU_scavange_the_battlefield
+			focus = SRU_mass_produce_t70s
 		}
 		search_filters = {
 		}
@@ -684,17 +636,17 @@
 	}
 
 	focus = {
-		id = SRU_cut_through_draft_exemptions
-		icon = GFX_SRU_cut_through_draft_exemptions
+		id = SRU_symphony_of_rocket_artillery
+		icon = GFX_SRU_symphony_of_rocket_artillery
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_flexible_command_structure
+		relative_position_id = SRU_increase_the_draft
 		prerequisite = {
-			focus = SRU_flexible_command_structure
+			focus = SRU_increase_the_draft
 		}
 		prerequisite = {
-			focus = SRU_scavange_the_battlefield
+			focus = SRU_mass_produce_t70s
 		}
 		search_filters = {
 		}
@@ -711,14 +663,14 @@
 	}
 
 	focus = {
-		id = SRU_expand_the_special_corps
-		icon = GFX_SRU_expand_the_special_corps
+		id = SRU_motorization_push
+		icon = GFX_SRU_motorization_push
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_flexible_command_structure
+		relative_position_id = SRU_increase_the_draft
 		prerequisite = {
-			focus = SRU_flexible_command_structure
+			focus = SRU_increase_the_draft
 		}
 		search_filters = {
 		}
@@ -735,21 +687,19 @@
 	}
 
 	focus = {
-		id = SRU_heroes_of_the_red_army
-		icon = GFX_SRU_heroes_of_the_red_army
+		id = SRU_anti_tank_launchers
+		icon = GFX_SRU_anti_tank_launchers
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = SRU_cut_through_draft_exemptions
+		relative_position_id = SRU_symphony_of_rocket_artillery
 		prerequisite = {
-			focus = SRU_cut_through_draft_exemptions
+			focus = SRU_symphony_of_rocket_artillery
 		}
 		prerequisite = {
-			focus = SRU_expand_the_special_corps
+			focus = SRU_motorization_push
 		}
-		prerequisite = {
-			focus = SRU_standardise_weapon_production
-		}
+		
 		search_filters = {
 		}
 		
@@ -765,17 +715,74 @@
 	}
 
 	focus = {
-		id = SRU_ryazanovs_ideas
-		icon = GFX_SRU_ryazanovs_ideas
+		id = SRU_the_inumerable_red_army
+		icon = GFX_SRU_the_inumerable_red_army
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_anti_tank_launchers
+		prerequisite = {
+			focus = SRU_anti_tank_launchers
+		}
+		prerequisite = {
+			focus = SRU_rely_on_overwhelming_firepower
+		}
+		
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_rely_on_overwhelming_firepower
+		icon = GFX_SRU_rely_on_overwhelming_firepower
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_symphony_of_rocket_artillery
+		prerequisite = {
+			focus = SRU_symphony_of_rocket_artillery
+		}
+		
+		prerequisite = {
+			focus = SRU_use_federation_jet_designs
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_military_perfectionism
+		icon = GFX_SRU_military_perfectionism
 		cost = 1
 		x = 6
 		y = 1
-		relative_position_id = SRU_the_yamantau_campaign
+		relative_position_id = SRU_the_red_army_plan
 		mutually_exclusive = {
-			focus = SRU_kovalevs_experience
+			focus = SRU_quantity_has_its_own_quality
 		}
 		prerequisite = {
-			focus = SRU_the_yamantau_campaign
+			focus = SRU_the_red_army_plan
 		}
 		search_filters = {
 		}
@@ -792,14 +799,14 @@
 	}
 
 	focus = {
-		id = SRU_increase_air_ground_coordination
-		icon = GFX_SRU_increase_air_ground_coordination
+		id = SRU_combat_schooling
+		icon = GFX_SRU_combat_schooling
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_ryazanovs_ideas
+		relative_position_id = SRU_military_perfectionism
 		prerequisite = {
-			focus = SRU_ryazanovs_ideas
+			focus = SRU_military_perfectionism
 		}
 		search_filters = {
 		}
@@ -816,14 +823,14 @@
 	}
 
 	focus = {
-		id = SRU_centralised_air_command
-		icon = GFX_SRU_centralised_air_command
+		id = SRU_contract_soldier_initiative
+		icon = GFX_SRU_contract_soldier_initiative
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_increase_air_ground_coordination
+		relative_position_id = SRU_combat_schooling
 		prerequisite = {
-			focus = SRU_increase_air_ground_coordination
+			focus = SRU_combat_schooling
 		}
 		search_filters = {
 		}
@@ -840,14 +847,14 @@
 	}
 
 	focus = {
-		id = SRU_upscale_aircraft_production
-		icon = GFX_SRU_upscale_aircraft_production
+		id = SRU_create_the_office_of_central_design
+		icon = GFX_SRU_create_the_office_of_central_design
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_ryazanovs_ideas
+		relative_position_id = SRU_military_perfectionism
 		prerequisite = {
-			focus = SRU_ryazanovs_ideas
+			focus = SRU_military_perfectionism
 		}
 		search_filters = {
 		}
@@ -864,14 +871,14 @@
 	}
 
 	focus = {
-		id = SRU_modern_aerial_warfare
-		icon = GFX_SRU_modern_aerial_warfare
+		id = SRU_refine_project_280
+		icon = GFX_SRU_refine_project_280
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_upscale_aircraft_production
+		relative_position_id = SRU_create_the_office_of_central_design
 		prerequisite = {
-			focus = SRU_upscale_aircraft_production
+			focus = SRU_create_the_office_of_central_design
 		}
 		search_filters = {
 		}
@@ -888,14 +895,14 @@
 	}
 
 	focus = {
-		id = SRU_dominate_the_skies
-		icon = GFX_SRU_dominate_the_skies
+		id = SRU_specialist_support_schools
+		icon = GFX_SRU_specialist_support_schools
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_centralised_air_command
+		relative_position_id = SRU_contract_soldier_initiative
 		prerequisite = {
-			focus = SRU_centralised_air_command
+			focus = SRU_contract_soldier_initiative
 		}
 		search_filters = {
 		}
@@ -912,17 +919,17 @@
 	}
 
 	focus = {
-		id = SRU_form_special_ace_squadrons
-		icon = GFX_SRU_form_special_ace_squadrons
+		id = SRU_infantry_fighting_vehicles_programme
+		icon = GFX_SRU_infantry_fighting_vehicles_programme
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_centralised_air_command
+		relative_position_id = SRU_contract_soldier_initiative
 		prerequisite = {
-			focus = SRU_centralised_air_command
+			focus = SRU_contract_soldier_initiative
 		}
 		prerequisite = {
-			focus = SRU_modern_aerial_warfare
+			focus = SRU_refine_project_280
 		}
 		search_filters = {
 		}
@@ -939,14 +946,14 @@
 	}
 
 	focus = {
-		id = SRU_strike_back_from_above
-		icon = GFX_SRU_strike_back_from_above
+		id = SRU_tomsk_aerospace_bureau
+		icon = GFX_SRU_tomsk_aerospace_bureau
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_modern_aerial_warfare
+		relative_position_id = SRU_refine_project_280
 		prerequisite = {
-			focus = SRU_modern_aerial_warfare
+			focus = SRU_refine_project_280
 		}
 		search_filters = {
 		}
@@ -963,20 +970,46 @@
 	}
 
 	focus = {
-		id = SRU_red_menace_of_the_skies
-		icon = GFX_SRU_red_menace_of_the_skies
+		id = SRU_precision_self_propelled_artillery
+		icon = GFX_SRU_precision_self_propelled_artillery
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = SRU_form_special_ace_squadrons
+		relative_position_id = SRU_infantry_fighting_vehicles_programme
 		prerequisite = {
-			focus = SRU_dominate_the_skies
+			focus = SRU_specialist_support_schools
 		}
 		prerequisite = {
-			focus = SRU_form_special_ace_squadrons
+			focus = SRU_infantry_fighting_vehicles_programme
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_air_land_battle_integration
+		icon = GFX_SRU_air_land_battle_integration
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_infantry_fighting_vehicles_programme
+
+		prerequisite = {
+			focus = SRU_infantry_fighting_vehicles_programme
 		}
 		prerequisite = {
-			focus = SRU_strike_back_from_above
+			focus = SRU_tomsk_aerospace_bureau
 		}
 		search_filters = {
 		}
@@ -993,15 +1026,43 @@
 	}
 
 	focus = {
-		id = SRU_revisit_the_sokolov_doctrine
-		icon = GFX_SRU_revisit_the_sokolov_doctrine
+		id = SRU_the_invicible_red_army
+		icon = GFX_SRU_the_invicible_red_army
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_precision_self_propelled_artillery
+
+		prerequisite = {
+			focus = SRU_precision_self_propelled_artillery
+		}
+		prerequisite = {
+			focus = SRU_air_land_battle_integration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_founding_the_knightmare_corp
+		icon = GFX_SRU_founding_the_knightmare_corp
 		cost = 1
 		x = 6
 		y = 1
-		relative_position_id = SRU_kovalevs_experience
+		relative_position_id = SRU_quantity_has_its_own_quality
 		prerequisite = {
-			focus = SRU_kovalevs_experience
-			focus = SRU_ryazanovs_ideas
+			focus = SRU_quantity_has_its_own_quality
+			focus = SRU_military_perfectionism
 		}
 		search_filters = {
 		}
@@ -1018,15 +1079,68 @@
 	}
 
 	focus = {
-		id = SRU_special_function_training
-		icon = GFX_SRU_special_function_training
+		id = SRU_modify_britannian_training_simulations
+		icon = GFX_SRU_modify_britannian_training_simulations
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_founding_the_knightmare_corp
+		prerequisite = {
+			focus = SRU_founding_the_knightmare_corp
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_start_work_on_the_rusalka_model
+		icon = GFX_SRU_start_work_on_the_rusalka_model
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_modify_britannian_training_simulations
+		prerequisite = {
+			focus = SRU_modify_britannian_training_simulations
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_enhance_unit_mobility
+		icon = GFX_SRU_enhance_unit_mobility
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_revisit_the_sokolov_doctrine
+		relative_position_id = SRU_start_work_on_the_rusalka_model
 		prerequisite = {
-			focus = SRU_revisit_the_sokolov_doctrine
+			focus = SRU_start_work_on_the_rusalka_model
 		}
+
+		mutually_exclusive = {
+			focus = SRU_focus_on_unit_armoring
+		}
+
 		search_filters = {
 		}
 		
@@ -1042,39 +1156,20 @@
 	}
 
 	focus = {
-		id = SRU_factsphere_production
-		icon = GFX_SRU_factsphere_production
-		cost = 1
-		x = 0
-		y = 1
-		relative_position_id = SRU_special_function_training
-		prerequisite = {
-			focus = SRU_special_function_training
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_special_production_techniques
-		icon = GFX_SRU_special_production_techniques
+		id = SRU_focus_on_unit_armoring
+		icon = GFX_SRU_focus_on_unit_armoring
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_revisit_the_sokolov_doctrine
+		relative_position_id = SRU_start_work_on_the_rusalka_model
 		prerequisite = {
-			focus = SRU_revisit_the_sokolov_doctrine
+			focus = SRU_start_work_on_the_rusalka_model
 		}
+
+		mutually_exclusive = {
+			focus = SRU_enhance_unit_mobility
+		}
+
 		search_filters = {
 		}
 		
@@ -1090,15 +1185,21 @@
 	}
 
 	focus = {
-		id = SRU_landspinner_production
-		icon = GFX_SRU_landspinner_production
+		id = SRU_survivability_improvements
+		icon = GFX_SRU_survivability_improvements
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_special_production_techniques
+		relative_position_id = SRU_focus_on_unit_armoring
 		prerequisite = {
-			focus = SRU_special_production_techniques
+			focus = SRU_focus_on_unit_armoring
+			focus = SRU_enhance_unit_mobility
 		}
+
+		mutually_exclusive = {
+			focus = SRU_sensor_prioritization
+		}
+
 		search_filters = {
 		}
 		
@@ -1114,96 +1215,107 @@
 	}
 
 	focus = {
-		id = SRU_reinforce_the_knight_corps
-		icon = GFX_SRU_reinforce_the_knight_corps
-		cost = 1
-		x = -1
-		y = 1
-		relative_position_id = SRU_factsphere_production
-		prerequisite = {
-			focus = SRU_factsphere_production
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_prototype_rusalka
-		icon = GFX_SRU_prototype_rusalka
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_factsphere_production
-		prerequisite = {
-			focus = SRU_factsphere_production
-		}
-		prerequisite = {
-			focus = SRU_landspinner_production
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_supply_the_knight_corps
-		icon = GFX_SRU_supply_the_knight_corps
-		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_landspinner_production
-		prerequisite = {
-			focus = SRU_landspinner_production
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_expand_the_knight_corps
-		icon = GFX_SRU_expand_the_knight_corps
+		id = SRU_sensor_prioritization
+		icon = GFX_SRU_sensor_prioritization
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_prototype_rusalka
+		relative_position_id = SRU_enhance_unit_mobility
 		prerequisite = {
-			focus = SRU_prototype_rusalka
+			focus = SRU_focus_on_unit_armoring
+			focus = SRU_enhance_unit_mobility
 		}
+
+		mutually_exclusive = {
+			focus = SRU_survivability_improvements
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_infantry_support_weapons
+		icon = GFX_SRU_infantry_support_weapons
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_survivability_improvements
 		prerequisite = {
-			focus = SRU_reinforce_the_knight_corps
+			focus = SRU_survivability_improvements
+			focus = SRU_sensor_prioritization
 		}
+
+		mutually_exclusive = {
+			focus = SRU_heavy_ranged_focus
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_heavy_ranged_focus
+		icon = GFX_SRU_heavy_ranged_focus
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_sensor_prioritization
 		prerequisite = {
-			focus = SRU_supply_the_knight_corps
+			focus = SRU_survivability_improvements
+			focus = SRU_sensor_prioritization
 		}
+
+		mutually_exclusive = {
+			focus = SRU_infantry_support_weapons
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_start_production_of_the_rusalka
+		icon = GFX_SRU_start_production_of_the_rusalka
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_heavy_ranged_focus
+		prerequisite = {
+			focus = SRU_heavy_ranged_focus
+			focus = SRU_infantry_support_weapons
+		}
+
 		search_filters = {
 		}
 		
@@ -1224,9 +1336,9 @@
 		cost = 1
 		x = 14
 		y = 1
-		relative_position_id = SRU_expand_war_measures
+		relative_position_id = SRU_the_struggle_resumes
 		prerequisite = {
-			focus = SRU_expand_war_measures
+			focus = SRU_the_struggle_resumes
 		}
 		search_filters = {
 		}
