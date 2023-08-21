@@ -381,7 +381,7 @@
 			icon = GFX_Educational_Doctrine
 			cost = 1
 			x = 0
-			y = 2
+			y = 1
 			prerequisite = { focus = The_Party_Or_The_State? }
 			relative_position_id = The_Party_Or_The_State?
 			available = {
@@ -427,7 +427,7 @@
 			icon = GFX_Opening_The_Ministry_of_Welfare
 			cost = 2
 			x = 0
-			y = 2
+			y = 1
 			prerequisite = { focus = Educational_Doctrine focus = SRU_Expose_Enemy_Agents }
 			relative_position_id = Educational_Doctrine
 			available = {
@@ -446,7 +446,7 @@
 			icon = GFX_a_Matter_Of_Dissidents
 			cost = 1
 			x = 0
-			y = 2
+			y = 1
 			prerequisite = { focus = The_Power_of_The_Media }
 			relative_position_id = The_Power_of_The_Media
 			available = {
@@ -466,7 +466,7 @@
 			icon = GFX_Opening_The_Ministry_of_Information
 			cost = 2
 			x = 0
-			y = 2
+			y = 1
 			prerequisite = { focus = a_Matter_Of_Dissidents 
 			            }
 			relative_position_id = a_Matter_Of_Dissidents
@@ -524,39 +524,17 @@ focus = {
 		add_political_power = 100
 		add_war_support = 0.1
 		country_event = SRU.11
-	}
-}
-
-focus = {
-	id = Making_The_Cheka_Accountable
-	icon = GFX_Opening_The_Ministry_of_Information
-	cost = 2
-	x = 0
-	y = 2
-	prerequisite = { focus = Chairman_Bakatin 
-				}
-	relative_position_id = Chairman_Bakatin
-	available = {
-				   country_exists = SRU
-	}
-	ai_will_do = {
-			factor = 100
-		}
-	
-	completion_reward = {
 		modify_country_flag = {
 			flag = democratic_support
 			value = 1
 		}
-		swap_ideas = {
-			remove_idea = Purged_Cheka
-			add_idea = Bakatins_Cheka
-		}
+		set_country_flag = SRU_bakatin_heads_security_services
+		
 	}
 }
 
 focus = {
-	id = Chairman_Kyruchkov
+	id = Chairman_ivanov
 	icon = GFX_Opening_The_Ministry_of_Information
 	cost = 2
 	x = 1
@@ -574,52 +552,27 @@ focus = {
 	completion_reward = {
 		
 		country_event = SRU.12
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
+		}
+		set_country_flag = SRU_ivanov_heads_security_services
 	}
 }
 
 focus = {
-	id = Making_The_Cheka_Our_Ally
+	id = SRU_founding_the_mgb
 	icon = GFX_Opening_The_Ministry_of_Information
 	cost = 2
-	x = 0
-	y = 2
-	prerequisite = { focus = Chairman_Kyruchkov 
-				}
-	relative_position_id = Chairman_Kyruchkov
-	available = {
-				   country_exists = SRU
-	}
-	ai_will_do = {
-			factor = 100
-		}
-	
-	completion_reward = {
-		modify_country_flag = {
-			flag = democratic_support
-			value = 1
-		}
-		swap_ideas = {
-			remove_idea = Purged_Cheka
-			add_idea = Krychkovs_Cheka
-		}
-		
-		}
-	}
-
-
-focus = {
-	id = Founding_The_State_Militsiya
-	icon = GFX_Opening_The_Ministry_of_Information
-	cost = 2
-	x = -1
+	x = 1
 	y = 1
 	prerequisite = {
-		 focus = Making_The_Cheka_Our_Ally 
+		 focus = Chairman_Bakatin
 	}
     prerequisite = {
-		focus = Making_The_Cheka_Accountable
+		focus = Chairman_ivanov
 	}
-	relative_position_id = Making_The_Cheka_Our_Ally
+	relative_position_id = Chairman_Bakatin
 	available = {
 				   country_exists = SRU
 	}
@@ -628,7 +581,7 @@ focus = {
 		}
 	
 	completion_reward = {
-		add_ideas = State_Militsiyas
+		
 	}
 }
 
@@ -637,16 +590,16 @@ focus = {
 	icon = GFX_Opening_The_Ministry_of_Information
 	cost = 2
 	x = 0
-	y = 2
+	y = 1
 	prerequisite = {
-		 focus = Founding_The_State_Militsiya 
+		 focus = SRU_founding_the_mgb 
 	}
     prerequisite = {
 		focus = Opening_The_Ministry_of_Welfare
 		focus = Opening_The_Ministry_of_Information
 	}
 	
-	relative_position_id = Founding_The_State_Militsiya
+	relative_position_id = SRU_founding_the_mgb
 	available = {
 				   country_exists = SRU
 	}
