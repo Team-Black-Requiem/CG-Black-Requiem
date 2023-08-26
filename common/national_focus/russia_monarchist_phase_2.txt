@@ -963,6 +963,124 @@ id = MRU_monarchist_phase_2
 		}
 
 	}
+
+	focus = {
+		id = MRU_conscription_drive
+		icon = GFX_MRU_conscription_drive
+		
+        prerequisite = {
+			focus = MRU_Side-line_Tsarist_Officers
+			focus = MRU_Local_Soviet_Councils
+			focus = MRU_Integrate_The_Command_Structure
+			focus = MRU_Enforce_Aristocratic_Primaricy
+			focus = MRU_Retire_Socialist_Officers
+		}
+
+        relative_position_id = MRU_Integrate_The_Command_Structure 
+		
+		cost = 3
+		x = 0
+		y = 2
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+        
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MRU_emergency_factory_coversions
+		icon = GFX_MRU_emergency_factory_coversions
+		
+        prerequisite = {
+			 focus = MRU_conscription_drive 
+		}
+
+        relative_position_id = MRU_conscription_drive 
+		
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+        
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MRU_every_rifle_used
+		icon = GFX_MRU_every_rifle_used
+		
+        prerequisite = {
+			 focus = MRU_conscription_drive 
+		}
+
+        relative_position_id = MRU_conscription_drive 
+		
+		cost = 3
+		x = 1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+        
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MRU_dig_the_defensive_lines
+		icon = MRU_dig_the_defensive_lines
+		
+        prerequisite = {
+			 focus = MRU_every_rifle_used
+			 focus = MRU_emergency_factory_coversions
+		}
+
+        relative_position_id = MRU_every_rifle_used 
+		
+		cost = 3
+		x = -1
+		y = 1
+		available = {
+			country_exists = MRU
+		}
+		bypass = { }
+        
+        ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			
+		}
+
+	}
+
 	# final push #
 	focus = {
 		id = MRU_The_Dream_Hasnt_Died_Yet
@@ -2358,6 +2476,7 @@ id = MRU_monarchist_phase_2
 		icon = GFX_MRU_the_FIRST_test
 		
 		prerequisite = {
+			focus = MRU_A_Division_Of_Glasgows
 			focus = MRU_Early_Models 
 		}
 		relative_position_id = MRU_Early_Models
