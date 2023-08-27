@@ -191,10 +191,13 @@ country_event = {
 		 add_idea = EUR_shortage_of_trusted_officers
 		 custom_effect_tooltip = EUR_general_reshuffling
 		hidden_effect = {
-		#retire_character = EUR_Anton_Kozlov
+		retire_character = EUR_Anton_Kozlov
 		retire_character = EUR_Fedor_Nikolaev
 		retire_character = EUR_Vyacheslav_Pushkin
 		retire_character = EUR_Mikhail_Fedorov
+		retire_character = EUR_Aleksandr_Petrov
+		retire_character = EUR_Venedikt_Vinogradov
+		retire_character = EUR_Nikolay_Frolov
 		recruit_character = EUR_Michele_Manfredi
 		recruit_character = EUR_Edward_Laurier
 		#recruit_character = EUR_Elliot_Collins
@@ -232,10 +235,7 @@ country_event = {
 		hidden_effect = {
 		complete_national_focus = EUR_By_Emperors_order
 		}
-		swap_ideas = {
-               remove_idea = EUR_legitimate_cause
-               add_idea = EUR_legitimate_cause_2
-         }
+               remove_ideas = EUR_legitimate_cause
 		ai_chance = {
 			factor = 100
         } 	
@@ -249,9 +249,7 @@ country_event = {
 		hidden_effect = {
 		complete_national_focus = EUR_In_memory_of_Russian_Empire
 		}
-		swap_ideas = {
-               remove_idea = EUR_legitimate_cause
-               add_idea = EUR_legitimate_cause_2
-        }
+               remove_ideas = EUR_legitimate_cause
 	}
 }
+

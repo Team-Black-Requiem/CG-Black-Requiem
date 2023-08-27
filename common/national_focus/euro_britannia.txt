@@ -279,6 +279,12 @@
                add_idea = EUR_poor_logistics_2
                }
 		}
+		hidden_effect = {
+			country_event ={
+				id = EUR.11
+				days = 3
+			} 
+		}
 	}
 	focus = {
 		id = EUR_Expand_north_trading_routes
@@ -775,7 +781,8 @@
 		}
 	
 		completion_reward = {
-			add_political_power = 100
+		add_political_power = 100
+		#to do: starts favor mechanic still to be done.
 		}
 	}
 	focus = {
@@ -827,7 +834,30 @@
 		}
 	
 		completion_reward = {
-			
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13337 13333 1714 13329 12623 1878 }
+				start_province = 12551
+				target_province = 1878
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 13337 13332 13328 13327 4229 }
+				start_province = 13337
+				target_province = 4229
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13336 13341 12683 1865 }
+				start_province = 12551
+				target_province = 1865
+			}
 		}
 	}
 	focus = {
@@ -884,6 +914,7 @@
 	
 		completion_reward = {
 			574 = {
+				add_manpower = 125000
 				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
 					type = 	industrial_complex
@@ -921,8 +952,14 @@
 	
 		completion_reward = {
 			574 = {
+				add_extra_state_shared_building_slots = 14
 				add_building_construction = {
-					type = 	air_base
+					type = 	industrial_complex
+					level = 8
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
 					level = 6
 					instant_build = yes
 				}
@@ -951,7 +988,38 @@
 		}
 	
 		completion_reward = {
+		574 = {
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 7844
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 1748
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 10714
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 4821
+			}
+			set_building_level = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
 		}
+		}
+	}
 	}
 	focus = {
 		id = EUR_Revitalize_Neryungri_Airfields
@@ -982,6 +1050,18 @@
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = {
+					NOT = {has_tech = early_jet_design_2}
+				}
+				set_technology = {early_jet_design_2 = 1}
+			}
+			if = {
+				limit = {
+					NOT = {has_tech = trans1}
+				}
+				set_technology = {trans1 = 1}
+			}
 		}
 	}
 	focus = {
@@ -1007,7 +1087,7 @@
 	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = air_transport
+				type = transport_plane_equipment_1
 				amount = 160
 				producer = BRT
 			}
@@ -1026,7 +1106,7 @@
 		prerequisite = {
 			focus = EUR_Schneizels_Playground
 		}
-		mutually_exclusive = { focus = EUR_Pulling_from_people}
+		mutually_exclusive = { focus = EUR_An_Area_in_All_but_Name}
 		search_filters = {
 		}
 		
@@ -1039,7 +1119,10 @@
 		}
 	
 		completion_reward = {
+			set_country_flag = Industry_Schnizel_2
 			add_political_power = 100
+			#to do: in the future will start a trade system to generate favor with
+			#with the empire.
 		}
 	}
 	focus = {
@@ -1064,6 +1147,46 @@
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 12
+				state = 562
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 6
+				state = 637
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 4
+				state = 822
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 10
+				state = 644
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 863
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 574
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 644
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 562
+			}
 		}
 	}
 	focus = {
@@ -1088,6 +1211,26 @@
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 574
+			}
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 644
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 722
+			}
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 917
+			}
 		}
 	}
 	focus = {
@@ -1115,6 +1258,8 @@
 		}
 	
 		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = industrial_complex level = 4 }
 		}
 	}
 	focus = {
@@ -1139,6 +1284,7 @@
 		}
 	
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 6 }
 		}
 	}
 	focus = {
@@ -1163,11 +1309,33 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment
+				amount = 6000
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = support_equipment
+				amount = 600
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = artillery_equipment
+				amount = 250
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = motorized_equipment
+				amount = 200
+				producer = BRT
+			}
+			add_ideas = EUR_Establishing_our_Brand
+			#to do: in the future add a lot of favor
 		}
 	}
 	focus = {
-		id = EUR_Steel_for_Britannia
-		icon = GFX_EUR_Steel_for_Britannia
+		id = EUR_Oil_for_Britannia
+		icon = GFX_EUR_Oil_for_Britannia
 		cost = 3
 		x = 1
 		y = 1
@@ -1187,6 +1355,16 @@
 		}
 	
 		completion_reward = {
+			add_resource = {
+				type = Oil
+				amount = 8
+				state = 722
+			}
+			add_resource = {
+				type = Oil
+				amount = 10
+				state = 917
+			}
 		}
 	}
 	focus = {
@@ -1195,9 +1373,9 @@
 		cost = 3
 		x = 0
 		y = 1
-		relative_position_id = EUR_Steel_for_Britannia
+		relative_position_id = EUR_Oil_for_Britannia
 		prerequisite = {
-			focus = EUR_Steel_for_Britannia
+			focus = EUR_Oil_for_Britannia
 		}
 		search_filters = {
 		}
@@ -1211,6 +1389,11 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				category = excavation_tech
+			}
 		}
 	}
 	focus = {
@@ -1240,6 +1423,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_underdeveloped_economy
+				add_idea = EUR_Economic_Stability_Secured
+			}
 		}
 	}
 #############################################By Emperor's order Restoring discipline in the army
@@ -1294,8 +1481,28 @@
 		}
 	
 		completion_reward = {
+			add_advisor_role = {
+				character = EUR_Michele_Manfredi
+				active = yes
+				advisor={	
+				slot = high_command
+				idea_token = EUR_Michele_Manfredi_idea
+				ledger = army
+				allowed = {
+					original_tag = EUR
+				}
+				traits = {
+					knightmare_proponent_2
+				}
+			}
+		}
+		EUR_Michele_Manfredi = {
+			add_trait = { trait = panzer_expert }
+			add_trait = { trait = winter_expert	}
+			promote_leader = yes}
 		}
 	}
+
 ##########Ask more generals from Britannia
 	focus = {
 		id = EUR_Ask_more_generals
@@ -1716,6 +1923,8 @@
 		}
 	
 		completion_reward = {
+			add_manpower = 76000
+			add_ideas = EUR_Mobilize_more_people
 		}
 	}
 	focus = {
@@ -1740,6 +1949,9 @@
 		}
 	
 		completion_reward = {
+			army_experience = 50
+			add_manpower = -15000
+			remove_ideas = EUR_national_militia_3
 		}
 	}
 	focus = {
@@ -1764,6 +1976,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Open_Britannian_academy_for_officers
 		}
 	}
 	focus = {
@@ -1791,6 +2004,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Modern_Doctrine
 		}
 	}
 	focus = {
@@ -1815,6 +2029,8 @@
 		}
 	
 		completion_reward = {
+
+			
 		}
 	}
 	focus = {
@@ -1839,6 +2055,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Focusing_on_knightmares_production
 		}
 	}
 	focus = {
@@ -1969,6 +2186,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Establish_The_Free_Port
 			863 = {
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
@@ -2108,6 +2326,7 @@
 				amount = 6
 				state = 562
 			}
+			#to do: future formation of the TPTA
 		}
 	}
 	focus = {
@@ -2158,6 +2377,15 @@
 		}
 	
 		completion_reward = {
+			BRT = {country_event = BRT.67}
+			863 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = 	dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2182,6 +2410,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Establish_the_Okhotsk_Drydocks
 			562 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2381,6 +2610,7 @@
 		}
 	
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 6 }
 		}
 	}
 	focus = {
@@ -2405,6 +2635,27 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment
+				amount = 6000
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = support_equipment
+				amount = 6000
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = artillery_equipment
+				amount = 6000
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = motorized_equipment
+				amount = 6000
+				producer = BRT
+			}
+			add_ideas = EUR_Establishing_our_Brand
 		}
 	}
 	focus = {
@@ -2464,7 +2715,7 @@
 	
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 1
+				bonus = 2
 				uses = 2
 				category = excavation_tech
 			}
@@ -2497,6 +2748,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_underdeveloped_economy
+				add_idea = EUR_Economic_Stability_Secured
+			}
 		}
 	}
 #####################################In memory of Russian Empire Restoring discipline in the army
@@ -2522,6 +2777,7 @@
 		}
 	
 		completion_reward = {
+		add_ideas = EUR_shortage_of_trusted_officers
 		add_command_power = 50
 		swap_ideas = {
                remove_idea = EUR_national_militia_2
@@ -2556,10 +2812,10 @@
 			recruit_character = EUR_Isai_Kiselev
 			recruit_character = EUR_Gogol_Bogdanov
 			custom_effect_tooltip = EUR_Manfredi_promotion_tt
-			add_country_leader_role = {
-		          character = EUR_Michele_Manfredi
-		          promote_leader = yes
-		advisor={	
+			add_advisor_role = {
+		    character = EUR_Michele_Manfredi
+		    active = yes
+			advisor={	
 			slot = high_command
 			idea_token = EUR_Michele_Manfredi_idea
 			ledger = army
@@ -2575,18 +2831,11 @@
 			}
 		}
 	       }
-			add_country_leader_role = {
-		          character = EUR_Michele_Manfredi
-		          promote_leader = yes
-			field_marshal = {
-				traits={ armor_expert winter_expert}
-				skill=4
-				attack_skill=5
-				defense_skill=4
-				planning_skill=3
-				logistics_skill=3
-		    }
-	       }
+			
+			EUR_Michele_Manfredi = {
+				add_trait = { trait = panzer_expert }
+				add_trait = { trait = winter_expert	}
+				promote_leader = yes}
 		}
 	}
 	focus = {
@@ -2732,7 +2981,7 @@
 			add_war_support = 0.10
 				swap_ideas = {
 					remove_idea = EUR_Siberian_Man
-					add_idea = EUR_Siberian_Man2
+					add_idea = EUR_Siberian_Man_2
 				}
 			
 		}
@@ -2762,7 +3011,7 @@
 				add_command_power = 50
 					swap_ideas = {
 						remove_idea = EUR_Siberian_Mind
-						add_idea = EUR_Siberian_Mind2
+						add_idea = EUR_Siberian_Mind_2
 					}
 				
 			}
@@ -2791,7 +3040,7 @@
 		}
 	
 		completion_reward = {
-			remove_ideas = EUR_discontent_in_the_army_ranks
+			#remove_ideas = EUR_discontent_in_the_army_ranks this doesn't exist duplicate of militia 3?
 			load_oob = "EUR_Rus_Battalions"
 			
 		}
@@ -2885,6 +3134,8 @@
 	
 		completion_reward = {
 			add_ideas = EUR_A_New_Russian_Army_Idea
+			#should we change this? The EUR won't have cores on the rest
+			#of Russia unlike in spain.
 		}
 	}
 	
@@ -2980,7 +3231,7 @@
 				uses = 1
 				category = signal_company_tech
 			}
-			remove_ideas = EUR_discontent_in_the_army_ranks
+			remove_ideas = EUR_national_militia_3
 		}
 	}
 	focus = {
@@ -3006,7 +3257,7 @@
 		}
 	
 		completion_reward = {
-			add_ideas = EUR_Cheap_Tanks
+			add_ideas = EUR_Cheap_and_fast_firepower
 		}
 	}
 	focus = {
@@ -3080,6 +3331,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Improve_outdated_recharge_system
 		}
 	}
 	focus = {
@@ -3105,6 +3357,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Surprise_Tactics
 		}
 	}
 	focus = {
@@ -3190,6 +3443,7 @@
 	
 		completion_reward = {
 			load_oob = "EUR_Order_Of_Michael"
+			#how much stats must be added?
 		}
 	}
 	focus = {
@@ -3279,6 +3533,7 @@
 		}
 	
 		completion_reward = {
+			#to do: update during the economic update.
 		}
 	}
 	focus = {
@@ -3304,6 +3559,7 @@
 		}
 	
 		completion_reward = {
+		#to do: load 4 oob like order of michel? OR first aid?
 		}
 	}
 ####################################Guinevere Support

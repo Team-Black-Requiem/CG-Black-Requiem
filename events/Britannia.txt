@@ -1953,4 +1953,45 @@ country_event = {
 	}
 }
 	
-
+country_event = {  
+	id = BRT.67 ####Leasing our coastline from the EUR
+	title = BRT.67.t
+	desc = BRT.67.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BRT.67.a
+		ai_chance = {
+			factor = 100
+        } 	
+        BRT ={
+			diplomatic_relation = {
+			country = EUR
+			relation = docking_rights
+			active = yes
+		}
+	    }
+		EUR = {
+		863 = {
+		set_building_level ={
+		type = naval_base
+		level = 10
+		instant_build = yes
+		   province = 12551
+	}
+		set_building_level ={
+		type = coastal_bunker
+		level = 5
+		instant_build = yes
+		   province = 12551
+	}
+	}
+	}
+	}
+	option = {
+		name = BRT.67.b
+		ai_chance = {
+			factor = 0 # 0 for testing have to talk to sidd for the odds.
+		}
+	}
+}

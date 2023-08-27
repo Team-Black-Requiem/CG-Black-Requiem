@@ -329,32 +329,18 @@ characters = {
 	##HIGH COMMAND/RECRUITED LATER
 		EUR_Ivan_Solovev={
 		name= "Ivan Solovev"
-		
-		portraits={
-		army = {
-				small =  "GFX_idea_EUR_Ivan_Solovev"
-			    
-			}}
-
-
-			advisor = {
+		portraits={army = {small = "GFX_idea_EUR_Ivan_Solovev"}}
+		advisor = {
 			slot = army_chief
 			idea_token = EUR_Ivan_Solovev_idea_1
-
-			allowed = {
-				tag = EUR
-			}
-
-			traits = { 
-				army_chief_defensive_3
-			}
-
+			allowed = {tag = EUR}
+			traits = {army_chief_defensive_3}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
 		    }
-	}
+		}
 
 
 		EUR_Isai_Kiselev={
@@ -571,9 +557,10 @@ characters = {
 		name= "Michele Manfredi"
 		
 		portraits={
+		
 		army = {
 				large = "GFX_portrait_EUR_Michele_Manfredi"
-			    
+			    small = "GFX_idea_EUR_Michele_Manfredi"
 			}}
 	
 		corps_commander = {
