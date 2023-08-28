@@ -588,6 +588,29 @@ EUR_Focusing_on_knightmares_production = {
 				}	
 			}
 	}  
+
+	EUR_Trained_Bombers = {
+		
+		allowed = {
+		   always = yes
+	   }
+	   cancel = {
+		  SRU = {
+			exists = no
+		  }
+	   }
+	   allowed_civil_war = {
+		   always = yes
+	   }
+	
+	   removal_cost = -1
+	   
+	   modifier = {
+		air_close_air_support_attack_factor = 0.15
+	}
+			
+	}  
+
 }
 
 

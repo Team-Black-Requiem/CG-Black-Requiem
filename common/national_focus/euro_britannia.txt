@@ -1622,6 +1622,11 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter
+				amount = 100
+				producer = BRT
+			}
 		}
 	}
 	focus = {
@@ -1646,6 +1651,8 @@
 		}
 	
 		completion_reward = {
+			air_experience = 100
+			add_ideas = EUR_Trained_Bombers
 		}
 	}
 	focus = {
@@ -1668,10 +1675,11 @@
 		ai_will_do = {
 			factor = 10
 		}
-	
 		completion_reward = {
+			load_oob = "EUR_Britannia_Air_Aces"
 		}
 	}
+
 	focus = {
 		id = EUR_Develop_our_own_doctrine
 		icon = GFX_EUR_develop_our_own_doctrine
@@ -1694,6 +1702,11 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
 		}
 	}
 	focus = {
