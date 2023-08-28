@@ -1,6 +1,6 @@
 ideologies = {
 	
-    ultra_nationalism = {
+    supremacist = {
 		
 		types = {
 		
@@ -132,7 +132,7 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	authoritarian_democracy = {
+	authoritarian = {
 	
 		types = {
 		
@@ -150,7 +150,7 @@ ideologies = {
 			}
 			one_party_democracy = {
 			}
-			authoritarian_democracy_sub = {
+			authoritarian_sub = {
 			}
 			pat_conservatism = {
 			}
@@ -200,9 +200,58 @@ ideologies = {
 
 		ai_fascist = yes # 
 	}
+
+	paternalism = {
+	
+		types = {
+		
+			dominant_party_democracy = {
+			}
+			
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+		
+		color = { 0 7 76 }
+		
+		
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_send_volunteers = no
+		}
+		
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.05
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.4
+			send_volunteers_tension = 0.4
+			guarantee_tension = 0.4
+			drift_defence_factor = -0.3	
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 10.0
+		}
+		
+		faction_modifiers = {
+		}
+
+		ai_fascist = yes # 
+	}
 	
 	
-	moderate_conservatism = {
+	conservatism = {
 	
 		types = {
 		
@@ -263,7 +312,7 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	moderate_liberalism = {
+	liberalism = {
 	
 		types = {
 		
@@ -276,7 +325,6 @@ ideologies = {
 			radical_liberalism = {
 			}
 
-			
 			ancap = {
 			}
 
@@ -323,7 +371,7 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	moderate_socialism = {
+	progressive = {
 	
 		types = {
 			
@@ -348,7 +396,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 204 0 102 }
+		color = { 255 162 0 }
 		
 		
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -379,9 +427,61 @@ ideologies = {
 
 		ai_fascist = yes # 
 	}
+
+	socialism = {
+
+		
+		types = {
+		
+			anarcho_pacifism = {
+			}
+			trade_unionism = {
+			}
+			agrarian_socialism = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 199 0 66 }
+		
+		war_impact_on_world_tension = 0.75		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+		
+		ai_fascist = yes# uses the commie AI behaviour
+		
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+		generate_wargoal_tension = 0.05
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		
+		faction_modifiers = {
+			
+		}
+
+	}
 	
 	
-	hardline_socialism = {
+	revolutionary = {
 
 		
 		types = {
@@ -460,7 +560,7 @@ ideologies = {
 
 	}
 	
-	totalitarian_socialism = {
+	vanguardist = {
 		
 		types = {
 		

@@ -82,9 +82,9 @@ focus_tree = {
 		modifier = { factor = 3
 			if = {
 				limit = {
-					has_government = moderate_conservatism
-					has_government = moderate_liberalism
-					has_government = moderate_socialism 
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressive 
 						}
 				}
 			}
@@ -100,7 +100,7 @@ focus_tree = {
 }
 
 		focus = {
-		id = gen_hardline_socialism
+		id = gen_revolutionary
 		icon = GFX_goal_generic_demand_territory
 		mutually_exclusive = { focus = gen_authoritarian_dem }
 
@@ -109,7 +109,7 @@ focus_tree = {
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = hardline_socialism
+						has_government = revolutionary
 						}
 					}
 				}
@@ -129,7 +129,7 @@ focus_tree = {
 
 		completion_reward = {
 	
-		add_ideas = GEN_hardline_socialism_idea_1
+		add_ideas = GEN_revolutionary_idea_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -152,15 +152,15 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
-		prerequisite = { focus = gen_hardline_socialism }
-	  relative_position_id = gen_hardline_socialism
+		prerequisite = { focus = gen_revolutionary }
+	  relative_position_id = gen_revolutionary
 
 		completion_reward = {
 	
 
 		swap_ideas = {
-			remove_idea = GEN_hardline_socialism_idea_1
-			add_idea = GEN_hardline_socialism_idea_2
+			remove_idea = GEN_revolutionary_idea_1
+			add_idea = GEN_revolutionary_idea_2
 		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -191,8 +191,8 @@ focus_tree = {
 	
 
 		swap_ideas = {
-			remove_idea = GEN_hardline_socialism_idea_2
-			add_idea = GEN_hardline_socialism_idea_3
+			remove_idea = GEN_revolutionary_idea_2
+			add_idea = GEN_revolutionary_idea_3
 		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -262,7 +262,7 @@ focus_tree = {
 
 		id = gen_authoritarian_dem
 		icon = GFX_goal_generic_demand_territory
-		mutually_exclusive = { focus = gen_hardline_socialism }
+		mutually_exclusive = { focus = gen_revolutionary }
 		
 						available = {
 				exists = yes
@@ -273,7 +273,7 @@ focus_tree = {
 			modifier = { factor = 3
 					if = {
 						limit = {
-							has_government = authoritarian_democracy
+							has_government = authoritarian
 							}
 						}
 					}
@@ -379,9 +379,9 @@ focus_tree = {
 			modifier = { factor = 3
 			if = {
 				limit = {
-					has_government = moderate_conservatism
-					has_government = moderate_liberalism
-					has_government = moderate_socialism 
+					has_government = conservatism
+					has_government = liberalism
+					has_government = progressive 
 					}
 				}
 			}
@@ -395,7 +395,7 @@ focus_tree = {
 
 
 focus = {
-	id = gen_moderate_socialism
+	id = gen_progressive
 	prerequisite = { focus = gen_liberalism }
 	icon = GFX_goal_generic_demand_territory
 
@@ -408,18 +408,18 @@ ai_will_do = {
 	modifier = { factor = 3
 		if = {
 			limit = {
-				has_government = moderate_socialism
+				has_government = progressive
 				}
 			}
 		}
 	}   
 
 	mutually_exclusive = {
-		focus = gen_moderate_conservatism
-		focus = gen_moderate_liberalism
+		focus = gen_conservatism
+		focus = gen_liberalism
 	}
 completion_reward = {
-	add_ideas = GEN_hardline_socialism_idea_1
+	add_ideas = GEN_revolutionary_idea_1
 
 }
 
@@ -431,7 +431,7 @@ cost = 5
 
 focus = {
 	id = gen_a_united_front
-	prerequisite = { focus = gen_moderate_socialism }
+	prerequisite = { focus = gen_progressive }
 	icon = GFX_goal_generic_demand_territory
 	available = {
 	exists = yes
@@ -439,14 +439,14 @@ focus = {
 }
 
 completion_reward = {
-	add_ideas = GEN_hardline_socialism_idea_2
+	add_ideas = GEN_revolutionary_idea_2
 
 	hidden_effect = {
-		remove_ideas = GEN_hardline_socialism_idea_1
+		remove_ideas = GEN_revolutionary_idea_1
 	}
 }
 
-relative_position_id = gen_moderate_socialism
+relative_position_id = gen_progressive
 x = 0
 y = 1
 cost = 5
@@ -462,9 +462,9 @@ focus = {
 }
 
 completion_reward = {
-	add_ideas = GEN_hardline_socialism_idea_3
+	add_ideas = GEN_revolutionary_idea_3
 
-	remove_ideas = GEN_hardline_socialism_idea_2
+	remove_ideas = GEN_revolutionary_idea_2
 }
 
 relative_position_id = gen_a_united_front
@@ -507,8 +507,8 @@ cost = 5
 				if = {
 					limit = {
 						has_government = autocracy
-						has_government = ultra_nationalism
-						has_government = totalitarian_socialism 
+						has_government = supremacist
+						has_government = vanguardist 
 						}
 					
 					}
@@ -535,7 +535,7 @@ cost = 5
 	}
 
 	focus = {
-		id = gen_moderate_conservatism
+		id = gen_conservatism
 		icon = GFX_goal_support_democracy
 
 		available = {
@@ -547,7 +547,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = moderate_conservatism
+						has_government = conservatism
 						}
 					}
 				}
@@ -563,8 +563,8 @@ cost = 5
 	  relative_position_id = gen_liberalism
 
 	  mutually_exclusive = {
-		focus = gen_moderate_liberalism 
-		focus = gen_moderate_socialism
+		focus = gen_liberalism 
+		focus = gen_progressive
 	  }
 		completion_reward = {
 		    add_stability = 0.1
@@ -583,13 +583,13 @@ cost = 5
 	
 			}
 	
-			prerequisite = { focus = gen_moderate_conservatism }
+			prerequisite = { focus = gen_conservatism }
 			x = 0
 			y = 1
 			cost = 5
 	
 			available_if_capitulated = yes
-		  relative_position_id = gen_moderate_conservatism
+		  relative_position_id = gen_conservatism
 	
 			completion_reward = {
 		    
@@ -609,10 +609,10 @@ cost = 5
 		
 					OR = {
 		
-						has_government = moderate_socialism
-						has_government = moderate_liberalism
-						has_government = moderate_conservatism
-						has_government = hardline_socialism
+						has_government = progressive
+						has_government = liberalism
+						has_government = conservatism
+						has_government = revolutionary
 					}
 				}
 		
@@ -636,7 +636,7 @@ cost = 5
 			}
 
 			focus = {
-				id = gen_moderate_liberalism
+				id = gen_liberalism
 				icon = GFX_goal_support_democracy
 		
 				available = {
@@ -654,8 +654,8 @@ cost = 5
 			  relative_position_id = gen_liberalism
 		
 			  mutually_exclusive = {
-				focus = gen_moderate_conservatism
-				focus = gen_moderate_socialism
+				focus = gen_conservatism
+				focus = gen_progressive
 			  }
 				completion_reward = {
 		            add_ideas = GEN_liberalism_1
@@ -671,17 +671,17 @@ cost = 5
 							exists = yes
 		
 					OR = {
-					has_government = moderate_liberalism
+					has_government = liberalism
 		        	}
 				}
 		
-				prerequisite = { focus = gen_moderate_liberalism }
+				prerequisite = { focus = gen_liberalism }
 				x = 0
 				y = 1
 				cost = 5
 		
 				available_if_capitulated = yes
-			  relative_position_id = gen_moderate_liberalism
+			  relative_position_id = gen_liberalism
 		
 				completion_reward = {
 					add_ideas = GEN_liberalism_2
@@ -702,10 +702,10 @@ cost = 5
 		
 					OR = {
 		
-						has_government = moderate_socialism
-						has_government = moderate_liberalism
-						has_government = moderate_conservatism
-						has_government = hardline_socialism
+						has_government = progressive
+						has_government = liberalism
+						has_government = conservatism
+						has_government = revolutionary
 					}
 				}
 		
@@ -784,8 +784,8 @@ cost = 5
 		completion_reward = {
 
 			swap_ideas = {
-    remove_idea = GEN_totalitarian_socialism_1
-    add_idea = GEN_totalitarian_socialism_2
+    remove_idea = GEN_vanguardist_1
+    add_idea = GEN_vanguardist_2
 }
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -832,7 +832,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = totalitarian_socialism
+						has_government = vanguardist
 						}
 					}
 				}
@@ -867,7 +867,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = ultra_nationalism
+						has_government = supremacist
 						}
 					}
 				}
@@ -905,7 +905,7 @@ cost = 5
 
 		completion_reward = {
 
-			add_ideas = GEN_Ultra_nationalism_1
+			add_ideas = GEN_supremacist_1
 		}
 	}
 
@@ -928,8 +928,8 @@ cost = 5
 
 		completion_reward = {
              
-		add_ideas = GEN_Ultra_nationalism_2
-	    hidden_effect = {	remove_ideas = GEN_Ultra_nationalism_1
+		add_ideas = GEN_supremacist_2
+	    hidden_effect = {	remove_ideas = GEN_supremacist_1
 		}
 		}
 }
@@ -975,7 +975,7 @@ cost = 5
 		
 				bypass = {
 				NOT = {
-        has_government = moderate_socialism
+        has_government = progressive
          }
 		}
 
@@ -990,7 +990,7 @@ cost = 5
 
 		completion_reward = {
 			add_stability = 0.07
-			add_ideas = GEN_totalitarian_socialism_1
+			add_ideas = GEN_vanguardist_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
