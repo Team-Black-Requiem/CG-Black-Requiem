@@ -39,7 +39,10 @@ focus_tree = {
 
             completion_reward = {
                 country_event = EIZ.1
-            set_country_flag = eiz_leadership 
+            set_country_flag = {
+                eiz_leadership
+                value = 0
+            }
         
                 hidden_effect = {
                 
@@ -330,7 +333,7 @@ focus_tree = {
         id = EIZ_LyonVictory
         icon = GFX_EIZ_LyonVictory
         x = 16
-        y = 3
+        y = 4
 
         cost = 1
 
@@ -355,14 +358,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                if = {
-                    limit = {NOT = {has_tech = mechanised_infantry}}
-                    set_technology = {mechanised_infantry = 1}
-                }    
+                   
                 country_event = EIZ.9
 
                 hidden_effect = {
                   load_oob = "EIZ_1st_French_Aid"
+				  if = {
+                    limit = {NOT = {has_tech = mechanised_infantry}}
+                    set_technology = {mechanised_infantry = 1}
+                } 
               }
         }
     } 
@@ -371,7 +375,7 @@ focus_tree = {
         id = EIZ_FredericaVictory
         icon = GFX_EIZ_FredericaVictory
         x = 50
-        y = 3
+        y = 4
 
         cost = 1
      
@@ -403,7 +407,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                if = {
+                
+                country_event = EIZ.10
+
+                hidden_effect = {
+                  load_oob = "EIZ_1st_German_Aid"
+				  if = {
                     limit = {NOT = {has_tech = mechanised_infantry}}
                     set_technology = {mechanised_infantry = 1}
                 }
@@ -411,10 +420,6 @@ focus_tree = {
                     limit = {NOT = {has_tech = cold_war_tank}}
                     set_technology = {cold_war_tank = 1}
                 }
-                country_event = EIZ.10
-
-                hidden_effect = {
-                  load_oob = "EIZ_1st_German_Aid"
               }
         }
     } 
@@ -423,7 +428,7 @@ focus_tree = {
         id = EIZ_OskarVictory
         icon = GFX_EIZ_OskarVictory
         x = 100
-        y = 3
+        y = 4
 
         cost = 1
      
@@ -436,7 +441,7 @@ focus_tree = {
 			has_completed_focus = EIZ_Final_Selection
             has_country_flag = {
                 flag = eiz_leadership
-                value < -6
+                value < -3
                }
             }
     
@@ -448,22 +453,23 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                if = {
-                    limit = {NOT = {has_tech = mechanised_infantry}}
-                    set_technology = {mechanised_infantry = 1}
-                }   
+
                 country_event = EIZ.11
 
                 hidden_effect = {
                    load_oob = "EIZ_1st_Austrian_Aid"
+				                   if = {
+                    limit = {NOT = {has_tech = mechanised_infantry}}
+                    set_technology = {mechanised_infantry = 1}
+                }   
               }
         }
-    } 
+    }   
 
     focus = {
-        id = EIZ_A_Reasonable_War
-        icon = GFX_EIZ_A_Reasonable_War
-        x = 0
+        id = EIZ_Request_Economic_Support_V1
+        icon = GFX_EIZ_Request_Economic_Support_V3
+        x = -1
         y = 1
 
         prerequisite = { focus = EIZ_LyonVictory}
@@ -488,112 +494,8 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.12
-
-                hidden_effect = {
-              }
-        }
-    } 
-
-    focus = {
-        id = EIZ_A_Just_War
-        icon = GFX_EIZ_A_Just_War
-        x = 0
-        y = 1
-
-        prerequisite = { focus = EIZ_FredericaVictory}
-        relative_position_id = EIZ_FredericaVictory
-        
-        cost = 2
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = RUS has_cosmetic_tag = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.3
-
-                hidden_effect = {
-              }
-        }
-    } 
-
-    focus = {
-        id = EIZ_A_Desperate_War
-        icon = GFX_EIZ_A_Desperate_War
-        x = 0
-        y = 1
-
-        prerequisite = { focus = EIZ_OskarVictory}
-        relative_position_id = EIZ_OskarVictory
-        
-        cost = 2
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = RUS has_cosmetic_tag = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.3
-
-                hidden_effect = {
-              }
-        }
-    } 
-
-    focus = {
-        id = EIZ_Request_Economic_Support_V1
-        icon = GFX_EIZ_Request_Economic_Support_V3
-        x = -1
-        y = 1
-
-        prerequisite = { focus = EIZ_A_Reasonable_War}
-        relative_position_id = EIZ_A_Reasonable_War
-        
-        cost = 2
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = RUS has_cosmetic_tag = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                country_event = EIZ.3
+                add_offsite_building = { type = arms_factory level = 6 }
+				add_offsite_building = { type = industrial_complex level = 6 }
 
                 hidden_effect = {
               }
@@ -606,8 +508,8 @@ focus_tree = {
         x = 1
         y = 1
 
-        prerequisite = { focus = EIZ_A_Reasonable_War}
-        relative_position_id = EIZ_A_Reasonable_War
+        prerequisite = { focus = EIZ_LyonVictory}
+        relative_position_id = EIZ_LyonVictory
         
         cost = 2
 
@@ -641,8 +543,8 @@ focus_tree = {
         x = -1
         y = 1
 
-        prerequisite = { focus = EIZ_A_Just_War}
-        relative_position_id = EIZ_A_Just_War
+        prerequisite = { focus = EIZ_FredericaVictory}
+        relative_position_id = EIZ_FredericaVictory
         
         cost = 2
 
@@ -676,8 +578,8 @@ focus_tree = {
         x = 1
         y = 1
 
-        prerequisite = { focus = EIZ_A_Just_War}
-        relative_position_id = EIZ_A_Just_War
+        prerequisite = { focus = EIZ_FredericaVictory}
+        relative_position_id = EIZ_FredericaVictory
         
         cost = 2
 
@@ -711,8 +613,8 @@ focus_tree = {
         x = -1
         y = 1
 
-        prerequisite = { focus = EIZ_A_Desperate_War}
-        relative_position_id = EIZ_A_Desperate_War
+        prerequisite = { focus = EIZ_OskarVictory}
+        relative_position_id = EIZ_OskarVictory
         
         cost = 2
 
@@ -746,8 +648,8 @@ focus_tree = {
         x = 1
         y = 1
 
-        prerequisite = { focus = EIZ_A_Desperate_War}
-        relative_position_id = EIZ_A_Desperate_War
+        prerequisite = { focus = EIZ_OskarVictory}
+        relative_position_id = EIZ_OskarVictory
         
         cost = 2
 
@@ -776,7 +678,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Destroy_The_Monarchists
+        id = EIZ_Total_War
         icon = GFX_EIZ_Fight_The_Monarchists
         x = 0
         y = 2
@@ -787,7 +689,7 @@ focus_tree = {
         prerequisite = { 
             focus = EIZ_Raise_Volunteers
         }
-        relative_position_id = EIZ_A_Reasonable_War
+        relative_position_id = EIZ_LyonVictory
         
         cost = 3
 
@@ -817,7 +719,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Fight_The_Monarchists
+        id = EIZ_A_Just_War
         icon = GFX_EIZ_Fight_The_Monarchists
         x = 0
         y = 2
@@ -828,7 +730,7 @@ focus_tree = {
         prerequisite = { 
             focus = EIZ_Request_Unoffical_Renforcements
         }
-        relative_position_id = EIZ_A_Just_War
+        relative_position_id = EIZ_FredericaVictory
         
         cost = 3
 
@@ -863,7 +765,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Subvert_The_Monarchists
+        id = EIZ_A_Desperate_War
         icon = GFX_EIZ_Subvert_The_Monarchists
         x = 0
         y = 2
@@ -874,7 +776,7 @@ focus_tree = {
         prerequisite = { 
             focus = EIZ_Force_Russians_To_War
         }
-        relative_position_id = EIZ_A_Desperate_War
+        relative_position_id = EIZ_OskarVictory
         
         cost = 3
 
@@ -914,9 +816,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Destroy_The_Monarchists
+            focus = EIZ_Total_War
         }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Total_War
         
         cost = 3
 
@@ -1804,7 +1706,7 @@ focus_tree = {
             focus = EIZ_multinational_volunteers 
         }
 
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Total_War
         
         cost = 3
 
@@ -1884,9 +1786,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Destroy_The_Monarchists
+            focus = EIZ_Total_War
         }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Total_War
         
         cost = 3
 
@@ -2935,9 +2837,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Destroy_The_Monarchists 
+            focus = EIZ_Total_War 
         }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Total_War
         
         cost = 3
 
@@ -4295,7 +4197,7 @@ focus_tree = {
     }
 
     focus = {
-        id = EIZ_Fight_The_Monarchists
+        id = EIZ_A_Just_War
         icon = GFX_EIZ_Fight_The_Monarchists
         x = 0
         y = 2
@@ -4306,7 +4208,7 @@ focus_tree = {
         prerequisite = { 
             focus = EIZ_Request_Unoffical_Renforcements
         }
-        relative_position_id = EIZ_A_Just_War
+        relative_position_id = EIZ_FredericaVictory
         
         cost = 3
 
@@ -4349,11 +4251,11 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Fight_The_Monarchists
+            focus = EIZ_A_Just_War
         }
 
         
-        relative_position_id = EIZ_Fight_The_Monarchists
+        relative_position_id = EIZ_A_Just_War
         
         cost = 3
 
@@ -5034,9 +4936,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Fight_The_Monarchists
+            focus = EIZ_A_Just_War
         }
-        relative_position_id = EIZ_Fight_The_Monarchists
+        relative_position_id = EIZ_A_Just_War
         
         cost = 3
 
@@ -5601,10 +5503,10 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Fight_The_Monarchists
+            focus = EIZ_A_Just_War
         }
 
-        relative_position_id = EIZ_Fight_The_Monarchists
+        relative_position_id = EIZ_A_Just_War
         
         cost = 3
 
@@ -6402,9 +6304,9 @@ focus_tree = {
         y = 1
 
         prerequisite = { 
-            focus = EIZ_Destroy_The_Monarchists
+            focus = EIZ_Total_War
         }
-        relative_position_id = EIZ_Destroy_The_Monarchists
+        relative_position_id = EIZ_Total_War
         
         cost = 1
 
@@ -6439,9 +6341,9 @@ focus_tree = {
             y = 1
     
             prerequisite = { 
-                focus = EIZ_Fight_The_Monarchists
+                focus = EIZ_A_Just_War
             }
-            relative_position_id = EIZ_Fight_The_Monarchists
+            relative_position_id = EIZ_A_Just_War
             
             cost = 1
     
@@ -6930,10 +6832,10 @@ focus_tree = {
             y = 2
     
             prerequisite = { 
-                focus = EIZ_Subvert_The_Monarchists
+                focus = EIZ_A_Desperate_War
             }
            
-            relative_position_id = EIZ_Subvert_The_Monarchists
+            relative_position_id = EIZ_A_Desperate_War
             
             cost = 3
     
@@ -8293,10 +8195,10 @@ focus_tree = {
             y = 2
     
             prerequisite = { 
-                focus = EIZ_Subvert_The_Monarchists
+                focus = EIZ_A_Desperate_War
             }
         
-            relative_position_id = EIZ_Subvert_The_Monarchists
+            relative_position_id = EIZ_A_Desperate_War
             
             cost = 3
     
