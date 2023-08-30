@@ -1528,17 +1528,11 @@
 		}
 	
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = EUR_shortage_of_trusted_officers
-				}
-				swap_ideas = {
-					remove_idea = EUR_shortage_of_trusted_officers
-					add_idea = EUR_shortage_of_trusted_officers2
-				}
-			}
-			set_country_flag = EUR_Schnizel_Get_More_Officers
+			remove_ideas = EUR_shortage_of_trusted_officers
+		set_country_flag = EUR_Schnizel_Get_More_Officers
 		}
+		# to do: who is the old guard I must add?
+		# to do: add 0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
 		id = EUR_Using_Britannia_experience
@@ -1679,6 +1673,7 @@
 		completion_reward = {
 			load_oob = "EUR_Britannia_Air_Aces"
 		}
+		# to do: talk with Sidd wings spawn with no xp
 	}
 
 	focus = {
@@ -1796,6 +1791,7 @@
 			EUR_Michele_Manfredi = {
 			add_trait = { trait = Holy_Knight }
 			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
 		
 	}
@@ -1915,9 +1911,14 @@
 		}
 	
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = EUR_national_militia_3
+				add_idea = EUR_national_militia_4
+			}
 			set_country_flag = EUR_Schnizel_Replace_Young_Officers
 		}
+		# to do: add 0.5 support for 40 days when the support system is in place. 
+		# discontent in the troops has no stability minus in game scrap it? For the moment I have diminished org/attack/def by 5%.
 	}
 	focus = {
 		id = EUR_Mobilize_more_people
@@ -1943,7 +1944,9 @@
 		completion_reward = {
 			add_manpower = 76000
 			add_ideas = EUR_Mobilize_more_people
+			add_stability = -0.15
 		}
+		# to do: ask Sidd if he wants a one stability hit or a modifier
 	}
 	focus = {
 		id = EUR_Introduce_harsh_punishments_in_army
@@ -1969,7 +1972,7 @@
 		completion_reward = {
 			army_experience = 50
 			add_manpower = -15000
-			remove_ideas = EUR_national_militia_3
+			remove_ideas = EUR_national_militia_4
 		}
 	}
 	focus = {
@@ -2127,6 +2130,8 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_second_knightmare_aid"
+			# to do: what type of advisor?
 		}
 	}
 #####################################In memory of Russian Empire Attract investment from British nobles
@@ -2890,6 +2895,7 @@
 			remove_idea = EUR_national_militia_3
 			custom_effect_tooltip = britannia_support_EUR_decrease_tt
 		}
+		# to do: add -0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
 		id = EUR_Our_own_tactics
@@ -3152,7 +3158,7 @@
 	
 		completion_reward = {
 			add_ideas = EUR_A_New_Russian_Army_Idea
-			#should we change this? The EUR won't have cores on the rest
+			# to do: should we change this? The EUR won't have cores on the rest
 			#of Russia unlike in spain.
 		}
 	}
@@ -3181,17 +3187,11 @@
 		}
 	
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = EUR_shortage_of_trusted_officers
-				}
-				swap_ideas = {
-					remove_idea = EUR_shortage_of_trusted_officers
-					add_idea = EUR_shortage_of_trusted_officers2
-				}
-			}
-			set_country_flag = EUR_Schnizel_Get_More_Officers
+		remove_ideas = EUR_shortage_of_trusted_officers
+		set_country_flag = EUR_Schnizel_Get_More_Officers
 		}
+		# to do: who is the old guard I must add?
+		# to do: add 0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
 		id = EUR_Using_Britannia_experience1
@@ -3461,7 +3461,10 @@
 	
 		completion_reward = {
 			load_oob = "EUR_Order_Of_Michael"
-			#how much stats must be added?
+			EUR_Michele_Manfredi = {
+			add_trait = { trait = Holy_Knight }
+			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
 	}
 	focus = {
@@ -3578,6 +3581,7 @@
 	
 		completion_reward = {
 			load_oob = "EUR_second_knightmare_aid"
+				# to do: what type of advisor?
 		}
 	}
 ####################################Guinevere Support
@@ -3603,6 +3607,8 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.14
+			remove_ideas = EUR_legitimate_cause
 		}
 	}
 	focus = {
@@ -3628,6 +3634,7 @@
 		}
 	
 		completion_reward = {
+			# to do: what goes here?
 		}
 	}
 	focus = {
@@ -3653,6 +3660,7 @@
 		}
 	
 		completion_reward = {
+			# to do: what goes here?
 		}
 	}
 ####################################Guinevere Caring hand
@@ -3678,7 +3686,13 @@
 		}
 	
 		completion_reward = {
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = EUR_Using_All_Economic_Power
+				days = 180
+			}
 		}
+		# to do: ask Sidd if stability should be part of the idea.
 	}
 	focus = {
 		id = EUR_Creating_Okhotsk_settlement
@@ -3695,6 +3709,9 @@
 		
 		available = {
                    country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Using_All_Economic_Power}
+				   }
 		}
 		
 		ai_will_do = {
@@ -3702,6 +3719,14 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = EUR_Creating_Okhotsk_settlement
+				days = 120
+			}
+			add_political_power = 100
+			863 = {
+				add_manpower = 250000
+			}
 		}
 	}
 	focus = {
@@ -3720,14 +3745,18 @@
 		
 		available = {
                    country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Creating_Okhotsk_settlement}
+				   }
 		}
 		
 		ai_will_do = {
 			factor = 10
 		}
-	
 		completion_reward = {
+			add_ideas = EUR_Expand_industrial_district
 		}
+		# to do: ask Sidd, too many ideas, consolidate?
 	}
 	
 	focus = {
@@ -3752,6 +3781,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Support_open_britannian_labs
 		}
 	}
 	
@@ -3771,6 +3801,9 @@
 		
 		available = {
                    country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Creating_Okhotsk_settlement}
+				   }
 		}
 		
 		ai_will_do = {
@@ -3778,6 +3811,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Expand_administrative_district
 		}
 	}
 	
@@ -3796,6 +3830,7 @@
 		
 		available = {
                    country_exists = EUR
+				   
 		}
 		
 		ai_will_do = {
@@ -3803,6 +3838,40 @@
 		}
 	
 		completion_reward = {
+			863 ={
+				add_extra_state_shared_building_slots = 9
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			644 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
+			574 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
+			917 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3827,6 +3896,7 @@
 		}
 	
 		completion_reward = {
+			# to do: where to add the factories? stability for only 90 days is not impactful.
 		}
 	}
 	focus = {
@@ -3851,7 +3921,20 @@
 		}
 	
 		completion_reward = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13337 13333 1714 13329 12623 1878 }
+				start_province = 12551
+				target_province = 1878
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 50
+			}
 		}
+		# to do: ask to Sidd where are the trains.
 	}
 	focus = {
 		id = EUR_Create_modern_excavation_company
@@ -3875,6 +3958,8 @@
 		}
 	
 		completion_reward = {
+			# to do: where to put the factories.
+			add_ideas = EUR_Modern_Excavation_Company
 		}
 	}
 	focus = {
@@ -3899,6 +3984,10 @@
 		}
 	
 		completion_reward = {
+			863 = {
+				add_manpower = -10000	
+			}
+			add_ideas = EUR_Okhotsk_Police_Force
 		}
 	}
 	focus = {
@@ -3923,6 +4012,36 @@
 		}
 	
 		completion_reward = {
+			add_stability = -0.1
+			863 = {
+				add_manpower = -10000
+			}
+			562 = {
+				add_manpower = -10000
+			}
+			574 = {
+				add_manpower = -10000
+			}
+			637 = {
+				add_manpower = -10000
+			}
+			822 = {
+				add_manpower = -10000
+			}
+			917= {
+				add_manpower = 50000
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -3947,6 +4066,7 @@
 		}
 	
 		completion_reward = {
+			# to do: are the characters done?
 		}
 	}
 	focus = {
@@ -4006,6 +4126,14 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_national_militia_2
+				add_idea = EUR_Intimidated_soldiers
+			}
+			
+			# to do:this modifier seems really harsh, attack also influences how much dmg
+			# attackers get no matter how high your defence. 
+			# stability weekly never actually goes away before phase 2 no good.
 		}
 	}
 	focus = {
@@ -4030,6 +4158,19 @@
 		}
 	
 		completion_reward = {
+			country_event ={
+				id = EUR.15
+				days = 14
+			}
+			
+		# to do: 60 days seems to low for an ofensive what are the objectives we wish to secure with these? also we still have the -50% ofensive idea.
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		# mobile warfare is used in order to conserve soldiers trough the use of of material and combined arms how does this go with no retreat, this comes
+		# from the german doctrine of ww1 mobile warfare also asumes elastic defense.
 		}
 	}
 	focus = {
@@ -4054,7 +4195,13 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_Intimidated_soldiers
+				add_idea = EUR_Intimidated_soldiers_2
+			}
 		}
+		
+			
 	}
 	focus = {
 		id = EUR_Holy_Order_of_Michael2
@@ -4078,6 +4225,11 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
+			EUR_Michele_Manfredi = {
+			add_trait = { trait = Holy_Knight }
+			}
+		# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
 	}
 	focus = {
@@ -4102,6 +4254,8 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_second_knightmare_aid"
+			# to do: what type of advisor?
 		}
 	}
 	
@@ -4130,6 +4284,7 @@
 		}
 	
 		completion_reward = {
+			# to do: when support system is in add support for brittania.
 		}
 	}
 	focus = {
@@ -4154,6 +4309,8 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
+			# to do: ask sidd if he is okay with this oob.
 		}
 	}
 	focus = {
@@ -4178,6 +4335,11 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Trained_Knightmare_Forces
+		# to do: what type of advisor? reduction in stability? nobles?
+		# how do we solve the knightmare connundrum?
+		# should we change knightmare bonuses to breakthrough?
+		
 		}
 	}
 	focus = {
@@ -4202,6 +4364,7 @@
 		}
 	
 		completion_reward = {
+			#to do: how do we implement this?
 		}
 	}
 	focus = {
@@ -4226,6 +4389,12 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				producer = BRT
+				amount = 600
+			}
+			# to do: ask Sidd about the amount
 		}
 	}
 	focus = {
@@ -4250,6 +4419,13 @@
 		}
 	
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+		}
+			add_ideas = EUR_Best_aces
+			# to do: which one do we use?
 		}
 	}
 	
@@ -4278,6 +4454,7 @@
 		}
 	
 		completion_reward = {
+			# to do: deploy 5 infantry oob, which ones? From the areas.
 		}
 	}
 	focus = {
@@ -4302,6 +4479,7 @@
 		}
 	
 		completion_reward = {
+			# to do: add aid events of equipment and generals with the support system. Are the characters created?
 		}
 	}
 	focus = {
@@ -4326,6 +4504,8 @@
 		}
 	
 		completion_reward = {
+		# to do: add advisor which uses noncore manpower. Is the character done? Why is the image diferent from the one on the mural? If it is suzaku 
+		# what of cannon and at what point in time does this happen must this be date restricted because of suzaku's age? What trait does he get after CW?
 		}
 	}
 	
@@ -4351,6 +4531,8 @@
 		}
 	
 		completion_reward = {
+			add_ideas = EUR_Use_experience_of_war_in_rough_terrain
+			# at most I can see making every comander get the hill fighter and ranger trait I think there is no way to apply these trhough modifiers.
 		}
 	}
 	focus = {
@@ -4375,6 +4557,9 @@
 		}
 	
 		completion_reward = {
+			army_experience = 100
+			add_stability = -0.05
+			add_ideas= EUR_Trained_Army
 		}
 	}
 	focus = {
@@ -4399,6 +4584,19 @@
 		}
 	
 		completion_reward = {
+			AR2 = {country_event = EUR.16}
+			AR3 = {country_event = EUR.16}
+			AR4 = {country_event = EUR.16}
+			AR5 = {country_event = EUR.16}
+			AR6 = {country_event = EUR.16}
+			AR7 = {country_event = EUR.16}
+			AR8 = {country_event = EUR.16}
+			AR9 = {country_event = EUR.16}
+			AR10 = {country_event = EUR.16}
+			AR11 = {country_event = EUR.16}
+
+		#to do: add oob to spawn. 
+
 		}
 	}
 #################################################

@@ -159,6 +159,266 @@ ideas = {
 			}
 		}
 
+		EUR_national_militia_4 = {
+		
+			allowed = {
+			   always = yes
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   army_attack_factor = -0.10
+			   army_defence_factor = -0.10
+			   army_org_factor = -0.15
+		   }
+	   }
+
+		EUR_Intimidated_soldiers = {
+		
+			allowed = {
+			   always = yes
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   army_attack_factor = -0.5
+			   army_defence_factor = 0.2
+			   stability_weekly = -0.02
+		   }
+	   }
+
+	   EUR_Intimidated_soldiers_2 = {
+		
+		allowed = {
+		   always = yes
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+		   army_attack_factor = -0.5
+		   army_defence_factor = 0.3
+		   stability_weekly = -0.01
+	   }
+   }
+
+	   EUR_Joint_tactics_conference = {
+		
+		allowed = {
+		   always = yes
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+		targeted_modifier = {
+			tag = SRU
+			attack_bonus_against = 0.2
+			}
+	   }
+   }
+
+   EUR_Use_experience_of_war_in_rough_terrain = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+   }
+}
+
+EUR_Trained_Army = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	army_org_factor = 0.05
+   }
+}
+
+EUR_Best_aces = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	air_superiority_bonus_in_combat = 0.15
+	army_bonus_air_superiority_factor = 0.15
+	air_superiority_efficiency = 0.15
+   }
+}
+
+EUR_Trained_Knightmare_Forces = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	equipment_bonus = {
+		knightmare_mass_prod = {
+			instant = yes
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+   }
+}
+
+EUR_Using_All_Economic_Power = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	consumer_goods_factor = -0.2
+   }
+}
+
+EUR_Okhotsk_Police_Force = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	stability_weekly = 0.0025
+   }
+}
+
+EUR_Creating_Okhotsk_settlement = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	consumer_goods_factor = 0.1
+   }
+}
+
+EUR_Expand_industrial_district = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	industrial_capacity_factory = 0.1
+   }
+}
+
+EUR_Support_open_britannian_labs = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+   }
+   research_bonus = {
+	industry = 0.05
+}
+}
+
+EUR_Expand_administrative_district = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	political_power_factor = 0.20
+	mobilization_laws_cost_factor = -0.15
+	military_staff_cost_factor = -0.15
+   }
+   
+}
+
 		EUR_shortage_of_trusted_officers = {
 		
 		 	allowed = {
@@ -336,7 +596,7 @@ ideas = {
 
 		   modifier = {
 			army_infantry_attack_factor = -0.05
-			army_org = -0.1
+			army_org_factor = -0.05
 		   }
 		}
 
@@ -656,6 +916,26 @@ EUR_Focusing_on_knightmares_production = {
 			}
 
 
+		}
+	}
+
+	industrial_concern = {
+		designer = yes
+
+		EUR_Modern_Excavation_Company = {
+			 picture = BRT_gen_industry # to do: ask for pictures.
+
+			allowed = {
+				original_tag = EUR
+			}
+
+			research_bonus = {
+				excavation_tech = 0.15
+			}
+
+			modifier = {
+				local_resources_factor = 0.1
+			}
 		}
 	}
 
