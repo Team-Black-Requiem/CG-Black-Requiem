@@ -558,4 +558,348 @@ EUR_foreign_arms_purchases = {
 			}
 		}
 	}
+
+	EUR_Asking_area2_for_help = {
+		 
+		icon = d # to do: what icons should we use?
+
+		allowed = {
+			original_tag = EUR
+		}
+
+		visible = {
+			tag = EUR
+			has_completed_focus = EUR_Scrapping_barrel
+		} 
+
+		available = {
+			tag = EUR
+			has_completed_focus = EUR_Scrapping_barrel
+		}
+
+		cost = 0 # to do: ask Sidd for the cost
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 120
+
+		complete_effect = {
+			AR2 = {country_event = EUR.17}
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			if = {
+				limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+				country_event = EUR.18
+			}
+		}
+	}
+}
+
+EUR_Area_Aid = {	
+
+asking_area_2_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR2 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_3_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 10
+
+	complete_effect = {
+		AR3 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_4_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR4 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_5_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR5 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_6_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR6 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_7_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR7 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_8_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR8 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+asking_area_9_for_aid = {
+
+	visible = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	} 
+
+	available = {
+		tag = EUR
+		has_completed_focus = EUR_Scrapping_barrel
+	}
+
+	cost = 0 # to do: ask Sidd for the cost
+
+	fire_only_once = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	days_remove = 120
+
+	complete_effect = {
+		AR9 = {country_event = EUR.17}
+	}
+	
+	modifier = {
+		consumer_goods_factor = 0.05
+	}
+
+	remove_effect = {
+		if = {
+			limit = {EUR = {has_country_flag = "AR2_Aid_Accepted"}}
+			country_event = EUR.18
+		}
+	}
+}
+
+
 }

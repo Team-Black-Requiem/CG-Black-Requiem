@@ -720,6 +720,27 @@ EUR_Economic_Stability_Secured = {
    }
 }
 
+EUR_Asking_For_Area_Aid = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   consumer_goods_factor = 0.05
+   }
+
+   on_remove = {
+    country_event = EUR.18
+}
+}
+
 ## Army Ideas Phase 1
 
 
