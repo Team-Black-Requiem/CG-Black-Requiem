@@ -158,7 +158,9 @@
 					factor = 100
 				}
 			
-			completion_reward = {}
+			completion_reward = {
+				add_ideas = SRU_The_Peoples_Hearts
+			}
 	}
 					focus = {
 			id = SRU_arm_militias
@@ -176,7 +178,9 @@
 					factor = 100
 				}
 			
-			completion_reward = {}
+			completion_reward = {
+				add_ideas = SRU_The_Soldiers_Blood
+			}
 	}
 						focus = {
 			id = SRU_prospect_resources
@@ -194,7 +198,9 @@
 					factor = 100
 				}
 			
-			completion_reward = {}
+			completion_reward = {
+				add_ideas = SRU_The_Workers_Toil
+			}
 	}
 			focus = {
 			id = SRU_overthrow_aristocracy
@@ -213,7 +219,18 @@
 					factor = 100
 				}
 			
-			completion_reward = {declare_war_on = {
+			completion_reward = {
+
+				remove_ideas = {
+					SRU_The_Soldiers_Blood
+					SRU_The_Peoples_Hearts
+					SRU_The_Workers_Toil
+				}
+				add_timed_idea = {
+					idea = SRU_To_Grasp_The_Future
+					days = 200
+				}
+				declare_war_on = {
 				target = EUR
 				type = annex_everything
 			}
@@ -240,6 +257,7 @@
 			 add_ideas = Politburo_War_Powers
 			 set_country_flag = democratic_support
 			}
+			# to do: ask user if the powers should be until end of all the civil war?
 	}
 				focus = {
 			id = Establishing_The_Peoples_Congress
@@ -3223,6 +3241,7 @@ focus = {
 				completion_reward = {
 					add_ideas = SRU_peasant_army
 					country_event = SRU.43
+					#to do: this idea doesn't appear on the mural ask user. do we get rid of independent army structure here?
 				}
 
 			}
@@ -3246,6 +3265,7 @@ focus = {
 					add_ideas = Partisan_Army_Plan
 					country_event = SRU.16
 				}
+				#to do: ask user why this is -0.1 trainning while militaty is +0.2
 
 			}
 			focus = {
@@ -3369,6 +3389,8 @@ focus = {
 					country_event = SRU.45
 				}
 
+				#to do: ask user about attack speed
+
 			}
 			focus = {
 				id = SRU_The_Knightmare_Problem
@@ -3431,7 +3453,7 @@ focus = {
 				
 				completion_reward = {
 			    add_tech_bonus = {
-					name = Stude_Their_Models
+					name = Study_Their_Models
 					uses = 4
 					bonus = 0.5
 					category = knightmare_all
@@ -3557,7 +3579,7 @@ focus = {
 						type = mbt_1
 						amount = 250
 					}
-					add_ideas = SRU_Improved_T-70s
+					add_ideas = SRU_Improved_T_70s
 				}
 
 			}
@@ -3630,6 +3652,7 @@ focus = {
 				completion_reward = {
 					add_ideas = SRU_through_blood_and_iron
 					country_event = SRU.51
+					# to do: ask user what should go there mural doesnt have it.
 				}
 
 			}

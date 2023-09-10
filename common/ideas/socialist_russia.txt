@@ -20,10 +20,11 @@ ideas = {
 			training_time_army_factor = -0.15
 			experience_gain_army_unit_factor = -0.05
 			experience_loss_factor = -0.1
-			army_org = -0.05
+			army_org_factor = -0.05
 		   }
+		   # to do: shouldn't we have more experience loss factor? the teachings are not yet centralized. ask user
 	   }
-	   Resource_Economy = {
+	   SRU_Resource_Economy = {
 		
 		allowed = {
 		   always = no
@@ -41,6 +42,8 @@ ideas = {
         production_speed_buildings_factor = -0.15
         industrial_capacity_factory = -0.1
 	   }
+	   # if we can't acces the resources shouldn't we have less? I think the move here is to add more base resources in the province and apply a malus you
+	   # can get rid off. Also modified cause the game was pulling japan's Resource economy.
    }
    Democratic_Dissonance = {
 		
@@ -57,7 +60,7 @@ ideas = {
    modifier = {
 	political_power_factor = -0.25
     drift_defence_factor = -0.15
-    stability_weekly_factor = -0.1
+    stability_weekly = -0.1
     progressive_drift = 0.01
     liberal_drift = 0.01
    }
@@ -75,7 +78,7 @@ For_The_People_Of_Russia = {
    removal_cost = -1
    
    modifier = {
-	war_support_weekly_factor = 0.25
+	war_support_weekly = 0.0025
     conscription_factor = 0.15
     army_morale_factor = 0.05
     army_core_defence_factor = 0.1
@@ -109,6 +112,69 @@ Jacobin_Controlled_Cheka = {
 
 		##### POLITICAL IDEAS START ######
        
+		SRU_The_Peoples_Hearts = {
+		 
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+			
+			modifier = {
+			 stability_factor = 0.05
+			 war_support_factor = 0.1
+			}
+		}
+
+		SRU_The_Soldiers_Blood = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_infantry_defence_factor = 0.15
+			}
+
+		}
+
+		SRU_The_Workers_Toil = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		SRU_To_Grasp_The_Future = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.
+				army_morale_factor = 0.1
+				army_infantry_defence_factor = 0.15
+				stability_factor = 0.05
+			 	war_support_factor = 0.1
+			}
+		}
+
+
+
 		Politburo_War_Powers = {
 		
 			allowed = {
@@ -129,7 +195,11 @@ Jacobin_Controlled_Cheka = {
             trade_laws_cost_factor = -0.15
             mobilization_laws_cost_factor = -0.15
             economy_cost_factor = -0.15
-            political_advisor_cost_factor =-0.15
+            head_of_government_cost_factor =-0.15
+			economy_minister_cost_factor =-0.15
+			foreign_minister_cost_factor =-0.15
+			minister_of_interior_cost_factor =-0.15
+			intelligence_cost_factor =-0.15
 		   }
 		}
 		
@@ -148,7 +218,7 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			political_power_factor = 0.05
 			drift_defence_factor = 0.05
-			stability_weekly_factor = 0.05
+			stability_weekly = 0.05
 		   }
 		}
 		
@@ -167,7 +237,7 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			political_power_factor = -0.05
             drift_defence_factor = -0.10
-            stability_weekly_factor = 0.05
+            stability_weekly = 0.05
             progressive_drift = 0.03
             liberal_drift = 0.02
 			political_advisor_cost_factor = 0.1
@@ -187,7 +257,7 @@ Jacobin_Controlled_Cheka = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			stability_weekly_factor = 0.25
+			stability_weekly = 0.25
 		   }
 		}
 
@@ -223,7 +293,7 @@ Jacobin_Controlled_Cheka = {
 		   
 		   modifier = {
 			research_speed_factor = 0.02
-            stability_weekly_factor = 0.04
+            stability_weekly = 0.04
             political_power_factor = -0.02
 		   }
 		}
@@ -349,7 +419,7 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			required_garrison_factor = -0.1
             stability_factor = 0.05
-            stability_weekly_factor = 0.02
+            stability_weekly = 0.02
             compliance_growth_on_our_occupied_states = 0.05
 		   }
 		 
@@ -369,7 +439,7 @@ Jacobin_Controlled_Cheka = {
 		   
 		   modifier = {
 			drift_defence_factor = -0.15
-			stability_weekly_factor = 0.05	
+			stability_weekly = 0.05	
 		}
 		 
 		}
@@ -388,7 +458,7 @@ Jacobin_Controlled_Cheka = {
 		   
 		   modifier = {
 			drift_defence_factor = -0.15
-			stability_weekly_factor = 0.05	
+			stability_weekly = 0.05	
 		}
 		 
 		}
@@ -408,7 +478,7 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			liberal_drift = 0.02
             progressive_drift = 0.01
-            war_support_weekly_factor = -0.05
+            war_support_weekly = -0.05
 		}
 		 
 		}
@@ -428,7 +498,7 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			liberal_drift = -0.02
             progressive_drift = -0.01
-            war_support_weekly_factor = 0.1
+            war_support_weekly = 0.1
 
 		}
 		 
@@ -980,7 +1050,7 @@ Red_Army_Plans= {
 		modifier = {
 			experience_gain_army_factor = 0.1
             minimum_training_level = 0.2
-            army_org = 0.1
+            army_org_factor = 0.1
 		}
    }
    SRU_Emergency_Truck_Procurment = {
@@ -1043,7 +1113,7 @@ Red_Army_Plans= {
 
 		}
    }
-   SRU_Improved_T-70s = {
+   SRU_Improved_T_70s = {
 
 		allowed = {
 			always = no
@@ -1079,10 +1149,10 @@ Red_Army_Plans= {
 
 			modifier = {
 				experience_gain_army_factor = 0.20
-				minimum_training_level = 0.25
+				minimum_training_level = 0.15
 				land_reinforce_rate = 0.15
 				command_power_gain_mult = 0.15
-				army_org = 0.15
+				army_org_factor = 0.15
 			}
 	   }
 
@@ -1171,7 +1241,7 @@ Red_Army_Plans= {
 
 			removal_cost = -1
             modifier = {
-				war_support_weekly_factor = 0.2
+				war_support_weekly = 0.2
 				recruitable_population_factor = 0.1
 
 			}

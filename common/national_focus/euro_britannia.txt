@@ -241,7 +241,7 @@
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0 # to do: for the time being this is down to 0 to stop the ai going down this path.
 		}
 	
 		completion_reward = {
@@ -1674,6 +1674,7 @@
 			load_oob = "EUR_Britannia_Air_Aces"
 		}
 		# to do: talk with Sidd wings spawn with no xp
+		# aces : 1 unique ace fighter 4 good cas aces
 	}
 
 	focus = {
@@ -1730,6 +1731,7 @@
 		}
 	
 		completion_reward = {
+			# to do: Cas advisor 10% ground attack factor 15% all weather
 		}
 	}
 	
@@ -1918,7 +1920,6 @@
 			set_country_flag = EUR_Schnizel_Replace_Young_Officers
 		}
 		# to do: add 0.5 support for 40 days when the support system is in place. 
-		# discontent in the troops has no stability minus in game scrap it? For the moment I have diminished org/attack/def by 5%.
 	}
 	focus = {
 		id = EUR_Mobilize_more_people
@@ -1944,9 +1945,9 @@
 		completion_reward = {
 			add_manpower = 76000
 			add_ideas = EUR_Mobilize_more_people
-			add_stability = -0.15
+			add_stability = -0.10
+			add_war_support = 0.15
 		}
-		# to do: ask Sidd if he wants a one stability hit or a modifier
 	}
 	focus = {
 		id = EUR_Introduce_harsh_punishments_in_army
@@ -3634,7 +3635,7 @@
 		}
 	
 		completion_reward = {
-			# to do: what goes here?
+		
 		}
 	}
 	focus = {
@@ -3660,7 +3661,7 @@
 		}
 	
 		completion_reward = {
-			# to do: what goes here?
+			
 		}
 	}
 ####################################Guinevere Caring hand
@@ -3692,7 +3693,6 @@
 				days = 180
 			}
 		}
-		# to do: ask Sidd if stability should be part of the idea.
 	}
 	focus = {
 		id = EUR_Creating_Okhotsk_settlement
@@ -3754,7 +3754,48 @@
 			factor = 10
 		}
 		completion_reward = {
-			add_ideas = EUR_Expand_industrial_district
+			add_ideas = EUR_Creating_Okhotsk_settlement_2
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_idea = EUR_Creating_Okhotsk_settlement_2
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SPA_crusade_against_democracy_1
+					add_idea = SPA_crusade_against_democracy_2
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_idea = SPA_crusade_against_democracy_1
+			}
+			swap_ideas = {
+				remove_idea = SPA_crusade_against_democracy_1
+				add_idea = SPA_crusade_against_democracy_2
+			}
+		}
+		if = {
+			limit = {
+				has_idea = SPA_crusade_against_democracy_4
+			}
+			swap_ideas = {
+				remove_idea = SPA_crusade_against_democracy_4
+				add_idea = SPA_crusade_against_democracy_6
+			}
+		}
+		if = {
+			limit = {
+				has_idea = SPA_crusade_against_democracy_5
+			}
+			swap_ideas = {
+				remove_idea = SPA_crusade_against_democracy_5
+				add_idea = SPA_crusade_against_democracy_8
+			}
 		}
 		# to do: ask Sidd, too many ideas, consolidate?
 	}
@@ -3781,7 +3822,10 @@
 		}
 	
 		completion_reward = {
-			add_ideas = EUR_Support_open_britannian_labs
+			swap_ideas = {
+				remove_idea = EUR_Creating_Okhotsk_settlement_2
+				add_idea = EUR_Creating_Okhotsk_settlement_4
+			}
 		}
 	}
 	
@@ -3811,7 +3855,7 @@
 		}
 	
 		completion_reward = {
-			add_ideas = EUR_Expand_administrative_district
+			add_ideas = EUR_Creating_Okhotsk_settlement_3
 		}
 	}
 	
@@ -3896,6 +3940,7 @@
 		}
 	
 		completion_reward = {
+			add_stability = -0.05
 			# to do: where to add the factories? stability for only 90 days is not impactful.
 		}
 	}
@@ -4066,7 +4111,7 @@
 		}
 	
 		completion_reward = {
-			# to do: are the characters done?
+			# to do: are the characters done? fill in later
 		}
 	}
 	focus = {
@@ -4100,6 +4145,27 @@
 		}
 	
 		completion_reward = {
+			
+			if = {
+				limit = {
+					has_idea = EUR_Creating_Okhotsk_settlement_4
+				}
+				swap_ideas = {
+					remove_idea = EUR_Creating_Okhotsk_settlement_4
+					add_idea = EUR_The_okhotsk_settlement_1
+				}
+			}
+
+			if = {
+				limit = {
+					has_idea = EUR_Creating_Okhotsk_settlement_3
+				}
+				swap_ideas = {
+					remove_idea = EUR_Creating_Okhotsk_settlement_3
+					add_idea = EUR_The_okhotsk_settlement_2
+				}
+			}
+
 			swap_ideas = {
 				remove_idea = EUR_underdeveloped_economy
 				add_idea = EUR_Economic_Stability_Secured
@@ -4596,8 +4662,6 @@
 			AR7 = {country_event = EUR.16}
 			AR8 = {country_event = EUR.16}
 			AR9 = {country_event = EUR.16}
-			AR10 = {country_event = EUR.16}
-			AR11 = {country_event = EUR.16}
 
 		#to do: add oob to spawn. 
 

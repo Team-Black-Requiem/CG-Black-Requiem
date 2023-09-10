@@ -363,7 +363,7 @@ EUR_Creating_Okhotsk_settlement = {
    }
 }
 
-EUR_Expand_industrial_district = {
+EUR_Creating_Okhotsk_settlement_2 = {
 		
 	allowed = {
 	   always = yes
@@ -380,7 +380,7 @@ EUR_Expand_industrial_district = {
    }
 }
 
-EUR_Support_open_britannian_labs = {
+EUR_Creating_Okhotsk_settlement_4 = {
 		
 	allowed = {
 	   always = yes
@@ -396,10 +396,11 @@ EUR_Support_open_britannian_labs = {
    }
    research_bonus = {
 	industry = 0.05
+	industrial_capacity_factory = 0.1
 }
 }
 
-EUR_Expand_administrative_district = {
+EUR_Creating_Okhotsk_settlement_3 = {
 		
 	allowed = {
 	   always = yes
@@ -418,6 +419,48 @@ EUR_Expand_administrative_district = {
    }
    
 }
+
+EUR_The_okhotsk_settlement_1 = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	industry = 0.05
+	industrial_capacity_factory = 0.1
+	stability_weekly = 0.0025
+   }
+   
+}
+
+EUR_The_okhotsk_settlement_2 = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+
+   modifier = {
+	political_power_factor = 0.20
+	mobilization_laws_cost_factor = -0.15
+	military_staff_cost_factor = -0.15
+	stability_weekly = 0.0025
+   }
+   
+}
+
 
 		EUR_shortage_of_trusted_officers = {
 		
@@ -720,7 +763,7 @@ EUR_Economic_Stability_Secured = {
    }
 }
 
-EUR_Asking_For_Area_Aid = {
+EUR_aiding_the_EUR = {
 		
 	allowed = {
 	   always = yes
@@ -737,7 +780,10 @@ EUR_Asking_For_Area_Aid = {
    }
 
    on_remove = {
-    country_event = EUR.18
+
+	EUR = {
+		country_event = EUR.18
+	}
 }
 }
 

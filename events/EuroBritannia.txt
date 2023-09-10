@@ -348,7 +348,10 @@ country_event = {
 			factor = 100
         } 	
 
-		EUR = {set_country_flag = AR2_Aid_Accepted}
+		add_timed_idea = {
+			idea = EUR_aiding_the_EUR
+			days = 120
+		}
 		
 	}
 
@@ -410,7 +413,11 @@ country_event = {
 		name = EUR.18.d
 
 		ai_chance = {
-			factor = 0 # to do: ask Sidd about resources balance 
+			factor = 100 
         } 	
+
+		random_owned_state = {
+			prioritize = { 123 321 } 
+		}
 	}
 }
