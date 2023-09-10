@@ -121,8 +121,8 @@
 }
 		
 				focus = {
-			id = SRU_sonya_leadership
-			icon = GFX_SRU_sonya_leadership
+			id = SRU_to_grasp_the_future
+			icon = GFX_SRU_to_grasp_the_future
 			cost = 1
 			x = 15
 			y = 1
@@ -143,14 +143,14 @@
 			}
 	}
 			focus = {
-			id = SRU_economic_mobilisation
-			icon = GFX_SRU_economic_mobilization
+			id = SRU_the_peoples_hearts
+			icon = GFX_SRU_the_peoples_hearts
 			cost = 5
 			x = -2
 			y = 1
-			prerequisite = { focus = SRU_sonya_leadership }
+			prerequisite = { focus = SRU_to_grasp_the_future }
 
-			relative_position_id = SRU_sonya_leadership
+			relative_position_id = SRU_to_grasp_the_future
 			available = {
                            country_exists = SRU
 			}
@@ -163,14 +163,14 @@
 			}
 	}
 					focus = {
-			id = SRU_arm_militias
-			icon = GFX_SRU_arm_militias
+			id = SRU_the_soldiers_blood
+			icon = GFX_SRU_the_soldiers_blood
 			cost = 5
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_sonya_leadership }
+			prerequisite = { focus = SRU_to_grasp_the_future }
 
-			relative_position_id = SRU_sonya_leadership
+			relative_position_id = SRU_to_grasp_the_future
 			available = {
                            country_exists = SRU
 			}
@@ -183,14 +183,14 @@
 			}
 	}
 						focus = {
-			id = SRU_prospect_resources
-			icon = GFX_SRU_prospect_resources
+			id = SRU_the_workers_toil
+			icon = GFX_SRU_the_workers_toil
 			cost = 5
 			x = 2
 			y = 1
-			prerequisite = { focus = SRU_sonya_leadership }
+			prerequisite = { focus = SRU_to_grasp_the_future }
 
-			relative_position_id = SRU_sonya_leadership
+			relative_position_id = SRU_to_grasp_the_future
 			available = {
                            country_exists = SRU
 			}
@@ -203,15 +203,15 @@
 			}
 	}
 			focus = {
-			id = SRU_overthrow_aristocracy
-			icon = GFX_SRU_overthrow_aristocracy
+			id = SRU_march_of_the_revolution
+			icon = GFX_SRU_march_of_the_revolution
 			cost = 3
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_economic_mobilisation
-		                     focus = SRU_arm_militias
-							 focus = SRU_prospect_resources }
-			relative_position_id = SRU_arm_militias
+			prerequisite = { focus = SRU_the_peoples_hearts
+		                     focus = SRU_the_soldiers_blood
+							 focus = SRU_the_workers_toil }
+			relative_position_id = SRU_the_soldiers_blood
 			available = {
                            country_exists = SRU
 			}
@@ -243,14 +243,14 @@
 			cost = 2
 			x = 0
 			y = 2
-			prerequisite = { focus = SRU_overthrow_aristocracy }
+			prerequisite = { focus = SRU_march_of_the_revolution }
 			available = {
                            country_exists = SRU
 			}
 			ai_will_do = {
 					factor = 100
 				}
-			relative_position_id = SRU_overthrow_aristocracy	
+			relative_position_id = SRU_march_of_the_revolution	
 			
 			completion_reward = {
 			 country_event = SRU.6
@@ -427,7 +427,7 @@
 			}
 	
 			prerequisite = { focus = SRU_crimson_moon }
-			mutually_exclusive = { focus = SRU_sonya_leadership}
+			mutually_exclusive = { focus = SRU_to_grasp_the_future}
 			ai_will_do = {
 					factor = 100
 				}
@@ -2295,7 +2295,7 @@ focus = {
 				cost = 5
 				x = 0
 				y = 15
-				relative_position_id = SRU_overthrow_aristocracy
+				relative_position_id = SRU_march_of_the_revolution
 				available = {
 								country_exists = SRU 
 				}
@@ -3229,8 +3229,8 @@ focus = {
 				cost = 5
 				x = 11
 				y = 2
-				prerequisite = { focus = SRU_overthrow_aristocracy }
-				relative_position_id = SRU_overthrow_aristocracy
+				prerequisite = { focus = SRU_march_of_the_revolution }
+				relative_position_id = SRU_march_of_the_revolution
 				available = {
 								country_exists = SRU 
 				}
@@ -3241,7 +3241,7 @@ focus = {
 				completion_reward = {
 					add_ideas = SRU_peasant_army
 					country_event = SRU.43
-					#to do: this idea doesn't appear on the mural ask user. do we get rid of independent army structure here?
+					remove_ideas = SRU_An_Independent_Military
 				}
 
 			}
@@ -3256,6 +3256,7 @@ focus = {
 				relative_position_id = SRU_Failures_Of_The_Red_Mutiny
 				available = {
 								country_exists = SRU 
+								has_country_flag = SRU_partisans_army_plan
 				}
 				ai_will_do = {
 						factor = 100 
@@ -3492,7 +3493,8 @@ focus = {
 				mutually_exclusive = { focus = SRU_The_Partisans_Ideas}
 				relative_position_id = SRU_Failures_Of_The_Red_Mutiny
 				available = {
-								country_exists = SRU 
+								country_exists = SRU
+								has_country_flag = SRU_military_council_army_plan
 				}
 				ai_will_do = {
 						factor = 100 
@@ -3663,8 +3665,8 @@ focus = {
 				cost = 5
 				x = -10
 				y = 2
-				prerequisite = { focus = SRU_overthrow_aristocracy }
-				relative_position_id = SRU_overthrow_aristocracy
+				prerequisite = { focus = SRU_march_of_the_revolution }
+				relative_position_id = SRU_march_of_the_revolution
 				available = {
 								country_exists = SRU 
 				}
