@@ -3190,6 +3190,7 @@
 		completion_reward = {
 		remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
+		recruit_character = EUR_Albert_Lancaster
 		}
 		# to do: who is the old guard I must add?
 		# to do: add 0.5 support for 40 days when the support system is in place. 
@@ -3756,47 +3757,7 @@
 		completion_reward = {
 			add_ideas = EUR_Creating_Okhotsk_settlement_2
 		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_idea = EUR_Creating_Okhotsk_settlement_2
-				}
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = SPA_crusade_against_democracy_1
-					add_idea = SPA_crusade_against_democracy_2
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_idea = SPA_crusade_against_democracy_1
-			}
-			swap_ideas = {
-				remove_idea = SPA_crusade_against_democracy_1
-				add_idea = SPA_crusade_against_democracy_2
-			}
-		}
-		if = {
-			limit = {
-				has_idea = SPA_crusade_against_democracy_4
-			}
-			swap_ideas = {
-				remove_idea = SPA_crusade_against_democracy_4
-				add_idea = SPA_crusade_against_democracy_6
-			}
-		}
-		if = {
-			limit = {
-				has_idea = SPA_crusade_against_democracy_5
-			}
-			swap_ideas = {
-				remove_idea = SPA_crusade_against_democracy_5
-				add_idea = SPA_crusade_against_democracy_8
-			}
-		}
+		
 		# to do: ask Sidd, too many ideas, consolidate?
 	}
 	
@@ -4145,7 +4106,7 @@
 		}
 	
 		completion_reward = {
-			
+			remove_ideas = EUR_Okhotsk_Police_Force
 			if = {
 				limit = {
 					has_idea = EUR_Creating_Okhotsk_settlement_4
