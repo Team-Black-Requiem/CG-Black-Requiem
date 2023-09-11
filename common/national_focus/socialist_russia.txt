@@ -2300,8 +2300,9 @@ focus = {
 								country_exists = SRU 
 				}
 				ai_will_do = {
-						factor = 100 
+						factor = 0 
 					}
+					# to do: originally at 100 set down to 0 for balance testing
 				
 				completion_reward = {}
 
@@ -3266,7 +3267,7 @@ focus = {
 					add_ideas = Partisan_Army_Plan
 					country_event = SRU.16
 				}
-				#to do: ask user why this is -0.1 trainning while militaty is +0.2
+
 
 			}
 			focus = {
@@ -3309,7 +3310,11 @@ focus = {
 					add_timed_idea = {
 						idea = Fast_Raiding_Jeeps
 						days = 180
-					} 
+					}
+					add_equipment_to_stockpile ={
+						type = armored_car_equipment
+						amount = 1000	
+					}
 				}
 
 			}
@@ -4237,9 +4242,9 @@ focus = {
 								country_exists = SRU 
 				}
 				ai_will_do = {
-						factor = 100 
+						factor = 0
 					}
-				
+				# to do: originally at 100 set down to 0 for balance testing
 				completion_reward = {}
 
 			}
@@ -5792,9 +5797,9 @@ focus = {
 		
 				prerequisite = { focus = SRU_crimson_moon }
 				ai_will_do = {
-						factor = 100
+						factor = 0
 					}
-	
+					# to do: originally at 100 set down to 0 for balance testing
 				
 				
 				completion_reward = {
