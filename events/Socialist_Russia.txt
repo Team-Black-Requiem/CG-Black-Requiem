@@ -192,6 +192,20 @@ country_event = { #red shooting star
 		ai_chance = {
 			factor = 100
 		}
+		swap_ideas = {
+			remove_idea = Democratic_Dissonance
+			add_idea = Limited_Opposition
+		}
+	}
+	option = {
+		name = SRU.7.b
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = Democratic_Dissonance
+			add_idea = Democratic_Opposition
+		}
 	}
 }
 
@@ -226,7 +240,10 @@ country_event = { #Vision of utopia
 			flag = democratic_support
 			value = 1
 		}
-		add_ideas = State_Bureaucracy_Loyalty
+		add_timed_idea = {
+			idea = State_Bureaucracy_Loyalty
+			days = 180
+		}
 	}
 
 	option = {
@@ -238,7 +255,10 @@ country_event = { #Vision of utopia
 			flag = democratic_support
 			value = -1
 		}
-		add_ideas = Party_Bureaucracy_Loyalty
+		add_timed_idea = {
+			idea = Party_Bureaucracy_Loyalty
+			days = 180
+		}
 	}
 }
 

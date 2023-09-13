@@ -276,12 +276,9 @@
 				}
 			
 			completion_reward = {
-				swap_ideas = {
-					remove_idea = Democratic_Dissonance
-					add_idea = Limited_Opposition
-				}
 				country_event = SRU.7
 			}
+			# to do: ask user how to solve the drift. Civilian +0.1 or -0.1?
 	}
 				focus = {
 			id = Full_Congress_Elections
@@ -351,7 +348,7 @@
 				}
 			
 			completion_reward = {
-				# Will unlock decisions
+				# Will unlock decisions to do: ask user which ones
 			}
 	}
 				focus = {
@@ -372,6 +369,7 @@
 			completion_reward = {
 				country_event = SRU.9
 			}
+			# to do: ask user why the party or the state, aren't they the same?
 	}
 				focus = {
 			id = The_Power_of_The_Media
@@ -3505,6 +3503,10 @@ focus = {
 					}
 				
 				completion_reward = {
+					add_equipment_to_stockpile = {
+						type = amphibious_mechanized_equipment
+						amount = x
+					}
 					country_event = SRU.17
 					add_ideas = SRU_Red_Army_Plans
 				}
