@@ -867,6 +867,7 @@ Jacobin_Controlled_Cheka = {
 		
 		equipment_bonus = {
 			anti_tank_equipment = {
+				instant = yes
 				build_cost_ic = -0.25
                 soft_attack = 0.15
                 hard_attack = 0.15
@@ -900,7 +901,7 @@ Jacobin_Controlled_Cheka = {
 			}
 		}
 	}
-        Fast_Raiding_Jeeps = {
+        SRU_Fast_Raiding_Jeeps = {
 
 		allowed = {
 			always = no
@@ -916,13 +917,32 @@ Jacobin_Controlled_Cheka = {
 			armored_car_equipment = {
 			instant = yes
             maximum_speed = 0.25
-            breakthrough = 0.1
+            breakthrough = 0.15
             soft_attack = 0.1
+			}
+		}
+	   }
+
+	   SRU_Jump_Start_Jeep_Production = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			armored_car_equipment = {
+			instant = yes
             build_cost_ic = -0.2
 			}
 		}
 	   }
-	   Strike_And_Disperse_Doctrine = {
+	   SRU_Strike_And_Disperse_Doctrine = {
 
 		allowed = {
 			always = no
@@ -934,6 +954,7 @@ Jacobin_Controlled_Cheka = {
 
 		removal_cost = -1
 		modifier = {
+
 		}
 		equipment_bonus = {
 			
@@ -941,13 +962,13 @@ Jacobin_Controlled_Cheka = {
 				instant = yes
 				breakthrough = 0.15
                 maximum_speed = 0.15
-                supply_consumption = -0.1 
+                supply_consumption_factor = -0.1 
 			}
-			armored_car = {
+			armored_car_equipment = {
 				instant = yes
 				breakthrough = 0.15
                 maximum_speed = 0.15
-                supply_consumption = -0.1
+                supply_consumption_factor = -0.1
 			}
         }
 	}
@@ -968,7 +989,7 @@ Jacobin_Controlled_Cheka = {
             max_dig_in_factor = 0.15
             pocket_penalty = -0.25
             experience_gain_army_unit_factor = 0.20
-            army_attack_speed_factor = 0.1
+            army_speed_factor = 0.1
 		}
 
 		equipment_bonus = {
@@ -977,21 +998,22 @@ Jacobin_Controlled_Cheka = {
 				instant = yes
 				breakthrough = 0.15
                 maximum_speed = 0.15
-                supply_consumption = -0.1 
+                supply_consumption_factor = -0.1 
 			}
 			armored_car_equipment = {
 				instant = yes
 				breakthrough = 0.15
                 maximum_speed = 0.15
-                supply_consumption = -0.1
+                supply_consumption_factor = -0.1
 			}
 			anti_tank_equipment = {
 				instant = yes
-				build_cost_ic = -0.20
-                soft_attack = 0.1
-                hard_attack = 0.1
+				build_cost_ic = -0.25
+                soft_attack = 0.15
+                hard_attack = 0.15
 			}
 			infantry_equipment = {
+				instant = yes
 				breakthrough = 0.1
                 defense = 0.1
 			}
@@ -1010,39 +1032,45 @@ Jacobin_Controlled_Cheka = {
 
 		removal_cost = -1
 		equipment_bonus = {
+
+			knightmare_pol = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
 		
-			knightmare_all_pur_unit = {
+			knightmare_all_pur = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
 			}
 
-			knightmare_artillery_unit = {
+			knightmare_artillery = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
 			}
 
-			knightmare_fortress_unit = {
+			knightmare_fortress = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
 			}
 
-			knightmare_mass_prod_unit = {
+			knightmare_mass_prod = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
 			}
 
-			knightmare_melee_unit = {
+			knightmare_melee = {
 				instant = yes
 				build_cost_ic = -0.05
 				reliability = -0.2
        }
 	}
 }
-Red_Army_Plans= {
+SRU_Red_Army_Plans= {
 
 		allowed = {
 			always = no
@@ -1055,7 +1083,7 @@ Red_Army_Plans= {
 		removal_cost = -1
 		modifier = {
 			experience_gain_army_factor = 0.1
-            minimum_training_level = 0.2
+            training_time_factor = 0.1
             army_org_factor = 0.1
 		}
    }
@@ -1072,12 +1100,13 @@ Red_Army_Plans= {
 		removal_cost = -1
 		equipment_bonus = {
 			motorized_equipment = {
+				instant = yes
 				build_cost_ic = -0.15
 			}
 		}
 	}
 
-	Red_Rockets_Glare = {
+	SRU_Red_Rockets_Glare = {
 
 		allowed = {
 			always = no
@@ -1090,7 +1119,8 @@ Red_Army_Plans= {
 		removal_cost = -1
 		
 		equipment_bonus = {
-			rocket_artillery = {
+			rocket_artillery_equipment = {
+				instant = yes
 				breakthrough = 0.15
                 defense = 0.15
                 soft_attack = 0.15
@@ -1100,7 +1130,7 @@ Red_Army_Plans= {
 	
    
    
-	   Tank_Production_Drive = {
+	   SRU_Tank_Production_Drive = {
 
 		allowed = {
 			always = no
@@ -1113,7 +1143,8 @@ Red_Army_Plans= {
 		removal_cost = -1
 
 		equipment_bonus = {
-		   modern_armor = {
+			cold_war_tank_equip = {
+			instant = yes
 			build_cost_ic = -0.25
 		   }
 
@@ -1132,7 +1163,8 @@ Red_Army_Plans= {
 		removal_cost = -1
 
 		equipment_bonus = {
-		 modern_armor = {
+			cold_war_tank_equip = {
+			instant = yes
 			soft_attack = 0.05
             hard_attack = 0.15
             ap_attack = 0.1
@@ -1155,7 +1187,7 @@ Red_Army_Plans= {
 
 			modifier = {
 				experience_gain_army_factor = 0.20
-				minimum_training_level = 0.15
+				training_time_factor = 0.15
 				land_reinforce_rate = 0.15
 				command_power_gain_mult = 0.15
 				army_org_factor = 0.15
@@ -1208,7 +1240,8 @@ Red_Army_Plans= {
 
 			
             equipment_bonus = {
-			modern_armor = {
+				cold_war_tank_equip = {
+					instant = yes
 			defense = 0.05
 				}
 			}
@@ -1408,7 +1441,8 @@ Red_Army_Plans= {
 			removal_cost = -1
 
 			equipment_bonus = {
-				category_cas = {
+				CAS_equipment = {
+					instant = yes
 					air_attack = 0.15
 				}
 			}
@@ -1432,6 +1466,7 @@ Red_Army_Plans= {
 	   		}
 			   equipment_bonus = {
 					motorized_equipment = {
+						instant = yes
 						hard_attack = 0.1
 					}
 					mechanized_equipment = {
@@ -1454,12 +1489,14 @@ Red_Army_Plans= {
 
 			equipment_bonus = {
 				motorized_equipment = {
+					instant = yes
 					maximum_speed = 0.15
 					soft_attack = 0.1
 					ap_attack = 0.1
 					defense = 0.15
 				}
 				mechanized_equipment = {
+					instant = yes
 					maximum_speed = 0.15
 					soft_attack = 0.1
 					ap_attack = 0.1
@@ -1593,10 +1630,12 @@ Red_Army_Plans= {
 				mobilization_speed = 0.1
 	   		}
 			equipment_bonus = {
-				category_fighter = {
+				fighter_equipment = {
+					instant = yes
 					reliability = 0.15
 				}
 				category_multirole = {
+					instant = yes
 					reliability = 0.15
 				}
 			}
@@ -1620,10 +1659,12 @@ Red_Army_Plans= {
 				production_speed_buildings_factor = 0.1
 	   		}
 			equipment_bonus = {
-				category_fighter = {
+				fighter_equipment = {
+					instant = yes
 					reliability = 0.15
 				}
 				category_multirole = {
+					instant = yes
 					reliability = 0.15
 				}
 			}
@@ -1647,16 +1688,20 @@ Red_Army_Plans= {
 				production_speed_buildings_factor = 0.1
 	   		}
 			equipment_bonus = {
-				category_fighter = {
+				fighter_equipment = {
+					instant = yes
 					reliability = 0.15
 				}
 				category_multirole = {
+					instant = yes
 					reliability = 0.15
 				}
 				infantry_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				artillery_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 			}
@@ -1683,19 +1728,24 @@ Red_Army_Plans= {
 				line_change_production_efficiency_factor = 0.2
 	   		}
 			equipment_bonus = {
-				category_fighter = {
+				fighter_equipment = {
+					instant = yes
 					reliability = 0.15
 				}
 				category_multirole = {
+					instant = yes
 					reliability = 0.15
 				}
 				infantry_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				artillery_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				category_all_infantry = {
+					instant = yes
 					reliability = -0.1
 					combat_width = -0.1
 				}
@@ -1723,19 +1773,24 @@ Red_Army_Plans= {
 				line_change_production_efficiency_factor = 0.2
 	   		}
 			equipment_bonus = {
-				category_fighter = {
+				fighter_equipment = {
+					instant = yes
 					reliability = 0.15
 				}
 				category_multirole = {
+					instant = yes
 					reliability = 0.15
 				}
 				infantry_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				artillery_equipment = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				category_all_infantry = {
+					instant = yes
 					reliability = -0.1
 					combat_width = -0.1
 				}

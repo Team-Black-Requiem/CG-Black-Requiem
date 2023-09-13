@@ -1716,7 +1716,7 @@ focus = {
 						category = motorized_equipment
 					}
 					add_equipment_to_stockpile = {
-						type = motorized_equipment_1
+						type = motorized_equipment
 						amount = 300
 					}
 				}
@@ -3308,12 +3308,13 @@ focus = {
 				completion_reward = {
 
 					add_timed_idea = {
-						idea = Fast_Raiding_Jeeps
+						idea = SRU_Jump_Start_Jeep_Production
 						days = 180
 					}
+					add_ideas = SRU_Fast_Raiding_Jeeps
 					add_equipment_to_stockpile ={
 						type = armored_car_equipment
-						amount = 1000	
+						amount = 800	
 					}
 				}
 
@@ -3335,9 +3336,7 @@ focus = {
 					}
 				
 				completion_reward = {
-				
-						add_ideas = Strike_And_Disperse_Doctrine
-					
+						add_ideas = SRU_Strike_And_Disperse_Doctrine
 				}
 
 			}
@@ -3507,7 +3506,7 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.17
-					add_ideas = Red_Army_Plans
+					add_ideas = SRU_Red_Army_Plans
 				}
 
 			}
@@ -3528,7 +3527,7 @@ focus = {
 				
 				completion_reward = {
 					add_equipment_to_stockpile = {
-						type = motorized_equipment_1
+						type = motorized_equipment
 						amount = 1000
 					}
 				add_timed_idea = {
@@ -3555,11 +3554,11 @@ focus = {
 				
 				completion_reward = {
 					add_timed_idea = {
-						idea = Tank_Production_Drive
+						idea = SRU_Tank_Production_Drive
 						days = 360
 					}
 					add_equipment_to_stockpile = {
-						type = cold_war_tank_2
+						type = cold_war_tank_equip
 						amount = 500
 					}
 			}
@@ -3582,6 +3581,10 @@ focus = {
 					}
 				
 				completion_reward = {
+					if = {
+						limit = {NOT = {has_tech = mbt_1}}
+						set_technology = {mbt_1 = 1}
+					}
 					add_equipment_to_stockpile = {
 						type = mbt_1
 						amount = 250
@@ -3611,7 +3614,7 @@ focus = {
 						type = rocket_artillery_equipment
 						amount = 500
 					}
-					add_ideas = Red_Rockets_Glare
+					add_ideas = SRU_Red_Rockets_Glare
 			}
 
 			}
