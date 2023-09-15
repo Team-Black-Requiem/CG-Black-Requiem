@@ -389,6 +389,7 @@
 			completion_reward = {
 				country_event = SRU.13
 			}
+			# to do: ask User why temporal war stability? better weekly war support?
 	}
 		
 
@@ -476,6 +477,7 @@
 				recruit_character = SRU_Tasha_Kulikova
 			    country_event = SRU.26
 			}
+			#to do: ask user if he wants +1 democrat support on no censorship
 	}
 			focus = {
 			id = Opening_The_Ministry_of_Information
@@ -494,9 +496,9 @@
 				}
 			
 			completion_reward = {
-				add_political_power = 100
-				add_war_support = 0.1
+				add_ideas = Ministry_of_Information
 			}
+			# to do: ask user about minister of information.
 	}
 
 	focus = {
@@ -516,8 +518,9 @@
 			}
 		
 		completion_reward = {
-			country_event = SRU.10
+			country_event = SRU.18
 		}
+		#to do: ask user how we do this, I think these are old modifiers.
 }
 
 focus = {
@@ -529,6 +532,9 @@ focus = {
 	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
 				}
 	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	mutually_exclusive = {
+		focus = Chairman_ivanov
+	}
 	available = {
 				   country_exists = SRU
 	}
@@ -537,6 +543,16 @@ focus = {
 		}
 	
 	completion_reward = {
+		add_advisor_role = {
+			character = Vladimir_Bakatin
+			activate = yes
+			advisor = {
+				slot = intelligence
+				idea_token = SRU_generic_intelligence_idea_1
+				traits = { conservative_guy }
+				cost = 2000
+			}
+		}
 		add_political_power = 100
 		add_war_support = 0.1
 		country_event = SRU.11
@@ -547,6 +563,7 @@ focus = {
 		set_country_flag = SRU_bakatin_heads_security_services
 		
 	}
+	# to do: ask user why there are more modifiers.
 }
 
 focus = {
@@ -558,6 +575,9 @@ focus = {
 	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
 				}
 	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	mutually_exclusive = {
+		focus = Chairman_Bakatin
+	}
 	available = {
 				   country_exists = SRU
 	}
@@ -566,15 +586,23 @@ focus = {
 		}
 	
 	completion_reward = {
-		
-		country_event = SRU.12
+		add_advisor_role = {
+			character = Chairman_Ivanov
+			activate = yes
+			advisor = {
+				slot = intelligence
+				idea_token = SRU_generic_intelligence_idea_1
+				traits = { conservative_guy }
+				cost = 2000
+			}
+		}
 		modify_country_flag = {
 			flag = democratic_support
 			value = -1
 		}
 		set_country_flag = SRU_ivanov_heads_security_services
+		}
 	}
-}
 
 focus = {
 	id = SRU_founding_the_mgb
@@ -597,8 +625,16 @@ focus = {
 		}
 	
 	completion_reward = {
-		
+		if = {
+			limit = { has_country_flag = SRU_bakatin_heads_security_services }
+			add_ideas = Bakatins_MGB
+		}
+		if = {
+			limit = { has_country_flag = SRU_ivanov_heads_security_services }
+			add_ideas = Ivanovs_MGB
+		}
 	}
+	# to do: ask User if foreign_subversive_activites = 0.1 or -0.1
 }
 
 focus = {
@@ -625,7 +661,7 @@ focus = {
 	
 	completion_reward = {
 		add_political_power = 250
-
+		# to do: add event.
 	}
 }
 	###### 
@@ -3689,7 +3725,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.18
+				# to do: add event about 2 year industralization.
 				}
 
 			}
