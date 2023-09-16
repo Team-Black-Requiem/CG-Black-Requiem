@@ -1,6 +1,6 @@
 add_namespace = SRU
 
-country_event = {  
+country_event = { #The Revolutionaries Return To Russia 
 	id = SRU.1
 	title = SRU.1.t
 	desc = SRU.1.d
@@ -10,16 +10,14 @@ country_event = {
 	
 	
 	option = {
-		name = SRU.1.a
-		add_country_leader_trait = Daughter_of_communism
-		
+		name = SRU.1.a	
 		ai_chance = {
 			factor = 100
 		}
 		
     }     
 }
-country_event = {  
+country_event = { #Luka Fuels Their Hate
 	id = SRU.2
 	title = SRU.2.t
 	desc = SRU.2.d
@@ -30,34 +28,14 @@ country_event = {
 	
 	option = {
 		name = SRU.2.a
-		add_opinion_modifier = { target = LRU modifier = friendly }
-		LRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		
-		
 		ai_chance = {
 			factor = 100
 		}
 		
     } 
-	option = {
-		name = SRU.2.b
-		add_opinion_modifier = { target = LRU modifier = friendly }
-		LRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		add_opinion_modifier = { target = MRU modifier = friendly }
-		MRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		add_political_power = -20
-		
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }     
+   
 }
-country_event = {  
+country_event = { #Sonya Promises The Future
 	id = SRU.3
 	title = SRU.3.t
 	desc = SRU.3.d
@@ -66,24 +44,12 @@ country_event = {
 	
 	option = {
 		name = SRU.3.a
-		RUS = {
-		add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
-			}}
 		ai_chance = {
 			factor = 100
 		}
 		
     } 
-	option = {
-		name = SRU.3.b
-		add_political_power = -50
-		ai_chance = {
-			factor = 0
-		}
-		
-    }         
+
 }
 country_event = {  
 	id = SRU.4
@@ -92,27 +58,25 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	option = {
+	option = { #Sonya's Solution
 		name = SRU.4.a
-		RUS = {
-		add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 5000
-			}
-		add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 1000
-			}}
 		ai_chance = {
 			factor = 50
 		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = 1
+		}
 		
     } 
-	option = {
+	option = { #Luka's Solution
 		name = SRU.4.b
-		add_political_power = -50
 		ai_chance = {
 			factor = 50
+		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = -1
 		}
 		
     }         
@@ -126,158 +90,66 @@ country_event = {
 
 	
 	
-	option = {
-		name = SRU.5.a ####Yes
-		SRU = { country_event = SRU.501 }
-		
+	option = { #Sonya's Solution
+		name = SRU.5.a 
 		ai_chance = {
 			factor = 100
 		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = 1
+		}
 		
     } 
-	option = {
-		name = SRU.5.B 
-		
+	option = { #Luka's Solution
+		name = SRU.5.b		
 		ai_chance = {
 			factor = 0
+		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = -1
 		}
 		
     }    
 }
-country_event = {  
+country_event = { #Luka Politburo Victory 
 	id = SRU.6
 	title = SRU.6.t
 	desc = SRU.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	
-	
 	option = {
 		name = SRU.6.a
-		diplomatic_relation = { country = LRU relation = non_aggression_pact }
-		
 		ai_chance = {
 			factor = 100
 		}
+		set_country_flag = SRU_Luka_In_Control
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_Chekhovs_Gun
 		
     }     
 }
-### Focus Events
-
-country_event = { #era of chaos
-	id = SRU.6
-	title = SRU.6.t
-	desc = SRU.6.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.6.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #red shooting star
+country_event = { #Sonya Politburo Victory   
 	id = SRU.7
 	title = SRU.7.t
 	desc = SRU.7.d
-
+	fire_only_once = yes
 	is_triggered_only = yes
-   
+
 	option = {
 		name = SRU.7.a 
 		ai_chance = {
 			factor = 100
 		}
-		swap_ideas = {
-			remove_idea = Democratic_Dissonance
-			add_idea = Limited_Opposition
-		}
-	}
-	option = {
-		name = SRU.7.b
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = Democratic_Dissonance
-			add_idea = Democratic_Opposition
-		}
-	}
+		set_country_flag = SRU_Sonya_In_Control
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_to_grasp_the_future
+    } 
 }
 
-country_event = { #dawn of red sun
-	id = SRU.8
-	title = SRU.8.t
-	desc = SRU.8.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.8.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Vision of utopia
-	id = SRU.9
-	title = SRU.9.t
-	desc = SRU.9.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.9.a 
-		ai_chance = {
-			factor = 100
-		}
-		modify_country_flag = {
-			flag = democratic_support
-			value = 1
-		}
-		add_timed_idea = {
-			idea = State_Bureaucracy_Loyalty
-			days = 180
-		}
-	}
-
-	option = {
-		name = SRU.9.b
-		ai_chance = {
-			factor = 100
-		}
-		modify_country_flag = {
-			flag = democratic_support
-			value = -1
-		}
-		add_timed_idea = {
-			idea = Party_Bureaucracy_Loyalty
-			days = 180
-		}
-	}
-}
-
-country_event = { #Crimson moon
-	id = SRU.10
-	title = SRU.10.t
-	desc = SRU.10.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.10.a 
-		ai_chance = {
-			factor = 100
-		}
-		recruit_character = Vladimir_Bakatin
-	}
-}
-
+### Luka's Focus Tree
 country_event = { #Chekhov's gun
 	id = SRU.11
 	title = SRU.11.t
@@ -1681,6 +1553,8 @@ country_event = { #resolve the conflict (feel free to change the number down the
 			factor = 100
 		}
 		set_country_flag = SRU_sided_with_zaytsev
+		mark_focus_tree_layout_dirty = yes
+
 		
 	}
 }
@@ -1848,6 +1722,25 @@ country_event = { #Novosibirsk Research Complex
 	option = {
 		
 		name = SRU.82.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+### Socialist Leadup Focuses (Yes I know these should be at the begining but changing numbers mid way is not worth it)
+
+country_event = { #Revolution Once More
+	id = SRU.83
+	title = SRU.83.t
+	desc = SRU.83.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.81.a
 		ai_chance = {
 			factor = 100
 		}

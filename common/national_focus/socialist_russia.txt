@@ -13,8 +13,8 @@
 
 	default = no
 				focus = {
-			id = SRU_era_of_chaos
-			icon = GFX_SRU_era_of_chaos
+			id = SRU_revolution_once_more
+			icon = GFX_SRU_revolution_once_more
 			cost = 1
 			x = 12
 			y = 0
@@ -26,21 +26,42 @@
 				}
 			
 			completion_reward = {
-				add_stability = -0.1
-				add_political_power = 200
 				country_event = SRU.1
+				set_country_flag = {
+					flag = SRU_sonya_vs_luka
+					value = 1 
+				}
 			}
 	}
+	        focus = {
+		id = SRU_rallying_the_workers_protests
+		icon = GFX_SRU_rallying_the_workers_protests
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = { focus = SRU_revolution_once_more }
+		relative_position_id = SRU_revolution_once_more
+		available = {
+					   country_exists = SRU
+		}
+		ai_will_do = {
+				factor = 100
+			}
+		
+		completion_reward = {			
+		}
+}
 
 
 				focus = {
-			id = SRU_red_shooting_star
-			icon = GFX_SRU_red_shooting_star
+			id = SRU_let_luke_fuel_their_hate
+			icon = GFX_SRU_let_luke_fuel_their_hate
 			cost = 1
 			x = -1
 			y = 1
-			prerequisite = { focus = SRU_era_of_chaos }
-			relative_position_id = SRU_era_of_chaos
+			prerequisite = { focus = SRU_rallying_the_workers_protests }
+			relative_position_id = SRU_rallying_the_workers_protests
+			mutually_exclusive = { focus = SRU_have_sonya_promise_the_future}
 			available = {
                            country_exists = SRU
 			}
@@ -49,20 +70,23 @@
 				}
 			
 			completion_reward = {
-				add_stability = 0.2
 				country_event = SRU.2
-
+				modify_country_flag = {
+					flag = SRU_sonya_vs_luka
+					value = -1
+				}
 			}
 	}
 
 				focus = {
-			id = SRU_dawn_red_sun 
-			icon = GFX_SRU_dawn_red_sun 
+			id = SRU_have_sonya_promise_the_future
+			icon = GFX_SRU_have_sonya_promise_the_future
 			cost = 1
 			x = 1
 			y = 1
-			prerequisite = { focus = SRU_era_of_chaos }
-			relative_position_id = SRU_era_of_chaos
+			prerequisite = { focus = SRU_rallying_the_workers_protests }
+			relative_position_id = SRU_rallying_the_workers_protests
+			mutually_exclusive = { focus = SRU_let_luke_fuel_their_hate }
 			available = {
                            country_exists = SRU
 			}
@@ -71,20 +95,22 @@
 				}
 			
 			completion_reward = {
-				add_war_support = 0.2
 				country_event = SRU.3
+				modify_country_flag = {
+					flag = SRU_sonya_vs_luka
+					value = 1
+				}
 			}
 	}
-				focus = {
-			id = SRU_vision_utopia
-			icon = GFX_SRU_vision_utopia
+	        focus = {
+			id = SRU_dealing_with_the_oligarchs
+			icon = GFX_SRU_dealing_with_the_oligarchs
 			cost = 1
 			x = -1
 			y = 1
-			prerequisite = { focus = SRU_red_shooting_star }
-			prerequisite = { focus = SRU_dawn_red_sun }
-			relative_position_id = SRU_red_shooting_star
-			relative_position_id = SRU_dawn_red_sun 
+			prerequisite = { focus = SRU_let_luke_fuel_their_hate 
+			                 focus = SRU_have_sonya_promise_the_future}
+			relative_position_id = SRU_have_sonya_promise_the_future
 			available = {
                            country_exists = SRU
 			}
@@ -93,21 +119,40 @@
 				}
 			
 			completion_reward = {
-				add_ideas = SRU_dream_of_utopia
 				country_event = SRU.4
+				
+			}
+	}
+				focus = {
+			id = SRU_convincing_party_holdouts
+			icon = GFX_SRU_convincing_party_holdouts
+			cost = 1
+			x = 0
+			y = 1
+			prerequisite = { focus = SRU_dealing_with_the_oligarchs }
+			relative_position_id = SRU_dealing_with_the_oligarchs
+			available = {
+                           country_exists = SRU
+			}
+			ai_will_do = {
+					factor = 100
+				}
+			
+			completion_reward = {
+				country_event = SRU.5
 			}
 	}
 	focus = {
-		id = SRU_crimson_moon
-		icon = GFX_SRU_crimson_moon
+		id = SRU_returning_session_of_the_politburo
+		icon = GFX_SRU_returning_session_of_the_politburo
 		cost = 1
 		x = 0
 		y = 1
 		prerequisite = { 
-			focus = SRU_vision_utopia
+			focus = SRU_convincing_party_holdouts
 		 }
 
-		relative_position_id = SRU_vision_utopia
+		relative_position_id = SRU_convincing_party_holdouts
 		available = {
 					   country_exists = SRU
 		}
@@ -116,19 +161,40 @@
 			}
 		
 		completion_reward = {
-			country_event = SRU.5	
-		}
+				if = {
+					limit = {
+						has_country_flag = { #Luka Victory
+							flag = SRU_sonya_vs_luka
+							value < 2
+						}
+					}
+					country_event = SRU.6
+				}
+				if = {
+					limit = {
+						has_country_flag = { #Sonya Victory
+							flag = SRU_sonya_vs_luka
+							value > 1
+						}
+					}
+					country_event = SRU.7
+				}
+			}
+
 }
 		
 				focus = {
 			id = SRU_to_grasp_the_future
 			icon = GFX_SRU_to_grasp_the_future
 			cost = 1
-			x = 15
+			x = 0
 			y = 1
-			prerequisite = { focus = SRU_crimson_moon }
-			relative_position_id = SRU_crimson_moon
-			mutually_exclusive = { focus = RUS_Centralization_of_state_assets }
+			prerequisite = { focus = SRU_returning_session_of_the_politburo }
+			relative_position_id = SRU_returning_session_of_the_politburo
+			mutually_exclusive = { focus = SRU_Chekhovs_Gun }
+			allow_branch = {
+				has_country_flag = SRU_Sonya_In_Control
+			}
 			available = {
                            country_exists = SRU}
 
@@ -138,8 +204,6 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.6
-				set_country_flag = SRU_Sonya_In_Control
 			}
 	}
 			focus = {
@@ -242,7 +306,7 @@
 			icon = GFX_SRU_politburo
 			cost = 2
 			x = 0
-			y = 2
+			y = 1
 			prerequisite = { focus = SRU_march_of_the_revolution }
 			available = {
                            country_exists = SRU
@@ -418,15 +482,19 @@
 			id = SRU_Chekhovs_Gun 
 			icon = GFX_SRU_Chekhovs_Gun
 			cost = 1
-			x = 8
-			y = 4
+			x = 0
+			y = 1
 
 			available = {
                            country_exists = SRU
 			}
 	
-			prerequisite = { focus = SRU_crimson_moon }
+			prerequisite = { focus = SRU_returning_session_of_the_politburo }
+			relative_position_id = SRU_returning_session_of_the_politburo
 			mutually_exclusive = { focus = SRU_to_grasp_the_future}
+			allow_branch = {
+				has_country_flag = SRU_Luka_In_Control
+			}
 			ai_will_do = {
 					factor = 100
 				}
@@ -434,9 +502,6 @@
 		    
 			
 			completion_reward = {
-				add_war_support = 0.1
-				country_event = SRU.55
-				set_country_flag = SRU_Luka_In_Control
 			}
 	}
 			focus = {
@@ -445,7 +510,7 @@
 			cost = 2
 			x = 0
 			y = 1
-			prerequisite = { focus = Educational_Doctrine focus = SRU_Expose_Enemy_Agents }
+			prerequisite = { focus = Educational_Doctrine }
 			relative_position_id = Educational_Doctrine
 			available = {
                            country_exists = SRU
@@ -612,9 +677,7 @@ focus = {
 	y = 1
 	prerequisite = {
 		 focus = Chairman_Bakatin
-	}
-    prerequisite = {
-		focus = Chairman_ivanov
+		 focus = Chairman_ivanov
 	}
 	relative_position_id = Chairman_Bakatin
 	available = {
@@ -669,7 +732,7 @@ focus = {
 			id = SRU_Take_Families_Hostage 
 			icon = GFX_SRU_Take_Families_Hostage
 			cost = 2
-			x = -14
+			x = 0
 			y = 1
 			prerequisite = { focus = SRU_Chekhovs_Gun }
 			relative_position_id = SRU_Chekhovs_Gun
@@ -2328,8 +2391,11 @@ focus = {
 				icon = GFX
 				cost = 5
 				x = 0
-				y = 15
+				y = 12
 				relative_position_id = SRU_march_of_the_revolution
+				allow_branch = {
+					has_country_flag = SRU_Sonya_In_Control
+				}
 				available = {
 								country_exists = SRU 
 				}
@@ -3263,7 +3329,7 @@ focus = {
 				icon = GFX_SRU_sokolo_mil_reforms
 				cost = 5
 				x = 11
-				y = 2
+				y = 1
 				prerequisite = { focus = SRU_march_of_the_revolution }
 				relative_position_id = SRU_march_of_the_revolution
 				available = {
@@ -3714,7 +3780,7 @@ focus = {
 				icon = GFX_SRU_sonya_marches_forward
 				cost = 5
 				x = -10
-				y = 2
+				y = 1
 				prerequisite = { focus = SRU_march_of_the_revolution }
 				relative_position_id = SRU_march_of_the_revolution
 				available = {
@@ -4259,8 +4325,8 @@ focus = {
 				id = Intervene_in_the_East
 				icon = GFX
 				cost = 5
-				x = 8
-				y = 25
+				x = -4
+				y = 20
 				available = {
 								country_exists = SRU 
 				}
@@ -5679,164 +5745,21 @@ focus = {
 				completion_reward = {}
 
 			}
-			focus = {
-				id = Interfere_in_China
-				icon = GFX
-				cost = 5
-				x = -21
-				y = 35
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Contact_the_Daiyu_sisters
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Interfere_in_China }
-				relative_position_id = Interfere_in_China
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Economic_Relief
-				icon = GFX
-				cost = 5
-				x = -1
-				y = 1
-				prerequisite = { focus = Contact_the_Daiyu_sisters }
-				relative_position_id = Contact_the_Daiyu_sisters
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Blank_Cheque
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Contact_the_Daiyu_sisters }
-				relative_position_id = Contact_the_Daiyu_sisters
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Military_Support
-				icon = GFX
-				cost = 5
-				x = 1
-				y = 1
-				prerequisite = { focus = Contact_the_Daiyu_sisters }
-				relative_position_id = Contact_the_Daiyu_sisters
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = United_We_Stand
-				icon = GFX
-				cost = 5
-				x = 1
-				y = 1
-				prerequisite = { focus = Economic_Relief
-			                   focus = Blank_Cheque
-							   focus = Military_Support }
-				relative_position_id = Economic_Relief
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Chinese_Intervention
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = United_We_Stand }
-				relative_position_id = United_We_Stand
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
-			focus = {
-				id = Unify_Eurasia
-				icon = GFX
-				cost = 5
-				x = 0
-				y = 1
-				prerequisite = { focus = Chinese_Intervention }
-				relative_position_id = Chinese_Intervention
-				available = {
-								country_exists = SRU 
-				}
-				ai_will_do = {
-						factor = 100 
-					}
-				
-				completion_reward = {}
-
-			}
+			
             #Dev focus, 
 			focus = {
 				id = SRU_trigger_phase_two_dev
 				icon = SRU_trigger_phase_two_dev
 				cost = 1
-				x = 0
-				y = 4
-				relative_position_id = SRU_crimson_moon
+				x = -15
+				y = 0
+				relative_position_id = SRU_returning_session_of_the_politburo
 	
 				available = {
 							   country_exists = SRU
 				}
 		
-				prerequisite = { focus = SRU_crimson_moon }
+				prerequisite = { focus = SRU_returning_session_of_the_politburo }
 				ai_will_do = {
 						factor = 0
 					}
