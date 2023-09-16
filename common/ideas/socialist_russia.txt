@@ -550,7 +550,7 @@ Jacobin_Controlled_Cheka = {
 		 
 		}
 
-		Re-Purposed_Extraction_Machinery = {
+		Re_Purposed_Extraction_Machinery = {
 		
 			allowed = {
 			   always = no
@@ -650,7 +650,13 @@ Jacobin_Controlled_Cheka = {
 		   
 		   modifier = {
 			monthly_population = 0.1
-            casualty_trickleback = 0.05
+		}
+		equipment_bonus = {
+			equipment_bonus = {
+				category_army = {
+					casualty_trickleback = 0.05
+					instant = yes
+				}
 		}
 		 
 		}
