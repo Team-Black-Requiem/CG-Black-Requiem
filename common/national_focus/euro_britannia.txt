@@ -358,7 +358,7 @@
 		completion_reward = {
 			custom_effect_tooltip = EUR_BRT_First_Aid_tt
 			hidden_effect = {
-				load_oob = EUR_Britannia_Aid_1
+				load_oob = "EUR_Britannia_Aid_1"
 				
 		    }
 	    }
@@ -1530,8 +1530,13 @@
 		completion_reward = {
 			remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
+		recruit_character = EUR_Albert_Lancaster
+		recruit_character = EUR_Elliot_Collins
+		recruit_character = EUR_Samuel_Whitlock
+		recruit_character = EUR_Elias_Anson
+		recruit_character = EUR_Edgar_Bailey
 		}
-		# to do: who is the old guard I must add?
+		# to do: add gfx for some generals, see character files.
 		# to do: add 0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
@@ -1672,9 +1677,41 @@
 		}
 		completion_reward = {
 			load_oob = "EUR_Britannia_Air_Aces"
+			add_ace = {
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
+				type = fighter_unique
+				is_female = yes
+			}
+			add_ace = {
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
+				type = support_good
+			}
+			add_ace = {
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
+				type = support_good
+			}
+			add_ace = {
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
+				type = support_good
+			}
+			add_ace = {
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
+				type = support_good
+				is_female = yes
+			}
 		}
 		# to do: talk with Sidd wings spawn with no xp
-		# aces : 1 unique ace fighter 4 good cas aces
+		# to do: actually name the aces XD.
 	}
 
 	focus = {
@@ -1731,6 +1768,8 @@
 		}
 	
 		completion_reward = {
+			activate_advisor = EUR_Duncan_Holt
+			}
 			# to do: Cas advisor 10% ground attack factor 15% all weather
 		}
 	}
@@ -1860,6 +1899,7 @@
 				days = 80
 			}
 		}
+		# to do: in economic update give brittania some of our gdp.
 	}
 	focus = {
 		id = EUR_Area_11_deposits
@@ -1884,6 +1924,7 @@
 		}
 	
 		completion_reward = {
+			#to do: update during the economic update.
 		}
 	}
 	
@@ -2051,7 +2092,7 @@
 		}
 	
 		completion_reward = {
-
+			# to do: ask sidd if this is for the sakuradite update.
 			
 		}
 	}
@@ -2078,6 +2119,7 @@
 	
 		completion_reward = {
 			add_ideas = EUR_Focusing_on_knightmares_production
+			# to do: comment to sidd we dont have the tech on this path.
 		}
 	}
 	focus = {
@@ -2105,6 +2147,7 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Testing_Divisions_Equipment"
 		}
 	}
 	focus = {
@@ -2261,6 +2304,7 @@
 				add_manpower = 84300
 			}
 		}
+		# to do: ask sidd if local manpower or real manpower and why diferent numbers.
 	}
 	focus = {
 		id = EUR_Modernize_Okhotsk
@@ -2350,8 +2394,8 @@
 				amount = 6
 				state = 562
 			}
-			#to do: future formation of the TPTA
 		}
+		# to do: revisit in economic update.
 	}
 	focus = {
 		id = EUR_Form_the_TPTA
@@ -2378,6 +2422,7 @@
 			add_offsite_building = { type = arms_factory level = 3 }
 			add_offsite_building = { type = industrial_complex level = 4 }
 		}
+		# to do: revist in economic update.
 	}
 	focus = {
 		id = EUR_Leasing_out_our_coastline
@@ -2893,7 +2938,7 @@
 			set_country_flag = EUR_Schnizel_Young_Officers
 			recruit_character = EUR_Stefan_Kuzmin
             recruit_character = EUR_Naum_Nikolaev
-			remove_idea = EUR_national_militia_3
+			remove_ideas = EUR_national_militia_3
 			custom_effect_tooltip = britannia_support_EUR_decrease_tt
 		}
 		# to do: add -0.5 support for 40 days when the support system is in place. 
@@ -3159,8 +3204,6 @@
 	
 		completion_reward = {
 			add_ideas = EUR_A_New_Russian_Army_Idea
-			# to do: should we change this? The EUR won't have cores on the rest
-			#of Russia unlike in spain.
 		}
 	}
 	
@@ -3191,8 +3234,12 @@
 		remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
 		recruit_character = EUR_Albert_Lancaster
+		recruit_character = EUR_Elliot_Collins
+		recruit_character = EUR_Samuel_Whitlock
+		recruit_character = EUR_Elias_Anson
+		recruit_character = EUR_Edgar_Bailey
 		}
-		# to do: who is the old guard I must add?
+		# to do: add gfx for some generals, see character files.
 		# to do: add 0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
@@ -3302,7 +3349,9 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Veteran_Brittanian_Armor_Division"
 		}
+		# to do: we should change the name of this focus correct? Note from fris: I have modified the template a bit because 7 tank battalions won't do much.
 	}
 	focus = {
 		id = EUR_Oil_for_our_maneuvers
@@ -3326,7 +3375,9 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Veteran_Mechanised"
 		}
+		# to do: we should change the name of this focus correct?
 	}
 	focus = {
 		id = EUR_Improve_outdated_recharge_system
@@ -3353,6 +3404,7 @@
 		completion_reward = {
 			add_ideas = EUR_Improve_outdated_recharge_system
 		}
+		# to do: change name of focus?
 	}
 	focus = {
 		id = EUR_Brittanian_Crew_Training_standards
@@ -3405,6 +3457,7 @@
 		}
 	
 		completion_reward = {
+			load_oob = "EUR_Brittaninan_Veteran_Motorized"
 		}
 	}
 	
@@ -3532,6 +3585,7 @@
 				days = 80
 			}
 		}
+		# to do: in economic update give brittania some of our gdp.
 	}
 	focus = {
 		id = EUR_Area_11_deposits1

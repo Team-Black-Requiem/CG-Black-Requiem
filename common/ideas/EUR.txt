@@ -510,6 +510,7 @@ EUR_The_okhotsk_settlement_2 = {
 		        soft_attack = 0.05
 				hard_attack = 0.05
 				reliability = 0.05
+				instant = yes
 	         }
 			}
 			
@@ -536,6 +537,7 @@ EUR_The_okhotsk_settlement_2 = {
 		        soft_attack = 0.05
 				hard_attack = 0.05
 				reliability = 0.05
+				instant = yes
 	         }
 			}
 			
@@ -640,6 +642,12 @@ EUR_The_okhotsk_settlement_2 = {
 		   modifier = {
 			army_infantry_attack_factor = -0.05
 			army_org_factor = -0.05
+		   }
+		   equipment_bonus = {
+			knightmare_mass_prod = {
+				attack_factor = 0.15
+				org_factor = 0.15
+			}
 		   }
 		}
 
@@ -804,9 +812,23 @@ EUR_A_New_Russian_Army_Idea = {
    
    modifier = {
 	conscription = 0.02
-	army_core_attack_factor = 0.1
-	army_core_defence_factor = 0.1
    }
+   targeted_modifier = {
+	tag = SRU
+	attack_bonus_against = 0.10
+	defense_bonus_against = 0.10
+}
+targeted_modifier = {
+	tag = RUS
+	attack_bonus_against = 0.10
+	defense_bonus_against = 0.10
+}
+targeted_modifier = {
+	tag = MRU
+	attack_bonus_against = 0.10
+	defense_bonus_against = 0.10
+}
+
    
 }
 EUR_Sakuradite_Extraction_Costs = {
@@ -850,6 +872,7 @@ EUR_Improve_outdated_recharge_system = {
 		hard_attack = 0.1
 		soft_attack = 0.1
 		reliability = -0.15
+		instant = yes
 	}
    }
    modifier = {

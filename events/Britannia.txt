@@ -1992,6 +1992,33 @@ country_event = {
 		name = BRT.67.b
 		ai_chance = {
 			factor = 0 # 0 for testing have to talk to sidd for the odds.
+			# the code could be:
+
+			#ai_chance = {
+				#base = 100
+				#modifier = {
+					#factor = 0.5
+					#has_opinion = {
+						#target = EUR
+						#value > 50
+					#}
+				#}
+			#	modifier = {
+			#		factor = 0.3
+			#		has_opinion = {
+			#			target = EUR
+			#			value > 80
+			#		}
+			#	}
+			#	modifier = {
+			#		factor = 0.1
+			#		has_opinion = {
+			#			target = EUR
+			#			value = 100
+			#		}
+			#	}
+			}
+			
 		}
 	}
-}
+
