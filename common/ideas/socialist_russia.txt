@@ -651,15 +651,20 @@ Jacobin_Controlled_Cheka = {
 		   modifier = {
 			monthly_population = 0.1
 		}
-		equipment_bonus = {
-			equipment_bonus = {
-				category_army = {
-					casualty_trickleback = 0.05
-					instant = yes
-				}
+		on_add = {
+			set_technology = {
+				SRU_tech_trickleback = 1
+				popup = no
+			}
 		}
-		 
+		on_remove = {
+				set_technology = {
+				SRU_tech_trickleback = 0
+				popup = no
+			}
 		}
+		}
+	
 
         Siberian_Roads_Program = {
 		

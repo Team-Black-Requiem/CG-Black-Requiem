@@ -575,42 +575,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	EUR_Albert_Lancaster={
-		name= "Baron Albert Lancaster"
-		
-		portraits={
-		army = {
-				large = "GFX_portrait_EUR_Albert_Lancaster"
-			    
-			}}
 	
-			field_marshal = {
-				traits={ army_chief_drill_3 winter_expert}
-				skill=5
-				attack_skill=5
-				defense_skill=5
-				planning_skill=4
-				logistics_skill=2
-		}
-	}
-	EUR_Elliot_Collins={
-		name= "Lord Elliot Collins"
-		
-		portraits={
-		army = {
-				large = "GFX_portrait_EUR_Elliot_Collins"
-			    
-			}}
-	
-            navy_leader = {
-                   skill = 4
-                   attack_skill = 3
-                   defense_skill = 2
-                   maneuvering_skill = 3
-                   coordination_skill = 3
-                   legacy_id = 10
-             }
-	}
 	EUR_Edward_Laurier={
 		name= "Edward R. Laurier"
 		
@@ -754,7 +719,8 @@ characters = {
 				has_completed_focus = EUR_Asking_Britannia_about_Air_Commander
 			} 
 			traits = {
-				air_chief_all_weather_2
+				air_chief_all_weather_3
+				
 			}
 			cost = 100
 			ai_will_do = {
@@ -919,6 +885,95 @@ characters = {
 		}
 	}
 
-
+	# OLD GUARD
+	EUR_Albert_Lancaster={
+		name= "Baron Albert Lancaster"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Albert_Lancaster"
+			    
+			}}
+	
+			field_marshal = {
+				traits={ army_chief_drill_3 winter_expert}
+				skill=5
+				attack_skill=5
+				defense_skill=4
+				planning_skill=4
+				logistics_skill=2
+		}
+	}
+	EUR_Edgar_Bailey={
+		name= "Lord Edgar Bailey"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Albert_Lancaster"
+			    # to do: add gfx
+			}}
+	
+			corps_commander = {
+				traits={}
+				skill=4
+				attack_skill=4
+				defense_skill=3
+				planning_skill=1
+				logistics_skill=4
+		}
+	}
+	EUR_Elias_Anson={
+		name= "Lord Elias Anson"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Albert_Lancaster"
+			    # to do: add gfx
+			}}
+	
+			corps_commander = {
+				traits={}
+				skill=3
+				attack_skill=2
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=3
+		}
+	}
+	EUR_Elliot_Collins={
+		name= "Lord Elliot Collins"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Elliot_Collins"
+			    
+			}}
+	
+            navy_leader = {
+                   skill = 4
+                   attack_skill = 3
+                   defense_skill = 2
+                   maneuvering_skill = 3
+                   coordination_skill = 3
+                   legacy_id = 10
+             }
+	}
+	EUR_Samuel_Whitlock={
+		name= "Baron Samuel Whitlock"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Elliot_Collins"
+			     # to do: add gfx
+			}}
+	
+            navy_leader = {
+                   skill = 5
+                   attack_skill = 4
+                   defense_skill = 3
+                   maneuvering_skill = 3
+                   coordination_skill = 4
+             }
+	}
 
 }
