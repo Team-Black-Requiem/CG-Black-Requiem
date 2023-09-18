@@ -5,6 +5,7 @@ idea = {
     ######### Brittanian lineage ############
 
 	######## ECONOMIC PATH ##########
+
 	MRU_No_Legal_Exceptions_idea = {
 		allowed = {
 			always = yes
@@ -73,7 +74,7 @@ idea = {
 	
     ############ ECONOMIC PATH FIN ########
 
-    State_Industry_Investments = {
+    MRU_State_Industry_Investments = {
 		allowed = {
 			always = yes
 		}
@@ -89,7 +90,7 @@ idea = {
 		}
 	}
      
-	State_Industry_InvestmentsV2 = {
+	MRU_Consumer_Industry_Expansions = {
 		allowed = {
 			always = yes
 		}
@@ -102,12 +103,12 @@ idea = {
 		modifier = {
 			conversion_cost_civ_to_mil_factor = 0.2
 			conversion_cost_mil_to_civ_factor = 0.2
-			consumer_goods_factor = 0.02
+	        consumer_goods_factor = 0.02
 			industry_free_repair_factor = 0.2
 		}
 	}
-
-    Conglomerates_Of_Our_Own_RUS = {
+     
+	MRU_Conglomerates_Of_Our_Own = {
 		allowed = {
 			always = yes
 		}
@@ -120,13 +121,14 @@ idea = {
 		modifier = {
 			conversion_cost_civ_to_mil_factor = 0.2
 			conversion_cost_mil_to_civ_factor = 0.2
-			consumer_goods_factor = 0.02
+	        consumer_goods_factor = 0.02
 			industry_free_repair_factor = 0.2
-			production_speed_buildings_factor = 0.05
+	        production_speed_buildings_factor = 0.05
 		}
 	}
+     
 
-	Conglomerates_Of_Our_Own_RUS = {
+	MRU_The_Bounty_of_Russia = {
 		allowed = {
 			always = yes
 		}
@@ -139,54 +141,331 @@ idea = {
 		modifier = {
 			conversion_cost_civ_to_mil_factor = 0.2
 			conversion_cost_mil_to_civ_factor = 0.2
-			consumer_goods_factor = 0.02
+	        consumer_goods_factor = 0.02
 			industry_free_repair_factor = 0.2
-			production_speed_buildings_factor = 0.05
+	        production_speed_buildings_factor = 0.05
+	        local_resources = 0.15
 		}
 	}
+     
+
+	MRU_A_Russian_Economy = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			conversion_cost_civ_to_mil_factor = 0.2
+			conversion_cost_mil_to_civ_factor = 0.2
+	        consumer_goods_factor = 0.01
+			industry_free_repair_factor = 0.2
+	        production_speed_buildings_factor = 0.1	
+	        local_resources = 0.2		
+		}
+	}
+     
+
+	MRU_Safeguarding_Regulations = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			conversion_cost_civ_to_mil_factor = 0.2
+			conversion_cost_mil_to_civ_factor = 0.2
+	        consumer_goods_factor = 0.02
+			industry_free_repair_factor = 0.2
+		    min_export = -0.1
+       	    line_change_production_efficiency_factor = 0.05
+		}
+	}
+     
+
+	MRU_Labour_From_The_Areas = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			conversion_cost_civ_to_mil_factor = 0.2
+			conversion_cost_mil_to_civ_factor = 0.2
+	        consumer_goods_factor = 0.02
+			industry_free_repair_factor = 0.2
+			repair_speed_factor = 0.1
+	        production_speed_buildings_factor = 0.05
+
+		}
+	}
+     
+
+	MRU_Brittanian_playground = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+	   
+	    modifier = {
+			conversion_cost_civ_to_mil_factor = 0.2
+			conversion_cost_mil_to_civ_factor = 0.2
+			industry_free_repair_factor = 0.2
+			repair_speed_factor = 0.3
+	        production_speed_buildings_factor = 0.15
+			research_speed_factor = 0.1
+		}
+		
+	}
+     
+
+	MRU_The_Careful_Balance = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			conversion_cost_civ_to_mil_factor = -0.2
+            conversion_cost_mil_to_civ_factor = -0.2
+            min_export = -0.05
+            line_change_production_efficiency_factor = 0.1
+            local_resources = 0.15
+            production_speed_buildings_factor = 0.05
+            consumer_goods_factor = 0.02
+			
+		}
+	}
+     
+###### ECONOMIC FIN #########
+
+###### MILITARY START #########
+MRU_Naval_Production_Drive = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
 	
-	MRU_The_Bounty_of_Russia_RUS = {
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-		
-		modifier = {
-			conversion_cost_civ_to_mil_factor = 0.2
-			conversion_cost_mil_to_civ_factor = 0.2
-			consumer_goods_factor = 0.02
-			industry_free_repair_factor = 0.2
-			production_speed_buildings_factor = 0.05
-			local_resources_factor = 0.15
-		}
+	modifier = {
+		industrial_capacity_dockyard = 0.3
+	}
+}
+ 
+MRU_Submarine_Warfare = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
 	}
 
-	MRU_The_Bounty_of_Russia_RUS = {
-		allowed = {
-			always = yes
-		}
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-		
-		modifier = {
-			conversion_cost_civ_to_mil_factor = 0.2
-			conversion_cost_mil_to_civ_factor = 0.2
-			consumer_goods_factor = 0.02
-			industry_free_repair_factor = 0.2
-			production_speed_buildings_factor = 0.1
-			local_resources_factor = 0.2
-		}
+	removal_cost = -1
+	
+	modifier = {
+		naval_torpedo_reveal_chance_factor = -0.15  
+		navy_submarine_attack_factor = 0.15   
+		navy_submarine_defence_factor = -0.15  
+		sub_retreat_speed = 0.3 
+	}
+}
+ 
+MRU_Heavy_Gun_Doctrine = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
 	}
 
+	removal_cost = -1
+	
+	modifier = {
+		ships_at_battle_start = 0.2
+		naval_coordination = 0.2
+		naval_has_potf_in_combat_attack = 0.2
+		navy_capital_ship_defence_factor = 0.1
+		navy_screen_attack_factor = 0.1
+	}
+}
+ 
+MRU_Traditional_Military_Exercises = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		army_org_factor = 0.15
+		org_loss_when_moving = 0.15
+		supply_consumption_factor = 0.2
+		dig_in_speed_factor = 0.2
+	}
+}
 
 
+MRU_Russian_Officers_School = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		army_leader_start_level = 1
+        promote_cost_factor = -0.1
+		female_random_army_leader_chance = 0.2
+		military_leader_cost_factor = -0.15
+		army_leader_cost_factor = -0.15 
+	}
+}
+
+
+MRU_Advanced_Combat_Simulators = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		terrain_penalty_reduction = -0.15
+        army_core_defence_factor = 0.15
+		land_night_attack = 0.15
+		breakthrough_factor = 0.15
+		army_leader_cost_factor = -0.15 
+	}
+}
+
+MRU_Brittanian_Backed_Academy = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		skill_bonus_factor = 0.15
+		army_leader_start_attack_level = 4
+		army_leader_start_logistics_level = 4
+		skill_bonus_factor = 0.15
+	}
+}
+
+MRU_Our_Own_Airforce = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		experience_gain_air_factor = 0.15
+	}
+}
+
+MRU_Our_Own_Airforce = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		experience_gain_air_factor = 0.15
+	}
+}
+
+MRU_Russian_Air_Academy = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		ace_stat_bonus = 0.15
+		air_ace_generation_chance_factor = 0.15
+	}
+}
+
+MRU_Early_Models = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		knightmare_mState_Industry_InvestmentsV2ainline_production_cost = -0.15
+	}
+}
+
+MRU_Early_Models = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    experience_gain_air_factor = 0.15
+	experience_gain_army_factor = 0.15
+	experience_gain_navy_factor = 0.15
+	}
+}
 
 }
 

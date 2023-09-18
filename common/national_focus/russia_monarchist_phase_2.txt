@@ -2148,13 +2148,15 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            
 			modify_country_flag = {
 				flag = sovereignty
 				value = -1
 			}
 		}
 
+    ####### MILITARY FIN ########
+	####### BRITANIAN PATH FIN ########
 	}
 
     focus = {
@@ -2655,7 +2657,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        add_ideas = MRU_Safeguarding_Regulations
 		}
 
 	}
@@ -2707,7 +2709,13 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        swap_ideas = {
+			remove_idea = MRU_Safeguarding_Regulations
+			add_idea = MRU_The_Careful_Balance
+		} 
+		hidden_effect = {
+			remove_ideas = MRU_The_Bounty_of_Russia
+		}
 		}
 
 	}
@@ -2795,7 +2803,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            add_tech_bonus = {
+				name = brittanian_support
+				bonus = 0.05
+			}
 			modify_country_flag = {
 				flag = sovereignty
 				value = -1
@@ -2825,7 +2836,11 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            add_tech_bonus = {
+				name = MRU_Flourishing_Tech_Industry
+				category = electronics
+				bonus = 0.05
+			}
 			modify_country_flag = {
 				flag = sovereignty
 				value = -2
@@ -2885,7 +2900,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+         add_ideas = MRU_Labour_From_The_Areas
 		}
 
 	}
@@ -2911,7 +2926,11 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            
+			swap_ideas = {
+				remove_idea = MRU_Labour_From_The_Areas
+				add_idea = MRU_Brittanian_playground
+			}
 		}
 
 	}
@@ -2937,7 +2956,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+           add_ideas = MRU_State_Industry_Investments
 			random_core_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -2996,7 +3015,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        add_ideas = MRU_Consumer_Industry_Expansions
 		}
 
 	}
@@ -3052,7 +3071,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            add_ideas = MRU_Conglomerates_Of_Our_Own
 			modify_country_flag = {
 				flag = sovereignty
 				value = 2
@@ -3082,7 +3101,11 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+       swap_ideas = {
+		remove_idea = MRU_Conglomerates_Of_Our_Own
+		add_idea = MRU_The_Bounty_of_Russia
+	   }
+    
 		}
 
 	}
@@ -3108,7 +3131,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+          swap_ideas = {
+			remove_idea = MRU_The_Bounty_of_Russia
+			add_idea = MRU_A_Russian_Economy
+		  }
 			modify_country_flag = {
 				flag = sovereignty
 				value = 1
@@ -3265,6 +3291,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
+			
         add_stability = 5
 		modify_country_flag = {
 			flag = sovereignty
@@ -3299,6 +3326,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
+			add_ideas = MRU_Brittanian_Special_Legal_Protections
         add_offsite_building = {
 			type = industrial_complex
 			level = 2
@@ -3362,6 +3390,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
+			add_ideas = MRU_No_Legal_Exceptions_idea
          add_stability = 5
 		 219 = {
 			add_extra_state_shared_building_slots = 2
