@@ -67,6 +67,8 @@ country_event = {
 			flag = SRU_sonya_vs_luka
 			value = 1
 		}
+		add_political_power = 50
+		add_stability = 0.02
 		
     } 
 	option = { #Luka's Solution
@@ -78,7 +80,11 @@ country_event = {
 			flag = SRU_sonya_vs_luka
 			value = -1
 		}
-		
+		570 ={
+			add_manpower = -1500
+		}
+		add_stability = -0.02
+		add_war_support = 0.05
     }         
 }
 country_event = {  
@@ -99,6 +105,10 @@ country_event = {
 			flag = SRU_sonya_vs_luka
 			value = 1
 		}
+		country_event = {
+			id = SRU.84
+			days = 3 # Note from fri: pending days decided by User
+		}
 		
     } 
 	option = { #Luka's Solution
@@ -109,6 +119,10 @@ country_event = {
 		modify_country_flag = {
 			flag = SRU_sonya_vs_luka
 			value = -1
+		}
+		country_event = {
+			id = SRU.85
+			days = 3 # Note from fri: pending days decided by User
 		}
 		
     }    
@@ -149,6 +163,68 @@ country_event = { #Sonya Politburo Victory
     } 
 }
 
+country_event = { #Establishing the Peoples Congress
+	id = SRU.8
+	title = SRU.8.t
+	desc = SRU.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU.8.a 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Minority_Seat_Elections
+    } 
+	option = {
+		name = SRU.8.b 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Full_Congress_Elections
+    } 
+}
+
+country_event = { #The_Party_Or_The_State?
+	id = SRU.9
+	title = SRU.9.t
+	desc = SRU.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU.9.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = State_Bureaucracy_Loyalty
+			days = 180
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = 1
+		}
+    } 
+	option = {
+		name = SRU.9.b
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 50
+		add_timed_idea = {
+			idea = Party_Bureaucracy_Loyalty
+			days = 180
+		}
+		modify_country_flag = {
+			flag = democratic_support
+			value = -1
+		}
+    } 
+}
+
 ### Luka's Focus Tree
 country_event = { #Chekhov's gun
 	id = SRU.11
@@ -181,7 +257,7 @@ country_event = { #Take families hostage
 	}
 }
 
-country_event = { #Deal_with_the_unions
+country_event = { #The power of the media
 	id = SRU.13
 	title = SRU.13.t
 	desc = SRU.13.d
@@ -209,7 +285,7 @@ country_event = { #Deal_with_the_unions
 		ai_chance = {
 			factor = 100
 		}
-		add_political_power = -100
+		add_political_power = 100
 		modify_country_flag = {
 			flag = democratic_support
 			value = -1
@@ -472,10 +548,6 @@ country_event = {
 			factor = 100
 		}
 		add_political_power = -150
-		modify_country_flag = {
-			flag = democratic_support
-			value = 1
-		}
 		add_timed_idea = {
 			idea = Dissidents_tolerated
 			days = 180
@@ -879,7 +951,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #Deal with the Unions
 	id = SRU.35
 	title = SRU.35.t
 	desc = SRU.35.d
@@ -1729,7 +1801,8 @@ country_event = { #Novosibirsk Research Complex
 	}
 }
 
-### Socialist Leadup Focuses (Yes I know these should be at the begining but changing numbers mid way is not worth it)
+### Socialist Leadup Focuses (Yes I know these should be at the begining but changing numbers mid way is not worth it) 
+# Note from fris: Isn't this the same as event 1? also the focus still leads to event 1
 
 country_event = { #Revolution Once More
 	id = SRU.83
@@ -1741,6 +1814,106 @@ country_event = { #Revolution Once More
 	option = {
 		
 		name = SRU.81.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+country_event = {  
+	id = SRU.84
+	title = SRU.84.t
+	desc = SRU.84.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = { #Sonya's Event
+		name = SRU.84.a 
+		ai_chance = {
+			factor = 100
+		}
+    } 
+}
+country_event = {  
+	id = SRU.85
+	title = SRU.85.t
+	desc = SRU.85.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Luka's Event
+		name = SRU.85.a		
+		ai_chance = {
+			factor = 0
+		}
+    }    
+}
+
+#old events that user slaughtered for the revolution >:C
+
+country_event = { #March of the Revolution
+	id = SRU.86
+	title = SRU.86.t
+	desc = SRU.86.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.86.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Politburo War Powers
+	id = SRU.87
+	title = SRU.87.t
+	desc = SRU.87.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.87.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Minority Seat Elections
+	id = SRU.88
+	title = SRU.88.t
+	desc = SRU.88.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.88.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Full Congress Elections
+	id = SRU.89
+	title = SRU.89.t
+	desc = SRU.89.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.89.a
 		ai_chance = {
 			factor = 100
 		}

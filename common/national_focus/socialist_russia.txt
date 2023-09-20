@@ -48,8 +48,12 @@
 				factor = 100
 			}
 		
-		completion_reward = {			
+		completion_reward = {	
+			add_manpower = 100000		
 		}
+		# note from fris: This is a stopgap mesure in order for the focus to do something we will need to do Russian federetion
+		# before we do anything else.
+		# to do: implement the actual numbers once we have variables for it.
 }
 
 
@@ -165,7 +169,7 @@
 					limit = {
 						has_country_flag = { #Luka Victory
 							flag = SRU_sonya_vs_luka
-							value < 2
+							value < 1
 						}
 					}
 					country_event = SRU.6
@@ -285,11 +289,12 @@
 			
 			completion_reward = {
 
-				remove_ideas = {
-					SRU_The_Soldiers_Blood
-					SRU_The_Peoples_Hearts
-					SRU_The_Workers_Toil
-				}
+				remove_ideas = SRU_The_Peoples_Hearts
+
+				remove_ideas = SRU_The_Workers_Toil
+
+				remove_ideas = SRU_The_Soldiers_Blood
+				
 				add_timed_idea = {
 					idea = SRU_To_Grasp_The_Future
 					days = 200
@@ -298,9 +303,9 @@
 				target = EUR
 				type = annex_everything
 			}
-			country_event = SRU.7
+			country_event = SRU.86
 		}
-		# to do: ask user if 5% is to much.
+
 	}
 				focus = {
 			id = Politburo_War_Powers
@@ -318,11 +323,11 @@
 			relative_position_id = SRU_march_of_the_revolution	
 			
 			completion_reward = {
-			 country_event = SRU.6
+			 country_event = SRU.87
 			 add_ideas = Politburo_War_Powers
 			 set_country_flag = democratic_support
 			}
-			# to do: ask user if the powers should be until end of all the civil war?
+
 	}
 				focus = {
 			id = Establishing_The_Peoples_Congress
@@ -341,7 +346,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.7
+				country_event = SRU.8
 			}
 			# to do: ask user how to solve the drift. Civilian +0.1 or -0.1?
 	}
@@ -354,8 +359,8 @@
 			prerequisite = { focus = Establishing_The_Peoples_Congress }
 			relative_position_id = Establishing_The_Peoples_Congress
 			available = {
-				has_completed_focus = Establishing_The_Peoples_Congress
 				country_exists = SRU
+				has_country_flag = Full_Congress_Elections
 			}
 			mutually_exclusive = {
 				focus = Minority_Seat_Elections
@@ -369,7 +374,7 @@
 					remove_idea = Democratic_Dissonance
 					add_idea = Democratic_Opposition
 				}
-				country_event = SRU.8
+				country_event = SRU.89
 			}
 	}
 				focus = {
@@ -383,6 +388,7 @@
 			relative_position_id = Establishing_The_Peoples_Congress
 			available = {
                            country_exists = SRU
+						   has_country_flag = Minority_Seat_Elections
 			}
 			mutually_exclusive = {
 				focus = Full_Congress_Elections
@@ -392,8 +398,11 @@
 				}
 			
 			completion_reward = {
-			
-				country_event = SRU.8
+				swap_ideas = {
+					remove_idea = Democratic_Dissonance
+					add_idea = Limited_Opposition
+				}
+				country_event = SRU.88
 			}
 	}
 				focus = {
@@ -413,7 +422,7 @@
 				}
 			
 			completion_reward = {
-				# Will unlock decisions to do: ask user which ones
+				# Will unlock decisions to do: ask user which ones/wait for latter implementation
 			}
 	}
 				focus = {
@@ -434,7 +443,6 @@
 			completion_reward = {
 				country_event = SRU.9
 			}
-			# to do: ask user why the party or the state, aren't they the same?
 	}
 				focus = {
 			id = The_Power_of_The_Media
@@ -521,8 +529,9 @@
 				}
 			
 			completion_reward = {
-				
+				add_ideas = Ministry_Of_Welfare
 			}
+			# to do: ask user which minister it unlocks also 5% complience gain? WTF isn't that way to high?
 	}
 			focus = {
 			id = a_Matter_Of_Dissidents 
@@ -541,6 +550,7 @@
 			
 			completion_reward = {
 				recruit_character = SRU_Tasha_Kulikova
+				# to do: who? she is not in the mural
 			    country_event = SRU.26
 			}
 			#to do: ask user if he wants +1 democrat support on no censorship
@@ -568,7 +578,7 @@
 	}
 
 	focus = {
-		id = Rooting_The_Jacobins_Out_Of_The_Cheka
+		id = Removing_The_Jacobin_Chekists
 		icon = GFX_Opening_The_Ministry_of_Information
 		cost = 2
 		x = 0
@@ -595,9 +605,9 @@ focus = {
 	cost = 2
 	x = -1
 	y = 1
-	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
+	prerequisite = { focus = Removing_The_Jacobin_Chekists 
 				}
-	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	relative_position_id = Removing_The_Jacobin_Chekists
 	mutually_exclusive = {
 		focus = Chairman_ivanov
 	}
@@ -638,9 +648,9 @@ focus = {
 	cost = 2
 	x = 1
 	y = 1
-	prerequisite = { focus = Rooting_The_Jacobins_Out_Of_The_Cheka 
+	prerequisite = { focus = Removing_The_Jacobin_Chekists 
 				}
-	relative_position_id = Rooting_The_Jacobins_Out_Of_The_Cheka
+	relative_position_id = Removing_The_Jacobin_Chekists
 	mutually_exclusive = {
 		focus = Chairman_Bakatin
 	}
@@ -715,8 +725,10 @@ focus = {
 		 focus = SRU_founding_the_mgb 
 	}
     prerequisite = {
-		focus = Opening_The_Ministry_of_Welfare
 		focus = Opening_The_Ministry_of_Information
+	}
+	prerequisite = {
+		focus = Opening_The_Ministry_of_Welfare
 	}
 	
 	relative_position_id = SRU_founding_the_mgb
@@ -3781,7 +3793,7 @@ focus = {
 			}
 
 			focus = {
-				id = Sonyas_March_Forward
+				id = Siberian_Economic_Matters
 				icon = GFX_SRU_sonya_marches_forward
 				cost = 5
 				x = -10
@@ -3807,9 +3819,9 @@ focus = {
 				cost = 1
 				x = -3
 				y = 1
-				prerequisite = { focus = Sonyas_March_Forward }
+				prerequisite = { focus = Siberian_Economic_Matters }
 				mutually_exclusive = { focus = Resource_Export_Plan }
-				relative_position_id = Sonyas_March_Forward
+				relative_position_id = Siberian_Economic_Matters
 				available = {
 								country_exists = SRU 
 				}
@@ -3828,9 +3840,9 @@ focus = {
 				cost = 1
 				x = 3
 				y = 1
-				prerequisite = { focus = Sonyas_March_Forward }
+				prerequisite = { focus = Siberian_Economic_Matters }
 				mutually_exclusive = { focus = Two_Year_Industrialization_Plan }
-				relative_position_id = Sonyas_March_Forward
+				relative_position_id = Siberian_Economic_Matters
 				available = {
 								country_exists = SRU 
 				}
@@ -3968,9 +3980,9 @@ focus = {
 				cost = 5
 				x = 0
 				y = 2
-				prerequisite = { focus = Sonyas_March_Forward
+				prerequisite = { focus = Siberian_Economic_Matters
 			   }
-				relative_position_id = Sonyas_March_Forward
+				relative_position_id = Siberian_Economic_Matters
 				available = {
 								country_exists = SRU 
 				}
