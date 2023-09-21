@@ -3357,9 +3357,8 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_ideas = SRU_peasant_army
 					country_event = SRU.43
-					remove_ideas = SRU_An_Independent_Military
+					remove_ideas = Independent_Military_Structure
 				}
 
 			}
@@ -3599,7 +3598,7 @@ focus = {
 					}
 				
 				completion_reward = {
-				load_oob = Sonya_Vanguard
+				load_oob = "Sonya_Vanguard"
 				}
 
 			}
@@ -3622,11 +3621,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_equipment_to_stockpile = {
-						type = amphibious_mechanized_equipment
-						amount = x
-					}
-					country_event = SRU.17
+					country_event = SRU.90
 					add_ideas = SRU_Red_Army_Plans
 				}
 
@@ -3731,6 +3726,10 @@ focus = {
 					}
 				
 				completion_reward = {
+					if = {
+						limit = {NOT = {has_tech = modern_artillery_1}}
+						set_technology = {modern_artillery_1 = 1}
+					}
 					add_equipment_to_stockpile = {
 						type = rocket_artillery_equipment
 						amount = 500
@@ -3757,7 +3756,7 @@ focus = {
 				
 				completion_reward = {
 					swap_ideas = {
-						remove_idea = Red_Army_Plans
+						remove_idea = SRU_Red_Army_Plans
 						add_idea = Red_Army_Foundations
 					}
 				}
@@ -3808,6 +3807,7 @@ focus = {
 					}
 				
 				completion_reward = {
+					country_event = SRU.91
 					# to do: confirm with user this should make and event that decides the route you go down.
 				}
 
@@ -3830,7 +3830,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.19
+					country_event = SRU.92
 				}
 
 			}
@@ -3851,7 +3851,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.20
+					country_event = SRU.93
 				}
 
 			}
@@ -3991,7 +3991,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.21
+					country_event = SRU.94
 					add_ideas = Tomsk_University
 				}
 
@@ -4013,7 +4013,7 @@ focus = {
 				
 				completion_reward = {
 				    add_ideas = Public_Healthcare
-					country_event = SRU.22
+					country_event = SRU.95
 				}
 				# to do: talk with user, the trickleback is an equipment value and cannot be modified at state level.
 			}
@@ -4034,8 +4034,14 @@ focus = {
 				
 				completion_reward = {
 					add_ideas = Siberian_Roads_Program
+					every_owned_state = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
-				# to do: ask user where exactly is west siberia
 
 			}
 			focus = {
@@ -4357,7 +4363,7 @@ focus = {
 								country_exists = SRU 
 				}
 				ai_will_do = {
-						factor = 100 
+						factor = 0 #to do: Note from Fris: made it 0 to stop the ai going down this path at the begining was 100
 					}
 				
 				completion_reward = {}

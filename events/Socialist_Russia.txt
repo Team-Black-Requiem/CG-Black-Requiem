@@ -1920,3 +1920,98 @@ country_event = { #Full Congress Elections
 		
 	}
 }
+
+country_event = { #Military Council plan
+	id = SRU.90
+	title = SRU.90.t
+	desc = SRU.90.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.90.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Siberian Economics Matters
+	id = SRU.91
+	title = SRU.91.t
+	desc = SRU.91.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU.91.a 
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = Two_Year_Industrialization_Plan
+    } 
+	option = {
+		name = SRU.91.b
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = Resource_Export_Plan
+    } 
+}
+
+country_event = { #Two year industrialization plan
+	id = SRU.92
+	title = SRU.92.t
+	desc = SRU.92.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.92.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Resource_Export_Plan
+	id = SRU.93
+	title = SRU.93.t
+	desc = SRU.93.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.93.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Expand_The_Tomsk_University
+	id = SRU.94
+	title = SRU.94.t
+	desc = SRU.94.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.94.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Opening_Public_Hospitals
+	id = SRU.95
+	title = SRU.95.t
+	desc = SRU.95.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.95.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
