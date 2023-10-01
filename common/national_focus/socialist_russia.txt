@@ -744,8 +744,8 @@ focus = {
 }
 	###### 
 				focus = {
-			id = SRU_Take_Families_Hostage 
-			icon = GFX_SRU_Take_Families_Hostage
+			id = SRU_Coerce_The_Generals 
+			icon = GFX_SRU_Coerce_The_Generals
 			cost = 2
 			x = 0
 			y = 1
@@ -774,17 +774,39 @@ focus = {
 				every_army_leader = {
 					add_attack = 2
 				}
-				country_event = SRU.33
+				country_event = SRU.12
 			}
+			# to do: ask rein about chairman ivanov
 	}
+
+	focus = {
+		id = SRU_Form_the_RJC
+		icon = GFX_SRU_Form_the_RJC
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = { focus = SRU_Coerce_The_Generals  }
+		relative_position_id = SRU_Coerce_The_Generals
+		available = {
+					   country_exists = SRU
+		}
+		ai_will_do = {
+				factor = 100
+			}
+		
+		completion_reward = {
+		add_ideas = SRU_Russian_Jacobin_Council
+		}
+}
+
 				focus = {
-			id = SRU_Establish_Regional_Communities 
-			icon = GFX_SRU_Establish_Regional_Communities
+			id = SRU_National_Collectivist_Society 
+			icon = GFX_SRU_National_Collectivist_Society
 			cost = 2
-			x = -1
+			x = -2
 			y = 1
-			prerequisite = { focus = SRU_Take_Families_Hostage }
-			relative_position_id = SRU_Take_Families_Hostage
+			prerequisite = { focus = SRU_Coerce_The_Generals }
+			relative_position_id = SRU_Coerce_The_Generals
 			available = {
                            country_exists = SRU
 			}
@@ -801,17 +823,17 @@ focus = {
 					type = train_equipment
 					amount = 300
 				}
-
 			}
+			# to do: ask rein about the supply hubs
 	}
 				focus = {
 			id = SRU_Rapid_Industrialisation
 			icon = GFX_SRU_Rapid_Industrialisation
 			cost = 2
-			x = 1
+			x = 2
 			y = 1
-			prerequisite = { focus = SRU_Take_Families_Hostage }
-			relative_position_id = SRU_Take_Families_Hostage
+			prerequisite = { focus = SRU_Coerce_The_Generals }
+			relative_position_id = SRU_Coerce_The_Generals
 			available = {
                            country_exists = SRU
 			}
@@ -856,17 +878,18 @@ focus = {
 						amount = 8
 					}
 				}
+				remove_ideas = SRU_Resource_Economy
 			}
 	}
 				focus = {
-			id = SRU_Total_War
+			id = SRU_The_Eternal_Revolution 
 			icon = GFX_SRU_Total_War
 			cost = 3
-			x = -1
+			x = 0
 			y = 1
-			prerequisite = { focus = SRU_Establish_Regional_Communities }
+			prerequisite = { focus = SRU_National_Collectivist_Society }
 			prerequisite = { focus = SRU_Rapid_Industrialisation }
-			relative_position_id = SRU_Rapid_Industrialisation
+			relative_position_id = SRU_Form_the_RJC
 			available = {
                            country_exists = SRU
 			}
@@ -877,8 +900,9 @@ focus = {
 			will_lead_to_war_with = EUR
 			completion_reward = {
 				country_event = SRU.34
-				add_manpower = 50000
-				add_war_support = 0.3
+				add_manpower = 30000
+				add_war_support = 0.15
+				add_ideas = SRU_The_Eternal_Revolution
 				declare_war_on = {
 					target = EUR
 					type = annex_everything
@@ -891,8 +915,8 @@ focus = {
 			cost = 5
 			x = -9
 			y = 1
-			prerequisite = { focus = SRU_Total_War }
-			relative_position_id = SRU_Total_War
+			prerequisite = { focus = SRU_The_Eternal_Revolution  }
+			relative_position_id = SRU_The_Eternal_Revolution 
 			available = {
                            country_exists = SRU
 			}
@@ -1678,14 +1702,14 @@ focus = {
 				x = 0
 				y = 1
 				
-				prerequisite = { focus = SRU_Total_War if = {
+				prerequisite = { focus = SRU_The_Eternal_Revolution  if = {
 					has_complete_focus = SRU_The_War_Machine 
 					OR = {
 						has_completed_focus = SRU_The_Economic_Heart
 					}
 				}
 			}
-				relative_position_id = SRU_Total_War
+				relative_position_id = SRU_The_Eternal_Revolution 
 				available = {
 								country_exists = SRU 
 				}
@@ -1982,8 +2006,8 @@ focus = {
 				cost = 3
 				x = 11
 				y = 1
-				prerequisite = { focus = SRU_Total_War }
-				relative_position_id = SRU_Total_War
+				prerequisite = { focus = SRU_The_Eternal_Revolution  }
+				relative_position_id = SRU_The_Eternal_Revolution 
 				available = {
 								country_exists = SRU 
 				}
@@ -1994,6 +2018,7 @@ focus = {
 				completion_reward = {
 					country_event = SRU.64
 				}
+				# to do: ask rein about 60 day idea
 
 			}
 			focus = {
@@ -2013,8 +2038,11 @@ focus = {
 				
 				completion_reward = {
 					add_research_slot = 1
+					swap_ideas = {
+						remove_idea = SRU_Zaytsev_Vision
+						add_idea = SRU_Zaytsev_Vision_2
 				}
-
+			}
 			}
 			focus = {
 				id = SRU_The_Economic_Heart
@@ -2024,6 +2052,7 @@ focus = {
 				y = 2
 				prerequisite = { focus = SRU_Zaytsevs_Vision }
 				prerequisite = { focus = SRU_Central_Planning }
+				mutually_exclusive = { focus = SRU_The_War_Machine }
 				relative_position_id = SRU_Zaytsevs_Vision
 				available = {
 								country_exists = SRU 
@@ -2263,7 +2292,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_New_Life_Initiative
+				id = SRU_International_Brigades
 				icon = GFX_SRU_New_Life_Initiative
 				cost = 2
 				x = 0
@@ -2281,6 +2310,66 @@ focus = {
 					every_core_state = {
 						local_building_slots = 3
 					}
+					4800 = {
+						add_manpower = 35000
+					}
+					7822 = {
+						add_manpower = 35000
+					}
+					4705 = {
+						add_manpower = 35000
+					}
+					7835 = {
+						add_manpower = 35000
+					}
+					4797 = {
+						add_manpower = 35000
+					}
+					4832 = {
+						add_manpower = 35000
+					}
+					4808 = {
+						add_manpower = 35000
+					}
+					4795 = {
+						add_manpower = 35000
+					}
+					1733 = {
+						add_manpower = 35000
+					}
+					10696 = {
+						add_manpower = 35000
+					}
+					7685 = {
+						add_manpower = 35000
+					}
+					1726 = {
+						add_manpower = 35000
+					}
+					13361 = {
+						add_manpower = 35000
+					}
+					13061 = {
+						add_manpower = 35000
+					}
+					7789 = {
+						add_manpower = 35000
+					}
+					7757 = {
+						add_manpower = 35000
+					}
+					1794 = {
+						add_manpower = 35000
+					}
+					1876 = {
+						add_manpower = 35000
+					}
+					12523 = {
+						add_manpower = 35000
+					}
+					13381 = {
+						add_manpower = 35000
+					}
 				}
 
 			}
@@ -2290,8 +2379,8 @@ focus = {
 				cost = 2
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_New_Life_Initiative }
-				relative_position_id = SRU_New_Life_Initiative
+				prerequisite = { focus = SRU_International_Brigades }
+				relative_position_id = SRU_International_Brigades
 				available = {
 								country_exists = SRU 
 				}
@@ -2304,9 +2393,14 @@ focus = {
 						remove_idea = SRU_The_Economic_Heart1
 						add_idea = SRU_The_Economic_Heart2
 					}
-					add_offsite_building = { 
-						type = industrial_complex level = 5
+					568 = {
+						add_building_construction = {
+							type = industrial_complex
+							level = 5
+							instant_build = yes
+						}
 					}
+					
 				}
 
 			}
@@ -2343,7 +2437,7 @@ focus = {
 				id = SRU_Government_Slaves
 				icon = GFX_SRU_Government_Slaves
 				cost = 3
-				x = 2
+				x = 0
 				y = 1
 				prerequisite = { focus = SRU_State_Owned_Unions }
 				relative_position_id = SRU_State_Owned_Unions
@@ -2363,7 +2457,7 @@ focus = {
 				id = SRU_War_Machine_In_Overdrive
 				icon = GFX_SRU_War_Machine_In_Overdrive
 				cost = 3
-				x = -2
+				x = 0
 				y = 1
 				prerequisite = { focus = SRU_Cut_Corners }
 				relative_position_id = SRU_Cut_Corners
@@ -2385,9 +2479,13 @@ focus = {
 				cost = 5
 				x = 0
 				y = 3
-				prerequisite = { focus = SRU_Cut_Corners
-			                   focus = SRU_Establish_The_Gulag
-							   focus = SRU_State_Owned_Unions }
+				prerequisite = {
+					focus = SRU_Establish_The_Gulag
+				}
+				prerequisite = {
+					focus = SRU_War_Machine_In_Overdrive
+					focus = SRU_Government_Slaves
+				}
 				relative_position_id = SRU_Penal_Battallions_In_The_Army
 				available = {
 								country_exists = SRU 

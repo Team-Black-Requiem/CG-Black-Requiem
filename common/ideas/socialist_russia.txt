@@ -1588,7 +1588,7 @@ SRU_Red_Army_Plans= {
 			}
    		}
 
-		SRU_Zaytsev_Plan = {
+		SRU_Zaytsev_Vision = {
 		
 			allowed = {
 		   		always = no
@@ -1601,8 +1601,27 @@ SRU_Red_Army_Plans= {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.1
 				production_speed_buildings_factor = 0.15
+	   		}
+   		}
+
+		   SRU_Zaytsev_Vision_2 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.05
 	   		}
    		}
 
@@ -1878,6 +1897,8 @@ SRU_Red_Army_Plans= {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
 	   		}
    		}
 		
@@ -1895,6 +1916,8 @@ SRU_Red_Army_Plans= {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
 				mobilization_speed = 0.1
 	   		}
    		}
@@ -1913,6 +1936,8 @@ SRU_Red_Army_Plans= {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
 				mobilization_speed = 0.1
 				production_speed_buildings_factor = 0.15
 	   		}
@@ -1931,7 +1956,9 @@ SRU_Red_Army_Plans= {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
 				mobilization_speed = 0.1
 				production_speed_buildings_factor = 0.15
 				production_speed_rail_way_factor = 0.15
@@ -1951,7 +1978,9 @@ SRU_Red_Army_Plans= {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
 				mobilization_speed = 0.1
 				production_speed_buildings_factor = 0.15
 				production_speed_rail_way_factor = 0.15
@@ -2013,7 +2042,30 @@ SRU_Red_Army_Plans= {
 			}
 		}
 
+		#### LUKA'S STARTER IDEAS #####
+
+		SRU_The_Eternal_Revolution = {
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		SRU_Russian_Jacobin_Council = {
+		
+			modifier = {
+				army_attack_factor = 0.1
+				command_power_gain_mult = 0.1
+				political_power_gain_factor = 0.1
+			}
+		
+		}
 	}
+
+	
+
+
 	
 	#### DESIGNERS #####
 	
@@ -2116,6 +2168,47 @@ SRU_Red_Army_Plans= {
 
 
 		}
+
+		SOC_Tomsk_Industrial_Zone = {
+			# picture = 
+
+			allowed ={
+				has_completed_focus = SRU_State_Production_Companies
+			} 
+			research_bonus = {
+				industry = 0.10
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+
+			traits = {
+				industrial_manufacturer
+			}
+
+
+		}
+
+		SOC_Novosibirsk_Technical_Institute = {
+			# picture = 
+
+			allowed ={
+				has_completed_focus = SRU_State_Production_Companies
+			} 
+			research_bonus = {
+				electronics = 0.10
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+			}
+
+			traits = {
+				electronics_concern
+			}
+		}
+		
 	}
 
 	materiel_manufacturer = {

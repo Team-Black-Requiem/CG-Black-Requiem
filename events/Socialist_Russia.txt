@@ -932,8 +932,7 @@ country_event = {
 	
 }
 
-
-country_event = {
+country_event = { #SRU_The_Eternal_Revolution 
 	id = SRU.34
 	title = SRU.34.t
 	desc = SRU.34.d
@@ -1439,7 +1438,35 @@ country_event = { #Zaytsevs Vision
 		ai_chance = {
 			factor = 100
 		}
-		add_ideas = SRU_Zaytsev_Plan
+		add_ideas = SRU_Zaytsev_Vision
+		if = {
+			limit = {
+				NOT = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+				}
+			}
+			add_ideas = partial_economic_mobilisation
+	}
+}
+
+country_event = { #SRU_The_Economic_Heart
+	id = SRU.64
+	title = SRU.64.t
+	desc = SRU.64.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU.64.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Zaytsev_Vision
 		upgrade_economy_law = yes
 	}
 }
@@ -1458,9 +1485,14 @@ country_event = { #The War Machine
 		ai_chance = {
 			factor = 100
 		}
-		add_ideas = SRU_The_War_Machine
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Vision_2
+			add_idea = SRU_The_War_Machine
+		}
+		}
+
 	}
-}
+
 
 country_event = { #War Machine In Overdrive
 	id = SRU.66
@@ -1538,7 +1570,10 @@ country_event = { #The Economic Heart
 		ai_chance = {
 			factor = 100
 		}
-		add_ideas = SRU_The_Economic_Heart
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Vision_2
+			add_idea = SRU_The_Economic_Heart
+		}
 	}
 }
 
