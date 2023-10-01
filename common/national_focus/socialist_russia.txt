@@ -889,6 +889,7 @@ focus = {
 			y = 1
 			prerequisite = { focus = SRU_National_Collectivist_Society }
 			prerequisite = { focus = SRU_Rapid_Industrialisation }
+			prerequisite = { focus = SRU_Form_the_RJC }
 			relative_position_id = SRU_Form_the_RJC
 			available = {
                            country_exists = SRU
@@ -954,8 +955,18 @@ focus = {
 			}
 			
 			completion_reward = {
-				add_country_leader_trait = propagandist
-				add_country_leader_trait = nihilist
+				SRU_Luka_Zhukov = {
+					add_trait = {
+						slot = head_of_government
+						trait = Nihilist_agitator
+					}
+				}
+				SRU_Luka_Zhukov = {
+					add_trait = {
+						slot = head_of_government
+						trait = propagandist
+					}
+				}
 				country_event = SRU.15
 			}
 	}
@@ -1128,7 +1139,12 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_ideas = SRU_death_incarnate
+					SRU_Luka_Zhukov = {
+						add_trait = {
+							slot = head_of_government
+							trait = Political_visionary
+						}
+					}
 				}
 
 			}
@@ -2495,6 +2511,11 @@ focus = {
 					}
 				
 				completion_reward = {
+					if = {
+						limit = {
+
+						}
+					}
 					country_event = SRU.71
 				}
 

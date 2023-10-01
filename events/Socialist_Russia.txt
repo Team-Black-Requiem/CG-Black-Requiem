@@ -142,7 +142,15 @@ country_event = { #Luka Politburo Victory
 		set_country_flag = SRU_Luka_In_Control
 		mark_focus_tree_layout_dirty = yes
 		complete_national_focus = SRU_Chekhovs_Gun
-		
+		add_advisor_role = {
+				character = SRU_Luka_Zhukov
+				activate = yes
+				advisor = {
+					slot = head_of_government
+					cost = 150
+					idea_token = GFX # to add later
+				}
+			}
     }     
 }
 country_event = { #Sonya Politburo Victory   
