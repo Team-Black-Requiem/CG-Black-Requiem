@@ -24,13 +24,13 @@ POR = {
 set_convoys = 300
 
 MZB = {
-    add_popularity = { ideology = autocracy popularity = 0.80 }
-    add_popularity = { ideology = authoritarian popularity = 0.45 }
-	add_popularity = { ideology = liberalism popularity = 0.11 }
-	add_popularity = { ideology = progressive popularity = 0.12 }
+    add_popularity = { ideology = BR_autocracy popularity = 0.80 }
+    add_popularity = { ideology = BR_authoritarian popularity = 0.45 }
+	add_popularity = { ideology = BR_liberalism popularity = 0.11 }
+	add_popularity = { ideology = BR_progressive popularity = 0.12 }
 
     set_politics = {
-        ruling_party = autocracy
+        ruling_party = BR_autocracy
         last_election = "1936.5.16"
         election_frequency = 48
         elections_allowed = no
@@ -45,7 +45,7 @@ create_country_leader = {
 	desc = "POLITICS_CHARLES_DESC"
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
-	ideology = paternal_autocracy
+	ideology = paternal_BR_autocracy
 	traits = {
 	}
 }

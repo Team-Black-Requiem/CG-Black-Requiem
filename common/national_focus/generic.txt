@@ -82,9 +82,9 @@ focus_tree = {
 		modifier = { factor = 3
 			if = {
 				limit = {
-					has_government = conservatism
-					has_government = liberalism
-					has_government = progressive 
+					has_government = BR_conservatism
+					has_government = BR_liberalism
+					has_government = BR_progressive 
 						}
 				}
 			}
@@ -109,7 +109,7 @@ focus_tree = {
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = revolutionary
+						has_government = BR_revolutionary
 						}
 					}
 				}
@@ -273,7 +273,7 @@ focus_tree = {
 			modifier = { factor = 3
 					if = {
 						limit = {
-							has_government = authoritarian
+							has_government = BR_authoritarian
 							}
 						}
 					}
@@ -379,9 +379,9 @@ focus_tree = {
 			modifier = { factor = 3
 			if = {
 				limit = {
-					has_government = conservatism
-					has_government = liberalism
-					has_government = progressive 
+					has_government = BR_conservatism
+					has_government = BR_liberalism
+					has_government = BR_progressive 
 					}
 				}
 			}
@@ -408,7 +408,7 @@ ai_will_do = {
 	modifier = { factor = 3
 		if = {
 			limit = {
-				has_government = progressive
+				has_government = BR_progressive
 				}
 			}
 		}
@@ -506,9 +506,9 @@ cost = 5
             modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = autocracy
-						has_government = supremacist
-						has_government = vanguardist 
+						has_government = BR_autocracy
+						has_government = BR_supremacist
+						has_government = BR_vanguardist 
 						}
 					
 					}
@@ -547,7 +547,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = conservatism
+						has_government = BR_conservatism
 						}
 					}
 				}
@@ -609,10 +609,10 @@ cost = 5
 		
 					OR = {
 		
-						has_government = progressive
-						has_government = liberalism
-						has_government = conservatism
-						has_government = revolutionary
+						has_government = BR_progressive
+						has_government = BR_liberalism
+						has_government = BR_conservatism
+						has_government = BR_revolutionary
 					}
 				}
 		
@@ -671,7 +671,7 @@ cost = 5
 							exists = yes
 		
 					OR = {
-					has_government = liberalism
+					has_government = BR_liberalism
 		        	}
 				}
 		
@@ -702,10 +702,10 @@ cost = 5
 		
 					OR = {
 		
-						has_government = progressive
-						has_government = liberalism
-						has_government = conservatism
-						has_government = revolutionary
+						has_government = BR_progressive
+						has_government = BR_liberalism
+						has_government = BR_conservatism
+						has_government = BR_revolutionary
 					}
 				}
 		
@@ -731,7 +731,7 @@ cost = 5
 	focus = {
 		id = gen_autocracy
 		icon = GFX_goal_generic_more_territorial_claims
-					mutually_exclusive = { focus = gen_tolalitarian_socialism}
+					mutually_exclusive = { focus = gen_tolalitarian_BR_socialism}
 		mutually_exclusive = { focus = gen_nationalism }
 
 		prerequisite = { focus = gen_authoritarianism}
@@ -745,7 +745,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = autocracy
+						has_government = BR_autocracy
 						}
 					}
 				}
@@ -771,7 +771,7 @@ cost = 5
 
 		prerequisite = { focus = gen_secret_police}
 
-		relative_position_id = gen_tolalitarian_socialism
+		relative_position_id = gen_tolalitarian_BR_socialism
 		x = 0
 		y = 2
 		cost = 5
@@ -819,7 +819,7 @@ cost = 5
 	focus = {
 		mutually_exclusive = { focus = gen_nationalism}
 		mutually_exclusive = { focus = gen_autocracy }
-		id = gen_tolalitarian_socialism
+		id = gen_tolalitarian_BR_socialism
 		icon = GFX_goal_generic_propaganda
 
 		prerequisite = { focus = gen_authoritarianism }
@@ -832,7 +832,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = vanguardist
+						has_government = BR_vanguardist
 						}
 					}
 				}
@@ -854,7 +854,7 @@ cost = 5
 
 		id = gen_nationalism
 		icon = GFX_goal_generic_neutrality_focus
-						mutually_exclusive = { focus = gen_tolalitarian_socialism}
+						mutually_exclusive = { focus = gen_tolalitarian_BR_socialism}
 		mutually_exclusive = { focus = gen_autocracy }
 		prerequisite = { focus = gen_authoritarianism }
 		
@@ -867,7 +867,7 @@ cost = 5
 			modifier = { factor = 3
 				if = {
 					limit = {
-						has_government = supremacist
+						has_government = BR_supremacist
 						}
 					}
 				}
@@ -975,14 +975,14 @@ cost = 5
 		
 				bypass = {
 				NOT = {
-        has_government = progressive
+        has_government = BR_progressive
          }
 		}
 
 
-		prerequisite = { focus = gen_tolalitarian_socialism }
+		prerequisite = { focus = gen_tolalitarian_BR_socialism }
 
-		relative_position_id = gen_tolalitarian_socialism
+		relative_position_id = gen_tolalitarian_BR_socialism
 		y = 1
 		cost = 5
 

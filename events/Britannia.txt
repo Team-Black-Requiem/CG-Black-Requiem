@@ -75,7 +75,7 @@ country_event = {  #death of Marianne
 		add_political_power = -50
 		add_manpower = -1
 				add_popularity = {
-    ideology = supremacist
+    ideology = BR_supremacist
     popularity = 0.03
 	}
 		
@@ -240,7 +240,7 @@ country_event = {
 		name = BRT.6.b
 		add_political_power = -50
 		add_popularity = {
-    ideology = autocracy
+    ideology = BR_autocracy
     popularity = -0.10
 	}
 		white_peace = PHI
@@ -249,14 +249,14 @@ country_event = {
          puppet = PHI
           }
 		  PHI = {
-    add_popularity = { ideology = autocracy popularity = 0.80 }
-    add_popularity = { ideology = authoritarian popularity = 0.25 }
-	add_popularity = { ideology = supremacist popularity = 0.10 }
-	add_popularity = { ideology = liberalism popularity = 0.03 }
-	add_popularity = { ideology = progressive popularity = 0.02 }
+    add_popularity = { ideology = BR_autocracy popularity = 0.80 }
+    add_popularity = { ideology = BR_authoritarian popularity = 0.25 }
+	add_popularity = { ideology = BR_supremacist popularity = 0.10 }
+	add_popularity = { ideology = BR_liberalism popularity = 0.03 }
+	add_popularity = { ideology = BR_progressive popularity = 0.02 }
 
     set_politics = {
-        ruling_party = autocracy
+        ruling_party = BR_autocracy
         last_election = "1936.5.16"
         election_frequency = 48
         elections_allowed = no
@@ -276,7 +276,7 @@ country_event = {
 		name = BRT.6.a
 		add_political_power = 50
 		add_popularity = {
-    ideology = autocracy
+    ideology = BR_autocracy
     popularity = 0.05
 	}
 	declare_war_on = {
@@ -806,7 +806,7 @@ country_event = {  #Paris Meeting
 		name = BRT.20.a
 		add_command_power = 50	
 		add_popularity = {
-			ideology = conservatism
+			ideology = BR_conservatism
 			popularity = 0.02
 		}
 
@@ -848,7 +848,7 @@ country_event = {  #Luoyang Meeting
 		name = BRT.21.a
 
 		add_popularity = {
-			ideology = authoritarian
+			ideology = BR_authoritarian
 			popularity = 0.02
 		}
    
@@ -890,7 +890,7 @@ is_triggered_only = yes
 
 	BRT_schneizel_influence_low = yes
 	add_popularity = {
-		ideology = supremacist
+		ideology = BR_supremacist
 		popularity = -0.02
 	}
 	add_stability = 0.01
@@ -910,7 +910,7 @@ option = {
 	BRT_guinevere_influence_low = yes
 
 	add_popularity = {
-		ideology = supremacist
+		ideology = BR_supremacist
 		popularity = 0.02
 	}
 	add_war_support = 0.01
