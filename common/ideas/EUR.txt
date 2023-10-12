@@ -197,6 +197,45 @@ ideas = {
 		   }
 	   }
 
+	   EUR_Nationalist_Opposition = {
+		
+	       allowed = {
+	         always = yes
+           }
+
+             allowed_civil_war = {
+	             always = yes
+             }
+
+            removal_cost = -1
+
+              modifier = {
+	           stability_factor = -0.05
+			   political_power_gain = -0.010
+			   BR_supremacist_drift = 0.02
+              }         
+       }
+
+	   	 EUR_Nationalist_Opposition_2 = {
+		
+	       allowed = {
+	         always = yes
+           }
+
+             allowed_civil_war = {
+	             always = yes
+             }
+
+            removal_cost = -1
+
+              modifier = {
+	           stability_factor = -0.05
+			   political_power_gain = -0.020
+			   BR_supremacist_drift = 0.05
+              }         
+           }
+
+
 	   EUR_Intimidated_soldiers_2 = {
 		
 		allowed = {
@@ -602,8 +641,9 @@ EUR_The_okhotsk_settlement_2 = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			stability = -0.15
-			conscription = 0.02
+			army_morale_factor = -0.05
+			army_attack_factor = 0.10
+			conscription = 0.01
 		   }
 		}
 
@@ -621,9 +661,8 @@ EUR_The_okhotsk_settlement_2 = {
 
 		   modifier = {
 			max_command_power = 40
-			conscription = 0.02
 			army_leader_start_attack_level = 1
-			army_leader_start_defense_level = -1 
+			max_planning_factor = 0.10
 		   }
 		   }
 
@@ -640,15 +679,9 @@ EUR_The_okhotsk_settlement_2 = {
 		   removal_cost = -1
 
 		   modifier = {
-			army_infantry_attack_factor = -0.05
-			army_org_factor = -0.05
-		   }
-		   equipment_bonus = {
-			knightmare_mass_prod = {
-				instant = yes
-				attack_factor = 0.15
-				org_factor = 0.15
-			}
+			army_morale_factor = -0.10
+			army_attack_factor = 0.15
+			conscription = 0.01
 		   }
 		}
 
@@ -666,7 +699,6 @@ EUR_The_okhotsk_settlement_2 = {
 	   removal_cost = -1
 
 	modifier = {
-		consumer_goods_factor = 0.15
 	   }
 	   equipment_bonus = {
 		cold_war_tank_equip = {
@@ -675,8 +707,8 @@ EUR_The_okhotsk_settlement_2 = {
 				}	
 			}
 		research_bonus = {
-			MBT_armour = -0.75
-			knightmare_all = -0.75
+			MBT_armour = -0.40
+			knightmare_all = -0.40
 		}
 	}
 	
@@ -698,7 +730,7 @@ EUR_Establish_The_Free_Port = {
    }
 }
 
-EUR_Establish_the_Okhotsk_Drydocks = {
+EUR_Establish_The_Free_Port_2 = {
 		
 	allowed = {
 	   always = yes
@@ -713,7 +745,7 @@ EUR_Establish_the_Okhotsk_Drydocks = {
    modifier = {
 	repair_speed_factor = 0.15
 	refit_speed = 0.15
-	consumer_goods_factor = -0.02
+	consumer_goods_factor = -0.05
    }
 }
 
@@ -747,11 +779,30 @@ EUR_Establishing_our_Brand = {
    removal_cost = -1
    
    modifier = {
-	stability_weekly = 0.025
+	stability_weekly = 0.005
 	consumer_goods_factor = -0.02
    }
 }
 
+EUR_Economic_Stability_Almost_Secured = {
+		
+	allowed = {
+	   always = yes
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+		production_factory_max_efficiency_factor = -0.10
+		industrial_capacity_factory = -0.10
+		local_resources_factor = -0.05
+		consumer_goods_factor = 0.05
+   }
+}
 
 EUR_Economic_Stability_Secured = {
 		
@@ -812,23 +863,10 @@ EUR_A_New_Russian_Army_Idea = {
    removal_cost = -1
    
    modifier = {
-	conscription = 0.02
+	conscription = 0.015
+	army_attack_factor = 0.10
+	army_defence_factor = 0.10
    }
-   targeted_modifier = {
-	tag = SRU
-	attack_bonus_against = 0.10
-	defense_bonus_against = 0.10
-}
-targeted_modifier = {
-	tag = RUS
-	attack_bonus_against = 0.10
-	defense_bonus_against = 0.10
-}
-targeted_modifier = {
-	tag = MRU
-	attack_bonus_against = 0.10
-	defense_bonus_against = 0.10
-}
 
    
 }
@@ -845,7 +883,9 @@ EUR_Sakuradite_Extraction_Costs = {
    removal_cost = -1
    
    modifier = {
-	consumer_goods_factor = 0.15
+	consumer_goods_factor = 0.10
+	industrial_capacity_factory = -0.05
+
    }
    
 }
@@ -958,6 +998,8 @@ EUR_Focusing_on_knightmares_production = {
 	   
 	   modifier = {
 		air_close_air_support_attack_factor = 0.15
+		air_attack_factor 0.10
+		air_accidents_factor = -0.25
 	}
 			
 	}  
