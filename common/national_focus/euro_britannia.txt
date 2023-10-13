@@ -784,9 +784,7 @@
 		}
 	
 		completion_reward = {
-		country_event = EUR.25
-		add_war_support = -0.10
-		
+		add_political_power = 100
 		#to do: starts favor mechanic still to be done.
 		}
 	}
@@ -813,7 +811,6 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.26
 			set_country_flag = Industry_Schnizel_3
 			add_political_power = 100
 		}
@@ -888,7 +885,6 @@
 		}
 	
 		completion_reward = {
-			add_stability = 0.15
 			574 = {
 				add_extra_state_shared_building_slots = 6
 				add_manpower = 178600
@@ -958,7 +954,6 @@
 		}
 	
 		completion_reward = {
-			add_stability = 0.05
 			574 = {
 				add_extra_state_shared_building_slots = 14
 				add_building_construction = {
@@ -996,14 +991,6 @@
 		}
 	
 		completion_reward = {
-			574 = {
-				add_building_construction = {
-                  type = anti_air_building
-                 level = 4
-                 instant_build = yes
-              }
-
-			}	
 		574 = {
 			set_building_level = {
 				type = bunker
@@ -1103,13 +1090,8 @@
 	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = train_equipment
-				amount = 100
-				producer = BRT
-			}
-			add_equipment_to_stockpile = {
 				type = transport_plane_equipment_1
-				amount = 260
+				amount = 160
 				producer = BRT
 			}
 		}
@@ -1140,11 +1122,9 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.30
 			set_country_flag = Industry_Schnizel_2
-			add_political_power = 175
-			custom_effect_tooltip = BRT_EUR_Resources_tt
-			#todo: in the future will start a trade system to generate favor with
+			add_political_power = 100
+			#to do: in the future will start a trade system to generate favor with
 			#with the empire.
 		}
 	}
@@ -1182,8 +1162,23 @@
 			}
 			add_resource = {
 				type = sakuradite
+				amount = 4
+				state = 822
+			}
+			add_resource = {
+				type = sakuradite
 				amount = 10
 				state = 644
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 863
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 574
 			}
 			add_resource = {
 				type = steel
@@ -1219,17 +1214,20 @@
 		}
 	
 		completion_reward = {
-			add_stability = -0.05
-			add_manpower = -5000
 			add_resource = {
 				type = aluminium
-				amount = 16
+				amount = 8
 				state = 574
 			}
 			add_resource = {
 				type = aluminium
 				amount = 10
 				state = 644
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 722
 			}
 			add_resource = {
 				type = tungsten
@@ -1263,12 +1261,8 @@
 		}
 	
 		completion_reward = {
-			add_opinion_modifier = {
-                    target = BRT
-                    modifier = brittanian_support
-            }
-			add_offsite_building = { type = arms_factory level = 2 }
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = industrial_complex level = 4 }
 		}
 	}
 	focus = {
@@ -1293,11 +1287,7 @@
 		}
 	
 		completion_reward = {
-			swap_ideas = {
-               remove_idea = EUR_underdeveloped_economy
-               add_idea = EUR_Economic_Stability_Almost_Secured
-            }
-			add_offsite_building = { type = industrial_complex level = 4 }
+			add_offsite_building = { type = industrial_complex level = 6 }
 		}
 	}
 	focus = {
@@ -1402,8 +1392,6 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.31
-			add_stability = -0.07
 			add_tech_bonus = {
 				bonus = 2
 				uses = 2
@@ -1438,28 +1426,10 @@
 		}
 	
 		completion_reward = {
-			hidden_effect = {
-				country_event = EUR.27
-			}
-			if = {
-                  limit = {
-                   has_idea = EUR_underdeveloped_economy
-               }   
-                swap_ideas = {
+			swap_ideas = {
 				remove_idea = EUR_underdeveloped_economy
 				add_idea = EUR_Economic_Stability_Secured
-		        }
-            }
-
-			if = {
-                  limit = {
-                   has_idea = EUR_Economic_Stability_Almost_Secured
-               }   
-                swap_ideas = {
-				remove_idea = EUR_Economic_Stability_Almost_Secured
-				add_idea = EUR_Economic_Stability_Secured
-		        }
-            }
+			}
 		}
 	}
 #############################################By Emperor's order Restoring discipline in the army
@@ -1484,14 +1454,12 @@
 			factor = 10
 		}
 	
-	
 		completion_reward = {
-		add_ideas = EUR_shortage_of_trusted_officers
-		add_command_power = 50
-		swap_ideas = {
+			add_command_power = 50
+		    swap_ideas = {
                remove_idea = EUR_national_militia_2
                add_idea = EUR_national_militia_3
-         }
+           }
 		}
 	}
 	focus = {
@@ -1516,37 +1484,25 @@
 		}
 	
 		completion_reward = {
-			recruit_character = EUR_Ivan_Solovev
-			recruit_character = EUR_Isai_Kiselev
-			recruit_character = EUR_Gogol_Bogdanov
-			custom_effect_tooltip = EUR_Manfredi_promotion_tt
-			hidden_effect = {
-				EUR_Michele_Manfredi = {
-				add_trait = { trait = panzer_expert }
-				add_trait = { trait = winter_expert	}
-				promote_leader = yes
-				}
 			add_advisor_role = {
-		    character = EUR_Michele_Manfredi
-		    active = yes
-			advisor={	
-			slot = high_command
-			idea_token = EUR_Michele_Manfredi_idea
-			ledger = army
-			allowed = {
-				original_tag = EUR
-			}
-			traits = {
-				knightmare_proponent_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
+				character = EUR_Michele_Manfredi
+				active = yes
+				advisor={	
+				slot = high_command
+				idea_token = EUR_Michele_Manfredi_idea
+				ledger = army
+				allowed = {
+					original_tag = EUR
+				}
+				traits = {
+					knightmare_proponent_2
+				}
 			}
 		}
-	       }
-		   }
-			
+		EUR_Michele_Manfredi = {
+			add_trait = { trait = panzer_expert }
+			add_trait = { trait = winter_expert	}
+			promote_leader = yes}
 		}
 	}
 
@@ -1574,8 +1530,7 @@
 		}
 	
 		completion_reward = {
-		country_event = EUR.19
-		remove_ideas = EUR_shortage_of_trusted_officers
+			remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
 		recruit_character = EUR_Albert_Lancaster
 		recruit_character = EUR_Elliot_Collins
@@ -1608,7 +1563,6 @@
 		}
 	
 		completion_reward = {
-			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 3
@@ -1644,7 +1598,7 @@
 				uses = 1
 				category = signal_company_tech
 			}
-			remove_ideas = EUR_national_militia_3
+			remove_ideas = EUR_discontent_in_the_army_ranks
 		}
 	}
 	focus = {
@@ -1670,16 +1624,9 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.23
-			add_war_support = 0.05
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
-				amount = 500
-				producer = BRT
-			}
-			add_equipment_to_stockpile = {
-				type = CAS_equipment_1
-				amount = 300
+				type = fighter
+				amount = 100
 				producer = BRT
 			}
 		}
@@ -1731,39 +1678,36 @@
 			factor = 10
 		}
 		completion_reward = {
-			custom_effect_tooltip = EUR_BRT_Aces_tt
-			hidden_effect = {
 			load_oob = "EUR_Britannia_Air_Aces"
-			}
 			add_ace = {
-				name = "Francis"
-				surname = "Hamilton"
-				callsign = "Eagle"
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
 				type = fighter_unique
 				is_female = yes
 			}
 			add_ace = {
-				name = "Alastair"
-				surname = "Randolph"
-				callsign = "Rednose"
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
 				type = support_good
 			}
 			add_ace = {
-				name = "Louis"
-				surname = "Archibald"
-				callsign = "Brave"
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
 				type = support_good
 			}
 			add_ace = {
-				name = "Nicholas"
-				surname = "Albrecht"
-				callsign = "Bloody"
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
 				type = support_good
 			}
 			add_ace = {
-				name = "Edward"
-				surname = "Rothschild"
-				callsign = "Jester"
+				name = "ACE"
+				surname = "ACE"
+				callsign = "ACE"
 				type = support_good
 				is_female = yes
 			}
@@ -1825,12 +1769,9 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.24
-			add_war_support = 0.05
-			air_experience = 50
-			custom_effect_tooltip = EUR_BRT_Air_Chief
-		
-		}
+			activate_advisor = EUR_Duncan_Holt
+			}
+			# to do: Cas advisor 10% ground attack factor 15% all weather
 		}
 	
 	focus = {
@@ -1854,8 +1795,8 @@
 		ai_will_do = {
 			factor = 10
 		}
+	
 		completion_reward = {
-			add_war_support = 0.08
 			set_technology = {
 				knightmare_frame_1 = 1
 				factspheres = 1
@@ -1887,16 +1828,11 @@
 		}
 	
 		completion_reward = {
-			hidden_effect = {
-				load_oob = "EUR_Order_Of_Michael"
-			}	
-			country_event = EUR.20
+			load_oob = "EUR_Order_Of_Michael"
 			EUR_Michele_Manfredi = {
-			add_trait = {
-                   slot = corps_commander
-                   trait = Holy_Knight
-             }
+			add_trait = { trait = Holy_Knight }
 			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
 		
 	}
@@ -1922,9 +1858,7 @@
 		}
 	
 		completion_reward = {
-			army_experience = 50
-			add_war_support = 0.05
-			add_command_power = 20
+			army_experience = 100
 		}
 	}
 	focus = {
@@ -1952,12 +1886,12 @@
 		completion_reward = {
 			add_resource = {
 				type = sakuradite
-				amount = 9
+				amount = 19
 				state = 917
 			}
 			add_resource = {
 				type = sakuradite
-				amount = 5
+				amount = 19
 				state = 822
 			}
 			add_timed_idea = {
@@ -1990,18 +1924,6 @@
 		}
 	
 		completion_reward = {
-			add_political_power = -20
-			diplomatic_relation = {
-                 country = A11
-                 relation = docking_rights
-                 active = yes
-               }
-			add_resource = {
-				type = steel
-				amount = 20
-				state = 562
-			}
-			
 			#to do: update during the economic update.
 		}
 	}
@@ -2032,7 +1954,6 @@
 		}
 	
 		completion_reward = {
-			add_stability = -0.05
 			swap_ideas = {
 				remove_idea = EUR_national_militia_3
 				add_idea = EUR_national_militia_4
@@ -2066,7 +1987,7 @@
 			add_manpower = 76000
 			add_ideas = EUR_Mobilize_more_people
 			add_stability = -0.10
-			add_war_support = 0.10
+			add_war_support = 0.15
 		}
 	}
 	focus = {
@@ -2092,7 +2013,6 @@
 	
 		completion_reward = {
 			army_experience = 50
-			add_war_support = -0.07
 			add_manpower = -15000
 			remove_ideas = EUR_national_militia_4
 		}
@@ -2147,11 +2067,7 @@
 		}
 	
 		completion_reward = {
-						swap_ideas = {
-               remove_idea = EUR_Mobilize_more_people
-               add_idea = EUR_Modern_Doctrine
-               }
-
+			add_ideas = EUR_Modern_Doctrine
 		}
 	}
 	focus = {
@@ -2236,10 +2152,7 @@
 		}
 	
 		completion_reward = {
-			custom_effect_tooltip = EUR_BRT_Test_Divisions_tt
-			hidden_effect = {
 			load_oob = "EUR_Testing_Divisions_Equipment"
-		    }
 		}
 	}
 	focus = {
@@ -2266,12 +2179,8 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.21
-			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
-			hidden_effect = {
 			load_oob = "EUR_second_knightmare_aid"
-			}
-				# to do: what type of advisor?
+			# to do: what type of advisor?
 		}
 	}
 #####################################In memory of Russian Empire Attract investment from British nobles
@@ -2323,9 +2232,7 @@
 		}
 	
 		completion_reward = {
-			add_political_power = 75
-			add_stability = -0.07
-			country_event = EUR.22
+			add_political_power = 100
 			set_country_flag = Industry_Schnizel_1
 		}
 	}
@@ -2356,7 +2263,7 @@
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = 	dockyard
-					level = 4
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -2429,7 +2336,6 @@
 		}
 	
 		completion_reward = {
-							
 			863 = {
 				add_extra_state_shared_building_slots = 4
 				add_manpower = 225000
@@ -2469,10 +2375,19 @@
 		}
 	
 		completion_reward = {
-			
 			add_resource = {
 				type = oil
 				amount = 10
+				state = 822
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 574
+			}
+			add_resource = {
+				type = steel
+				amount = 8
 				state = 822
 			}
 			add_resource = {
@@ -2510,7 +2425,6 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.28
 			add_offsite_building = { type = arms_factory level = 3 }
 			add_offsite_building = { type = industrial_complex level = 4 }
 		}
@@ -2539,15 +2453,14 @@
 	
 		completion_reward = {
 			BRT = {country_event = BRT.67}
-			add_political_power = -50
-			add_offsite_building = { type = arms_factory level = 5 }
-			diplomatic_relation = {
-                 country = BRT
-                 relation = docking_rights
-                 active = yes
-             }
-
-
+			863 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = 	dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2572,11 +2485,7 @@
 		}
 	
 		completion_reward = {
-						country_event = EUR.29
-			swap_ideas = {
-                 remove_idea = EUR_Establish_The_Free_Port
-                 add_idea = EUR_Establish_The_Free_Port_2
-               } 
+			add_ideas = EUR_Establish_the_Okhotsk_Drydocks
 			562 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2613,12 +2522,8 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.30
+			add_political_power = 100
 			set_country_flag = Industry_Schnizel_2
-			add_political_power = 175
-			custom_effect_tooltip = BRT_EUR_Resources_tt
-			#todo: in the future will start a trade system to generate favor with
-			#with the empire.
 		}
 	}
 	focus = {
@@ -2642,7 +2547,7 @@
 			factor = 10
 		}
 	
-			completion_reward = {
+		completion_reward = {
 			add_resource = {
 				type = sakuradite
 				amount = 12
@@ -2655,8 +2560,23 @@
 			}
 			add_resource = {
 				type = sakuradite
+				amount = 4
+				state = 822
+			}
+			add_resource = {
+				type = sakuradite
 				amount = 10
 				state = 644
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 863
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 574
 			}
 			add_resource = {
 				type = steel
@@ -2692,17 +2612,20 @@
 		}
 	
 		completion_reward = {
-			add_stability = -0.05
-			add_manpower = -5000
 			add_resource = {
 				type = aluminium
-				amount = 16
+				amount = 8
 				state = 574
 			}
 			add_resource = {
 				type = aluminium
 				amount = 10
 				state = 644
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 722
 			}
 			add_resource = {
 				type = tungsten
@@ -2736,12 +2659,8 @@
 		}
 	
 		completion_reward = {
-			add_opinion_modifier = {
-                    target = BRT
-                    modifier = brittanian_support
-            }
-			add_offsite_building = { type = arms_factory level = 2 }
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = industrial_complex level = 4 }
 		}
 	}
 	focus = {
@@ -2766,11 +2685,7 @@
 		}
 	
 		completion_reward = {
-			swap_ideas = {
-               remove_idea = EUR_underdeveloped_economy
-               add_idea = EUR_Economic_Stability_Almost_Secured
-            }
-			add_offsite_building = { type = industrial_complex level = 4 }
+			add_offsite_building = { type = industrial_complex level = 6 }
 		}
 	}
 	focus = {
@@ -2802,21 +2717,20 @@
 			}
 			add_equipment_to_stockpile ={
 				type = support_equipment
-				amount = 600
+				amount = 6000
 				producer = BRT
 			}
 			add_equipment_to_stockpile ={
 				type = artillery_equipment
-				amount = 250
+				amount = 6000
 				producer = BRT
 			}
 			add_equipment_to_stockpile ={
 				type = motorized_equipment
-				amount = 200
+				amount = 6000
 				producer = BRT
 			}
 			add_ideas = EUR_Establishing_our_Brand
-			#to do: in the future add a lot of favor
 		}
 	}
 	focus = {
@@ -2839,7 +2753,6 @@
 		ai_will_do = {
 			factor = 10
 		}
-	
 	
 		completion_reward = {
 			add_resource = {
@@ -2876,8 +2789,6 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.31
-			add_stability = -0.07
 			add_tech_bonus = {
 				bonus = 2
 				uses = 2
@@ -2912,9 +2823,6 @@
 		}
 	
 		completion_reward = {
-			hidden_effect = {
-				country_event = EUR.27
-			}
 			swap_ideas = {
 				remove_idea = EUR_underdeveloped_economy
 				add_idea = EUR_Economic_Stability_Secured
@@ -2979,12 +2887,6 @@
 			recruit_character = EUR_Isai_Kiselev
 			recruit_character = EUR_Gogol_Bogdanov
 			custom_effect_tooltip = EUR_Manfredi_promotion_tt
-			hidden_effect = {
-				EUR_Michele_Manfredi = {
-				add_trait = { trait = panzer_expert }
-				add_trait = { trait = winter_expert	}
-				promote_leader = yes
-				}
 			add_advisor_role = {
 		    character = EUR_Michele_Manfredi
 		    active = yes
@@ -3004,8 +2906,11 @@
 			}
 		}
 	       }
-		   }
 			
+			EUR_Michele_Manfredi = {
+				add_trait = { trait = panzer_expert }
+				add_trait = { trait = winter_expert	}
+				promote_leader = yes}
 		}
 	}
 	focus = {
@@ -3332,7 +3237,6 @@
 		}
 	
 		completion_reward = {
-		country_event = EUR.19
 		remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
 		recruit_character = EUR_Albert_Lancaster
@@ -3341,6 +3245,7 @@
 		recruit_character = EUR_Elias_Anson
 		recruit_character = EUR_Edgar_Bailey
 		}
+		# to do: add gfx for some generals, see character files.
 		# to do: add 0.5 support for 40 days when the support system is in place. 
 	}
 	focus = {
@@ -3365,7 +3270,6 @@
 		}
 	
 		completion_reward = {
-			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 3
@@ -3426,7 +3330,6 @@
 		}
 	
 		completion_reward = {
-			add_manpower = 2000
 			add_ideas = EUR_Cheap_and_fast_firepower
 		}
 	}
@@ -3452,11 +3355,7 @@
 		}
 	
 		completion_reward = {
-			add_war_support = 0.05
-			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
-			hidden_effect = {
 			load_oob = "EUR_Veteran_Brittanian_Armor_Division"
-		    }
 		}
 		# to do: we should change the name of this focus correct? Note from fris: I have modified the template a bit because 7 tank battalions won't do much.
 	}
@@ -3482,11 +3381,7 @@
 		}
 	
 		completion_reward = {
-			add_war_support = 0.05
-			custom_effect_tooltip = EUR_BRT_Mech_Aid_tt
-			hidden_effect = {
 			load_oob = "EUR_Veteran_Mechanised"
-			}
 		}
 		# to do: we should change the name of this focus correct?
 	}
@@ -3568,11 +3463,7 @@
 		}
 	
 		completion_reward = {
-			add_war_support = 0.04
-			custom_effect_tooltip = EUR_BRT_Mot_Aid_tt
-			hidden_effect = {
 			load_oob = "EUR_Brittaninan_Veteran_Motorized"
-		    }
 		}
 	}
 	
@@ -3599,7 +3490,6 @@
 		}
 	
 		completion_reward = {
-			add_war_support = 0.08
 			set_technology = {
 				knightmare_frame_1 = 1
 				factspheres = 1
@@ -3631,16 +3521,11 @@
 		}
 	
 		completion_reward = {
-			hidden_effect = {
-				load_oob = "EUR_Order_Of_Michael"
-			}	
-			country_event = EUR.20
+			load_oob = "EUR_Order_Of_Michael"
 			EUR_Michele_Manfredi = {
-			add_trait = {
-                   slot = corps_commander
-                   trait = Holy_Knight
-             }
+			add_trait = { trait = Holy_Knight }
 			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
 	}
 	focus = {
@@ -3665,9 +3550,7 @@
 		}
 	
 		completion_reward = {
-			army_experience = 50
-			add_war_support = 0.05
-			add_command_power = 20
+			army_experience = 100
 		}
 	}
 	focus = {
@@ -3695,12 +3578,12 @@
 		completion_reward = {
 			add_resource = {
 				type = sakuradite
-				amount = 9
+				amount = 19
 				state = 917
 			}
 			add_resource = {
 				type = sakuradite
-				amount = 5
+				amount = 19
 				state = 822
 			}
 			add_timed_idea = {
@@ -3733,18 +3616,6 @@
 		}
 	
 		completion_reward = {
-			add_political_power = -20
-			diplomatic_relation = {
-                 country = A11
-                 relation = docking_rights
-                 active = yes
-               }
-			add_resource = {
-				type = steel
-				amount = 20
-				state = 562
-			}
-			
 			#to do: update during the economic update.
 		}
 	}
@@ -3771,11 +3642,7 @@
 		}
 	
 		completion_reward = {
-			country_event = EUR.21
-			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
-			hidden_effect = {
 			load_oob = "EUR_second_knightmare_aid"
-			}
 				# to do: what type of advisor?
 		}
 	}
