@@ -827,7 +827,7 @@ focus = {
 			# to do: ask rein about the supply hubs
 	}
 				focus = {
-			id = SRU_Rapid_Industrialisation
+			id = SRU_Siberian_Industrial_Revolution
 			icon = GFX_SRU_Rapid_Industrialisation
 			cost = 2
 			x = 2
@@ -888,7 +888,7 @@ focus = {
 			x = 0
 			y = 1
 			prerequisite = { focus = SRU_National_Collectivist_Society }
-			prerequisite = { focus = SRU_Rapid_Industrialisation }
+			prerequisite = { focus = SRU_Siberian_Industrial_Revolution }
 			prerequisite = { focus = SRU_Form_the_RJC }
 			relative_position_id = SRU_Form_the_RJC
 			available = {
@@ -911,7 +911,7 @@ focus = {
 			}
 	}
 				focus = {
-			id = SRU_Deal_With_The_Unions
+			id = SRU_Deal_With_Mundane_Politics
 			icon = GFX_SRU_Deal_With_The_Unions
 			cost = 5
 			x = -9
@@ -940,8 +940,8 @@ focus = {
 			cost = 0
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_Deal_With_The_Unions }
-			relative_position_id = SRU_Deal_With_The_Unions
+			prerequisite = { focus = SRU_Deal_With_Mundane_Politics }
+			relative_position_id = SRU_Deal_With_Mundane_Politics
 			mutually_exclusive = { focus = SRU_Mend_Internal_Divisions }
 			available = {
                            country_exists = SRU
@@ -1124,7 +1124,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Death_Incarnate
+				id = SRU_Cult_Of_Supreme_Socialism
 				icon = GFX_SRU_Death_Incarnate
 				cost = 5
 				x = 0
@@ -1199,7 +1199,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Lukas_Reign
+				id = SRU_Lukas_New_Order
 				icon = GFX_SRU_Lukas_Reign
 				cost = 5
 				x = 2
@@ -1225,8 +1225,8 @@ focus = {
 				cost = 0
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_Deal_With_The_Unions }
-				relative_position_id = SRU_Deal_With_The_Unions
+				prerequisite = { focus = SRU_Deal_With_Mundane_Politics }
+				relative_position_id = SRU_Deal_With_Mundane_Politics
 				mutually_exclusive = { focus = SRU_Jacobin_All_The_Way }
 				available = {
 								country_exists = SRU 
@@ -1430,8 +1430,8 @@ focus = {
 				cost = 5
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_Lukas_Reign }
-				relative_position_id = SRU_Lukas_Reign 
+				prerequisite = { focus = SRU_Lukas_New_Order }
+				relative_position_id = SRU_Lukas_New_Order 
 				available = {
 								country_exists = SRU 
 				}
@@ -1504,6 +1504,26 @@ focus = {
 
 			}
 			focus = {
+				id = SRU_Planned_Disappearances
+				icon = GFX_SRU_Rely_On_Cheka
+				cost = 5
+				x = 0
+				y = 1
+				prerequisite = { focus = SRU_Rely_On_Cheka  }
+				relative_position_id = SRU_Rely_On_Cheka
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					
+				}
+
+			}
+			focus = {
 				id = SRU_Purge_Resistance_Fighters
 				icon = GFX_SRU_Purge_Resistance_Fighters
 				cost = 5
@@ -1528,13 +1548,13 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Contact_Agent_Tannenbaum
+				id = SRU_Web_Of_Shadows
 				icon = GFX_SRU_Contact_Agent_Tannenbaum
 				cost = 5
 				x = 0
-				y = 1
-				prerequisite = { focus = SRU_Rely_On_Cheka }
-				relative_position_id = SRU_Rely_On_Cheka
+				y = 1.5
+				prerequisite = { focus = SRU_Notify_The_CSS }
+				relative_position_id = SRU_Notify_The_CSS
 				available = {
 								country_exists = SRU 
 				}
@@ -1551,10 +1571,10 @@ focus = {
 				id = SRU_Strike_The_Leader
 				icon = GFX_SRU_Strike_The_Leader
 				cost = 5
-				x = -2
-				y = 1
-				prerequisite = { focus = SRU_Contact_Agent_Tannenbaum focus = SRU_Purge_Resistance_Fighters}
-				relative_position_id = SRU_Contact_Agent_Tannenbaum
+				x = 0
+				y = 2
+				prerequisite = { focus = SRU_Web_Of_Shadows focus = SRU_Purge_Resistance_Fighters focus = SRU_Planned_Disappearances}
+				relative_position_id = SRU_Web_Of_Shadows
 				available = {
 								country_exists = SRU 
 				}
@@ -1712,7 +1732,7 @@ focus = {
 			}
 		
 			focus = {
-				id = SRU_The_Jacobin_Army
+				id = SRU_The_Jacobin_Revolutionary_Army
 				icon = GFX_SRU_The_Jacobin_Army
 				cost = 3
 				x = 0
@@ -1746,8 +1766,8 @@ focus = {
 				cost = 1
 				x = 2
 				y = 1
-				prerequisite = { focus = SRU_The_Jacobin_Army }
-				relative_position_id = SRU_The_Jacobin_Army
+				prerequisite = { focus = SRU_The_Jacobin_Revolutionary_Army }
+				relative_position_id = SRU_The_Jacobin_Revolutionary_Army
 				available = {
 								country_exists = SRU 
 				}
@@ -1766,9 +1786,9 @@ focus = {
 				cost = 1
 				x = -2
 				y = 1
-				prerequisite = { focus = SRU_The_Jacobin_Army }
+				prerequisite = { focus = SRU_The_Jacobin_Revolutionary_Army }
 				mutually_exclusive = { focus = SRU_Makarovs_Plan }
-				relative_position_id = SRU_The_Jacobin_Army
+				relative_position_id = SRU_The_Jacobin_Revolutionary_Army
 				available = {
 								country_exists = SRU 
 				}
@@ -1782,7 +1802,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Political_Loyalty
+				id = SRU_Absloute_Loyalty_To_Zhukov
 				icon = GFX_SRU_Political_Loyalty
 				cost = 1
 				x = 0
@@ -1807,8 +1827,8 @@ focus = {
 				cost = 2
 				x = 0
 				y = 1
-				prerequisite = { focus = SRU_Political_Loyalty }
-				relative_position_id = SRU_Political_Loyalty
+				prerequisite = { focus = SRU_Absloute_Loyalty_To_Zhukov }
+				relative_position_id = SRU_Absloute_Loyalty_To_Zhukov
 				available = {
 								country_exists = SRU 
 				}
@@ -1903,7 +1923,7 @@ focus = {
 				icon = GFX_SRU_Punch_Harder
 				cost = 2
 				x = -2
-				y = 2
+				y =1
 				prerequisite = { focus = SRU_Mechanise_The_Army }
 				relative_position_id = SRU_Mechanise_The_Army
 				available = {
@@ -1939,11 +1959,31 @@ focus = {
 
 			}
 			focus = {
+				id = SRU_An_Invincible_Army
+				icon = GFX_SRU_Red_Blitz
+				cost = 2
+				x = 0
+				y = 1
+				prerequisite = { focus = SRU_Red_Blitz }
+				relative_position_id = SRU_Red_Blitz
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					
+				}
+
+			}
+			focus = {
 				id = SRU_Bombs_Away
 				icon = GFX_SRU_Bombs_Away
 				cost = 2
 				x = 2
-				y = 2
+				y = 1
 				prerequisite = { focus = SRU_Rapid_Modernisation_Of_The_Airforce }
 				relative_position_id = SRU_Rapid_Modernisation_Of_The_Airforce
 				available = {
@@ -1959,7 +1999,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Red_Sky
+				id = SRU_Red_Thunder
 				icon = GFX_SRU_Red_Sky
 				cost = 2
 				x = 0
@@ -1979,14 +2019,33 @@ focus = {
 
 			}
 			focus = {
+				id = SRU_Crimson_Skies
+				icon = GFX_SRU_Red_Sky
+				cost = 2
+				x = 0
+				y = 1
+				prerequisite = { focus = SRU_Red_Thunder }
+				relative_position_id = SRU_Red_Thunder
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+					
+				}
+
+			}
+			focus = {
 				id = SRU_Enact_Operation_Red_Dawn
 				icon = GFX_SRU_Enact_Operation_Red_Dawn
 				cost = 3
-				x = 4
-				y = 3
-				prerequisite = { focus = SRU_Red_Blitz 
-			                   focus = SRU_Red_Sky }
-				relative_position_id = SRU_Red_Blitz
+				x = 0
+				y = 1
+				prerequisite = { focus = SRU_Strike_The_Leader }
+				relative_position_id = SRU_Strike_The_Leader
 				available = {
 								country_exists = SRU 
 				}
@@ -2189,7 +2248,7 @@ focus = {
 				icon = GFX_SRU_Implement_A_Forced_Labour_Program
 				cost = 2
 				x = 2
-				y = 1
+				y = 2
 				prerequisite = { focus = SRU_The_War_Machine
 			                   focus = SRU_The_Economic_Heart }
 				relative_position_id = SRU_The_War_Machine
