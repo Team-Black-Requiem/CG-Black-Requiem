@@ -744,7 +744,7 @@ focus = {
 }
 	###### 
 				focus = {
-			id = SRU_Coerce_The_Generals 
+			id = SRU_coerce_the_generals 
 			icon = GFX_SRU_Coerce_The_Generals
 			cost = 2
 			x = 0
@@ -780,13 +780,13 @@ focus = {
 	}
 
 	focus = {
-		id = SRU_Form_the_RJC
+		id = SRU_form_the_russian_jacobin_council
 		icon = GFX_SRU_Form_the_RJC
 		cost = 2
 		x = 0
 		y = 1
-		prerequisite = { focus = SRU_Coerce_The_Generals  }
-		relative_position_id = SRU_Coerce_The_Generals
+		prerequisite = { focus = SRU_coerce_the_generals   }
+		relative_position_id = SRU_coerce_the_generals 
 		available = {
 					   country_exists = SRU
 		}
@@ -800,13 +800,13 @@ focus = {
 }
 
 				focus = {
-			id = SRU_National_Collectivist_Society 
+			id = SRU_national_collectivist_society 
 			icon = GFX_SRU_National_Collectivist_Society
 			cost = 2
 			x = -2
 			y = 1
-			prerequisite = { focus = SRU_Coerce_The_Generals }
-			relative_position_id = SRU_Coerce_The_Generals
+			prerequisite = { focus = SRU_coerce_the_generals }
+			relative_position_id = SRU_coerce_the_generals 
 			available = {
                            country_exists = SRU
 			}
@@ -827,13 +827,13 @@ focus = {
 			# to do: ask rein about the supply hubs
 	}
 				focus = {
-			id = SRU_Siberian_Industrial_Revolution
+			id = SRU_siberian_industrial_revolution
 			icon = GFX_SRU_Rapid_Industrialisation
 			cost = 2
 			x = 2
 			y = 1
-			prerequisite = { focus = SRU_Coerce_The_Generals }
-			relative_position_id = SRU_Coerce_The_Generals
+			prerequisite = { focus = SRU_coerce_the_generals }
+			relative_position_id = SRU_coerce_the_generals 
 			available = {
                            country_exists = SRU
 			}
@@ -882,15 +882,15 @@ focus = {
 			}
 	}
 				focus = {
-			id = SRU_The_Eternal_Revolution 
+			id = SRU_the_eternal_revolution 
 			icon = GFX_SRU_Total_War
 			cost = 3
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_National_Collectivist_Society }
-			prerequisite = { focus = SRU_Siberian_Industrial_Revolution }
-			prerequisite = { focus = SRU_Form_the_RJC }
-			relative_position_id = SRU_Form_the_RJC
+			prerequisite = { focus = SRU_national_collectivist_society }
+			prerequisite = { focus = SRU_siberian_industrial_revolution }
+			prerequisite = { focus = SRU_form_the_russian_jacobin_council }
+			relative_position_id = SRU_form_the_russian_jacobin_council
 			available = {
                            country_exists = SRU
 			}
@@ -916,8 +916,8 @@ focus = {
 			cost = 5
 			x = -9
 			y = 1
-			prerequisite = { focus = SRU_The_Eternal_Revolution  }
-			relative_position_id = SRU_The_Eternal_Revolution 
+			prerequisite = { focus = SRU_the_eternal_revolution }
+			relative_position_id = SRU_the_eternal_revolution  
 			available = {
                            country_exists = SRU
 			}
@@ -1738,14 +1738,14 @@ focus = {
 				x = 0
 				y = 1
 				
-				prerequisite = { focus = SRU_The_Eternal_Revolution  if = {
+				prerequisite = { focus = SRU_the_eternal_revolution  if = {
 					has_complete_focus = SRU_The_War_Machine 
 					OR = {
 						has_completed_focus = SRU_The_Economic_Heart
 					}
 				}
 			}
-				relative_position_id = SRU_The_Eternal_Revolution 
+				relative_position_id = SRU_the_eternal_revolution
 				available = {
 								country_exists = SRU 
 				}
@@ -2081,8 +2081,8 @@ focus = {
 				cost = 3
 				x = 11
 				y = 1
-				prerequisite = { focus = SRU_The_Eternal_Revolution  }
-				relative_position_id = SRU_The_Eternal_Revolution 
+				prerequisite = { focus = SRU_the_eternal_revolution }
+				relative_position_id = SRU_the_eternal_revolution  
 				available = {
 								country_exists = SRU 
 				}
