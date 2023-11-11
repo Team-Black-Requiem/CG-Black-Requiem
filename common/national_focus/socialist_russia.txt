@@ -488,7 +488,7 @@
 	}
 
 				focus = {
-			id = SRU_Chekhovs_Gun 
+			id = SRU_chekhovs_gun 
 			icon = GFX_SRU_Chekhovs_Gun
 			cost = 1
 			x = 0
@@ -749,8 +749,8 @@ focus = {
 			cost = 2
 			x = 0
 			y = 1
-			prerequisite = { focus = SRU_Chekhovs_Gun }
-			relative_position_id = SRU_Chekhovs_Gun
+			prerequisite = { focus = SRU_chekhovs_gun }
+			relative_position_id = SRU_chekhovs_gun
 			available = {
                            country_exists = SRU
 			}
@@ -930,7 +930,7 @@ focus = {
 					ideology = BR_vanguardist
 					popularity = 0.2
 				}
-				add_stability = 0.15
+				add_stability = -0.15
 				country_event = SRU.35
 			}
 	}
@@ -1756,7 +1756,7 @@ focus = {
 				completion_reward = {
 					country_event = SRU.56
 					add_command_power = 30
-					upgrade_conscription_law = yes
+					add_war_support = 0.1
 				}
 
 			}
