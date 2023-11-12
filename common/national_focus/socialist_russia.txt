@@ -986,11 +986,15 @@ focus = {
 				}
 			
 			completion_reward = {
-				add_war_support = -0.05
+				add_stability  = -0.1
 				add_political_power = 100
 				country_event = SRU.16
+				add_popularity = {
+					ideology = BR_vanguardist
+					popularity = 0.15
+				}
 			}
-			}
+	}
 
 			focus = {
 			id = SRU_control_the_trade_unions
@@ -1008,7 +1012,7 @@ focus = {
 				}
 			
 			completion_reward = {
-				add_ideas = SRU_control_the_trade_unions
+				add_ideas = SRU_trade_unions_reined_in
 				country_event = SRU.17
 			}
 			}
@@ -1031,8 +1035,11 @@ focus = {
 					add_ideas = SRU_isolate_the_liberals
 					add_political_power = 100
 					country_event = SRU.18
+					add_popularity = {
+						ideology = BR_vanguardist
+						popularity = 0.10
 				}
-				
+			}
 			}
 			focus = {
 				id = SRU_age_of_terror
@@ -1052,8 +1059,10 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_stability = -0.1
-					add_war_support = 0.15
+					add_timed_idea = {
+						idea = SRU_opposition_purged
+						days = 90
+					}
 					country_event = SRU.19
 				}
 
@@ -1073,8 +1082,13 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
-
+				completion_reward = {
+				add_timed_idea = {
+					idea = SRU_dystopian_propaganda
+					days = 90
+				}
+				add_political_power = 200
+			}
 			}
 			focus = {
 				id = SRU_terrify_the_people
@@ -1092,8 +1106,8 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_war_support = 0.2
-					add_ideas = SRU_terrify_the_people
+					add_war_support = 0.1
+					add_ideas = SRU_red_terror
 					country_event = SRU.20
 				}
 
@@ -1114,14 +1128,13 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_stability = -0.1
-					add_political_power = 200
-					set_political_party = {
+					add_stability = -0.2
+					add_political_power = 100
+					add_popularity = {
 						ideology = BR_vanguardist
-						popularity = 100
-					}
+						popularity = 0.20
 				}
-
+			}
 			}
 			focus = {
 				id = SRU_cult_of_supreme_socialism
@@ -1145,6 +1158,7 @@ focus = {
 							trait = Political_visionary
 						}
 					}
+					add_war_support = 0.1
 				}
 
 			}
@@ -1164,7 +1178,8 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_stability = 0.25
+					add_stability = 0.15
+					add_ideas = SRU_cheka_lists
 					country_event = SRU.22
 				}
 
@@ -1195,6 +1210,9 @@ focus = {
 						slot = head_of_government
 					}
 					country_event = SRU.23
+					570 = {
+						add_manpower = -300
+					}
 				}
 
 			}
@@ -1216,6 +1234,7 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.24
+					add_ideas = SRU_luka_new_order
 				}
 
 			}
@@ -1239,9 +1258,11 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
-
+				completion_reward = {
+					add_political_power = 50
+					add_stability = 0.15
 			}
+		}
 			focus = {
 				id = SRU_concessions_to_the_peoples_congress
 				icon = GFX_SRU_Concessions_To_The_Peoples_Congress
@@ -1257,8 +1278,12 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
-
+				completion_reward = {
+					add_timed_idea = {
+						idea = SRU_concessions_to_congress
+						days = 60
+					}
+				}
 			}
 			focus = {
 				id = SRU_the_crossroads_of_reform
@@ -1275,7 +1300,12 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_timed_idea = {
+						idea = SRU_intraparty_cooperation
+						days = 90
+					}
+				}
 
 			}
 			focus = {
@@ -1294,7 +1324,13 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_stability = 0.1
+					add_popularity = {
+						ideology = BR_vanguardist
+						popularity = 0.1
+					}
+				}
 
 			}
 			focus = {
@@ -1313,7 +1349,14 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_popularity = {
+						ideology = BR_progressive_drift
+						popularity = 0.15
+					}
+					add_political_power = -50
+					add_stability = 0.15
+				}
 
 			}
 			focus = {
@@ -1331,7 +1374,16 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_timed_idea = {
+						idea = SRU_backed_out
+						days = 90
+					}
+					add_popularity = {
+						ideology = BR_vanguardist
+						popularity = 0.15
+					}
+				}
 
 			}
 			focus = {
@@ -1349,7 +1401,24 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_3
+						amount = 10000
+					}
+					add_equipment_to_stockpile = {
+						type = modern_artillery_2
+						amount = 750
+					}
+					add_equipment_to_stockpile = {
+						type = mbt_2
+						amount = 600
+					}
+					add_opinion_modifier = {
+						target = CHI
+						modifier = SOV_cordial_relations_developed_by_soviet_diplomat
+					}
+				}
 
 			}
 			focus = {
@@ -1367,7 +1436,14 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_popularity = {
+						ideology = BR_progressive_drift
+						popularity = 0.1
+					}
+					add_war_support = 0.05
+					add_stability = 0.1
+				}
 
 			}
 			focus = {
@@ -1385,7 +1461,14 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_popularity = {
+						ideology = BR_progressive_drift
+						popularity = 0.1
+					}
+					add_stability = 0.1
+					add_political_power = 100
+				}
 
 			}
 			focus = {
@@ -1403,7 +1486,11 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_war_support = 0.15
+					add_manpower = 20000
+					add_ideas = SRU_great_russian_lie
+				}
 
 			}
 			focus = {
@@ -1421,7 +1508,10 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					upgrade_economy_law = yes
+					add_ideas = SRU_war_measures_act
+				}
 
 			}
 			focus = {
@@ -1439,7 +1529,11 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					remove_ideas = Democratic_Dissonance
+					add_stability = 0.1
+					add_command_power = 20
+				}
 
 			}
 			focus = {
@@ -1459,7 +1553,12 @@ focus = {
 				
 				completion_reward = {
 					add_stability = 0.15
+					add_political_power = 200
+					add_popularity = {
+						ideology = BR_vanguardist
+						popularity = 0.15
 				}
+			}
 
 			}
 
@@ -1478,7 +1577,10 @@ focus = {
 						factor = 100 
 					}
 				
-				completion_reward = {}
+				completion_reward = {
+					add_political_power = 200
+					add_stability = 0.2
+				}
 
 			}
 			focus = {
@@ -2087,7 +2189,7 @@ focus = {
 						}
 					}
 					add_timed_idea = {
-						idea = SRU_Enact_Operation_Red_Dawn
+						idea = SRU_operation_red_awakening
 						days = 120
 					}
 					# Do decisions for Operation Red Dawn later
