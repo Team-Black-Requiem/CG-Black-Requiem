@@ -745,7 +745,7 @@ focus = {
 	###### 
 				focus = {
 			id = SRU_coerce_the_generals 
-			icon = GFX_SRU_Coerce_The_Generals
+			icon = GFX_SRU_promote_commissars
 			cost = 2
 			x = 0
 			y = 1
@@ -781,7 +781,7 @@ focus = {
 
 	focus = {
 		id = SRU_form_the_russian_jacobin_council
-		icon = GFX_SRU_Form_the_RJC
+		icon = GFX_SRU_politburo
 		cost = 2
 		x = 0
 		y = 1
@@ -801,7 +801,7 @@ focus = {
 
 				focus = {
 			id = SRU_national_collectivist_society 
-			icon = GFX_SRU_National_Collectivist_Society
+			icon = GFX_SRU_organize_the_soviets
 			cost = 2
 			x = -2
 			y = 1
@@ -2016,13 +2016,34 @@ focus = {
 
 			}
 			focus = {
+				id = SRU_revolutionary_zealotry
+				icon = GFX_SRU_dawn_red_sun
+				cost = 2
+				x = -2
+				y = 1
+				prerequisite = { focus = SRU_an_independent_military
+			                   Focus = SRU_absloute_loyalty_to_zhukov }
+				relative_position_id = SRU_absloute_loyalty_to_zhukov
+				available = {
+								country_exists = SRU 
+				}
+				ai_will_do = {
+						factor = 100 
+					}
+				
+				completion_reward = {
+				add_ideas = SRU_revolutionary_zealotry
+				}
+			}
+			focus = {
 				id = SRU_anti_knightmare_tanks
 				icon = GFX_SRU_AK_Tanks
 				cost = 2
 				x = 2
 				y = 1
 				prerequisite = { focus = SRU_mechanise_the_army
-			                   Focus = SRU_rapid_modernisation_of_the_airforce }
+			                   focus = SRU_rapid_modernisation_of_the_airforce
+							focus = SRU_revolutionary_zealotry }
 				relative_position_id = SRU_mechanise_the_army
 				available = {
 								country_exists = SRU 
@@ -2037,7 +2058,6 @@ focus = {
 					}
 					load_oob = SRU_SUPERTANKS
 				}
-
 			}
 			focus = {
 				id = SRU_punch_harder
@@ -2081,7 +2101,7 @@ focus = {
 			}
 			focus = {
 				id = SRU_an_invincible_army
-				icon = GFX_SRU_Red_Blitz
+				icon = GFX_SRU_load_up_troops
 				cost = 2
 				x = 0
 				y = 1
@@ -2141,7 +2161,7 @@ focus = {
 			}
 			focus = {
 				id = SRU_crimson_skies
-				icon = GFX_SRU_Red_Sky
+				icon = GFX_SRU_red_october
 				cost = 2
 				x = 0
 				y = 1
@@ -2489,7 +2509,7 @@ focus = {
 			}
 			focus = {
 				id = SRU_international_brigades
-				icon = GFX_SRU_New_Life_Initiative
+				icon = GFX_SRU_more_militias
 				cost = 2
 				x = 0
 				y = 1
@@ -2571,7 +2591,7 @@ focus = {
 			}
 			focus = {
 				id = SRU_zaytsevist_architecture
-				icon = GFX_SRU_Zaytsevist_Architecture
+				icon = GFX_SRU_New_Life_Initiative
 				cost = 2
 				x = 0
 				y = 1
