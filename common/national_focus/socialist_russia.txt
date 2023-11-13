@@ -1403,16 +1403,16 @@ focus = {
 				
 				completion_reward = {
 					add_equipment_to_stockpile = {
-						type = infantry_equipment_3
+						type = infantry_equipment
 						amount = 10000
 					}
 					add_equipment_to_stockpile = {
-						type = modern_artillery_2
-						amount = 750
+						type = MBT_armour
+						amount = 600
 					}
 					add_equipment_to_stockpile = {
-						type = mbt_2
-						amount = 600
+						type = cat_modern_artillery
+						amount = 800
 					}
 					add_opinion_modifier = {
 						target = CHI
@@ -1600,6 +1600,7 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.58
+					create_intelligence_agency = yes
 				}
 
 			}
@@ -1625,7 +1626,7 @@ focus = {
 			}
 			focus = {
 				id = SRU_planned_disappearances
-				icon = GFX_SRU_Rely_On_Cheka
+				icon = GFX_SRU_Terrify_The_People
 				cost = 5
 				x = 0
 				y = 1
@@ -1639,7 +1640,15 @@ focus = {
 					}
 				
 				completion_reward = {
-					
+					570 = {
+						add_manpower = -2000
+					}
+					571 = {
+						add_manpower = -1500
+					}
+					572 = {
+						add_manpower = -1000
+					}
 				}
 
 			}
@@ -1663,7 +1672,7 @@ focus = {
 						idea = SRU_Purge_Resistance_Fighters
 						days = 180
 					}
-					add_stability = 0.05
+					add_stability = 0.1
 				}
 
 			}
@@ -1684,6 +1693,7 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.62
+					upgrade_intelligence_agency = yes
 				}
 
 			}
@@ -2010,7 +2020,7 @@ focus = {
 					}
 					add_equipment_to_stockpile = {
 						type = motorized_equipment
-						amount = 300
+						amount = 800
 					}
 				}
 
@@ -2136,6 +2146,14 @@ focus = {
 				
 				completion_reward = {
 					# Effects after completing SRU_Enact_Operation_Red_Dawn
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_2
+						amount = 300
+					}
+					add_equipment_to_stockpile = {
+						type = jet_tac_bomber_equipment_2
+						amount = 200
+					}
 				}
 
 			}
@@ -2156,6 +2174,24 @@ focus = {
 				
 				completion_reward = {
 					# Effects after completing SRU_Enact_Operation_Red_Dawn
+					set_technology = {
+						paratroopers = 2
+						trans1 = 1
+					}
+					add_equipment_to_stockpile = {
+						type = transport_plane_equipment_1
+						amount = 400
+					}
+					division_template = {
+						name = paratroopers
+						priority = 1
+						paratroopers = { x = 0 y = 0 }
+						paratroopers = { x = 0 y = 1 }
+						paratroopers = { x = 0 y = 2 }
+						paratroopers = { x = 0 y = 3 }
+						paratroopers = { x = 0 y = 4 }
+						paratroopers = { x = 1 y = 5 }
+					}
 				}
 
 			}
