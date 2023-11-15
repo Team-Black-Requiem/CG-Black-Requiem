@@ -50,8 +50,6 @@ country_event = {
 	desc = MRU.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	
 	
 	option = {
 		name = MRU.4.a
@@ -61,14 +59,7 @@ country_event = {
 		}
 		
     } 
-	option = {
-		name = MRU.4.b
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }	
+
 }
 country_event = {  
 	id = MRU.5
@@ -76,8 +67,6 @@ country_event = {
 	desc = MRU.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	
 	
 	option = {
 		name = MRU.5.a
@@ -99,16 +88,6 @@ country_event = {
 
 	option = {
 		name = MRU.6.a
-		add_ideas = MRU_Military_Bonds
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-
-	option = {
-		name = MRU.6.b
-		add_ideas  = MRU_Give_To_The_Tsar_As_Needed
 		ai_chance = {
 			factor = 100
 		}
@@ -123,22 +102,11 @@ country_event = {
 	desc = MRU.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 14
-	}
 	option = {
 		name = MRU.7.a
 		set_country_flag = Tzarist
-
-		ai_chance = {
-			factor = 100
-		}
-	}	
-	option = {
-		name = MRU.7.b
-		set_country_flag = Military_Junta
-
+		remove_ideas = Right-Wing_Paramilitaries
+		add_ideas = Paramilitary_Revolt
 		ai_chance = {
 			factor = 100
 		}
@@ -192,23 +160,6 @@ country_event = {
 
 	option = {
 		name = MRU.10.a
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }
-	option = {
-		name = MRU.10.b
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }
-    
-	option = {
-		name = MRU.10.c
 		
 		ai_chance = {
 			factor = 100
