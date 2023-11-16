@@ -388,15 +388,17 @@ focus = {
 	y = 1
 	available = {
 		country_exists = MRU
+		NOT = {
+			has_idea = Paramilitary_Infighting
+		}
 	}
 	bypass = { }
 
 	prerequisite = {
 		focus = MRU_Crush_The_Mutiny
-	}
-    prerequisite = {
 		focus = Inflame_The_Infighting
 	}
+
 	ai_will_do = {
 		factor = 10
 	}
@@ -483,6 +485,10 @@ focus = {
 	}
 
 	completion_reward = { 
+		add_timed_idea = {
+			idea = Formalize_The_Tax_Code
+			days = 360
+		}
 		
 	}
 
@@ -1208,8 +1214,6 @@ focus = {
 		}
 	    prerequisite = {
 			focus = MRU_Drive_Them_Out_Of_Russia
-		}
-		prerequisite = {
 			focus = MRU_Every_Mile_Costs_European_Blood
 		}
         ai_will_do = {
@@ -1266,6 +1270,10 @@ focus = {
 		country_exists = MRU
 	}
 	bypass = { }
+
+	mutually_exclusive = {
+		focus = MRU_Closing_Technological_Gap
+	}
 
 	prerequisite = {
 		focus = MRU_Wrestling_The_Economy
@@ -1342,14 +1350,19 @@ focus = {
 	}
 
 	completion_reward = { 
-	add_offsite_building = {
-		type = industrial_complex
-		level = -4
-	}
-	add_offsite_building = {
-		type = arms_factory
-		level = 4
-	}
+		653 = {
+			remove_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+		653 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
 	}
 
 }
@@ -1493,6 +1506,10 @@ focus = {
 	}
 	bypass = { }
 
+	mutually_exclusive = {
+		focus = MRU_Expand_On_Our_Industrial_Power
+	}
+
 	prerequisite = {
 		focus = MRU_Wrestling_The_Economy
 	}
@@ -1568,9 +1585,12 @@ focus = {
 
 	completion_reward = { 
 	# Will update when i can access the game. these factories are meant to be in the urals
-	add_offsite_building = {
-		type = arms_factory
-		level = 6
+	572 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
 	}
 	}
 
@@ -1817,12 +1837,10 @@ focus = {
 	bypass = { }
 
 	prerequisite = {
-		focus = MRU_Anti-Corruption_Drive
+		focus = MRU_Rule_Of_Managers
 	}
     prerequisite = {
 		focus = MRU_Empower_The_Ministry_Of_Trade_and_Technologys
-	}
-    prerequisite = {
 		focus = MRU_Empower_The_Ministry_Of_Industrial_Development
 	}
 
