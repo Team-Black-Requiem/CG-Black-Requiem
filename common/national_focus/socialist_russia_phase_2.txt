@@ -2084,8 +2084,8 @@
 	}
 
 	focus = {
-		id = SRU_Blood_Stained_Requiem
-		icon = GFX_SRU_Blood_Stained_Requiem
+		id = SRU_blood_stained_requiem
+		icon = GFX_SRU_blood_stained_requiem
 		cost = 1
 		x = 0
 		y = 1
@@ -2134,14 +2134,14 @@
 	}
 
 	focus = {
-		id = SRU_Loot_Abandoned_Britannian_Equipment
-		icon = GFX_SRU_Loot_Abandoned_Britannian_Equipment
+		id = SRU_loot_abandoned_britannian_equipment
+		icon = GFX_SRU_loot_abandoned_britannian_equipment
 		cost = 1
-		x = -1
+		x = -2
 		y = 1
-		relative_position_id = SRU_Blood_Stained_Requiem
+		relative_position_id = SRU_blood_stained_requiem
 		prerequisite = {
-			focus = SRU_Blood_Stained_Requiem
+			focus = SRU_blood_stained_requiem
 		}
 		search_filters = {
 		}
@@ -2172,14 +2172,14 @@
 	}
 
 	focus = {
-		id = SRU_Raiding_Britannian_Research_Labs
-		icon = GFX_SRU_Raiding_Britannian_Research_Labs
+		id = SRU_raiding_britannian_research_labs
+		icon = GFX_SRU_raiding_britannian_research_labs
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_Loot_Abandoned_Britannian_Equipment
+		relative_position_id = SRU_loot_abandoned_britannian_equipment
 		prerequisite = {
-			focus = SRU_Loot_Abandoned_Britannian_Equipment
+			focus = SRU_loot_abandoned_britannian_equipment
 		}
 		search_filters = {
 			country_exists = SRU
@@ -2204,14 +2204,14 @@
 	}
 
 	focus = {
-		id = SRU_Ashes_Of_The_East
-		icon = GFX_SRU_Ashes_Of_The_East
+		id = SRU_ashes_of_the_east
+		icon = GFX_SRU_ashes_of_the_east
 		cost = 1
-		x = 1
+		x = 2
 		y = 1
-		relative_position_id = SRU_Blood_Stained_Requiem
+		relative_position_id = SRU_blood_stained_requiem
 		prerequisite = {
-			focus = SRU_Blood_Stained_Requiem
+			focus = SRU_blood_stained_requiem
 		}
 		search_filters = {
 			country_exists = SRU
@@ -2286,14 +2286,14 @@
 	}
 
 	focus = {
-		id = SRU_Resettle_The_East_With_True_Patriots
-		icon = GFX_SRU_Resettle_The_East_With_True_Patriots
+		id = SRU_resettle_the_east_with_true_patriots
+		icon = GFX_SRU_resettle_the_east_with_true_patriots
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_Ashes_Of_The_East
+		relative_position_id = SRU_ashes_of_the_east
 		prerequisite = {
-			focus = SRU_Ashes_Of_The_East
+			focus = SRU_ashes_of_the_east
 		}
 		search_filters = {
 		}
@@ -2336,17 +2336,14 @@
 	}
 
 	focus = {
-		id = SRU_Reprogramme_Euro_Britannian_Scientists
-		icon = GFX_SRU_Reprogramme_Euro_Britannian_Scientists
+		id = SRU_reprogramme_euro_britannian_scientists
+		icon = GFX_SRU_reprogramme_euro_britannian_scientists
 		cost = 1
-		x = 1
-		y = 1
-		relative_position_id = SRU_Raiding_Britannian_Research_Labs
+		x = 0
+		y = 1.5
+		relative_position_id = SRU_blood_stained_requiem
 		prerequisite = {
-			focus = SRU_Raiding_Britannian_Research_Labs
-		}
-		prerequisite = {
-			focus = SRU_Resettle_The_East_With_True_Patriots
+			focus = SRU_blood_stained_requiem
 		}
 		search_filters = {
 		}
@@ -2366,14 +2363,20 @@
 	}
 
 	focus = {
-		id = SRU_The_Slaughter_Continues
-		icon = GFX_SRU_The_Slaughter_Continues
+		id = SRU_the_slaughter_continues
+		icon = GFX_SRU_the_slaughter_continues
 		cost = 1
 		x = 0
-		y = 1
-		relative_position_id = SRU_Reprogramme_Euro_Britannian_Scientists
+		y = 2
+		relative_position_id = SRU_reprogramme_euro_britannian_scientists
 		prerequisite = {
-			focus = SRU_Reprogramme_Euro_Britannian_Scientists
+			focus = SRU_reprogramme_euro_britannian_scientists
+		}
+		prerequisite = {
+			focus = SRU_resettle_the_east_with_true_patriots
+		}
+		prerequisite = {
+			focus = SRU_raiding_britannian_research_labs
 		}
 		search_filters = {
 		}
@@ -2416,9 +2419,9 @@
 		cost = 2
 		x = -14
 		y = 1
-		relative_position_id = SRU_The_Slaughter_Continues
+		relative_position_id = SRU_the_slaughter_continues
 		prerequisite = {
-			focus = SRU_The_Slaughter_Continues
+			focus = SRU_the_slaughter_continues
 		}
 		search_filters = {
 		}
@@ -2784,7 +2787,7 @@
 			focus = SRU_russian_national_rejuvination
 		}
 		prerequisite = {
-			focus = SRU_state_visit_to_haishenwan
+			focus = SRU_state_visit_to_haishenwei
 		}
 		search_filters = {
 		}
@@ -2806,9 +2809,9 @@
 		cost = 1
 		x = -4
 		y = 1
-		relative_position_id = SRU_The_Slaughter_Continues
+		relative_position_id = SRU_the_slaughter_continues
 		prerequisite = {
-			focus = SRU_The_Slaughter_Continues
+			focus = SRU_the_slaughter_continues
 		}
 		search_filters = {
 		}
@@ -3084,8 +3087,8 @@
 	}
 
 	focus = {
-		id = SRU_state_visit_to_haishenwan
-		icon = GFX_SRU_state_visit_to_haishenwan
+		id = SRU_state_visit_to_haishenwei
+		icon = GFX_SRU_state_visit_to_haishenwei
 		cost = 1
 		x = 0
 		y = 1
@@ -3113,9 +3116,9 @@
 		cost = 1
 		x = 5
 		y = 1
-		relative_position_id = SRU_The_Slaughter_Continues
+		relative_position_id = SRU_the_slaughter_continues
 		prerequisite = {
-			focus = SRU_The_Slaughter_Continues
+			focus = SRU_the_slaughter_continues
 		}
 		search_filters = {
 		}
@@ -3466,13 +3469,13 @@
 
 	focus = {
 		id = SRU_we_have_our_orders
-		icon = GFX_SRU_we_have_our_orders
+		icon = GFX_SRU_the_new_army
 		cost = 1
 		x = 13
 		y = 1
-		relative_position_id = SRU_The_Slaughter_Continues
+		relative_position_id = SRU_the_slaughter_continues
 		prerequisite = {
-			focus = SRU_The_Slaughter_Continues
+			focus = SRU_the_slaughter_continues
 		}
 		search_filters = {
 		}
@@ -3879,7 +3882,7 @@
 	}
 
 	focus = {
-		id = SRU_operation_red_wonderland
+		id = SRU_operation_wonderland
 		icon = GFX_SRU_operation_red_wonderland
 		cost = 1
 		x = 3
