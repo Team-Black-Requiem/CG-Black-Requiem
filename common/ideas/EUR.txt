@@ -393,10 +393,10 @@ EUR_Creating_Okhotsk_settlement_4 = {
    removal_cost = -1
 
    modifier = {
-   }
+	industrial_capacity_factor = 0.1   
+}
    research_bonus = {
-	industry = 0.05
-	industrial_capacity_factory = 0.1
+	industry = 0.05	
 }
 }
 
@@ -646,8 +646,8 @@ EUR_The_okhotsk_settlement_2 = {
 		   equipment_bonus = {
 			knightmare_mass_prod = {
 				instant = yes
-				attack_factor = 0.15
-				org_factor = 0.15
+				attack = 0.15
+				max_organisation = 0.15
 			}
 		   }
 		}
@@ -925,14 +925,12 @@ EUR_Focusing_on_knightmares_production = {
 					instant = yes
 					build_cost_ic = -0.15
 				}	
-			}
-			equipment_bonus = {
+			
 			factspheres_equip = {
 					instant = yes
 					build_cost_ic = -0.15
 				}	
-			}
-			equipment_bonus = {
+		
 			knightmare_mass_prod = {
 					instant = yes
 					build_cost_ic = -0.15

@@ -7180,7 +7180,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                    load_oob = Oscars_Navy
                     hidden_effect = {
                   }
             }
@@ -7315,7 +7315,48 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                    if = {
+                        limit = {
+                        MRU = 
+                        {
+                            controls_state = 825
+                            controls_state = 919
+                            controls_state = 825              
+                        }
+                    }
+
+                        825 = {
+                            add_state_modifier = {
+                                modifier = {
+                                    enemy_local_supplies = 0.1
+                                    enemy_attrition = -0.15
+                                    enemy_army_speed_factor = 0.1
+                                }
+                                
+                            }
+                        }  
+                        919 = {
+                            add_state_modifier = {
+                                modifier = {
+                                    enemy_local_supplies = 0.1
+                                    enemy_attrition = -0.15
+                                    enemy_army_speed_factor = 0.1
+                                }
+                            }
+                        }  
+                        825 = {
+                            add_state_modifier = {
+                                modifier = {
+                                    enemy_local_supplies = 0.1
+                                    enemy_attrition = -0.15
+                                    enemy_army_speed_factor = 0.1
+                                }
+                            }
+                            
+                        }  
+                     
+                    }
+                    ## will change to proper state later#
                     hidden_effect = {
                   }
             }
@@ -7530,7 +7571,13 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                    add_equipment_production = {
+                    equipment = {
+                    type = battle_cruiser_2       
+                    }
+                    progress = 1
+                    amount = 3
+                    }
                     hidden_effect = {
                   }
             }
@@ -8165,7 +8212,7 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                   
                     hidden_effect = {
                   }
             }

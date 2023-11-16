@@ -104,8 +104,12 @@ ideas = {
 		   
 		   modifier = {
 		   }
-		   equipment_bonus = { battleship = { instant = yes build_cost_ic = -0.10 } }
+		   equipment_bonus = { battleship_1 = {
+			
+		   instant = yes build_cost_ic = -0.10 
 	   }
+	}
+}
 
 	   GEN_The_future_of_warfare = {
 		
@@ -251,7 +255,7 @@ ideas = {
 				
 		   }
 		   equipment_bonus = {
-				fighter_equipment = { 
+				category_multirole = { 
 					instant = yes 
 					build_cost_ic = -0.15 
 				}
@@ -274,11 +278,12 @@ ideas = {
 				
 		   }
 		   equipment_bonus = {
-				fighter_equipment = { 
+				category_multirole = { 
 					instant = yes 
 					build_cost_ic = -0.15 
 				}
-				CAS_equipment = { 
+				category_cas = {
+					
 					instant = yes 
 					build_cost_ic = -0.15 
 				}
@@ -301,7 +306,8 @@ ideas = {
 				
 		   }
 		   equipment_bonus = {
-				strat_bomber_equipment = { 
+			category_strat_bomber = {
+					
 					instant = yes 
 					build_cost_ic = -0.15 
 				}
@@ -324,7 +330,8 @@ ideas = {
 				air_bombing_targetting = 0.15
 	   		}
 	   		equipment_bonus = {
-				strat_bomber_equipment = { 
+				category_strat_bomber = {
+					
 					instant = yes 
 					build_cost_ic = -0.15 
 					air_bombing = 0.10
@@ -509,7 +516,8 @@ ideas = {
 	   		}
 
 			equipment_bonus = {
-				knightmare_mass_prod_unit = { 
+				knightmare_mass_prod = {
+					 
 					instant = yes 
 					build_cost_ic = -0.15
 					suppression = 20
@@ -534,7 +542,7 @@ ideas = {
 	   		}
 
 			equipment_bonus = {
-				knightmare_mass_prod_unit = { 
+				knightmare_mass_prod = { 
 					instant = yes 
 					build_cost_ic = -0.25
 				suppression = 0.3
@@ -556,7 +564,7 @@ ideas = {
 	   		removal_cost = -1
 	   
             equipment_bonus = {
-				knightmare_mass_prod_unit = {
+				knightmare_mass_prod = {
 					build_cost_ic = 0.45
 				}
 			
@@ -587,7 +595,7 @@ ideas = {
 					instant = yes 
 					soft_attack = 0.2
 				}
-				modern_armor = {
+				armor = {
 					instant = yes
 					soft_attack = 0.1
 				}
@@ -599,7 +607,7 @@ ideas = {
 					instant = yes
 					soft_attack = 0.1
 				}
-				knightmare_mass_prod_unit = {
+				knightmare_mass_prod = {
 					build_cost_ic = 0.45
 				}
 	   		}
@@ -629,7 +637,9 @@ ideas = {
 					instant = yes 
 					soft_attack = 0.3
 				}
-				modern_armor = {
+			
+				category_all_armor = {
+			
 					instant = yes
 					soft_attack = 0.15
 					hard_attack = 0.10
@@ -646,7 +656,7 @@ ideas = {
 					instant = yes
 					soft_attack = 0.1
 				}
-				knightmare_mass_prod_unit = {
+				knightmare_mass_prod = {
 					build_cost_ic = 0.45
 				}
 	   		}
@@ -677,7 +687,8 @@ ideas = {
 					soft_attack = 0.4
 					build_cost_ic = -0.05
 				}
-				modern_armor = {
+				category_all_armor = {
+					
 					instant = yes
 					soft_attack = 0.20
 					hard_attack = 0.15
@@ -691,7 +702,7 @@ ideas = {
 					instant = yes
 					soft_attack = 0.1
 				}
-				knightmare_mass_prod_unit = { 
+				knightmare_mass_prod = { 
 					instant = yes 
 					build_cost_ic = 0.45
 				}
