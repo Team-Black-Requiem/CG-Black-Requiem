@@ -796,6 +796,7 @@ focus = {
 		
 		completion_reward = {
 		add_ideas = SRU_Russian_Jacobin_Council
+		country_event = SRU.96
 		}
 }
 
@@ -1134,6 +1135,7 @@ focus = {
 						ideology = BR_vanguardist
 						popularity = 0.20
 				}
+				country_event = SRU.98
 			}
 			}
 			focus = {
@@ -1261,6 +1263,7 @@ focus = {
 				completion_reward = {
 					add_political_power = 50
 					add_stability = 0.15
+					country_event = SRU.99
 			}
 		}
 			focus = {
@@ -1283,6 +1286,7 @@ focus = {
 						idea = SRU_concessions_to_congress
 						days = 60
 					}
+					country_event = SRU.100
 				}
 			}
 			focus = {
@@ -1305,6 +1309,7 @@ focus = {
 						idea = SRU_intraparty_cooperation
 						days = 90
 					}
+					country_event = SRU.101
 				}
 
 			}
@@ -1511,6 +1516,7 @@ focus = {
 				completion_reward = {
 					upgrade_economy_law = yes
 					add_ideas = SRU_war_measures_act
+					country_event = SRU.102
 				}
 
 			}
@@ -1533,6 +1539,7 @@ focus = {
 					remove_ideas = Democratic_Dissonance
 					add_stability = 0.1
 					add_command_power = 20
+					country_event = SRU.103
 				}
 
 			}
@@ -2043,6 +2050,7 @@ focus = {
 				
 				completion_reward = {
 				add_ideas = SRU_revolutionary_zealotry
+				country_event = SRU.97
 				}
 			}
 			focus = {
@@ -2234,13 +2242,16 @@ focus = {
 					if = {
 						SRU = {
 							limit = {
-								has_completed_focus = SRU_Red_Blitz
+								has_completed_focus = SRU_mechanise_the_army
 							}
 							country_event = SRU.60
 						}
 					}
 					else = {
 						SRU = {
+							limit = {
+								has_completed_focus = SRU_rapid_modernisation_of_the_airforce
+							}
 							country_event = SRU.61
 						}
 					}
