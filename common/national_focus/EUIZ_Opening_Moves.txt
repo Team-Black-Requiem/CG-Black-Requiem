@@ -8044,11 +8044,17 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                    
+                    create_railway_gun = {
+                        equipment = railway_gun_equipment_1
+                        name = EIZ_Lead_Rain
+                        location = 6380
+                    }
                     hidden_effect = {
+                        
                   }
+                }
             }
-        }
+        
 
         focus = {
             id = EIZ_Comfurts_Of_The_Trenches
@@ -8212,7 +8218,118 @@ focus_tree = {
                 available_if_capitulated = no
     
                 completion_reward = {
-                   
+                 401 = { add_building_construction = {
+                        type = bunker
+                        level = 3
+                        instant_build = yes
+                        province = {
+                            all_provinces = yes
+                            limit_to_border_country = MRU
+                            limit_to_victory_point > 3
+                        }
+                    }
+                }
+
+                250 = { add_building_construction = {
+                    type = bunker
+                    level = 3
+                    instant_build = yes
+                    province = {
+                        all_provinces = yes
+                        limit_to_border_country = MRU
+                        limit_to_victory_point > 3
+                    }
+                }
+            }
+
+            926 = { add_building_construction = {
+                type = bunker
+                level = 3
+                instant_build = yes
+                province = {
+                    all_provinces = yes
+                    limit_to_border_country = MRU
+                    limit_to_victory_point > 3
+                }
+            }
+        }
+        252 = { add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = {
+                all_provinces = yes
+                limit_to_border_country = MRU
+                limit_to_victory_point > 3
+            }
+        }
+    }
+    253 = { add_building_construction = {
+        type = bunker
+        level = 3
+        instant_build = yes
+        province = {
+            all_provinces = yes
+            limit_to_border_country = MRU
+            limit_to_victory_point > 3
+        }
+    }
+} 
+351 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border_country = MRU
+        limit_to_victory_point > 3
+    }
+}
+}
+925 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border_country = MRU
+        limit_to_victory_point > 3
+    }
+}
+}
+916 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border_country = MRU
+        limit_to_victory_point > 3
+    }
+}
+}
+925 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border_country = MRU
+        limit_to_victory_point > 3
+    }
+}
+}
+829 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border_country = MRU
+        limit_to_victory_point > 3
+    }
+}
+}
                     hidden_effect = {
                   }
             }
@@ -8241,6 +8358,10 @@ focus_tree = {
             }
     
             available = {		
+                controls_state = 381
+                controls_state = 398
+                controls_state = 573
+                controls_state = 905
                 country_exists = RUS has_cosmetic_tag = EIZ
         
                 }
