@@ -842,11 +842,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-                RUS = { country_event = EIZ.5}
+                
+                country_event = EIZ.5
 
                 hidden_effect = {
               }
+              # to do: this event is from the leader decision chain what goes here?
         }
     }
 
@@ -1888,6 +1889,7 @@ focus_tree = {
             completion_reward = {
             country_event = event.34
             add_ideas = EIZ_calling_the_pale_jewel
+            # to do: event.34 doesn't exist should it be EIZ.34?
         }
     }
     focus = {
@@ -1924,7 +1926,7 @@ focus_tree = {
 
             completion_reward = {
                add_offsite_building = {
-                type = arms_factory
+                type = industrial_complex
                 level = 4
                }
         }
@@ -1962,7 +1964,6 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                production_factory_efficiency_gain_factor = 0.05
                 add_offsite_building = {
                     type = arms_factory
                     level = 2
@@ -2044,7 +2045,6 @@ focus_tree = {
 
             completion_reward = {
                add_stability = 0.05
-               add_political_power_gain = 0.05
                add_manpower = -300
         }
     }
@@ -2126,26 +2126,31 @@ focus_tree = {
                add_equipment_to_stockpile = {
                 type = infantry_equipment_2
                 amount = 2000
+                owner = FRA
                }
 
                add_equipment_to_stockpile = {
                 type = mechanized_equipment_1
                 amount = 700
+                owner = FRA
                }
 
                add_equipment_to_stockpile = {
                 type = motorized_equipment_1
                 amount = 700
+                owner = FRA
                }
 
                add_equipment_to_stockpile = {
                 type = sp_artillery_2
                 amount = 700
+                owner = FRA
                }
 
                add_equipment_to_stockpile = {
                 type = support_equipment_1
                 amount = 700
+                owner = FRA
                }
 
                add_offsite_building = {
@@ -2184,9 +2189,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               add_stability = -0.05
-             
-
+               add_ideas = EIZ_Forced_Labor
         }
     }
     focus = {
@@ -2425,6 +2428,7 @@ focus_tree = {
             completion_reward = {
             remove_ideas = Economic_shables
              add_ideas =   EIZ_lyons_magnum_opus
+             # to do: do we agregate all the different economic ideas into one for easier lecture?
         }
     }
 
