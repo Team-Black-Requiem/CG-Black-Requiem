@@ -1253,8 +1253,8 @@
 	}
 
 	focus = {
-		id = SRU_reforming_economic_managment
-		icon = GFX_SRU_reforming_economic_managment
+		id = SRU_transforming_the_economy
+		icon = GFX_SRU_transforming_the_economy
 		cost = 1
 		x = 14
 		y = 1
@@ -1277,17 +1277,17 @@
 	}
 
 	focus = {
-		id = SRU_the_5_year_plan
-		icon = GFX_SRU_the_5_year_plan
+		id = SRU_utopian_economic_push
+		icon = GFX_SRU_utopian_economic_push
 		cost = 1
 		x = -2
 		y = 1
-		relative_position_id = SRU_reforming_economic_managment
+		relative_position_id = SRU_transforming_the_economy
 		mutually_exclusive = {
-			focus = SRU_the_leonova_reforms
+			focus = SRU_the_revisionists_reforms
 		}
 		prerequisite = {
-			focus = SRU_reforming_economic_managment
+			focus = SRU_transforming_the_economy
 		}
 		search_filters = {
 		}
@@ -1304,14 +1304,14 @@
 	}
 
 	focus = {
-		id = SRU_central_planning_system
-		icon = GFX_SRU_central_planning_system
+		id = SRU_create_economic_cadres
+		icon = GFX_SRU_create_economic_cadres
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_the_5_year_plan
+		relative_position_id = SRU_utopian_economic_push
 		prerequisite = {
-			focus = SRU_the_5_year_plan
+			focus = SRU_utopian_economic_push
 		}
 		search_filters = {
 		}
@@ -1328,14 +1328,14 @@
 	}
 
 	focus = {
-		id = SRU_heavy_industry_focus
-		icon = GFX_SRU_heavy_industry_focus
+		id = SRU_industrial_leap_foward
+		icon = GFX_SRU_industrial_leap_foward
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_central_planning_system
+		relative_position_id = SRU_create_economic_cadres
 		prerequisite = {
-			focus = SRU_central_planning_system
+			focus = SRU_create_economic_cadres
 		}
 		search_filters = {
 		}
@@ -1352,14 +1352,14 @@
 	}
 
 	focus = {
-		id = SRU_top_down_managment
-		icon = GFX_SRU_top_down_managment
+		id = SRU_abolish_private_property
+		icon = GFX_SRU_abolish_private_property
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_central_planning_system
+		relative_position_id = SRU_create_economic_cadres
 		prerequisite = {
-			focus = SRU_central_planning_system
+			focus = SRU_create_economic_cadres
 		}
 		search_filters = {
 		}
@@ -1376,14 +1376,14 @@
 	}
 
 	focus = {
-		id = SRU_increase_industrial_quotas
-		icon = GFX_SRU_increase_industrial_quotas
+		id = SRU_inspite_the_workers
+		icon = GFX_SRU_inspite_the_workers
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_central_planning_system
+		relative_position_id = SRU_create_economic_cadres
 		prerequisite = {
-			focus = SRU_central_planning_system
+			focus = SRU_create_economic_cadres
 		}
 		search_filters = {
 		}
@@ -1400,14 +1400,14 @@
 	}
 
 	focus = {
-		id = SRU_secondary_allocations
-		icon = GFX_SRU_secondary_allocations
+		id = SRU_infastructure_for_the_future
+		icon = GFX_SRU_infastructure_for_the_future
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_heavy_industry_focus
+		relative_position_id = SRU_industrial_leap_foward
 		prerequisite = {
-			focus = SRU_heavy_industry_focus
+			focus = SRU_industrial_leap_foward
 		}
 		search_filters = {
 		}
@@ -1424,14 +1424,14 @@
 	}
 
 	focus = {
-		id = SRU_pushing_for_statistical_accuracy
-		icon = GFX_SRU_pushing_for_statistical_accuracy
+		id = SRU_creating_the_communes
+		icon = GFX_SRU_creating_the_communes
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_top_down_managment
+		relative_position_id = SRU_abolish_private_property
 		prerequisite = {
-			focus = SRU_top_down_managment
+			focus = SRU_abolish_private_property
 		}
 		search_filters = {
 		}
@@ -1448,14 +1448,14 @@
 	}
 
 	focus = {
-		id = SRU_dealing_with_incompetence
-		icon = GFX_SRU_dealing_with_incompetence
+		id = SRU_dealing_with_the_hidden_market
+		icon = GFX_SRU_dealing_with_the_hidden_market
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_increase_industrial_quotas
+		relative_position_id = SRU_inspite_the_workers
 		prerequisite = {
-			focus = SRU_increase_industrial_quotas
+			focus = SRU_inspite_the_workers
 		}
 		search_filters = {
 		}
@@ -1472,16 +1472,16 @@
 	}
 
 	focus = {
-		id = SRU_expanding_our_goals
-		icon = GFX_SRU_expanding_our_goals
+		id = SRU_communal_economy
+		icon = GFX_SRU_communal_economy
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_pushing_for_statistical_accuracy
+		relative_position_id = SRU_creating_the_communes
 		prerequisite = {
-			focus = SRU_secondary_allocations
-			focus = SRU_pushing_for_statistical_accuracy
-			focus = SRU_dealing_with_incompetence
+			focus = SRU_infastructure_for_the_future
+			focus = SRU_creating_the_communes
+			focus = SRU_dealing_with_the_hidden_market
 		}
 		search_filters = {
 		}
@@ -1498,14 +1498,14 @@
 	}
 
 	focus = {
-		id = SRU_soviet_military_industrial_complex
-		icon = GFX_SRU_soviet_military_industrial_complex
+		id = SRU_anti_apathy_campaigns
+		icon = GFX_SRU_anti_apathy_campaigns
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = SRU_expanding_our_goals
+		relative_position_id = SRU_communal_economy
 		prerequisite = {
-			focus = SRU_expanding_our_goals
+			focus = SRU_communal_economy
 		}
 		search_filters = {
 		}
@@ -1522,14 +1522,14 @@
 	}
 
 	focus = {
-		id = SRU_engineering_schools
-		icon = GFX_SRU_engineering_schools
+		id = SRU_end_bourgeoise_education
+		icon = GFX_SRU_end_bourgeoise_education
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_expanding_our_goals
+		relative_position_id = SRU_communal_economy
 		prerequisite = {
-			focus = SRU_expanding_our_goals
+			focus = SRU_communal_economy
 		}
 		search_filters = {
 		}
@@ -1546,14 +1546,14 @@
 	}
 
 	focus = {
-		id = SRU_encourage_patriotic_worker_culture
-		icon = GFX_SRU_encourage_patriotic_worker_culture
+		id = SRU_upping_the_quotas
+		icon = GFX_SRU_upping_the_quotas
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_expanding_our_goals
+		relative_position_id = SRU_communal_economy
 		prerequisite = {
-			focus = SRU_expanding_our_goals
+			focus = SRU_communal_economy
 		}
 		search_filters = {
 		}
@@ -1570,14 +1570,14 @@
 	}
 
 	focus = {
-		id = SRU_well_fueled_war_machine
-		icon = GFX_SRU_well_fueled_war_machine
+		id = SRU_dealing_with_alcoholism
+		icon = GFX_SRU_dealing_with_alcoholism
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_soviet_military_industrial_complex
+		relative_position_id = SRU_anti_apathy_campaigns
 		prerequisite = {
-			focus = SRU_soviet_military_industrial_complex
+			focus = SRU_anti_apathy_campaigns
 		}
 		search_filters = {
 		}
@@ -1594,14 +1594,14 @@
 	}
 
 	focus = {
-		id = SRU_ideological_economics
-		icon = GFX_SRU_ideological_economics
+		id = SRU_socialist_visionary_colleges
+		icon = GFX_SRU_socialist_visionary_colleges
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_engineering_schools
+		relative_position_id = SRU_end_bourgeoise_education
 		prerequisite = {
-			focus = SRU_engineering_schools
+			focus = SRU_end_bourgeoise_education
 		}
 		search_filters = {
 		}
@@ -1618,14 +1618,14 @@
 	}
 
 	focus = {
-		id = SRU_against_parasitism
-		icon = GFX_SRU_against_parasitism
+		id = SRU_accelerate_our_plans
+		icon = GFX_SRU_accelerate_our_plans
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_encourage_patriotic_worker_culture
+		relative_position_id = SRU_upping_the_quotas
 		prerequisite = {
-			focus = SRU_encourage_patriotic_worker_culture
+			focus = SRU_upping_the_quotas
 		}
 		search_filters = {
 		}
@@ -1642,16 +1642,16 @@
 	}
 
 	focus = {
-		id = SRU_an_economy_under_our_control
-		icon = GFX_SRU_an_economy_under_our_control
+		id = SRU_on_the_road_to_communism
+		icon = GFX_SRU_on_the_road_to_communism
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_ideological_economics
+		relative_position_id = SRU_socialist_visionary_colleges
 		prerequisite = {
-			focus = SRU_well_fueled_war_machine
-			focus = SRU_ideological_economics
-			focus = SRU_against_parasitism
+			focus = SRU_dealing_with_alcoholism
+			focus = SRU_socialist_visionary_colleges
+			focus = SRU_accelerate_our_plans
 		}
 		search_filters = {
 		}
@@ -1668,17 +1668,17 @@
 	}
 
 	focus = {
-		id = SRU_the_leonova_reforms
-		icon = GFX_SRU_the_leonova_reforms
+		id = SRU_the_revisionists_reforms
+		icon = GFX_SRU_the_revisionists_reforms
 		cost = 1
 		x = 2
 		y = 1
-		relative_position_id = SRU_reforming_economic_managment
+		relative_position_id = SRU_transforming_the_economy
 		mutually_exclusive = {
-			focus = SRU_the_5_year_plan
+			focus = SRU_utopian_economic_push
 		}
 		prerequisite = {
-			focus = SRU_reforming_economic_managment
+			focus = SRU_transforming_the_economy
 		}
 		search_filters = {
 		}
@@ -1700,9 +1700,9 @@
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_the_leonova_reforms
+		relative_position_id = SRU_the_revisionists_reforms
 		prerequisite = {
-			focus = SRU_the_leonova_reforms
+			focus = SRU_the_revisionists_reforms
 		}
 		search_filters = {
 		}
@@ -1864,7 +1864,7 @@
 
 	focus = {
 		id = SRU_expanding_our_reforms
-		icon = GFX_SRU_expanding_our_goals
+		icon = GFX_SRU_communal_economy
 		cost = 1
 		x = 0
 		y = 1
@@ -1889,8 +1889,8 @@
 	}
 
 	focus = {
-		id = SRU_enterprise_startup_scheme
-		icon = GFX_SRU_enterprise_startup_scheme
+		id = SRU_partnership_with_capital
+		icon = GFX_SRU_partnership_with_capital
 		cost = 1
 		x = -1
 		y = 1
@@ -1966,9 +1966,9 @@
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_enterprise_startup_scheme
+		relative_position_id = SRU_partnership_with_capital
 		prerequisite = {
-			focus = SRU_enterprise_startup_scheme
+			focus = SRU_partnership_with_capital
 		}
 		search_filters = {
 		}
@@ -2033,8 +2033,8 @@
 	}
 
 	focus = {
-		id = SRU_seeds_of_the_peoples_economy
-		icon = GFX_SRU_seeds_of_the_peoples_economy
+		id = SRU_an_economy_of_cooperation
+		icon = GFX_SRU_an_economy_of_cooperation
 		cost = 1
 		x = 0
 		y = 1
@@ -2059,15 +2059,15 @@
 	}
 
 	focus = {
-		id = SRU_economic
-		icon = GFX_SRU_economic
+		id = SRU_a_new_alternative
+		icon = GFX_SRU_a_new_alternative
 		cost = 1
 		x = -2
 		y = 1
-		relative_position_id = SRU_seeds_of_the_peoples_economy
+		relative_position_id = SRU_an_economy_of_cooperation
 		prerequisite = {
-			focus = SRU_an_economy_under_our_control
-			focus = SRU_seeds_of_the_peoples_economy
+			focus = SRU_on_the_road_to_communism
+			focus = SRU_an_economy_of_cooperation
 		}
 		search_filters = {
 		}
