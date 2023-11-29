@@ -34,7 +34,7 @@ characters = {
 		}
 		advisor = {
 			slot = head_of_government
-			idea_token = SRU_Luka_Zhukov_idea_1
+			idea_token = SRU_luka_zhukov_idea_1
 			
 
 			allowed = {
@@ -171,15 +171,15 @@ characters = {
 		# Note from Fris: I removed the role and added it to the focus Chairman_Ivanov
 	}
 
-	SRU_Andrei_Smirnov = {
-		name = "Co-Chairman of the Politburo"
+	SRU_andrei_smirnov = {
+		name = "Andrei Smirnov"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
 			slot = head_of_government
-			idea_token = SRU_Andrei_Smirnov_idea_1
+			idea_token = SRU_andrei_smirnov_idea_1
 
 			allowed = {
 				tag = SRU
@@ -196,15 +196,15 @@ characters = {
 		}
 	}
 
-	SRU_Tatyana_Kuznetsova = {
-		name = "Political Commissar"
+	SRU_tatyana_kuznetsova = {
+		name = "Tatyana Kuznetsova"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
 			slot = minister_of_interior
-			idea_token = SRU_Tatyana_Kuznetsova_idea_1
+			idea_token = SRU_tatyana_kuznetsova_idea_1
 
 			allowed = {
 				tag = SRU
@@ -221,15 +221,15 @@ characters = {
 		}
 	}
 
-	SRU_Marianna_Sorokina = {
-		name = "Director of C.S.S"
+	SRU_marianna_sorokina = {
+		name = "Marianna Sorokina"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
 			slot = intelligence
-			idea_token = SRU_Marianna_Sorokina_idea_1
+			idea_token = SRU_marianna_sorokina_idea_1
 
 			allowed = {
 				tag = SRU
@@ -239,22 +239,22 @@ characters = {
 				director_of_CSS
 			}
 
-			cost = 150
+			cost = 2000
 			ai_will_do = {
 				factor = 1
 			}
 		}
 	}
 
-	SRU_Tasha_Kulikova = {
-		name = "Secret Police Director of Cheka"
+	SRU_tasha_kulikova = {
+		name = "Tasha Kulikova"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
-			slot = intelligence
-			idea_token = SRU_Tasha_Kulikova_idea_1
+			slot = minister_of_interior
+			idea_token = SRU_tasha_kulikova_idea_1
 
 			allowed = {
 				tag = SRU
@@ -264,7 +264,57 @@ characters = {
 				director_of_secret_police
 			}
 
-			cost = 150
+			cost = 2000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_leonid_zaytsev = {
+		name = "Leonid Zaytsev"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = SRU_leonid_zaytsev_idea_1
+
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				economy_reformer
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_viktor_makarov = {
+		name = "Viktor Makarov"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = SRU_viktor_makarov_idea_1
+
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				army_chief_offensive_2
+			}
+
+			cost = 2000
 			ai_will_do = {
 				factor = 1
 			}
