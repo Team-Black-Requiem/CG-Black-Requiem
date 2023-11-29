@@ -208,12 +208,12 @@ country_event = { #The_Party_Or_The_State?
 		}
 		add_political_power = -50
 		add_timed_idea = {
-			idea = State_Bureaucracy_Loyalty
+			idea = SRU_Support_The_State
 			days = 180
 		}
 		modify_country_flag = {
-			flag = democratic_support
-			value = 1
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
 		}
     } 
 	option = {
@@ -223,12 +223,12 @@ country_event = { #The_Party_Or_The_State?
 		}
 		add_political_power = 50
 		add_timed_idea = {
-			idea = Party_Bureaucracy_Loyalty
+			idea = SRU_Support_The_Party
 			days = 180
 		}
 		modify_country_flag = {
-			flag = democratic_support
-			value = -1
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
 		}
     } 
 }
@@ -279,11 +279,11 @@ country_event = { #The power of the media
 		}
 		add_political_power = -100
 		modify_country_flag = {
-			flag = democratic_support
+			flag = SRU_idealist_pragmatist_balance
 			value = 1
 		}
 		add_timed_idea = {
-			idea = Factual_Media_Focus
+			idea = SRU_Idealists_Media_Plan
 			days = 180
 		}
 	}
@@ -295,11 +295,11 @@ country_event = { #The power of the media
 		}
 		add_political_power = 100
 		modify_country_flag = {
-			flag = democratic_support
+			flag = SRU_idealist_pragmatist_balance
 			value = -1
 		}
 		add_timed_idea = {
-			idea = Dissident_Media_Focus
+			idea = SRU_Pragmatists_Media_Plan
 			days = 180
 		}
 	}
@@ -319,7 +319,7 @@ country_event = { #Total War
 		}
 		add_political_power = -150
 		add_timed_idea = {
-			idea = Dissidents_tolerated
+			idea = SRU_expel_the_foreigners
 			days = 180
 		}
 	}
@@ -330,7 +330,7 @@ country_event = { #Total War
 		}
 		add_political_power = 150
 		add_timed_idea = {
-			idea = Dissident_Arrests
+			idea = SRU_hire_the_foreigners
 			days = 180
 		}
 	}
@@ -519,8 +519,8 @@ country_event = {
 		}
 		add_political_power = -100
 		modify_country_flag = {
-			flag = democratic_support
-			value = 1
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
 		}
 		add_timed_idea = {
 			idea = Apolitical_Education_Focus
@@ -534,8 +534,8 @@ country_event = {
 		}
 		add_political_power = 100
 		modify_country_flag = {
-			flag = democratic_support
-			value = -1
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
 		}
 		add_timed_idea = {
 			idea = Socialist_Education_Focus
@@ -555,24 +555,27 @@ country_event = {
         ai_chance = {
 			factor = 100
 		}
-		add_political_power = -150
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
 		add_timed_idea = {
-			idea = Dissidents_tolerated
+			idea = SRU_expel_the_foreigners
 			days = 180
 		}
+		
 	}
 	option = {
 		name = SRU.26.b
         ai_chance = {
 			factor = 100
 		}
-		add_political_power = 150
 		modify_country_flag = {
-			flag = democratic_support
+			flag = SRU_idealist_pragmatist_balance
 			value = -1
 		}
 		add_timed_idea = {
-			idea = Dissident_Arrests
+			idea = SRU_hire_the_foreigners
 			days = 180
 		}
 	}

@@ -289,6 +289,8 @@
 			
 			completion_reward = {
 
+				set_country_flag = SRU_idealist_pragmatist_balance
+
 				remove_ideas = SRU_The_Peoples_Hearts
 
 				remove_ideas = SRU_The_Workers_Toil
@@ -325,7 +327,6 @@
 			completion_reward = {
 			 country_event = SRU.87
 			 add_ideas = Politburo_War_Powers
-			 set_country_flag = democratic_support
 			}
 
 	}
@@ -375,6 +376,10 @@
 					add_idea = Democratic_Opposition
 				}
 				country_event = SRU.89
+				modify_country_flag = {
+					flag = SRU_idealist_pragmatist_balance
+					value = 1
+				}
 			}
 	}
 				focus = {
@@ -403,6 +408,10 @@
 					add_idea = Limited_Opposition
 				}
 				country_event = SRU.88
+				modify_country_flag = {
+					flag = SRU_idealist_pragmatist_balance
+					value = -1
+				}
 			}
 	}
 				focus = {
@@ -532,8 +541,8 @@
 			# to do: ask user which minister it unlocks also 5% complience gain? WTF isn't that way to high?
 	}
 			focus = {
-			id = a_Matter_Of_Dissidents 
-			icon = GFX_a_Matter_Of_Dissidents
+			id = SRU_the_foreigners_loyalties 
+			icon = GFX_SRU_the_foreigners_loyalties
 			cost = 1
 			x = 0
 			y = 1
@@ -547,11 +556,8 @@
 				}
 			
 			completion_reward = {
-				recruit_character = SRU_Tasha_Kulikova
-				# to do: who? she is not in the mural
 			    country_event = SRU.26
 			}
-			#to do: ask user if he wants +1 democrat support on no censorship
 	}
 			focus = {
 			id = Opening_The_Ministry_of_Information
@@ -559,9 +565,9 @@
 			cost = 2
 			x = 0
 			y = 1
-			prerequisite = { focus = a_Matter_Of_Dissidents 
+			prerequisite = { focus = SRU_the_foreigners_loyalties 
 			            }
-			relative_position_id = a_Matter_Of_Dissidents
+			relative_position_id = SRU_the_foreigners_loyalties
 			available = {
                            country_exists = SRU
 			}
@@ -598,7 +604,7 @@
 }
 
 focus = {
-	id = Chairman_Bakatin
+	id = SRU_chairwoman_ivanova
 	icon = GFX_Opening_The_Ministry_of_Information
 	cost = 2
 	x = -1
@@ -618,7 +624,7 @@ focus = {
 	
 	completion_reward = {
 		add_advisor_role = {
-			character = Vladimir_Bakatin
+			character = Tatiyana_Leonova
 			activate = yes
 			advisor = {
 				slot = intelligence
@@ -631,10 +637,10 @@ focus = {
 		add_war_support = 0.1
 		country_event = SRU.11
 		modify_country_flag = {
-			flag = democratic_support
+			flag = SRU_idealist_pragmatist_balance
 			value = 1
 		}
-		set_country_flag = SRU_bakatin_heads_security_services
+		set_country_flag = SRU_leonova_heads_security_services
 		
 	}
 	# to do: ask user why there are more modifiers.
@@ -650,7 +656,7 @@ focus = {
 				}
 	relative_position_id = Removing_The_Jacobin_Chekists
 	mutually_exclusive = {
-		focus = Chairman_Bakatin
+		focus = SRU_chairwoman_ivanova
 	}
 	available = {
 				   country_exists = SRU
@@ -671,7 +677,7 @@ focus = {
 			}
 		}
 		modify_country_flag = {
-			flag = democratic_support
+			flag = SRU_idealist_pragmatist_balance
 			value = -1
 		}
 		set_country_flag = SRU_ivanov_heads_security_services
@@ -685,10 +691,10 @@ focus = {
 	x = 1
 	y = 1
 	prerequisite = {
-		 focus = Chairman_Bakatin
+		 focus = SRU_chairwoman_ivanova
 		 focus = Chairman_ivanov
 	}
-	relative_position_id = Chairman_Bakatin
+	relative_position_id = SRU_chairwoman_ivanova
 	available = {
 				   country_exists = SRU
 	}
@@ -702,8 +708,8 @@ focus = {
 			#icon = to do: assign icon
 		}
 		if = {
-			limit = { has_country_flag = SRU_bakatin_heads_security_services }
-			add_ideas = Bakatins_MGB
+			limit = { has_country_flag = SRU_leonova_heads_security_services }
+			add_ideas = SRU_Leonovas_MGB
 		}
 		if = {
 			limit = { has_country_flag = SRU_ivanov_heads_security_services }
@@ -3747,6 +3753,10 @@ focus = {
 				completion_reward = {
 					add_ideas = Partisan_Army_Plan
 					country_event = SRU.16
+					modify_country_flag = {
+						flag = SRU_idealist_pragmatist_balance
+						value = 1
+					}
 				}
 
 
@@ -3988,6 +3998,10 @@ focus = {
 				completion_reward = {
 					country_event = SRU.90
 					add_ideas = SRU_Red_Army_Plans
+					modify_country_flag = {
+						flag = SRU_idealist_pragmatist_balance
+						value = -1
+					}
 				}
 
 			}
@@ -4196,6 +4210,10 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.92
+					modify_country_flag = {
+						flag = SRU_idealist_pragmatist_balance
+						value = 1
+					}
 				}
 
 			}
@@ -4217,6 +4235,10 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU.93
+					modify_country_flag = {
+						flag = SRU_idealist_pragmatist_balance
+						value = -1
+					}
 				}
 
 			}
@@ -4691,7 +4713,7 @@ focus = {
 			}
 	
 			focus = {
-				id = Gosplan_Megaproject_Committee
+				id = SRU_the_long_road_to_communism
 				icon = GFX
 				cost = 1
 				x = 0
@@ -4712,7 +4734,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					# will add mega projects in phase 2 
 				}
 
 			}

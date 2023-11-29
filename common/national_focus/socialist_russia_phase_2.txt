@@ -386,6 +386,8 @@
 		}
 	}
 
+	#### Red Army #####
+
 	focus = {
 		id = SRU_the_red_army_plan
 		icon = GFX_SRU_the_red_army_plan
@@ -393,6 +395,7 @@
 		x = 0
 		y = 1
 		relative_position_id = SRU_the_struggle_resumes
+		allow_branch = {has_country_flag = SRU_military_council_army_plan}
 		prerequisite = {
 			focus = SRU_the_struggle_resumes
 		}
@@ -979,12 +982,12 @@
 		id = SRU_founding_the_knightmare_corp
 		icon = GFX_SRU_founding_the_knightmare_corp
 		cost = 1
-		x = 6
+		x = 0
 		y = 1
-		relative_position_id = SRU_quantity_has_its_own_quality
+		relative_position_id = SRU_the_red_army_plan
 		prerequisite = {
-			focus = SRU_quantity_has_its_own_quality
-			focus = SRU_military_perfectionism
+			focus = SRU_the_red_army_plan
+			focus = SRU_expanding_the_partisan_model
 		}
 		search_filters = {
 		}
@@ -1251,6 +1254,619 @@
 		completion_reward = {
 		}
 	}
+
+	#### Partisan Army #####
+
+	focus = {
+		id = SRU_expanding_the_partisan_model
+		icon = GFX_SRU_expanding_the_partisan_model
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_the_struggle_resumes
+		allow_branch = {has_country_flag = SRU_partisans_army_plan}
+		prerequisite = {
+			focus = SRU_the_struggle_resumes
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_peoples_army_plan
+		icon = GFX_SRU_peoples_army_plan
+		cost = 1
+		x = -6
+		y = 1
+		relative_position_id = SRU_expanding_the_partisan_model
+		mutually_exclusive = {
+			focus = SRU_vanguard_army_plan
+		}
+		prerequisite = {
+			focus = SRU_expanding_the_partisan_model
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_local_training_centers
+		icon = GFX_SRU_local_training_centers
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_peoples_army_plan
+		prerequisite = {
+			focus = SRU_peoples_army_plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_everyone_a_reservist
+		icon = GFX_SRU_everyone_a_reservist
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_local_training_centers
+		prerequisite = {
+			focus = SRU_local_training_centers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_revolutionary_assault_rifle
+		icon = GFX_SRU_revolutionary_assault_rifle
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_peoples_army_plan
+		prerequisite = {
+			focus = SRU_peoples_army_plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_everyone_a_reservist
+		icon = GFX_SRU_everyone_a_reservist
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_local_training_centers
+		prerequisite = {
+			focus = SRU_local_training_centers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_decentralize_small_arms_production
+		icon = GFX_SRU_decentralize_small_arms_production
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_revolutionary_assault_rifle
+		prerequisite = {
+			focus = SRU_revolutionary_assault_rifle
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_revolutionary_command_structure
+		icon = GFX_SRU_revolutionary_command_structure
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_everyone_a_reservist
+		prerequisite = {
+			focus = SRU_everyone_a_reservist
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_flexible_supply_infastructure
+		icon = GFX_SRU_flexible_supply_infastructure
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_everyone_a_reservist
+		prerequisite = {
+			focus = SRU_everyone_a_reservist
+		}
+		prerequisite = {
+			focus = SRU_decentralize_small_arms_production
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_prevent_enemy_air_control
+		icon = GFX_SRU_prevent_enemy_air_control
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_decentralize_small_arms_production
+		prerequisite = {
+			focus = SRU_decentralize_small_arms_production
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_military_arsenal_strategy
+		icon = GFX_SRU_military_arsenal_strategy
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_revolutionary_command_structure
+		prerequisite = {
+			focus = SRU_revolutionary_command_structure
+		}
+		prerequisite = {
+			focus = SRU_flexible_supply_infastructure
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_general_purpouse_supply_trucks
+		icon = GFX_SRU_general_purpouse_supply_trucks
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_flexible_supply_infastructure
+		prerequisite = {
+			focus = SRU_flexible_supply_infastructure
+		}
+		prerequisite = {
+			focus = SRU_prevent_enemy_air_control
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_army_of_the_people
+		icon = GFX_SRU_army_of_the_people
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_military_arsenal_strategy
+		prerequisite = {
+			focus = SRU_military_arsenal_strategy
+		}
+		prerequisite = {
+			focus = SRU_gen
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	##### Vanguard Army Plan #####
+
+	focus = {
+		id = SRU_vanguard_army_plan
+		icon = GFX_SRU_vanguard_army_plan
+		cost = 1
+		x = 6
+		y = 1
+		relative_position_id = SRU_expanding_the_partisan_model
+		mutually_exclusive = {
+			focus = SRU_peoples_army_plan
+		}
+		prerequisite = {
+			focus = SRU_expanding_the_partisan_model
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_crucible_training_camps
+		icon = GFX_SRU_crucible_training_camps
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_vanguard_army_plan
+		prerequisite = {
+			focus = SRU_vanguard_army_plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_forge_revolutionary_warriors
+		icon = GFX_SRU_forge_revolutionary_warriors
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_crucible_training_camps
+		prerequisite = {
+			focus = SRU_crucible_training_camps
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_develop_infantry_mobility_vehicles
+		icon = GFX_SRU_develop_infantry_mobility_vehicles
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_vanguard_army_plan
+		prerequisite = {
+			focus = SRU_vanguard_army_plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_mobile_tank_destroyers
+		icon = GFX_SRU_mobile_tank_destroyers
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_develop_infantry_mobility_vehicles
+		prerequisite = {
+			focus = SRU_develop_infantry_mobility_vehicles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_vanguard_command_structure
+		icon = GFX_SRU_vanguard_command_structure
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_forge_revolutionary_warriors
+		prerequisite = {
+			focus = SRU_forge_revolutionary_warriors
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_specialist_infantry_weapons
+		icon = GFX_SRU_specialist_infantry_weapons
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_forge_revolutionary_warriors
+		prerequisite = {
+			focus = SRU_forge_revolutionary_warriors
+		}
+		prerequisite = {
+			focus = SRU_mobile_tank_destroyers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_interceptor_programme
+		icon = GFX_SRU_interceptor_programme
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_mobile_tank_destroyers
+		prerequisite = {
+			focus = SRU_mobile_tank_destroyers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_scaled_up_guerilla_strategies
+		icon = GFX_SRU_scaled_up_guerilla_strategies
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_vanguard_command_structure
+		prerequisite = {
+			focus = SRU_vanguard_command_structure
+		}
+		prerequisite = {
+			focus = SRU_specialist_infantry_weapons
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_airborne_supply_drops
+		icon = GFX_SRU_airborne_supply_drops
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_specialist_infantry_weapons
+		prerequisite = {
+			focus = SRU_specialist_infantry_weapons
+		}
+		prerequisite = {
+			focus = SRU_interceptor_programme
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_army_of_the_revolution
+		icon = GFX_SRU_army_of_the_revolution
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_scaled_up_guerilla_strategies
+		prerequisite = {
+			focus = SRU_scaled_up_guerilla_strategies
+		}
+		prerequisite = {
+			focus = SRU_airborne_supply_drops
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	##### Sonya Economy Branch #####
 
 	focus = {
 		id = SRU_transforming_the_economy

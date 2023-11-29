@@ -244,7 +244,7 @@ Jacobin_Controlled_Cheka = {
 		   }
 		}
 
-		State_Bureaucracy_Loyalty = {
+		SRU_Support_The_State = {
 		
 			allowed = {
 			   always = no
@@ -261,7 +261,7 @@ Jacobin_Controlled_Cheka = {
 		   }
 		}
 
-        Party_Bureaucracy_Loyalty = {
+        SRU_Support_The_Party = {
 		
 			allowed = {
 			   always = no
@@ -357,7 +357,7 @@ Jacobin_Controlled_Cheka = {
 		 }
 		}
 
-		Bakatins_MGB = {
+		SRU_Leonovas_MGB = {
 		
 			allowed = {
 			   always = no
@@ -370,11 +370,11 @@ Jacobin_Controlled_Cheka = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			compliance_growth_on_our_occupied_states = 0.25
-            encryption_factor = 0.1
-            decryption_factor = 0.1
-            intelligence_agency_defense = 0.15
-			operation_risk = -0.15
+			political_power_factor = 0.05
+			war_support_factor = 0.1
+			drift_defence_factor = 0.10
+			BR_revolutionary_drift = 0.02
+			party_popularity_stability_factor = 0.25
 		 }
 		}
 
@@ -424,7 +424,7 @@ Jacobin_Controlled_Cheka = {
 		 
 		}
 		
-		Factual_Media_Focus = {
+		SRU_Idealists_Media_Plan = {
 		
 			allowed = {
 			   always = no
@@ -437,13 +437,13 @@ Jacobin_Controlled_Cheka = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			drift_defence_factor = -0.15
-			stability_weekly = 0.005	
+			stability_weekly = -0.005	
+			war_support_weekly = 0.005
 		}
 		 
 		}
 
-        Dissident_Media_Focus = {
+        SRU_Pragmatists_Media_Plan = {
 		
 			allowed = {
 			   always = no
@@ -457,12 +457,13 @@ Jacobin_Controlled_Cheka = {
 		   
 		   modifier = {
 			drift_defence_factor = 0.15
-			war_support_weekly = 0.005	
+			stability_weekly = 0.005
+				
 		}
 		 
 		}
 
-		Dissidents_tolerated = {
+		SRU_expel_the_foreigners = {
 		
 			allowed = {
 			   always = no
@@ -475,14 +476,15 @@ Jacobin_Controlled_Cheka = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			liberal_drift = 0.02
-            BR_progressive_drift = 0.01
-            war_support_weekly = -0.005
+			production_factory_efficiency_gain_factor = -0.15
+			monthly_population = -100
+			war_support_factor = 0.15
+			consumer_goods_factor = -0.02
 		}
 		 
 		}
 
-		Dissident_Arrests = {
+		SRU_hire_the_foreigners = {
 		
 			allowed = {
 			   always = no
@@ -495,9 +497,10 @@ Jacobin_Controlled_Cheka = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			liberal_drift = -0.02
-            BR_progressive_drift = -0.01
-            war_support_weekly = 0.001
+			political_power_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.25
+			research_speed_factor = 0.02
+			stability_factor = 0.05
 
 		}
 		 
