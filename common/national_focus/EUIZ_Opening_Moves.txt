@@ -1053,9 +1053,6 @@ focus_tree = {
 
             completion_reward = {
             add_ideas = EIZ_Supremacy_in_Numbers
-          
-                hidden_effect = {
-              }
         }
     }   
     
@@ -1106,8 +1103,6 @@ focus_tree = {
                 type = transport_plane_equipment_1
                 amount = 50
               }
-                hidden_effect = {
-              }
         }
     }
 
@@ -1157,8 +1152,6 @@ focus_tree = {
                     type = strat_bomber_equipment_1
                     amount = 100
                 }
-                hidden_effect = {
-              }
         }
     }
 
@@ -1194,8 +1187,6 @@ focus_tree = {
             completion_reward = {
 
             add_ideas = EIZ_Great_War_Levels_Of_Production
-                hidden_effect = {
-              }
         }
     }
 
@@ -1229,13 +1220,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                 
-            add_ideas = EIZ_Supremacy_in_NumbersV2
-             
-                hidden_effect = {
-                 remove_ideas = EIZ_Supremacy_in_Numbers
-       
-              }
+                swap_ideas = {
+                    remove_idea = EIZ_Supremacy_in_Numbers
+                    add_idea = EIZ_Supremacy_in_NumbersV2
+                }
         }
     }
   
@@ -1269,13 +1257,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-            add_ideas = EIZ_Supremacy_in_NumbersV3
-
-                hidden_effect = {
-                 remove_ideas = EIZ_Supremacy_in_NumbersV2
-           
-              }
+                swap_ideas = {
+                    remove_idea = EIZ_Supremacy_in_NumbersV2 
+                    add_idea = EIZ_Supremacy_in_NumbersV3
+                }
         }
     }
   
@@ -1310,14 +1295,11 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-            remove_ideas = EIZ_Supremacy_in_NumbersV3               
-            add_ideas = EIZ_Supremacy_in_NumbersV4
-                hidden_effect = {
-                 remove_ideas = EIZ_Supremacy_in_NumbersV3               
-          
+                swap_ideas = {
+                    remove_idea = EIZ_Supremacy_in_NumbersV3       
+                    add_idea = EIZ_Supremacy_in_NumbersV4
+                }
               }
-        }
     }
 
     
@@ -1355,13 +1337,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-             add_ideas = EIZ_EIZ_Block_Out_The_Sky
-                hidden_effect = {
-                 remove_ideas = EIZ_Supremacy_in_NumbersV4
-        
+                    remove_ideas = EIZ_Great_War_Levels_Of_Production
+                    remove_ideas = EIZ_Supremacy_in_NumbersV4
+                    add_ideas = EIZ_EIZ_Block_Out_The_Sky
               }
-        }
     }
 
     focus = {
@@ -1397,19 +1376,13 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            add_tech_bonus = {
-                name = SPC_Inivation
-                category = air_equipment
-                bonus = 0.1
-            }
+            add_ideas = EIZ_Supremacy_in_Technology
             add_tech_bonus = {
                 category = air_equipment
                 uses = 1
                 ahead_reduction = 0.5
                 bonus = 0.5
                }
-                hidden_effect = {
-              }
         }
     }
 
@@ -1444,9 +1417,6 @@ focus_tree = {
 
             completion_reward = {
             add_ideas = EIZ_No_Expense_Spared
-           
-                hidden_effect = {
-              }
         }
     }
 
@@ -1481,11 +1451,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                
-                add_ideas = EIZ_Contacts_In_Aerospace_Research_idea
-         
-                hidden_effect = {
-              }
+                swap_ideas = {
+                    remove_idea = EIZ_No_Expense_Spared
+                    add_idea = EIZ_Contacts_In_Aerospace_Research_idea
+                }
         }
     }
 
@@ -1523,10 +1492,8 @@ focus_tree = {
 
             swap_ideas = {
                 remove_idea = EIZ_Contacts_In_Aerospace_Research_idea
-                add_idea = EIZ_The_Perfect_Fighter_idea
+                add_idea = EIZ_The_Perfect_Fighter
             }
-                hidden_effect = {
-              }
         }
     }
 
@@ -1560,10 +1527,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-
-            add_ideas = EIZ_Encourage_the_Best
-                hidden_effect = {
-              }
+                swap_ideas = {
+                    remove_idea = EIZ_Supremacy_in_Technology
+                    add_idea = EIZ_Encourage_the_Best
+                }
         }
     }
 
@@ -1681,14 +1648,9 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            swap_ideas = {
-                remove_idea = EIZ_The_Perfect_Fighter
-                
-                add_idea = EIZ_Knights_of_The_Sky
-            }
-                hidden_effect = {
-                    remove_idea = EIZ_Strike_Hard_Strike_Fast
-              }
+                remove_ideas = EIZ_Strike_Hard_Strike_Fast
+                remove_ideas = EIZ_The_Perfect_Fighter
+                add_ideas = EIZ_Knights_of_The_Sky
         }
     }
 
@@ -1856,7 +1818,17 @@ focus_tree = {
                     type = convoy
                     amount = 500
                 }
+                hidden_effect = {
+                    if = {
+                        limit = {has_completed_focus = "EIZ_calling_the_pale_jewel"}
+                        country_event ={
+                            id = EIZ.92
+                            days = 7
+                        }
+                    }
+                }
             }
+            
     }
     focus = {
         id = EIZ_calling_the_pale_jewel
@@ -1888,9 +1860,17 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            country_event = event.34
+            country_event = EIZ.34
             add_ideas = EIZ_calling_the_pale_jewel
-            # to do: event.34 doesn't exist should it be EIZ.34?
+            hidden_effect = {
+                if = {
+                    limit = {has_completed_focus = "EIZ_casablanca_proposal"}
+                    country_event ={
+                        id = EIZ.92
+                        days = 7
+                    }
+                }
+            }
         }
     }
     focus = {
@@ -1901,6 +1881,9 @@ focus_tree = {
 
         prerequisite = { 
             focus = EIZ_casablanca_proposal
+        }
+        prerequisite = { 
+            focus = EIZ_calling_the_pale_jewel
         }
         mutually_exclusive = { 
             focus = EIZ_international_banking_fraud 
@@ -1982,6 +1965,9 @@ focus_tree = {
         x = 1
         y = 1
 
+        prerequisite = { 
+            focus = EIZ_casablanca_proposal
+        }
         prerequisite = { 
             focus = EIZ_calling_the_pale_jewel
         }
@@ -2191,6 +2177,7 @@ focus_tree = {
 
             completion_reward = {
                add_ideas = EIZ_comb_the_prisons_and_banks
+               add_stability = -0.05
         }
     }
     focus = {
@@ -2267,6 +2254,12 @@ focus_tree = {
 
             completion_reward = {
                country_event = EIZ.30
+               hidden_effect = {
+                    country_event ={
+                        id = EIZ.93
+                        days = 7
+                    }
+                }
         }
     }
    
@@ -2869,7 +2862,7 @@ focus_tree = {
 
             completion_reward = {
             
-            country_event = EIZ.
+            country_event = EIZ.94
         }
     }
 
@@ -3297,7 +3290,22 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            add_ideas = EIZ_Lyons_High_Command
+            if = {
+                limit = {has_idea = EIZ_Valkyrie_Doctrine}
+                swap_ideas = {
+                    remove_idea = EIZ_Valkyrie_Doctrine
+                    add_idea = EIZ_Lyons_High_Command
+                }
+                
+            }
+            if = {
+                limit = {has_idea = EIZ_Stand_Firm}
+                swap_ideas = {
+                    remove_idea = EIZ_Stand_Firm
+                    add_idea = EIZ_Lyons_High_Command_2
+                }
+            }
+           
         }
     }
     focus = {
