@@ -387,18 +387,14 @@ focus_tree = {
         available = {		
             country_exists = RUS has_cosmetic_tag = EIZ
 			has_completed_focus = EIZ_Final_Selection
-            NOT = {
-				has_country_flag = {
+			has_country_flag = {
 					flag = eiz_leadership
-					value < 3
+					value < 4
 				  }
-          
-              has_country_flag = {
+            has_country_flag = {
 				flag = eiz_leadership
-				value > -3
+				value > -4
 			   }
-            
-        }
         }
             bypass = {
             }
@@ -4976,9 +4972,6 @@ focus_tree = {
 
             completion_reward = {
                 country_event = EIZ.50
-
-              hidden_effect = {
-            }
         }
     }
 
@@ -5586,10 +5579,6 @@ focus_tree = {
 
             completion_reward = {
                add_ideas = EIZ_Decentralized_Command
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5628,10 +5617,6 @@ focus_tree = {
                 remove_idea = EIZ_Decentralized_Command
                 add_idea = EIZ_Decentralized_Command_V2
              }   
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5670,10 +5655,6 @@ focus_tree = {
                     remove_idea = EIZ_Decentralized_Command_V2
                     add_idea = EIZ_Decentralized_Command_V3
                  }   
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5712,10 +5693,6 @@ focus_tree = {
                     remove_idea = EIZ_Decentralized_Command_V3
                     add_idea = EIZ_Decentralized_Command_V4
                  }   
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5754,10 +5731,6 @@ focus_tree = {
                     remove_idea = EIZ_Decentralized_Command_V4
                     add_idea = EIZ_Decentralized_Command_V5
                  }   
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5796,10 +5769,6 @@ focus_tree = {
 
             completion_reward = {
             add_ideas = EIZ_imtegrated_Command_V1
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5838,10 +5807,6 @@ focus_tree = {
                 remove_idea = EIZ_imtegrated_Command_V1
                 add_idea = EIZ_imtegrated_Command_V2
             }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5880,10 +5845,6 @@ focus_tree = {
                 remove_idea = EIZ_imtegrated_Command_V2
                 add_idea = EIZ_imtegrated_Command_V3
             }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5923,10 +5884,6 @@ focus_tree = {
                 remove_idea = EIZ_imtegrated_Command_V3
                 add_idea = EIZ_imtegrated_Command_V4
             }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5965,10 +5922,6 @@ focus_tree = {
                 remove_idea = EIZ_imtegrated_Command_V4
                 add_idea = EIZ_imtegrated_Command_V5
             }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -6045,15 +5998,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            add_tech_bonus = {
-                name = modern_armor
-                category = armor
-                uses = 2
-                bonus = 0.5
-            }
+                add_doctrine_cost_reduction = {
+                    cost_reduction = 0.5
+                    uses = 2
+                    category = mobile_warfare
+                }
             add_ideas = Modern_armor_1
-              hidden_effect = {
-            }
         }
     }
     
@@ -6092,8 +6042,6 @@ focus_tree = {
                 amount = 1000
             }
             add_ideas = Motorized_Infantry
-              hidden_effect = {
-            }
         }
     }
     
@@ -6128,8 +6076,6 @@ focus_tree = {
 
             completion_reward = {
             load_oob = "EIZ_2nd_German_Aid"
-              hidden_effect = {
-            }
         }
     }
     
@@ -6168,8 +6114,6 @@ focus_tree = {
                     remove_idea = Motorized_Infantry
                     add_idea = Motorized_Infantry_2
             }       
-              hidden_effect = {
-            }
         }
     }
 
@@ -6209,8 +6153,6 @@ focus_tree = {
                     uses = 2
                     bonus = 0.5
                 }
-              hidden_effect = {
-            }
         }
     }
 
@@ -6248,8 +6190,6 @@ focus_tree = {
             swap_ideas = {
                 remove_idea = Modern_armor_1
                 add_idea = Modern_armor_2
-            }
-              hidden_effect = {
             }
         }
     }
