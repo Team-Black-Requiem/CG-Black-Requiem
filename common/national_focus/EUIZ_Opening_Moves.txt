@@ -564,10 +564,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
-
-                hidden_effect = {
-              }
+                country_event = EIZ.95
         }
     } 
 
@@ -599,10 +596,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.3
-
-                hidden_effect = {
-              }
+                country_event = EIZ.96
         }
     }
 
@@ -4247,10 +4241,6 @@ focus_tree = {
                     type = annex_everything
                                 }
                 }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -5536,11 +5526,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            
-                hidden_effect = {
-              }
-
-              #test
+                country_event = EIZ.95
         }
     }
 
@@ -5957,11 +5943,44 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            
-                hidden_effect = {
-              }
-
-              #test
+            if ={
+                limit = {has_completed_focus = EIZ_Unit_Autonomy}
+                add_field_marshal_role = {
+                    character = EIZ_Lieutenant_Colonel_Rikkert_Durenik
+                    skill = 4
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 2
+                    logistics_skill = 2
+                    traits = {
+                        logistics_wizard
+                        fast_planner
+                        thorough_planner
+                        organizer
+                        skilled_staffer
+                        adaptable
+                    }
+                }
+            }
+            if ={
+                limit = {has_completed_focus = EIZ_Digital_Battlespace}
+                add_field_marshal_role = {
+                    character = EIZ_Lieutenant_Colonel_Rikkert_Durenik
+                    skill = 4
+                    attack_skill = 3
+                    defense_skill = 3
+                    planning_skill = 4
+                    logistics_skill = 4
+                    traits = {
+                        logistics_wizard
+                        fast_planner
+                        thorough_planner
+                        organizer
+                        skilled_staffer
+                        organisational_leader
+                    }
+                }
+            }  
         }
     }
 
