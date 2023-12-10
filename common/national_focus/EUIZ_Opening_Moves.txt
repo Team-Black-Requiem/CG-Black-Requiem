@@ -833,11 +833,7 @@ focus_tree = {
 
             completion_reward = {
                 
-                country_event = EIZ.5
-
-                hidden_effect = {
-              }
-              # to do: this event is from the leader decision chain what goes here?
+                country_event = EIZ.97
         }
     }
 
@@ -4279,8 +4275,7 @@ focus_tree = {
 
             completion_reward = {
                 add_ideas = Economic_board
-              hidden_effect = {
-            }
+                country_event = EIZ.50
         }
     }
 
@@ -4961,7 +4956,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.50
+                country_event = EIZ.100
         }
     }
 
@@ -4999,14 +4994,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                add_tech_bonus = {
-                    name = Heavy_tank_designs 
-                    category = MBT_armour
-                    uses = 2
-                    bonus = 0.5
-                }
-              hidden_effect = {
-            }
+                add_ideas = Battlefield_Domination
         }
     }
 
@@ -5042,8 +5030,6 @@ focus_tree = {
 
             completion_reward = {
                 add_ideas = Heavy_infantry_support
-              hidden_effect = {
-            }
         }
     }
                 
@@ -5079,13 +5065,15 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+                if = {
+                    limit = {NOT = {has_tech = fighter1}}
+                    set_technology = {fighter1 = 1}
+                }
                 add_equipment_to_stockpile = {
                     type = jet_fighter_equipment
                     amount = 100
                 }
                 add_ideas = Clear_the_skies
-              hidden_effect = {
-            }
         }
     }
     
@@ -5124,9 +5112,6 @@ focus_tree = {
                     remove_idea = Heavy_infantry_support
                     add_idea = Heavy_infantry_support_2
                 }
-              
-              hidden_effect = {
-            }
         }
     }
     
@@ -5160,9 +5145,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-            add_ideas = Battlefield_Domination
-              hidden_effect = {
-            }
+                add_tech_bonus = {
+                    name = Heavy_tank_designs 
+                    category = MBT_armour
+                    uses = 2
+                    bonus = 0.5
+                }
         }
     }
 
@@ -5236,7 +5224,7 @@ focus_tree = {
             completion_reward = {
                 swap_ideas = {
                     remove_idea = Battlefield_Domination_2
-                    add_idea = Battlefield_Domination_4
+                    add_idea = Battlefield_Domination_3
                 }
                 hidden_effect = {
             }
@@ -5274,15 +5262,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-              
-             add_ideas = Unstoppables_Force
-              
-              hidden_effect = {
-                remove_ideas = Battlefield_Domination_4
+                remove_ideas = Battlefield_Domination_3
                 remove_ideas = Clear_the_skies
                 remove_ideas = Heavy_infantry_support_2
-            
-            }
+                add_ideas = Unstoppable_Force
         }
     }
 
@@ -5317,14 +5300,10 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                country_event = EIZ.50
                 swap_ideas = {
                     remove_idea = Battlefield_Domination
                     add_idea = Battlefield_Domination_2
                 }
-                
-              hidden_effect = {
-            }
         }
     }
 
@@ -5359,10 +5338,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-               
-
-              hidden_effect = {
-            }
+                country_event = EIZ.102
         }
     }
 
@@ -5399,9 +5375,6 @@ focus_tree = {
             completion_reward = {
                add_manpower = 25000
                army_experience = 25
-
-              hidden_effect = {
-            }
         }
     }
 
@@ -5437,9 +5410,7 @@ focus_tree = {
 
             completion_reward = {
                add_war_support = 0.1
-
-              hidden_effect = {
-            }
+            country_event = EIZ.108
         }
     }
 
@@ -5488,9 +5459,6 @@ focus_tree = {
                     logistics_skill = 5
                     legacy_id=-1
                 }
-                
-              hidden_effect = {
-            }
         }
     
     }
@@ -5602,7 +5570,8 @@ focus_tree = {
              swap_ideas = {
                 remove_idea = EIZ_Decentralized_Command
                 add_idea = EIZ_Decentralized_Command_V2
-             }   
+             }
+             country_event = EIZ.98
         }
     }
 
@@ -5793,6 +5762,7 @@ focus_tree = {
                 remove_idea = EIZ_imtegrated_Command_V1
                 add_idea = EIZ_imtegrated_Command_V2
             }
+            country_event = EIZ.99
         }
     }
 
@@ -5943,6 +5913,7 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
+            country_event = EIZ.101
             if ={
                 limit = {has_completed_focus = EIZ_Unit_Autonomy}
                 add_field_marshal_role = {
@@ -5959,6 +5930,19 @@ focus_tree = {
                         organizer
                         skilled_staffer
                         adaptable
+                    }
+                }
+                add_advisor_role = {
+                    character = EIZ_Lieutenant_Colonel_Rikkert_Durenik
+                    activate = yes
+                    advisor = {
+                        slot = high_command
+                        cost = 150
+                        #idea_token = to do: assign an image
+                        traits = {
+                            army_regrouping_2
+                            army_chief_maneuver_2
+                        }
                     }
                 }
             }
@@ -5978,6 +5962,19 @@ focus_tree = {
                         organizer
                         skilled_staffer
                         organisational_leader
+                    }
+                }
+                add_advisor_role = {
+                    character = EIZ_Lieutenant_Colonel_Rikkert_Durenik
+                    activate = yes
+                    advisor = {
+                        slot = high_command
+                        cost = 150
+                        #idea_token = to do: assign an image
+                        traits = {
+                            army_chief_organizational_2
+                            army_chief_planning_2
+                        }
                     }
                 }
             }  
@@ -6248,8 +6245,6 @@ focus_tree = {
                 remove_idea = Modern_armor_2
                 add_idea = Modern_armor_3
             }
-              hidden_effect = {
-            }
         }
     }
 
@@ -6291,8 +6286,6 @@ focus_tree = {
             remove_ideas = Modern_armor_3
             remove_ideas = Motorized_Infantry_2
             add_ideas = Lightning_Warfare_1   
-              hidden_effect = {
-            }
         }
     }
 

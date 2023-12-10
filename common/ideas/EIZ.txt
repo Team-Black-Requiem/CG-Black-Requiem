@@ -409,7 +409,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				build_cost_ic = -0.1
 			}
@@ -425,7 +425,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				maximum_speed = 0.1
 			}
@@ -1122,7 +1122,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus ={
-			artillery_equipment ={
+			artillery ={
 				instant = yes
 				soft_attack = 0.05
 				hard_attack = 0.05
@@ -1139,7 +1139,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus ={
-			armor ={
+			cold_war_tank_equip ={
 				instant = yes
 				armor_value = 0.05
 			}
@@ -1388,7 +1388,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				hard_attack = 0.1
 				reliability = -0.05
@@ -1405,7 +1405,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				ap_attack = 0.05
 			}
@@ -1421,7 +1421,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				soft_attack = 0.05
 				armor_value = 0.1
@@ -1641,7 +1641,7 @@ ideas = {
 		removal_cost = -1
 
 		equipment_bonus = {
-			artillery_equipment = {
+			artillery = {
 				defense = 0.07
 				soft_attack = 0.07
 				instant = yes
@@ -1916,7 +1916,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				reliability_factor = 0.05
 				max_organisation = 0.05
@@ -1932,7 +1932,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				build_cost_ic = -0.2
 			}
@@ -1951,7 +1951,7 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				instant = yes
 				fuel_consumption_factor = -0.15
 			}
@@ -2043,7 +2043,7 @@ ideas = {
 				maximum_speed = 0.05
 				breakthrough = 0.05
 		        build_cost_ic = 0.1
-				defense = 0.05
+				breakthrough = 0.05
 				attack = 0.05
 			}
 		}
@@ -2064,7 +2064,7 @@ ideas = {
 				maximum_speed = 0.15
 				breakthrough = 0.05
 		        build_cost_ic = -0.1
-				defense = 0.05
+				breakthrough = 0.05
 				attack  = 0.05
 				reliability_factor  = 0.05
 			}
@@ -2085,7 +2085,7 @@ ideas = {
 				maximum_speed = 0.2
 				breakthrough = 0.15
 		        build_cost_ic = -0.1
-				defense = 0.05
+				breakthrough =  0.05
 				attack  = 0.05
 				reliability_factor  = 0.15
 			}
@@ -2158,11 +2158,11 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-		   category_tanks = {
+		   cold_war_tank_equip = {
 			instant = yes
 			soft_attack = 0.05
 			hard_attack = 0.05
-			defense = 0.05
+			breakthrough = 0.05
 		   }
 		}
 		
@@ -2176,17 +2176,17 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-		   category_tanks = {
+			cold_war_tank_equip = {
 			armor_value = 0.1
 			soft_attack = 0.1
 			hard_attack = 0.1
-			defense = 0.05
+			breakthrough = 0.05
 			build_cost_ic = 0.3
 			instant = yes
 		   }
 		}
 	}
-	Battlefield_Domination_4 = {
+	Battlefield_Domination_3 = {
 		allowed = {
 			always = no
 		}
@@ -2195,14 +2195,13 @@ ideas = {
 		}
 		removal_cost = -1
 		equipment_bonus = {
-		   category_tanks = {
+			cold_war_tank_equip = {
 			armor_value = 0.1
 			soft_attack = 0.1
 			hard_attack = 0.1
-			defense = 0.05
+			breakthrough =  0.05
 			build_cost_ic = 0.3
-			hg_armor_piercing = 0.15
-			lg_armor_piercing = 0.15
+			ap_attack = 0.15
 			instant = yes
 		   }
 		}
@@ -2216,12 +2215,9 @@ ideas = {
 			always = yes
 		}
 		removal_cost = -1
-	    equipment_bonus = {
-			category_all_infantry = {
-				entrenchment = 0.1
-				maximum_speed = 0.05
-				instant = yes
-			}
+		modifier = {
+			army_speed_factor = 0.05
+			max_dig_in_factor = 0.1
 		}
 }
 
@@ -2234,12 +2230,14 @@ Heavy_infantry_support_2 = {
 	}
 	removal_cost = -1
 	equipment_bonus = {
-		 infantry = {
-			entrenchment = 0.1
-			maximum_speed  = 0.1
+		infantry_equipment = {
 			defense = 0.1
 			instant = yes
 		}
+	}
+	modifier = {
+		army_speed_factor = 0.1
+		max_dig_in_factor = 0.1
 	}
 }
 
@@ -2256,7 +2254,7 @@ Clear_the_skies = {
 		air_mission_efficiency = 0.1
 	}
 }
-Unstoppables_Force = {
+Unstoppable_Force = {
 	allowed = {
 		always = no
 	}
@@ -2265,19 +2263,18 @@ Unstoppables_Force = {
 	}
 	removal_cost = -1
 	equipment_bonus = {
-	   category_tanks = {
+		cold_war_tank_equip = {
 		armor_value = 0.1
 		soft_attack = 0.15
 		hard_attack = 0.15
-		defense = 0.05
+		breakthrough =  0.05
 		build_cost_ic = 0.30
-		hg_armor_piercing = 0.15
-		lg_armor_piercing = 0.15
+		ap_attack = 0.15
 		instant = yes
 	   }
-	       infantry ={
-			entrenchment = 0.1
-			maximum_speed = 0.1
+	}
+	equipment_bonus = {
+		infantry ={
 			max_organisation = 0.1
 			soft_attack = 0.1
 			instant = yes
@@ -2285,6 +2282,8 @@ Unstoppables_Force = {
 	}
 	modifier = {
 		air_mission_efficiency = 0.1
+		army_speed_factor = 0.1
+		max_dig_in_factor = 0.1
 	}
 }
 
@@ -2355,9 +2354,8 @@ Repurposing_Underground_Metro_Lanes = {
 		modifier = {
 			initiative_factor = 0.1
 			land_night_attack = 0.1
-			heat_attrition_factor = -0.1
-			winter_attrition_factor = -0.1
 			army_morale_factor = 0.1
+			attrition = -0.1
 		}
 
 	}
@@ -2374,11 +2372,9 @@ Repurposing_Underground_Metro_Lanes = {
 		modifier = {
 			initiative_factor = 0.1
 			land_night_attack = 0.1
-			heat_attrition_factor = -0.1
-			winter_attrition_factor = -0.1
+			attrition = -0.1
 			army_morale_factor = 0.1
 			equipment_upgrade_xp_cost = -0.1
-			supply_combat_penalties_on_core_factor = -0.1
 			supply_consumption_factor = -0.1
 			
 		}
@@ -2397,11 +2393,9 @@ Repurposing_Underground_Metro_Lanes = {
 		modifier = {
 			initiative_factor = 0.1
 			land_night_attack = 0.1
-			heat_attrition_factor = -0.1
-			winter_attrition_factor = -0.1
+			attrition = -0.1
 			army_morale_factor = 0.2
 			equipment_upgrade_xp_cost = -0.1
-			supply_combat_penalties_on_core_factor = -0.1
 			supply_consumption_factor = -0.1
             max_planning = 0.1
 		}
@@ -2423,10 +2417,8 @@ Repurposing_Underground_Metro_Lanes = {
             land_night_attack = 0.15
             army_morale_factor = 0.30
             equipment_upgrade_xp_cost = -0.15
-            supply_combat_penalties_on_core_factor = -0.15
             supply_consumption_factor = -0.15
-			heat_attrition_factor = -0.1
-			winter_attrition_factor = -0.1
+			attrition = -0.1
 			max_planning = 0.1
 			planning_speed = 0.15
 		}	
@@ -2498,13 +2490,7 @@ Repurposing_Underground_Metro_Lanes = {
 		  land_doctrine_cost_factor = -0.15
 	      initiative_factor = 0.1
 		  max_planning = 0.1
-		}
-
-		equipment_bonus = {
-			logistics_company = {
-				supply_consumption_factor = -0.1
-				instant = yes
-			}
+		  supply_consumption_factor = -0.1
 		}
 	}
 
@@ -2523,13 +2509,7 @@ Repurposing_Underground_Metro_Lanes = {
 		  land_doctrine_cost_factor = -0.15
 	      initiative_factor = 0.15
 		  max_planning = 0.15
-		}
-
-		equipment_bonus = {
-			logistics_company = {
-				supply_consumption_factor = -0.1
-				instant = yes
-			}
+		  supply_consumption_factor = -0.1
 		}
 	}
 
@@ -2581,7 +2561,7 @@ br_tank_manufacturer = {
 		}
 
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				soft_attack = 0.15
 				reliability = 0.15
 				instant = yes
@@ -2604,7 +2584,7 @@ br_tank_manufacturer = {
 		}
 
 		equipment_bonus = {
-			armor = {
+			cold_war_tank_equip = {
 				soft_attack = 0.15
 				reliability = 0.15
 				instant = yes
