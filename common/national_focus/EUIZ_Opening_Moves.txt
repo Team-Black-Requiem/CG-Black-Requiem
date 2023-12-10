@@ -704,10 +704,6 @@ focus_tree = {
 
             completion_reward = {
                 country_event = EIZ.13
-
-
-                hidden_effect = {
-              }
         }
     }
 
@@ -744,16 +740,12 @@ focus_tree = {
             available_if_capitulated = no
 
             completion_reward = {
-                EIZ = {
+                RUS = {
                     declare_war_on = {
                     target = MRU
                     type = annex_everything
                     }
                 }
-                hidden_effect = {
-              }
-
-              #test
         }
     }
 
@@ -796,9 +788,6 @@ focus_tree = {
                     type = annex_everything
                                 }
                 }
-
-                hidden_effect = {
-              }
         }
     }
 
@@ -4198,48 +4187,6 @@ focus_tree = {
         }
     }
 
-    focus = {
-        id = EIZ_A_Just_War
-        icon = GFX_EIZ_Fight_The_Monarchists
-        x = 0
-        y = 2
-
-        prerequisite = { 
-            focus = EIZ_Request_Economic_Support_V2
-        }
-        prerequisite = { 
-            focus = EIZ_Request_Unoffical_Renforcements
-        }
-        relative_position_id = EIZ_FredericaVictory
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = RUS has_cosmetic_tag = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-                RUS = {
-                    declare_war_on = {
-                    target = MRU
-                    type = annex_everything
-                                }
-                }
-        }
-    }
-
     #Fredireca tree
 
     focus = {
@@ -5154,44 +5101,6 @@ focus_tree = {
         }
     }
 
-    
-    focus = {
-        id = EIZ_Heavy_Guns
-        
-        x = 0
-        y = 1
-
-        prerequisite = { 
-            focus = EIZ_Absolute_Defence_Total_Attack
-        }
-        relative_position_id = EIZ_Absolute_Defence_Total_Attack
-        
-        cost = 3
-
-        ai_will_do = {
-			factor = 100
-		}
-
-        available = {		
-            country_exists = RUS has_cosmetic_tag = EIZ
-    
-            }
-    
-            bypass = {
-            }
-    
-            cancel_if_invalid = yes
-            continue_if_invalid = no
-            available_if_capitulated = no
-
-            completion_reward = {
-              
-              hidden_effect = {
-            }
-        }
-    }
-
-    
     focus = {
         id = EIZ_Heavy_Guns
         
@@ -5226,12 +5135,9 @@ focus_tree = {
                     remove_idea = Battlefield_Domination_2
                     add_idea = Battlefield_Domination_3
                 }
-                hidden_effect = {
-            }
         }
     }
-
-    
+ 
     focus = {
         id = EIZ_Unstoppable_Force
         
