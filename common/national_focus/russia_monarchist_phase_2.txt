@@ -1864,7 +1864,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-         add_ideas = MRU_Naval_Production_Drive
+         add_ideas = MRU_Naval_Production_Drive_idea
 		}
 
 	}
@@ -1890,7 +1890,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-         add_ideas = MRU_Submarine_Warfare
+         add_ideas = MRU_Submarine_Warfare_idea
 		}
 
 	}
@@ -1995,7 +1995,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Heavy_Gun_Doctrine
+        add_ideas = MRU_Heavy_Gun_Doctrine_idea
 		}
 
 	}
@@ -2084,7 +2084,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Traditional_Military_Exercises
+        add_ideas = MRU_Traditional_Military_Exercises_idea
 		}
 
 	}
@@ -2110,7 +2110,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Russian_Officers_School
+        add_ideas = MRU_Russian_Officers_School_idea
 		}
 
 	}
@@ -2190,7 +2190,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Advanced_Combat_Simulators
+        add_ideas = MRU_Advanced_Combat_Simulators_idea
 		}
 
 	}
@@ -2216,7 +2216,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Brittanian_Backed_Academy
+        add_ideas = MRU_Brittanian_Backed_Academy_idea
 		}
 
 	}
@@ -2266,7 +2266,7 @@ id = MRU_monarchist_phase_2
 				type = CAS_equipment_2
 				amount = 50
 			}
-            add_ideas = MRU_Our_Own_Airforce
+            add_ideas = MRU_Our_Own_Airforce_idea
 			modify_country_flag = {
 				flag = sovereignty
 				value = -1
@@ -2298,7 +2298,12 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        add_tech_bonus = {
+			name = MRU_Domestic_Design_Comptetion
+			category = air_equipment
+			uses = 4
+			bonus = 0.5
+		}
 		}
 
 	}
@@ -2324,7 +2329,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Russian_Air_Academy
+        add_ideas = MRU_Russian_Air_Academy_idea
 		}
 
 	}
@@ -2387,7 +2392,13 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+       add_tech_bonus = {
+		name = MRU_Brittanian_Fighter_Models
+		uses = 2
+		category = jet_technology
+		bonus = 0.75
+		ahead_reduction = 0.5
+	   }
 		}
 
 	}
@@ -2413,7 +2424,26 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+       add_ace = {
+		name = yeti
+		surname = alibino
+		callsign = bear_claw 
+		type = support_genius
+	   }
+
+	   add_ace = {
+		name = Friz
+		surname = qualitas
+		callsign = razor_talon
+		type = support_genius
+	   }
+
+	   add_ace = {
+		name = Kruger
+		surname = vi
+		callsign = tsars_thunder
+		type = support_genius
+	   }
 		}
 
 	}
@@ -2445,7 +2475,13 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+            add_tech_bonus = {
+				name = Secret_project
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 0.5
+				category = knightmare_all
+			}
 			modify_country_flag = {
 				flag = sovereignty
 				value = 3
@@ -2502,7 +2538,7 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
         
-			add_ideas = MRU_Early_Models
+			add_ideas = MRU_Early_Models_idea
 		}
 
 	}
@@ -2617,11 +2653,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Combined_Arms_Exercises
-		}
+        add_ideas = MRU_Combined_Arms_Exercises_idea
 
 	}
-
+	}
     ###economic matters####
     focus = {
 		id = MRU_Economic_Matters
@@ -2779,11 +2814,10 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Safeguarding_Regulations
-		}
+        add_ideas = MRU_Safeguarding_Regulations_idea
 
 	}
-
+	}
 	focus = {
 		id = MRU_Foster_Industrial_Cooperation
 		icon = GFX_MRU_the_FIRST_test
@@ -2832,11 +2866,11 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
         swap_ideas = {
-			remove_idea = MRU_Safeguarding_Regulations
-			add_idea = MRU_The_Careful_Balance
+			remove_idea = MRU_Safeguarding_Regulations_idea
+			add_idea = MRU_The_Careful_Balance_idea
 		} 
 		hidden_effect = {
-			remove_ideas = MRU_The_Bounty_of_Russia
+			remove_ideas = MRU_The_Bounty_of_Russia_idea
 		}
 		}
 
@@ -3022,7 +3056,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-         add_ideas = MRU_Labour_From_The_Areas
+         add_ideas = MRU_Labour_From_The_Areas_idea
 		}
 
 	}
@@ -3050,8 +3084,8 @@ id = MRU_monarchist_phase_2
 		completion_reward = {
             
 			swap_ideas = {
-				remove_idea = MRU_Labour_From_The_Areas
-				add_idea = MRU_Brittanian_playground
+				remove_idea = MRU_Labour_From_The_Areas_idea
+				add_idea = MRU_Brittanian_playground_idea
 			}
 		}
 
@@ -3078,7 +3112,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-           add_ideas = MRU_State_Industry_Investments
+           add_ideas = MRU_State_Industry_Investments_idea
 			random_core_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -3137,7 +3171,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Consumer_Industry_Expansions
+        add_ideas = MRU_Consumer_Industry_Expansions_idea
 		}
 
 	}
@@ -3193,7 +3227,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-            add_ideas = MRU_Conglomerates_Of_Our_Own
+            add_ideas = MRU_Conglomerates_Of_Our_Own_idea
 			modify_country_flag = {
 				flag = sovereignty
 				value = 2
@@ -3224,8 +3258,8 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
        swap_ideas = {
-		remove_idea = MRU_Conglomerates_Of_Our_Own
-		add_idea = MRU_The_Bounty_of_Russia
+		remove_idea = MRU_Conglomerates_Of_Our_Own_idea
+		add_idea = MRU_The_Bounty_of_Russia_idea
 	   }
     
 		}
@@ -3254,8 +3288,8 @@ id = MRU_monarchist_phase_2
 	
 		completion_reward = {
           swap_ideas = {
-			remove_idea = MRU_The_Bounty_of_Russia
-			add_idea = MRU_A_Russian_Economy
+			remove_idea = MRU_The_Bounty_of_Russia_idea
+			add_idea = MRU_A_Russian_Economy_idea
 		  }
 			modify_country_flag = {
 				flag = sovereignty
@@ -3448,7 +3482,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-			add_ideas = MRU_Brittanian_Special_Legal_Protections
+			add_ideas = MRU_Brittanian_Special_Legal_Protections_idea
         add_offsite_building = {
 			type = industrial_complex
 			level = 2
@@ -3653,7 +3687,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Brittanian_Special_Legal_Protections
+        add_ideas = MRU_Brittanian_Special_Legal_Protections_idea
 	    modify_country_flag = {
 			flag = sovereignty
 			value = -1
@@ -3713,7 +3747,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-        add_ideas = MRU_Lets_Not_Cross_That_Line
+        add_ideas = MRU_Lets_Not_Cross_That_Line_idea
 		modify_country_flag = {
 			flag = sovereignty
 			value = 1
@@ -3747,7 +3781,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       add_ideas = MRU_OSI_Cooperation
+       add_ideas = MRU_OSI_Cooperation_idea
 	   modify_country_flag = {
 		flag = sovereignty
 		value = -1
