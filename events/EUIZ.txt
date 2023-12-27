@@ -2257,5 +2257,61 @@ country_event = { #EIZ_Codify_Rules_Of_Engagement
 
   }
 }
+country_event = { #EIZ_Request_Economic_Support_V3
+  id = EIZ.109
+  title = EIZ.109.t
+  desc = EIZ.109.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.109.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Force_Russians_To_War
+  id = EIZ.110
+  title = EIZ.110.t
+  desc = EIZ.110.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.110.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_A_Desperate_War
+  id = EIZ.111
+  title = EIZ.111.t
+  desc = EIZ.111.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    RUS = {
+      declare_war_on = {
+      target = MRU
+      type = annex_everything
+                  }
+  }
+  }
+
+  option = {
+      name = EIZ.111.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
 ### INTERVENE IN THE EAST EVENTS
 
