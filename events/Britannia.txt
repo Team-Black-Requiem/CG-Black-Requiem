@@ -224,74 +224,7 @@ country_event = {
 	
 }
 
-country_event = {  
-	id = BRT.6
-	title = BRT.6.t
-	desc = BRT.6.d
-	picture = GFX_BRT_chi_flag
-	fire_only_once = yes
-	is_triggered_only = yes
 
-    mean_time_to_happen = { days = 1 }
-	 
-	
-	
-		option = {	
-		name = BRT.6.b
-		add_political_power = -50
-		add_popularity = {
-    ideology = BR_autocracy
-    popularity = -0.10
-	}
-		white_peace = PHI
-				 						hidden_effect = {
-	     CHI = {
-         puppet = PHI
-          }
-		  PHI = {
-    add_popularity = { ideology = BR_autocracy popularity = 0.80 }
-    add_popularity = { ideology = BR_authoritarian popularity = 0.25 }
-	add_popularity = { ideology = BR_supremacist popularity = 0.10 }
-	add_popularity = { ideology = BR_liberalism popularity = 0.03 }
-	add_popularity = { ideology = BR_progressive popularity = 0.02 }
-
-    set_politics = {
-        ruling_party = BR_autocracy
-        last_election = "1936.5.16"
-        election_frequency = 48
-        elections_allowed = no
-    }
- }
-
-        }
-		
-		ai_chance = {
-			factor = 80
-		}
-		
-		
-    }
-
-	option = {	
-		name = BRT.6.a
-		add_political_power = 50
-		add_popularity = {
-    ideology = BR_autocracy
-    popularity = 0.05
-	}
-	declare_war_on = {
-		target = CHI
-		type = annex_everything
-	}
-		
-		ai_chance = {
-			factor = 0
-		}
-		
-		
-    }
-	
-}
 
 country_event = {  
 	id = BRT.7
