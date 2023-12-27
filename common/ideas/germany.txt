@@ -58,23 +58,33 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				add_tech_bonus = {
-					category = air_equipment {
-						base = 0.10
-
-					}
-				}
 			}
+
+			research_bonus = {
+                air_equipment = 0.10
+            }
 		}
 
 		GER_obsession = {
 			modifier = {
-				equipment_bonus = {
-					air_equipment = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-				}
+			}
+			equipment_bonus = { anti_air_equipment  = { instant = yes build_cost_ic = -0.05 } }
+		}
+
+		GER_idea_swapping = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			modifier = {
+				weekly_manpower = +500
+				weekly_stability = +0.05
 			}
 		}
 	

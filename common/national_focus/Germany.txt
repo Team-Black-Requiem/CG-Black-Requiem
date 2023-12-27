@@ -112,6 +112,23 @@
 			focus = GER_intermediate_idea_creation
 		}
 		completion_reward = { 
+			remove_ideas =  GER_obsession
+			add_ideas = GER_idea_swapping
+		}
+	}
+
+	focus = {
+		id = GER_event_creation
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id =  GER_general_implementation
+		prerequisite = {
+			focus = GER_general_implementation
+		}
+		completion_reward = { 
+			country_event = GER.2
 		}
 	}
 }
