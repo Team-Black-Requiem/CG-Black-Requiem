@@ -120,7 +120,7 @@
 	focus = {
 		id = GER_event_creation
 		icon = GFX_EUR_expedition_to_the_north_pole
-		cost = 1
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id =  GER_general_implementation
@@ -129,6 +129,35 @@
 		}
 		completion_reward = { 
 			country_event = GER.2
+		}
+	}
+
+	focus = {
+		id = GER_event_localisation
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  GER_event_creation
+		prerequisite = {
+			focus = GER_event_creation
+		}
+		completion_reward = { 
+		}
+	}
+
+	focus = {
+		id = GER_event_interactions
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  GER_event_localisation
+		prerequisite = {
+			focus = GER_event_localisation
+		}
+		completion_reward = { 
+			country_event = GER.3
 		}
 	}
 }

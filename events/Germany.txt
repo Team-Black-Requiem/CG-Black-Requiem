@@ -35,3 +35,35 @@ country_event = {
 		add_political_power = 100
     }     
 }
+
+country_event = {  
+	id = GER.3
+	title = GER.3.t
+	desc = GER.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GER.3.a
+		ai_chance = {
+			base = 100
+		}
+		add_stability = +0.10%
+    }     
+
+	option = {
+		name = GER.3.b
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = Framework
+    }     
+
+	option = {
+		name = GER.3.c
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = GER_country_idea
+    }     
+}
