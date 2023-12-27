@@ -1,1 +1,117 @@
-﻿
+﻿focus_tree = {
+	id = germany_training_focus
+	continuous_focus_position = { x = 20 y = 2500 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = GER
+		}
+	}
+
+	focus = {
+		id = GER_country_rewards
+		icon = GFX_EUR_cold_pacific_coast
+		cost = 1
+		x = 0
+		y = 0
+		completion_reward = { 
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_expanded_country_rewards
+		icon = GFX_EUR_explore_old_military_archives
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id =  GER_country_rewards
+		prerequisite = {
+			focus = GER_country_rewards
+		}
+		completion_reward = { 
+			add_political_power = 100
+			set_political_party = {
+				ideology = fascism
+				popularity = 100
+			}
+		}
+	}
+
+	focus = {
+		id = GER_linkidea
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id =  GER_expanded_country_rewards
+		prerequisite = {
+			focus = GER_expanded_country_rewards
+		}
+		completion_reward = { 
+			add_ideas = GER_test_idea
+			country_event = GER.1
+		}
+	}
+
+	focus = {
+		id = GER_general_implementation
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id =  GER_linkidea
+		prerequisite = {
+			focus = GER_linkidea
+		}
+		completion_reward = { 
+		}
+	}
+
+	focus = {
+		id = GER_basic_idea_creation
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id =  GER_general_implementation
+		prerequisite = {
+			focus = GER_general_implementation
+		}
+		completion_reward = { 
+			add_ideas = GER_basic_idea
+		}
+	}
+
+	focus = {
+		id = GER_intermediate_idea_creation
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  GER_basic_idea_creation
+		prerequisite = {
+			focus = GER_basic_idea_creation
+		}
+		completion_reward = { 
+			add_ideas = GER_intermediate_idea
+			add_ideas = GER_obsession
+		}
+	}
+
+	focus = {
+		id = GER_idea_swap
+		icon = GFX_EUR_expedition_to_the_north_pole
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  GER_intermediate_idea_creation
+		prerequisite = {
+			focus = GER_intermediate_idea_creation
+		}
+		completion_reward = { 
+		}
+	}
+}

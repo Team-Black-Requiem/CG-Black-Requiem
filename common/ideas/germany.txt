@@ -1,0 +1,83 @@
+ideas = {
+	country = {
+		GER_country_idea ={
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+		   		industrial_capacity_dockyard = 0.05
+		   		navy_leader_start_level = 2
+			}
+		}
+
+		GER_test_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			modifier = {
+				manpower_factor = +0.05
+			}
+		}
+	
+		GER_basic_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			modifier = {
+				stability_factor = 0.13
+			}
+		}
+
+		GER_intermediate_idea = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+	
+			modifier = {
+				add_tech_bonus = {
+					category = air_equipment {
+						base = 0.10
+
+					}
+				}
+			}
+		}
+
+		GER_obsession = {
+			modifier = {
+				equipment_bonus = {
+					air_equipment = {
+						instant = yes
+						build_cost_ic = -0.05
+					}
+				}
+			}
+		}
+	
+	}
+
+}
