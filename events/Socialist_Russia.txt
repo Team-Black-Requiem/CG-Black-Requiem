@@ -1,16 +1,20 @@
-add_namespace = SRU
+#NOTE Anything not Listed as these namespaces are either phase 2 events not sorted or old events I have yet to remove because I am not sure if they are vital
+add_namespace = SRU_Intro
+add_namespace = SRU_Sonya
+add_namespace = SRU_Luka
+add_namespace = SRU_Flavour
 
 country_event = { #The Revolutionaries Return To Russia 
-	id = SRU.1
-	title = SRU.1.t
-	desc = SRU.1.d
+	id = SRU_Intro.1
+	title = SRU_Intro.1.t
+	desc = SRU_Intro.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
 	option = {
-		name = SRU.1.a	
+		name = SRU_Intro.1.a	
 		ai_chance = {
 			factor = 100
 		}
@@ -18,16 +22,16 @@ country_event = { #The Revolutionaries Return To Russia
     }     
 }
 country_event = { #Luka Fuels Their Hate
-	id = SRU.2
-	title = SRU.2.t
-	desc = SRU.2.d
+	id = SRU_Intro.2
+	title = SRU_Intro.2.t
+	desc = SRU_Intro.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
 	option = {
-		name = SRU.2.a
+		name = SRU_Intro.2.a
 		ai_chance = {
 			factor = 100
 		}
@@ -36,14 +40,14 @@ country_event = { #Luka Fuels Their Hate
    
 }
 country_event = { #Sonya Promises The Future
-	id = SRU.3
-	title = SRU.3.t
-	desc = SRU.3.d
+	id = SRU_Intro.3
+	title = SRU_Intro.3.t
+	desc = SRU_Intro.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = SRU.3.a
+		name = SRU_Intro.3.a
 		ai_chance = {
 			factor = 100
 		}
@@ -52,14 +56,14 @@ country_event = { #Sonya Promises The Future
 
 }
 country_event = {  
-	id = SRU.4
-	title = SRU.4.t
-	desc = SRU.4.d
+	id = SRU_Intro.4
+	title = SRU_Intro.4.t
+	desc = SRU_Intro.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = { #Sonya's Solution
-		name = SRU.4.a
+		name = SRU_Intro.4.a
 		ai_chance = {
 			factor = 50
 		}
@@ -72,7 +76,7 @@ country_event = {
 		
     } 
 	option = { #Luka's Solution
-		name = SRU.4.b
+		name = SRU_Intro.4.b
 		ai_chance = {
 			factor = 50
 		}
@@ -88,16 +92,16 @@ country_event = {
     }         
 }
 country_event = {  
-	id = SRU.5
-	title = SRU.5.t
-	desc = SRU.5.d
+	id = SRU_Intro.5
+	title = SRU_Intro.5.t
+	desc = SRU_Intro.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
 	option = { #Sonya's Solution
-		name = SRU.5.a 
+		name = SRU_Intro.5.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -112,7 +116,7 @@ country_event = {
 		
     } 
 	option = { #Luka's Solution
-		name = SRU.5.b		
+		name = SRU_Intro.5.b		
 		ai_chance = {
 			factor = 0
 		}
@@ -128,14 +132,14 @@ country_event = {
     }    
 }
 country_event = { #Luka Politburo Victory 
-	id = SRU.6
-	title = SRU.6.t
-	desc = SRU.6.d
+	id = SRU_Intro.6
+	title = SRU_Intro.6.t
+	desc = SRU_Intro.6.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = SRU.6.a
+		name = SRU_Intro.6.a
 		ai_chance = {
 			factor = 100
 		}
@@ -154,14 +158,14 @@ country_event = { #Luka Politburo Victory
     }     
 }
 country_event = { #Sonya Politburo Victory   
-	id = SRU.7
-	title = SRU.7.t
-	desc = SRU.7.d
+	id = SRU_Intro.7
+	title = SRU_Intro.7.t
+	desc = SRU_Intro.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = SRU.7.a 
+		name = SRU_Intro.7.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -171,149 +175,33 @@ country_event = { #Sonya Politburo Victory
     } 
 }
 
-country_event = { #Establishing the Peoples Congress
-	id = SRU.8
-	title = SRU.8.t
-	desc = SRU.8.d
-	fire_only_once = yes
-	is_triggered_only = yes
 
-	option = {
-		name = SRU.8.a 
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = Minority_Seat_Elections
-    } 
-	option = {
-		name = SRU.8.b 
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = Full_Congress_Elections
-    } 
-}
-
-country_event = { #The_Party_Or_The_State?
-	id = SRU.9
-	title = SRU.9.t
-	desc = SRU.9.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = SRU.9.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_political_power = -50
-		add_timed_idea = {
-			idea = SRU_Support_The_State
-			days = 180
-		}
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
-		}
-    } 
-	option = {
-		name = SRU.9.b
-		ai_chance = {
-			factor = 100
-		}
-		add_political_power = 50
-		add_timed_idea = {
-			idea = SRU_Support_The_Party
-			days = 180
-		}
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = 1
-		}
-    } 
-}
 
 ### Luka's Focus Tree
 country_event = { #Chekhov's gun
-	id = SRU.11
-	title = SRU.11.t
-	desc = SRU.11.d
+	id = SRU_Intro.11
+	title = SRU_Intro.11.t
+	desc = SRU_Intro.11.d
 
 	is_triggered_only = yes
    
 	option = {
-		name = SRU.11.a 
+		name = SRU_Intro.11.a 
 		ai_chance = {
 			factor = 100
-		}
-	}
-}
-
-country_event = { #Take families hostage
-	id = SRU.12
-	title = SRU.12.t
-	desc = SRU.12.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.12.a 
-		ai_chance = {
-			factor = 100
-		}
-		recruit_character = Chairman_Ivanov
-	}
-}
-
-country_event = { #The power of the media
-	id = SRU.13
-	title = SRU.13.t
-	desc = SRU.13.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.13.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_political_power = -100
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = 1
-		}
-		add_timed_idea = {
-			idea = SRU_Idealists_Media_Plan
-			days = 180
-		}
-	}
-
-	option = {
-		name = SRU.13.b
-		ai_chance = {
-			factor = 100
-		}
-		add_political_power = 100
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
-		}
-		add_timed_idea = {
-			idea = SRU_Pragmatists_Media_Plan
-			days = 180
 		}
 	}
 }
 
 country_event = { #Total War
-	id = SRU.14
-	title = SRU.14.t
-	desc = SRU.14.d
+	id = SRU_Intro.14
+	title = SRU_Intro.14.t
+	desc = SRU_Intro.14.d
 
 	is_triggered_only = yes
    
 	option = {
-		name = SRU.14.a 
+		name = SRU_Intro.14.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -324,7 +212,7 @@ country_event = { #Total War
 		}
 	}
 	option = {
-		name = SRU.14.a 
+		name = SRU_Intro.14.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -336,263 +224,35 @@ country_event = { #Total War
 	}
 }
 
-country_event = { #Jacobin all the way
-	id = SRU.15
-	title = SRU.15.t
-	desc = SRU.15.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.15.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Purge democrats
-	id = SRU.16
-	title = SRU.16.t
-	desc = SRU.16.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.16.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Control Trade unions
-	id = SRU.17
-	title = SRU.17.t
-	desc = SRU.17.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.17.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Isolate Liberals
-	id = SRU.18
-	title = SRU.18.t
-	desc = SRU.18.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.18.a 
-		ai_chance = {
-			factor = 100
-		}
-	 swap_ideas = {
-		remove_idea = Jacobin_Controlled_Cheka
-		add_idea = Purged_Cheka
-	 }
-	}
-
-
-}
-
-country_event = { #Age of Terror
-	id = SRU.19
-	title = SRU.19.t
-	desc = SRU.19.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.19.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_timed_idea = {
-			idea = Apolitical_Education_Focus
-			days = 200
-		}
-	}
-
-	option = {
-		name = SRU.19.b
-		ai_chance = {
-			factor = 100
-		}
-		add_timed_idea = {
-			idea = Socialist_Education_Focus
-			days = 200
-		}
-	}
-}
-
-country_event = { #terrify the people
-	id = SRU.20
-	title = SRU.20.t
-	desc = SRU.20.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.20.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
 country_event = { #Insanity in congress
-	id = SRU.21
-	title = SRU.21.t
-	desc = SRU.21.d
+	id = SRU_Intro.21
+	title = SRU_Intro.21.t
+	desc = SRU_Intro.21.d
 
 	is_triggered_only = yes
    
 	option = {
-		name = SRU.21.a 
+		name = SRU_Intro.21.a 
 		ai_chance = {
 			factor = 100
 		}
 	}
 }
 
-country_event = { #Prepare the lists
-	id = SRU.22
-	title = SRU.22.t
-	desc = SRU.22.d
 
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.22.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #No need for politicians
-	id = SRU.23
-	title = SRU.23.t
-	desc = SRU.23.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.23.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Luka's Reign
-	id = SRU.24
-	title = SRU.24.t
-	desc = SRU.24.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.24.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-country_event = {
-	id = SRU.25
-	title = SRU.25.t
-	desc = SRU.25.d
-    is_triggered_only = yes
-
-	option = {
-		name = SRU.25.a
-        ai_chance = {
-			factor = 100
-		}
-		add_political_power = -100
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
-		}
-		add_timed_idea = {
-			idea = Apolitical_Education_Focus
-			days = 200
-		}
-	}
-	option = {
-		name = SRU.25.b
-        ai_chance = {
-			factor = 100
-		}
-		add_political_power = 100
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = 1
-		}
-		add_timed_idea = {
-			idea = Socialist_Education_Focus
-			days = 200
-		}
-	}
-}
-
-country_event = {
-	id = SRU.26
-	title = SRU.26.t
-	desc = SRU.26.d
-    is_triggered_only = yes
-
-	option = {
-		name = SRU.26.a
-        ai_chance = {
-			factor = 100
-		}
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
-		}
-		add_timed_idea = {
-			idea = SRU_expel_the_foreigners
-			days = 180
-		}
-		
-	}
-	option = {
-		name = SRU.26.b
-        ai_chance = {
-			factor = 100
-		}
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
-		}
-		add_timed_idea = {
-			idea = SRU_hire_the_foreigners
-			days = 180
-		}
-	}
-}
 #mending internal Divisions
 
 country_event = { #Mend Internal Divisions
-    id = SRU.52
-    title = SRU.52.t
-    desc = SRU.52.d
+    id = SRU_Intro.52
+    title = SRU_Intro.52.t
+    desc = SRU_Intro.52.d
 
     is_triggered_only = yes
 
 
     option = {
 
-        name = SRU.52.a 
+        name = SRU_Intro.52.a 
         ai_chance = {
             factor = 100
         }
@@ -601,16 +261,16 @@ country_event = { #Mend Internal Divisions
 }
 
 country_event = { #Concessions to the Peoples Congress
-    id = SRU.53
-    title = SRU.53.t
-    desc = SRU.53.d
+    id = SRU_Intro.53
+    title = SRU_Intro.53.t
+    desc = SRU_Intro.53.d
 
     is_triggered_only = yes
 
 
     option = {
 
-        name = SRU.53.a 
+        name = SRU_Intro.53.a 
         ai_chance = {
             factor = 100
         }
@@ -618,16 +278,16 @@ country_event = { #Concessions to the Peoples Congress
     }
 }
 country_event = { # We Might Find a Middle Ground
-    id = SRU.54
-    title = SRU.54.t
-    desc = SRU.54.d
+    id = SRU_Intro.54
+    title = SRU_Intro.54.t
+    desc = SRU_Intro.54.d
 
     is_triggered_only = yes
 
 
     option = {
 
-        name = SRU.54.a 
+        name = SRU_Intro.54.a 
         ai_chance = {
             factor = 100
         }
@@ -636,16 +296,16 @@ country_event = { # We Might Find a Middle Ground
 }
 
 country_event = { # United We Stand
-    id = SRU.55
-    title = SRU.55.t
-    desc = SRU.55.d
+    id = SRU_Intro.55
+    title = SRU_Intro.55.t
+    desc = SRU_Intro.55.d
 
     is_triggered_only = yes
 
 
     option = {
 
-        name = SRU.55.a 
+        name = SRU_Intro.55.a 
         ai_chance = {
             factor = 100
         }
@@ -653,36 +313,18 @@ country_event = { # United We Stand
     }
 }
 
-country_event = { # Jacobin Revolutionary Army
-
-    id = SRU.56
-    title = SRU.56.t
-    desc = SRU.56.d
-
-    is_triggered_only = yes
-
-
-    option = {
-
-        name = SRU.56.a 
-        ai_chance = {
-            factor = 100
-        }
-
-    }
-}
 ### GRAND EMBASSY EVENT CHAIN ###
 
 country_event = {
-	id = SRU.28
-	title = SRU.28.t
-	desc = SRU.28.d
+	id = SRU_Intro.28
+	title = SRU_Intro.28.t
+	desc = SRU_Intro.28.d
 
 	is_triggered_only = yes
    
 	option = {
 
-		name = SRU.28.a 
+		name = SRU_Intro.28.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -692,15 +334,15 @@ country_event = {
 }
 
 country_event = {
-	id = SRU.29
-	title = SRU.29.t
-	desc = SRU.29.d
+	id = SRU_Intro.29
+	title = SRU_Intro.29.t
+	desc = SRU_Intro.29.d
 
 	is_triggered_only = yes
 
 	option = {
 
-		name = SRU.29.a 
+		name = SRU_Intro.29.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -714,7 +356,7 @@ country_event = {
 }
 	option = {
 
-		name = SRU.29.b
+		name = SRU_Intro.29.b
 		ai_chance = {
 			factor = 100
 		}
@@ -728,7 +370,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.29.c 
+		name = SRU_Intro.29.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -744,15 +386,15 @@ country_event = {
 
 
 country_event = {
-	id = SRU.30
-	title = SRU.30.t
-	desc = SRU.30.d
+	id = SRU_Intro.30
+	title = SRU_Intro.30.t
+	desc = SRU_Intro.30.d
 
 	is_triggered_only = yes
 
 	option = {
 
-		name = SRU.30.a 
+		name = SRU_Intro.30.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -766,7 +408,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.30.b
+		name = SRU_Intro.30.b
 		ai_chance = {
 		    factor = 100
 		}
@@ -780,7 +422,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.30.c 
+		name = SRU_Intro.30.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -796,15 +438,15 @@ country_event = {
 
 
 country_event = {
-	id = SRU.31
-	title = SRU.31.t
-	desc = SRU.31.d
+	id = SRU_Intro.31
+	title = SRU_Intro.31.t
+	desc = SRU_Intro.31.d
    
 	is_triggered_only = yes
     
 	option = {
 
-		name = SRU.31.a 
+		name = SRU_Intro.31.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -818,7 +460,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.31.b
+		name = SRU_Intro.31.b
 		ai_chance = {
 			factor = 100
 		}
@@ -832,7 +474,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.31.c 
+		name = SRU_Intro.31.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -847,15 +489,15 @@ country_event = {
 
 
 country_event = {
-	id = SRU.32
-	title = SRU.32.t
-	desc = SRU.32.d
+	id = SRU_Intro.32
+	title = SRU_Intro.32.t
+	desc = SRU_Intro.32.d
 
 	is_triggered_only = yes
 
 	option = {
 
-		name = SRU.32.a 
+		name = SRU_Intro.32.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -868,7 +510,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.32.b
+		name = SRU_Intro.32.b
 		ai_chance = {
 			factor = 100
 		}
@@ -881,7 +523,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.32.c 
+		name = SRU_Intro.32.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -895,15 +537,15 @@ country_event = {
 
 
 country_event = {
-	id = SRU.33
-	title = SRU.33.t
-	desc = SRU.33.d
+	id = SRU_Intro.33
+	title = SRU_Intro.33.t
+	desc = SRU_Intro.33.d
 
 	is_triggered_only = yes
 
 	option = {
 
-		name = SRU.33.a 
+		name = SRU_Intro.33.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -917,7 +559,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.33.b
+		name = SRU_Intro.33.b
 		ai_chance = {
 			factor = 100
 		}
@@ -930,7 +572,7 @@ country_event = {
 
 	option = {
 
-		name = SRU.33.c 
+		name = SRU_Intro.33.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -943,96 +585,20 @@ country_event = {
 	
 }
 
-country_event = { #SRU_The_Eternal_Revolution 
-	id = SRU.34
-	title = SRU.34.t
-	desc = SRU.34.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.34.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_ideas = SRU_Luka_Zhukov_idea_1
-	}
-}
-
-country_event = { #Deal with the Unions
-	id = SRU.35
-	title = SRU.35.t
-	desc = SRU.35.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.35.a 
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = Purges
-		mark_focus_tree_layout_dirty = yes
-		
-	}
-
-	option = {
-		 
-		name = SRU.35.b
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = Comprimise
-		mark_focus_tree_layout_dirty = yes
-	}
-}
 
 ### Sonya Military Events ###
 
-country_event = { #Sokolovs Military Reforms
-	id = SRU.43
-	title = SRU.43.t
-	desc = SRU.43.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.43.a 
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = SRU_partisans_army_plan
-		
-	}
-
-	option = {
-		 
-		name = SRU.43.b 
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = SRU_military_council_army_plan
-		
-	}
-}
-
 country_event = { #Peasant Militias
-	id = SRU.44
-	title = SRU.44.t
-	desc = SRU.44.d
+	id = SRU_Intro.44
+	title = SRU_Intro.44.t
+	desc = SRU_Intro.44.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.44.a 
+		name = SRU_Intro.44.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1041,52 +607,16 @@ country_event = { #Peasant Militias
 }
 
 country_event = { #Spirit of the People
-	id = SRU.45
-	title = SRU.45.t
-	desc = SRU.45.d
+	id = SRU_Intro.45
+	title = SRU_Intro.45.t
+	desc = SRU_Intro.45.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.45.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Crimson Steel
-	id = SRU.46
-	title = SRU.46.t
-	desc = SRU.46.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.46.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Knights of Socialism
-	id = SRU.47
-	title = SRU.47.t
-	desc = SRU.47.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.47.a 
+		name = SRU_Intro.45.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1095,16 +625,16 @@ country_event = { #Knights of Socialism
 }
 
 country_event = { #Mastering Knightmare Production
-	id = SRU.48
-	title = SRU.48.t
-	desc = SRU.48.d
+	id = SRU_Intro.48
+	title = SRU_Intro.48.t
+	desc = SRU_Intro.48.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.48.a 
+		name = SRU_Intro.48.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1113,16 +643,16 @@ country_event = { #Mastering Knightmare Production
 }
 
 country_event = { #Red Army
-	id = SRU.49
-	title = SRU.49.t
-	desc = SRU.49.d
+	id = SRU_Intro.49
+	title = SRU_Intro.49.t
+	desc = SRU_Intro.49.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.49.a 
+		name = SRU_Intro.49.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1131,16 +661,16 @@ country_event = { #Red Army
 }
 
 country_event = { #Red War Machine
-	id = SRU.50
-	title = SRU.50.t
-	desc = SRU.50.d
+	id = SRU_Intro.50
+	title = SRU_Intro.50.t
+	desc = SRU_Intro.50.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.50.a 
+		name = SRU_Intro.50.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1148,37 +678,20 @@ country_event = { #Red War Machine
 	}
 }
 
-country_event = { #Through Blood and Iron
-	id = SRU.51
-	title = SRU.51.t
-	desc = SRU.51.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.51.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
 
 ### Politburo Events ###
 
 country_event = { #Establish The Political Commissariat
-	id = SRU.52
-	title = SRU.52.t
-	desc = SRU.52.d
+	id = SRU_Intro.52
+	title = SRU_Intro.52.t
+	desc = SRU_Intro.52.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.52.a 
+		name = SRU_Intro.52.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1187,16 +700,16 @@ country_event = { #Establish The Political Commissariat
 }
 
 country_event = { #Establish The C.S.S
-	id = SRU.53
-	title = SRU.53.t
-	desc = SRU.53.d
+	id = SRU_Intro.53
+	title = SRU_Intro.53.t
+	desc = SRU_Intro.53.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.53.a 
+		name = SRU_Intro.53.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1208,16 +721,16 @@ country_event = { #Establish The C.S.S
 }
 
 country_event = { #Establish The Cheka
-	id = SRU.54
-	title = SRU.54.t
-	desc = SRU.54.d
+	id = SRU_Intro.54
+	title = SRU_Intro.54.t
+	desc = SRU_Intro.54.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.54.a 
+		name = SRU_Intro.54.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1226,16 +739,16 @@ country_event = { #Establish The Cheka
 }
 
 country_event = { #Peoples Congress
-	id = SRU.55
-	title = SRU.55.t
-	desc = SRU.55.d
+	id = SRU_Intro.55
+	title = SRU_Intro.55.t
+	desc = SRU_Intro.55.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.55.a 
+		name = SRU_Intro.55.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1246,338 +759,20 @@ country_event = { #Peoples Congress
 
 ### The Jacobin Army Events ###
 
-country_event = { #The Jacobin Army
-	id = SRU.56
-	title = SRU.56.t
-	desc = SRU.56.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.56.a 
-		ai_chance = {
-			factor = 100
-		}
-		complete_national_focus = SRU_Kovalevs_Plan
-	}
-
-	option = {
-		 
-		name = SRU.56.b 
-		ai_chance = {
-			factor = 100
-		}
-		complete_national_focus = SRU_Makarovs_Plan
-	}
-}
-
-country_event = { #An Independent Military
-	id = SRU.57
-	title = SRU.57.t
-	desc = SRU.57.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.57.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_ideas = SRU_An_Independent_Military
-	}
-}
-
-country_event = { #Notify The CSS
-	id = SRU.58
-	title = SRU.58.t
-	desc = SRU.58.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.58.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Political Loyalty
-	id = SRU.59
-	title = SRU.59.t
-	desc = SRU.59.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.59.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-		add_timed_idea = {
-			idea = SRU_Political_Loyalty
-			days = 35
-		}
-	}
-}
-
-country_event = { #Punch Harder and Red Blizt
-	id = SRU.60
-	title = SRU.60.t
-	desc = SRU.60.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.60.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-		add_timed_idea = {
-			idea = SRU_Punch_Harder
-			days = 70
-		}
-		
-		add_timed_idea = {
-			idea = SRU_Red_Blitz
-			days = 120
-		}
-	}
-}
-
-country_event = { #Bombs Away and Red Sky
-	id = SRU.61
-	title = SRU.61.t
-	desc = SRU.61.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.61.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
-			amount = 300
-		}
-		add_equipment_to_stockpile = {
-			type = strat_bomber_equipment_1
-			amount = 200
-		}
-
-		add_equipment_to_stockpile = {
-			type = transport_plane_equipment
-			amount = 100
-		}
-
-		set_technology = { 
-			paratroopers = 1
-		}
-		load_oob = SRU_PARATROOPERS
-	}
-}
-
-country_event = { #Contact Agent Tannenbaum
-	id = SRU.62
-	title = SRU.62.t
-	desc = SRU.62.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.62.a 
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Strike The Leader!
-	id = SRU.63
-	title = SRU.63.t
-	desc = SRU.63.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.63.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_timed_idea = {
-			idea = SRU_Strike_The_Leader
-			days = 180
-		}
-	}
-}
 
 ### Zaytsev Vision Events ###
 
-country_event = { #Zaytsevs Vision
-	id = SRU.64
-	title = SRU.64.t
-	desc = SRU.64.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.64.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_ideas = SRU_Zaytsev_Vision
-		if = {
-			limit = {
-				NOT = {
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
-					has_idea = partial_economic_mobilisation
-				}
-				}
-			}
-			add_ideas = partial_economic_mobilisation
-	}
-}
-
-country_event = { #SRU_The_Economic_Heart
-	id = SRU.64
-	title = SRU.64.t
-	desc = SRU.64.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.64.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_ideas = SRU_Zaytsev_Vision
-		upgrade_economy_law = yes
-	}
-}
-
-country_event = { #The War Machine
-	id = SRU.65
-	title = SRU.65.t
-	desc = SRU.65.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.65.a 
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = SRU_Zaytsev_Vision_2
-			add_idea = SRU_The_War_Machine
-		}
-		}
-
-	}
-
-
-country_event = { #War Machine In Overdrive
-	id = SRU.66
-	title = SRU.66.t
-	desc = SRU.66.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.66.a 
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = SRU_The_War_Machine4
-			add_idea = SRU_The_War_Machine5
-		}
-		upgrade_economy_law = yes
-	}
-}
-
-country_event = { #Implement A Forced Labour Program
-	id = SRU.67
-	title = SRU.67.t
-	desc = SRU.67.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.67.a 
-		ai_chance = {
-			factor = 100
-		}
-		add_ideas = SRU_Implement_A_Forced_Labour_Program
-	}
-}
-
-country_event = { #Establish The Gulag
-	id = SRU.68
-	title = SRU.68.t
-	desc = SRU.68.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.68.a 
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = SRU_Penal_Battallions_In_The_Army
-			add_idea = SRU_Establish_The_Gulag
-		}
-		add_stability = 0.1
-	}
-}
-
 country_event = { #The Economic Heart
-	id = SRU.69
-	title = SRU.69.t
-	desc = SRU.69.d
+	id = SRU_Intro.69
+	title = SRU_Intro.69.t
+	desc = SRU_Intro.69.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.69.a 
+		name = SRU_Intro.69.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1588,67 +783,17 @@ country_event = { #The Economic Heart
 	}
 }
 
-country_event = { #Goverment Slaves
-	id = SRU.70
-	title = SRU.70.t
-	desc = SRU.70.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.70.a 
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = SRU_The_Economic_Heart3
-			add_idea = SRU_The_Economic_Heart4
-		}
-		add_tech_bonus = {
-			name = excavation_tech
-			bonus = 3
-			uses = 1
-			category = excavation_tech
-		}
-	}
-}
-
-country_event = { #Zaytsev Economic Miracle
-	id = SRU.71
-	title = SRU.71.t
-	desc = SRU.71.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU.71.a 
-		ai_chance = {
-			factor = 100
-		}
-		swap_ideas = {
-			remove_idea = SRU_Zaytsev_Plan
-			add_idea = SRU_Zaytsev_Economic_Miracle
-		}
-		add_ideas = SRU_Zaytsev_Plan
-		upgrade_economy_law = yes
-	}
-}
-
 country_event = { #resolve the conflict (feel free to change the number down the line since it is cut in early for framework)
-	id = SRU.72
-	title = SRU.72.t
-	desc = SRU.72.d
+	id = SRU_Intro.72
+	title = SRU_Intro.72.t
+	desc = SRU_Intro.72.d
 
 	is_triggered_only = yes
     
 	
 	option = {
 		 
-		name = SRU.72.a 
+		name = SRU_Intro.72.a 
 		ai_chance = {
 			factor = 100
 		}
@@ -1657,7 +802,7 @@ country_event = { #resolve the conflict (feel free to change the number down the
 	}
 	option = {
 		 
-		name = SRU.72.b 
+		name = SRU_Intro.72.b 
 		ai_chance = {
 			factor = 100
 		}
@@ -1666,7 +811,7 @@ country_event = { #resolve the conflict (feel free to change the number down the
 	}
 	option = {
 		 
-		name = SRU.72.c 
+		name = SRU_Intro.72.c 
 		ai_chance = {
 			factor = 100
 		}
@@ -1678,15 +823,15 @@ country_event = { #resolve the conflict (feel free to change the number down the
 }
 
 country_event = { #Blood Stained Requiem
-	id = SRU.73
-	title = SRU.73.t
-	desc = SRU.73.d
+	id = SRU_Intro.73
+	title = SRU_Intro.73.t
+	desc = SRU_Intro.73.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.73.a
+		name = SRU_Intro.73.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1695,15 +840,15 @@ country_event = { #Blood Stained Requiem
 }
 
 country_event = { #Loot Abandoned Britannian Equipment
-	id = SRU.74
-	title = SRU.74.t
-	desc = SRU.74.d
+	id = SRU_Intro.74
+	title = SRU_Intro.74.t
+	desc = SRU_Intro.74.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.74.a
+		name = SRU_Intro.74.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1712,15 +857,15 @@ country_event = { #Loot Abandoned Britannian Equipment
 }
 
 country_event = { #Raiding Britannian Research Labs
-	id = SRU.75
-	title = SRU.75.t
-	desc = SRU.75.d
+	id = SRU_Intro.75
+	title = SRU_Intro.75.t
+	desc = SRU_Intro.75.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.75.a
+		name = SRU_Intro.75.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1729,15 +874,15 @@ country_event = { #Raiding Britannian Research Labs
 }
 
 country_event = { #Ashes of The East
-	id = SRU.76
-	title = SRU.76.t
-	desc = SRU.76.d
+	id = SRU_Intro.76
+	title = SRU_Intro.76.t
+	desc = SRU_Intro.76.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.76.a
+		name = SRU_Intro.76.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1746,15 +891,15 @@ country_event = { #Ashes of The East
 }
 
 country_event = { #Resettle The East With True Patriots
-	id = SRU.77
-	title = SRU.77.t
-	desc = SRU.77.d
+	id = SRU_Intro.77
+	title = SRU_Intro.77.t
+	desc = SRU_Intro.77.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.77.a
+		name = SRU_Intro.77.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1763,15 +908,15 @@ country_event = { #Resettle The East With True Patriots
 }
 
 country_event = { #Reprogramme Euro Britannian Scientists
-	id = SRU.78
-	title = SRU.78.t
-	desc = SRU.78.d
+	id = SRU_Intro.78
+	title = SRU_Intro.78.t
+	desc = SRU_Intro.78.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.78.a
+		name = SRU_Intro.78.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1780,15 +925,15 @@ country_event = { #Reprogramme Euro Britannian Scientists
 }
 
 country_event = { #The Slaughter Continues (MRU)
-	id = SRU.79
-	title = SRU.79.t
-	desc = SRU.79.d
+	id = SRU_Intro.79
+	title = SRU_Intro.79.t
+	desc = SRU_Intro.79.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.79.a
+		name = SRU_Intro.79.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1900,15 +1045,15 @@ country_event = {
 #old events that user slaughtered for the revolution >:C
 
 country_event = { #March of the Revolution
-	id = SRU.86
-	title = SRU.86.t
-	desc = SRU.86.d
+	id = SRU_Sonya_Phase_One.1
+	title = SRU_Sonya_Phase_One.1.t
+	desc = SRU_Sonya_Phase_One.1.d
 
 	is_triggered_only = yes
 
 	option = {
 		
-		name = SRU.86.a
+		name = SRU_Sonya_Phase_One.1.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1930,254 +1075,5 @@ country_event = { #Politburo War Powers
 			factor = 100
 		}
 		
-	}
-}
-
-country_event = { #Minority Seat Elections
-	id = SRU.88
-	title = SRU.88.t
-	desc = SRU.88.d
-
-	is_triggered_only = yes
-
-	option = {
-		
-		name = SRU.88.a
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Full Congress Elections
-	id = SRU.89
-	title = SRU.89.t
-	desc = SRU.89.d
-
-	is_triggered_only = yes
-
-	option = {
-		
-		name = SRU.89.a
-		ai_chance = {
-			factor = 100
-		}
-		
-	}
-}
-
-country_event = { #Military Council plan
-	id = SRU.90
-	title = SRU.90.t
-	desc = SRU.90.d
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.90.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Siberian Economics Matters
-	id = SRU.91
-	title = SRU.91.t
-	desc = SRU.91.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = SRU.91.a 
-		ai_chance = {
-			factor = 100
-		}
-		complete_national_focus = Two_Year_Industrialization_Plan
-    } 
-	option = {
-		name = SRU.91.b
-		ai_chance = {
-			factor = 100
-		}
-		complete_national_focus = Resource_Export_Plan
-    } 
-}
-
-country_event = { #Two year industrialization plan
-	id = SRU.92
-	title = SRU.92.t
-	desc = SRU.92.d
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.92.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Resource_Export_Plan
-	id = SRU.93
-	title = SRU.93.t
-	desc = SRU.93.d
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.93.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Expand_The_Tomsk_University
-	id = SRU.94
-	title = SRU.94.t
-	desc = SRU.94.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.94.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = { #Opening_Public_Hospitals
-	id = SRU.95
-	title = SRU.95.t
-	desc = SRU.95.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.95.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.96
-	title = SRU.96.t
-	desc = SRU.96.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.96.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.97
-	title = SRU.97.t
-	desc = SRU.97.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.97.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.98
-	title = SRU.98.t
-	desc = SRU.98.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.98.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.99
-	title = SRU.99.t
-	desc = SRU.99.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.99.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.100
-	title = SRU.100.t
-	desc = SRU.100.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.100.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.101
-	title = SRU.101.t
-	desc = SRU.101.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.101.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.102
-	title = SRU.102.t
-	desc = SRU.102.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.102.a 
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-country_event = {
-	id = SRU.103
-	title = SRU.103.t
-	desc = SRU.103.d
-
-	is_triggered_only = yes
-   
-	option = {
-		name = SRU.103.a 
-		ai_chance = {
-			factor = 100
-		}
 	}
 }

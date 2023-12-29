@@ -26,7 +26,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.1
+				country_event = SRU_Intro.1
 				set_country_flag = {
 					flag = SRU_sonya_vs_luka
 					value = 1 
@@ -74,7 +74,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.2
+				country_event = SRU_Intro.2
 				modify_country_flag = {
 					flag = SRU_sonya_vs_luka
 					value = -1
@@ -99,7 +99,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.3
+				country_event = SRU_Intro.3
 				modify_country_flag = {
 					flag = SRU_sonya_vs_luka
 					value = 1
@@ -123,7 +123,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.4
+				country_event = SRU_Intro.4
 				
 			}
 	}
@@ -143,7 +143,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.5
+				country_event = SRU_Intro.5
 			}
 	}
 	focus = {
@@ -172,7 +172,7 @@
 							value < 1
 						}
 					}
-					country_event = SRU.6
+					country_event = SRU_Intro.6
 				}
 				if = {
 					limit = {
@@ -181,7 +181,7 @@
 							value > 1
 						}
 					}
-					country_event = SRU.7
+					country_event = SRU_Intro.7
 				}
 			}
 
@@ -305,11 +305,11 @@
 				target = EUR
 				type = annex_everything
 			}
-			country_event = SRU.86
+			country_event = SRU_Sonya_Phase_One.1
 		}
 
 	}
-				focus = {
+			focus = {
 			id = Politburo_War_Powers
 			icon = GFX_SRU_politburo
 			cost = 2
@@ -325,7 +325,7 @@
 			relative_position_id = SRU_march_of_the_revolution	
 			
 			completion_reward = {
-			 country_event = SRU.87
+			 country_event = SRU_Sonya_Phase_One.2
 			 add_ideas = Politburo_War_Powers
 			}
 
@@ -347,7 +347,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.8
+				country_event = SRU_Sonya_Phase_One.3
 			}
 			# to do: ask user how to solve the drift. Civilian +0.1 or -0.1?
 	}
@@ -375,7 +375,7 @@
 					remove_idea = Democratic_Dissonance
 					add_idea = Democratic_Opposition
 				}
-				country_event = SRU.89
+				country_event = SRU_Sonya_Phase_One.5
 				modify_country_flag = {
 					flag = SRU_idealist_pragmatist_balance
 					value = 1
@@ -407,7 +407,7 @@
 					remove_idea = Democratic_Dissonance
 					add_idea = Limited_Opposition
 				}
-				country_event = SRU.88
+				country_event = SRU_Sonya_Phase_One.4
 				modify_country_flag = {
 					flag = SRU_idealist_pragmatist_balance
 					value = -1
@@ -450,7 +450,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.9
+				country_event = SRU_Sonya_Phase_One.6
 			}
 	}
 				focus = {
@@ -469,7 +469,7 @@
 				}
 			
 			completion_reward = {
-				country_event = SRU.13
+				country_event = SRU_Sonya_Phase_One.8
 			}
 			# to do: ask User why temporal war stability? better weekly war support?
 	}
@@ -491,7 +491,7 @@
 				}
 			
 			completion_reward = {
-			    country_event = SRU.25
+			    country_event = SRU_Sonya_Phase_One.9
 				
 			}
 	}
@@ -556,7 +556,7 @@
 				}
 			
 			completion_reward = {
-			    country_event = SRU.26
+			    country_event = SRU_Sonya_Phase_One.12
 			}
 	}
 			focus = {
@@ -598,13 +598,13 @@
 			}
 		
 		completion_reward = {
-			country_event = SRU.18
+			country_event = SRU_Sonya_Phase_One.7
 		}
 		#to do: ask user how we do this, I think these are old modifiers.
 }
 
 focus = {
-	id = SRU_chairwoman_ivanova
+	id = SRU_chairwoman_leonova
 	icon = GFX_Opening_The_Ministry_of_Information
 	cost = 2
 	x = -1
@@ -635,7 +635,7 @@ focus = {
 		}
 		add_political_power = 100
 		add_war_support = 0.1
-		country_event = SRU.11
+		country_event = SRU_Sonya_Phase_One.10
 		modify_country_flag = {
 			flag = SRU_idealist_pragmatist_balance
 			value = 1
@@ -656,7 +656,7 @@ focus = {
 				}
 	relative_position_id = Removing_The_Jacobin_Chekists
 	mutually_exclusive = {
-		focus = SRU_chairwoman_ivanova
+		focus = SRU_chairwoman_leonova
 	}
 	available = {
 				   country_exists = SRU
@@ -676,6 +676,7 @@ focus = {
 				cost = 2000
 			}
 		}
+		country_event = SRU_Sonya_Phase_One.11
 		modify_country_flag = {
 			flag = SRU_idealist_pragmatist_balance
 			value = -1
@@ -691,10 +692,10 @@ focus = {
 	x = 1
 	y = 1
 	prerequisite = {
-		 focus = SRU_chairwoman_ivanova
+		 focus = SRU_chairwoman_leonova
 		 focus = Chairman_ivanov
 	}
-	relative_position_id = SRU_chairwoman_ivanova
+	relative_position_id = SRU_chairwoman_leonova
 	available = {
 				   country_exists = SRU
 	}
@@ -745,7 +746,7 @@ focus = {
 	
 	completion_reward = {
 		add_political_power = 250
-		# to do: add event.
+		country_event = SRU_Sonya_Phase_One.13
 	}
 }
 	###### 
@@ -780,7 +781,7 @@ focus = {
 				every_army_leader = {
 					add_attack = 2
 				}
-				country_event = SRU.12
+				country_event = SRU_Luka_Phase_One.1
 			}
 			# to do: ask rein about chairman ivanov
 	}
@@ -802,7 +803,7 @@ focus = {
 		
 		completion_reward = {
 		add_ideas = SRU_Russian_Jacobin_Council
-		country_event = SRU.96
+		country_event = SRU_Luka_Phase_One.2
 		}
 }
 
@@ -907,7 +908,7 @@ focus = {
 			
 			will_lead_to_war_with = EUR
 			completion_reward = {
-				country_event = SRU.34
+				country_event = SRU_Luka_Phase_One.3
 				add_manpower = 30000
 				add_war_support = 0.15
 				add_ideas = SRU_The_Eternal_Revolution
@@ -938,7 +939,7 @@ focus = {
 					popularity = 0.2
 				}
 				add_stability = -0.15
-				country_event = SRU.35
+				country_event = SRU_Luka_Phase_One_Politics.1
 			}
 	}
 			focus = {
@@ -974,7 +975,7 @@ focus = {
 						trait = propagandist
 					}
 				}
-				country_event = SRU.15
+				country_event = SRU_Luka_Phase_One_Politics.2
 			}
 	}
 			focus = {
@@ -995,7 +996,7 @@ focus = {
 			completion_reward = {
 				add_stability  = -0.1
 				add_political_power = 100
-				country_event = SRU.16
+				country_event = SRU_Luka_Phase_One_Politics.3
 				add_popularity = {
 					ideology = BR_vanguardist
 					popularity = 0.15
@@ -1020,7 +1021,7 @@ focus = {
 			
 			completion_reward = {
 				add_ideas = SRU_trade_unions_reined_in
-				country_event = SRU.17
+				country_event = SRU_Luka_Phase_One_Politics.4
 			}
 			}
 			focus = {
@@ -1041,7 +1042,7 @@ focus = {
 				completion_reward = {
 					add_ideas = SRU_isolate_the_liberals
 					add_political_power = 100
-					country_event = SRU.18
+					country_event = SRU_Luka_Phase_One_Politics.5
 					add_popularity = {
 						ideology = BR_vanguardist
 						popularity = 0.10
@@ -1070,7 +1071,7 @@ focus = {
 						idea = SRU_opposition_purged
 						days = 90
 					}
-					country_event = SRU.19
+					country_event = SRU_Luka_Phase_One_Politics.6
 				}
 
 			}
@@ -1115,7 +1116,7 @@ focus = {
 				completion_reward = {
 					add_war_support = 0.1
 					add_ideas = SRU_red_terror
-					country_event = SRU.20
+					country_event = SRU_Luka_Phase_One_Politics.7
 				}
 
 			}
@@ -1141,7 +1142,7 @@ focus = {
 						ideology = BR_vanguardist
 						popularity = 0.20
 				}
-				country_event = SRU.98
+				country_event = SRU_Luka_Phase_One_Politics.9
 			}
 			}
 			focus = {
@@ -1188,7 +1189,7 @@ focus = {
 				completion_reward = {
 					add_stability = 0.15
 					add_ideas = SRU_cheka_lists
-					country_event = SRU.22
+					country_event = SRU_Luka_Phase_One_Politics.8
 				}
 
 			}
@@ -1217,7 +1218,7 @@ focus = {
 						character = SRU_Andrei_Smirnov
 						slot = head_of_government
 					}
-					country_event = SRU.23
+					country_event = SRU_Luka_Phase_One_Politics.10
 					570 = {
 						add_manpower = -300
 					}
@@ -1241,7 +1242,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.24
+					country_event = SRU_Luka_Phase_One_Politics.11
 					add_ideas = SRU_luka_new_order
 				}
 
@@ -1269,7 +1270,7 @@ focus = {
 				completion_reward = {
 					add_political_power = 50
 					add_stability = 0.15
-					country_event = SRU.99
+					country_event = SRU_Luka_Phase_One_Politics.12
 			}
 		}
 			focus = {
@@ -1292,7 +1293,7 @@ focus = {
 						idea = SRU_concessions_to_congress
 						days = 60
 					}
-					country_event = SRU.100
+					country_event = SRU_Luka_Phase_One_Politics.13
 				}
 			}
 			focus = {
@@ -1315,7 +1316,7 @@ focus = {
 						idea = SRU_intraparty_cooperation
 						days = 90
 					}
-					country_event = SRU.101
+					country_event = SRU_Luka_Phase_One_Politics.14
 				}
 
 			}
@@ -1522,7 +1523,7 @@ focus = {
 				completion_reward = {
 					upgrade_economy_law = yes
 					add_ideas = SRU_war_measures_act
-					country_event = SRU.102
+					country_event = SRU_Luka_Phase_One_Politics.15
 				}
 
 			}
@@ -1545,7 +1546,7 @@ focus = {
 					remove_ideas = Democratic_Dissonance
 					add_stability = 0.1
 					add_command_power = 20
-					country_event = SRU.103
+					country_event = SRU_Luka_Phase_One_Politics.16
 				}
 
 			}
@@ -1612,7 +1613,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.58
+					country_event = SRU_Luka_Phase_One.8
 					create_intelligence_agency = yes
 				}
 
@@ -1705,7 +1706,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.62
+					country_event = SRU_Luka_Phase_One.9
 					upgrade_intelligence_agency = yes
 				}
 
@@ -1726,7 +1727,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.63
+					country_event = SRU_Luka_Phase_One.10
 				}
 
 			}
@@ -1897,7 +1898,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.56
+					country_event = SRU_Luka_Phase_One.4
 					add_command_power = 30
 					add_war_support = 0.1
 				}
@@ -1961,7 +1962,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.59
+					country_event = SRU_Luka_Phase_One.6
 					remove_ideas = Independent_Military_Structure
 				}
 
@@ -2006,7 +2007,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.57
+					country_event = SRU_Luka_Phase_One.5
 				}
 
 			}
@@ -2057,7 +2058,7 @@ focus = {
 				
 				completion_reward = {
 				add_ideas = SRU_revolutionary_zealotry
-				country_event = SRU.97
+				country_event = SRU_Luka_Phase_One.7
 				}
 			}
 			focus = {
@@ -2251,7 +2252,7 @@ focus = {
 							limit = {
 								has_completed_focus = SRU_mechanise_the_army
 							}
-							country_event = SRU.60
+							country_event = SRU_Luka_Phase_One.11
 						}
 					}
 					else = {
@@ -2259,7 +2260,7 @@ focus = {
 							limit = {
 								has_completed_focus = SRU_rapid_modernisation_of_the_airforce
 							}
-							country_event = SRU.61
+							country_event = SRU_Luka_Phase_One.12
 						}
 					}
 					add_timed_idea = {
@@ -2286,7 +2287,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.64
+					country_event = SRU_Luka_Phase_One.13
 				}
 				# to do: ask rein about 60 day idea
 
@@ -2332,7 +2333,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.69
+					country_event = SRU_Intro.69
 				}
 
 			}
@@ -2355,7 +2356,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.65
+					country_event = SRU_Luka_Phase_One.14
 				}
 
 			}
@@ -2455,7 +2456,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.67
+					country_event = SRU_Luka_Phase_One.16
 				}
 
 			}
@@ -2499,7 +2500,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.68
+					country_event = SRU_Luka_Phase_One.17
 				}
 
 			}
@@ -2719,7 +2720,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.70
+					country_event = SRU_Luka_Phase_One.18
 				}
 
 			}
@@ -2739,7 +2740,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.66
+					country_event = SRU_Luka_Phase_One.15
 				}
 
 			}
@@ -2770,7 +2771,7 @@ focus = {
 
 						}
 					}
-					country_event = SRU.71
+					country_event = SRU_Luka_Phase_One.19
 				}
 
 			}
@@ -3713,7 +3714,7 @@ focus = {
 
 			}
 			focus = {
-				id = SRU_Failures_Of_The_Red_Mutiny
+				id = SRU_Failures_Of_The_Great_Peoples_War
 				icon = GFX_SRU_sokolo_mil_reforms
 				cost = 5
 				x = 11
@@ -3728,7 +3729,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.43
+					country_event = SRU_Sonya_Phase_One.18
 					remove_ideas = Independent_Military_Structure
 				}
 
@@ -3739,9 +3740,9 @@ focus = {
 				cost = 5
 				x = -4
 				y = 1
-				prerequisite = { focus = SRU_Failures_Of_The_Red_Mutiny }
+				prerequisite = { focus = SRU_Failures_Of_The_Great_Peoples_War }
 				mutually_exclusive = { focus = SRU_The_Military_Councils_Plan}
-				relative_position_id = SRU_Failures_Of_The_Red_Mutiny
+				relative_position_id = SRU_Failures_Of_The_Great_Peoples_War
 				available = {
 								country_exists = SRU 
 								has_country_flag = SRU_partisans_army_plan
@@ -3752,7 +3753,7 @@ focus = {
 				
 				completion_reward = {
 					add_ideas = Partisan_Army_Plan
-					country_event = SRU.16
+					country_event = SRU_Sonya_Phase_One.18
 					modify_country_flag = {
 						flag = SRU_idealist_pragmatist_balance
 						value = 1
@@ -3882,7 +3883,7 @@ focus = {
 							add_idea = Asymmetrical_Warfare_Plan
 						}
 					
-					country_event = SRU.45
+					country_event = SRU_Intro.45
 				}
 
 				#to do: ask user about attack speed
@@ -3895,8 +3896,8 @@ focus = {
 				x = 0
 				y = 2
 
-				prerequisite = { focus = SRU_Failures_Of_The_Red_Mutiny }
-				relative_position_id = SRU_Failures_Of_The_Red_Mutiny
+				prerequisite = { focus = SRU_Failures_Of_The_Great_Peoples_War }
+				relative_position_id = SRU_Failures_Of_The_Great_Peoples_War
 				available = {
 								country_exists = SRU 
 				}
@@ -3907,7 +3908,7 @@ focus = {
 				completion_reward = {
 					#Asks for a knightmare advisor? Since it's a science person rather than military I don't know what it would classify as
 					#This needs doing down the line
-					country_event = SRU.46
+					country_event = SRU_Sonya_Phase_One.21
 				}
 
 			}
@@ -3928,7 +3929,7 @@ focus = {
 				
 				completion_reward = {
 				
-					country_event = SRU.47
+					country_event = SRU_Sonya_Phase_One.22
 				}
 
 			}
@@ -3973,6 +3974,7 @@ focus = {
 					}
 				
 				completion_reward = {
+			    country_event = SRU_Sonya_Phase_One.23
 				load_oob = "Sonya_Vanguard"
 				}
 
@@ -3984,9 +3986,9 @@ focus = {
 				cost = 5
 				x = 4
 				y = 1
-				prerequisite = { focus = SRU_Failures_Of_The_Red_Mutiny }
+				prerequisite = { focus = SRU_Failures_Of_The_Great_Peoples_War }
 				mutually_exclusive = { focus = SRU_The_Partisans_Ideas}
-				relative_position_id = SRU_Failures_Of_The_Red_Mutiny
+				relative_position_id = SRU_Failures_Of_The_Great_Peoples_War
 				available = {
 								country_exists = SRU
 								has_country_flag = SRU_military_council_army_plan
@@ -3996,7 +3998,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.90
+					country_event = SRU_Sonya_Phase_One.20
 					add_ideas = SRU_Red_Army_Plans
 					modify_country_flag = {
 						flag = SRU_idealist_pragmatist_balance
@@ -4164,7 +4166,7 @@ focus = {
 				
 				completion_reward = {
 					add_ideas = SRU_through_blood_and_iron
-					country_event = SRU.51
+					country_event = SRU_Sonya_Phase_One.24
 					# to do: ask user what should go there mural doesnt have it.
 				}
 
@@ -4186,7 +4188,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.91
+					country_event = SRU_Sonya_Phase_One.14
 					# to do: confirm with user this should make and event that decides the route you go down.
 				}
 
@@ -4209,7 +4211,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.92
+					country_event = SRU_Sonya_Phase_One.15
 					modify_country_flag = {
 						flag = SRU_idealist_pragmatist_balance
 						value = 1
@@ -4234,7 +4236,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.93
+					country_event = SRU_Sonya_Phase_One.16
 					modify_country_flag = {
 						flag = SRU_idealist_pragmatist_balance
 						value = -1
@@ -4378,7 +4380,7 @@ focus = {
 					}
 				
 				completion_reward = {
-					country_event = SRU.94
+					country_event = SRU_Sonya_Socialist_Flavour.1
 					add_ideas = Tomsk_University
 				}
 
@@ -4400,7 +4402,7 @@ focus = {
 				
 				completion_reward = {
 				    add_ideas = Public_Healthcare
-					country_event = SRU.95
+					country_event = SRU_Sonya_Socialist_Flavour.2
 				}
 			}
 			focus = {
@@ -4734,6 +4736,7 @@ focus = {
 					}
 				
 				completion_reward = {
+					country_event = SRU_Sonya_Phase_One.17
 				}
 
 			}

@@ -1,0 +1,670 @@
+﻿add_namespace = SRU_Luka_Phase_One
+add_namespace = SRU_Luka_Phase_One_Politics
+add_namespace = SRU_Luka_Phase_Two
+add_namespace = SRU_Luka_Socialist_Flavour
+
+#########  Luka Phase Socialists 1  #########
+#########              Intro        #########
+
+country_event = { #Take families hostage - Coerce The Generals
+	id = SRU_Luka_Phase_One.1
+	title = SRU_Luka_Phase_One.1.t
+	desc = SRU_Luka_Phase_One.1.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One.1.a 
+		ai_chance = {
+			factor = 100
+		}
+		recruit_character = Chairman_Ivanov
+	}
+}
+
+country_event = { #Form The Russian Jacobin Council
+	id = SRU_Luka_Phase_One.2
+	title = SRU_Luka_Phase_One.2.t
+	desc = SRU_Luka_Phase_One.2.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One.2.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #SRU_The_Eternal_Revolution 
+	id = SRU_Luka_Phase_One.3
+	title = SRU_Luka_Phase_One.3.t
+	desc = SRU_Luka_Phase_One.3.d
+	
+	is_triggered_only = yes
+    
+	option = {
+		 
+		name = SRU_Luka_Phase_One.3.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Luka_Zhukov_idea_1
+	}
+}
+
+#########  Luka Phase Socialists 1  #########
+#########          Army Path        #########
+
+country_event = { #The Jacobin Army
+	id = SRU_Luka_Phase_One.4
+	title = SRU_Luka_Phase_One.4.t
+	desc = SRU_Luka_Phase_One.4.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.4.a 
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = SRU_Kovalevs_Plan
+	}
+
+	option = {
+		 
+		name = SRU_Luka_Phase_One.4.b 
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = SRU_Makarovs_Plan
+	}
+}
+
+country_event = { #An Independent Military
+	id = SRU_Luka_Phase_One.5
+	title = SRU_Luka_Phase_One.5.t
+	desc = SRU_Luka_Phase_One.5.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.5.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_An_Independent_Military
+	}
+}
+
+country_event = { #Political Loyalty
+	id = SRU_Luka_Phase_One.6
+	title = SRU_Luka_Phase_One.6.t
+	desc = SRU_Luka_Phase_One.6.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.6.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Political_Loyalty
+			days = 35
+		}
+	}
+}
+
+country_event = { #Revoltuionary Zeal
+	id = SRU_Luka_Phase_One.7
+	title = SRU_Luka_Phase_One.7.t
+	desc = SRU_Luka_Phase_One.7.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One.7.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Notify The GRU
+	id = SRU_Luka_Phase_One.8
+	title = SRU_Luka_Phase_One.8.t
+	desc = SRU_Luka_Phase_One.8.d
+
+	is_triggered_only = yes
+    
+	option = { 
+		name = SRU_Luka_Phase_One.8.a 
+		ai_chance = {
+			factor = 100
+		}	
+	}
+}
+
+country_event = { #Contact Agent Tannenbaum - Web Of Shadows
+	id = SRU_Luka_Phase_One.9
+	title = SRU_Luka_Phase_One.9.t
+	desc = SRU_Luka_Phase_One.9.d
+
+	is_triggered_only = yes
+    
+	option = {	 
+		name = SRU_Luka_Phase_One.9.a 
+		ai_chance = {
+			factor = 100
+		}		
+	}
+}
+
+country_event = { #Strike The Leader! - The Antonov Plot
+	id = SRU_Luka_Phase_One.10
+	title = SRU_Luka_Phase_One.10.t
+	desc = SRU_Luka_Phase_One.10.d
+
+	is_triggered_only = yes
+    
+	option = {				 
+		name = SRU_Luka_Phase_One.10.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Strike_The_Leader
+			days = 180
+		}
+	}
+}
+
+country_event = { #Punch Harder and Red Blitz - Operation Red Awakening
+	id = SRU_Luka_Phase_One.11
+	title = SRU_Luka_Phase_One.11.t
+	desc = SRU_Luka_Phase_One.11.d
+
+	is_triggered_only = yes
+    	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.11.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Punch_Harder
+			days = 70
+		}
+		
+		add_timed_idea = {
+			idea = SRU_Red_Blitz
+			days = 120
+		}
+	}
+}
+
+country_event = { #Bombs Away and Red Sky - Operation Red Awakening
+	id = SRU_Luka_Phase_One.12
+	title = SRU_Luka_Phase_One.12.t
+	desc = SRU_Luka_Phase_One.12.d
+
+	is_triggered_only = yes
+    	
+	option = {		 
+		name = SRU_Luka_Phase_One.12.a 
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_0
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = strat_bomber_equipment_1
+			amount = 200
+		}
+
+		add_equipment_to_stockpile = {
+			type = transport_plane_equipment
+			amount = 100
+		}
+
+		set_technology = { 
+			paratroopers = 1
+		}
+		load_oob = SRU_PARATROOPERS
+	}
+}
+
+#########  Luka Phase Socialists 1  #########
+#########        Economy Path       #########
+
+country_event = { #Zaytsevs Vision
+	id = SRU_Luka_Phase_One.13
+	title = SRU_Luka_Phase_One.13.t
+	desc = SRU_Luka_Phase_One.13.d
+
+	is_triggered_only = yes
+    	
+	option = {		 
+		name = SRU_Luka_Phase_One.13.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Zaytsev_Vision
+		if = {
+			limit = {
+				NOT = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+				}
+			}
+			add_ideas = partial_economic_mobilisation
+	}
+}
+
+country_event = { #The War Machine
+	id = SRU_Luka_Phase_One.14
+	title = SRU_Luka_Phase_One.14.t
+	desc = SRU_Luka_Phase_One.14.d
+
+	is_triggered_only = yes    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.14.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Vision_2
+			add_idea = SRU_The_War_Machine
+		}
+		}
+}
+
+country_event = { #War Machine In Overdrive
+	id = SRU_Luka_Phase_One.15
+	title = SRU_Luka_Phase_One.15.t
+	desc = SRU_Luka_Phase_One.15.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.15.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_The_War_Machine4
+			add_idea = SRU_The_War_Machine5
+		}
+		upgrade_economy_law = yes
+	}
+}
+
+country_event = { #Implement A Forced Labour Program
+	id = SRU_Luka_Phase_One.16
+	title = SRU_Luka_Phase_One.16.t
+	desc = SRU_Luka_Phase_One.16.d
+
+	is_triggered_only = yes
+    	
+	option = {		 
+		name = SRU_Luka_Phase_One.16.a 
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = SRU_Implement_A_Forced_Labour_Program
+	}
+}
+
+country_event = { #Establish The Gulag
+	id = SRU_Luka_Phase_One.17
+	title = SRU_Luka_Phase_One.17.t
+	desc = SRU_Luka_Phase_One.17.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.17.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Penal_Battallions_In_The_Army
+			add_idea = SRU_Establish_The_Gulag
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = { #Goverment Slaves
+	id = SRU_Luka_Phase_One.18
+	title = SRU_Luka_Phase_One.18.t
+	desc = SRU_Luka_Phase_One.18.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.18.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_The_Economic_Heart3
+			add_idea = SRU_The_Economic_Heart4
+		}
+		add_tech_bonus = {
+			name = excavation_tech
+			bonus = 3
+			uses = 1
+			category = excavation_tech
+		}
+	}
+}
+
+country_event = { #Zaytsev Economic Miracle
+	id = SRU_Luka_Phase_One.19
+	title = SRU_Luka_Phase_One.19.t
+	desc = SRU_Luka_Phase_One.19.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.19.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Plan
+			add_idea = SRU_Zaytsev_Economic_Miracle
+		}
+		add_ideas = SRU_Zaytsev_Plan
+		upgrade_economy_law = yes
+	}
+}
+
+#########  Luka Phase Socialists 1  #########
+#########       Politics Path       #########
+
+country_event = { #Deal with the Unions
+	id = SRU_Luka_Phase_One_Politics.1
+	title = SRU_Luka_Phase_One_Politics.1.t
+	desc = SRU_Luka_Phase_One_Politics.1.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One_Politics.1.a 
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Purges
+		mark_focus_tree_layout_dirty = yes
+		
+	}
+
+	option = {
+		 
+		name = SRU_Luka_Phase_One_Politics.1.b
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Comprimise
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#########       Purge Path       #########
+
+country_event = { #Jacobin all the way
+	id = SRU_Luka_Phase_One_Politics.2
+	title = SRU_Luka_Phase_One_Politics.2.t
+	desc = SRU_Luka_Phase_One_Politics.2.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.2.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Purge The Democrats
+	id = SRU_Luka_Phase_One_Politics.3
+	title = SRU_Luka_Phase_One_Politics.3.t
+	desc = SRU_Luka_Phase_One_Politics.3.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.3.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Control Trade unions
+	id = SRU_Luka_Phase_One_Politics.4
+	title = SRU_Luka_Phase_One_Politics.4.t
+	desc = SRU_Luka_Phase_One_Politics.4.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.4.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Isolate The Liberals
+	id = SRU_Luka_Phase_One_Politics.5
+	title = SRU_Luka_Phase_One_Politics.5.t
+	desc = SRU_Luka_Phase_One_Politics.5.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.5.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Age of Terror
+	id = SRU_Luka_Phase_One_Politics.6
+	title = SRU_Luka_Phase_One_Politics.6.t
+	desc = SRU_Luka_Phase_One_Politics.6.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.6.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #terrify the people
+	id = SRU_Luka_Phase_One_Politics.7
+	title = SRU_Luka_Phase_One_Politics.7.t
+	desc = SRU_Luka_Phase_One_Politics.7.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.7.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Prepare the lists
+	id = SRU_Luka_Phase_One_Politics.8
+	title = SRU_Luka_Phase_One_Politics.8.t
+	desc = SRU_Luka_Phase_One_Politics.8.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.8.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Insanity In The Congress
+	id = SRU_Luka_Phase_One_Politics.9
+	title = SRU_Luka_Phase_One_Politics.9.t
+	desc = SRU_Luka_Phase_One_Politics.9.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.9.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #No need for politicians
+	id = SRU_Luka_Phase_One_Politics.10
+	title = SRU_Luka_Phase_One_Politics.10.t
+	desc = SRU_Luka_Phase_One_Politics.10.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.10.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Luka's Reign
+	id = SRU_Luka_Phase_One_Politics.11
+	title = SRU_Luka_Phase_One_Politics.11.t
+	desc = SRU_Luka_Phase_One_Politics.11.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.11.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#########    Compromise Path     #########
+
+country_event = { #Mend Internal Divisions
+	id = SRU_Luka_Phase_One_Politics.12
+	title = SRU_Luka_Phase_One_Politics.12.t
+	desc = SRU_Luka_Phase_One_Politics.12.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.12.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Concessions To The Peoples Congress
+	id = SRU_Luka_Phase_One_Politics.13
+	title = SRU_Luka_Phase_One_Politics.13.t
+	desc = SRU_Luka_Phase_One_Politics.13.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.13.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #The Crossroads Of Reform
+	id = SRU_Luka_Phase_One_Politics.14
+	title = SRU_Luka_Phase_One_Politics.14.t
+	desc = SRU_Luka_Phase_One_Politics.14.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.14.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Pass The War Measures Act
+	id = SRU_Luka_Phase_One_Politics.15
+	title = SRU_Luka_Phase_One_Politics.15.t
+	desc = SRU_Luka_Phase_One_Politics.15.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.15.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #United We Stand
+	id = SRU_Luka_Phase_One_Politics.16
+	title = SRU_Luka_Phase_One_Politics.16.t
+	desc = SRU_Luka_Phase_One_Politics.16.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Luka_Phase_One_Politics.16.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
