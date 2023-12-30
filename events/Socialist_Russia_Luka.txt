@@ -3,7 +3,7 @@ add_namespace = SRU_Luka_Phase_One_Politics
 add_namespace = SRU_Luka_Phase_Two
 add_namespace = SRU_Luka_Socialist_Flavour
 
-#########  Luka Phase Socialists 1  #########
+#########  Luka Phase 1 Socialists  #########
 #########              Intro        #########
 
 country_event = { #Take families hostage - Coerce The Generals
@@ -37,7 +37,7 @@ country_event = { #Form The Russian Jacobin Council
 	}
 }
 
-country_event = { #SRU_The_Eternal_Revolution 
+country_event = { #Revolutionary With A Heart Of Steel
 	id = SRU_Luka_Phase_One.3
 	title = SRU_Luka_Phase_One.3.t
 	desc = SRU_Luka_Phase_One.3.d
@@ -407,6 +407,27 @@ country_event = { #Zaytsev Economic Miracle
 	}
 }
 
+country_event = { #The Economic Heart
+	id = SRU_Luka_Phase_One.20
+	title = SRU_Luka_Phase_One.20.t
+	desc = SRU_Luka_Phase_One.20.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Luka_Phase_One.20.a 
+		ai_chance = {
+			factor = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Vision_2
+			add_idea = SRU_The_Economic_Heart
+		}
+	}
+}
+
 #########  Luka Phase Socialists 1  #########
 #########       Politics Path       #########
 
@@ -666,5 +687,178 @@ country_event = { #United We Stand
 		ai_chance = {
 			factor = 100
 		}
+	}
+}
+
+#########  Luka Phase 2 Socialists  #########
+#########              Intro        #########
+
+country_event = { #Blood Stained Requiem
+	id = SRU_Luka_Phase_Two.1
+	title = SRU_Luka_Phase_Two.1.t
+	desc = SRU_Luka_Phase_Two.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.1.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Loot Abandoned Britannian Equipment
+	id = SRU_Luka_Phase_Two.2
+	title = SRU_Luka_Phase_Two.2.t
+	desc = SRU_Luka_Phase_Two.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.2.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Raiding Britannian Research Labs
+	id = SRU_Luka_Phase_Two.3
+	title = SRU_Luka_Phase_Two.3.t
+	desc = SRU_Luka_Phase_Two.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.3.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Ashes of The East
+	id = SRU_Luka_Phase_Two.4
+	title = SRU_Luka_Phase_Two.4.t
+	desc = SRU_Luka_Phase_Two.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.4.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Resettle The East With True Patriots
+	id = SRU_Luka_Phase_Two.5
+	title = SRU_Luka_Phase_Two.5.t
+	desc = SRU_Luka_Phase_Two.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.5.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Reprogramme Euro Britannian Scientists
+	id = SRU_Luka_Phase_Two.6
+	title = SRU_Luka_Phase_Two.6.t
+	desc = SRU_Luka_Phase_Two.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.6.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #The Slaughter Continues (MRU)
+	id = SRU_Luka_Phase_Two.7
+	title = SRU_Luka_Phase_Two.7.t
+	desc = SRU_Luka_Phase_Two.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.7.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #The Slaughter Continues (EIZ)
+	id = SRU_Luka_Phase_Two.8
+	title = SRU_Luka_Phase_Two.8.t
+	desc = SRU_Luka_Phase_Two.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.8.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Siberian Rejuvination Project
+	id = SRU_Luka_Phase_Two.9
+	title = SRU_Luka_Phase_Two.9.t
+	desc = SRU_Luka_Phase_Two.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.9.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+}
+
+country_event = { #Novosibirsk Research Complex
+	id = SRU_Luka_Phase_Two.10
+	title = SRU_Luka_Phase_Two.10.t
+	desc = SRU_Luka_Phase_Two.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Luka_Phase_Two.10.a
+		ai_chance = {
+			factor = 100
+		}
+		
 	}
 }
