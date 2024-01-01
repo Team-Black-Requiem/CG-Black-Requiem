@@ -42,3 +42,16 @@ news_event = { #Russia CW End
 		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_end}
 		}
 }
+
+news_event = { #Russia CW End Luka
+	id = super.4
+	hidden = yes	
+	is_triggered_only = yes
+	major = yes
+	timeout_days = 1
+	option = {
+		set_country_flag = SUPER_RCW_end_luka
+		set_country_flag = SUPER_RCW_end_luka_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_end_luka}
+		}
+}
