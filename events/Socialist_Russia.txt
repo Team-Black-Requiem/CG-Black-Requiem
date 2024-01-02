@@ -1077,3 +1077,175 @@ country_event = { #Politburo War Powers
 		
 	}
 }
+
+### Sonya Economic Events Phase 2###
+
+country_event = { #SRU_transforming_the_economy
+	id = SRU.104
+	title = SRU.104.t
+	desc = SRU.104.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.104.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_utopian_economic_push
+	id = SRU.105
+	title = SRU.105.t
+	desc = SRU.105.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.105.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_the_revisionists_reforms
+	id = SRU.106
+	title = SRU.106.t
+	desc = SRU.106.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.106.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_infastructure_for_the_future
+	id = SRU.107
+	title = SRU.107.t
+	desc = SRU.107.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Increase railway budget"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Increased_Railway_Budget
+			days = 365
+		}
+	}
+	option = {
+		name = "Focus on building highways"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Higway_Building_Focus
+			days = 365
+		}
+	}
+}
+country_event = { #SRU_dealing_with_the_hidden_market
+	id = SRU.108
+	title = SRU.108.t
+	desc = SRU.108.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Undertake violent campaigns against marketeers"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Anti_Market_Campaign
+			days = 180
+		}
+	}
+	option = {
+		name = "Let the Militsiya take the lead"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Market_Investigations
+			days = 180
+		}
+	}	
+	option = {
+		name = "Keep it this way for now, less of a hassle..."
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+country_event = { #SRU_investment_guidelines
+	id = SRU.109
+	title = SRU.109.t
+	desc = SRU.109.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Keep the guidelines unchanged"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+	}
+	option = {
+		name = "Loosen Risk Criteria"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SRU_Risky_Gosbank_Investments
+			days = 200
+		}
+	}
+}
+country_event = { #SRU_profit_incentives
+	id = SRU.110
+	title = SRU.110.t
+	desc = SRU.110.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Allow certain institutions to remove pay caps"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -150
+		add_timed_idea = {
+			idea = SRU_Deregulated_Pay_Levels
+			days = 250
+		}
+	}
+	option = {
+		name = "Push through a trial of the idea"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SRU_Pay_Incentive
+			days = 250
+		}
+	}	
+	option = {
+		name = "Let's not try this idea"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 50
+	}
+}
