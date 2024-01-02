@@ -1889,6 +1889,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.104
 		}
 	}
 
@@ -1916,6 +1917,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.105
 		}
 	}
 
@@ -1940,6 +1942,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Economic_Cadres
 		}
 	}
 
@@ -1964,6 +1967,12 @@
 		}
 	
 		completion_reward = {
+			570 ={
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+				}
+			}
 		}
 	}
 
@@ -1988,6 +1997,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Private_Property_Abolished
 		}
 	}
 
@@ -2012,6 +2022,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Workers_Propaganda
 		}
 	}
 
@@ -2036,6 +2047,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.107
 		}
 	}
 
@@ -2060,6 +2072,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_Private_Property_Abolished
+				add_idea = SRU_Cadre_Led_Communes
+			}
 		}
 	}
 
@@ -2084,6 +2100,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.108 
 		}
 	}
 
@@ -2096,7 +2113,11 @@
 		relative_position_id = SRU_creating_the_communes
 		prerequisite = {
 			focus = SRU_infastructure_for_the_future
+		}
+		prerequisite = {
 			focus = SRU_creating_the_communes
+		}
+		prerequisite = {
 			focus = SRU_dealing_with_the_hidden_market
 		}
 		search_filters = {
@@ -2110,6 +2131,12 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = {
+				SRU_Economic_Cadres
+				SRU_Cadre_Led_Communes
+				SRU_Workers_Propaganda
+			}
+			add_ideas = SRU_Communist_Economy
 		}
 	}
 
@@ -2134,6 +2161,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Anti_Apathy_Campaigns
 		}
 	}
 
@@ -2158,6 +2186,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = Tomsk_University
+				add_idea = SRU_Socialisation_of_Education
+			}
 		}
 	}
 
@@ -2182,6 +2214,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Increased_Quota
 		}
 	}
 
@@ -2230,6 +2263,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_Socialisation_of_Education
+				add_idea = SRU_Communist_Education
+			}
 		}
 	}
 
@@ -2254,6 +2291,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_Increased_Quota
+				add_idea = SRU_Accelerating_Plans
+			}
 		}
 	}
 
@@ -2266,7 +2307,11 @@
 		relative_position_id = SRU_socialist_visionary_colleges
 		prerequisite = {
 			focus = SRU_dealing_with_alcoholism
+		}
+		prerequisite = {
 			focus = SRU_socialist_visionary_colleges
+		}
+		prerequisite = {
 			focus = SRU_accelerate_our_plans
 		}
 		search_filters = {
@@ -2280,6 +2325,13 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = {
+				SRU_Anti_Apathy_Campaigns
+				SRU_Accelerating_Plans
+				SRU_Communist_Economy
+				SRU_Communist_Education
+			}
+			add_ideas = SRU_Utopian_Economic_Drive
 		}
 	}
 
@@ -2307,6 +2359,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.106
 		}
 	}
 
@@ -2331,6 +2384,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_State_Enterprise_System
 		}
 	}
 
@@ -2379,6 +2433,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Managerial_Autonomy
 		}
 	}
 
@@ -2403,6 +2458,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Profit_Incentive
 		}
 	}
 
@@ -2427,6 +2483,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.109
 		}
 	}
 
@@ -2451,6 +2508,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_Managerial_Autonomy
+				add_idea = SRU_Decentralized_Managment
+			}
 		}
 	}
 
@@ -2475,6 +2536,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.110
 		}
 	}
 
@@ -2487,7 +2549,11 @@
 		relative_position_id = SRU_individual_approach_to_growth
 		prerequisite = {
 			focus = SRU_investment_guidelines
+		}
+		prerequisite = {
 			focus = SRU_individual_approach_to_growth
+		}
+		prerequisite = {
 			focus = SRU_pay_reforms
 		}
 		search_filters = {
@@ -2501,6 +2567,12 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = {
+				SRU_Decentralized_Managment
+				SRU_Profit_Incentive
+				SRU_State_Enterprise_System
+			}
+			add_ideas = SRU_Leonova_Economic_Reforms
 		}
 	}
 
@@ -2525,6 +2597,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Capital_Investments
 		}
 	}
 
@@ -2549,6 +2622,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = Tomsk_University
+				add_idea = SRU_Technical_Universities
+			}
 		}
 	}
 
@@ -2573,6 +2650,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_Workers_Advisory_Boards
 		}
 	}
 
@@ -2621,6 +2699,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_Technical_Universities
+				add_idea = SRU_Scientific_and_Technical_Universities
+			}
 		}
 	}
 
@@ -2645,6 +2727,7 @@
 		}
 	
 		completion_reward = {
+		add_ideas = SRU_Democratic_Advisory_Structure
 		}
 	}
 
@@ -2657,7 +2740,11 @@
 		relative_position_id = SRU_teach_economic_sciences
 		prerequisite = {
 			focus = SRU_yurlovs_project
+		}
+		prerequisite = {
 			focus = SRU_teach_economic_sciences
+		}
+		prerequisite = {
 			focus = SRU_all_level_input
 		}
 		search_filters = {
@@ -2671,6 +2758,13 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = {
+				SRU_Leonova_Economic_Reforms
+				SRU_Democratic_Advisory_Structure
+				SRU_Capital_Investments
+				SRU_Scientific_and_Technical_Universities
+			}
+			add_ideas = SRU_Leonova_Economic_System
 		}
 	}
 
