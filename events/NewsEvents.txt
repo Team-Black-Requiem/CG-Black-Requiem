@@ -152,3 +152,29 @@ news_event = {  #Tokyo Bombings
 	}
 
 }
+
+news_event = {  #China Recognises SRU
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.8.a
+		trigger = {
+			NOT = {
+				TAG = SRU
+			}
+		}
+	}
+
+	option = {
+		name = news.8.b
+		trigger = { TAG = BRT }
+	}
+
+}
