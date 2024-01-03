@@ -862,3 +862,128 @@ country_event = { #Novosibirsk Research Complex
 		
 	}
 }
+
+#Chinese events
+country_event = { #Diplomatic Mission To China
+	id = SRU_Luka_Phase_Two.11
+	title = SRU_Luka_Phase_Two.11.t
+	desc = SRU_Luka_Phase_Two.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_political_power = 50
+		add_war_support = 0.15
+		add_equipment_to_stockpile = {
+			type = heavy_tank_equipment_2
+			amount = 200
+		}
+		name = SRU_Luka_Phase_Two.11.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Offer To Harbour Revolutionary Exiles
+	id = SRU_Luka_Phase_Two.12
+	title = SRU_Luka_Phase_Two.12.t
+	desc = SRU_Luka_Phase_Two.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_manpower = 12000
+		add_war_support = 0.15
+		name = SRU_Luka_Phase_Two.12.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Send Zaytsev To Study Chinese Methods
+	id = SRU_Luka_Phase_Two.13
+	title = SRU_Luka_Phase_Two.13.t
+	desc = SRU_Luka_Phase_Two.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.13.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Treaty Of Eternal Friendship
+	id = SRU_Luka_Phase_Two.14
+	title = SRU_Luka_Phase_Two.14.t
+	desc = SRU_Luka_Phase_Two.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_stability = 0.10
+		name = SRU_Luka_Phase_Two.14.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Joint Economic Development With China
+	id = SRU_Luka_Phase_Two.15
+	title = SRU_Luka_Phase_Two.15.t
+	desc = SRU_Luka_Phase_Two.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.15.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #An Envoy From China
+	id = SRU_Luka_Phase_Two.16
+	title = SRU_Luka_Phase_Two.16.t
+	desc = SRU_Luka_Phase_Two.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_war_support = 0.10
+		name = SRU_Luka_Phase_Two.16.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #State Visit To Haishenwai
+	id = SRU_Luka_Phase_Two.17
+	title = SRU_Luka_Phase_Two.17.t
+	desc = SRU_Luka_Phase_Two.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_political_power = 200
+		news_event = { id = news.8 }
+		name = SRU_Luka_Phase_Two.17.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
