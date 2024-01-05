@@ -802,7 +802,6 @@ focus = {
 			}
 		
 		completion_reward = {
-		add_ideas = SRU_Russian_Jacobin_Council
 		country_event = SRU_Luka_Phase_One.2
 		}
 }
@@ -911,7 +910,6 @@ focus = {
 				country_event = SRU_Luka_Phase_One.3
 				add_manpower = 30000
 				add_war_support = 0.15
-				add_ideas = SRU_The_Eternal_Revolution
 				declare_war_on = {
 					target = EUR
 					type = annex_everything
@@ -963,18 +961,6 @@ focus = {
 			}
 			
 			completion_reward = {
-				SRU_Luka_Zhukov = {
-					add_trait = {
-						slot = head_of_government
-						trait = Nihilist_agitator
-					}
-				}
-				SRU_Luka_Zhukov = {
-					add_trait = {
-						slot = head_of_government
-						trait = propagandist
-					}
-				}
 				country_event = SRU_Luka_Phase_One_Politics.2
 			}
 	}
@@ -1020,7 +1006,6 @@ focus = {
 				}
 			
 			completion_reward = {
-				add_ideas = SRU_trade_unions_reined_in
 				country_event = SRU_Luka_Phase_One_Politics.4
 			}
 			}
@@ -1040,7 +1025,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_ideas = SRU_isolate_the_liberals
 					add_political_power = 100
 					country_event = SRU_Luka_Phase_One_Politics.5
 					add_popularity = {
@@ -1067,10 +1051,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_timed_idea = {
-						idea = SRU_opposition_purged
-						days = 90
-					}
 					country_event = SRU_Luka_Phase_One_Politics.6
 				}
 
@@ -1096,8 +1076,9 @@ focus = {
 					days = 90
 				}
 				add_political_power = 200
+			}	
 			}
-			}
+
 			focus = {
 				id = SRU_terrify_the_people
 				icon = GFX_SRU_Terrify_The_People
@@ -1115,7 +1096,6 @@ focus = {
 				
 				completion_reward = {
 					add_war_support = 0.1
-					add_ideas = SRU_red_terror
 					country_event = SRU_Luka_Phase_One_Politics.7
 				}
 
@@ -1188,7 +1168,6 @@ focus = {
 				
 				completion_reward = {
 					add_stability = 0.15
-					add_ideas = SRU_cheka_lists
 					country_event = SRU_Luka_Phase_One_Politics.8
 				}
 
@@ -1210,18 +1189,7 @@ focus = {
 				
 				completion_reward = {
 					add_stability = -0.15
-					remove_advisor_role = {
-						character = SRU_Tatyana_Kuznetsova
-						slot = minister_of_interior
-					}
-					remove_advisor_role = {
-						character = SRU_Andrei_Smirnov
-						slot = head_of_government
-					}
 					country_event = SRU_Luka_Phase_One_Politics.10
-					570 = {
-						add_manpower = -300
-					}
 				}
 
 			}
@@ -1243,7 +1211,6 @@ focus = {
 				
 				completion_reward = {
 					country_event = SRU_Luka_Phase_One_Politics.11
-					add_ideas = SRU_luka_new_order
 				}
 
 			}
@@ -1289,10 +1256,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_timed_idea = {
-						idea = SRU_concessions_to_congress
-						days = 60
-					}
 					country_event = SRU_Luka_Phase_One_Politics.13
 				}
 			}
@@ -1312,10 +1275,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					add_timed_idea = {
-						idea = SRU_intraparty_cooperation
-						days = 90
-					}
 					country_event = SRU_Luka_Phase_One_Politics.14
 				}
 
@@ -1522,7 +1481,6 @@ focus = {
 				
 				completion_reward = {
 					upgrade_economy_law = yes
-					add_ideas = SRU_war_measures_act
 					country_event = SRU_Luka_Phase_One_Politics.15
 				}
 
@@ -1543,7 +1501,6 @@ focus = {
 					}
 				
 				completion_reward = {
-					remove_ideas = Democratic_Dissonance
 					add_stability = 0.1
 					add_command_power = 20
 					country_event = SRU_Luka_Phase_One_Politics.16

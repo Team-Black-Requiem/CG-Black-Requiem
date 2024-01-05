@@ -1424,6 +1424,8 @@ SRU_Red_Army_Plans= {
 	   		}
    		}
 
+		#### LUKA'S MILITARY IDEAS PHASE 1 #####
+
 		SRU_An_Independent_Military = {
 		
 			allowed = {
@@ -1610,6 +1612,8 @@ SRU_Red_Army_Plans= {
 				war_support_factor = -0.4
 			}
    		}
+
+		#### LUKA'S ECONOMIC IDEAS PHASE 1 #####
 
 		SRU_Zaytsev_Vision = {
 		
@@ -2129,51 +2133,9 @@ SRU_Red_Army_Plans= {
 	   		}
    		}
 
-		SRU_Ashes_Of_The_East = {
+		#### LUKA'S POLITICAL IDEAS PHASE 1 #####
 
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-			}
-		}
-
-		SRU_siberian_rejuvination_project = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = 0.15
-				line_change_production_efficiency_factor = 0.1
-			}
-		}
-
-		#### LUKA'S STARTER IDEAS #####
-
-		SRU_The_Eternal_Revolution = {
-
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = 0.1
-			}
-		}
-		SRU_Russian_Jacobin_Council = {
+		SRU_russian_jacobin_council = {
 		
 			modifier = {
 				army_attack_factor = 0.1
@@ -2182,6 +2144,36 @@ SRU_Red_Army_Plans= {
 			}
 		
 		}
+		
+		SRU_the_eternal_revolution = {
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		SRU_trade_unions_reined_in = {
+
+			removal_cost = -1
+
+			modifier = {
+				BR_socialism_drift = -0.02
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		SRU_isolate_the_liberals = {
+
+			removal_cost = -1
+
+			modifier = {
+				liberalism_drift = -0.02
+				political_power_gain_factor = 0.1
+			}
+		}
+		
 		SRU_opposition_purged = {
 		
 			allowed = {
@@ -2236,24 +2228,7 @@ SRU_Red_Army_Plans= {
 				add_war_support = 0.1
 			}
 		}
-		SRU_isolate_the_liberals = {
 
-			removal_cost = -1
-
-			modifier = {
-				liberalism_drift = -0.02
-				political_power_gain_factor = 0.1
-			}
-		}
-		SRU_trade_unions_reined_in = {
-
-			removal_cost = -1
-
-			modifier = {
-				BR_socialism_drift = -0.02
-				consumer_goods_factor = -0.1
-			}
-		}
 		SRU_concessions_to_congress = {
 
 			removal_cost = 1
@@ -2307,6 +2282,42 @@ SRU_Red_Army_Plans= {
 				soft_attack = 0.5
 			}
 		
+		}
+
+		#### LUKA'S IDEAS PHASE 2 #####
+
+		SRU_Ashes_Of_The_East = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SRU_siberian_rejuvination_project = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.1
+			}
 		}
 
 ### SONYA'S IDEAS 2 PHASE ###

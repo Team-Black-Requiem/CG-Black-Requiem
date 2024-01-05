@@ -34,6 +34,7 @@ country_event = { #Form The Russian Jacobin Council
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_russian_jacobin_council
 	}
 }
 
@@ -51,6 +52,7 @@ country_event = { #Revolutionary With A Heart Of Steel
 			base = 100
 		}
 		add_ideas = SRU_Luka_Zhukov_idea_1
+		add_ideas = SRU_the_eternal_revolution
 	}
 }
 
@@ -119,7 +121,7 @@ country_event = { #Political Loyalty
 		
 		add_timed_idea = {
 			idea = SRU_Political_Loyalty
-			days = 35
+			days = 50
 		}
 	}
 }
@@ -475,6 +477,18 @@ country_event = { #Jacobin all the way
 		ai_chance = {
 			base = 100
 		}
+		SRU_Luka_Zhukov = {
+			add_trait = {
+				slot = head_of_government
+				trait = Nihilist_agitator
+			}
+		}
+		SRU_Luka_Zhukov = {
+			add_trait = {
+				slot = head_of_government
+				trait = propagandist
+			}
+		}
 	}
 }
 
@@ -505,6 +519,7 @@ country_event = { #Control Trade unions
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_trade_unions_reined_in
 	}
 }
 
@@ -520,6 +535,7 @@ country_event = { #Isolate The Liberals
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_isolate_the_liberals
 	}
 }
 
@@ -534,6 +550,13 @@ country_event = { #Age of Terror
 		name = SRU_Luka_Phase_One_Politics.6.a 
 		ai_chance = {
 			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_opposition_purged
+			days = 90
+		}
+		570 = {
+			add_manpower = -1000
 		}
 	}
 }
@@ -550,6 +573,7 @@ country_event = { #terrify the people
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_red_terror
 	}
 }
 
@@ -565,6 +589,7 @@ country_event = { #Prepare the lists
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_cheka_lists
 	}
 }
 
@@ -595,6 +620,17 @@ country_event = { #No need for politicians
 		ai_chance = {
 			base = 100
 		}
+		remove_advisor_role = {
+			character = SRU_Tatyana_Kuznetsova
+			slot = minister_of_interior
+		}
+		remove_advisor_role = {
+			character = SRU_Andrei_Smirnov
+			slot = head_of_government
+		}
+		570 = {
+			add_manpower = -300
+		}
 	}
 }
 
@@ -610,6 +646,8 @@ country_event = { #Luka's Reign
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_luka_new_order
+		remove_ideas = Democratic_Dissonance
 	}
 }
 
@@ -642,6 +680,10 @@ country_event = { #Concessions To The Peoples Congress
 		ai_chance = {
 			base = 100
 		}
+		add_timed_idea = {
+			idea = SRU_concessions_to_congress
+			days = 60
+		}
 	}
 }
 
@@ -656,6 +698,10 @@ country_event = { #The Crossroads Of Reform
 		name = SRU_Luka_Phase_One_Politics.14.a 
 		ai_chance = {
 			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_intraparty_cooperation
+			days = 90
 		}
 	}
 }
@@ -672,6 +718,7 @@ country_event = { #Pass The War Measures Act
 		ai_chance = {
 			base = 100
 		}
+		add_ideas = SRU_war_measures_act
 	}
 }
 
@@ -687,6 +734,7 @@ country_event = { #United We Stand
 		ai_chance = {
 			base = 100
 		}
+		remove_ideas = Democratic_Dissonance
 	}
 }
 
