@@ -156,6 +156,9 @@
 		}
 	}
 
+################# Politics Tree #################
+################# Introduction  #################  	
+
 	focus = {
 		id = SRU_the_jacobin_cancer
 		icon = GFX_SRU_the_jacobin_cancer
@@ -181,12 +184,15 @@
 	}
 
 	focus = {
-		id = SRU_there_will_be_blood #Shed
-		icon = GFX_SRU_there_will_be_blood
+		id = SRU_crush_lukas_cult
+		icon = GFX_SRU_crush_lukas_cult
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SRU_the_jacobin_cancer
+		mutually_exclusive = {
+			focus = SRU_striking_from_the_shadows
+		}
 		prerequisite = {
 			focus = SRU_the_jacobin_cancer
 		}
@@ -205,46 +211,14 @@
 	}
 
 	focus = {
-		id = SRU_approaching_the_democrats
-		icon = GFX_SRU_approaching_the_democrats
-		cost = 1
-		x = -1
-		y = 1
-		relative_position_id = SRU_there_will_be_blood
-		prerequisite = {
-			focus = SRU_there_will_be_blood
-		}
-		mutually_exclusive = {
-			focus = SRU_out_of_allies
-			focus = SRU_approaching_the_cheka
-		}
-		search_filters = {
-		}
-		
-		available = {
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = SRU_out_of_allies
-		icon = GFX_SRU_out_of_allies
+		id = SRU_peoples_revolutionary_tribunals
+		icon = GFX_SRU_peoples_revolutionary_tribunals
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_there_will_be_blood
+		relative_position_id = SRU_crush_lukas_cult
 		prerequisite = {
-			focus = SRU_there_will_be_blood
-		}
-		mutually_exclusive = {
-			focus = SRU_approaching_the_democrats
-			focus = SRU_approaching_the_cheka
+			focus = SRU_crush_lukas_cult
 		}
 		search_filters = {
 		}
@@ -261,18 +235,17 @@
 	}
 
 	focus = {
-		id = SRU_approaching_the_cheka
-		icon = GFX_SRU_approaching_the_cheka
+		id = SRU_striking_from_the_shadows
+		icon = GFX_SRU_striking_from_the_shadows
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = SRU_there_will_be_blood
-		prerequisite = {
-			focus = SRU_there_will_be_blood
-		}
+		relative_position_id = SRU_the_jacobin_cancer
 		mutually_exclusive = {
-			focus = SRU_approaching_the_democrats
-			focus = SRU_out_of_allies
+			focus = SRU_crush_lukas_cult
+		}
+		prerequisite = {
+			focus = SRU_the_jacobin_cancer
 		}
 		search_filters = {
 		}
@@ -289,14 +262,14 @@
 	}
 
 	focus = {
-		id = SRU_assembling_our_coalition
-		icon = GFX_SRU_assembling_our_coalition
+		id = SRU_mgb_emergency_powers
+		icon = GFX_SRU_mgb_emergency_powers
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_approaching_the_democrats
+		relative_position_id = SRU_striking_from_the_shadows
 		prerequisite = {
-			focus = SRU_approaching_the_democrats
+			focus = SRU_striking_from_the_shadows
 		}
 		search_filters = {
 		}
@@ -313,14 +286,43 @@
 	}
 
 	focus = {
-		id = SRU_ready_for_decisive_action
-		icon = GFX_SRU_ready_for_decisive_action
+		id = SRU_one_last_score_to_settle
+		icon = GFX_SRU_one_last_score_to_settle
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_mgb_emergency_powers
+		prerequisite = {
+			focus = SRU_peoples_revolutionary_tribunals
+			focus = SRU_mgb_emergency_powers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+################# Politics Tree #################
+###############  Sonya's Victory  ###############  	
+
+	focus = {
+		id = SRU_sonya_stands_alone
+		icon = GFX_SRU_sonya_stands_alone
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_out_of_allies
+		relative_position_id = SRU_one_last_score_to_settle
+		allow_branch = {has_country_flag = SRU_second_struggle_sonya_wins}
 		prerequisite = {
-			focus = SRU_out_of_allies
+			focus = SRU_one_last_score_to_settle
 		}
 		search_filters = {
 		}
@@ -337,14 +339,14 @@
 	}
 
 	focus = {
-		id = SRU_sharpening_our_blades
-		icon = GFX_SRU_sharpening_our_blades
+		id = SRU_dealing_with_the_mgb
+		icon = GFX_SRU_dealing_with_the_mgb
 		cost = 1
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = SRU_approaching_the_cheka
+		relative_position_id = SRU_sonya_stands_alone
 		prerequisite = {
-			focus = SRU_approaching_the_cheka
+			focus = SRU_sonya_stands_alone
 		}
 		search_filters = {
 		}
@@ -361,16 +363,14 @@
 	}
 
 	focus = {
-		id = SRU_showdown
-		icon = GFX_SRU_showdown
+		id = SRU_sweep_away_the_capitalist_roaders
+		icon = GFX_SRU_sweep_away_the_capitalist_roaders
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = SRU_ready_for_decisive_action
+		relative_position_id = SRU_dealing_with_the_mgb
 		prerequisite = {
-			focus = SRU_ready_for_decisive_action
-			focus = SRU_assembling_our_coalition
-			focus = SRU_sharpening_our_blades
+			focus = SRU_dealing_with_the_mgb
 		}
 		search_filters = {
 		}
@@ -385,6 +385,463 @@
 		completion_reward = {
 		}
 	}
+
+	focus = {
+		id = SRU_war_on_the_nomenklatura
+		icon = GFX_SRU_war_on_the_nomenklatura
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_sonya_stands_alone
+		prerequisite = {
+			focus = SRU_sonya_stands_alone
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_cement_cadre_supremacy
+		icon = GFX_SRU_cement_cadre_supremacy
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_war_on_the_nomenklatura
+		prerequisite = {
+			focus = SRU_war_on_the_nomenklatura
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_shut_down_the_congress
+		icon = GFX_SRU_shut_down_the_congress
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_sonya_stands_alone
+		prerequisite = {
+			focus = SRU_sonya_stands_alone
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_ending_bourgeoise_concessions
+		icon = GFX_SRU_ending_bourgeoise_concessions
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_shut_down_the_congress
+		prerequisite = {
+			focus = SRU_shut_down_the_congress
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_power_for_the_people
+		icon = GFX_SRU_power_for_the_people
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_sweep_away_the_capitalist_roaders
+		prerequisite = {
+			focus = SRU_sweep_away_the_capitalist_roaders
+		}
+		prerequisite = {
+			focus = SRU_cement_cadre_supremacy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_war_on_old_russia
+		icon = GFX_SRU_the_war_on_old_russia
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_cement_cadre_supremacy
+		prerequisite = {
+			focus = SRU_cement_cadre_supremacy
+		}
+		prerequisite = {
+			focus = SRU_ending_bourgeoise_concessions
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_beating_heart_of_the_revolution
+		icon = GFX_SRU_the_beating_heart_of_the_revolution
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_power_for_the_people
+		prerequisite = {
+			focus = SRU_power_for_the_people
+		}
+		prerequisite = {
+			focus = SRU_the_war_on_old_russia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+################# Politics Tree #################
+##############  Kulakov's Victory ############### 
+
+	focus = {
+		id = SRU_kulakov_takes_it_all
+		icon = GFX_SRU_kulakov_takes_it_all
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_one_last_score_to_settle
+		allow_branch = {has_country_flag = SRU_second_struggle_kulakov_wins}
+		prerequisite = {
+			focus = SRU_one_last_score_to_settle
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_returning_to_reality
+		icon = GFX_SRU_returning_to_reality
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_kulakov_takes_it_all
+		prerequisite = {
+			focus = SRU_kulakov_takes_it_all
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_working_with_the_mgb
+		icon = GFX_SRU_working_with_the_mgb
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_returning_to_reality
+		prerequisite = {
+			focus = SRU_returning_to_reality
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_extinguish_the_fires_of_fanaticism
+		icon = GFX_SRU_extinguish_the_fires_of_fanaticism
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_working_with_the_mgb
+		prerequisite = {
+			focus = SRU_working_with_the_mgb
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_reign_in_the_cadres
+		icon = GFX_SRU_reign_in_the_cadres
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_returning_to_reality
+		prerequisite = {
+			focus = SRU_returning_to_reality
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_promoting_the_apparatchiks
+		icon = GFX_SRU_promoting_the_apparatchiks
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_reign_in_the_cadres
+		prerequisite = {
+			focus = SRU_reign_in_the_cadres
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_controlling_the_congress
+		icon = GFX_SRU_controlling_the_congress
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_returning_to_reality
+		prerequisite = {
+			focus = SRU_returning_to_reality
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_working_with_the_bourgeoise
+		icon = GFX_SRU_controlling_the_congress
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_controlling_the_congress
+		prerequisite = {
+			focus = SRU_controlling_the_congress
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_a_soviet_social_contract
+		icon = GFX_SRU_a_soviet_social_contract
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_extinguish_the_fires_of_fanaticism
+		prerequisite = {
+			focus = SRU_extinguish_the_fires_of_fanaticism
+		}
+		prerequisite = {
+			focus = SRU_promoting_the_apparatchiks
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_reforming_the_machine_of_state
+		icon = GFX_SRU_reforming_the_machine_of_state
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_promoting_the_apparatchiks
+		prerequisite = {
+			focus = SRU_promoting_the_apparatchiks
+		}
+		prerequisite = {
+			focus = SRU_working_with_the_bourgeoise
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_revolution_breaths_easy
+		icon = GFX_SRU_the_revolution_breaths_easy
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_a_soviet_social_contract
+		prerequisite = {
+			focus = SRU_a_soviet_social_contract
+		}
+		prerequisite = {
+			focus = SRU_reforming_the_machine_of_state
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	
+
 
 	#### Red Army #####
 
