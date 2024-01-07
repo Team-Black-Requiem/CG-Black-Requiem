@@ -1524,7 +1524,41 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			conversion_cost_mil_to_civ_factor = 0.2
 		}
 	}
+	MRU_Industrial_Aristocrats_idea = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = 0.02
+			industrial_capacity_factory = 0.15
+			
+		}
+	}
+	MRU_De-Regulate_Resource_Extraction_idea = {
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			consumer_goods_factor = 0.02
+			industrial_capacity_factory = 0.15  
+            local_resources = 0.15
+		}
+	}
      
+
+
 	MRU_Consumer_Industry_Expansions_idea = {
 		allowed = {
 			always = yes
@@ -1887,6 +1921,247 @@ MRU_Combined_Arms_Exercises_idea = {
 	}
 }
 
+
+###### MILITARY START #########
+
+ ######### Denubian lineage ############
+
+  ######### ECONOMIC START  ############
+
+  MRU_foreign_investment_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+  
+	}
+	research_bonus = {
+		industry = 0.15
+	}
+}
+
+MRU_Competitive_Economy_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+	production_factory_efficiency_gain_factor = 0.1
+	production_factory_max_efficiency_factor = 0.05
+	line_change_production_efficiency_factor = 0.15
+		
+	}
+	research_bonus = {
+		industry = 0.15
+	}
+}
+
+MRU_Protectionist_Economics_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		production_speed_industrial_complex_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.1
+	   min_export = 0.2	
+	}
+}
+
+MRU_Subsidies_Local_Business_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    consumer_goods_factor =0.2
+    min_export = 0.25
+    production_speed_industrial_complex_factor = 0.1
+    production_factory_efficiency_gain_factor = 0.15
+
+
+	}
+}
+
+MRU_National_Corporations_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    production_speed_buildings_factor = 0.10
+
+	}
+}
+
+MRU_Corporatist_Economics_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    production_speed_buildings_factor = 0.15
+
+	}
+}
+
+MRU_Reform_The_Education_System_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		electronics = 0.10
+		industry = 0.10
+	}
+}
+
+MRU_School_Funding_Drive_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    monthly_population = 0.05
+	}
+	research_bonus = {
+		electronics = 0.15
+		industry = 0.15
+	}
+}
+
+MRU_Found_Imperial_Universities_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		naval_equipment = 0.1
+		air_equipment = 0.1
+        synth_resources = 0.1
+	}
+}
+
+MRU_Encourage_Aristocratic_Scientistss_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+		air_equipment = 0.15
+        synth_resources = 0.15
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ######### Denubian FIN ############
 	}
 
 		######################## DESIGNERS ########################

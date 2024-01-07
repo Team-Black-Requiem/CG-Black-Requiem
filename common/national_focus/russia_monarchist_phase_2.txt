@@ -2600,7 +2600,12 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+       add_tech_bonus = {
+		name = Study_Those_Models
+		category = knightmare_all
+		ahead_reduction = 0.75
+		uses = 4
+	   }
 		}
 
 	}
@@ -2626,7 +2631,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+         load_oob = MRU_Glasgows
 		}
 
 	}
@@ -2705,7 +2710,16 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+
+			add_offsite_building = {
+				type = arms_factory
+				level = 4
+			}
 		}
 
 	}
@@ -2731,7 +2745,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        add_ideas = MRU_Industrial_Aristocrats_idea
 		}
 
 	}
@@ -2757,7 +2771,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+        add_ideas = MRU_De-Regulate_Resource_Extraction_idea 
 		}
 
 	}
@@ -3112,7 +3126,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-           add_ideas = MRU_State_Industry_Investments_idea
+
 			random_core_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -3145,7 +3159,7 @@ id = MRU_monarchist_phase_2
 		}
 	
 		completion_reward = {
-       
+			add_ideas = MRU_State_Industry_Investments_idea
 		}
 
 	}
@@ -4054,7 +4068,7 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		set_country_flag = EU_Influence 
 	}
 
 }
@@ -4132,7 +4146,7 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		add_ideas = MRU_foreign_investment_idea
 	}
 
 }
@@ -4156,7 +4170,10 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = MRU_foreign_investment_idea
+			add_idea = MRU_Competitive_Economy_idea
+		}
 	}
 
 }
@@ -4183,7 +4200,9 @@ focus = {
 	}
 
 	completion_reward = {
-		
+    every_owned_state = {
+		add_extra_state_shared_building_slots = 2
+	}	
 	}
 
 }
@@ -4207,7 +4226,9 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 3
+		}	
 	}
 
 }
@@ -4234,7 +4255,8 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		add_ideas = MRU_Reform_The_Education_System_idea
+		add_stability = 5
 	}
 
 }
@@ -4258,6 +4280,11 @@ focus = {
 	}
 
 	completion_reward = {
+		swap_ideas = {
+			remove_idea = MRU_Reform_The_Education_System_idea
+			add_idea = MRU_School_Funding_Drive_idea
+		}
+		add_stability = 5
 		
 	}
 
@@ -4286,7 +4313,7 @@ focus = {
 	}
 
 	completion_reward = {
-		
+			add_ideas = MRU_Protectionist_Economics_idea
 	}
 
 }
@@ -4310,7 +4337,10 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = MRU_Protectionist_Economics_idea
+			add_idea = MRU_Subsidies_Local_Business_idea
+		}
 	}
 
 }
@@ -4337,7 +4367,7 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		add_ideas = MRU_National_Corporations_idea
 	}
 
 }
@@ -4361,7 +4391,10 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = MRU_National_Corporations_idea
+			add_idea = MRU_Corporatist_Economics_idea
+		}
 	}
 
 }
@@ -4388,7 +4421,7 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		add_ideas = MRU_Found_Imperial_Universities_idea
 	}
 
 }
@@ -4412,7 +4445,10 @@ focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = MRU_Found_Imperial_Universities_idea
+			add_idea = MRU_Encourage_Aristocratic_Scientistss_idea
+		}
 	}
 
 }
@@ -5853,6 +5889,7 @@ focus = {
 	}
 
 	completion_reward = {
+
 	}
 }
 
