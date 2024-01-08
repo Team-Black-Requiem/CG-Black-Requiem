@@ -1035,3 +1035,36 @@ country_event = { #State Visit To Haishenwai
 		
 	}
 }
+
+
+	country_event = { #We Have Our Orders
+	id = SRU_Luka_Phase_Two.18
+	title = SRU_Luka_Phase_Two.18.t
+	desc = SRU_Luka_Phase_Two.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.18.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_makarov_army_plan
+	}
+
+	option = {
+		name = SRU_Luka_Phase_Two.18.b
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_kovalev_army_plan
+	}
+
+	option = {
+		name = SRU_Luka_Phase_Two.18.c
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_luka_takes_personal_control
+	}
+}

@@ -3971,6 +3971,246 @@
 	}
 
 	focus = {
+		id = SRU_luka_reigns_supreme
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_forging_the_new_russia
+		prerequisite = {
+			focus = SRU_forging_the_new_russia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_new_administration
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SRU_luka_reigns_supreme
+		prerequisite = {
+			focus = SRU_luka_reigns_supreme
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_iron_grip_on_russia
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_luka_reigns_supreme
+		prerequisite = {
+			focus = SRU_luka_reigns_supreme
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_jacobin_reeducation
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SRU_luka_reigns_supreme
+		prerequisite = {
+			focus = SRU_luka_reigns_supreme
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_social_idealism
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_the_new_administration
+		prerequisite = {
+			focus = SRU_the_new_administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_reshuffle_the_party
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_iron_grip_on_russia
+		prerequisite = {
+			focus = SRU_iron_grip_on_russia
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_great_march_forward
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_jacobin_reeducation
+		prerequisite = {
+			focus = SRU_jacobin_reeducation
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_heart_of_the_state
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_social_idealism
+		prerequisite = {
+			focus = SRU_social_idealism
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_out_with_the_old_in_with_the_new
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_the_great_march_forward
+		prerequisite = {
+			focus = SRU_the_great_march_forward
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_dispose_of_sonya
+		icon = GFX_SRU_forging_the_new_russia
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_the_heart_of_the_state
+		prerequisite = {
+			focus = SRU_the_heart_of_the_state focus = SRU_out_with_the_old_in_with_the_new
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = SRU_make_contact_with_china
 		icon = GFX_SRU_make_contact_with_china
 		cost = 1
@@ -4314,14 +4554,113 @@
 	}
 
 	focus = {
-		id = SRU_resolve_the_conflict
+		id = SRU_dismantle_the_mgb
 		icon = GFX_SRU_resolve_the_conflict
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SRU_expand_the_councils_emergency_powers
 		prerequisite = {
 			focus = SRU_expand_the_councils_emergency_powers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_integrate_the_appartatchiks
+		icon = GFX_SRU_resolve_the_conflict
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_expand_the_councils_emergency_powers
+		prerequisite = {
+			focus = SRU_expand_the_councils_emergency_powers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_embrace_fanaticism
+		icon = GFX_SRU_resolve_the_conflict
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_dismantle_the_mgb
+		prerequisite = {
+			focus = SRU_dismantle_the_mgb
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_assimilate_the_nomenklatura
+		icon = GFX_SRU_resolve_the_conflict
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_integrate_the_appartatchiks
+		prerequisite = {
+			focus = SRU_integrate_the_appartatchiks
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_resolve_the_conflict
+		icon = GFX_SRU_resolve_the_conflict
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_embrace_fanaticism
+		prerequisite = {
+			focus = SRU_embrace_fanaticism
+		}
+		prerequisite = {
+			focus = SRU_assimilate_the_nomenklatura
 		}
 		search_filters = {
 		}
@@ -4671,6 +5010,7 @@
 			army_attack_factor = 0.1
 			army_speed_factor = 0.15
 			army_defence_factor = 0.05
+			country_event = SRU_Luka_Phase_Two.18
 		}
 	}
 
@@ -4817,6 +5157,7 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_makarov_army_plan
 		}
 
 		allow_branch = {has_country_flag = SRU_makarov_army_plan}
@@ -5111,6 +5452,7 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_kovalev_army_plan
 		}
 
 		allow_branch = {has_country_flag = SRU_kovalev_army_plan}
@@ -5282,6 +5624,291 @@
 		}
 		prerequisite = {
 			focus = SRU_the_power_of_artillery
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_luka_takes_personal_command
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_pillage_weapons_labs
+		prerequisite = {
+			focus = SRU_develop_the_super_soldat
+		}
+		prerequisite = {
+			focus = SRU_pillage_weapons_labs
+		}
+		prerequisite = {
+			focus = SRU_study_far_eastern_shipyards
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = SRU_luka_takes_personal_control
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {has_country_flag = SRU_luka_takes_personal_command}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_new_generation_of_officers
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x =-1
+		y = 1
+		relative_position_id = SRU_luka_takes_personal_command
+		prerequisite = {
+			focus = SRU_luka_takes_personal_command
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_bureau_of_military_technology
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_luka_takes_personal_command
+		prerequisite = {
+			focus = SRU_luka_takes_personal_command
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_enhanced_soldier_initiative
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_new_generation_of_officers
+		prerequisite = {
+			focus = SRU_new_generation_of_officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_perfect_our_craft
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SRU_bureau_of_military_technology
+		prerequisite = {
+			focus = SRU_bureau_of_military_technology
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_lessons_from_the_revolution
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SRU_enhanced_soldier_initiative
+		prerequisite = {
+			focus = SRU_enhanced_soldier_initiative
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_victory_no_matter_the_cost
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_enhanced_soldier_initiative
+		prerequisite = {
+			focus = SRU_enhanced_soldier_initiative
+		}
+		prerequisite = {
+			focus = SRU_perfect_our_craft
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_novosibirsk_aerospace_bureau
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_perfect_our_craft
+		prerequisite = {
+			focus = SRU_perfect_our_craft
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_armed_to_the_teeth
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_lessons_from_the_revolution
+		prerequisite = {
+			focus = SRU_lessons_from_the_revolution
+		}
+		prerequisite = {
+			focus = SRU_victory_no_matter_the_cost
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_intergration_of_military_command
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_victory_no_matter_the_cost
+		prerequisite = {
+			focus = SRU_victory_no_matter_the_cost
+		}
+		prerequisite = {
+			focus = SRU_novosibirsk_aerospace_bureau
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SRU_the_true_red_army
+		icon = GFX_SRU_luka_takes_personal_command
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SRU_armed_to_the_teeth
+		prerequisite = {
+			focus = SRU_armed_to_the_teeth
+		}
+		prerequisite = {
+			focus = SRU_intergration_of_military_command
 		}
 		search_filters = {
 		}
