@@ -1484,25 +1484,37 @@
 		}
 	
 		completion_reward = {
+			recruit_character = EUR_Ivan_Solovev
+			recruit_character = EUR_Isai_Kiselev
+			recruit_character = EUR_Gogol_Bogdanov	
+			custom_effect_tooltip = EUR_Manfredi_promotion_tt
+			
 			add_advisor_role = {
-				character = EUR_Michele_Manfredi
-				active = yes
-				advisor={	
-				slot = high_command
-				idea_token = EUR_Michele_Manfredi_idea
-				ledger = army
-				allowed = {
-					original_tag = EUR
-				}
-				traits = {
-					knightmare_proponent_2
-				}
+		    character = EUR_Michele_Manfredi
+		    active = yes
+			advisor={	
+			slot = high_command
+			idea_token = EUR_Michele_Manfredi_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				knightmare_proponent_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
 			}
 		}
-		EUR_Michele_Manfredi = {
-			add_trait = { trait = panzer_expert }
-			add_trait = { trait = winter_expert	}
-			promote_leader = yes}
+	       }
+			hidden_effect = {
+			EUR_Michele_Manfredi = {
+				add_trait = { trait = panzer_expert }
+				add_trait = { trait = winter_expert	}
+				promote_leader = yes
+			}
+			}
 		}
 	}
 
@@ -1530,13 +1542,12 @@
 		}
 	
 		completion_reward = {
+			country_event = { id=EUR.19 days = 5 }
 			remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
 		recruit_character = EUR_Albert_Lancaster
 		recruit_character = EUR_Elliot_Collins
-		recruit_character = EUR_Samuel_Whitlock
-		recruit_character = EUR_Elias_Anson
-		recruit_character = EUR_Edgar_Bailey
+
 		}
 		# to do: add gfx for some generals, see character files.
 		# to do: add 0.5 support for 40 days when the support system is in place. 
@@ -1593,12 +1604,13 @@
 		}
 	
 		completion_reward = {
+			army_experience = 50
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
 				category = signal_company_tech
 			}
-			remove_ideas = EUR_discontent_in_the_army_ranks
+			remove_ideas = EUR_national_militia_3
 		}
 	}
 	focus = {
@@ -1624,9 +1636,15 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.23
 			add_equipment_to_stockpile = {
-				type = fighter
-				amount = 100
+				type = fighter_equipment_0
+				amount = 500
+				producer = BRT
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 300
 				producer = BRT
 			}
 		}
@@ -1678,36 +1696,39 @@
 			factor = 10
 		}
 		completion_reward = {
+			custom_effect_tooltip = EUR_BRT_Aces_tt
+			hidden_effect = {
 			load_oob = "EUR_Britannia_Air_Aces"
+			}
 			add_ace = {
-				name = "ACE"
-				surname = "ACE"
-				callsign = "ACE"
+				name = "Francis"
+				surname = "Hamilton"
+				callsign = "Eagle"
 				type = fighter_unique
 				is_female = yes
 			}
 			add_ace = {
-				name = "ACE"
-				surname = "ACE"
-				callsign = "ACE"
+				name = "Alastair"
+				surname = "Randolph"
+				callsign = "Rednose"
 				type = support_good
 			}
 			add_ace = {
-				name = "ACE"
-				surname = "ACE"
-				callsign = "ACE"
+				name = "Louis"
+				surname = "Archibald"
+				callsign = "Brave"
 				type = support_good
 			}
 			add_ace = {
-				name = "ACE"
-				surname = "ACE"
-				callsign = "ACE"
+				name = "Nicholas"
+				surname = "Albrecht"
+				callsign = "Bloody"
 				type = support_good
 			}
 			add_ace = {
-				name = "ACE"
-				surname = "ACE"
-				callsign = "ACE"
+				name = "Edward"
+				surname = "Rothschild"
+				callsign = "Jester"
 				type = support_good
 				is_female = yes
 			}
@@ -1769,11 +1790,12 @@
 		}
 	
 		completion_reward = {
-			activate_advisor = EUR_Duncan_Holt
-			}
+			country_event = EUR.24
+			air_experience = 50
+			custom_effect_tooltip = EUR_BRT_Air_Chief
 			# to do: Cas advisor 10% ground attack factor 15% all weather
 		}
-	
+	}
 	focus = {
 		id = EUR_Modern_vehicle_of_victory
 		icon = GFX_EUR_modern_vehicle_of_victory
@@ -1797,6 +1819,7 @@
 		}
 	
 		completion_reward = {
+			add_war_support = 0.10
 			set_technology = {
 				knightmare_frame_1 = 1
 				factspheres = 1
@@ -1828,9 +1851,15 @@
 		}
 	
 		completion_reward = {
-			load_oob = "EUR_Order_Of_Michael"
+			hidden_effect = {
+				load_oob = "EUR_Order_Of_Michael"
+			}	
+			country_event = EUR.20
 			EUR_Michele_Manfredi = {
-			add_trait = { trait = Holy_Knight }
+			add_trait = {
+                   slot = corps_commander
+                   trait = Holy_Knight
+             }
 			}
 			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
@@ -1858,7 +1887,9 @@
 		}
 	
 		completion_reward = {
-			army_experience = 100
+				 army_experience = 50
+               add_war_support = 0.02
+              add_command_power = 20
 		}
 	}
 	focus = {
@@ -1886,12 +1917,12 @@
 		completion_reward = {
 			add_resource = {
 				type = sakuradite
-				amount = 19
+				amount = 10
 				state = 917
 			}
 			add_resource = {
 				type = sakuradite
-				amount = 19
+				amount = 9
 				state = 822
 			}
 			add_timed_idea = {
@@ -1924,6 +1955,32 @@
 		}
 	
 		completion_reward = {
+			add_political_power = -20
+			if = {
+               limit = {
+                   country_exists = A11
+                }   
+                   diplomatic_relation = {
+                    country = A11
+                    relation = docking_rights
+                    active = yes
+                   } 
+              }
+            else = {
+
+                   diplomatic_relation = {
+                    country = AR8
+                    relation = docking_rights
+                    active = yes
+                   } 
+             }
+ 
+
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 562
+			}
 			#to do: update during the economic update.
 		}
 	}
@@ -1987,7 +2044,7 @@
 			add_manpower = 76000
 			add_ideas = EUR_Mobilize_more_people
 			add_stability = -0.10
-			add_war_support = 0.15
+			add_war_support = 0.10
 		}
 	}
 	focus = {
@@ -2012,6 +2069,7 @@
 		}
 	
 		completion_reward = {
+			add_command_power= 50
 			army_experience = 50
 			add_manpower = -15000
 			remove_ideas = EUR_national_militia_4
@@ -2067,7 +2125,10 @@
 		}
 	
 		completion_reward = {
-			add_ideas = EUR_Modern_Doctrine
+			swap_ideas = {
+               remove_idea = EUR_Mobilize_more_people
+               add_idea = EUR_Modern_Doctrine
+            }
 		}
 	}
 	focus = {
@@ -2152,7 +2213,10 @@
 		}
 	
 		completion_reward = {
+			custom_effect_tooltip = EUR_BRT_Test_Divisions_tt
+			hidden_effect = {
 			load_oob = "EUR_Testing_Divisions_Equipment"
+		    }
 		}
 	}
 	focus = {
@@ -2179,7 +2243,11 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.21
+			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
+			hidden_effect = {
 			load_oob = "EUR_second_knightmare_aid"
+			}
 			# to do: what type of advisor?
 		}
 	}
@@ -2853,7 +2921,6 @@
 	
 		completion_reward = {
 		add_ideas = EUR_shortage_of_trusted_officers
-		add_command_power = 50
 		swap_ideas = {
                remove_idea = EUR_national_militia_2
                add_idea = EUR_national_militia_3
@@ -2885,8 +2952,9 @@
 		completion_reward = {
 			recruit_character = EUR_Ivan_Solovev
 			recruit_character = EUR_Isai_Kiselev
-			recruit_character = EUR_Gogol_Bogdanov
+			recruit_character = EUR_Gogol_Bogdanov	
 			custom_effect_tooltip = EUR_Manfredi_promotion_tt
+			
 			add_advisor_role = {
 		    character = EUR_Michele_Manfredi
 		    active = yes
@@ -2906,11 +2974,13 @@
 			}
 		}
 	       }
-			
+			hidden_effect = {
 			EUR_Michele_Manfredi = {
 				add_trait = { trait = panzer_expert }
 				add_trait = { trait = winter_expert	}
-				promote_leader = yes}
+				promote_leader = yes
+			}
+			}
 		}
 	}
 	focus = {
@@ -2941,6 +3011,7 @@
 				uses = 1
 				category = land_doctrine
 			}
+			add_stability = -0.10
 			set_country_flag = EUR_Schnizel_Young_Officers
 			recruit_character = EUR_Stefan_Kuzmin
             recruit_character = EUR_Naum_Nikolaev
@@ -3237,13 +3308,11 @@
 		}
 	
 		completion_reward = {
+			country_event = { id=EUR.19 days = 5 }
 		remove_ideas = EUR_shortage_of_trusted_officers
 		set_country_flag = EUR_Schnizel_Get_More_Officers
 		recruit_character = EUR_Albert_Lancaster
 		recruit_character = EUR_Elliot_Collins
-		recruit_character = EUR_Samuel_Whitlock
-		recruit_character = EUR_Elias_Anson
-		recruit_character = EUR_Edgar_Bailey
 		}
 		# to do: add gfx for some generals, see character files.
 		# to do: add 0.5 support for 40 days when the support system is in place. 
@@ -3299,6 +3368,7 @@
 		}
 	
 		completion_reward = {
+			army_experience = 50
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
@@ -3355,7 +3425,11 @@
 		}
 	
 		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
 			load_oob = "EUR_Veteran_Brittanian_Armor_Division"
+		    }
 		}
 		# to do: we should change the name of this focus correct? Note from fris: I have modified the template a bit because 7 tank battalions won't do much.
 	}
@@ -3381,7 +3455,11 @@
 		}
 	
 		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
 			load_oob = "EUR_Veteran_Mechanised"
+			}
 		}
 		# to do: we should change the name of this focus correct?
 	}
@@ -3463,7 +3541,11 @@
 		}
 	
 		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
 			load_oob = "EUR_Brittaninan_Veteran_Motorized"
+			}
 		}
 	}
 	
@@ -3490,6 +3572,7 @@
 		}
 	
 		completion_reward = {
+			add_war_support = 0.10
 			set_technology = {
 				knightmare_frame_1 = 1
 				factspheres = 1
@@ -3521,9 +3604,15 @@
 		}
 	
 		completion_reward = {
-			load_oob = "EUR_Order_Of_Michael"
+			hidden_effect = {
+				load_oob = "EUR_Order_Of_Michael"
+			}	
+			country_event = EUR.20
 			EUR_Michele_Manfredi = {
-			add_trait = { trait = Holy_Knight }
+			add_trait = {
+                   slot = corps_commander
+                   trait = Holy_Knight
+             }
 			}
 			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
 		}
@@ -3550,7 +3639,9 @@
 		}
 	
 		completion_reward = {
-			army_experience = 100
+			   army_experience = 50
+               add_war_support = 0.02
+              add_command_power = 20
 		}
 	}
 	focus = {
@@ -3578,12 +3669,12 @@
 		completion_reward = {
 			add_resource = {
 				type = sakuradite
-				amount = 19
+				amount = 10
 				state = 917
 			}
 			add_resource = {
 				type = sakuradite
-				amount = 19
+				amount = 9
 				state = 822
 			}
 			add_timed_idea = {
@@ -3616,7 +3707,32 @@
 		}
 	
 		completion_reward = {
-			#to do: update during the economic update.
+						add_political_power = -20
+			if = {
+               limit = {
+                   country_exists = A11
+                }   
+                   diplomatic_relation = {
+                    country = A11
+                    relation = docking_rights
+                    active = yes
+                   } 
+              }
+            else = {
+
+                   diplomatic_relation = {
+                    country = AR8
+                    relation = docking_rights
+                    active = yes
+                   } 
+             }
+ 
+
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 562
+			}
 		}
 	}
 	focus = {
@@ -3642,8 +3758,11 @@
 		}
 	
 		completion_reward = {
+			country_event = EUR.21
+			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
+			hidden_effect = {
 			load_oob = "EUR_second_knightmare_aid"
-				# to do: what type of advisor?
+			}
 		}
 	}
 ####################################Guinevere Support
