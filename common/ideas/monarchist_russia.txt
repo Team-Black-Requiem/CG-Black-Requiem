@@ -2114,7 +2114,608 @@ MRU_Encourage_Aristocratic_Scientistss_idea = {
 	}
 }
 
+########## Political Start ##########
 
+MRU_Open_Up_To_Critisism_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+		stability_factor = 0.05
+		war_support_factor = -0.05
+	}
+
+}
+
+MRU_Anti-Imperial_Slander_Laws_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+		stability_factor = -0.05
+		war_support_factor = 0.05
+	}
+	
+}
+
+
+MRU_Creative_Voting_Pre-requesites_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	drift_defence_factor = 0.1
+	political_power_factor = 0.1
+	stability_factor = -0.05
+	}
+	
+}
+
+MRU_Lower_barriers_to_voting_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	drift_defence_factor = -0.1
+	political_power_factor = -0.1
+	stability_factor = -0.05
+	}
+	
+}
+
+
+MRU_Keep_them_out_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+		political_power_factor = 0.05
+	stability_factor =-0.05
+	}
+	
+}
+
+MRU_EU_Work_vizas_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+		political_power_factor = -0.05
+	monthly_population = 0.03
+	}
+	
+}
+
+MRU_Pluralistic_Reforms_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	party_popularity_stability_factor = 0.1
+	}
+	
+}
+
+MRU_Maintain_Orthodox_Supremacy_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	war_support_factor = 0.05
+	}
+	
+}
+
+MRU_A_Russia_Of_Many_Peoples_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	monthly_population = 0.05
+	}
+	
+}
+
+
+MRU_Russian_National_Supremacy_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	encryption = 1
+	}
+	
+}
+
+
+MRU_By_tsar_appointment_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	air_advisor_cost_factor = -0.1
+	navy_advisor_cost_factor = -0.1
+	army_advisor_cost_factor = -0.1
+	political_advisor_cost_factor = -0.1
+	war_support_factor = 0.05
+	}
+	
+}
+
+
+MRU_By_duma_ascension_idea = {
+	allowed = {
+		always = yes
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+	removal_cost = -1
+
+	modifier = {
+	political_power_factor = 0.1
+	stability_factor = 0.1
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########## Political FIN #########
+
+########## Military Start #######
+MRU_Imperial_navy_restoration_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+}
+
+MRU_Imperial_navy_restoration_idea_A1 = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    production_speed_dockyard_factor = 0.15
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+}
+
+MRU_Imperial_navy_restoration_idea_A2 = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    production_speed_dockyard_factor = 0.15
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+
+	equipment_bonus = {
+		heavy_cruiser_1 = {
+			build_cost_ic = -0.15
+		}
+		battleship_1 = {
+			armor_value = 0.1
+			build_cost_ic = -0.15
+		}
+		battle_cruiser_1 = {
+			build_cost_ic = -0.15
+		}
+	}
+}
+
+MRU_Imperial_navy_restoration_idea_A3 = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    production_speed_dockyard_factor = 0.15
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+
+	equipment_bonus = {
+		heavy_cruiser_1 = {
+			build_cost_ic = -0.15
+			armor_value = 0.15
+			reliability_factor = 0.15
+		}
+		battleship_1 = {
+			attack = 0.15
+			reliability_factor = 0.15
+			armor_value = 0.1
+			build_cost_ic = -0.15
+		}
+		battle_cruiser_1 = {
+			build_cost_ic = -0.15
+		}
+	}
+	
+}
+
+heavy_naval_investment = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    consumer_goods_factor = 0.03
+	}
+	
+}
+
+MRU_Imperial_navy_restoration_idea_B1 = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+	equipment_bonus = {
+		heavy_cruiser_1 = {
+			armor_value = 0.15
+		}
+	}
+}
+
+MRU_Imperial_navy_restoration_idea_B2 = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		naval_equipment = 0.15
+	}
+	equipment_bonus = {
+		heavy_cruiser_1 = {
+			armor_value = 0.15
+		}
+
+		screen_ship = {
+			armor_value = 0.1
+			air_attack_factor = 0.15
+			reliability_factor = 0.15
+			surface_detection = 0.15
+
+		}
+	}
+}
+
+
+MRU_Chelyabinsk_Aeronautics_Institute_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		air_equipment = 0.1
+	}
+}
+
+MRU_Aerial_Doctrine_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+
+	}
+	research_bonus = {
+		air_equipment = 0.1
+		air_doctrine = 0.1
+	}
+}
+
+
+##### army ############
+
+MRU_EU_attaché_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+    max_command_power = 0.1
+	command_power_gain = 0.1
+	}
+	
+}
+
+
+MRU_bodu_armor_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	equipment_bonus = {
+		infantry = {
+			defence = 0.1
+			casualty_trickleback = 0.02
+		}
+	}
+	
+}
+
+
+MRU_combat_headset_overlays_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	modifier = {
+		land_night_attack = -0.1 
+		coordination_bonus = 0.1
+	}
+	equipment_bonus = {
+		infantry = {
+		    initiative = 0.1
+			defence = 0.1
+			casualty_trickleback = 0.02
+		}
+	}
+	
+}
+
+
+MRU_Our_Own_Reliable_Experience_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		experience_gain_army_factor = 0.1
+	}
+	
+}
+
+MRU_Open_The_Surov_Academy_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	modifier = {
+		experience_gain_army_factor = 0.1
+		army_leader_start_level = 3
+	}
+	
+}
+
+
+MRU_spur_armoured_production_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	equipment_bonus = {
+		armor = {
+			build_cost_ic = 0.15
+		}
+	}
+	
+}
+
+MRU_Develop_A_Russian_Assault_rifle_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	equipment_bonus = {
+		infantry = {
+			soft_attack = 0.1
+		}
+	}
+	
+}
+
+
+MRU_Dragunov_Rifle_idea = {
+	allowed = {
+		always = yes
+	}
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+	
+	equipment_bonus = {
+		infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.15
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+###### Military FIN #######
 
 
 
@@ -2186,6 +2787,111 @@ MRU_Encourage_Aristocratic_Scientistss_idea = {
 		}
 	}
 
+	br_tank_manufacturer = {
+		designer = yes
+
+		EKA_Imperial_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = MRU
+			}
+			available = {
+				has_completed_focus = MRU_A_Russian_MBT
+			}
+
+			equipment_bonus = {
+				armor = {
+					hg_armor_piercing = 0.1
+					lg_armor_piercing = 0.1
+					breakthrough = 0.1
+			
+				}
+			}
+             
+			modifier = {
+				coordination_bonus = 0.1
+				piercing = 0.1
+			}
+		}
+	}
+
+
+	br_tank_manufacturer = {
+		designer = yes
+
+		EKA_EU_tank_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = MRU
+			}
+            available = {
+				has_completed_focus = MRU_Make_Agreements_With_European_Contractors
+			}
+		    equipment_bonus = {
+				armor = {
+					armor_value = 0.1
+					maximum_speed = 0.05
+					reliability_factor = 0.05
+				}
+			}
+
+			traits = {
+				
+			}
+
+		}
+	}
+
+	br_aircraft_manufacturer = {
+		designer = yes
+
+		EKA_imperial_aviation_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = MRU
+			}
+
+		    available = {
+				has_completed_focus = MRU_aviation_industry
+			}
+            equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					reliability_factor = 0.1
+					armor_value = 0.05
+
+				}
+			}
+		}
+	}
+
+	
+	br_aircraft_manufacturer = {
+		designer = yes
+
+		EKA_EU_aviation_man = {
+			# picture = 
+
+			allowed = {
+				original_tag = MRU
+			}
+
+		    available = {
+				has_completed_focus = MRU_EU_Avionics
+			}
+            equipment_bonus = {
+				fighter_equipment = {
+					maximum_speed = 0.1
+					fuel_consumption_factor = 0.1
+					air_attack_factor = 0.1
+
+				}
+			}
+		}
+	}
 	industrial_concern = {
 		designer = yes
 
