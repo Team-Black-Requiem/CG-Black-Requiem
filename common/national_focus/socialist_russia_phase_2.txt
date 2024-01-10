@@ -180,16 +180,18 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Sonya_Phase_Two_Jacobin_Purge.1
 		}
 	}
 
 	focus = {
 		id = SRU_crush_lukas_cult
 		icon = GFX_SRU_crush_lukas_cult
-		cost = 1
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = SRU_the_jacobin_cancer
+		cancelable = no
 		mutually_exclusive = {
 			focus = SRU_striking_from_the_shadows
 		}
@@ -200,10 +202,14 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_leonova_heads_security_services
 		}
 
 		ai_will_do = {
 			factor = 10
+		}
+		select_effect = {
+			country_event = SRU_Sonya_Phase_Two_Jacobin_Purge.4
 		}
 	
 		completion_reward = {
@@ -211,8 +217,8 @@
 	}
 
 	focus = {
-		id = SRU_peoples_revolutionary_tribunals
-		icon = GFX_SRU_peoples_revolutionary_tribunals
+		id = SRU_a_funeral_of_hatred
+		icon = GFX_SRU_a_funeral_of_hatred
 		cost = 1
 		x = 0
 		y = 1
@@ -224,6 +230,8 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_jacobins_purged
+			add_ideas = SRU_revolutionary_tribunals
 		}
 
 		ai_will_do = {
@@ -231,16 +239,18 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = SRU_jacobin_remission
 		}
 	}
 
 	focus = {
 		id = SRU_striking_from_the_shadows
 		icon = GFX_SRU_striking_from_the_shadows
-		cost = 1
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = SRU_the_jacobin_cancer
+		cancelable = no
 		mutually_exclusive = {
 			focus = SRU_crush_lukas_cult
 		}
@@ -251,19 +261,20 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_ivanov_heads_security_services
 		}
 
 		ai_will_do = {
 			factor = 10
 		}
-	
-		completion_reward = {
+		select_effect = {
+			country_event = SRU_Sonya_Phase_Two_Jacobin_Purge.8
 		}
 	}
 
 	focus = {
-		id = SRU_mgb_emergency_powers
-		icon = GFX_SRU_mgb_emergency_powers
+		id = SRU_as_if_they_never_were
+		icon = GFX_SRU_as_if_they_never_were
 		cost = 1
 		x = 0
 		y = 1
@@ -275,6 +286,7 @@
 		}
 		
 		available = {
+			has_country_flag = SRU_jacobins_purged
 		}
 
 		ai_will_do = {
@@ -282,19 +294,22 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = SRU_jacobin_remission
+			add_ideas = SRU_mgb_emergency_powers
 		}
 	}
 
 	focus = {
 		id = SRU_one_last_score_to_settle
 		icon = GFX_SRU_one_last_score_to_settle
-		cost = 1
+		cost = 4
 		x = -1
 		y = 1
-		relative_position_id = SRU_mgb_emergency_powers
+		relative_position_id = SRU_as_if_they_never_were
+		cancelable = no
 		prerequisite = {
-			focus = SRU_peoples_revolutionary_tribunals
-			focus = SRU_mgb_emergency_powers
+			focus = SRU_a_funeral_of_hatred
+			focus = SRU_as_if_they_never_were
 		}
 		search_filters = {
 		}
@@ -304,6 +319,9 @@
 
 		ai_will_do = {
 			factor = 10
+		}
+		select_effect = {
+			country_event = SRU_Sonya_Phase_Two.3
 		}
 	
 		completion_reward = {
@@ -2026,7 +2044,7 @@
 			focus = SRU_military_arsenal_strategy
 		}
 		prerequisite = {
-			focus = SRU_gen
+			focus = SRU_general_purpouse_supply_trucks
 		}
 		search_filters = {
 		}

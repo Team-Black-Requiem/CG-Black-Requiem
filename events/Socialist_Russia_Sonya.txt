@@ -1,5 +1,4 @@
 ﻿add_namespace = SRU_Sonya_Phase_One
-add_namespace = SRU_Sonya_Phase_Two
 add_namespace = SRU_Sonya_Socialist_Flavour
 
 country_event = { #March of the Revolution
@@ -512,6 +511,20 @@ country_event = { #Opening Public Hospitals
     	
 	option = {	 
 		name = SRU_Sonya_Socialist_Flavour.2.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #The Jacobin Cancer
+	id = SRU_Sonya_Phase_Two.1
+	title = SRU_Sonya_Phase_Two.1.t
+	desc = SRU_Sonya_Phase_Two.1.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two.1.a 
 		ai_chance = {
 			base = 100
 		}		

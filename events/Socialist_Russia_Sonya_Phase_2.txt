@@ -1,0 +1,456 @@
+﻿add_namespace = SRU_Sonya_Phase_Two
+add_namespace = SRU_Sonya_Phase_Two_Economics
+add_namespace = SRU_Sonya_Phase_Two_Military_Partisan
+add_namespace = SRU_Sonya_Phase_Two_Military_Council
+add_namespace = SRU_Sonya_Phase_Two_Kulakov
+add_namespace = SRU_Sonya_Phase_Two_Sonya
+### Jacobin Purge Related Events
+add_namespace = SRU_Sonya_Phase_Two_Jacobin_Purge
+
+## Power Struggle 
+
+country_event = { #Red Banners On the Pacific
+	id = SRU_Sonya_Phase_Two.1
+	title = SRU_Sonya_Phase_Two.1.t
+	desc = SRU_Sonya_Phase_Two.1.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two.1.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #The Struggle Continues
+	id = SRU_Sonya_Phase_Two.2
+	title = SRU_Sonya_Phase_Two.2.t
+	desc = SRU_Sonya_Phase_Two.2.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two.2.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #The Alliance Breaks
+	id = SRU_Sonya_Phase_Two.3
+	title = SRU_Sonya_Phase_Two.3.t
+	desc = SRU_Sonya_Phase_Two.3.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two.3.a 
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Sonya is ahead
+					flag = SRU_idealist_pragmatist_balance
+					value > 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.4 days = 7 }
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Kulakov is ahead
+					flag = SRU_idealist_pragmatist_balance
+					value < 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.5 days = 7 }
+		}			
+	}
+}
+
+country_event = { #Sonya Calls the Central Comittee
+	id = SRU_Sonya_Phase_Two.4
+	title = SRU_Sonya_Phase_Two.4.t
+	desc = SRU_Sonya_Phase_Two.4.d
+	is_triggered_only = yes
+    	
+	option = {	#Call it quickly (Sonya) 
+		name = SRU_Sonya_Phase_Two.4.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+
+	option = {	#Delay it regroup (Kulakov) 
+		name = SRU_Sonya_Phase_Two.4.b 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+
+	option = {	#Do it by procedure (Normal) 
+		name = SRU_Sonya_Phase_Two.4.c 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+}
+
+country_event = { #Kulakov Calls An Central Comittee
+	id = SRU_Sonya_Phase_Two.5
+	title = SRU_Sonya_Phase_Two.5.t
+	desc = SRU_Sonya_Phase_Two.5.d
+	is_triggered_only = yes
+    	
+	option = {	#Delay so we can prepare (Sonya) 
+		name = SRU_Sonya_Phase_Two.5.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+
+	option = {	#Hurry proceedings so we can have suprise (Kulakov) 
+		name = SRU_Sonya_Phase_Two.5.b 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+
+	option = {	#Do it by procedure (Normal) 
+		name = SRU_Sonya_Phase_Two.5.c 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+	}
+}
+
+country_event = { # Politburo Breakdown
+	id = SRU_Sonya_Phase_Two.6
+	title = SRU_Sonya_Phase_Two.6.t
+	desc = SRU_Sonya_Phase_Two.6.d
+	is_triggered_only = yes
+    	
+	option = {	#The Left Makes Some Gains (Sonya) 
+		name = SRU_Sonya_Phase_Two.6.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.7 days = 7 }		
+	}
+
+	option = {	#The Right Makes Some Gains (Kulakov) 
+		name = SRU_Sonya_Phase_Two.6.b 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two.7 days = 7 }		
+	}
+
+}
+
+country_event = { #The Wild Card
+	id = SRU_Sonya_Phase_Two.7
+	title = SRU_Sonya_Phase_Two.7.t
+	desc = SRU_Sonya_Phase_Two.7.d
+	is_triggered_only = yes
+    	
+	option = {	#Sonya Gets A Speech In (Sonya) 
+		name = SRU_Sonya_Phase_Two.7.a 
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Sonya Victory
+					flag = SRU_idealist_pragmatist_balance
+					value > 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.8 days = 7 }
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Kulakov Victory
+					flag = SRU_idealist_pragmatist_balance
+					value < 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.9 days = 7 }
+		}		
+	}
+
+	option = {	#Kulakov Has The Last Word (Kulakov) 
+		name = SRU_Sonya_Phase_Two.7.b 
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Sonya Victory
+					flag = SRU_idealist_pragmatist_balance
+					value > 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.8 days = 7 }
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Kulakov Victory
+					flag = SRU_idealist_pragmatist_balance
+					value < 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.9 days = 7 }
+		}		
+	}
+
+	option = {	#JUST HOLD THE VOTE (Normal) 
+		name = SRU_Sonya_Phase_Two.7.c 
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Sonya Victory
+					flag = SRU_idealist_pragmatist_balance
+					value > 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.8 days = 7 }
+		}
+		if = {
+			limit = {
+				has_country_flag = { #Kulakov Victory
+					flag = SRU_idealist_pragmatist_balance
+					value < 1
+				}
+			}
+			country_event = { id = SRU_Sonya_Phase_Two.9 days = 7 }
+		}			
+	}
+}
+
+country_event = { #Sonya Wins The Struggle
+	id = SRU_Sonya_Phase_Two.8
+	title = SRU_Sonya_Phase_Two.8.t
+	desc = SRU_Sonya_Phase_Two.8.d
+	is_triggered_only = yes
+    	
+	option = {	#Sonya Wins
+		name = SRU_Sonya_Phase_Two.8.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_second_struggle_sonya_wins
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_sonya_stands_alone		
+	}
+}
+
+country_event = { #Kulakov Wins The Struggle
+	id = SRU_Sonya_Phase_Two.9
+	title = SRU_Sonya_Phase_Two.9.t
+	desc = SRU_Sonya_Phase_Two.9.d
+	is_triggered_only = yes
+    	
+	option = {	#Kulakov Wins
+		name = SRU_Sonya_Phase_Two.9.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_second_struggle_kulakov_wins
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_kulakov_takes_it_all		
+	}
+}
+
+#########      Politics Phase 2     #########
+######### Dealing with the jacobins #########
+
+country_event = { #The Struggle Continues
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.1
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.1.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.1.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.1.a 
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_jacobin_remission
+		if = {
+			limit = {
+				has_country_flag = SRU_leonova_heads_security_services	
+			}
+			country_event = SRU_Sonya_Phase_Two_Jacobin_Purge.3
+		}
+		if = {
+			limit = {
+				has_country_flag = SRU_ivanov_heads_security_services	
+			}
+			country_event = SRU_Sonya_Phase_Two_Jacobin_Purge.2
+		}		
+	}
+}
+
+country_event = { #The Ivanov's Proposal
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.2
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.2.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.2.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.2.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #The Leonova's Proposal
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.3
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.3.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.3.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.3.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+#########   Purging The Jacobins    #########
+#########  Leonova's Public Purge   #########
+
+country_event = { #The Mistakes Of Jacobinism
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.4
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.4.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.4.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.4.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.5 days = 7 }		
+	}
+}
+
+country_event = { #Wrath Of The People
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.5
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.5.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.5.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.5.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.6 days = 7 }		
+	}
+}
+
+country_event = { #The Trial Heirs Robespierre  
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.6
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.6.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.6.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.6.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.7 days = 7 }		
+	}
+}
+
+country_event = { #Massacre Of The Monster
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.7
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.7.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.7.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.7.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_jacobins_purged		
+	}
+}
+
+#########   Purging The Jacobins    #########
+#########   Ivanov's Silent Purge   #########
+
+country_event = { #The Reapers Ledger
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.8
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.8.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.8.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.8.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.9 days = 7 }		
+	}
+}
+
+country_event = { #Dissapearing From History
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.9
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.9.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.9.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.9.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.10 days = 7 }		
+	}
+}
+
+country_event = { #Tragic Accidents
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.10
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.10.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.10.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.10.a 
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = SRU_Sonya_Phase_Two_Jacobin_Purge.11 days = 7 }		
+	}
+}
+
+country_event = { #Out The Back Door Of History
+	id = SRU_Sonya_Phase_Two_Jacobin_Purge.11
+	title = SRU_Sonya_Phase_Two_Jacobin_Purge.11.t
+	desc = SRU_Sonya_Phase_Two_Jacobin_Purge.11.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two_Jacobin_Purge.11.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_jacobins_purged		
+	}
+}
