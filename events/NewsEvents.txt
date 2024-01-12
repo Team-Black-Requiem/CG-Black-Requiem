@@ -179,3 +179,29 @@ news_event = {  #China Recognises SRU
 	}
 
 }
+
+news_event = {  #Novosibirsk Massacre
+	id = news.9
+	title = news.9.t
+	desc = news.9.d
+	picture = GFX_news_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.9.a
+		trigger = {
+			NOT = {
+				TAG = SRU
+			}
+		}
+	}
+
+	option = {
+		name = news.9.b
+		trigger = { TAG = SRU }
+	}
+
+}
