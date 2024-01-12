@@ -1068,3 +1068,43 @@ country_event = { #State Visit To Haishenwai
 		set_country_flag = SRU_luka_takes_personal_control
 	}
 }
+
+##Misc Socialist Events##
+
+country_event = { #Novosibirsk Massacre
+	id = SRU_Luka_Socialist_Flavour.1
+	title = SRU_Luka_Socialist_Flavour.1.t
+	desc = SRU_Luka_Socialist_Flavour.1.d
+
+	is_triggered_only = yes
+    
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		570 ={
+			is_controlled_by = EUR
+		}
+	}
+	
+	option = {
+		 
+		name = SRU_Luka_Socialist_Flavour.1.a 
+		ai_chance = {
+			base = 100
+		}
+		570 ={
+		set_state_category = shelled_city
+		add_manpower = -1000000
+		add_victory_points = {
+			province = 7274
+			value = -30
+		}
+	}
+	590 ={
+		add_manpower = 1000000
+	}
+	news_event = { id = news.9 }
+	}
+}
