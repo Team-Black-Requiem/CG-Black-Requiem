@@ -21,13 +21,27 @@ ideas = {
 		
 
       avoid_global_wars = {
+		allowed_civil_war = {
+			always = yes
+		}
            modifier = {
                 ai_join_ally_desire_factor = -1000
 				ai_call_ally_desire_factor = -1000
            }
       }
- 
 
+	  russian_civil_war = { ##Goes Away When The Russian Civil War Ends
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+           modifier = {
+               offensive_war_stability_factor = 0.3
+			   defensive_war_stability_factor = 0.3
+           }
+      }
 
 		continuous_air_production = {
 			allowed = {
