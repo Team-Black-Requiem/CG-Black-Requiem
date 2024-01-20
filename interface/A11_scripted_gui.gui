@@ -188,7 +188,7 @@ guiTypes = {
 			name = "a11_regime_decision_ui_window"
 			position = { x = 0 y = 0 }
 			size = { width = 275 height = 275 }
-			
+				
 			iconType = {
 				name = "A11_map"
 				orientation = upper_left
@@ -196,8 +196,8 @@ guiTypes = {
 
 			}
 
-			buttonType = {
-				name = "Hokkaido_Map"
+			buttonType = {             ##Most complex type of Window: dynamic button that can contain scripted text, delayed text
+				name = "Hokkaido_Map"  ##and special GFX
 				orientation = upper_left
 				position = { x = 350 y = 9 }
 				spriteType = "GFX_decision_A11_hokkaido"

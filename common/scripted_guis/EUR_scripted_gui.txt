@@ -28,11 +28,106 @@ scripted_gui = {
 		}
 	}
 
-	#EUR_britannia_favor_gui = {
-	#	context_type = decision_category
-	#	window_name = "EUR_britannia_first_decision_ui_window"
-	#	visible = {
-    #        always = yes
-    #    }
-	#}
+    EUR_britannia_favor_gui = {
+	   		context_type = decision_category
+			window_name = "EUR_favors_decision_ui_window"
+	
+			visible = {
+				always = yes
+			}
+
+			effects = {
+			Siberia_Map_click = {
+				if = {
+                    limit = {   check_variable = { Siberia_Map_clicked = 0 }  }   
+                    set_variable = { Siberia_Map_clicked = 1 }
+					give_resource_rights = { receiver = BRT state = 644 }	
+				    give_resource_rights = { receiver = BRT state = 917 }	 	
+				    add_political_power = -70
+					britannia_support_EUR_increase_3 = yes
+                }
+
+                
+			}
+			Chukotka_Map_click = {
+				if = {
+                    limit = {   check_variable = { Chukotka_Map_clicked = 0 }  } 
+                    set_variable = { Chukotka_Map_clicked = 1 }
+					give_resource_rights = { receiver = BRT state = 822 }	
+				    add_political_power = -50
+					britannia_support_EUR_increase_2 = yes
+					}
+                
+			}
+			Magadan_Map_click = {
+				if = {
+                    limit = {   check_variable = { Magadan_Map_clicked = 0 }  } 
+                    set_variable = { Magadan_Map_clicked = 1 }
+				give_resource_rights = { receiver = BRT state = 722 }	
+				add_political_power = -35
+				britannia_support_EUR_increase = yes
+                }
+                
+
+			}
+			Okhotsk_Map_click = {
+				if = {
+                    limit = {   check_variable = { Okhotsk_Map_clicked = 0 }  } 
+                    set_variable = { Okhotsk_Map_clicked = 1 }
+				give_resource_rights = { receiver = BRT state = 562 }	
+				add_political_power = -30
+				britannia_support_EUR_increase = yes
+
+                 }
+			}
+
+			Kamkatcha_Map_click = {
+				if = {
+                    limit = {   check_variable = { Kamkatcha_Map_clicked = 0 }  } 
+                    set_variable = { Kamkatcha_Map_clicked = 1 }
+				give_resource_rights = { receiver = BRT state = 637 }	
+				add_political_power = -40
+				britannia_support_EUR_increase_2 = yes
+                }
+			}
+			Yakutsk_Map_click = {
+				if = {
+                    limit = {   check_variable = { Yakutsk_Map_clicked = 0 }  } 
+                    set_variable = { Yakutsk_Map_clicked = 1 }
+				give_resource_rights = { receiver = BRT state = 574 }	
+				add_political_power = -30
+				britannia_support_EUR_increase = yes
+                }
+			}
+	
+		    }
+
+
+			properties = { 
+		
+			Yakutsk_Map = {
+				image = "[get_Yakutsk_Map_gfx]"
+			}
+			Kamkatcha_Map = {
+				image = "[get_Kamkatcha_Map_gfx]"
+			}
+			Okhotsk_Map = {
+				image = "[get_Okhotsk_Map_gfx]"
+			}
+			Magadan_Map = {
+				image = "[get_Magadan_Map_gfx]"
+			}
+			Chukotka_Map = {
+				image = "[get_Chukotka_Map_gfx]"
+			}
+			Siberia_Map = {
+				image = "[get_Siberia_Map_gfx]"
+			}
+
+		}
+
+
+	}
+
+
 }

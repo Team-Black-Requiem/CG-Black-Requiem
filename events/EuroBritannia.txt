@@ -732,3 +732,39 @@ country_event = {
 
     } 	
 }
+
+country_event = {  
+	id = EUR.30 ####SPECIAL EVENT FOR THE FAVOR MECHANIC
+	title = EUR.30.t
+	desc = EUR.30.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+			check_variable = { britannia_support_EUR > 50 }
+    }
+	mean_time_to_happen = {
+    days = 30
+   }
+	option = {
+		name = EUR.30.a
+		ai_chance = {
+			factor = 100
+		}
+        add_stability = -0.05
+		add_opinion_modifier = {
+        target = BRT
+        modifier = friendship_treaty
+         }
+        BRT = {
+		 add_opinion_modifier = {
+        target = EUR
+        modifier = friendship_treaty
+         }
+		}
+		add_popularity = {
+                 ideology = BR_supremacist
+                 popularity = 0.08
+        }
+
+    } 	
+}
