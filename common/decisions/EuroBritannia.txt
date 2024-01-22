@@ -19,7 +19,7 @@ EUR_arms_supply = {
 		}
 		remove_effect = {
 			}
-		}
+	}
 	EUR_spare_parts_for_knightmares= {
 		icon = d
 		available = {
@@ -902,4 +902,217 @@ asking_area_9_for_aid = {
 }
 
 
+}
+
+EUR_britannia_favor = {
+    	EUR_gun_request_1 = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.15 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 10
+		days_remove = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    country_exists = EUR 
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_to_variable = { EUR_Doing_Actions = 1 }
+               add_equipment_to_stockpile = {
+                   type = infantry_equipment
+                   amount = 1200
+                   producer = BRT
+                 }
+		
+		}
+		remove_effect = {
+						  add_to_variable = { EUR_Doing_Actions = -1 }
+		}
+	}
+
+	EUR_gun_request_1_support = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.15 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 15
+		days_remove = 30
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    country_exists = EUR 
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_to_variable = { EUR_Doing_Actions = 1 }
+               add_equipment_to_stockpile = {
+                   type = support_equipment
+                   amount = 500
+                   producer = BRT
+                 }
+		
+		}
+		remove_effect = {
+						  add_to_variable = { EUR_Doing_Actions = -1 }
+		}
+	}
+
+		EUR_gun_request_1_trucks = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.20 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 20
+		days_remove = 40
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    country_exists = EUR 		
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_to_variable = { EUR_Doing_Actions = 1 }
+               add_equipment_to_stockpile = {
+                   type = motorized_equipment_1 
+                   amount = 700
+                   producer = BRT
+                 }
+		
+		}
+		remove_effect = {
+		  add_to_variable = { EUR_Doing_Actions = -1 }
+		}
+	}
+
+	EUR_gun_request_2 = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.40 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 30
+		days_remove = 40
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+				    country_exists = EUR 		
+
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_to_variable = { EUR_Doing_Actions = 1 }
+               add_equipment_to_stockpile = {
+                   type = mbt_1 
+                   amount = 700
+                   producer = BRT
+                 }
+		
+		}
+		remove_effect = {
+					  add_to_variable = { EUR_Doing_Actions = -1 }
+	
+		}
+	}
+
+		EUR_gun_request_2_artillery = {
+		icon = GFX_EUR_gun_request_1_icon
+			available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.40 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 35
+		days_remove = 30
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+				    country_exists = EUR 		
+
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_to_variable = { EUR_Doing_Actions = 1 }
+               add_equipment_to_stockpile = {
+                   type = sp_artillery_1 
+                   amount = 700
+                   producer = BRT
+                 }
+		
+		}
+		remove_effect = {
+						  add_to_variable = { EUR_Doing_Actions = -1 }
+
+		}
+	}
+
+	EUR_gun_request_3 = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = BRT 
+			check_variable = { britannia_support_EUR > 0.50 }
+			check_variable = { EUR_Doing_Actions < 3 }
+		}
+		cost = 40
+		days_remove = 50
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    country_exists = EUR 		
+		
+		}
+		modifier = {
+		}
+		complete_effect = {
+               add_equipment_to_stockpile = {
+                   type = landspinner 
+                   amount = 200
+                   producer = BRT
+                 }
+				 add_equipment_to_stockpile = {
+                   type = factspheres 
+                   amount = 200
+                   producer = BRT
+                 } 
+				  add_equipment_to_stockpile = {
+                   type = knightmare_mass_prod_2 
+                   amount = 500
+                   producer = BRT
+                 } 
+		   add_to_variable = { EUR_Doing_Actions = 1 }
+		}
+		remove_effect = {
+			  add_to_variable = { EUR_Doing_Actions = -1 }
+		}
+	}
+ 
+
+
+
+	
 }

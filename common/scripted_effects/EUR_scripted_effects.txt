@@ -1,9 +1,13 @@
 britannia_support_EUR_setup = {
 
-    set_variable = { britannia_support_EUR_1 = 0.05 }
-    set_variable = { britannia_support_EUR_2 = 0.035 }
-    set_variable = { britannia_support_EUR_3 = 0.025 }
-    set_variable = { britannia_support_EUR_4 = 0.025 }
+    set_variable = { britannia_support_EUR = 0.16 }   
+	set_variable = { Siberia_Map_clicked = 0 }	
+    set_variable = { Chukotka_Map_clicked = 0 }
+    set_variable = { Magadan_Map_clicked = 0 }	
+    set_variable = { Okhotsk_Map_clicked = 0 }	
+    set_variable = { Kamkatcha_Map_clicked = 0 }
+    set_variable = { Yakutsk_Map_clicked = 0 }	
+    set_variable = { EUR_Doing_Actions = 0 } 
 
 
 }
@@ -12,10 +16,7 @@ britannia_support_EUR_increase = {
 
 	#Self Explanatory
 	
-	#add_to_variable = { britannia_support_EUR_1 = 0.05 }
-    add_to_variable = { britannia_support_EUR_2 = 0.035 }
-    add_to_variable = { britannia_support_EUR_3 = 0.025 }
-    add_to_variable = { britannia_support_EUR_4 = 0.025 }
+	add_to_variable = { britannia_support_EUR = 0.05 }
 
 	custom_effect_tooltip = britannia_support_EUR_increase_tt
 	
@@ -25,12 +26,19 @@ britannia_support_EUR_increase_2 = {
 
 	#Self Explanatory
 	
-	add_to_variable = { britannia_support_EUR_1 = 0.05 }
-    add_to_variable = { britannia_support_EUR_2 = 0.05 }
-    add_to_variable = { britannia_support_EUR_3 = 0.05 }
-    add_to_variable = { britannia_support_EUR_4 = 0.05 }
+	add_to_variable = { britannia_support_EUR = 0.09 }
 
 	custom_effect_tooltip = britannia_support_EUR_increase_2_tt
+	
+}
+
+britannia_support_EUR_increase_3 = {
+
+	#Self Explanatory
+	
+	add_to_variable = { britannia_support_EUR = 0.16 }
+
+	custom_effect_tooltip = britannia_support_EUR_increase_3_tt
 	
 }
 

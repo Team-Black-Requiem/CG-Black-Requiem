@@ -110,4 +110,88 @@ guiTypes = {
 			pdx_tooltip = ""
 		}
     }
+
+	containerWindowType = {
+			name = "EUR_favors_decision_ui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 490 height = 259 }
+		background = {
+			name = "EUR_Favors_Background"
+			quadTextureSprite ="GFX_EUR_Favors_Background"
+		}
+
+		instantTextboxType = {
+			name = "EUR_BRT_Influence"
+			position = { x = 30 y = 206 }
+			font = "hoi_20header"
+			text = EUR_BRT_Influence_tt
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 70
+		}
+
+		buttonType = {
+				name = "Siberia_Map"
+				orientation = center
+				position = { x = -258 y = -138 }
+				spriteType = "GFX_decision_EUR_Siberia"
+				pdx_tooltip = "EUR_Siberia"
+				pdx_tooltip_delayed = "EUR_desc_Siberia"
+	
+		}
+
+				buttonType = {
+				name = "Chukotka_Map"
+				orientation = center
+				position = { x = 80 y = -128 }
+				spriteType = "GFX_decision_EUR_Chukotka"
+				pdx_tooltip = "EUR_Chukotka"
+				pdx_tooltip_delayed = "EUR_desc_Chukotka"
+	
+		}
+
+				buttonType = {
+				name = "Magadan_Map"
+				orientation = center
+				position = { x = 22 y = -92 }
+				spriteType = "GFX_decision_EUR_Magadan"
+				pdx_tooltip = "EUR_Magadan"
+				pdx_tooltip_delayed = "EUR_desc_Magadan"
+	
+		}
+
+				buttonType = {
+				name = "Okhotsk_Map"
+				orientation = center
+				position = { x = -99 y = -60 }
+				spriteType = "GFX_decision_EUR_Okhotsk"
+				pdx_tooltip = "EUR_Okhotsk"
+				pdx_tooltip_delayed = "EUR_desc_Okhotsk"
+	
+		}
+
+				buttonType = {
+				name = "Kamkatcha_Map"
+				orientation = center
+				position = { x = 49 y = -50 }
+				spriteType = "GFX_decision_EUR_Kamkatcha"
+				pdx_tooltip = "EUR_Kamkatcha"
+				pdx_tooltip_delayed = "EUR_desc_Kamkatcha"
+	
+		}
+
+				buttonType = {
+				name = "Yakutsk_Map"
+				orientation = center
+				position = { x = -188 y = -58 }
+				spriteType = "GFX_decision_EUR_Yakutsk"
+				pdx_tooltip = "EUR_Yakutsk"
+				pdx_tooltip_delayed = "EUR_desc_Yakutsk"
+	
+		}
+
+
+
+	}
 }
