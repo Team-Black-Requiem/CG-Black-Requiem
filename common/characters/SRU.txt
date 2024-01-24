@@ -50,6 +50,8 @@ characters = {
 		}
 	}
 
+	### END OF LEADERS ###
+
 
 	### CABINET ###
 
@@ -323,8 +325,10 @@ characters = {
 		}
 	}
 
+	### END OF CABINET ###
 
-	### ARMY - NAVY - AIR (CHIEFS)
+
+	### ARMY - NAVY - AIR (CHIEFS) ###
 
 	SRU_generic_army_chief = {
 		name = "Generic Genericus"
@@ -402,22 +406,22 @@ characters = {
 		}
 	}
 
+	### END OF ARMY - NAVY - AIR (CHIEFS) ###
+
 	
-
-
-	### HIGH COMMAND
-
+	### HIGH COMMAND ###
 
 	SRU_ostrova = {
 		name = "Natasha Ostrova"
-portraits = {
+		portraits = {
 			civilian = {
 				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
 			}
 			army = {
 				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
 		}
-}
+
 		advisor = {
 			slot = high_command
 			ledger = army
@@ -434,7 +438,6 @@ portraits = {
 			}
 		}
 	
-
 		field_marshal = {
 			traits = { brilliant_strategist }
 			skill = 5
@@ -445,8 +448,10 @@ portraits = {
 		}
 	}
 
+	### END OF HIGH COMMAND ###
 
-	### GENERALS
+
+	### GENERALS ###
 
 	SRU_panteleyev = {
 		name = "Sergej Panteleyev"
@@ -458,6 +463,7 @@ portraits = {
 				large = "gfx/leaders/SRU/SRU_sergej_panteleyev.dds"
 			}
 		}
+
 		corps_commander = {
 		traits = {winter_specialist}
 			skill = 2
@@ -470,7 +476,7 @@ portraits = {
 
 	SRU_nemov = {
 		name = "Alexander Nemov"
-	portraits = {
+		portraits = {
 			civilian = {
 				large = "gfx/leaders/SRU/SRU_alexander_nemov.dds"
 			}
@@ -478,6 +484,7 @@ portraits = {
 				large = "gfx/leaders/SRU/SRU_alexander_nemov.dds"
 			}
 		}
+
 		corps_commander = {
 		traits = { infantry_officer}
 			skill = 2
@@ -485,12 +492,12 @@ portraits = {
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 1
-	}
+		}
 	}
 
-SRU_belov = {
+	SRU_belov = {
 		name = "Anton Belov"
-	portraits = {
+		portraits = {
 			civilian = {
 				large = "/gfx/leaders/SRU/SRU_Anton_Belov.dds"
 			}
@@ -498,6 +505,7 @@ SRU_belov = {
 				large = "/gfx/leaders/SRU/SRU_Anton_Belov.dds"
 			}
 		}
+
 		corps_commander = {
 			traits = {infantry_leader}
 			skill = 2
@@ -506,18 +514,19 @@ SRU_belov = {
 			planning_skill = 2
 			logistics_skill = 3
 		}
-}
+	}
 
-SRU_kirova = {
+	SRU_kirova = {
 		name = "Maria Kirova"
-	portraits = {
+		portraits = {
 			civilian = {
 				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
+			}
+			army = {
+				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
+			}
 		}
-		army = {
-			large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
-		}
-	}
+
 		corps_commander = {
 			traits = {panzer_leader}
 			skill = 3
@@ -526,18 +535,19 @@ SRU_kirova = {
 			planning_skill = 1
 			logistics_skill = 4
 		}
-}
+	}
 
-SRU_sonin = {
+	SRU_sonin = {
 		name = "Dmitri Sonin"
-	portraits = {
+		portraits = {
 			civilian = {
 				large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
-		}
-		army = {
+			}
+			army = {
 			large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
+			}
 		}
-	}
+
 		corps_commander = {
 		traits = {} #engineer
 			skill = 4
@@ -546,25 +556,28 @@ SRU_sonin = {
 			planning_skill = 2
 			logistics_skill = 3
 		}
-}
+	}
 
-SRU_sohei = {
-	name = "Tatsuki Sohei"
-portraits = {
-		civilian = {
-			large = "gfx/leaders/SRU/SRU_sohei.dds"
+	SRU_sohei = {
+		name = "Tatsuki Sohei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRU/SRU_sohei.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_sohei.dds"
+			}
 		}
-		army = {
-			large = "gfx/leaders/SRU/SRU_sohei.dds"
+
+		corps_commander = {
+		traits = { infantry_officer}
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 6
 		}
 	}
-	corps_commander = {
-	traits = { infantry_officer}
-		skill = 6
-		attack_skill = 6
-		defense_skill = 5
-		planning_skill = 6
-		logistics_skill = 6
-}
-}
+
+	### END OF GENERALS ###
 }
