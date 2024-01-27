@@ -5498,6 +5498,7 @@ focus = {
 			flag = EU_influence
 			value = -1
 		}
+	add_ideas = MRU_Our_Own_Reliable_Experience_idea
 	}
 
 }
@@ -5521,7 +5522,11 @@ focus = {
 	}
 
 	completion_reward = {
-		add_ideas = MRU_Open_The_Surov_Academy_idea
+		swap_ideas = {
+			remove_idea = MRU_Our_Own_Reliable_Experience_idea
+			add_idea = MRU_Open_The_Surov_Academy_idea
+		}
+
 	}
 
 }
