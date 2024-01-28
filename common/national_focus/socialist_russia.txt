@@ -1583,7 +1583,7 @@ focus = {
 			
 	focus = {
 		id = SRU_pass_the_war_measures_act
-		icon = GFX_SRU_United_We_Stand
+		icon = GFX_SRU_politburo
 		cost = 5
 		x = 2
 		y = 1
@@ -1809,7 +1809,10 @@ focus = {
 		cost = 5
 		x = 0
 		y = 2
-		prerequisite = { focus = SRU_web_of_shadows focus = SRU_purge_resistance_fighters focus = SRU_planned_disappearances }
+		prerequisite = { focus = SRU_web_of_shadows }
+		prerequisite = { focus = SRU_purge_resistance_fighters }
+		prerequisite = { focus = SRU_purge_resistance_fighters }
+		prerequisite = { focus = SRU_planned_disappearances }
 		relative_position_id = SRU_web_of_shadows
 				
 		available = {
@@ -2176,8 +2179,8 @@ focus = {
 		x = 2
 		y = 1
 		prerequisite = { focus = SRU_mechanise_the_army
-			             focus = SRU_rapid_modernisation_of_the_airforce
-						 focus = SRU_revolutionary_zealotry }
+	                     focus = SRU_rapid_modernisation_of_the_airforce }
+		prerequisite = { focus = SRU_revolutionary_zealotry }
 		relative_position_id = SRU_mechanise_the_army
 				
 		available = {
@@ -2214,7 +2217,6 @@ focus = {
 		}
 				
 		completion_reward = {
-			# Effects after completing SRU_Enact_Operation_Red_Dawn
 		}
 	}
 			
@@ -2236,7 +2238,6 @@ focus = {
 		}
 				
 		completion_reward = {
-			# Effects after completing SRU_Enact_Operation_Red_Dawn
 		}
 	}
 			
@@ -2279,7 +2280,6 @@ focus = {
 		}
 				
 		completion_reward = {
-			# Effects after completing SRU_Enact_Operation_Red_Dawn
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_2
 				amount = 300
@@ -2309,7 +2309,6 @@ focus = {
 		}
 				
 		completion_reward = {
-			# Effects after completing SRU_Enact_Operation_Red_Dawn
 			set_technology = {
 				paratroopers = 2
 				trans1 = 1
