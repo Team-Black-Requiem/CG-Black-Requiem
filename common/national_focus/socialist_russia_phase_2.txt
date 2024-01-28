@@ -885,6 +885,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.111
 		}
 	}
 
@@ -912,6 +913,11 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.112
+			swap_ideas = {
+				remove_idea = Red_Army_Foundations
+				add_idea = Red_Army_Quantity_Plan
+			}
 		}
 	}
 
@@ -936,6 +942,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = Red_Army_Quantity_Plan
+				add_idea = Red_Army_Quantity_Plan_2
+			}
 		}
 	}
 
@@ -960,6 +970,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = Red_Army_Quantity_Plan_2
+				add_idea = Red_Army_Quantity_Plan_3
+			}
 		}
 	}
 
@@ -984,6 +998,7 @@
 		}
 	
 		completion_reward = {
+			# to do: implement decisions, still in design
 		}
 	}
 
@@ -1008,6 +1023,10 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = T70_Mass_Production
+				days = 240
+			}
 		}
 	}
 
@@ -1032,6 +1051,19 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 350
+			}
+			add_tech_bonus = {
+				name = air_techs
+				bonus = 0.5
+				uses = 2
+			}
 		}
 	}
 
@@ -1059,6 +1091,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = Symphony_Of_Rocket_Artillery
 		}
 	}
 
@@ -1083,6 +1116,10 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = Motorization_Push
+				days = 240
+			}
 		}
 	}
 
@@ -1111,6 +1148,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = Anti_Tank_Launchers
 		}
 	}
 
@@ -1168,6 +1206,12 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				name = cat_superior_firepower
+				bonus = 0.5
+				uses = 3
+			}
+			add_ideas = Overwhelming_Firepower_Doctrine
 		}
 	}
 
@@ -1195,6 +1239,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.114
 		}
 	}
 
@@ -1475,6 +1520,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU.113
 		}
 	}
 
@@ -1499,6 +1545,10 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = Modified_Knightmare_Simulations
+				days = 240
+			}
 		}
 	}
 
