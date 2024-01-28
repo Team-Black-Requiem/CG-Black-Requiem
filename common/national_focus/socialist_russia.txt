@@ -475,150 +475,166 @@
 	}
 				
 	focus = {
-			id = The_Party_Or_The_State?
-			icon = GFX_The_Party_Or_The_State?
-			cost = 3
-			x = -3
-			y = 1
-			prerequisite = { focus = Mobilize_The_State }
-			relative_position_id = Mobilize_The_State
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
+		id = The_Party_Or_The_State?
+		icon = GFX_The_Party_Or_The_State?
+		cost = 3
+		x = -3
+		y = 1
+		prerequisite = { focus = Mobilize_The_State }
+		relative_position_id = Mobilize_The_State
 			
-			completion_reward = {
-				country_event = SRU_Sonya_Phase_One.6
-			}
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			country_event = SRU_Sonya_Phase_One.6
+		}
 	}
-				focus = {
-			id = The_Power_of_The_Media
-			icon = GFX_The_Power_of_The_Media
-			cost = 3
-			x = 3
-			y = 1
-			prerequisite = { focus = Mobilize_The_State }
-			relative_position_id = Mobilize_The_State
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
+				
+	focus = {
+		id = The_Power_of_The_Media
+		icon = GFX_The_Power_of_The_Media
+		cost = 3
+		x = 3
+		y = 1
+		prerequisite = { focus = Mobilize_The_State }
+		relative_position_id = Mobilize_The_State
 			
-			completion_reward = {
-				country_event = SRU_Sonya_Phase_One.8
-			}
-			# to do: ask User why temporal war stability? better weekly war support?
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			country_event = SRU_Sonya_Phase_One.8
+		}
+		# to do: ask User why temporal war stability? better weekly war support?
 	}
 		
-
-				focus = {
-			id = Educational_Doctrine
-			icon = GFX_Educational_Doctrine
-			cost = 1
-			x = 0
-			y = 1
-			prerequisite = { focus = The_Party_Or_The_State? }
-			relative_position_id = The_Party_Or_The_State?
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
+	focus = {
+		id = Educational_Doctrine
+		icon = GFX_Educational_Doctrine
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = { focus = The_Party_Or_The_State? }
+		relative_position_id = The_Party_Or_The_State?
 			
-			completion_reward = {
-			    country_event = SRU_Sonya_Phase_One.9
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			country_event = SRU_Sonya_Phase_One.9
 				
-			}
+		}
 	}
 
-				focus = {
-			id = SRU_chekhovs_gun 
-			icon = GFX_SRU_Chekhovs_Gun
-			cost = 1
-			x = 0
-			y = 1
+	focus = {
+		id = SRU_chekhovs_gun 
+		icon = GFX_SRU_Chekhovs_Gun
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = { focus = SRU_returning_session_of_the_politburo }
+		relative_position_id = SRU_returning_session_of_the_politburo
+		mutually_exclusive = { focus = SRU_to_grasp_the_future}
 
-			available = {
-                           country_exists = SRU
-			}
+		available = {
+            country_exists = SRU
+		}
 	
-			prerequisite = { focus = SRU_returning_session_of_the_politburo }
-			relative_position_id = SRU_returning_session_of_the_politburo
-			mutually_exclusive = { focus = SRU_to_grasp_the_future}
-			allow_branch = {
-				has_country_flag = SRU_Luka_In_Control
-			}
-			ai_will_do = {
-					factor = 100
-				}
-			completion_reward = {
-				add_war_support = 0.1
-			}
-	}
-			focus = {
-			id = Opening_The_Ministry_of_Welfare
-			icon = GFX_Opening_The_Ministry_of_Welfare
-			cost = 2
-			x = 0
-			y = 1
-			prerequisite = { focus = Educational_Doctrine }
-			relative_position_id = Educational_Doctrine
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
+		allow_branch = {
+			has_country_flag = SRU_Luka_In_Control
+		}
 			
-			completion_reward = {
-				add_ideas = Ministry_Of_Welfare
-			}
-			# to do: ask user which minister it unlocks also 5% complience gain? WTF isn't that way to high?
-	}
-			focus = {
-			id = SRU_the_foreigners_loyalties 
-			icon = GFX_SRU_the_foreigners_loyalties
-			cost = 1
-			x = 0
-			y = 1
-			prerequisite = { focus = The_Power_of_The_Media }
-			relative_position_id = The_Power_of_The_Media
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
+		ai_will_do = {
+			factor = 100
+		}
 			
-			completion_reward = {
-			    country_event = SRU_Sonya_Phase_One.12
-			}
+		completion_reward = {
+			add_war_support = 0.1
+		}
 	}
-			focus = {
-			id = Opening_The_Ministry_of_Information
-			icon = GFX_Opening_The_Ministry_of_Information
-			cost = 2
-			x = 0
-			y = 1
-			prerequisite = { focus = SRU_the_foreigners_loyalties 
-			            }
-			relative_position_id = SRU_the_foreigners_loyalties
-			available = {
-                           country_exists = SRU
-			}
-			ai_will_do = {
-					factor = 100
-				}
 			
-			completion_reward = {
-				add_ideas = Ministry_of_Information
-			}
-			# to do: ask user about minister of information.
+	focus = {
+		id = Opening_The_Ministry_of_Welfare
+		icon = GFX_Opening_The_Ministry_of_Welfare
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = { focus = Educational_Doctrine }
+		relative_position_id = Educational_Doctrine
+			
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			add_ideas = Ministry_Of_Welfare
+		}
+		# to do: ask user which minister it unlocks also 5% complience gain? WTF isn't that way to high?
+	}
+			
+	focus = {
+		id = SRU_the_foreigners_loyalties 
+		icon = GFX_SRU_the_foreigners_loyalties
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = { focus = The_Power_of_The_Media }
+		relative_position_id = The_Power_of_The_Media
+			
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			country_event = SRU_Sonya_Phase_One.12
+		}
+	}
+			
+	focus = {
+		id = Opening_The_Ministry_of_Information
+		icon = GFX_Opening_The_Ministry_of_Information
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = { focus = SRU_the_foreigners_loyalties }
+		relative_position_id = SRU_the_foreigners_loyalties
+			
+		available = {
+            country_exists = SRU
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		completion_reward = {
+			add_ideas = Ministry_of_Information
+		}
+		# to do: ask user about minister of information.
 	}
 
 	focus = {
@@ -641,90 +657,88 @@
 			country_event = SRU_Sonya_Phase_One.7
 		}
 		#to do: ask user how we do this, I think these are old modifiers.
-}
+	}
 
-focus = {
-	id = SRU_chairwoman_leonova
-	icon = GFX_Opening_The_Ministry_of_Information
-	cost = 2
-	x = -1
-	y = 1
-	prerequisite = { focus = Removing_The_Jacobin_Chekists 
+	focus = {
+		id = SRU_chairwoman_leonova
+		icon = GFX_Opening_The_Ministry_of_Information
+		cost = 2
+		x = -1
+		y = 1
+		prerequisite = { focus = Removing_The_Jacobin_Chekists }
+		relative_position_id = Removing_The_Jacobin_Chekists
+		mutually_exclusive = {
+			focus = Chairman_ivanov
+		}
+
+		available = {
+			country_exists = SRU
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		completion_reward = {
+			add_advisor_role = {
+				character = Tatiyana_Leonova
+				activate = yes
+				advisor = {
+					slot = intelligence
+					idea_token = SRU_generic_intelligence_idea_1
+					traits = { conservative_guy }
+					cost = 2000
 				}
-	relative_position_id = Removing_The_Jacobin_Chekists
-	mutually_exclusive = {
-		focus = Chairman_ivanov
-	}
-
-	available = {
-		country_exists = SRU
-	}
-	
-	ai_will_do = {
-		factor = 100
-	}
-	
-	completion_reward = {
-		add_advisor_role = {
-			character = Tatiyana_Leonova
-			activate = yes
-			advisor = {
-				slot = intelligence
-				idea_token = SRU_generic_intelligence_idea_1
-				traits = { conservative_guy }
-				cost = 2000
 			}
-		}
-		add_political_power = 100
-		add_war_support = 0.1
-		country_event = SRU_Sonya_Phase_One.10
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = 1
-		}
-		set_country_flag = SRU_leonova_heads_security_services
-		
-	}
-	# to do: ask user why there are more modifiers.
-}
-
-focus = {
-	id = Chairman_ivanov
-	icon = GFX_Opening_The_Ministry_of_Information
-	cost = 2
-	x = 1
-	y = 1
-	prerequisite = { focus = Removing_The_Jacobin_Chekists }
-	relative_position_id = Removing_The_Jacobin_Chekists
-	mutually_exclusive = {
-		focus = SRU_chairwoman_leonova
-	}
-
-	available = {
-		country_exists = SRU
-	}
-	
-	ai_will_do = {
-		factor = 100
-	}
-	
-	completion_reward = {
-		add_advisor_role = {
-			character = Chairman_Ivanov
-			activate = yes
-			advisor = {
-				slot = intelligence
-				idea_token = SRU_generic_intelligence_idea_1
-				traits = { conservative_guy }
-				cost = 2000
+			add_political_power = 100
+			add_war_support = 0.1
+			country_event = SRU_Sonya_Phase_One.10
+			modify_country_flag = {
+				flag = SRU_idealist_pragmatist_balance
+				value = 1
 			}
+			set_country_flag = SRU_leonova_heads_security_services
 		}
-		country_event = SRU_Sonya_Phase_One.11
-		modify_country_flag = {
-			flag = SRU_idealist_pragmatist_balance
-			value = -1
+		# to do: ask user why there are more modifiers.
+	}
+
+	focus = {
+		id = Chairman_ivanov
+		icon = GFX_Opening_The_Ministry_of_Information
+		cost = 2
+		x = 1
+		y = 1
+		prerequisite = { focus = Removing_The_Jacobin_Chekists }
+		relative_position_id = Removing_The_Jacobin_Chekists
+		mutually_exclusive = {
+			focus = SRU_chairwoman_leonova
 		}
-		set_country_flag = SRU_ivanov_heads_security_services
+
+		available = {
+			country_exists = SRU
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		completion_reward = {
+			add_advisor_role = {
+				character = Chairman_Ivanov
+				activate = yes
+				advisor = {
+					slot = intelligence
+					idea_token = SRU_generic_intelligence_idea_1
+					traits = { conservative_guy }
+					cost = 2000
+				}
+			}
+			country_event = SRU_Sonya_Phase_One.11
+			modify_country_flag = {
+				flag = SRU_idealist_pragmatist_balance
+				value = -1
+			}
+			set_country_flag = SRU_ivanov_heads_security_services
 		}
 	}
 
