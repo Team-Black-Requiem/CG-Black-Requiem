@@ -925,8 +925,9 @@ country_event = { #Diplomatic Mission To China
 		add_political_power = 50
 		add_war_support = 0.15
 		add_equipment_to_stockpile = {
-			type = heavy_tank_equipment_2
+			type = mbt_2
 			amount = 200
+			producer = CHI
 		}
 		name = SRU_Luka_Phase_Two.11.a
 		ai_chance = {
@@ -950,7 +951,6 @@ country_event = { #Offer To Harbour Revolutionary Exiles
 		ai_chance = {
 			base = 100
 		}
-		
 	}
 }
 
@@ -966,7 +966,16 @@ country_event = { #Send Zaytsev To Study Chinese Methods
 		ai_chance = {
 			base = 100
 		}
-		
+		add_tech_bonus = {
+			uses = 1
+			bonus = 1
+			category = MBT_armour
+		}
+		add_tech_bonus = {
+			uses = 1
+			bonus = 1
+			category = infantry_weapons
+		}
 	}
 }
 
@@ -978,12 +987,13 @@ country_event = { #Treaty Of Eternal Friendship
 	is_triggered_only = yes
 
 	option = {
-		add_stability = 0.10
 		name = SRU_Luka_Phase_Two.14.a
 		ai_chance = {
 			base = 100
 		}
-		
+		CHI  = {
+			add_stability = 0.10
+		}
 	}
 }
 
@@ -1034,13 +1044,18 @@ country_event = { #State Visit To Haishenwai
 		ai_chance = {
 			base = 100
 		}
-		
+		CHI = {
+			add_timed_idea = {
+				idea = SRU_visit_to_haishenwai
+				days = 730
+			}
+		}
 	}
 }
 
 ##Military Events
 
-	country_event = { #We Have Our Orders
+country_event = { #We Have Our Orders
 	id = SRU_Luka_Phase_Two.18
 	title = SRU_Luka_Phase_Two.18.t
 	desc = SRU_Luka_Phase_Two.18.d

@@ -830,6 +830,23 @@ Jacobin_Controlled_Cheka = {
 			}
 		}
 
+		SRU_extraditing_criminals = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
 
 
          ### Resource Export Plan FIN ###
@@ -2334,6 +2351,38 @@ SRU_Red_Army_Plans= {
 			modifier = {
 				industrial_capacity_factory = 0.15
 				trade_opinion_factor = 1
+			}
+		}
+
+		SRU_okhotsk_route = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.30
+			}
+		}
+
+		SRU_visit_to_haishenwai = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				BR_socialism_drift = 0.5
 			}
 		}
 
