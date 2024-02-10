@@ -80,7 +80,13 @@ country_event = { #Sonya Calls the Central Comittee
 		ai_chance = {
 			base = 100
 		}
-		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_political_power = -50	
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }
+				
 	}
 
 	option = {	#Delay it regroup (Kulakov) 
@@ -88,7 +94,13 @@ country_event = { #Sonya Calls the Central Comittee
 		ai_chance = {
 			base = 100
 		}
-		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_political_power = -100	
+		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }	
+		
 	}
 
 	option = {	#Do it by procedure (Normal) 
@@ -96,6 +108,7 @@ country_event = { #Sonya Calls the Central Comittee
 		ai_chance = {
 			base = 100
 		}
+		add_political_power = 50
 		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
 	}
 }
@@ -111,6 +124,11 @@ country_event = { #Kulakov Calls An Central Comittee
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_political_power = -100
 		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
 	}
 
@@ -119,6 +137,11 @@ country_event = { #Kulakov Calls An Central Comittee
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_political_power = -50	
 		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
 	}
 
@@ -127,6 +150,7 @@ country_event = { #Kulakov Calls An Central Comittee
 		ai_chance = {
 			base = 100
 		}
+		add_political_power = 50
 		country_event = { id = SRU_Sonya_Phase_Two.6 days = 7 }		
 	}
 }
@@ -142,6 +166,11 @@ country_event = { # Politburo Breakdown
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_political_power = -50	
 		country_event = { id = SRU_Sonya_Phase_Two.7 days = 7 }		
 	}
 
@@ -150,6 +179,11 @@ country_event = { # Politburo Breakdown
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_political_power = -50	
 		country_event = { id = SRU_Sonya_Phase_Two.7 days = 7 }		
 	}
 
@@ -166,6 +200,11 @@ country_event = { #The Wild Card
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_political_power = -25	
 		if = {
 			limit = {
 				has_country_flag = { #Sonya Victory
@@ -191,6 +230,11 @@ country_event = { #The Wild Card
 		ai_chance = {
 			base = 100
 		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_political_power = -25
 		if = {
 			limit = {
 				has_country_flag = { #Sonya Victory
@@ -216,6 +260,7 @@ country_event = { #The Wild Card
 		ai_chance = {
 			base = 100
 		}
+		add_political_power = 25
 		if = {
 			limit = {
 				has_country_flag = { #Sonya Victory
@@ -267,7 +312,12 @@ country_event = { #Kulakov Wins The Struggle
 		}
 		set_country_flag = SRU_second_struggle_kulakov_wins
 		mark_focus_tree_layout_dirty = yes
-		complete_national_focus = SRU_kulakov_takes_it_all		
+		complete_national_focus = SRU_kulakov_takes_it_all	
+		
+		set_politics = {
+			ruling_party = BR_socialism
+			elections_allowed = no
+		}
 	}
 }
 
