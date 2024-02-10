@@ -1,15 +1,544 @@
 defined_text = {
-	name = get_component_status
+	name = EUR_Site_Component1_loc
 	text = {
 		trigger = {
-			has_country_flag = EUR_component_1
+				check_variable = { EUR_Chosen_Site = 1 }			
 		}
-		localization_key = "Site_Component_Green"
+		localization_key = EUR_Site_Component1_loc_1
 	}
 	text = {
-		localization_key = "Site_Component_Red"
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 2 }	
+		
+		
+		}
+		localization_key = EUR_Site_Component1_loc_2
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 3 }	
+				
+		}
+		localization_key = EUR_Site_Component1_loc_3
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 4 }	
+
+		}
+		localization_key = EUR_Site_Component1_loc_4
 	}
 }
+
+defined_text = {
+	name = EUR_Site_Component2_loc
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 1 }	
+				
+		}
+		localization_key = EUR_Site_Component2_loc_1
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 2 }	
+		}
+		localization_key = EUR_Site_Component2_loc_2
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 3 }
+		}
+		localization_key = EUR_Site_Component2_loc_3
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 4 }	
+		}
+		localization_key = EUR_Site_Component2_loc_4
+	}
+}
+defined_text = {
+	name = EUR_Site_Component3_loc
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 1 }		
+		}
+		localization_key = EUR_Site_Component3_loc_1
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 2 }		
+		}
+		localization_key = EUR_Site_Component3_loc_2
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 3 }		
+		}
+		localization_key = EUR_Site_Component3_loc_3
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 4 }		
+		}
+		localization_key = EUR_Site_Component3_loc_4
+	}
+}
+defined_text = {
+	name = EUR_Site_Component4_loc
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 1 }		
+		}
+		localization_key = EUR_Site_Component4_loc_1
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 2 }		
+		}
+		localization_key = EUR_Site_Component4_loc_2
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 3 }		
+		}
+		localization_key = EUR_Site_Component4_loc_3
+	}
+	text = {
+		trigger = {
+				check_variable = { EUR_Chosen_Site = 4 }		
+		}
+		localization_key = EUR_Site_Component4_loc_4
+	}
+}
+
+
+defined_text = {
+	name = get_Component_Status_1_gfx
+	text = {
+		trigger = {
+				check_variable = { First_Component = 1 }		
+		}
+		localization_key = Component_Status_1_Site_available_gfx
+	}
+	text = {
+		trigger = {
+				check_variable = { First_Component < 1 }
+		}
+		localization_key = Component_Status_1_Site_Unavailable_gfx
+	}
+}
+
+defined_text = {
+	name = get_Component_Status_2_gfx
+	text = {
+		trigger = {
+				check_variable = { Second_Component = 1 }		
+		}
+		localization_key = Component_Status_2_Site_available_gfx
+	}
+	text = {
+		trigger = {
+				check_variable = { Second_Component < 1 }
+		}
+		localization_key = Component_Status_2_Site_Unavailable_gfx
+	}
+}
+
+defined_text = {
+	name = get_Component_Status_3_gfx
+	text = {
+		trigger = {
+				check_variable = { Third_Component = 1 }		
+		}
+		localization_key = Component_Status_3_Site_available_gfx
+	}
+	text = {
+		trigger = {
+				check_variable = { Third_Component < 1 }
+		}
+		localization_key = Component_Status_3_Site_Unavailable_gfx
+	}
+}
+
+defined_text = {
+	name = get_Component_Status_4_gfx
+	text = {
+		trigger = {
+				check_variable = { Fourth_Component = 1 }		
+		}
+		localization_key = Component_Status_4_Site_available_gfx
+	}
+	text = {
+		trigger = {
+				check_variable = { Fourth_Component < 1 }
+		}
+		localization_key = Component_Status_4_Site_Unavailable_gfx
+	}
+}
+
+
+defined_text = {
+	name = Component_Status_1_loc
+	text = {
+		trigger = {
+				check_variable = { First_Component = 1 }		
+		}
+		localization_key = Component_Status_1_Site_available_loc
+	}
+	text = {
+		trigger = {
+				check_variable = { First_Component < 1 }
+		}
+		localization_key = Component_Status_1_Site_Unavailable_loc
+	}
+}
+
+defined_text = {
+	name = Component_Status_2_loc
+	text = {
+		trigger = {
+				check_variable = { Second_Component = 1 }		
+		}
+		localization_key = Component_Status_2_Site_available_loc
+	}
+	text = {
+		trigger = {
+				check_variable = { Second_Component < 1 }
+		}
+		localization_key = Component_Status_2_Site_Unavailable_loc
+	}
+}
+
+defined_text = {
+	name = Component_Status_3_loc
+	text = {
+		trigger = {
+				check_variable = { Third_Component = 1 }		
+		}
+		localization_key = Component_Status_3_Site_available_loc
+	}
+	text = {
+		trigger = {
+				check_variable = { Third_Component < 1 }
+		}
+		localization_key = Component_Status_3_Site_Unavailable_loc
+	}
+}
+
+defined_text = {
+	name = Component_Status_4_loc
+	text = {
+		trigger = {
+				check_variable = { Fourth_Component = 1 }		
+		}
+		localization_key = Component_Status_4_Site_available_loc
+	}
+	text = {
+		trigger = {
+				check_variable = { Fourth_Component < 1 }
+		}
+		localization_key = Component_Status_4_Site_Unavailable_loc
+	}
+}
+
+
+defined_text = {
+	name = Complete_Site_button_loc
+	text = {
+		trigger = {
+				check_variable = { First_Component = 1 }
+	            check_variable = { Second_Component = 1 }
+	            check_variable = { Third_Component = 1 }
+	            check_variable = { Fourth_Component = 1 }			
+		}
+		localization_key = Complete_Site_available
+	}
+	text = {
+		trigger = {
+			or = {
+				check_variable = { First_Component < 1 }
+	            check_variable = { Second_Component < 1 }
+	            check_variable = { Third_Component < 1 }
+	            check_variable = { Fourth_Component < 1 }
+			}
+
+		}
+		localization_key = Complete_Site_Unavailable
+	}
+}
+
+defined_text = {
+	name = get_Complete_Site_button_gfx
+	text = {
+		trigger = {
+				check_variable = { First_Component = 1 }
+	            check_variable = { Second_Component = 1 }
+	            check_variable = { Third_Component = 1 }
+	            check_variable = { Fourth_Component = 1 }			
+		}
+		localization_key = Complete_Site_available_gfx
+	}
+	text = {
+		trigger = {
+			or = {
+				check_variable = { First_Component < 1 }
+	            check_variable = { Second_Component < 1 }
+	            check_variable = { Third_Component < 1 }
+	            check_variable = { Fourth_Component < 1 }
+			}
+
+		}
+		localization_key = Complete_Site_Unavailable_gfx
+	}
+}
+
+
+defined_text = {
+	name = EUR_First_Site_loc
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 1 }
+		}
+		localization_key = First_Site_Finished
+	}
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 0 }
+			check_variable = { Magadan_Control = 0 }
+
+		}
+		localization_key = First_Site_Unavailable
+	}
+
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 0 }
+			check_variable = { Magadan_Control = 1 }
+
+		}
+		localization_key = First_Site_Unfinished
+	}
+}
+
+defined_text = {
+	name = get_First_Site_button_gfx
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 1 }
+		}
+		localization_key = First_Site_Finished_gfx
+	}
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 0 }
+			check_variable = { Magadan_Control = 0 }
+
+		}
+		localization_key = First_Site_Unavailable_gfx
+	}
+
+	text = {
+		trigger = {
+			check_variable = { First_Site_Status = 0 }
+			check_variable = { Magadan_Control = 1 }
+
+		}
+		localization_key = First_Site_Unfinished_gfx
+	}
+}
+
+
+
+defined_text = {
+	name = EUR_Second_Site_loc
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 1 }
+		}
+		localization_key = Second_Site_Finished
+	}
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 0 }
+			or = {
+			check_variable = { Krasnoyarsk_Control = 0 }
+            check_variable = { First_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Second_Site_Unavailable
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 0 }
+			check_variable = { Krasnoyarsk_Control = 1 }
+
+		}
+		localization_key = Second_Site_Unfinished
+	}
+}
+
+defined_text = {
+	name = get_Second_Site_button_gfx
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 1 }
+		}
+		localization_key = Second_Site_Finished_gfx
+	}
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 0 }
+			or = {
+			check_variable = { Krasnoyarsk_Control = 0 }
+            check_variable = { First_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Second_Site_Unavailable_gfx
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Second_Site_Status = 0 }
+			check_variable = { Krasnoyarsk_Control = 1 }
+
+		}
+		localization_key = Second_Site_Unfinished_gfx
+	}
+}
+
+
+defined_text = {
+	name = EUR_Third_Site_loc
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 1 }
+		}
+		localization_key = Third_Site_Finished
+	}
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 0 }
+			or = {
+			check_variable = { Perm_Control = 0 }
+            check_variable = { Second_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Third_Site_Unavailable
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 0 }
+			check_variable = { Perm_Control = 1 }
+
+		}
+		localization_key = Third_Site_Unfinished
+	}
+}
+
+defined_text = {
+	name = get_Third_Site_button_gfx
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 1 }
+		}
+		localization_key = Third_Site_Finished_gfx
+	}
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 0 }
+			or = {
+			check_variable = { Perm_Control = 0 }
+            check_variable = { Second_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Third_Site_Unavailable_gfx
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Third_Site_Status = 0 }
+			check_variable = { Perm_Control = 1 }
+
+		}
+		localization_key = Third_Site_Unfinished_gfx
+	}
+}
+
+
+defined_text = {
+	name = EUR_Fourth_Site_loc
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 1 }
+		}
+		localization_key = Fourth_Site_Finished
+	}
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 0 }
+			or = {
+			check_variable = { Moscow_Control = 0 }
+            check_variable = { Third_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Fourth_Site_Unavailable
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 0 }
+			check_variable = { Moscow_Control = 1 }
+
+		}
+		localization_key = Fourth_Site_Unfinished
+	}
+}
+
+defined_text = {
+	name = get_Fourth_Site_button_gfx
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 1 }
+		}
+		localization_key = Fourth_Site_Finished_gfx
+	}
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 0 }
+			or = {
+			check_variable = { Moscow_Control = 0 }
+            check_variable = { Third_Site_Status = 0 }
+			}
+
+		}
+		localization_key = Fourth_Site_Unavailable_gfx
+	}
+
+	text = {
+		trigger = {
+			check_variable = { Fourth_Site_Status = 0 }
+			check_variable = { Moscow_Control = 1 }
+
+		}
+		localization_key = Fourth_Site_Unfinished_gfx
+	}
+}
+
+
+
+
+
+
+##Favor Mechanic
 
 
 defined_text = {

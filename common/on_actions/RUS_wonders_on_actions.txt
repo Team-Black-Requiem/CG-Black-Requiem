@@ -1,0 +1,239 @@
+on_actions = {
+
+
+on_monthly_EUR = {
+    effect = {
+		if = {
+			limit = {
+                  check_variable = { EUR_Site_Start = 0 }
+			}
+		    add_to_variable = { First_Component = EUR_Ticking_Value }
+            add_to_variable = { Second_Component = EUR_Ticking_Value }
+            add_to_variable = { Third_Component = EUR_Ticking_Value }
+            add_to_variable = { Fourth_Component = EUR_Ticking_Value }
+
+			clamp_variable = {
+            var = First_Component
+            max = 1
+            }
+		    clamp_variable = {
+            var = Second_Component
+            max = 1
+             }
+		    clamp_variable = {
+            var = Third_Component
+            max = 1
+             }
+		     clamp_variable = {
+            var = Fourth_Component
+            max = 1
+            }		
+		}
+
+
+     }
+ }
+
+    
+
+
+
+
+
+
+    on_state_control_changed = {
+        effect = {
+			if = {        ##Second Site On Action
+				limit = {
+					country_exists = SRU
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						has_war_with = SRU
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+						tag = SRU
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Krasnoyarsk_Control = 1 }  }   
+						FROM.FROM = { state = 568 } #Krasnoyarsk State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.1 days = 5 } 
+					}
+				}
+			}
+
+			if = {    ##Third Site On Action
+				limit = {
+					OR = {
+                        country_exists = MRU
+						country_exists = RUS
+					}
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						limit = {
+					OR = {
+                        has_war_with = MRU
+						has_war_with = RUS
+					}
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+					OR = {
+                      tag = MRU
+					  tag = RUS
+					}
+						
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Perm_Control = 1 }  }   
+						FROM.FROM = { state = 398 } #Perm State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.2 days = 5 } 
+					}
+				}
+			}
+
+
+        }
+
+		
+		if = {    ##Fourth Site On Action
+				limit = {
+					OR = {
+                        country_exists = MRU
+						country_exists = RUS
+					}
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						limit = {
+					OR = {
+                        has_war_with = MRU
+						has_war_with = RUS
+					}
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+					OR = {
+                      tag = MRU
+					  tag = RUS
+					}
+						
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Moscow_Control = 1 }  }   
+						FROM.FROM = { state = 219 } #Moscow State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.3 days = 5 } 
+					}
+				}
+			}
+
+
+        }
+
+
+
+					if = {        ##Second Site On Action
+				limit = {
+					country_exists = SRU
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						has_war_with = SRU
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+						tag = SRU
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Krasnoyarsk_Control = 0 }  }   
+						NOT = { FROM.FROM = { state = 568 } }#Krasnoyarsk State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.4 days = 5 } 
+					}
+				}
+			}
+
+			if = {    ##Third Site On Action 
+				limit = {
+					OR = {
+                        country_exists = MRU
+						country_exists = RUS
+					}
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						limit = {
+					OR = {
+                        has_war_with = MRU
+						has_war_with = RUS
+					}
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+					OR = {
+                      tag = MRU
+					  tag = RUS
+					}
+						
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Perm_Control = 0 }  }   
+						NOT = { FROM.FROM = { state = 398 }  } #Perm State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.5 days = 5 } 
+					}
+				}
+			}
+
+
+        }
+
+		
+		if = {    ##Fourth Site On Action
+				limit = {
+					OR = {
+                        country_exists = MRU
+						country_exists = RUS
+					}
+					FROM = {   ##refers to the country from which the event is being triggered
+						tag = EUR
+						limit = {
+					OR = {
+                        has_war_with = MRU
+						has_war_with = RUS
+					}
+					}
+					ROOT = {   ##refers to the country that owns the event script.	
+					OR = {
+                      tag = MRU
+					  tag = RUS
+					}
+						
+					}
+				}
+				if = {
+					limit = {
+						NOT = {   check_variable = { Moscow_Control = 0 }  }   
+						NOT = { FROM.FROM = { state = 219 } }  #Moscow State Controlled
+					}
+					EUR = {
+						country_event = { id = RUSw.6 days = 5 } 
+					}
+				}
+			}
+
+
+        }
+    }
+}
+

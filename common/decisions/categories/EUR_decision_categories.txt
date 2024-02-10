@@ -24,19 +24,19 @@
 ##}
 ##
 EUR_secure_sites = {
-	#icon = 
+	icon = GFX_decision_category_EUR_britannia_favor 
 	scripted_gui = EUR_secure_sites_gui
 	priority = 50
 
 	allowed = {
-		#tag = EUR
-		tag = RUS
+		tag = EUR
+		#tag = RUS
 	}
 	visible_when_empty = yes
 	visible = {
-		tag = RUS
-		#tag = EUR
-		#has_completed_focus = EUR_Secure_First_Site
+		#tag = RUS
+		tag = EUR
+		has_completed_focus = EUR_Secure_First_Site
 	}
 }
 

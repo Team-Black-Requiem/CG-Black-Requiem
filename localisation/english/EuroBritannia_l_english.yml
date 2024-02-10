@@ -172,7 +172,118 @@ EUR_desc_Yakutsk:0 "[Yakutsk_Map_loc]"
 EUR_britannia_favor:0 "The Price for Victory"
 EUR_britannia_favor_desc:0 "After taking control of this rump State, one thing has immediately emerged: the §R-pitiful state of the military§!.\nOnly few native Russian divisions have joined the Far Eastern Urprising and our manpower is continuosly dwindling. Moreover, we lack modern equipment and our very existence could be put at stake by our tracherous neighbour, §Rthe Socialists§!. Luckily, this soil is rich of bountiful resources, and we can exploit them to feed the §RBritannian Behemoth§! in exchange for their §RMilitary Support§!. Sure, this will put Russian control of these regions in jeopardy, but isn't this the price for our glory?\n\n§RClick On Each Region To Cede Control Over Local Resources.\n(NOTE:A Massive Britannian Influence Could Be Dangerous For Our Plans)§!"
 
-##Decisions
+##Site Mechanic
+
+EUR_secure_sites:0 "Our Race to the Stars"
+
+EUR_secure_sites_desc:0 "Though Russia's terminal decline and collapse left little for the factions scrabbling after her death to claim, the legacy of her §YSpace Program§! lives on in the Far-East. Even though the organisation of the Roscosmos fled during the collapse, the infrastructure of the program still remain. Though we currently only have the Magadan Cosmodrome in our hands, taking control of all the facilities would allow us to seize and utilize Russia's former §YSpace Program§!. This would not only allow us to have a base for future launches but also would allow us to control the currently isolated Russian Satellite network. Our Britannian benefactors have expressed great interest in controlling this network of spy and communication satellites, §Respecially the OSI...\n\n(NOTE: You Can Only Perform Two Contemporary Actions)§!"
+
+
+EUR_Complete_Site_tt:0 "§R/SITE-NUMBER-[?Root.EUR_Chosen_Site]/--CURRENTLY UNDER OUR CONTROL§!"
+EUR_Complete_Site_Component1_tt:0 "§R/COMP.1/--§!"
+EUR_Complete_Site_Component2_tt:0 "§R/COMP.2/--§!"
+EUR_Complete_Site_Component3_tt:0 "§R/COMP.3/--§!"
+EUR_Complete_Site_Component4_tt:0 "§R/COMP.4/--§!"
+
+EUR_Site_Component1:0 "[EUR_Site_Component1_loc]"
+EUR_Site_Component2:0 "[EUR_Site_Component2_loc]"
+EUR_Site_Component3:0 "[EUR_Site_Component3_loc]"
+EUR_Site_Component4:0 "[EUR_Site_Component4_loc]"
+
+EUR_Component_Status_4_loc:0 "[Component_Status_4_loc]"
+EUR_Component_Status_3_loc:0 "[Component_Status_3_loc]"
+EUR_Component_Status_2_loc:0 "[Component_Status_2_loc]"
+EUR_Component_Status_1_loc:0 "[Component_Status_1_loc]"
+
+Component_Status_1_Site_available_loc:0 "§Y<Reparation Stage:[?Root.First_Component|Y%0]>§!§G//STATUS- OPERATIVE§!"
+Component_Status_1_Site_Unavailable_loc:0 "§Y<Reparation Stage:[?Root.First_Component|Y%0]>§!§R//STATUS-NOT OPERATIVE§!"
+
+Component_Status_2_Site_available_loc:0 "§Y<Reparation Stage:[?Root.Second_Component|Y%0]>§!§G//STATUS- OPERATIVE§!"
+Component_Status_2_Site_Unavailable_loc:0 "§Y<Reparation Stage:[?Root.Second_Component|Y%0]>§!§R//STATUS-NOT OPERATIVE§!"
+
+Component_Status_3_Site_available_loc:0 "§Y<Reparation Stage:[?Root.Third_Component|Y%0]>§!§G//STATUS- OPERATIVE§!"
+Component_Status_3_Site_Unavailable_loc:0 "§Y<Reparation Stage:[?Root.Third_Component|Y%0]>§!§R//STATUS-NOT OPERATIVE§!"
+
+Component_Status_4_Site_available_loc:0 "§Y<Reparation Stage:[?Root.Fourth_Component|Y%0]>§!§G//STATUS- OPERATIVE§!"
+Component_Status_4_Site_Unavailable_loc:0 "§Y<Reparation Stage:[?Root.Fourth_Component|Y%0]>§!§R//STATUS-NOT OPERATIVE§!"
+
+EUR_Site_Component1_loc_1:0 "§YLaunch Pads§!\nThese are critical infrastructure for launching rockets into space. Over time, they have suffered from structural degradation or damage due to weathering, corrosion, and neglect."
+EUR_Site_Component2_loc_1:0 "§YHangars and Assembly Buildings§!\nThey are where rockets are assembled, integrated with payloads, and prepared for launch. These structures require repairs to roofs, walls, doors, and other components to provide a secure and climate-controlled environment for rocket assembly and maintenance activities."
+EUR_Site_Component3_loc_1:0 "§YFueling and Propellant Facilities§!\nThese are essential for storing, handling, and loading the fuel and propellant required for rocket launches. These facilities need repairs to storage tanks, pipelines, pumps, and other equipment to ensure they meet safety standards and operational requirements."
+EUR_Site_Component4_loc_1:0 "§YCommunication and Control Centers§!\nThey are the nerve centers of the Cosmodrome, responsible for monitoring and controlling all aspects of launch operations."
+
+EUR_Site_Component1_loc_2:0 "§YLaunch Towers§!\nThey are critical infrastructure for launching rockets. Over time, these structures suffer from wear and tear, corrosion, or structural damage."
+EUR_Site_Component2_loc_2:0 "§YAssembly and Integration Facilities§!\nThese are where rockets are assembled, integrated with payloads, and prepared for launch. These facilities require repairs to equipment, such as cranes, lifts, and assembly bays, as well as infrastructure like ventilation systems and electrical wiring."
+EUR_Site_Component3_loc_2:0 "§YHandling Facilities§!\nThey are essential for storing and managing the fuel and oxidizer required for rocket launches. These facilities need repairs or upgrades to storage tanks, pipelines, valves, and pumps to ensure the safe handling and storage of propellants."
+EUR_Site_Component4_loc_2:0 "§YMission Control Center§!\nIt serves as the command center for rocket launch operations, overseeing mission planning, monitoring rocket status, and making critical decisions during the launch process."
+
+EUR_Site_Component1_loc_4:0 "§YTest Stands and Facilities§!\nThey are crucial infrastructure for conducting propulsion tests on rocket engines and components. These facilities include static test stands, where engines are fired while anchored to the ground, or dynamic test stands, where engines are mounted on moving platforms to simulate flight conditions."
+EUR_Site_Component2_loc_4:0 "§YEngine Test Cells§!\nThese are specialized enclosures where rocket engines are installed and tested. These facilities require repairs or upgrades to equipment such as thrust measurement systems, fuel delivery systems, and exhaust ventilation systems."
+EUR_Site_Component3_loc_4:0 "§YInstrumentation and Control Systems§!\nThey play a vital role in monitoring and controlling propulsion tests, collecting data, and analyzing test results. These systems include sensors, data acquisition systems, and control consoles."
+EUR_Site_Component4_loc_4:0 "§YSafety and Environmental Systems§!\nThey are critical for protecting personnel and the surrounding environment during propulsion tests. These systems include fire suppression systems, emergency shutdown procedures, and environmental monitoring equipment."
+
+EUR_Site_Component1_loc_3:0 "§YAntenna Array§!\nIt is the primary component of the radar system, consisting of multiple antennas arranged in a specific configuration to transmit and receive radar signals. Over time, antennas have suffered from corrosion, mechanical wear, and electronic component degradation,"
+EUR_Site_Component2_loc_3:0 "§YTransmitter and Receiver Units§!\nThe transmitter and receiver units generate radar signals, amplify received signals, and process radar data. These units require repairs and upgrades to electronic components."
+EUR_Site_Component3_loc_3:0 "§YSignal Processing and Control Systems§!\nThey are responsible for managing radar operations, controlling antenna movements, and processing radar data. These systems include computers, software applications, and control interfaces. "
+EUR_Site_Component4_loc_3:0 "§YPower and Cooling Systems§!\nPower and cooling systems provide electrical power and maintain optimal operating temperatures for radar components. These systems include generators, power distribution units, air conditioning units, and cooling fans."
+
+EUR_First_Site:0 "[EUR_First_Site_loc]"
+EUR_Second_Site:0 "[EUR_Second_Site_loc]"
+EUR_Third_Site:0 "[EUR_Third_Site_loc]"
+EUR_Fourth_Site:0 "[EUR_Fourth_Site_loc]"
+
+EUR_Complete_Site:0 "[Complete_Site_button_loc]"
+
+Complete_Site_available:0 "§GClick to Fully Restore This Site!§!"
+Complete_Site_Unavailable:0 "§RWe Haven't Finished All Four Repairment Stages Yet!§!"
+
+First_Site_Unavailable:0 "§YVostochno-Yevraziyskiy Cosmodrome-N/O (Magadan)§!\n§RWe Currently Don't Control the Site Location!§!"
+First_Site_Finished:0 "§YVostochno-Yevraziyskiy Cosmodrome-O§!  (Magadan)\n§GWe Have Fully Restored This Site!§!"
+First_Site_Unfinished:0 "§YVostochno-Yevraziyskiy Cosmodrome-N/O  (Magadan)§!\n§RClick To See The Site Details§!"
+
+Second_Site_Unavailable:0 "§YKrasnoyarsk Aerospace Industrial Complex-N/O§!\n§RWe Currently Don't Control the Site Location or We Haven't Restored the Previous Site Yet!§!"
+Second_Site_Finished:0 "§YKrasnoyarsk Aerospace Industrial Complex-O§!\n§GWe Have Fully Restored This Site!§!"
+Second_Site_Unfinished:0 "§YKrasnoyarsk Aerospace Industrial Complex-N/O§!\n§RClick To See The Site Details§!"
+
+Third_Site_Unavailable:0 "§YUral's Space Belt-N/O (Perm)§!\n§RWe Currently Don't Control the Site Location or We Haven't Restored the Previous Site Yet!§!"
+Third_Site_Finished:0 "§YUral's Space Belt-O (Perm)§!\n§GWe Have Fully Restored This Site!§!"
+Third_Site_Unfinished:0 "§YUral's Space Belt-N/O (Perm)§!\n§RClick To See The Site Details§!"
+
+Fourth_Site_Unavailable:0 "§YMoscow Rocketry Institute-N/O§!\n§RWe Currently Don't Control the Site Location or We Haven't Restored the Previous Site Yet!§!"
+Fourth_Site_Finished:0 "§YMoscow Rocketry Institute-O§!\n§GWe Have Fully Restored This Site!§!"
+Fourth_Site_Unfinished:0 "§YMoscow Rocketry Institute-N/O§!\n§RClick To See The Site Details§!"
+
+EUR_First_Site_Add_Info:0 "Built by private European Concerns in cooperation with the Russian Space Agency in the 90s in Magadan, this spaceport was the largest active ESA facilities outside of Equatorial Africa.Though it's non equatorial position left it to play backup to Libreville and Victoria Spaceports it has a large stockpile of launch vehicles from a bustling private telecommunications launch industry."
+EUR_Second_Site_Add_Info:0 "The Novosibirsk Complex was the pride of the eastern side of the inter-ESA competition, having a raw aerospace manufacturing potential. The closeness of industrial centres to the Magadan Cosmodrome gave Krasnoyarsk an Edge over aerospace factories in Africa or Europe. As well as its large industrial capacity, Krasnoyarsk has stock of the old Buran shuttle programme to compete against European re-usable rockets in the economic space race."
+EUR_Third_Site_Add_Info:0 " The Ural's Space Belt is the informal name given to the collection of radio-telescopes, ground stations, relay dishes and radar's that run along the northern Urals. These sites have historically been developed by various private telecom companies, research institutions, military departments and universities who can't afford site costs in the ESA dominated Alps sphere. Though their is no formal main site unifying their administration shouldn't prove too difficult."
+EUR_Fourth_Site_Add_Info:0 "The prized jewel of the Russian Space programme and their main contribution too the ESA, The Moscow Institute was at the forefront of rocket propellant research, having been involved in designing rocket engines for almost every ESA flight. In bitter competition with the Germans, the Moscow Institute was a vital part of the ESA programme. Along with being the research hub of Russia's rocket design it also provided designs for military based rocketry down to ATGM's."
+
+
+##Custom Tooltips/Mechanic
+EUR_First_Site_Gen_Increase_1_tt:0 "§GMonthly Progress Will Be Increased By A Small Amount! (3%)§!"
+EUR_First_Site_Gen_Increase_2_tt:0 "§GMonthly Progress Will Be Increased By A Medium Amount! (5%)§!"
+EUR_First_Site_Gen_Increase_3_tt:0 "§GMonthly Progress Will Be Increased By A Large Amount! (10%)§!"
+
+EUR_First_Component_Increase_1_tt:0 "§GFirst Component's Status Will Be Improved By A Large Amount! (30%)§!"
+EUR_First_Component_Increase_2_tt:0 "§GFirst Component's Status Will Be Improved By A Medium Amount! (10%)§!"
+EUR_First_Component_Increase_3_tt:0 "§GFirst Component's Status Will Be Improved By A Medium Amount! (15%)§!"
+
+EUR_Second_Component_Increase_1_tt:0 "§GSecond Component's Status Will Be Improved By A Medium Amount! (20%)§!"
+EUR_Second_Component_Increase_2_tt:0 "§GSecond Component's Status Will Be Improved By A Medium Amount! (20%)§!"
+EUR_Second_Component_Increase_3_tt:0 "§GSecond Component's Status Will Be Improved By A Small Amount! (5%)§!"
+
+EUR_Third_Component_Increase_1_tt:0 "§GThird Component's Status Will Be Improved By A Medium Amount! (10%)§!"
+EUR_Third_Component_Increase_2_tt:0 "§GThird Component's Status Will Be Improved By A Medium Amount! (10%)§!"
+EUR_Third_Component_Increase_3_tt:0 "§GThird Component's Status Will Be Improved By A Large Amount! (30%)§!"
+
+EUR_Fourth_Component_Increase_1_tt:0 "§GFourth Component's Status Will Be Improved By A Medium Amount! (15%)§!"
+EUR_Fourth_Component_Increase_2_tt:0 "§GFourth Component's Status Will Be Improved By A Medium Amount! (15%)§!"
+EUR_Fourth_Component_Increase_3_tt:0 "§GFirst Component's Status Will Be Improved By A Medium Amount! (15%)§!"
+
+EUR_BRT_support_Site_tt:0 "§RWe Need A Certain Level of Britannian Support to Complete This Action! (40%)§!"
+
+
+##BRT Support Decisions
 EUR_gun_request_1:0 "Request Infantry Equipment"
 EUR_gun_request_1_desc:0 "§RRequires Weak Britannian Support (15)§!"
 EUR_gun_request_1_support:0 "Request Support Equipment"
@@ -185,3 +296,29 @@ EUR_gun_request_2_artillery:0 "Request Artillery Systems"
 EUR_gun_request_2_artillery_desc:0 "§RRequires Medium Britannian Support (40)§!"
 EUR_gun_request_3:0 "Request Knightmare Frames"
 EUR_gun_request_3_desc:0 "§RRequires Strong Britannian Support (50)§!"
+
+
+##All Sites Decisions
+EUR_investment_3:0 "Make Large Investments Into The Project"
+EUR_investment_2:0 "Make Medium Investments Into The Project"
+EUR_investment_1:0 "Make Small Investments Into The Project"
+
+
+##First Site Decisions
+EUR_bring_new_launch_pads:0 "Bring In New Launch Pads"
+EUR_repair_electronic_devices:0 "Restore Electronic Devices"
+EUR_clear_environmental_damages:0 "Clear Environmental Damages"
+
+EUR_streamline_general_production:0 "Streamline General Production"
+EUR_expand_base_hangars:0 "Expand Site's Hangars"
+EUR_general_infrastructural_renewal:0 "General Infrastructural Renewal"
+
+EUR_import_fuel_CHI:0 "Import Fuel From China"
+EUR_build_new_propellants:0 "Build New Propellants"
+EUR_import_BRT_machinery:0 "Import Britannian Machinery"
+
+EUR_new_control_center:0 "A New Control Center"
+EUR_fill_the_gaps:0 "Fill the Gaps"
+EUR_request_BRT_specialists:0 "Request Britannian Specialists"
+
+##Second Site Decisions

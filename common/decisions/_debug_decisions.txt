@@ -17,6 +17,7 @@ debug_decisions = {
 
 		complete_effect = {
 			hidden_effect = {
+			add_country_flag = RUS_Warlord
 			delete_unit_template_and_units  = {
 				division_template = "Russian Garrison"
 				disband = no #will refund equipment and manpower
@@ -30,6 +31,7 @@ debug_decisions = {
 				disband = no #will refund equipment and manpower
 			}
 			EUR = {
+				add_country_flag = RUS_Warlord
 				add_state_core = 917
 				add_state_core = 722
 				add_state_core = 863
@@ -95,6 +97,7 @@ debug_decisions = {
 				disband = no #will refund equipment and manpower
 			}
 			SRU = {
+				add_country_flag = RUS_Warlord
 				add_state_core = 563
 				add_state_core = 565
 				add_state_core = 564
@@ -176,6 +179,7 @@ debug_decisions = {
 				disband = no #will refund equipment and manpower
 			}
 			MRU = {
+				add_country_flag = RUS_Warlord
 				add_state_core = 919
 				add_state_core = 579
 				add_state_core = 580
@@ -383,7 +387,7 @@ debug_decisions = {
 		}
 	}
 
-	show_EUR_favor_mechanic = {
+	show_EUR_sites_mechanic = {
 
 		icon = generic_research
 
@@ -400,9 +404,36 @@ debug_decisions = {
 
 		complete_effect = {
 			EUR = { change_tag_from = ROOT }
+			complete_national_focus = EUR_Secure_First_Site
+			secure_sites_EUR_setup = yes
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	show_EUR_favor_mechanic = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			country_exists = EUR
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			EUR = { 
+			change_tag_from = ROOT 
 			complete_national_focus = EUR_Schneizels_Playground
-			EUR = { change_tag_from = ROOT }
-			complete_national_focus = EUR_Schneizels_Playground
+			}
+
 		}
 
 		ai_will_do = {

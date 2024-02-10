@@ -1,3 +1,255 @@
+secure_sites_EUR_setup = {
+
+	set_variable = { Magadan_Control = 1 }	##First Site 
+    set_variable = { Krasnoyarsk_Control = 0 }  ##Second Site 
+    set_variable = { Perm_Control = 0 }	##Third Site 
+    set_variable = { Moscow_Control = 0 }	 ##Fourth Site 
+
+	set_variable = { First_Component = 0 }
+	set_variable = { Second_Component = 0 }
+	set_variable = { Third_Component = 0 }
+	set_variable = { Fourth_Component = 0 }
+
+	set_variable = { First_Site_Status = 0 }
+	set_variable = { Second_Site_Status = 0 }
+	set_variable = { Third_Site_Status = 0 }
+	set_variable = { Fourth_Site_Status = 0 }
+
+	set_variable = { EUR_Doing_Actions_2 = 0 }
+	set_variable = { EUR_Site_Start = 0 }  ##On Action Stuff
+	set_variable = { EUR_Ticking_Value = 0.02 }
+
+}
+
+
+EUR_First_Site_Gen_Increase_1 = {
+
+	#Variable Change is Done Through On Action
+
+	custom_effect_tooltip = EUR_First_Site_Gen_Increase_1_tt
+	
+}
+
+EUR_First_Site_Gen_Increase_2 = {
+
+	#Variable Change is Done Through On Action
+	
+
+	custom_effect_tooltip = EUR_First_Site_Gen_Increase_2_tt
+	
+}
+
+EUR_First_Site_Gen_Increase_3 = {
+
+	#Variable Change is Done Through On Action
+	
+
+	custom_effect_tooltip = EUR_First_Site_Gen_Increase_3_tt
+	
+}
+
+EUR_First_Component_Increase_1 = {
+
+
+    if = {
+		limit = {
+			check_variable = { First_Component + 0.30 < 1.01 }
+		}
+		add_to_variable = { First_Component = 0.30 }
+	}
+	else = {
+		set_variable = { First_Component = 1 }
+	}
+	
+
+	custom_effect_tooltip = EUR_First_Component_Increase_1_tt
+	
+}
+
+EUR_First_Component_Increase_2 = {
+
+	    if = {
+		limit = {
+			check_variable = { First_Component + 0.10 < 1.01 }
+		}
+		add_to_variable = { First_Component = 0.10 }
+	}
+	else = {
+		set_variable = { First_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_First_Component_Increase_2_tt
+	
+}
+
+EUR_First_Component_Increase_3 = {
+
+	    if = {
+		limit = {
+			check_variable = { First_Component + 0.15 < 1.01 }
+		}
+		add_to_variable = { First_Component = 0.15 }
+	}
+	else = {
+		set_variable = { First_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_First_Component_Increase_3_tt
+	
+}
+
+
+EUR_Second_Component_Increase_1 = {
+
+    if = {
+		limit = {
+			check_variable = { Second_Component + 0.20 < 1.01 }
+		}
+		add_to_variable = { Second_Component = 0.20 }
+	}
+	else = {
+		set_variable = { Second_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Second_Component_Increase_1_tt
+	
+}
+
+EUR_Second_Component_Increase_2 = {
+
+	
+    if = {
+		limit = {
+			check_variable = { Second_Component + 0.20 < 1.01 }
+		}
+		add_to_variable = { Second_Component = 0.20 }
+	}
+	else = {
+		set_variable = { Second_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Second_Component_Increase_2_tt
+	
+}
+
+EUR_Second_Component_Increase_3 = {
+
+	
+    if = {
+		limit = {
+			check_variable = { Second_Component + 0.05 < 1.01 }
+		}
+		add_to_variable = { Second_Component = 0.05 }
+	}
+	else = {
+		set_variable = { Second_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Second_Component_Increase_3_tt
+	
+}
+
+EUR_Third_Component_Increase_1 = {
+
+
+    if = {
+		limit = {
+			check_variable = { Third_Component + 0.10 < 1.01 }
+		}
+		add_to_variable = { Third_Component = 0.10 }
+	}
+	else = {
+		set_variable = { Third_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Third_Component_Increase_1_tt
+	
+}
+
+EUR_Third_Component_Increase_2 = {
+
+	 if = {
+		limit = {
+			check_variable = { Third_Component + 0.10 < 1.01 }
+		}
+		add_to_variable = { Third_Component = 0.10 }
+	}
+	else = {
+		set_variable = { Third_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Third_Component_Increase_2_tt
+	
+}
+
+EUR_Third_Component_Increase_3 = {
+
+    if = {
+		limit = {
+			check_variable = { Third_Component + 0.30 < 1.01 }
+		}
+		add_to_variable = { Third_Component = 0.30 }
+	}
+	else = {
+		set_variable = { Third_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Third_Component_Increase_3_tt
+	
+}
+
+EUR_Fourth_Component_Increase_1 = {
+
+    if = {
+		limit = {
+			check_variable = { Fourth_Component + 0.15 < 1.01 }
+		}
+		add_to_variable = { Fourth_Component = 0.15 }
+	}
+	else = {
+		set_variable = { Fourth_Component = 1 }
+	}
+
+	custom_effect_tooltip = EUR_Fourth_Component_Increase_1_tt
+	
+}
+
+EUR_Fourth_Component_Increase_2 = {
+
+	    if = {
+		limit = {
+			check_variable = { Fourth_Component + 0.15 < 1.01 }
+		}
+		add_to_variable = { Fourth_Component = 0.15 }
+	}
+	else = {
+		set_variable = { Fourth_Component = 1 }
+	}
+
+
+	custom_effect_tooltip = EUR_Fourth_Component_Increase_2_tt
+	
+}
+
+EUR_Fourth_Component_Increase_3 = {
+
+	    if = {
+		limit = {
+			check_variable = { Fourth_Component + 0.15 < 1.01 }
+		}
+		add_to_variable = { Fourth_Component = 0.15 }
+	}
+	else = {
+		set_variable = { Fourth_Component = 1 }
+	}
+
+
+	custom_effect_tooltip = EUR_Fourth_Component_Increase_3_tt
+	
+}
+
+
+#####################################################
 britannia_support_EUR_setup = {
 
     set_variable = { britannia_support_EUR = 0.16 }   

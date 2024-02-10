@@ -9,22 +9,136 @@ scripted_gui = {
 			is_ai = yes
 		}
 		effects = {
-			First_Site_button_click = {}
-			Second_Site_button_click = {}
-			Third_Site_button_click = {}
-			Fourth_Site_button_click = {}
-			Complete_Site_button_click = {}
+			First_Site_button_click = {
+				if = {
+                    limit = {  
+						check_variable = { First_Site_Status = 0 }
+						 check_variable = { Magadan_Control = 1 } 					
+					 }   ##Variables Are Changed Throughout Events
+                     set_variable = { EUR_Chosen_Site = 1 }	
+                }
+
+			}
+			Second_Site_button_click = {
+				if = {
+                    limit = {   
+						check_variable = { First_Site_Status = 1 }    ##Condition to Avoid Checking Sites Before Completing Previous Ones
+						check_variable = { Krasnoyarsk_Control = 1 }  ##Condition to Avoid Checking Non-Controlled Sites
+						check_variable = { Second_Site_Status = 0 }    ##Condition to Avoid Checking Already Finished Sites
+					}   
+                     set_variable = { EUR_Chosen_Site = 2 }         					 
+                }
+			}
+			Third_Site_button_click = {
+				if = {
+                    limit = {  
+						check_variable = { Second_Site_Status = 1 } 
+						 check_variable = { Perm_Control = 1 }  
+						 check_variable = { Third_Site_Status = 0 }
+					}   
+                     set_variable = { EUR_Chosen_Site = 3 }
+                }
+			}
+			Fourth_Site_button_click = {
+				if = {
+                    limit = {  
+						check_variable = { Third_Site_Status = 1 }
+						 check_variable = { Moscow_Control = 1 }  
+						 check_variable = { Fourth_Site_Status = 0 }
+					}   
+                     set_variable = { EUR_Chosen_Site = 4 }
+                }
+			}
+
+			Site_Component1_click = {
+               set_variable = { EUR_Chosen_Comp = 1 }
+			}
+
+			Site_Component2_click = {
+               set_variable = { EUR_Chosen_Comp = 2 }
+			}
+
+			Site_Component3_click = {
+               set_variable = { EUR_Chosen_Comp = 3 }
+			}
+
+			Site_Component4_click = {
+               set_variable = { EUR_Chosen_Comp = 4 }
+			}
+			Complete_Site_button_click = {
+				if = {
+                    limit = {   
+					check_variable = { First_Component = 1 }  
+					check_variable = { Second_Component = 1 }  
+					check_variable = { Third_Component = 1 }  
+					check_variable = { Fourth_Component = 1 }  
+					check_variable = { EUR_Chosen_Site = 1 }	
+					}   
+                     set_variable = { First_Site_Status = 1 }
+						set_variable = { First_Component = 0 }
+	                    set_variable = { Second_Component = 0 }
+	                    set_variable = { Third_Component = 0 }
+                        set_variable = { Fourth_Component = 0 }
+                }
+
+				if = {
+                    limit = {   
+					check_variable = { First_Component = 1 }  
+					check_variable = { Second_Component = 1 }  
+					check_variable = { Third_Component = 1 }  
+					check_variable = { Fourth_Component = 1 }  
+					check_variable = { EUR_Chosen_Site = 2 }	
+					}   
+                     set_variable = { Second_Site_Status = 1 }
+						set_variable = { First_Component = 0 }
+	                    set_variable = { Second_Component = 0 }
+	                    set_variable = { Third_Component = 0 }
+                        set_variable = { Fourth_Component = 0 }					 
+                }
+
+				if = {
+                    limit = {   
+					check_variable = { First_Component = 1 }  
+					check_variable = { Second_Component = 1 }  
+					check_variable = { Third_Component = 1 }  
+					check_variable = { Fourth_Component = 1 }  
+					check_variable = { EUR_Chosen_Site = 3 }	
+					}   
+                     set_variable = { Third_Site_Status = 1 }
+						set_variable = { First_Component = 0 }
+	                    set_variable = { Second_Component = 0 }
+	                    set_variable = { Third_Component = 0 }
+                        set_variable = { Fourth_Component = 0 }					 
+                }
+
+			    if = {
+                    limit = {   
+					check_variable = { First_Component = 1 }  
+					check_variable = { Second_Component = 1 }  
+					check_variable = { Third_Component = 1 }  
+					check_variable = { Fourth_Component = 1 }  
+					check_variable = { EUR_Chosen_Site = 4 }	
+					}   
+                     set_variable = { Fourth_Site_Status = 1 }
+						set_variable = { First_Component = 0 }
+	                    set_variable = { Second_Component = 0 }
+	                    set_variable = { Third_Component = 0 }
+                        set_variable = { Fourth_Component = 0 }					 
+                }
+			}
+
+
 		}
 		properties = {
-			#First_Site_button = {image = "[]"}
-			Second_Site_button = {image = "[]"}
-			Third_Site_button = {image = "[]"}
-			Fourth_Site_button = {image = "[]"}
-			Complete_Site_button = {image = "[]"}
-			Component_Status_1 = {image = "[get_component_status]"}
-			#Component_Status_2 = {image = "[]"}
-			#Component_Status_3 = {image = "[]"}
-			#Component_Status_4 = {image = "[]"}
+			First_Site_button = {image = "[get_First_Site_button_gfx]"}
+			Second_Site_button = {image = "[get_Second_Site_button_gfx]"}
+			Third_Site_button = {image = "[get_Third_Site_button_gfx]"}
+			Fourth_Site_button = {image = "[get_Fourth_Site_button_gfx]"}
+			Complete_Site_button = {image = "[get_Complete_Site_button_gfx]"}
+			Site_Component1 = {image = "[get_Component_Status_1_gfx]"}
+			Site_Component2 = {image = "[get_Component_Status_2_gfx]"}
+			Site_Component3 = {image = "[get_Component_Status_3_gfx]"}
+			Site_Component4 = {image = "[get_Component_Status_4_gfx]"}
 		}
 	}
 
