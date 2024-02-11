@@ -1647,6 +1647,36 @@ Modified_Knightmare_Simulations = {
 	   		}
    		}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		####LUKA IDEAS FROM NOW ON!!!!!!!####
+
 		#### LUKA'S MILITARY IDEAS PHASE 1 #####
 
 		SRU_An_Independent_Military = {
@@ -1762,7 +1792,7 @@ Modified_Knightmare_Simulations = {
 			}
    		}
 
-		SRU_operation_red_awakening = {
+		   SRU_an_invincible_army = { ##Modify this to be different later
 		
 			allowed = {
 		   		always = no
@@ -1774,10 +1804,46 @@ Modified_Knightmare_Simulations = {
 
 			removal_cost = -1
 
-			targeted_modifier = {
-				tag = EUR
-				attack_bonus_against = 0.2
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
+				mechanized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
 			}
+   		}
+
+		##Bombs Away Idea
+
+		##Red Thunder Idea
+
+		##Crimson Skies Idea
+
+		SRU_enforced_martial_law = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.15
+				compliance_gain = 0.05
+	   		}
    		}
 
 		SRU_Purge_Resistance_Fighters = {
@@ -1793,8 +1859,8 @@ Modified_Knightmare_Simulations = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.1
-				resistance_growth_on_our_occupied_states = -0.25
+				consumer_goods_factor = 0.05
+				resistance_growth_on_our_occupied_states = 0.25
 				compliance_gain = 0.25
 	   		}
    		}
@@ -1812,7 +1878,7 @@ Modified_Knightmare_Simulations = {
 			removal_cost = -1
 
 			modifier = {
-				enemy_operative_capture_chance_factor = 0.2
+				enemy_operative_capture_chance_factor = 0.25
 				enemy_operative_detection_chance_factor = 0.2
 	   		}
    		}
@@ -1833,6 +1899,25 @@ Modified_Knightmare_Simulations = {
 				tag = EUR
 				stability_factor = -0.4
 				war_support_factor = -0.4
+			}
+   		}
+
+		   SRU_operation_red_awakening = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = EUR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
    		}
 

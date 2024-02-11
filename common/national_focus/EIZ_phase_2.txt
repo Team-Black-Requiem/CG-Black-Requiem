@@ -275,7 +275,7 @@ focus_tree = {
     
 
             completion_reward = {
-               
+               add_ideas = EIZ_frederica_spc_A1 
                 hidden_effect = {
                 
               }
@@ -308,7 +308,10 @@ focus_tree = {
     
 
             completion_reward = {
-               
+               swap_ideas = {
+                remove_idea = EIZ_frederica_spc_A1
+                add_idea = EIZ_frederica_spc_A2
+               }
                 hidden_effect = {
                 
               }
@@ -342,7 +345,10 @@ focus_tree = {
     
 
             completion_reward = {
-               
+                swap_ideas = {
+                    remove_idea = EIZ_frederica_spc_A2
+                    add_idea = EIZ_frederica_spc_A3
+                }
                 hidden_effect = {
                 
               }
@@ -376,7 +382,10 @@ focus_tree = {
     
 
             completion_reward = {
-               
+                swap_ideas = {
+                    remove_idea = EIZ_frederica_spc_A3
+                    add_idea = EIZ_frederica_spc_A4
+                }
                 hidden_effect = {
                 
               }
@@ -409,7 +418,7 @@ focus_tree = {
     
 
             completion_reward = {
-               
+               recruit_character = EIZ_Wittmann
                 hidden_effect = {
                 
               }
@@ -1365,7 +1374,6 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
        
             hidden_effect = {
             
@@ -1397,8 +1405,6 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
             hidden_effect = {
             
           }
@@ -1432,7 +1438,6 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
        
             hidden_effect = {
             
@@ -1464,8 +1469,9 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+            GER = {
+                add_ideas = EIZ_frederica_EU_Defence
+            }
             hidden_effect = {
             
           }
@@ -1496,8 +1502,9 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+            DAN = { 
+                add_ideas = EIZ_frederica_EU_Defence
+            }
             hidden_effect = {
             
           }
@@ -1528,8 +1535,9 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+           FRA = { 
+            add_ideas = EIZ_frederica_EU_Defence
+        }
             hidden_effect = {
             
           }
@@ -1560,8 +1568,9 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+            RUS = { 
+                add_ideas = EIZ_frederica_EU_Defence
+            }
             hidden_effect = {
             
           }
@@ -1592,8 +1601,68 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+            add_ideas = EIZ_frederica_EU_Defence_returns
+            add_equipment_to_stockpile = {
+                type = fighter_equipment_2
+                producer = FRA
+                amount = 600
+            }
+            add_equipment_to_stockpile = {
+                type = mbt_2
+                producer = FRA
+                amount = 1000
+            }
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_2
+                producer = FRA
+                amount = 5000
+            }
+            add_equipment_to_stockpile = {
+                type = mechanized_equipment_2
+                producer = FRA
+                amount = 3000
+            }
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_2
+                producer = FRA
+                amount = 40000
+            }
+
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                producer = FRA
+                amount = 40000
+            }
+            GER = { swap_ideas = {
+                remove_idea = EIZ_frederica_EU_Defence 
+                add_idea = EIZ_frederica_EU_Defence_V2
+            }
+        }
+            FRA = { swap_ideas = {
+                remove_idea = EIZ_frederica_EU_Defence 
+                add_idea = EIZ_frederica_EU_Defence_V2
+            }
+        }
+           DAN = { swap_ideas = {
+            remove_idea = EIZ_frederica_EU_Defence 
+            add_idea = EIZ_frederica_EU_Defence_V2
+            }
+        }
+           ITA = { swap_ideas = {
+            remove_idea = EIZ_frederica_EU_Defence 
+            add_idea = EIZ_frederica_EU_Defence_V2
+           }
+        }
+          POL = { swap_ideas = {
+            remove_idea = EIZ_frederica_EU_Defence 
+            add_idea = EIZ_frederica_EU_Defence_V2
+        }
+    }
+         KAL = { swap_ideas = {
+            remove_idea = EIZ_frederica_EU_Defence 
+            add_idea = EIZ_frederica_EU_Defence_V2
+        }
+    }
             hidden_effect = {
             
           }
@@ -1628,7 +1697,8 @@ focus = {
 
         completion_reward = {
             country_event = EIZ.1
-       
+            add_ideas = EIZ_frederica_Tactical_expiremental_group_V1
+      
             hidden_effect = {
             
           }
@@ -1660,7 +1730,15 @@ focus = {
 
         completion_reward = {
             country_event = EIZ.1
-       
+            add_timed_idea = {
+                idea = EIZ_frederica_Tactical_expiremental_group_V2
+                days = 60
+               }
+              GER ={ swap_ideas = {
+                remove_idea = EIZ_frederica_Tactical_expiremental_group_V1
+                add_idea = EIZ_frederica_Tactical_expiremental_group_V3
+               }
+            }
             hidden_effect = {
             
           }
@@ -1692,7 +1770,16 @@ focus = {
 
         completion_reward = {
             country_event = EIZ.1
-       
+            add_ideas = EIZ_frederica_Special_forces_Experiments
+            add_timed_idea = {
+                idea = EIZ_frederica_sudden_push
+                days = 60
+            }
+        GER = {swap_ideas = {
+                remove_idea = EIZ_frederica_Tactical_expiremental_group_V3
+                add_idea = EIZ_frederica_Tactical_experimental_group_V4
+            }
+        }
             hidden_effect = {
             
           }
@@ -1723,8 +1810,22 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+            add_equipment_to_stockpile = {
+                type = fighter_equipment_2
+                producer = GER
+                amount = 100
+            }
+            add_equipment_to_stockpile = {
+                type = strat_bomber_equipment_2
+                producer = GER
+                amount = 100
+            }
+            GER = {
+                swap_ideas = {
+                    remove_idea = EIZ_frederica_Tactical_experimental_group_V4
+                    add_idea = EIZ_frederica_tactical_experimental_group_V5
+                }
+            } 
             hidden_effect = {
             
           }
@@ -1755,8 +1856,10 @@ focus = {
 
 
         completion_reward = {
-            country_event = EIZ.1
-       
+        add_timed_idea = {
+            idea = EIZ_frederica_infantry_push
+            days = 60
+        }
             hidden_effect = {
             
           }
@@ -1788,7 +1891,12 @@ focus = {
 
         completion_reward = {
             country_event = EIZ.1
-       
+            GER = {
+                swap_ideas = {
+                    remove_idea = EIZ_frederica_Tactical_experimental_group_V5
+                    add_idea = EIZ_frederica_Tactical_experimental_group_V6
+                }
+            }
             hidden_effect = {
             
           }
