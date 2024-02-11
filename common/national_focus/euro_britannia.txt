@@ -31,10 +31,10 @@
 		add_political_power = 10
 		}
 	}
-	#Britannian`s illusions
+	#Digging Through The Rubble
 	focus = {
-		id = EUR_Britannians_illusions
-		icon = GFX_EUR_britannians_illusions
+		id = EUR_Digging_Through_The_Rubble
+		icon = GFX_EUR_Digging_Through_The_Rubble
 		cost = 1
 		x = 0
 		y = 1
@@ -57,16 +57,16 @@
 		country_event = EUR.2
 		}
 	}
-	#Explore old military archives
+	#Britannian Illusions
 	focus = {
-		id = EUR_Explore_old_military_archives
-		icon = GFX_EUR_explore_old_military_archives
+		id = EUR_Britannian_Illusions
+		icon = GFX_EUR_Britannian_Illusions
 		cost = 1
 		x = 0
 		y = 1
-		relative_position_id = EUR_Britannians_illusions
+		relative_position_id = EUR_Digging_Through_The_Rubble
 		prerequisite = {
-			focus = EUR_Britannians_illusions
+			focus = EUR_Digging_Through_The_Rubble
 		}
 		search_filters = {
 		}
@@ -84,16 +84,17 @@
 		army_experience = 5
 		}
 	}
-	#Expedition to the North Pole
+	#The Men From PENDRAGON
 	focus = {
-		id = EUR_Expedition_to_the_North_Pole
-		icon = GFX_EUR_expedition_to_the_north_pole
+		id = EUR_The_Men_From_PENDRAGON
+		icon = GFX_EUR_The_Men_From_PENDRAGON
 		cost = 1
+		cancelable = no
 		x = 0
 		y = 1
-		relative_position_id = EUR_Explore_old_military_archives
+		relative_position_id = EUR_Britannian_Illusions
 		prerequisite = {
-			focus = EUR_Explore_old_military_archives
+			focus = EUR_Britannian_Illusions
 		}
 		search_filters = {
 		}
@@ -105,21 +106,23 @@
 		ai_will_do = {
 			factor = 10
 		}
-	
+		select_effect = {
+			country_event = EUR.5
+		}
 		completion_reward = {
-		country_event = EUR.4
+		country_event = EUR.5
 		army_experience = 10
 		}
 	}
 	focus = {
-		id = EUR_Send_scientist
-		icon = GFX_EUR_send_scientist
+		id = EUR_The_Space_Connection
+		icon = GFX_EUR_The_Space_Connection
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = EUR_Expedition_to_the_North_Pole
+		relative_position_id = EUR_The_Men_From_PENDRAGON
 		prerequisite = {
-			focus = EUR_Expedition_to_the_North_Pole
+			focus = EUR_The_Men_From_PENDRAGON
 		}
 		search_filters = {
 		}
@@ -137,14 +140,14 @@
 		}
 	}
 	focus = {
-		id = EUR_Try_to_get_British_spies_to_talk
-		icon = GFX_EUR_try_to_get_british_spies_to_talk
+		id = EUR_Reeling_In_Their_Dirty_Laundry
+		icon = GFX_EUR_Reeling_In_Their_Dirty_Laundry
 		cost = 1
 		x = 1
 		y = 1
-		relative_position_id = EUR_Expedition_to_the_North_Pole
+		relative_position_id = EUR_The_Men_From_PENDRAGON
 		prerequisite = {
-			focus = EUR_Expedition_to_the_North_Pole
+			focus = EUR_The_Men_From_PENDRAGON
 		}
 		search_filters = {
 		}
@@ -167,12 +170,12 @@
 		cost = 1
 		x = -1
 		y = 1
-		relative_position_id = EUR_Try_to_get_British_spies_to_talk
+		relative_position_id = EUR_Reeling_In_Their_Dirty_Laundry
 		prerequisite = {
-			focus = EUR_Try_to_get_British_spies_to_talk
+			focus = EUR_Reeling_In_Their_Dirty_Laundry
 		}
 		prerequisite = {
-			focus = EUR_Send_scientist
+			focus = EUR_The_Space_Connection
 		}
 		search_filters = {
 		}

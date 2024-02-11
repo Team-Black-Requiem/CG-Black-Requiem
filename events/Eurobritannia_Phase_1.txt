@@ -1,0 +1,197 @@
+﻿add_namespace = EUR_INTRO_INTRO
+
+
+country_event = {  
+	id = EUR_INTRO.1 ###Cold Winds Are Blowing
+	title = EUR_INTRO.1.t
+	desc = EUR_INTRO.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.1.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.2 ####A Lead Amongst The Dead
+	title = EUR_INTRO.2.t
+	desc = EUR_INTRO.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.2.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.3 ####The Dangerous
+	title = EUR_INTRO.3.t
+	desc = EUR_INTRO.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.3.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.4 ####Back Into The Cold
+	title = EUR_INTRO.4.t
+	desc = EUR_INTRO.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.4.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.5 ####Report From Stierlitz
+	title = EUR_INTRO.5.t
+	desc = EUR_INTRO.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.5.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.6 ####Conspiracy Amongst The Stars
+	title = EUR_INTRO.6.t
+	desc = EUR_INTRO.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.6.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+country_event = {  
+	id = EUR_INTRO.7 ####Breaking Through The Veil
+	title = EUR_INTRO.7.t
+	desc = EUR_INTRO.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.7.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+
+country_event = {  
+	id = EUR_INTRO.8 ####All In
+	title = EUR_INTRO.8.t
+	desc = EUR_INTRO.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.8.a ##Help from Britannia
+		set_country_flag = EUR_INTRO_BRT_support
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 
+	#option = {
+		#name = EUR_INTRO.8.b  ##Help from Other Powers
+		#ai_chance = {
+			#factor = 0
+		#}
+		
+    #} 	
+}
+
+country_event = {  
+	id = EUR_INTRO.9 ####Other Buyers
+	title = EUR_INTRO.9.t
+	desc = EUR_INTRO.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.9.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+
+country_event = {  
+	id = EUR_INTRO.10 ####Bluffing The Devil
+	title = EUR_INTRO.10.t
+	desc = EUR_INTRO.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.10.a
+		ai_chance = {
+			factor = 100
+		}
+		
+    } 	
+}
+
+country_event = {  
+	id = EUR_INTRO.11 ####Rigged From The Start
+	title = EUR_INTRO.11.t
+	desc = EUR_INTRO.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = EUR_INTRO.11.a
+		ai_chance = {
+			factor = 100
+		}
+				add_country_leader_role = {
+		character = EUR_INTRO_Augusta_Henry
+		promote_leader = yes
+		country_leader = {
+        ideology = paternal_autocracy
+        expire = "2020.1.1.1"
+        traits = { EUR_INTRO_grand_duke }
+		}
+	     }
+
+		 add_field_marshal_role = {
+			character = EUR_INTRO_Augusta_Henry
+			skill = 5
+  			attack_skill = 2
+ 	 		defense_skill = 5
+ 			planning_skill = 2
+  			logistics_skill = 4
+		 }
+		hidden_effect = {
+			remove_country_leader_role = {
+		         character = EUR_INTRO_Mil_Coun
+		         ideology = paternal_autocracy
+	      	}
+			country_event = {
+                 id = EUR_INTRO.11
+                 days = 3
+              }
+		}	
+		
+    } 	
+}
