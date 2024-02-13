@@ -34,25 +34,60 @@ characters = {
 		}
 	}
 
-	MRU_generic_head_of_government = {
-		name = "Head Of Government"
+	##Prime Ministers
+
+	MRU_Maksim_Orlev = {
+		name = "Maksim Orlev"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
 			slot = head_of_government
-			idea_token = MRU_generic_head_of_government_idea_1
+			idea_token = MRU_Maksim_Orlev_idea	
 
 			allowed = {
 				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Conservatism
 			}
 
 			traits = { 
 				conservative_guy
 			}
 
-			cost = 2000
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MRU_Ilyana_Markov = {
+		name = "Ilyana Markov"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = head_of_government
+			idea_token = MRU_Ilyana_Markov_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+			}
+
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -109,6 +144,8 @@ characters = {
 		}
 	}
 
+
+    ##Interior Ministers
 	MRU_generic_minister_of_interior = {
 		name = "The Minister Of The Interior"
 		#portraits = {
