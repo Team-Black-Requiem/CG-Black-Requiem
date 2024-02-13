@@ -12,7 +12,7 @@ id = monarchist_russia_focus
 
 	default = no
 
-	continuous_focus_position = { x = -10 y = 2100 }
+	continuous_focus_position = { x = 120 y = 3400 }
 
 	
 
@@ -20,7 +20,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Risen_From_History
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Risen_From_History
 		
 		cost = 3
 		x = 15
@@ -44,7 +44,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Government_Standstill
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Government_Standstill
 		relative_position_id = MRU_Forming_The_Okhrana
 
 
@@ -72,7 +72,7 @@ id = monarchist_russia_focus
 	
 	focus = {
 		id = MRU_Arrival_Of_The_Tsar
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Arrival_Of_The_Tsar
 		relative_position_id = MRU_Risen_From_History
 
 		cost = 3
@@ -101,7 +101,7 @@ id = monarchist_russia_focus
 	
 	focus = {
 		id = MRU_Foundation_Of_The_Imperial_Rule_Party
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Foundation_Of_The_Imperial_Rule_Party
 		relative_position_id = MRU_Arrival_Of_The_Tsar
 
 		cost = 3
@@ -128,7 +128,7 @@ id = monarchist_russia_focus
 	
 	focus = {
 		id = MRU_Forming_The_Okhrana
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Forming_The_Okhrana
 		relative_position_id = MRU_Assembling_A_Military_Command
 
 		cost = 3
@@ -157,7 +157,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Assembling_A_Military_Command
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Assembling_A_Military_Command
 		relative_position_id = MRU_Arrival_Of_The_Tsar
 
 		cost = 3
@@ -184,7 +184,7 @@ id = monarchist_russia_focus
 
 	focus = {
 		id = MRU_Ekaterinburg_Square_Coup
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Ekaterinburg_Square_Coup
 		relative_position_id = MRU_Government_Standstill
 
 		cost = 3
@@ -213,7 +213,7 @@ id = monarchist_russia_focus
 	#####################Tsar Path################
 	focus = {
 		id = MRU_The_Great_Restoration
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Great_Restoration
 		relative_position_id = MRU_Ekaterinburg_Square_Coup
 
 		cost = 3
@@ -252,7 +252,7 @@ id = monarchist_russia_focus
 	
 focus = {
 	id = MRU_Pulling_The_State_Together
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Pulling_The_State_Together
 	relative_position_id = MRU_The_Great_Restoration
 
 	cost = 3
@@ -280,7 +280,7 @@ focus = {
 
 focus = {
 	id = MRU_Bringing_Our_House_In_Order
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Bringing_Our_House_In_Order
 	relative_position_id = MRU_Pulling_The_State_Together
 
 	cost = 3
@@ -307,8 +307,8 @@ focus = {
 }
 
 focus = {
-	id = Inflame_The_Infighting
-	icon = GFX_MRU_the_FIRST_test
+	id = MRU_Inflame_The_Infighting
+	icon = GFX_MRU_Inflame_The_Infighting
 	relative_position_id = MRU_Bringing_Our_House_In_Order
 
 	cost = 3
@@ -346,7 +346,7 @@ focus = {
 
 focus = {
 	id = MRU_Crush_The_Mutiny
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Crush_The_Mutiny
 	relative_position_id = MRU_Bringing_Our_House_In_Order
 
 	cost = 3
@@ -362,7 +362,7 @@ focus = {
 	}
 
     mutually_exclusive = {
-		focus = Inflame_The_Infighting
+		focus = MRU_Inflame_The_Infighting
 	}
 	ai_will_do = {
 		factor = 10
@@ -379,7 +379,7 @@ focus = {
 
 focus = {
 	id = MRU_Peace_In_The_Streets
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Peace_In_The_Streets
 	relative_position_id = MRU_Crush_The_Mutiny
 
 	cost = 3
@@ -395,7 +395,7 @@ focus = {
 
 	prerequisite = {
 		focus = MRU_Crush_The_Mutiny
-		focus = Inflame_The_Infighting
+		focus = MRU_Inflame_The_Infighting
 	}
 
 	ai_will_do = {
@@ -410,7 +410,7 @@ focus = {
 
 focus = {
 	id = MRU_Imperialization_Of_Society
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Imperialization_Of_Society
 	relative_position_id = MRU_Peace_In_The_Streets
 
 	cost = 3
@@ -437,7 +437,7 @@ focus = {
 
 focus = {
 	id = MRU_The_Inherited_Bureacracy
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_The_Inherited_Bureacracy
 	relative_position_id = MRU_Imperialization_Of_Society
 
 	cost = 3
@@ -464,7 +464,7 @@ focus = {
 
 focus = {
 	id = MRU_Formalize_The_Tax_Code
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Formalize_The_Tax_Code
 	relative_position_id = MRU_The_Inherited_Bureacracy
 
 	cost = 3
@@ -495,7 +495,7 @@ focus = {
 
 focus = {
 	id = MRU_Replace_The_Corrupt_Patriarchs
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Replace_The_Corrupt_Patriarchs
 	relative_position_id = MRU_Imperialization_Of_Society
 
 	cost = 3
@@ -522,7 +522,7 @@ focus = {
 
 focus = {
 	id = MRU_Return_Of_Noble_Titles
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Return_Of_Noble_Titles
 	relative_position_id = MRU_Replace_The_Corrupt_Patriarchs
 
 	cost = 3
@@ -549,7 +549,7 @@ focus = {
 
 focus = {
 	id = MRU_Matters_Of_The_Duma
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Matters_Of_The_Duma
 	relative_position_id = MRU_Imperialization_Of_Society
 
 	cost = 3
@@ -576,7 +576,7 @@ focus = {
 
 focus = {
 	id = MRU_Laying_Down_Legal_Groundwork
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Laying_Down_Legal_Groundwork
 	relative_position_id = MRU_Matters_Of_The_Duma
 
 	cost = 3
@@ -606,7 +606,7 @@ focus = {
 
 focus = {
 	id = MRU_Taking_A_Break_At_The_Ball
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Taking_A_Break_At_The_Ball
 	relative_position_id = MRU_Return_Of_Noble_Titles
 
 	cost = 3
@@ -640,7 +640,7 @@ focus = {
 ############New Oprichniki paths#########
 	focus = {
 		id = MRU_New_Oprichniki
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_New_Oprichniki
 		relative_position_id = MRU_The_Great_Restoration
 
 		cost = 3
@@ -667,7 +667,7 @@ focus = {
 
 	focus = {
 		id = MRU_A_New_Century_Of_Warfare
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_A_New_Century_Of_Warfare
 		relative_position_id = MRU_New_Oprichniki
 
 		cost = 3
@@ -697,7 +697,7 @@ focus = {
 
 	focus = {
 		id = MRU_Modernize_Kutuzovs_Strategies
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Modernize_Kutuzovs_Strategies
 		relative_position_id = MRU_New_Oprichniki
 
 		cost = 3
@@ -736,7 +736,7 @@ focus = {
 
 	focus = {
 		id = MRU_Dig_In_The_Infantry
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Dig_In_The_Infantry
 		relative_position_id = MRU_Modernize_Kutuzovs_Strategies
 
 		cost = 3
@@ -764,7 +764,7 @@ focus = {
 
 	focus = {
 		id = MRU_Combat_Survivabilty_Strategies
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Combat_Survivabilty_Strategies
 		relative_position_id = MRU_Dig_In_The_Infantry
 
 		cost = 3
@@ -795,7 +795,7 @@ focus = {
 
 	focus = {
 		id = MRU_Innovate_Defensive_Plans
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Innovate_Defensive_Plans
 		relative_position_id = MRU_Modernize_Kutuzovs_Strategies
 
 		cost = 3
@@ -823,7 +823,7 @@ focus = {
 
 	focus = {
 		id = MRU_Mine_Their_Approach
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Mine_Their_Approach
 		relative_position_id = MRU_Innovate_Defensive_Plans
 
 		cost = 3
@@ -854,7 +854,7 @@ focus = {
 
 	focus = {
 		id = MRU_Ambush_Strategies
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Ambush_Strategies
 		relative_position_id = MRU_Mine_Their_Approach
 
 		cost = 3
@@ -888,7 +888,7 @@ focus = {
 
 	focus = {
 		id = MRU_From_Trains_To_Trucks
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_From_Trains_To_Trucks
 		relative_position_id = MRU_A_New_Century_Of_Warfare
 
 		cost = 3
@@ -916,7 +916,7 @@ focus = {
 
 	focus = {
 		id = MRU_Enhance_Artillery_Mobility
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Enhance_Artillery_Mobility
 		relative_position_id = MRU_From_Trains_To_Trucks
 
 		cost = 3
@@ -948,7 +948,7 @@ focus = {
 
 	focus = {
 		id = MRU_Push_Object_550_Into_Production
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Push_Object_550_Into_Production
 		relative_position_id = MRU_Enhance_Artillery_Mobility
 
 		cost = 3
@@ -985,7 +985,7 @@ focus = {
 
 	focus = {
 		id = MRU_Infantry_Anti-Tank_Weapons
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Infantry_Anti-Tank_Weapons
 		relative_position_id = MRU_A_New_Century_Of_Warfare
 
 		cost = 3
@@ -1013,7 +1013,7 @@ focus = {
 
 	focus = {
 		id = MRU_Unit_Autonomy_Doctrine
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Unit_Autonomy_Doctrine
 		relative_position_id = MRU_Infantry_Anti-Tank_Weapons
 
 		cost = 3
@@ -1047,7 +1047,7 @@ focus = {
 
 	focus = {
 		id = MRU_Drive_Them_Out_Of_Russia
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Drive_Them_Out_Of_Russia
 		relative_position_id = MRU_Push_Object_550_Into_Production
 
 		cost = 3
@@ -1077,7 +1077,7 @@ focus = {
 
 	focus = {
 		id = MRU_Every_Mile_Costs_European_Blood
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Every_Mile_Costs_European_Blood
 		relative_position_id = MRU_Ambush_Strategies
 
 		cost = 3
@@ -1106,7 +1106,7 @@ focus = {
     }
 	focus = {
 		id = MRU_The_Opprichnikis_Will
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Opprichnikis_Will
 		relative_position_id = MRU_New_Oprichniki
 
 		cost = 3
@@ -1134,7 +1134,7 @@ focus = {
 
 	focus = {
 		id = MRU_Unified_Training_Programmes
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Unified_Training_Programmes
 		relative_position_id = MRU_The_Opprichnikis_Will
 
 		cost = 3
@@ -1164,7 +1164,7 @@ focus = {
 	
 	focus = {
 		id = MRU_Putting_Theory_To_Practice
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Putting_Theory_To_Practice
 		relative_position_id = MRU_Unified_Training_Programmes
 
 		cost = 3
@@ -1197,7 +1197,7 @@ focus = {
 	
 	focus = {
 		id = MRU_Finish_placeholder
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Finish_placeholder
 		relative_position_id = MRU_Putting_Theory_To_Practice
 
 		cost = 3
@@ -1231,7 +1231,7 @@ focus = {
 	
 focus = {
 	id = MRU_Wrestling_The_Economy
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Wrestling_The_Economy
 	relative_position_id = MRU_The_Great_Restoration
 
 	cost = 3
@@ -1259,7 +1259,7 @@ focus = {
 
 focus = {
 	id = MRU_Expand_On_Our_Industrial_Power
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Expand_On_Our_Industrial_Power
 	relative_position_id = MRU_Wrestling_The_Economy
 
 	cost = 3
@@ -1294,7 +1294,7 @@ focus = {
 
 focus = {
 	id = MRU_Northern_Resource_Extraction
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Northern_Resource_Extraction
 	relative_position_id = MRU_Expand_On_Our_Industrial_Power
 
 	cost = 3
@@ -1328,7 +1328,7 @@ focus = {
 
 focus = {
 	id = MRU_Military_Factory_Conversions
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Military_Factory_Conversions
 	relative_position_id = MRU_Northern_Resource_Extraction
 
 	cost = 3
@@ -1368,7 +1368,7 @@ focus = {
 
 focus = {
 	id = MRU_Centralize_The_Rail_Networks
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Centralize_The_Rail_Networks
 	relative_position_id = MRU_Expand_On_Our_Industrial_Power
 
 	cost = 3
@@ -1411,7 +1411,7 @@ focus = {
 
 focus = {
 	id = MRU_Massive_Industrial_Grants
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Massive_Industrial_Grants
 	relative_position_id = MRU_Centralize_The_Rail_Networks
 
 	cost = 3
@@ -1447,7 +1447,7 @@ focus = {
 
 focus = {
 	id = MRU_Nationalize_The_Construction_Industry
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Nationalize_The_Construction_Industry
 	relative_position_id = MRU_Massive_Industrial_Grants
 	cost = 3
 	x = 0
@@ -1479,7 +1479,7 @@ focus = {
 
 focus = {
 	id = MRU_Empower_The_Ministry_Of_Industrial_Development
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Empower_The_Ministry_Of_Industrial_Development
 	relative_position_id = MRU_Nationalize_The_Construction_Industry
 	cost = 3
 	x = 0
@@ -1509,7 +1509,7 @@ focus = {
 
 focus = {
 	id = MRU_Closing_Technological_Gap
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Closing_Technological_Gap
 	relative_position_id = MRU_Wrestling_The_Economy
 
 	cost = 3
@@ -1544,7 +1544,7 @@ focus = {
 
 focus = {
 	id = MRU_Refining_Advanced_Materials
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Refining_Advanced_Materials
 	relative_position_id = MRU_Closing_Technological_Gap
 
 	cost = 3
@@ -1577,7 +1577,7 @@ focus = {
 
 focus = {
 	id = MRU_Modernizing_Our_Military_Industry
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Modernizing_Our_Military_Industry
 	relative_position_id = MRU_Refining_Advanced_Materials
 
 	cost = 3
@@ -1612,7 +1612,7 @@ focus = {
 
 focus = {
 	id = MRU_Electronics_And_Communications_Modernization
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Electronics_And_Communications_Modernization
 	relative_position_id = MRU_Closing_Technological_Gap
 
 	cost = 3
@@ -1652,7 +1652,7 @@ focus = {
 
 focus = {
 	id = MRU_Automate_Factory_Lines
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Automate_Factory_Lines
 	relative_position_id = MRU_Electronics_And_Communications_Modernization
 
 	cost = 3
@@ -1680,7 +1680,7 @@ focus = {
 
 focus = {
 	id = MRU_Hire_Engineers_And_Researchers
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Hire_Engineers_And_Researchers
 	relative_position_id = MRU_Automate_Factory_Lines
 
 	cost = 3
@@ -1710,7 +1710,7 @@ focus = {
 
 focus = {
 	id = MRU_Empower_The_Ministry_Of_Trade_and_Technologys
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Empower_The_Ministry_Of_Trade_and_Technologys
 	relative_position_id = MRU_Hire_Engineers_And_Researchers
 
 	cost = 3
@@ -1742,7 +1742,7 @@ focus = {
 
 focus = {
 	id = MRU_Seize_Oligarchs_Wealth
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Seize_Oligarchs_Wealth
 	relative_position_id = MRU_Wrestling_The_Economy
 
 	cost = 3
@@ -1774,7 +1774,7 @@ focus = {
 
 focus = {
 	id = MRU_Anti-Corruption_Drive
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Anti-Corruption_Drive
 	relative_position_id = MRU_Seize_Oligarchs_Wealth
 
 	cost = 3
@@ -1806,7 +1806,7 @@ focus = {
 
 focus = {
 	id = MRU_Rule_Of_Managers
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Rule_Of_Managers
 	relative_position_id = MRU_Anti-Corruption_Drive
 
 	cost = 3
@@ -1839,7 +1839,7 @@ focus = {
 
 focus = {
 	id = MRU_An_Economy_Tamed
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_An_Economy_Tamed
 	relative_position_id = MRU_Anti-Corruption_Drive
 
 	cost = 3
@@ -1872,7 +1872,7 @@ focus = {
 	
 focus = {
 	id = MRU_Our_Sovereignty_Secured
-	icon = GFX_MRU_the_FIRST_test
+	icon = GFX_MRU_Our_Sovereignty_Secured
 	relative_position_id = MRU_Taking_A_Break_At_The_Ball
 
 	cost = 3
@@ -1907,7 +1907,7 @@ focus = {
 	########### Military Junta ############
 	focus = {
 		id = MRU_Military_Junta
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Military_Junta
 		relative_position_id = MRU_Ekaterinburg_Square_Coup
 
 		cost = 3
@@ -1941,7 +1941,7 @@ focus = {
 
 	focus = {
 		id = MRU_Viktor_Nikitin_Grand_battle_plan
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Viktor_Nikitin_Grand_battle_plan
 		relative_position_id = MRU_Military_Junta
 
 		cost = 5
@@ -1976,7 +1976,7 @@ focus = {
 
 	focus = {
 		id = MRU_Rostislav_Ilin_Mass_Assault
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Rostislav_Ilin_Mass_Assault
 		relative_position_id = MRU_Military_Junta
 
 		cost = 5
@@ -2013,7 +2013,7 @@ focus = {
 
 	focus = {
 		id = MRU_Aleksandr_Gusev_Mobile_Warfare
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Aleksandr_Gusev_Mobile_Warfare
 		relative_position_id = MRU_Military_Junta
 
 		cost = 5
@@ -2045,7 +2045,7 @@ focus = {
 
 	focus = {
 		id = MRU_Mobile_Warfare
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Mobile_Warfare
 		relative_position_id = MRU_Aleksandr_Gusev_Mobile_Warfare
 
 		cost = 5
@@ -2077,7 +2077,7 @@ focus = {
 
 	focus = {
 		id = MRU_Trucks_Are_Needed
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Trucks_Are_Needed
 		relative_position_id = MRU_Mobile_Warfare
 		cost = 5
 		x = 0
@@ -2106,7 +2106,7 @@ focus = {
 
 	focus = {
 		id = MRU_Assembly_lines
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Assembly_lines
 		relative_position_id = MRU_Trucks_Are_Needed
 		cost = 5
 		x = 0
@@ -2134,7 +2134,7 @@ focus = {
 
 	focus = {
 		id = MRU_The_Amatas
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Amatas
 		relative_position_id = MRU_Assembly_lines
 		cost = 5
 		x = 0
@@ -2164,7 +2164,7 @@ focus = {
 
 	focus = {
 		id = MRU_Raid_Thy_Neighbours
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Raid_Thy_Neighbours
 		relative_position_id = MRU_Military_Junta
 		cost = 5
 		x = 2.5
@@ -2195,7 +2195,7 @@ focus = {
 
 	focus = {
 		id = MRU_Secure_The_Oil_Fields
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Secure_The_Oil_Fields
 		relative_position_id = MRU_Raid_Thy_Neighbours
 		cost = 5
 		x = 0
@@ -2235,7 +2235,7 @@ focus = {
 
 	focus = {
 		id = MRU_The_Chromium_Mines
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Chromium_Mines
 		relative_position_id = MRU_Secure_The_Oil_Fields
 		cost = 5
 		x = 0
@@ -2265,7 +2265,7 @@ focus = {
 
 	focus = {
 		id = MRU_Backroom_Deals
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Backroom_Deals
 		relative_position_id = MRU_The_Chromium_Mines
 		cost = 5
 		x = 1
@@ -2291,7 +2291,7 @@ focus = {
 
 	focus = {
 		id = MRU_Mass_Assault
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Mass_Assault
 		relative_position_id = MRU_Rostislav_Ilin_Mass_Assault
 
 		cost = 5
@@ -2323,7 +2323,7 @@ focus = {
 
 	focus = {
 		id = MRU_Every_Citizen_A_Weapon
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Every_Citizen_A_Weapon
 		relative_position_id = MRU_Mass_Assault
 
 		cost = 5
@@ -2353,7 +2353,7 @@ focus = {
 
 	focus = {
 		id = MRU_Swarm_The_Enemy
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Swarm_The_Enemy
 		relative_position_id = MRU_Every_Citizen_A_Weapon
 
 		cost = 5
@@ -2384,7 +2384,7 @@ focus = {
 
 	focus = {
 		id = MRU_What_Safety_Codes
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_What_Safety_Codes
 		relative_position_id = MRU_Swarm_The_Enemy
 		cost = 5
 		x = 0
@@ -2411,7 +2411,7 @@ focus = {
 
 	focus = {
 		id = MRU_Too_Many_Cooks
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Too_Many_Cooks
 		relative_position_id = MRU_Viktor_Nikitin_Grand_battle_plan
 
 		cost = 5
@@ -2442,7 +2442,7 @@ focus = {
 
 	focus = {
 		id = MRU_Proper_Training
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Proper_Training
 		relative_position_id = MRU_Too_Many_Cooks
 
 		cost = 5
@@ -2469,7 +2469,7 @@ focus = {
 
 	focus = {
 		id = MRU_Exploit_The_Socialists
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Exploit_The_Socialists
 		relative_position_id = MRU_Military_Junta
 
 		cost = 5
@@ -2500,7 +2500,7 @@ focus = {
 
 	focus = {
 		id = MRU_Scholarships
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Scholarships
 		relative_position_id = MRU_Proper_Training
 
 		cost = 5
@@ -2531,7 +2531,7 @@ focus = {
 
 	focus = {
 		id = MRU_A_Perfect_Plan
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_A_Perfect_Plan
 		relative_position_id = MRU_Scholarships
 
 		cost = 5
@@ -2558,7 +2558,7 @@ focus = {
 
 	focus = {
 		id = MRU_Appropriate_Stockpiles
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Appropriate_Stockpiles
 		relative_position_id = MRU_Exploit_The_Socialists
 
 		cost = 5
@@ -2584,7 +2584,7 @@ focus = {
 
 	focus = {
 		id = MRU_Church_Donations
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Church_Donations
 		relative_position_id = MRU_Appropriate_Stockpiles
 
 		cost = 5
@@ -2611,7 +2611,7 @@ focus = {
 
 	focus = {
 		id = MRU_Separation_Of_Church_And_State
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Separation_Of_Church_And_State
 		relative_position_id = MRU_Church_Donations
 
 		cost = 3
@@ -2638,7 +2638,7 @@ focus = {
 
 	focus = {
 		id = MRU_Incriminate_The_Church
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Incriminate_The_Church
 		relative_position_id = MRU_Separation_Of_Church_And_State
 
 		cost = 5
@@ -2665,7 +2665,7 @@ focus = {
 
 	focus = {
 		id = MRU_The_Tsar_Steps_Back
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Tsar_Steps_Back
 		relative_position_id = MRU_Backroom_Deals
 
 		cost = 5
@@ -2691,7 +2691,7 @@ focus = {
 
 	focus = {
 		id = MRU_The_Junta_Reigns
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_The_Junta_Reigns
 		relative_position_id = MRU_The_Tsar_Steps_Back
 
 		cost = 5
@@ -2718,7 +2718,7 @@ focus = {
 
 	focus = {
 		id = MRU_Economy
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Economy
 		relative_position_id = MRU_Military_Junta
 
 		cost = 5
@@ -2746,7 +2746,7 @@ focus = {
 
 	focus = {
 		id = MRU_Arms_Focus
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Arms_Focus
 		relative_position_id = MRU_Economy
 
 		cost = 5
@@ -2777,7 +2777,7 @@ focus = {
 
 	focus = {
 		id = MRU_Industrialize_Strategic_points
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Industrialize_Strategic_points
 		relative_position_id = MRU_Arms_Focus
 
 		cost = 5
@@ -2804,7 +2804,7 @@ focus = {
 
 	focus = {
 		id = MRU_Electrical_Advancements
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Electrical_Advancements
 		relative_position_id = MRU_Industrialize_Strategic_points
 
 		cost = 5
@@ -2836,7 +2836,7 @@ focus = {
 
 	focus = {
 		id = MRU_Knightmare_Designs
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_Knightmare_Designs
 		relative_position_id = MRU_Industrialize_Strategic_points
 
 		cost = 5
@@ -2868,7 +2868,7 @@ focus = {
 
 	focus = {
 		id = MRU_A_Militarized_Economy
-		icon = GFX_MRU_the_FIRST_test
+		icon = GFX_MRU_A_Militarized_Economy
 		relative_position_id = MRU_Knightmare_Designs
 
 		cost = 5
@@ -4229,7 +4229,7 @@ focus = {
     }
 
 	focus = {
-		id = MRU_Friends_Today,_Foes_Tomorrow
+		id = MRU_Friends_Today_Foes_Tomorrow
 		icon = GFX_MRU_friends_today_foes_tomorrow
 		relative_position_id = Joint_Military_Training
 
