@@ -1013,7 +1013,16 @@ country_event = { #Joint Economic Development With China
 		ai_chance = {
 			base = 100
 		}
-		
+		random_owned_controlled_state = {
+			prioritize = {
+				565 575 536
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 5
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -1030,7 +1039,6 @@ country_event = { #An Envoy From China
 		ai_chance = {
 			base = 100
 		}
-		
 	}
 }
 

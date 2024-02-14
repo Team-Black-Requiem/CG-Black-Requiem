@@ -471,6 +471,34 @@ characters = {
 		}
 	}
 
+	SRU_shen = {
+		name = "Shen Jianyu"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_shen_jianyu.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_shen_jianyu.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = SRU_shen_high_command
+			traits = { 
+				army_armored_1
+			}
+			allowed = {
+				tag = SRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 	### END OF HIGH COMMAND ###
 
 
