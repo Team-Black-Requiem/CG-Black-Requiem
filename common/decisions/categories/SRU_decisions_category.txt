@@ -1,0 +1,18 @@
+####Chinese Decisions
+
+####Successor Decisions
+SRU_luka_succesor_struggle = {
+	icon = GFX_decision_category_EUR_britannia_favor
+	priority = 100
+	allowed = {
+		tag = SRU
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = SRU
+		SRU = {
+			has_completed_focus = SRU_expand_the_councils_emergency_powers
+		}
+	}
+	scripted_gui = sov_paranoia_system_ui
+}

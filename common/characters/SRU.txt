@@ -44,23 +44,27 @@ characters = {
 		country_leader={
 			desc = "POLITICS_LUKA_ZHUKOV_DESC"
 			ideology = revolutionary_jacobinism
-			traits = {  }
+			traits = { never_surrender }
 			expire = "2020.1.1.1"
 		}
 		advisor = {
 			slot = head_of_government
-			idea_token = SRU_luka_zhukov_idea_1
+			idea_token = SRU_luka_zhukov_idea
 			
 
 			allowed = {
 				tag = SRU
 			}
 
-			traits = { Political_visionary }
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+			}
 
-			cost = 2000
+			traits = { jacobin_prime_minister }
+
+			cost = 75
 			ai_will_do = {
-				factor = 1
+				factor = 1.000
 			}
 		}
 	}
@@ -238,6 +242,8 @@ characters = {
 		}
 	}
 
+	####Jacobins####
+
 	SRU_marianna_sorokina = {
 		name = "Marianna Sorokina"
 		#portraits = {
@@ -246,17 +252,17 @@ characters = {
 		
 		advisor = {
 			slot = intelligence
-			idea_token = SRU_marianna_sorokina_idea_1
+			idea_token = SRU_marianna_sorokina_idea
 
 			allowed = {
 				tag = SRU
 			}
 
 			traits = { 
-				director_of_CSS
+				director_of_gru
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1
 			}
@@ -271,17 +277,17 @@ characters = {
 		
 		advisor = {
 			slot = minister_of_interior
-			idea_token = SRU_tasha_kulikova_idea_1
+			idea_token = SRU_tasha_kulikova_idea
 
 			allowed = {
 				tag = SRU
 			}
 
 			traits = { 
-				director_of_secret_police
+				director_of_cheka
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1
 			}
@@ -298,7 +304,7 @@ characters = {
 		
 		advisor = {
 			slot = economy_minister
-			idea_token = SRU_leonid_zaytsev_idea_1
+			idea_token = SRU_leonid_zaytsev_idea
 
 			allowed = {
 				tag = SRU
@@ -308,7 +314,7 @@ characters = {
 				economy_reformer
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1
 			}
@@ -323,7 +329,7 @@ characters = {
 		
 		advisor = {
 			slot = army_chief
-			idea_token = SRU_viktor_makarov_idea_1
+			idea_token = SRU_viktor_makarov_idea
 
 			allowed = {
 				tag = SRU
@@ -339,6 +345,8 @@ characters = {
 			}
 		}
 	}
+
+	####End Of Jacobins####
 
 	### END OF CABINET ###
 
@@ -590,7 +598,7 @@ characters = {
 			attack_skill = 6
 			defense_skill = 5
 			planning_skill = 6
-			logistics_skill = 6
+			logistics_skill = 4
 		}
 	}
 

@@ -5,7 +5,7 @@
 leader_traits = {
 
 	#Leader Traits
-	EUR_grand_duke  = {
+	EUR_grand_duke = {
 		random = no
 		political_power_factor = 0.05
 		BR_autocracy_drift = 0.05
@@ -267,7 +267,9 @@ leader_traits = {
 		}
 	}
 
-	propagandist = {
+	####Luka related leader traits####
+
+	savior_of_russia = {
 		random = no
 		political_power_factor = 0.25
 
@@ -276,7 +278,16 @@ leader_traits = {
 		}
 	}
 
-	Nihilist_agitator= {
+	the_monster_of_astana = {
+		random = no
+		political_power_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Nihilist_agitator = {
 		random = no
 		army_attack_factor = 0.15
 
@@ -285,7 +296,7 @@ leader_traits = {
 		}
 	}
 
-	Political_visionary= {
+	Political_visionary = {
 		random = no
 		stability_factor = 0.1
 		opinion_gain_monthly_factor = 0.2
@@ -511,7 +522,21 @@ leader_traits = {
 		}
 	}
 
-	director_of_CSS = {
+	####Jacobin Advisor Traits####
+
+	jacobin_prime_minister = {
+
+		random = no
+		war_support_factor = 0.1
+		political_power_factor = 0.25
+		BR_vanguardist_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	director_of_gru = {
 
 		random = no
 		operative_slot = 2
@@ -522,17 +547,19 @@ leader_traits = {
 		}
 	}
 	
-	director_of_secret_police = {
+	director_of_cheka = {
 
 		random = no
-		stability_factor = 0.1
-		non_core_manpower = 0.1
-		BR_socialism_drift = 0.025
+		stability_factor = 0.2
+		non_core_manpower = 0.15
+		BR_vanguardist_drift = 0.01
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
+
+	####Jacobin Advisor Traits End####
 	
 	white_prince = {
 
@@ -572,6 +599,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
 	military_police = {
 
 		random = no
@@ -584,7 +612,7 @@ leader_traits = {
 		}
 	}
 	
-			corrupt_kleptocrat = {
+	corrupt_kleptocrat = {
 
 		random = no
 		consumer_goods_factor = 0.03
@@ -596,7 +624,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 
 	balanced_budget = {
 
