@@ -1,6 +1,5 @@
 characters = {
 	
-
 	### LEADERS ###
 
 	SRU_Bunina = {
@@ -436,6 +435,7 @@ characters = {
 
 	SRU_ostrova = {
 		name = "Natasha Ostrova"
+		gender = female
 		portraits = {
 			civilian = {
 				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
@@ -473,29 +473,37 @@ characters = {
 
 	SRU_shen = {
 		name = "Shen Jianyu"
-		portraits = {
-			civilian = {
-				large ="gfx/leaders/SRU/SRU_shen_jianyu.dds"
-			}
-			army = {
-				large = "gfx/leaders/SRU/SRU_shen_jianyu.dds"
-			}
-		}
+		#portraits = {
+		#	
+		#}
 
 		advisor = {
 			slot = high_command
 			ledger = army
 			idea_token = SRU_shen_high_command
-			traits = { 
-				army_armored_1
-			}
+			
 			allowed = {
 				tag = SRU
 			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+
+			traits = { 
+				army_armored_1
 			}
+			
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		field_marshal = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
 		}
 	}
 
