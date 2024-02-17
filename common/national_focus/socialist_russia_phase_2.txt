@@ -4217,6 +4217,9 @@
 		prerequisite = {
 			focus = SRU_social_idealism
 		}
+		prerequisite = {
+			focus = SRU_reshuffle_the_party
+		}
 		search_filters = {
 		}
 		
@@ -4241,6 +4244,9 @@
 		prerequisite = {
 			focus = SRU_the_great_march_forward
 		}
+		prerequisite = {
+			focus = SRU_reshuffle_the_party
+		}
 		search_filters = {
 		}
 		
@@ -4263,7 +4269,10 @@
 		y = 1
 		relative_position_id = SRU_the_heart_of_the_state
 		prerequisite = {
-			focus = SRU_the_heart_of_the_state focus = SRU_out_with_the_old_in_with_the_new
+			focus = SRU_the_heart_of_the_state
+		}
+		prerequisite = {
+			focus = SRU_out_with_the_old_in_with_the_new
 		}
 		search_filters = {
 		}
@@ -4281,10 +4290,10 @@
 				elections_allowed = no
 				election_frequency = 0
 			}
-			set_popularities = {
-				BR_vanguardist = 0.8
+			add_popularity = {
+				ideology = BR_vanguardist
+				popularity = 0.8
 			}
-			retire_country_leader = yes
 			retire_character = SRU_Bunina
 		}
 	}
@@ -5778,11 +5787,11 @@
 			has_country_flag = SRU_luka_takes_personal_control
 		}
 
+		allow_branch = {has_country_flag = SRU_luka_takes_personal_command}
+
 		ai_will_do = {
 			factor = 10
 		}
-
-		allow_branch = {has_country_flag = SRU_luka_takes_personal_command}
 	
 		completion_reward = {
 		}
