@@ -783,45 +783,6 @@ country_event = { #The Economic Heart
 	}
 }
 
-country_event = { #resolve the conflict (feel free to change the number down the line since it is cut in early for framework)
-	id = SRU_Intro.72
-	title = SRU_Intro.72.t
-	desc = SRU_Intro.72.d
-
-	is_triggered_only = yes
-    
-	
-	option = {
-		 
-		name = SRU_Intro.72.a 
-		ai_chance = {
-			base = 100
-		}
-		set_country_flag = SRU_sided_with_kulikova
-		
-	}
-	option = {
-		 
-		name = SRU_Intro.72.b 
-		ai_chance = {
-			base = 100
-		}
-        set_country_flag = SRU_sided_with_sorokina
-		
-	}
-	option = {
-		 
-		name = SRU_Intro.72.c 
-		ai_chance = {
-			base = 100
-		}
-		set_country_flag = SRU_sided_with_zaytsev
-		mark_focus_tree_layout_dirty = yes
-
-		
-	}
-}
-
 ### Socialist Leadup Focuses (Yes I know these should be at the begining but changing numbers mid way is not worth it) 
 # Note from fris: Isn't this the same as event 1? also the focus still leads to event 1
 
