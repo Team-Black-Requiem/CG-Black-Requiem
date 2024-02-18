@@ -4217,6 +4217,9 @@
 		prerequisite = {
 			focus = SRU_social_idealism
 		}
+		prerequisite = {
+			focus = SRU_reshuffle_the_party
+		}
 		search_filters = {
 		}
 		
@@ -4241,6 +4244,9 @@
 		prerequisite = {
 			focus = SRU_the_great_march_forward
 		}
+		prerequisite = {
+			focus = SRU_reshuffle_the_party
+		}
 		search_filters = {
 		}
 		
@@ -4263,7 +4269,10 @@
 		y = 1
 		relative_position_id = SRU_the_heart_of_the_state
 		prerequisite = {
-			focus = SRU_the_heart_of_the_state focus = SRU_out_with_the_old_in_with_the_new
+			focus = SRU_the_heart_of_the_state
+		}
+		prerequisite = {
+			focus = SRU_out_with_the_old_in_with_the_new
 		}
 		search_filters = {
 		}
@@ -4281,10 +4290,10 @@
 				elections_allowed = no
 				election_frequency = 0
 			}
-			set_popularities = {
-				BR_vanguardist = 0.8
+			add_popularity = {
+				ideology = BR_vanguardist
+				popularity = 0.8
 			}
-			retire_country_leader = yes
 			retire_character = SRU_Bunina
 		}
 	}
@@ -4759,7 +4768,7 @@
 		}
 	
 		completion_reward = {
-			country_event = SRU_Intro.72
+			country_event = SRU_Luka_Phase_Two.19
 		}
 	}
 
@@ -4788,6 +4797,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.20
 		}
 	}
 
@@ -4812,6 +4822,10 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = SRU_repressed_academia
+				days = 180
+			}
 		}
 	}
 
@@ -4836,6 +4850,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_emboldened_cheka
+				add_idea = SRU_powerful_cheka
+			}
 		}
 	}
 
@@ -4863,6 +4881,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.21
 		}
 	}
 
@@ -4891,6 +4910,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.22
 		}
 	}
 
@@ -4915,6 +4935,10 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_emboldened_revolutionary_guards
+				add_idea = SRU_powerful_revolutionary_guards
+			}
 		}
 	}
 
@@ -4939,6 +4963,10 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = SRU_fight_against_bourgeois_culture
+				days = 180
+			}
 		}
 	}
 
@@ -4966,6 +4994,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.23
 		}
 	}
 
@@ -4993,6 +5022,7 @@
 		allow_branch = {has_country_flag = SRU_sided_with_zaytsev}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.24
 		}
 	}
 
@@ -5017,6 +5047,10 @@
 		}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_emboldened_gosplan
+				add_idea = SRU_powerful_gosplan
+			}
 		}
 	}
 
@@ -5041,6 +5075,10 @@
 		}
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = SRU_controlled_academia
+				days = 180
+			}
 		}
 	}
 
@@ -5068,6 +5106,7 @@
 		}
 
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.25
 		}
 	}
 
@@ -5748,11 +5787,11 @@
 			has_country_flag = SRU_luka_takes_personal_control
 		}
 
+		allow_branch = {has_country_flag = SRU_luka_takes_personal_control}
+
 		ai_will_do = {
 			factor = 10
 		}
-
-		allow_branch = {has_country_flag = SRU_luka_takes_personal_command}
 	
 		completion_reward = {
 		}
