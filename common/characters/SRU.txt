@@ -489,9 +489,14 @@ characters = {
 
 	SRU_shen = {
 		name = "Shen Jianyu"
-		#portraits = {
-		#	
-		#}
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
 
 		advisor = {
 			slot = high_command
@@ -505,7 +510,9 @@ characters = {
 			traits = { 
 				army_armored_1
 			}
-			
+			available = {
+				tag = SRU
+			}
 			cost = 100
 			
 			ai_will_do = {

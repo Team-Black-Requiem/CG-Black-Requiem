@@ -454,8 +454,16 @@ focus_tree = {
     
 
             completion_reward = {
-              
-           
+    
+                for_each_scope_loop = {
+                    array = controlled_states
+                    if = {
+                        limit = {
+                            has_template = "RAAAAT"
+                        }
+                      PREV = { add_state_modifier = Hero_unit_Frederica  }
+                    }
+                }
                 hidden_effect = {
                 
               }
@@ -488,7 +496,7 @@ focus_tree = {
     
 
             completion_reward = {
-              
+            
            
                 hidden_effect = {
                 
