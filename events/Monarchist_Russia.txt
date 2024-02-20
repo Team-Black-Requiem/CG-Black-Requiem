@@ -97,19 +97,30 @@ country_event = {
 
 
  country_event = {  
-	id = MRU.7
+	id = MRU.7     ###USED FOR PARAMILITARY REVOLT'S EFFECTS
 	title = MRU.7.t
 	desc = MRU.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = MRU.7.a
-		set_country_flag = Tzarist
-		remove_ideas = Right-Wing_Paramilitaries
-		add_ideas = Paramilitary_Revolt
+        653 = {
+			set_demilitarized_zone = yes
+		}
+        573 = {
+			set_demilitarized_zone = yes
+		}
+        398 = {
+			set_demilitarized_zone = yes
+		}				
+			swap_ideas = {
+				remove_idea = MRU_Right-Wing_Paramilitaries
+				add_idea = MRU_Right-Wing_Paramilitaries_2
+			}
 		ai_chance = {
 			factor = 100
 		}
+		set_country_flag = Tzarist		
 		set_country_flag = MRU_Vesvelod_Restoration
 		mark_focus_tree_layout_dirty = yes
 		complete_national_focus = MRU_The_Great_Restoration
@@ -218,12 +229,25 @@ country_event = {
 
 	option = {
 		name = MRU.13.a
-		
+		set_country_flag = MRU_Army_Plan
+		custom_effect_tooltip = MRU_Army_Plan_tt
+		add_political_power = -25
 		ai_chance = {
 			factor = 100
 		}
 		
     }
+
+	option = {
+		name = MRU.13.b
+		set_country_flag = MRU_Voronov_Plan	
+		add_political_power = -50
+		custom_effect_tooltip = MRU_Voronov_Plan_tt
+		ai_chance = {
+			factor = 100
+		}
+		
+    }	
 }
 
 
@@ -258,6 +282,8 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
+
+
 		
     }
 }
@@ -286,17 +312,50 @@ country_event = {
 	title = MRU.17.t
 	desc = MRU.17.d
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 
 	option = {
 		name = MRU.17.a
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}
 		
+		add_offsite_building = { type = arms_factory level = 1 }
 		ai_chance = {
 			factor = 100
 		}
 		
     }
+
+	option = {
+		name = MRU.17.b
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}	
+		add_offsite_building = { type = industrial_complex level = 1 }
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
+	option = {
+		name = MRU.17.c
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}	
+		add_political_power = 25
+		ai_chance = {
+			factor = 100
+		}
+		
+    }	
+
 }
+
 country_event = {
 	id = MRU.18
 	title = MRU.18.t
@@ -329,7 +388,7 @@ country_event = {
 		}
 	
 		add_timed_idea = {
-			idea = Titles_For_Soldiers
+			idea = MRU_Aristocratic_Militarism
 			days = 180
 		}
     }
@@ -342,7 +401,7 @@ country_event = {
 		}
 	
 		add_timed_idea = {
-			idea = Titles_For_Support
+			idea = MRU_Aristocratic_Intellectualism
 			days = 180
 		}
     }
@@ -363,7 +422,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-	    add_ideas = Speedbump_Duma
+	    add_ideas = MRU_Speedbump_Duma
     }
 
 	option = {
@@ -372,7 +431,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		add_ideas = Respect_The_Process
+		add_ideas = MRU_Respect_The_Process
     }
 }
 
@@ -892,6 +951,39 @@ country_event = {
 		}
 	}
 }
+
+
+
+country_event = {
+	id = MRU.37
+	title = MRU.37.t 
+	desc = MRU.37.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = MRU.37.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = MRU.38
+	title = MRU.38.t 
+	desc = MRU.38.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = MRU.38.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
 
 
 

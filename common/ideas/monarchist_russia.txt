@@ -2,7 +2,7 @@ ideas = {
     country = {
 
 	######### Starting Ideas ########
-	Heartland_Of_Heavy_Industry = {
+	MRU_Heartland_Of_Heavy_Industry = {
 		allowed = {
 			always = yes
 		}
@@ -24,7 +24,7 @@ ideas = {
 		}
 	}
 	
-	For_Tsar_And_Nation = {
+	MRU_For_Tsar_And_Nation = {
 		allowed = {
 			always = yes
 		}
@@ -36,15 +36,14 @@ ideas = {
 		removal_cost = -1
 	
 		modifier = {
-			war_support_factor = 0.15
+			war_support_factor = 0.10
             compliance_growth_on_our_occupied_states = 0.1
-            BR_authoritarian_drift = 0.1
             army_morale_factor = 0.05
             army_core_defence_factor = 0.1
 		}
 	}
 
-	Unprepared_Command_Structure = {
+	MRU_Unprepared_Command_Structure = {
 		allowed = {
 			always = yes
 		}
@@ -62,7 +61,7 @@ ideas = {
 		}
 	}
 
-	Right-Wing_Paramilitaries = {
+	MRU_Right-Wing_Paramilitaries = {
 		allowed = {
 			always = yes
 		}
@@ -74,9 +73,9 @@ ideas = {
 		removal_cost = -1
 	 
 		modifier  = {
-			stability_factor = -0.25
+			stability_factor = -0.15
             war_support_weekly_factor = 0.02
-           national_BR_supremacist_drift = 0.05
+           BR_supremacist_drift = 0.05
            conscription_factor = -0.1
 
 		}
@@ -85,7 +84,7 @@ ideas = {
    
 	# opening idea changes 
 
-	Tsar_Vesvelod_Romanov  = {
+	MRU_For_Tsar_And_Nation_2  = {
 		allowed = {
 			always = yes
 		}
@@ -97,13 +96,17 @@ ideas = {
 		removal_cost = -1
 	 
 		modifier = {
-			stability_factor = 0.05
+			war_support_factor = 0.10
+            compliance_growth_on_our_occupied_states = 0.1
+            army_morale_factor = 0.05
+            army_core_defence_factor = 0.1			
+			stability_factor = 0.10
 			BR_authoritarian_drift = 0.01
 			
 		}
 	}
 
-	Opprichniki_Assembling_Command_Structure  = {
+	MRU_Unprepared_Command_Structure_2  = {
 		allowed = {
 			always = yes
 		}
@@ -118,11 +121,10 @@ ideas = {
 			army_org_factor = -0.05
             max_planning_factor = -0.25
             planning_speed = -0.15
-            BR_authoritarian_drift = 0.01
 		}
 	}
 
-	Okhrana = {
+	MRU_Okhrana_DLC = {
 		allowed = {
 			always = yes
 		}
@@ -136,12 +138,10 @@ ideas = {
 		modifier = {
 			resistance_activity = -0.05
             female_random_operative_chance = 0.2
-            encryption_factor = 0.1
             commando_trait_chance_factor = 0.1
 		}
 	}
-
-	Paramilitary_Revolt = {
+	MRU_Okhrana_No_DLC = {
 		allowed = {
 			always = yes
 		}
@@ -153,17 +153,37 @@ ideas = {
 		removal_cost = -1
 	 
 		modifier = {
-			national_BR_supremacist_drift = 0.02
-            conscription_factor = -0.02
-            stability_factor = -0.25
-            weekly_manpower = -250
+			resistance_activity = -0.08
+            encryption_factor = 0.05
+			decryption_factor = 0.05
+		}
+	}	
+
+
+	MRU_Right-Wing_Paramilitaries_2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		modifier = {
+			stability_factor = -0.20
+            war_support_weekly_factor = 0.02
+           BR_supremacist_drift = 0.10
+           conscription_factor = -0.15
+		   weekly_manpower = -250
 		}
 	}
     ########## TZARIST ECONOMY PATH ######
 	
 	# Closing The Technology Gap path
 	
-	Modernizing_Industry = {
+	MRU_Heartland_Of_Heavy_Industry_2_V1 = {
 		allowed = {
 			always = yes
 		}
@@ -186,7 +206,7 @@ ideas = {
 
 	}
 
-	Automate_Factory_Lines = {
+	MRU_Automate_Factory_Lines = {
 		allowed = {
 			always = yes
 		}
@@ -205,25 +225,7 @@ ideas = {
 
 	}
 
-	Engineer_and_Scientist_Drive= {
-		allowed = {
-			always = yes
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-	 
-		research_bonus = {
-			industry = 0.1
-			electronics = 0.1
-		}
-
-	}
-
-	Empower_The_Ministry_Of_Trade_and_Technologys = {
+	MRU_Heartland_Of_Heavy_Industry_3_V1 = {
 		allowed = {
 			always = yes
 		}
@@ -251,7 +253,7 @@ research_bonus = {
 
 	# Expand On Our Industrial Power PATH
 
-	Expanding_Heavy_Industry = {
+	MRU_Heartland_Of_Heavy_Industry_2_V2 = {
 		allowed = {
 			always = yes
 		}
@@ -262,71 +264,39 @@ research_bonus = {
 
 		removal_cost = -1
 	  modifier = {
-		ndustrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.1
         industry_air_damage_factor = 0.15
         production_speed_arms_factory_factor = 0.15
         production_speed_industrial_complex_factor = 0.15
-        production_factory_max_efficiency_factor = -0.1
+        production_factory_max_efficiency_factor = -0.05
         resistance_sabotage = 0.1
-        research_speed_factor = -0.1
+        research_speed_factor = -0.05
     }
+ }
+	MRU_Heartland_Of_Heavy_Industry_3_V2 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	  modifier = {
+		industrial_capacity_factory = 0.1
+        industry_air_damage_factor = 0.15
+        production_speed_arms_factory_factor = 0.15
+        production_speed_industrial_complex_factor = 0.15
+        production_factory_max_efficiency_factor = -0.05
+        resistance_sabotage = 0.1
+        research_speed_factor = -0.05
+		production_speed_buildings_factor = 0.10
+    }	
 }
 
-Heavy_Industry = {
-	allowed = {
-		always = yes
-	}
 
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-  modifier = {
-	ndustrial_capacity_factory = 0.1
-	industry_air_damage_factor = 0.15
-	production_speed_arms_factory_factor = 0.15
-	production_speed_industrial_complex_factor = 0.15
-	production_factory_max_efficiency_factor = -0.1
-	resistance_sabotage = 0.1
-	research_speed_factor = -0.1
-}
-
-}
-
-Northern_Resource_Extraction = {
-	allowed = {
-		always = yes
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-  modifier = {
-	local_resources_factor = 0.15
-}
-
-}
-
-Nationalize_The_Construction_Industry = {
-	allowed = {
-		always = yes
-	}
-
-	allowed_civil_war = {
-		always = yes
-	}
-
-	removal_cost = -1
-  modifier = {
-	production_speed_buildings_factor = 0.15
-}
-
-}
-
-Northern_Resource_Extraction = {
+MRU_Northern_Resource_Extraction = {
 	allowed = {
 		always = yes
 	}
@@ -342,7 +312,8 @@ Northern_Resource_Extraction = {
 
 }
 
-Empower_The_Ministry_Of_Industrial_Development = {
+
+MRU_Heartland_Of_Heavy_Industry_4_V2 = {
 	allowed = {
 		always = yes
 	}
@@ -366,7 +337,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	# Seize Oligarchs Wealth
 
-    Oligarchs_Reserves_Seized = {
+    MRU_Oligarchs_Reserves_Seized = {
 		allowed = {
 			always = yes
 		}
@@ -377,12 +348,13 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	
 		removal_cost = -1
 	  modifier = {
-		consumer_goods_factor = -0.02
+		consumer_goods_factor = -0.15
+		political_power_gain = 0.10
 	}
 	
 	}
 	
-	Anti-Corruption_Drive = {
+	MRU_Oligarchs_Reserves_Seized_2 = {
 		allowed = {
 			always = yes
 		}
@@ -393,14 +365,14 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	
 		removal_cost = -1
 	  modifier = {
-		consumer_goods_factor = -0.03
-        political_power_factor = 0.15
+		consumer_goods_factor = -0.20
+        political_power_gain = 0.10
 		BR_authoritarian_drift = 0.04
 	}
 	
 	}
 
-	Rule_Of_Managers = {
+	 MRU_Rule_Of_Managers = {
 		allowed = {
 			always = yes
 		}
@@ -433,7 +405,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	# A NEW CENTURY OF WAR 
 	
-	Infantry_Anti-Tank_Weapons = {
+	MRU_Holy_Army_of_Russia = {
 		allowed = {
 			always = yes
 		}
@@ -452,7 +424,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 	}
 
-    Unit_Autonomy_Doctrine = {
+    MRU_Holy_Army_of_Russia_2 = {
 		allowed = {
 			always = yes
 		}
@@ -464,15 +436,68 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		removal_cost = -1
 	 
 		equipment_bonus = {
+			artillery = {
+				build_cost_ic = -0.05
+			 }	
 			category_all_infantry = {
-				hard_attack = 0.1
+				hard_attack = 0.1	
+				##maximum_speed = 0.05
+			}
+		}
+
+	}
+
+    MRU_Holy_Army_of_Russia_3 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	 
+		equipment_bonus = {
+			artillery = {
+				build_cost_ic = -0.05
+			 }				
+			category_all_infantry = {
+				hard_attack = 0.1	
+				maximum_speed = 0.05
+			}
+		}
+
+	}	
+
+	MRU_Holy_Army_of_Russia_4 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+	
+
+				equipment_bonus = {
+			motorized = {
+				build_cost_ic = -0.05
+			}					
+			artillery = {
+				build_cost_ic = -0.05
+			 }				
+			category_all_infantry = {
+				hard_attack = 0.1	
 				maximum_speed = 0.05
 			}
 		}
 
 	}
 
-	From_Trains_To_Trucks = {
+	MRU_Holy_Army_of_Russia_5 = {
 		allowed = {
 			always = yes
 		}
@@ -482,38 +507,28 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		}
 
 		removal_cost = -1
-	 
-		equipment_bonus = {
+	
+
+				equipment_bonus = {
 			motorized = {
-				build_cost_ic = 0.05
-			}
-		}
-
-	}
-
-	Enhance_Artillery_Mobility = {
-		allowed = {
-			always = yes
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-	 
-		equipment_bonus = {
-			motorized = {
-				build_cost_ic = 0.05
+				build_cost_ic = -0.05
+			}					
+			artillery = {
+				build_cost_ic = -0.05
+			 }				
+			category_all_infantry = {
+				hard_attack = 0.1	
+				maximum_speed = 0.05
 			}
 			category_line_artillery = {
 				maximum_speed = 0.05
-			}
-		}
+			}			
+		}	 
+
 
 	}
 
-	Push_Object_550_Into_Production = {
+	MRU_Holy_Army_of_Russia_6 = {
 		allowed = {
 			always = yes
 		}
@@ -525,25 +540,32 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		removal_cost = -1
 	 
 		equipment_bonus = {
+
+
 			motorized = {
-				build_cost_ic = 0.05
+				build_cost_ic = -0.05
+			}					
+			artillery = {
+				build_cost_ic = -0.05
+			 }				
+			category_all_infantry = {
+				hard_attack = 0.1	
+				maximum_speed = 0.05
 			}
 			category_line_artillery = {
 				maximum_speed = 0.05
-			}
-			category_all_infantry = {
-				hard_attack = 0.1
-				maximum_speed = 0.05
-			}
+			}		
 			category_tanks = {
-				build_cost_ic = 0.1
+				build_cost_ic = -0.20
 				reliability_factor = -0.1
-			}
+			}					
+		
+
 		}
 
 	}
 
-	Drive_Them_Out_Of_Russia = {
+	MRU_Holy_Army_of_Russia_7 = {
 		allowed = {
 			always = yes
 		}
@@ -555,20 +577,27 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		removal_cost = -1
 	 
 		equipment_bonus = {
+
+
 			motorized = {
-				build_cost_ic = 0.075
+				build_cost_ic = -0.10
+			}					
+			artillery = {
+				build_cost_ic = -0.10
+			 }				
+			category_all_infantry = {
+				hard_attack = 0.15	
+				maximum_speed = 0.10
 			}
 			category_line_artillery = {
-				maximum_speed = 0.075
-			}
-			category_all_infantry = {
-				hard_attack = 0.125
-				maximum_speed = 0.075
-			}
+				maximum_speed = 0.05
+			}		
 			category_tanks = {
-				build_cost_ic = 0.1
-				reliability_factor = -0.05
-			}
+				build_cost_ic = -0.20
+				reliability_factor = -0.1
+			}					
+		
+
 		}
 
 	}
@@ -577,7 +606,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
     # Oprprichnickis_will 
 
-	The_Opprichnikis_Will = {
+	MRU_The_Opprichnikis_Will = {
 		allowed = {
 			always = yes
 		}
@@ -590,14 +619,14 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	 
 		modifier = {
 			army_org_factor = 0.05
-			training_time_army_factor = -0.1
-			experience_gain_army_factor = 0.1
+			training_time_army_factor = -0.05
+			experience_gain_army_factor = 0.05
 			experience_loss_factor = 0.1
 		}
 
 	}
 
-	Unified_Training_Programmes = {
+	MRU_Unified_Training_Programmes = {
 		allowed = {
 			always = yes
 		}
@@ -620,7 +649,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	# Oprinichniki's_will FIN
 	# Modernize_Kutuzovs_Strategies
 
-	Dig_In_The_Infantry = {
+	MRU_Imperial_Vision_of_Warfare = {
 		allowed = {
 			always = yes
 		}
@@ -633,11 +662,11 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 		modifier = {
 			dig_in_speed_factor = 0.05
-			max_dig_in = 0.05
+			max_dig_in = 0.5
 		}
 	}
 
-	Combat_Survivabilty_Strategies = {
+	MRU_Imperial_Vision_of_Warfare_2 = {
 		allowed = {
 			always = yes
 		}
@@ -650,7 +679,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 		modifier = {
 			dig_in_speed_factor = 0.05
-			max_dig_in = 0.05
+			max_dig_in = 0.5
 		}
 		equipment_bonus = {
 			infantry = {
@@ -659,7 +688,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		}
 	}
 
-	Innovate_Defensive_Plans = {
+	MRU_Imperial_Vision_of_Warfare_3 = {
 		allowed = {
 			always = yes
 		}
@@ -671,9 +700,14 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		removal_cost = -1
 
 		modifier = {
-		    production_speed_bunker_factor = 0.05
+		    production_speed_bunker_factor = 0.10
+			dig_in_speed_factor = 0.05
+			max_dig_in = 0.5			
 		}
 		equipment_bonus = {
+			infantry = {
+				casualty_trickleback = 0.05
+			}			
 		    engineer = {
 				max_organisation = 0.05
 				defence = 0.05
@@ -683,7 +717,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 	}
 
 
-	Mine_Their_Approach = {
+	MRU_Imperial_Vision_of_Warfare_4 = {
 		allowed = {
 			always = yes
 		}
@@ -696,46 +730,27 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 		modifier = {
 		    army_infantry_defence_factor = 0.1
-			max_dig_in_factor = 0.05
+		    production_speed_bunker_factor = 0.10
+			dig_in_speed_factor = 0.05
+			max_dig_in = 1
 		}
 		targeted_modifier = {
 			tag = RUS
 			army_infantry_attack_factor = -0.05
 		}
-		
-	}
-
-	Ambush_Strategies = {
-		allowed = {
-			always = yes
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-
-		modifier = {
-		    production_speed_bunker_factor = 0.05
-			dig_in_speed_factor = 0.05
-			max_dig_in = 0.05
-			army_core_defence_factor = 0.05
-            coordination_bonus = 0.1
-		}
 		equipment_bonus = {
+			infantry = {
+				casualty_trickleback = 0.05
+			}			
 		    engineer = {
 				max_organisation = 0.05
 				defence = 0.05
 			}
-			infantry = {
-				casualty_trickleback = 0.05
-			}
-		}
+		}		
 		
 	}
 
-	Every_Mile_Costs_European_Blood = {
+	MRU_Imperial_Vision_of_Warfare_5 = {
 		allowed = {
 			always = yes
 		}
@@ -747,10 +762,43 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		removal_cost = -1
 
 		modifier = {
-		    production_speed_bunker_factor = 0.075
-			dig_in_speed_factor = 0.075
-			max_dig_in = 0.075
-			army_core_defence_factor = 0.075
+		    army_infantry_defence_factor = 0.15
+		    production_speed_bunker_factor = 0.15
+			dig_in_speed_factor = 0.10
+			max_dig_in = 1
+		}
+		targeted_modifier = {
+			tag = RUS
+			army_infantry_attack_factor = -0.05
+		}
+		equipment_bonus = {
+			infantry = {
+				casualty_trickleback = 0.05
+			}			
+		    engineer = {
+				max_organisation = 0.05
+				defence = 0.05
+			}
+		}
+		
+	}
+
+	MRU_Imperial_Vision_of_Warfare_6 = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		    army_infantry_defence_factor = 0.15
+		    production_speed_bunker_factor = 0.15
+			dig_in_speed_factor = 0.10
+			max_dig_in = 1
             coordination_bonus = 0.125
 		}
 		equipment_bonus = {
@@ -764,12 +812,11 @@ Empower_The_Ministry_Of_Industrial_Development = {
 		}
 		
 	}
-	########## TZARIST MILITARY FIN ######
-	
-    	########## TZARIST POLITICS PATH ######
+
+    ########## TZARIST POLITICS PATH ######
 
         
-        Paramilitary_Infighting = {
+        MRU_Right-Wing_Paramilitaries_3 = {
 			allowed = {
 				always = yes
 			}
@@ -787,7 +834,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			}
 		}
 
-		Imperialization = {
+		MRU_Return_To_Normalcy = {
 			allowed = {
 				always = yes
 			}
@@ -799,13 +846,12 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			removal_cost =  -1
 
 			modifier = {
-				stability_weekly_factor = 0.1
-                war_support_weekly = 0.1
-                political_power_factor = 0.15
+				stability_weekly_factor = 0.01
+                political_power_factor = 0.20
 			}
 		}
 
-		Titles_For_Soldiers = {
+		MRU_Imperialization = {
 			allowed = {
 				always = yes
 			}
@@ -817,13 +863,31 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			removal_cost =  -1
 
 			modifier = {
-				war_support_weekly_factor = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+                political_power_factor = 0.10
+			}
+		}		
+
+		MRU_Aristocratic_Militarism = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost =  -1
+
+			modifier = {
+				war_support_weekly_factor = 0.02
                 conscription_factor = 0.02
                 army_morale_factor = 0.05
 			}
 		}
 
-        Titles_For_Support = {
+        MRU_Aristocratic_Intellectualism = {
 			allowed = {
 				always = yes
 			}
@@ -841,28 +905,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			}
 		}
 
-		Speedbump_Duma = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost =  -1
-
-			modifier = {
-				political_power_factor = -0.1
-                stability_factor = -0.1
-				political_advisor_cost_factor = -0.25
-				trade_laws_cost_factor = -0.2
-				mobilization_laws_cost_factor = -0.2
-				economy_cost_factor = -0.2
-			}
-		}
-
-        Respect_The_Process = {
+		MRU_Speedbump_Duma = {
 			allowed = {
 				always = yes
 			}
@@ -875,11 +918,29 @@ Empower_The_Ministry_Of_Industrial_Development = {
 
 			modifier = {
 				political_power_factor = 0.25
-                stability_factor = -0.1
-				political_advisor_cost_factor = 0.25
-				trade_laws_cost_factor = 0.2
-				mobilization_laws_cost_factor = 0.2
-				economy_cost_factor = 0.2
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.2
+                BR_autocracy_drift = 0.10
+			}
+		}
+
+        MRU_Respect_The_Process = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost =  -1
+
+			modifier = {
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.10
+				trade_laws_cost_factor = 0.10
+                BR_paternalism_drift = 0.10
+
 			}
 		}
 
@@ -902,7 +963,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			}
 		}
 
-		Formalize_The_Tax_Code = {
+		MRU_Formalize_The_Tax_Code = {
 			allowed = {
 				always = yes
 			}
@@ -914,7 +975,7 @@ Empower_The_Ministry_Of_Industrial_Development = {
 			removal_cost =  -1
 
 			modifier = {
-				stability_weekly_factor = 0.02
+				stability_weekly_factor = 0.01
                 drift_defence_factor = 0.05
                 compliance_growth_on_our_occupied_states = 0.1
 			}
