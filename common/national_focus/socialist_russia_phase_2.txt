@@ -5621,6 +5621,7 @@
 		}
 	
 		completion_reward = {
+			
 		}
 	}
 
@@ -5645,6 +5646,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_kovalevs_command
 		}
 	}
 
@@ -5669,6 +5671,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_red_army_training
 		}
 	}
 
@@ -5693,6 +5696,11 @@
 		}
 	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SRU_kovalevs_command
+				add_idea = SRU_modern_red_army
+			}
+			remove_idea = SRU_red_army_training
 		}
 	}
 
@@ -5717,6 +5725,13 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+                name = armoured_warfare_research
+                bonus = 0.5
+                uses = 3
+                category = land_doctrine
+            }
+
 			add_equipment_to_stockpile = {
 				type = mechanised_equipment
 				amount = 1000
@@ -5745,6 +5760,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_layered_battle_theory
 		}
 	}
 
@@ -5769,6 +5785,14 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = sp_artillery_1
+				amount = 500
+			}
+			swap_ideas = {
+				remove_idea = SRU_layered_battle_theory
+				add_idea = SRU_upgraded_layered_battle_theory
+			}
 		}
 	}
 

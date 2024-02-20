@@ -2908,6 +2908,160 @@ Modified_Knightmare_Simulations = {
 			}
 		}
 
+		### LUKAS MILITARY PATH IDEAS PHASE 2 ###
+
+		# Makarov
+
+		# Kovalev
+
+		SRU_discontent_in_the_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+
+		SRU_kovalevs_command = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain_mult = 0.15
+				land_reinforce_rate = 0.1
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		SRU_red_army_training = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.25
+				minimum_training_level = 0.10
+				experience_gain_army_combat_factor = 0.10
+			}
+		}
+
+		SRU_modern_red_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.25
+				minimum_training_level = 0.10
+				experience_gain_army_combat_factor = 0.10
+				army_org_regain = 0.1
+				army_morale_factor = 0.15
+				breakthrough_factor = 0.2
+			}
+		}
+
+		SRU_layered_battle_theory = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mbt_1 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_2 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_3 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+			}
+		}
+
+		SRU_upgraded_layered_battle_theory = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_artillery_attack_factor = 0.15
+				army_artillery_breakthrough_factor = 0.2
+				army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mbt_1 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_2 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_3 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+			}
+		}
+
 		### END OF LUKAS IDEAS PHASE 2 ###
 
 ### SONYA'S IDEAS 2 PHASE ###
