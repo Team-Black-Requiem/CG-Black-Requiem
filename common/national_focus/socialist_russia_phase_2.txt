@@ -5737,9 +5737,11 @@
                 uses = 3
                 category = land_doctrine
             }
-
+			set_technology = {
+				mechanized_equipment_1 = 1
+			}
 			add_equipment_to_stockpile = {
-				type = mechanised_equipment
+				type = mechanized_equipment_1
 				amount = 1000
 			}
 		}
@@ -5767,6 +5769,9 @@
 	
 		completion_reward = {
 			add_ideas = SRU_layered_battle_theory
+			set_technology = {
+				sp_artillery_1 = 1
+			}
 		}
 	}
 
