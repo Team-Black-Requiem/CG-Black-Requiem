@@ -172,9 +172,11 @@ characters = {
 
 	MRU_Maksim_Orlev = {
 		name = "Maksim Orlev"
-		#portraits = {
-		#	
-		#}
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Maksim_Orlev"
+			 }		
+		}
 		
 		advisor = {
 			slot = head_of_government
@@ -182,14 +184,17 @@ characters = {
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+
 			}
 
 			available = {
-				has_country_flag = MRU_Conservatism
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				tzar_dolphin
 			}
 
 			cost = 75
@@ -201,10 +206,12 @@ characters = {
 
 	MRU_Ilyana_Markov = {
 		name = "Ilyana Markov"
-		#portraits = {
-		#	
-		#}
-		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Ilyana_Markov"
+			 }		
+		}
+
 		advisor = {
 			slot = head_of_government
 			idea_token = MRU_Ilyana_Markov_idea	
@@ -219,6 +226,7 @@ characters = {
 
 			traits = { 
 				nationalist_guy
+			    the_executioner	
 			}
 
 			cost = 75
@@ -228,102 +236,234 @@ characters = {
 		}
 	}
 
-	MRU_generic_economy_minister = {
-		name = "The Economy Minister"
-		#portraits = {
-		#	
-		#}
+
+    ##Economy Ministers
+	MRU_Mikhail_Yermolov = {
+		name = "Mikhail Yermolov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Mikhail_Yermolov"
+			 }		
+		}
 		
 		advisor = {
 			slot = economy_minister
-			idea_token = MRU_generic_economy_minister_idea_1
+			idea_token = MRU_Mikhail_Yermolov_idea	
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+
+			}
+
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				resource_extraction
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_foreign_minister = {
-		name = "The Foreign Minister"
-		#portraits = {
-		#	
-		#}
+	MRU_Boris_Zvyagintsev = {
+		name = "Boris Zvyagintsev"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Boris_Zvyagintsev"
+			 }		
+		}
+
+		advisor = {
+			slot = economy_minister
+			idea_token = MRU_Boris_Zvyagintsev_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+				industralizer
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+    ##Foreign Ministers
+	MRU_Danil_Smirnov = {
+		name = "Danil Smirnov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Danil_Smirnov"
+			 }		
+		}
 		
 		advisor = {
 			slot = foreign_minister
-			idea_token = MRU_generic_foreign_minister_idea_1
+			idea_token = MRU_Danil_Smirnov_idea	
 
 			allowed = {
 				tag = MRU
 			}
 
-			traits = { 
-				conservative_guy
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
-			cost = 2000
+			traits = { 
+				authoritarian_guy
+				great_compromiser
+			}
+
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
+
+	MRU_Nikita_Orlov = {
+		name = "Nikita Orlov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Nikita_Orlov"
+			 }		
+		}
+
+		advisor = {
+			slot = foreign_minister
+			idea_token = MRU_Nikita_Orlov_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+				stone_head
+				
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
 
 
     ##Interior Ministers
-	MRU_generic_minister_of_interior = {
-		name = "The Minister Of The Interior"
-		#portraits = {
-		#	
-		#}
+	MRU_Andrey_Voronin = {
+		name = "Andrey Voronin"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Andrey_Voronin"
+			 }		
+		}
 		
 		advisor = {
 			slot = minister_of_interior
-			idea_token = MRU_generic_minister_of_interior_idea_1
+			idea_token = MRU_Andrey_Voronin_idea	
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+			}
+
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				control_freak
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_intelligence = {
-		name = "The Intelligence Guy"
-		#portraits = {
-		#	
-		#}
-		
+	MRU_Artyom_Volkov = {
+		name = "Artyom Volkov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Artyom_Volkov"
+			 }		
+		}
+
 		advisor = {
-			slot = intelligence
-			idea_token = MRU_generic_intelligence_idea_1
+			slot = minister_of_interior
+			idea_token = MRU_Artyom_Volkov_idea	
 
 			allowed = {
 				tag = MRU
 			}
 
-			traits = { 
-				conservative_guy
+			available = {
+				has_country_flag = MRU_Supremacism
 			}
 
-			cost = 2000
+			traits = { 
+				nationalist_guy
+				balanced_fist
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	MRU_Maxim_Ivanovich = {
+		name = "Maxim Ivanovich"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Maxim_Ivanovich"
+			 }		
+		}
+
+		advisor = {
+			slot = intelligence
+			idea_token = MRU_Maxim_Ivanovich_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+			}
+
+			traits = { 
+				careful_agent
+			}
+
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
