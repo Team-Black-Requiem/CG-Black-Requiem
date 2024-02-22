@@ -5367,9 +5367,7 @@
 		}
 	
 		completion_reward = {
-			army_attack_factor = 0.05
-			army_speed_factor = 0.1
-			army_defence_factor = 0.1
+			add_ideas = SRU_the_red_wave
 		}
 	}
 
@@ -5396,7 +5394,7 @@
 	
 		completion_reward = {
 			add_manpower = 100000
-			army_attack_factor = 0.1
+			add_ideas = SRU_military_drafting
 		}
 	}
 
@@ -5456,7 +5454,6 @@
 				bonus = 0.5
 				category = air_modules
 			}
-			air_org_factor = 0.05
 		}
 	}
 
@@ -5482,8 +5479,8 @@
 		}
 	
 		completion_reward = {
-			air_attack_factor = 0.1
 			air_experience = 50
+			add_ideas = SRU_bloody_airforce
 		}
 	}
 
@@ -5735,21 +5732,20 @@
 		ai_will_do = {
 			factor = 10
 		}
-
-		hidden_effect = {
-            if = {
-                limit = {NOT = {has_tech = mechanised_infantry}}
-                set_technology = {mechanised_infantry = 1}
-            }
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
                 name = armoured_warfare_research
                 bonus = 0.5
                 uses = 3
                 category = land_doctrine
-            }		
+            }	
+			
+			hidden_effect = {
+            	if = {
+                	limit = {NOT = {has_tech = mechanised_infantry}}
+                	set_technology = {mechanised_infantry = 1}
+            	}
+			}	
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment_1
 				amount = 1000
@@ -5776,17 +5772,15 @@
 		ai_will_do = {
 			factor = 10
 		}
-
-		
-		hidden_effect = {
-            if = {
-                limit = {NOT = {has_tech = sp_artillery_1}}
-                set_technology = {sp_artillery_1 = 1}
-            }
-		}
 	
 		completion_reward = {
-			add_ideas = SRU_layered_battle_theory
+			add_ideas = SRU_layered_battle_theory_1
+			hidden_effect = {
+            	if = {
+                	limit = {NOT = {has_tech = sp_artillery_1}}
+                	set_technology = {sp_artillery_1 = 1}
+            	}
+			}	
 		}
 	}
 
@@ -5816,8 +5810,8 @@
 				amount = 500
 			}
 			swap_ideas = {
-				remove_idea = SRU_layered_battle_theory
-				add_idea = SRU_upgraded_layered_battle_theory
+				remove_idea = SRU_layered_battle_theory_1
+				add_idea = SRU_layered_battle_theory_2
 			}
 		}
 	}

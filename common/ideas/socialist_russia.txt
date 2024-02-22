@@ -2940,7 +2940,7 @@ Modified_Knightmare_Simulations = {
 			removal_cost = -1
 
 			modifier = {
-				research_speed_factor = 0.5
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -2975,7 +2975,59 @@ Modified_Knightmare_Simulations = {
 
 			modifier = {
 				supply_consumption_factor = 0.5
-				recruitable_population_factor = 0.02
+			}
+		}
+
+		SRU_the_red_wave = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		SRU_military_drafting = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				recruitable_population_factor = 0.04
+			}
+		}
+
+		SRU_bloody_airforce = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_attack_factor = 0.1
+				air_org_factor = 0.05
+				air_defence_factor = 0.04
 			}
 		}
 
@@ -3058,7 +3110,7 @@ Modified_Knightmare_Simulations = {
 			}
 		}
 
-		SRU_layered_battle_theory = {
+		SRU_layered_battle_theory_1 = {
 			allowed = {
 				always = no
 			}
@@ -3094,7 +3146,7 @@ Modified_Knightmare_Simulations = {
 			}
 		}
 
-		SRU_upgraded_layered_battle_theory = {
+		SRU_layered_battle_theory_2 = {
 			allowed = {
 				always = no
 			}
