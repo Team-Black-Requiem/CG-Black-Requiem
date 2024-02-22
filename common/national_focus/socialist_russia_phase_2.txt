@@ -5277,6 +5277,11 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1
+				category = naval_equipment
+			}
 		}
 	}
 
@@ -5336,6 +5341,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_land_war_path
 		}
 	}
 
@@ -5447,7 +5453,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 3
-				bonus = 1
+				bonus = 0.5
 				category = air_modules
 			}
 			air_org_factor = 0.05
@@ -5729,17 +5735,21 @@
 		ai_will_do = {
 			factor = 10
 		}
-	
+
+		hidden_effect = {
+            if = {
+                limit = {NOT = {has_tech = mechanised_infantry}}
+                set_technology = {mechanised_infantry = 1}
+            }
+		}
+
 		completion_reward = {
 			add_tech_bonus = {
                 name = armoured_warfare_research
                 bonus = 0.5
                 uses = 3
                 category = land_doctrine
-            }
-			set_technology = {
-				mechanized_equipment_1 = 1
-			}
+            }		
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment_1
 				amount = 1000
@@ -5766,12 +5776,17 @@
 		ai_will_do = {
 			factor = 10
 		}
+
+		
+		hidden_effect = {
+            if = {
+                limit = {NOT = {has_tech = sp_artillery_1}}
+                set_technology = {sp_artillery_1 = 1}
+            }
+		}
 	
 		completion_reward = {
 			add_ideas = SRU_layered_battle_theory
-			set_technology = {
-				sp_artillery_1 = 1
-			}
 		}
 	}
 

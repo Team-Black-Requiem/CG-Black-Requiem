@@ -334,9 +334,14 @@ characters = {
 
 	SRU_viktor_makarov = {
 		name = "Viktor Makarov"
-		#portraits = {
-		#	
-		#}
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
 		
 		advisor = {
 			slot = army_chief
@@ -348,13 +353,14 @@ characters = {
 
 			available = {
 				has_country_flag = SRU_Luka_In_Control
+				has_completed_focus = SRU_an_envoy_from_china
 			}
 
 			traits = { 
 				army_chief_offensive_2
 			}
 
-			cost = 2000
+			cost = 100
 			ai_will_do = {
 				factor = 1
 			}
@@ -510,8 +516,8 @@ characters = {
 			traits = { 
 				army_armored_2
 			}
+			
 			available = {
-				tag = SRU
 				has_completed_focus = SRU_an_envoy_from_china
 			}
 			cost = 100

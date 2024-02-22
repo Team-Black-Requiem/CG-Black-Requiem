@@ -1115,6 +1115,7 @@ country_event = { #develop the super soldat program
 		ai_chance = {
 			base = 100
 		}
+		army_experience = 75
 	}
 }
 
@@ -1130,6 +1131,12 @@ country_event = { #trace the ghost signal
 		ai_chance = {
 			base = 100
 		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = decryption_tech
+		}
+		add_ideas = SRU_ghost_signal
 	}
 }
 
@@ -1144,6 +1151,11 @@ country_event = { #the pale forest incident
 		name = SRU_Luka_Phase_Two.28.a
 		ai_chance = {
 			base = 100
+		}
+		add_tech_bonus = {
+			bonus = 2
+			uses = 2
+			category = air_equipment
 		}
 	}
 }
@@ -1160,6 +1172,12 @@ country_event = { #priority message from crimson mountain
 		ai_chance = {
 			base = 100
 		}
+		add_tech_bonus = {
+			bonus = 2
+			uses = 1
+			category = sakuradite_research
+		}
+		add_ideas = SRU_crimson_mountain_message
 	}
 }
 
@@ -1176,6 +1194,15 @@ country_event = { #makarovs army
 		name = SRU_Luka_Phase_Two.30.a
 		ai_chance = {
 			base = 100
+		}
+		SRU_viktor_makarov = {
+			add_field_marshal_role = {
+				skill = 3
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
+			}
 		}
 	}
 }
