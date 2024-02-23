@@ -2830,8 +2830,8 @@ MRU_Dragunov_Rifle_idea = {
 	br_tank_manufacturer = {
 		designer = yes
 
-		EKA_gen_tank_man = {
-			# picture = 
+		MRU_gen_tank_man = {
+			picture = RUS_gen_company_3
 
 			allowed = {
 				original_tag = MRU
@@ -2851,14 +2851,14 @@ MRU_Dragunov_Rifle_idea = {
 	br_tank_manufacturer = {
 		designer = yes
 
-		EKA_Imperial_tank_man = {
-			# picture = 
+		MRU_Imperial_tank_man = {
+			 picture = RUS_gen_company_5
 
 			allowed = {
 				original_tag = MRU
 			}
 			available = {
-				has_completed_focus = MRU_A_Russian_MBT
+				has_completed_focus = MRU_Massive_Industrial_Grants
 			}
 
 			equipment_bonus = {
@@ -2881,14 +2881,14 @@ MRU_Dragunov_Rifle_idea = {
 	br_tank_manufacturer = {
 		designer = yes
 
-		EKA_EU_tank_man = {
-			# picture = 
+		MRU_EU_tank_man = {
+			picture = generic_tank_manufacturer_1
 
 			allowed = {
 				original_tag = MRU
 			}
             available = {
-				has_completed_focus = MRU_Make_Agreements_With_European_Contractors
+				has_completed_focus = MRU_Massive_Industrial_Grants
 			}
 		    equipment_bonus = {
 				armor = {
@@ -2908,15 +2908,15 @@ MRU_Dragunov_Rifle_idea = {
 	br_aircraft_manufacturer = {
 		designer = yes
 
-		EKA_imperial_aviation_man = {
-			# picture = 
+		MRU_imperial_aviation_man = {
+			picture = generic_air_manufacturer_1
 
 			allowed = {
 				original_tag = MRU
 			}
 
-		    available = {
-				has_completed_focus = MRU_aviation_industry
+			available = {
+				has_completed_focus = MRU_Massive_Industrial_Grants
 			}
             equipment_bonus = {
 				fighter_equipment = {
@@ -2933,16 +2933,13 @@ MRU_Dragunov_Rifle_idea = {
 	br_aircraft_manufacturer = {
 		designer = yes
 
-		EKA_EU_aviation_man = {
-			# picture = 
+		MRU_EU_aviation_man = {
+			picture = generic_air_manufacturer_2
 
 			allowed = {
 				original_tag = MRU
 			}
 
-		    available = {
-				has_completed_focus = MRU_EU_Avionics
-			}
             equipment_bonus = {
 				fighter_equipment = {
 					maximum_speed = 0.1
@@ -2956,8 +2953,8 @@ MRU_Dragunov_Rifle_idea = {
 	industrial_concern = {
 		designer = yes
 
-		EKA_gen_industrial_man = {
-			# picture = 
+		MRU_gen_industrial_man = {
+			picture = RUS_gen_company_1
 
 			allowed = {
 				original_tag = MRU
@@ -2979,14 +2976,12 @@ MRU_Dragunov_Rifle_idea = {
 		designer = yes
 
 		MRU_imperial_railway_company = {
-			# picture = 
+			picture = generic_industrial_concern_3
 
 			allowed = {
 				original_tag = MRU
 			}
-			available = {
-				has_completed_focus = MRU_Centralize_The_Rail_Networks
-			}
+
 
 			traits = {
 				basic_railway_construction_company
@@ -3000,8 +2995,8 @@ MRU_Dragunov_Rifle_idea = {
 	br_materiel_manufacturer = {
 		designer = yes
 
-		EKA_gen_mater_man = {
-			# picture =
+		MRU_gen_mater_man = {
+			picture = generic_artillery_manufacturer_1
 
 			allowed = {
 				original_tag = MRU
@@ -3014,15 +3009,15 @@ MRU_Dragunov_Rifle_idea = {
 	}
 	br_materiel_manufacturer ={
 		designer = yes
-		EKA_mechanized_man ={
+		MRU_mechanized_man ={
 
 		allowed = {
 			original_tag = MRU
 		}
-		visible ={
-			has_completed_focus = MRU_Assembly_lines
-		}
-			# picture = 
+			available = {
+				has_completed_focus = MRU_An_Economy_Tamed
+			}
+		picture = generic_artillery_manufacturer_2
 			traits ={
 				mru_assembly_lines_mechanized_company
 			}
@@ -3035,8 +3030,8 @@ MRU_Dragunov_Rifle_idea = {
 	br_naval_manufacturer = {
 		designer = yes
 
-		EKA_gen_naval_man = {
-			# picture =
+		MRU_gen_naval_man = {
+			picture = generic_naval_manufacturer_2
 
 			allowed = {
 				original_tag = MRU
@@ -3052,23 +3047,5 @@ MRU_Dragunov_Rifle_idea = {
 	}
 	
 
-	br_aircraft_manufacturer = {
-		designer = yes
-
-		EKA_gen_air_man = {
-			# picture = 
-
-			allowed = {
-				original_tag = MRU
-			}
-			research_bonus = {
-				heavy_air = 0.05
-			}
-
-			traits = {
-				light_aircraft_manufacturer
-			}
-		}
-	}
 	
 }
