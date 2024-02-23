@@ -2974,7 +2974,7 @@ Modified_Knightmare_Simulations = {
 			removal_cost = -1
 
 			modifier = {
-				supply_consumption_factor = 0.5
+				supply_consumption_factor = 0.05
 			}
 		}
 
@@ -3028,6 +3028,26 @@ Modified_Knightmare_Simulations = {
 				air_attack_factor = 0.1
 				air_org_factor = 0.05
 				air_defence_factor = 0.04
+			}
+		}
+
+		SRU_operation_wonderland1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.15
+				army_defence_factor = 0.1
+				recruitable_population_factor = 0.05
+				supply_consumption_factor = -0.05
 			}
 		}
 

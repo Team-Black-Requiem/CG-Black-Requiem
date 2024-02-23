@@ -1183,9 +1183,10 @@ country_event = { #priority message from crimson mountain
 			base = 100
 		}
 		add_tech_bonus = {
+			name = sakuradite_research
 			bonus = 2
 			uses = 1
-			category = sakuradite_research
+			category = nuclear
 		}
 		add_ideas = SRU_crimson_mountain_message
 	}
@@ -1214,6 +1215,9 @@ country_event = { #makarovs army
 				logistics_skill = 3
 			}
 		}
+		set_technology = {
+			paratroopers = 3
+		}
 	}
 }
 
@@ -1229,6 +1233,12 @@ country_event = { #operation wonderland
 		ai_chance = {
 			base = 100
 		}
+		swap_ideas = {
+			remove_idea = SRU_the_red_wave
+			add_idea = SRU_operation_wonderland1
+		}
+		remove_ideas = SRU_military_drafting
+		remove_ideas = SRU_land_war_path
 	}
 }
 
