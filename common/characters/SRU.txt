@@ -528,6 +528,38 @@ characters = {
 		}
 	}
 
+	SRU_timur_antonov = {
+		name = "Timur Antonov"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = SRU_shen_high_command
+			
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				technocrat
+			}
+			
+			available = {
+				has_completed_focus = SRU_develop_the_super_soldat
+			}
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
 	### END OF HIGH COMMAND ###
 
 
