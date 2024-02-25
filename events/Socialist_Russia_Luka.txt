@@ -918,6 +918,48 @@ country_event = { #Novosibirsk Research Complex
 	}
 }
 
+country_event = { #Begin Construction on Eurasian Railway
+	id = SRU_Luka_Phase_Two.39
+	title = SRU_Luka_Phase_Two.39.t
+	desc = SRU_Luka_Phase_Two.39.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.39.a
+		ai_chance = {
+			base = 100
+		}
+		build_railway = {
+			level = 3
+			build_only_on_allied = yes
+			fallback = yes
+			path = { 12551 13337 13338 13334 13343 10573 13315 1805 7772 7746 4726 1795 4855 4795 12538 12607 12668 10688 13390 4743 10631 7863 7802 12523 4782 7744 12691 }
+			start_province = 12551
+			target_province = 12691
+		}
+	}
+}
+
+country_event = { #Russian Narional Rejuvenation
+	id = SRU_Luka_Phase_Two.40
+	title = SRU_Luka_Phase_Two.40.t
+	desc = SRU_Luka_Phase_Two.40.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.40.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_siberian_rejuvination_project
+			add_idea = SRU_russian_rejuvination
+		}
+	}
+}
+
 #Chinese events
 country_event = { #Diplomatic Mission To China
 	id = SRU_Luka_Phase_Two.11
@@ -1282,6 +1324,7 @@ country_event = { #operation red thunder
 # victory no matter the cost 37, the true red army 38
 
 #Political Struggle Events
+
 country_event = { #resolve the conflict
 	id = SRU_Luka_Phase_Two.19
 	title = SRU_Luka_Phase_Two.19.t
@@ -1422,6 +1465,25 @@ country_event = { #the economists grasp
 		ai_chance = {
 			base = 100
 		}
+	}
+}
+
+#Lukas New Russia Events
+
+country_event = { #Forging the New Russia
+	id = SRU_Luka_Phase_Two.41
+	title = SRU_Luka_Phase_Two.41.t
+	desc = SRU_Luka_Phase_Two.41.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.41.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_lukas_russia
+		add_stability = 0.3
 	}
 }
 
