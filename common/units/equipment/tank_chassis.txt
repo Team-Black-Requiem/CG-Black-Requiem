@@ -25,25 +25,25 @@ equipments = {
 
 				}
 			}
+			armor_composition_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+
+				}
+			}
+			armor_layout_slot = {
+				required = no #no
+				allowed_module_categories = {
+					
+				}
+			}
 			suspension_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
 
 				}
 			}
-			ammunition_type = {
-				required = no #no
-				allowed_module_categories = {
-					
-				}
-			}
-			armor_construction_slot = {
-				required = yes #yes
-				allowed_module_categories = {
-
-				}
-			}
-			armor_thickness_slot = {
+			transmission_slot = {
 				required = yes #yes
 				allowed_module_categories = {
 
@@ -52,7 +52,19 @@ equipments = {
 			engine_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-
+					tank_gasoline_engine_type
+					tank_disel_engine_type
+				}
+			}
+			ammunition_type = {
+				required = no
+				allowed_module_categories = {
+					apfsds_ammunition
+					aphecbc_ammunition
+					heatfs_ammunition
+					hesh_ammunition
+					proximity_ammunition
+					fragmentation_ammunition
 				}
 			}
 			special_type_slot_1 = {
@@ -79,52 +91,70 @@ equipments = {
 
 				}
 			}
+			special_type_slot_5 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_6 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
+			special_type_slot_7 = {
+				required = no #no
+				allowed_module_categories = {
+
+				}
+			}
 		}
 
-		module_count_limit = {
-			category = tank_radio_module
-			count < 2
-		}
-		module_count_limit = {
-			module = stabilizer
-			count < 2
-		}
-		module_count_limit = {
-			module = extra_ammo_storage
-			count < 2
-		}
-		module_count_limit = {
-			module = wet_ammo_storage
-			count < 2
-		}
-		module_count_limit = {
-			module = armor_skirts
-			count < 2
-		}
-		module_count_limit = {
-			module = dozer_blade
-			count < 2
-		}
-		module_count_limit = {
-			module = auto_loader
-			count < 2
-		}
-		module_count_limit = {
-			module = coaxial_machine_gun
-			count < 2
-		}
-		module_count_limit = {
-			module = aa_machine_gun
-			count < 2
-		}
-		module_count_limit = {
-			module = expanded_fuel_tank
-			count < 2
-		}
-		module_count_limit = {
-			module = smoke_launchers
-			count < 2
-		}
+		#module_count_limit = {
+		#	category = tank_radio_module
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = stabilizer
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = extra_ammo_storage
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = wet_ammo_storage
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = armor_skirts
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = dozer_blade
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = auto_loader
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = coaxial_machine_gun
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = aa_machine_gun
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = expanded_fuel_tank
+		#	count < 2
+		#}
+		#module_count_limit = {
+		#	module = smoke_launchers
+		#	count < 2
+		#}
 
 		default_modules = {
 			main_armament_slot = empty
@@ -150,9 +180,9 @@ equipments = {
 		manpower = 2
 	}
 
-	early_mbt_chassis = {
+	main_battle_tank_chassis_0 = { ### Early Main Battle Tank (MBT)
 		abbreviation = "embt"
-		derived_variant_name = early_main_battle_tank_equipment_0
+		derived_variant_name = main_battle_tank_equipment_0
 		visual_level = 0
 		year = 2009
 		archetype = main_battle_tank_chassis
@@ -166,70 +196,53 @@ equipments = {
 					early_mbt_turret_superstructure
 				}
 			}
+			armor_composition_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
+			armor_layout_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
 			suspension_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_suspension
-					tank_wheel_suspension
+					#tank_suspension
+					#tank_wheel_suspension
 				}
 			}
-			ammunition_type = inherit
-			armor_construction_slot = {
+			transmission_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_armor_type
-				}
-			}
-			armor_thickness_slot = {
-				required = yes #yes
-				allowed_module_categories = {
-					tank_armor_focus
-					tank_composite_armor
+					#
 				}
 			}
 			engine_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_gasoline_engine_type
-					tank_disel_engine_type
+					#
 				}
 			}
-			special_type_slot_1 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_2 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_3 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_4 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
+			ammunition_type = inherit
+			special_type_slot_1 = inherit
+			special_type_slot_2 = inherit
+			special_type_slot_3 = inherit
+			special_type_slot_4 = inherit
+			special_type_slot_5 = inherit
+			special_type_slot_6 = inherit
+			special_type_slot_7 = inherit
 		}
 	}
 
-	basic_mbt_chassis = {
+	main_battle_tank_chassis_1 = { ### Basic MBT
 		abbreviation = "bmbt"
-		derived_variant_name = basic_main_battle_tank_equipment_0
+		derived_variant_name = main_battle_tank_equipment_1
 		visual_level = 0
-		year = 20011
+		year = 2009
 		archetype = main_battle_tank_chassis
 		priority = 2000
 
@@ -241,80 +254,53 @@ equipments = {
 					basic_mbt_turret_superstructure
 				}
 			}
+			armor_composition_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
+			armor_layout_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
 			suspension_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_suspension
-					tank_wheel_suspension
+					#tank_suspension
+					#tank_wheel_suspension
 				}
 			}
-			ammunition_type = inherit
-			armor_construction_slot = {
+			transmission_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_armor_type
-				}
-			}
-			armor_thickness_slot = {
-				required = yes #yes
-				allowed_module_categories = {
-					tank_armor_focus
-					tank_composite_armor
+					#
 				}
 			}
 			engine_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_gasoline_engine_type
-					tank_disel_engine_type
+					#
 				}
 			}
-			special_type_slot_1 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_2 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_3 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_4 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-		}
-
-		maximum_speed = 0
-		build_cost_ic = 6.5
-		armor_value = 0
-		hardness = 0
-		resources = {
-			steel = 2
-			chromium = 2
-			tungsten = 1
+			ammunition_type = inherit
+			special_type_slot_1 = inherit
+			special_type_slot_2 = inherit
+			special_type_slot_3 = inherit
+			special_type_slot_4 = inherit
+			special_type_slot_5 = inherit
+			special_type_slot_6 = inherit
+			special_type_slot_7 = inherit
 		}
 	}
 
-	improved_mbt_chassis = {
+	main_battle_tank_chassis_2 = {
 		abbreviation = "imbt"
-		derived_variant_name = improved_main_battle_tank_equipment_0
+		derived_variant_name = main_battle_tank_equipment_2
 		visual_level = 0
-		year = 2014
+		year = 2009
 		archetype = main_battle_tank_chassis
 		priority = 2000
 
@@ -326,85 +312,53 @@ equipments = {
 					improved_mbt_turret_superstructure
 				}
 			}
+			armor_composition_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
+			armor_layout_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
 			suspension_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_suspension
-					tank_wheel_suspension
+					#tank_suspension
+					#tank_wheel_suspension
 				}
 			}
-			ammunition_type = {
-				required = no #no
-				allowed_module_categories = {
-					sakuradite_ammunition
-				}
-			}
-			armor_construction_slot = {
+			transmission_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_armor_type
-				}
-			}
-			armor_thickness_slot = {
-				required = yes #yes
-				allowed_module_categories = {
-					tank_armor_focus
-					tank_composite_armor
+					#
 				}
 			}
 			engine_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_gasoline_engine_type
-					tank_disel_engine_type
+					#
 				}
 			}
-			special_type_slot_1 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_2 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_3 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_4 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-		}
-
-		maximum_speed = 0
-		build_cost_ic = 8
-		armor_value = 0
-		hardness = 0
-		resources = {
-			steel = 3
-			chromium = 2
-			tungsten = 1
+			ammunition_type = inherit
+			special_type_slot_1 = inherit
+			special_type_slot_2 = inherit
+			special_type_slot_3 = inherit
+			special_type_slot_4 = inherit
+			special_type_slot_5 = inherit
+			special_type_slot_6 = inherit
+			special_type_slot_7 = inherit
 		}
 	}
 
-	advanced_mbt_chassis = {
+	main_battle_tank_chassis_3 = {
 		abbreviation = "ambt"
-		derived_variant_name = advanced_main_battle_tank_equipment_0
+		derived_variant_name = main_battle_tank_equipment_3
 		visual_level = 0
-		year = 2017
+		year = 2009
 		archetype = main_battle_tank_chassis
 		priority = 2000
 
@@ -416,77 +370,45 @@ equipments = {
 					advanced_mbt_turret_superstructure
 				}
 			}
+			armor_composition_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
+			armor_layout_slot = {
+				required = yes #yes
+				allowed_module_categories = {
+					#
+				}
+			}
 			suspension_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_suspension
-					tank_wheel_suspension
+					#tank_suspension
+					#tank_wheel_suspension
 				}
 			}
-			ammunition_type = {
-				required = no #no
-				allowed_module_categories = {
-					sakuradite_ammunition
-				}
-			}
-			armor_construction_slot = {
+			transmission_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_armor_type
-				}
-			}
-			armor_thickness_slot = {
-				required = yes #yes
-				allowed_module_categories = {
-					tank_armor_focus
-					tank_composite_armor
+					#
 				}
 			}
 			engine_type_slot = {
 				required = yes #yes
 				allowed_module_categories = {
-					tank_gasoline_engine_type
-					tank_disel_engine_type
+					#
 				}
 			}
-			special_type_slot_1 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_2 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_3 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-			special_type_slot_4 = {
-				required = no #no
-				allowed_module_categories = {
-					tank_radio_module
-					tank_special_module
-				}
-			}
-		}
-
-		maximum_speed = 0
-		build_cost_ic = 10
-		armor_value = 0
-		hardness = 0
-		resources = {
-			steel = 3
-			chromium = 2
-			tungsten = 2
+			ammunition_type = inherit
+			special_type_slot_1 = inherit
+			special_type_slot_2 = inherit
+			special_type_slot_3 = inherit
+			special_type_slot_4 = inherit
+			special_type_slot_5 = inherit
+			special_type_slot_6 = inherit
+			special_type_slot_7 = inherit
 		}
 	}
 

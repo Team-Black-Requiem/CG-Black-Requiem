@@ -9,6 +9,10 @@ equipment_modules = {
 	### ALL STATS ARE EITHER PLACEHOLDER OR BASE GAME STATS PLEASE CHANGE IF NEEDED ###
 	### Maybe we should add an gas engine turbine as well since that makes since in
 	### a modern day perspective?
+
+	### Going to just add numbers after the module to make localizing easier instead of having like early, basic, advanced in front
+	### errr, except the modules that alreadys has early, basic, advanced, etc in front as of writing this
+
 	tank_gasoline_engine_1 = {
 		abbreviation = "gas1"
 		category = tank_gasoline_engine_type
@@ -137,45 +141,49 @@ equipment_modules = {
 		xp_cost = 1
 	}
 	### I don't remember if these are properly implemented into tanks or not
-	tank_sakuradite_engine = {
-		abbreviation = "sak1"
-		category = tank_sakuradite_engine_type
-		sfx = sfx_ui_sd_module_engine
+#	tank_sakuradite_engine = {
+#		abbreviation = "sak1"
+#		category = tank_sakuradite_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			build_cost_ic = 8
+#			#fuel_consumption = 4
+#			maximum_speed = 0.75
+#			reliability = -0.15
+#		}
+#		multiply_stats = {
+#
+#		}
+#		xp_cost = 1
+#	}
 
-		add_stats = {
-			build_cost_ic = 8
-			#fuel_consumption = 4
-			maximum_speed = 0.75
-			reliability = -0.15
-		}
-		multiply_stats = {
+#	tank_sakuradite_engine_2 = {
+#		abbreviation = "sak2"
+#		category = tank_sakuradite_engine_type
+#		sfx = sfx_ui_sd_module_engine
+#
+#		add_stats = {
+#			build_cost_ic = 10
+#			#fuel_consumption = 4
+#			maximum_speed = 0.80
+#			reliability = -0.10
+#		}
+#		multiply_stats = {
+#
+#		}
+#		xp_cost = 1
+#	}
 
-		}
-		xp_cost = 1
-	}
+	 ##  ###  #   #  ##  ###      ###  ##  #   # ###   ##  #### ### ##### ###  ##  #   #
+	#  # #  # ## ## #  # #  #    #    #  # ## ## #  # #  # #     #    #    #  #  # ##  #
+	#### ###  # # # #  # ###     #    #  # # # # ###  #  # ####  #    #    #  #  # # # #
+	#  # #  # #   # #  # #  #    #    #  # #   # #    #  #    #  #    #    #  #  # #  ##
+	#  # #  # #   #  ##  #  #     ###  ##  #   # #     ##  #### ###   #   ###  ##  #   #
 
-	tank_sakuradite_engine_2 = {
-		abbreviation = "sak2"
-		category = tank_sakuradite_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			build_cost_ic = 10
-			#fuel_consumption = 4
-			maximum_speed = 0.80
-			reliability = -0.10
-		}
-		multiply_stats = {
-
-		}
-		xp_cost = 1
-	}
-
-	 ##  ###  #   #  ##  ###      ###  ##  #   # #### ##### ###  #  #  ### ##### ###  ##  #   #
-	#  # #  # ## ## #  # #  #    #    #  # ##  # #      #   #  # #  # #      #    #  #  # ##  #
-	#### ###  # # # #  # ###     #    #  # # # # ####   #   ###  #  # #      #    #  #  # # # #
-	#  # #  # #   # #  # #  #    #    #  # #  ##    #   #   #  # #  # #      #    #  #  # #  ##
-	#  # #  # #   #  ##  #  #     ###  ##  #   # ####   #   #  # ####  ###   #   ###  ##  #   #
+	##################
+	### Needs Redo ###
+	##################
 
 	tank_cast_armor = {
 		abbreviation = "cast"
@@ -263,12 +271,17 @@ equipment_modules = {
 		xp_cost = 1
 	}
 
-	 ##  ###  #   #  ##  ###     ##### #  # ###  ### #  # #   # #### #### ####
-	#  # #  # ## ## #  # #  #      #   #  #  #  #    # #  ##  # #    #    #
-	#### ###  # # # #  # ###       #   ####  #  #    ###  # # # #### #### ####
-	#  # #  # #   # #  # #  #      #   #  #  #  #    #  # #  ## #       #    #
-	#  # #  # #   #  ##  #  #      #   #  # ###  ### #  # #   # #### #### ####
+	 ##  ###  #   #  ##  ###     #     ##  #   #  ##  #  # #####
+	#  # #  # ## ## #  # #  #    #    #  # #   # #  # #  #   #
+	#### ###  # # # #  # ###     #    ####  ###  #  # #  #   #
+	#  # #  # #   # #  # #  #    #    #  #   #   #  # #  #   #
+	#  # #  # #   #  ##  #  #    #### #  #   #    ##  ####   #
 	### Maybe too much and needs name changing in loc to not sound stupid
+
+	##################
+	### Needs Redo ###
+	##################
+
 	tank_well_balanced_armor = {
 		abbreviation = "bal"
 		category = tank_armor_focus
@@ -300,12 +313,16 @@ equipment_modules = {
 
 		xp_cost = 1
 	}
-	
+
 	#### #  # #### ###  #### #   # #### ###  ##  #   #
 	#    #  # #    #  # #    ##  # #     #  #  # ##  #
 	#### #  # #### ###  #### # # # ####  #  #  # # # #
 	   # #  #    # #    #    #  ##    #  #  #  # #  ##
 	#### #### #### #    #### #   # #### ###  ##  #   #
+
+	######################
+	### Needs Lookover ###
+	######################
 
 	tank_torsion_bar_suspension = { # Tank
 		abbreviation = "tor"
@@ -380,51 +397,59 @@ equipment_modules = {
 	####  #### #  # #     ##  #   # ####
 
 	##################
+	### Needs Redo ###
+	##################
+
+	##################
 	### Smoothbore ###
 	##################
 
-	early_smoothbore = { # Early MBT
-		abbreviation = "c90"
+	smoothbore_1 = { ### early smoothbore
+		abbreviation = "smth1"
 		category = mbt_weapon
 
 		allowed_module_categories = {
 			ammunition_type = {
-				smoothbore_ammunition
+				apfsds_ammunition
+				heatfs_ammunition
 			}
 		}
 	}
 
-	basic_smoothbore = { # Basic MBT
-		abbreviation = "s105"
+	smoothbore_2 = { ### basic smoothbore
+		abbreviation = "smth2"
 		category = mbt_weapon
 
 		allowed_module_categories = {
 			ammunition_type = {
-				smoothbore_ammunition
-			}
-		}
-		xp_cost = 1
-	}
-
-	improved_smoothbore = { # Improved MBT
-		abbreviation = "120"
-		category = mbt_weapon
-
-		allowed_module_categories = {
-			ammunition_type = {
-				smoothbore_ammunition
+				apfsds_ammunition
+				heatfs_ammunition
 			}
 		}
 		xp_cost = 1
 	}
 
-	advanced_smoothbore = { # Advanced MBT
-		abbreviation = "s125"
+	smoothbore_3 = { ### improved smoothbore
+		abbreviation = "smth3"
 		category = mbt_weapon
 
 		allowed_module_categories = {
 			ammunition_type = {
-				smoothbore_ammunition
+				apfsds_ammunition
+				heatfs_ammunition
+			}
+		}
+		xp_cost = 1
+	}
+
+	smoothbore_4 = { ### advanced smoothbore
+		abbreviation = "smth4"
+		category = mbt_weapon
+
+		allowed_module_categories = {
+			ammunition_type = {
+				apfsds_ammunition
+				heatfs_ammunition
 				sakuradite_ammunition
 			}
 		}
@@ -435,67 +460,67 @@ equipment_modules = {
 	### Rifled ###
 	##############
 
-	early_rifled = { # Early TD MBT
-		allow_equipment_type = anti_tank
-		forbid_equipment_type_exact_match = armor
-		abbreviation = "r122"
-		category = rifled_weapon
-
-		allowed_module_categories = {
-			ammunition_type = {
-				rifled_ammunition
-			}
-		}
-	}
-
-	basic_rifled = { # Basic TD MBT
-		allow_equipment_type = anti_tank
-		forbid_equipment_type_exact_match = armor
-		abbreviation = "r105"
-		category = rifled_weapon
-
-		allowed_module_categories = {
-			ammunition_type = {
-				rifled_ammunition
-			}
-		}
-		xp_cost = 1
-	}
-
-	improved_rifled = { # Improved TD MBT
-		allow_equipment_type = anti_tank
-		forbid_equipment_type_exact_match = armor
-		abbreviation = "r120"
-		category = rifled_weapon
-
-		allowed_module_categories = {
-			ammunition_type = {
-				rifled_ammunition
-			}
-		}
-		xp_cost = 1
-	}
-
-	advanced_rifled = { # Advanced TD MBT
-		allow_equipment_type = anti_tank
-		forbid_equipment_type_exact_match = armor
-		abbreviation = "r125"
-		category = rifled_weapon
-
-		allowed_module_categories = {
-			ammunition_type = {
-				rifled_ammunition
-				sakuradite_ammunition
-			}
-		}
-		xp_cost = 1
-	}
+#	early_rifled = { # Early TD MBT
+#		allow_equipment_type = anti_tank
+#		forbid_equipment_type_exact_match = armor
+#		abbreviation = "r122"
+#		category = rifled_weapon
+#
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				rifled_ammunition
+#			}
+#		}
+#	}
+#
+#	basic_rifled = { # Basic TD MBT
+#		allow_equipment_type = anti_tank
+#		forbid_equipment_type_exact_match = armor
+#		abbreviation = "r105"
+#		category = rifled_weapon
+#
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				rifled_ammunition
+#			}
+#		}
+#		xp_cost = 1
+#	}
+#
+#	improved_rifled = { # Improved TD MBT
+#		allow_equipment_type = anti_tank
+#		forbid_equipment_type_exact_match = armor
+#		abbreviation = "r120"
+#		category = rifled_weapon
+#
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				rifled_ammunition
+#			}
+#		}
+#		xp_cost = 1
+#	}
+#
+#	advanced_rifled = { # Advanced TD MBT
+#		allow_equipment_type = anti_tank
+#		forbid_equipment_type_exact_match = armor
+#		abbreviation = "r125"
+#		category = rifled_weapon
+#
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				rifled_ammunition
+#				sakuradite_ammunition
+#			}
+#		}
+#		xp_cost = 1
+#	}
 
 	########################
 	### Cannon/Artillery ###
 	########################
 
-	early_cannon = { # Early SPG MBT
+	cannon_1 = { # Early SPG MBT
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "c203"
@@ -503,12 +528,15 @@ equipment_modules = {
 
 		allowed_module_categories = {
 			ammunition_type = {
-				cannon_ammunition
+				fragmentation_ammunition
+				hesh_ammunition
+				proximity_ammunition
 			}
 		}
+		xp_cost = 1
 	}
 
-	basic_cannon = { # Basic SPG MBT
+	cannon_2 = { # Basic SPG MBT
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "c155"
@@ -516,13 +544,15 @@ equipment_modules = {
 
 		allowed_module_categories = {
 			ammunition_type = {
-				cannon_ammunition
+				fragmentation_ammunition
+				hesh_ammunition
+				proximity_ammunition
 			}
 		}
 		xp_cost = 1
 	}
 
-	improved_cannon = { # Improved SPG MBT
+	cannon_3 = { # Improved SPG MBT
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "c152"
@@ -530,13 +560,15 @@ equipment_modules = {
 
 		allowed_module_categories = {
 			ammunition_type = {
-				cannon_ammunition
+				fragmentation_ammunition
+				hesh_ammunition
+				proximity_ammunition
 			}
 		}
 		xp_cost = 1
 	}
 
-	advanced_cannon = { # Advanced SPG MBT
+	cannon_4 = { # Advanced SPG MBT
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "u155"
@@ -544,10 +576,61 @@ equipment_modules = {
 
 		allowed_module_categories = {
 			ammunition_type = {
-				cannon_ammunition
+				fragmentation_ammunition
+				hesh_ammunition
+				proximity_ammunition
 				sakuradite_ammunition
 			}
 		}
+		xp_cost = 1
+	}
+
+	################
+	### Anti-Air ###
+	################
+
+	small_cailber_aa_1 = { ### Medium Air Attack, slightly less expensive then large caliber, limited to no acess to different shells, probably effective in cities against infantry
+		allow_equipment_type = anti_air 
+		forbid_equipment_type_exact_match = armor
+
+		category = nsb_anti_air
+		allowed_module_categories = {
+			ammunition_type = {
+				apfsds_ammunition
+			}
+		}
+
+		xp_cost = 1
+	}
+
+	large_caliber_aa_1 = { ### Medium Air Attack, somewhat expensive, acesss to various shell types to specialize if wanted
+		allow_equipment_type = anti_air 
+		forbid_equipment_type_exact_match = armor
+
+		category = nsb_anti_air
+		allowed_module_categories = {
+			ammunition_type = {
+				proximity_ammunition
+				fragmentation_ammunition
+				hesh_ammunition ### Maybe?
+			}
+		}
+
+		xp_cost = 1
+	}
+
+	missile_aa_1 = { ### Highest Air Attack, expensive, acess to limited ammo can't do anything else basically
+		allow_equipment_type = anti_air ### Could be Rocket, may confuse people though
+		forbid_equipment_type_exact_match = armor
+		
+		category = nsb_anti_air
+		allowed_module_categories = {
+			ammunition_type = {
+				proximity_ammunition
+				fragmentation_ammunition ### I think I would need to make a special missile ammo to keep this in line
+			}
+		}
+
 		xp_cost = 1
 	}
 
@@ -555,61 +638,61 @@ equipment_modules = {
 	### Assault Gun ###
 	###################
 
-	early_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket 
-		forbid_equipment_type_exact_match = armor
-
-		category = assault_weapon
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	basic_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket 
-		forbid_equipment_type_exact_match = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	improved_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket 
-		forbid_equipment_type_exact_match = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
-
-	advanced_assault_gun = { # Basic Assault Gun
-		allow_equipment_type = rocket 
-		forbid_equipment_type_exact_match = armor
-
-		category = assault_weapon 
-		allowed_module_categories = {
-			ammunition_type = {
-				
-			}
-		}
-
-		xp_cost = 1
-	}
+#	early_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type_exact_match = armor
+#
+#		category = assault_weapon
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	basic_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type_exact_match = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	improved_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type_exact_match = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
+#
+#	advanced_assault_gun = { # Basic Assault Gun
+#		allow_equipment_type = rocket 
+#		forbid_equipment_type_exact_match = armor
+#
+#		category = assault_weapon 
+#		allowed_module_categories = {
+#			ammunition_type = {
+#				
+#			}
+#		}
+#
+#		xp_cost = 1
+#	}
 
 
 	##### #  # ###  ###  #### #####    ##### #   # ###  #### ####
@@ -622,24 +705,6 @@ equipment_modules = {
 	### Early MBT ###
 	#################
 
-	early_mbt_rounded_turret = {
-		abbreviation = "eround"
-		category = early_mbt_turret_superstructure
-		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
-			}
-		}
-
-		xp_cost = 1
-	}
-
 	early_mbt_composite_turret = {
 		abbreviation = "ecomp"
 		category = early_mbt_turret_superstructure
@@ -647,56 +712,47 @@ equipment_modules = {
 			main_armament_slot = {
 				mbt_weapon
 			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_composite_armor
-			}
 		}
-
 		xp_cost = 1
 	}
 
 	early_mbt_super_structure = {
 		allow_equipment_type = rocket
-		allow_equipment_type = anti_tank
+		#allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "esuper"
 		category = early_mbt_turret_superstructure
 		allowed_module_categories = {
 			main_armament_slot = {
-				rifled_weapon
-				assault_weapon
-			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
+				rocket_weapon
 			}
 		}
-
 		xp_cost = 1
 	}
 
 	early_mbt_artillery_structure = {
 		allow_equipment_type = artillery
 		forbid_equipment_type_exact_match = armor
-		abbreviation = "earti"
+		abbreviation = "earty"
 		category = early_mbt_turret_superstructure
 		allowed_module_categories = {
 			main_armament_slot = {
 				artillery_weapon
 			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
+		}
+		xp_cost = 1
+	}
+
+	early_mbt_aa_turret = {
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		abbreviation = "eaa"
+		category = early_mbt_turret_superstructure
+		allowed_module_categories = {
+			main_armament_slot = {
+				nsb_anti_air
 			}
 		}
-
 		xp_cost = 1
 	}
 
@@ -704,31 +760,14 @@ equipment_modules = {
 	### Basic MBT ###
 	#################
 
-	basic_mbt_rounded_turret = {
-		abbreviation = "bround"
-		category = basic_mbt_turret_superstructure
-		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
-			}
-		}
-
-		xp_cost = 1
-	}
-
 	basic_mbt_composite_turret = {
+		allow_equipment_type = anti_air
 		abbreviation = "bcomp"
 		category = basic_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
+			#main_armament_slot = {
+			#	mbt_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -742,15 +781,15 @@ equipment_modules = {
 
 	basic_mbt_super_structure = {
 		allow_equipment_type = rocket
-		allow_equipment_type = anti_tank
+		#allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "bsuper"
 		category = basic_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				rifled_weapon
-				assault_weapon
-			}
+			#main_armament_slot = {
+			#	rifled_weapon
+			#	assault_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -768,9 +807,9 @@ equipment_modules = {
 		abbreviation = "barti"
 		category = basic_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				artillery_weapon
-			}
+			#main_armament_slot = {
+			#	artillery_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -786,31 +825,13 @@ equipment_modules = {
 	### Improved MBT ###
 	####################
 
-	improved_mbt_rounded_turret = {
-		abbreviation = "iround"
-		category = improved_mbt_turret_superstructure
-		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
-			armor_construction_slot = {
-				tank_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
-			}
-		}
-
-		xp_cost = 1
-	}
-
 	improved_mbt_composite_turret = {
 		abbreviation = "icomp"
 		category = improved_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
+			#main_armament_slot = {
+			#	mbt_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -824,15 +845,15 @@ equipment_modules = {
 
 	improved_mbt_super_structure = {
 		allow_equipment_type = rocket
-		allow_equipment_type = anti_tank
+		#allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "isuper"
 		category = improved_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				rifled_weapon
-				assault_weapon
-			}
+			#main_armament_slot = {
+			#	rifled_weapon
+			#	assault_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -850,9 +871,9 @@ equipment_modules = {
 		abbreviation = "iarti"
 		category = improved_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				artillery_weapon
-			}
+			#main_armament_slot = {
+			#	artillery_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 			}
@@ -868,32 +889,13 @@ equipment_modules = {
 	### Advanced MBT ###
 	####################
 
-	advanced_mbt_rounded_turret = {
-		abbreviation = "around"
-		category = advanced_mbt_turret_superstructure
-		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
-			armor_construction_slot = {
-				tank_armor_type
-				tank_sakuradite_armor_type
-			}
-			armor_thickness_slot = {
-				tank_armor_focus
-			}
-		}
-
-		xp_cost = 1
-	}
-
 	advanced_mbt_composite_turret = {
 		abbreviation = "acomp"
 		category = advanced_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				mbt_weapon
-			}
+			#main_armament_slot = {
+			#	mbt_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 				tank_sakuradite_armor_type
@@ -908,15 +910,15 @@ equipment_modules = {
 
 	advanced_mbt_super_structure = {
 		allow_equipment_type = rocket
-		allow_equipment_type = anti_tank
+		#allow_equipment_type = anti_tank
 		forbid_equipment_type_exact_match = armor
 		abbreviation = "asuper"
 		category = advanced_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				rifled_weapon
-				assault_weapon
-			}
+			#main_armament_slot = {
+			#	rifled_weapon
+			#	assault_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 				tank_sakuradite_armor_type
@@ -935,9 +937,9 @@ equipment_modules = {
 		abbreviation = "aarti"
 		category = advanced_mbt_turret_superstructure
 		allowed_module_categories = {
-			main_armament_slot = {
-				artillery_weapon
-			}
+			#main_armament_slot = {
+			#	artillery_weapon
+			#}
 			armor_construction_slot = {
 				tank_armor_type
 				tank_sakuradite_armor_type
@@ -958,252 +960,280 @@ equipment_modules = {
 
 	### Radios 
 
-	tank_radio_1 = {
-		abbreviation = "rad1"
-		category = tank_radio_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 0.5
-		}
-		xp_cost = 1
-		multiply_stats = {
-			defense = 0.20
-			breakthrough = 0.15
-		}
-	}
-
-	tank_radio_2 = {
-		abbreviation = "rad2"
-		category = tank_radio_module
-		parent = tank_radio_1
-		sfx = sfx_ui_sd_module_turret
-		
-		add_stats = {
-			build_cost_ic = 1.5
-		}
-		xp_cost = 1
-		multiply_stats = {
-			defense = 0.40
-			breakthrough = 0.25
-		}
-	}
-
-	tank_radio_3 = {
-		abbreviation = "rad3"
-		category = tank_radio_module
-		parent = tank_radio_2
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 2.5
-		}
-		xp_cost = 1
-		multiply_stats = {
-			defense = 0.60
-			breakthrough = 0.40
-		}
-	}
-
-	### Base Game
-
-#	amphibious_drive = {
-#		abbreviation = "amph"
-#		category = tank_special_module
+#	tank_radio_1 = {
+#		abbreviation = "rad1"
+#		category = tank_radio_module
 #		sfx = sfx_ui_sd_module_turret
-#		allow_equipment_type = amphibious
-#		forbid_equipment_type_exact_match = armor
-#		forbid_equipment_type = {
-#			anti_air
-#			artillery
-#			anti_tank
-#			flame
-#		}
 #
 #		add_stats = {
-#			build_cost_ic = 2
-#			reliability = -0.15
+#			build_cost_ic = 0.5
 #		}
 #		xp_cost = 1
 #		multiply_stats = {
-#			build_cost_ic = 0.1
+#			defense = 0.20
+#			breakthrough = 0.15
 #		}
 #	}
-
-	stabilizer = {
-		abbreviation = "stab"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 2
-			breakthrough = 5
-		}
-		xp_cost = 1
-	}
-
-	extra_ammo_storage = {
-		abbreviation = "extra"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			reliability = -0.1
-			breakthrough = 2
-			defense = 4
-		}
-		xp_cost = 1
-	}
-
-	wet_ammo_storage = {
-		abbreviation = "wet"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			reliability = 0.15
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-	}
-
-	armor_skirts = {
-		abbreviation = "skirt"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			armor_value = 2
-			breakthrough = 3
-			build_cost_ic = 0.5
-		}
-		xp_cost = 1
-	}
-
-	dozer_blade = {
-		abbreviation = "dozer"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			entrenchment = 1
-			build_cost_ic = 1
-		}
-		xp_cost = 1
-	}
-
-	auto_loader = {
-		abbreviation = "auto"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 2.5
-			breakthrough = 4
-			defense = 4
-		}
-		xp_cost = 1
-	}
-
-	coaxial_machine_gun = {
-		abbreviation = "mg"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			soft_attack = 1
-			defense = 2
-			build_cost_ic = 0.5
-		}
-		xp_cost = 1
-	}
-
-	aa_machine_gun = {
-		abbreviation = "aamg"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			soft_attack = 1
-			defense = 2
-			build_cost_ic = 0.5
-		}
-		xp_cost = 1
-	}
-
-	expanded_fuel_tank = {
-		abbreviation = "fuel"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			fuel_capacity = 100
-			build_cost_ic = 1
-			maximum_speed = -0.25
-		}
-		xp_cost = 1
-	}
-
-	smoke_launchers = {
-		abbreviation = "smok"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 0.5
-			defense = 2
-			breakthrough = 1
-		}
-		xp_cost = 1
-	}
-
+#
+#	tank_radio_2 = {
+#		abbreviation = "rad2"
+#		category = tank_radio_module
+#		parent = tank_radio_1
+#		sfx = sfx_ui_sd_module_turret
+#		
+#		add_stats = {
+#			build_cost_ic = 1.5
+#		}
+#		xp_cost = 1
+#		multiply_stats = {
+#			defense = 0.40
+#			breakthrough = 0.25
+#		}
+#	}
+#
+#	tank_radio_3 = {
+#		abbreviation = "rad3"
+#		category = tank_radio_module
+#		parent = tank_radio_2
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			build_cost_ic = 2.5
+#		}
+#		xp_cost = 1
+#		multiply_stats = {
+#			defense = 0.60
+#			breakthrough = 0.40
+#		}
+#	}
+#
+#	### Base Game
+#
+##	amphibious_drive = {
+##		abbreviation = "amph"
+##		category = tank_special_module
+##		sfx = sfx_ui_sd_module_turret
+##		allow_equipment_type = amphibious
+##		forbid_equipment_type_exact_match = armor
+##		forbid_equipment_type = {
+##			anti_air
+##			artillery
+##			anti_tank
+##			flame
+##		}
+##
+##		add_stats = {
+##			build_cost_ic = 2
+##			reliability = -0.15
+##		}
+##		xp_cost = 1
+##		multiply_stats = {
+##			build_cost_ic = 0.1
+##		}
+##	}
+#
+#	stabilizer = {
+#		abbreviation = "stab"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			build_cost_ic = 2
+#			breakthrough = 5
+#		}
+#		xp_cost = 1
+#	}
+#
+#	extra_ammo_storage = {
+#		abbreviation = "extra"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			reliability = -0.1
+#			breakthrough = 2
+#			defense = 4
+#		}
+#		xp_cost = 1
+#	}
+#
+#	wet_ammo_storage = {
+#		abbreviation = "wet"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			reliability = 0.15
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#	}
+#
+#	armor_skirts = {
+#		abbreviation = "skirt"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			armor_value = 2
+#			breakthrough = 3
+#			build_cost_ic = 0.5
+#		}
+#		xp_cost = 1
+#	}
+#
+#	dozer_blade = {
+#		abbreviation = "dozer"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			entrenchment = 1
+#			build_cost_ic = 1
+#		}
+#		xp_cost = 1
+#	}
+#
+#	auto_loader = {
+#		abbreviation = "auto"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			build_cost_ic = 2.5
+#			breakthrough = 4
+#			defense = 4
+#		}
+#		xp_cost = 1
+#	}
+#
+#	coaxial_machine_gun = {
+#		abbreviation = "mg"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			soft_attack = 1
+#			defense = 2
+#			build_cost_ic = 0.5
+#		}
+#		xp_cost = 1
+#	}
+#
+#	aa_machine_gun = {
+#		abbreviation = "aamg"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			soft_attack = 1
+#			defense = 2
+#			build_cost_ic = 0.5
+#		}
+#		xp_cost = 1
+#	}
+#
+#	expanded_fuel_tank = {
+#		abbreviation = "fuel"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			fuel_capacity = 100
+#			build_cost_ic = 1
+#			maximum_speed = -0.25
+#		}
+#		xp_cost = 1
+#	}
+#
+#	smoke_launchers = {
+#		abbreviation = "smok"
+#		category = tank_special_module
+#		sfx = sfx_ui_sd_module_turret
+#
+#		add_stats = {
+#			build_cost_ic = 0.5
+#			defense = 2
+#			breakthrough = 1
+#		}
+#		xp_cost = 1
+#	}
+#
 	 ##  #   # #   # #  # #   # ### ##### ###  ##  #   #
 	#  # ## ## ## ## #  # ##  #  #    #    #  #  # ##  #
 	#### # # # # # # #  # # # #  #    #    #  #  # # # #
 	#  # #   # #   # #  # #  ##  #    #    #  #  # #  ##
 	#  # #   # #   # #### #   # ###   #   ###  ##  #   #
 
+	##############
+	### APFSDS ###
+	##############
+
 	apfsds = { # Armor Piercing Fin-Stabalized Discarding Sabot
 		abbreviation = "apfs"
-		category = smoothbore_ammunition
+		category = apfsds_ammunition
 
 		xp_cost = 1
 	}
+
+	###############
+	### APHECBC ###
+	###############
 
 	aphecbc = { # Armor Piercing High Explosive Capped Ballastic Capped
 		abbreviation = "aphe"
-		category = rifled_ammunition
+		category = aphecbc_ammunition
 
 		xp_cost = 1
 	}
+
+	##############
+	### HEATFS ###
+	##############
 
 	heatfs = { # Heat Explosive Anti-Tank Fin-Stabalized
 		abbreviation = "heat"
-		category = smoothbore_ammunition
+		category = heatfs_ammunition
 
 		xp_cost = 1
 	}
+
+	############
+	### HESH ###
+	############
 
 	hesh = { # High Explosive Squash Head
 		abbreviation = "besh"
-		category = rifled_ammunition
+		category = hesh_ammunition
 
 		xp_cost = 1
 	}
+
+	#################
+	### Proximity ###
+	#################
 
 	proximity = { #Proximity Fuse Shell
 		abbreviation = "prox"
-		category = cannon_ammunition
+		category = proximity_ammunition
 
 		xp_cost = 1
 	}
+
+	####################
+	### Fragmentaion ###
+	####################
 
 	fragmentation = { # Fragmentation
 		abbreviation = "frag"
-		category = cannon_ammunition
+		category = fragmentation_ammunition
 
 		xp_cost = 1
 	}
+
+	###########################
+	### Sakuradite Charges? ###
+	###########################
 
 	sakuradite_charges = { # Sakuradite Propellant
 		abbreviation = "saka"

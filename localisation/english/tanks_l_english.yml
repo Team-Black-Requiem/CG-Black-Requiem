@@ -1,26 +1,37 @@
 ﻿l_english:
- ### Moving everything NSB Update related here to help organzie things maybe?
+ ### Moving everything NSB Update related here to help organzie things
+ ### I probably frogot to move some stuff
  ### Tank Chassis
- early_mbt_chassis:0 "1st Generation Main Battle Tank (MBT)"
- basic_mbt_chassis:0 "2nd Generation Main Battle Tank (MBT)"
- improved_mbt_chassis:0 "3rd Generation Main Battle Tank (MBT)"
- advanced_mbt_chassis:0 "4th Generation Main Battle Tank (MBT)"
+ main_battle_tank_chassis_0:0 "1st Generation Main Battle Tank (MBT)"
+ main_battle_tank_chassis_1:0 "2nd Generation Main Battle Tank (MBT)"
+ main_battle_tank_chassis_2:0 "3rd Generation Main Battle Tank (MBT)"
+ main_battle_tank_chassis_3:0 "4th Generation Main Battle Tank (MBT)"
  sakuradite_main_battle_tank_chassis:0 "5th Generation MBT (Anti-KN MBT)"
- ### Tank Chassis TD
+ ### Tank Chassis TD Not Used
  main_battle_tank_destroyer_chassisearly_mbt_chassis:0 "1st Generation Tank Destroyer (TD)"
  main_battle_tank_destroyer_chassisbasic_mbt_chassis:0 "2nd Generation Tank Destroyer (TD)"
  main_battle_tank_destroyer_chassisimproved_mbt_chassis:0 "3rd Generation Tank Destroyer (TD)"
  main_battle_tank_destroyer_chassisadvanced_mbt_chassis:0 "4th Generation Tank Destroyer (TD)"
  ### Tank Chassis Artillery
- main_battle_tank_artillery_chassisearly_mbt_chassis:0 "1st Generation Tank Artillery (SPG)"
- main_battle_tank_artillery_chassisbasic_mbt_chassis:0 "2nd Generation Tank Artillery (SPG)"
- main_battle_tank_artillery_chassisimproved_mbt_chassis:0 "3rd Generation Tank Artillery (SPG)"
- main_battle_tank_artillery_chassisadvanced_mbt_chassis:0 "4th Generation Tank Artillery (SPG)"
- ### Tank Chassis Sturmgeschütz
- main_battle_tank_assault_gun_chassisearly_mbt_chassis:0 "1st Modern Assault Gun (Sturmgeschütz)"
- main_battle_tank_assault_gun_chassisbasic_mbt_chassis:0 "2nd Modern Assault Gun (Sturmgeschütz)"
- main_battle_tank_assault_gun_chassisimproved_mbt_chassis:0 "3rd Modern Assault Gun (Sturmgeschütz)"
- main_battle_tank_assault_gun_chassisadvanced_mbt_chassis:0 "4th Modern Assault Gun (Sturmgeschütz)"
+ main_battle_tank_artillery_chassis_0:0 "1st Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassis_1:0 "2nd Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassis_2:0 "3rd Generation Tank Artillery (SPG)"
+ main_battle_tank_artillery_chassis_3:0 "4th Generation Tank Artillery (SPG)"
+ ### Tank Chassis Sturmgeschütz Not Used
+# main_battle_tank_assault_gun_chassisearly_mbt_chassis:0 "1st Modern Assault Gun (Sturmgeschütz)"
+# main_battle_tank_assault_gun_chassisbasic_mbt_chassis:0 "2nd Modern Assault Gun (Sturmgeschütz)"
+# main_battle_tank_assault_gun_chassisimproved_mbt_chassis:0 "3rd Modern Assault Gun (Sturmgeschütz)"
+# main_battle_tank_assault_gun_chassisadvanced_mbt_chassis:0 "4th Modern Assault Gun (Sturmgeschütz)"
+ ### Tank Chassis Rocket Artillery (ATGM/HIMARS type stuff)
+ main_battle_tank_rocket_chassis_0:0 "1st Generation ATGM/HIMARS Tank"
+ main_battle_tank_rocket_chassis_1:0 "2nd Generation ATGM/HIMARS Tank"
+ main_battle_tank_rocket_chassis_2:0 "3rd Generation ATGM/HIMARS Tank"
+ main_battle_tank_rocket_chassis_3:0 "4th Generation ATGM/HIMARS Tank"
+ ### Tank Chassis SPAA
+ main_battle_tank_aa_chassis_0:0 "1st Generation SPAA"
+ main_battle_tank_aa_chassis_1:0 "2nd Generation SPAA"
+ main_battle_tank_aa_chassis_2:0 "3rd Generation SPAA"
+ main_battle_tank_aa_chassis_3:0 "4th Generation SPAA"
 
  ### Modules
  
@@ -46,6 +57,13 @@
  ### Super Structure
  
  ### Armor Section
+ 
+
+
+
+
+
+
  tank_cast_armor:0 "Casted armor"
  tank_improved_cast_armor:0 "Improved Armor Castings"
  tank_rivet_armor:0 "Riveted Armor"
@@ -73,11 +91,12 @@
  fragmentation_desc:0 "Fragmentation Rounds are similar to artillery Rounds with the exception that they aren't made to destroy terrain and fortifications but, rather litter large areas with tons of fragmentation."
  sakuradite_charges:0 "Sakuradite Enhanced Rounds"
  sakuradite_charges_desc:0 "By harnessing the powers of Sakuradite, we are able to push our Rounds to the absolute limits achieving speeds that would destroy traditional APFSDS and make Depleted Uranium look like a child's play toy."
- ### Hard to Label
+ ### Module Slot Names
  EQ_MOD_CAT_mbt_weapon_TITLE:0 "Smoothbore Armaments"
  EQ_MOD_CAT_rifled_weapon_TITLE:0 "Rifled Armaments"
  EQ_MOD_CAT_artillery_weapon_TITLE:0 "Artillery Armaments"
- EQ_MOD_CAT_assault_weapon_TITLE:0 "Assault Armaments"
+ EQ_MOD_CAT_nsb_anti_air_TITLE:0 "Anti-Air Armaments"
+ #EQ_MOD_CAT_assault_weapon_TITLE:0 "Assault Armaments"
  EQ_MOD_CAT_early_mbt_turret_superstructure_TITLE:0 "Tank Super Structure"
  EQ_MOD_CAT_basic_mbt_turret_superstructure_TITLE:0 "Tank Super Structure"
  EQ_MOD_CAT_improved_mbt_turret_superstructure_TITLE:0 "Tank Super Structure"
@@ -88,32 +107,72 @@
  EQ_MOD_CAT_tank_gasoline_engine_type_TITLE:0 "Gasoline Engine"
  EQ_MOD_CAT_tank_suspension_TITLE:0 "Tank Suspension"
  EQ_MOD_CAT_tank_wheel_suspension_TITLE:0 "Wheel Based Suspension"
- EQ_MOD_CAT_smoothbore_ammunition_TITLE:0 "Smoothbore Ammunition"
- EQ_MOD_CAT_rifled_ammunition_TITLE:0 "Rifled Ammunition"
- EQ_MOD_CAT_cannon_ammunition_TITLE:0 "Cannon Ammunition"
- EQ_MOD_CAT_sakuradite_ammunition_TITLE:0 "Sakuradite Ammunition"
- ### Module Slot Names
+ EQ_MOD_SLOT_armor_composition_slot_TITLE:0 "Armor Composition"
+ EQ_MOD_SLOT_armor_layout_slot_TITLE:0 "Armor Layout"
+ EQ_MOD_SLOT_transmission_slot_TITLE:0 "Transmission"
+ ### AMMO
  EQ_MOD_SLOT_ammunition_type_TITLE:0 "Ammunition"
- EQ_MOD_SLOT_armor_construction_slot_TITLE:0 "Armor Construction"
- EQ_MOD_SLOT_armor_thickness_slot_TITLE:0 "Armor Type"
- ### Designer
+ EQ_MOD_CAT_apfsds_ammunition_TITLE:0 "Armour-Piercing Fin-Stabilized Discading Sabot"
+ EQ_MOD_CAT_aphecbc_ammunition_TITLE:0 "Armour-Piercing High-Explosive Capped Ballistic Capped"
+ EQ_MOD_CAT_heatfs_ammunition_TITLE:0 "High-Explosive Anti-Tank Fin-Stabilized"
+ EQ_MOD_CAT_hesh_ammunition_TITLE:0 "High-Explosive Squash Head"
+ EQ_MOD_CAT_proximity_ammunition_TITLE:0 "Proximity Fused"
+ EQ_MOD_CAT_fragmentation_ammunition_TITLE:0 "Framentation"
+ EQ_MOD_CAT_sakuradite_ammunition_TITLE:0 "Sakuradite Charges"
+ ### Designer Drop Down Naming
  tank_designer_main_battle_tank_chassis:0 "Main Battle Tank"
- tank_designer_main_battle_tank_chassis_role_disallowed:0 "Remove the module that forbids the $tank_designer_main_battle_tank_chassis|H$ role to be able to switch to it."
- tank_designer_main_battle_tank_assault_gun_chassis:0 "Assault Gun"
- tank_designer_main_battle_tank_assault_gun_chassis_role_disallowed:0 "Add a module that allows the §HAssault Gun§! role to be able to switch to it."
+ tank_designer_main_battle_tank_chassis_role_disallowed:0 "Remove the module that forbids the $Main Battle Tank|H$ role to be able to switch to it."
+ tank_designer_artillery:0 "Artillery"
+ tank_designer_artillery_role_disallowed:0 "Add a module that allows the §HArtillery§! role to be able to switch to it."
+ tank_designer_rocket:0 "HIMARS"
+ tank_designer_rocket_role_disallowed:0 "Add a module that allows the §HHIMARS§! role to be able to switch to it."
+ tank_designer_anti_air:0 "Anti-Air"
+ tank_designer_anti_air_role_disallowed:0 "Add a module that allows the §HAnti-Air§! role to be able to switch to it."
  ### Equipment
- early_main_battle_tank_equipment_0:0 "1st Generation Main Battle Tank"
- basic_main_battle_tank_equipment_0:0 "2nd Generation Main Battle Tank"
- improved_main_battle_tank_equipment_0:0 "3rd Generation Main Battle Tank"
- advanced_main_batttle_tank_equipment_0:0 "4th Generation Main Battle Tank"
- ### Variant Equipment... I don't understand how it works it just does
- main_battle_tank_destroyer_equipment_0:0 "Tank Destroyer"
- main_battle_tank_destroyer_equipment_1:0 "test"
- main_battle_tank_artillery_equipment_0:0 "Artillery"
- main_battle_tank_assault_gun_equipment_0:0 "Assault Gun"
+ #early_main_battle_tank_equipment_0:0 "1st Generation Main Battle Tank"
+ #basic_main_battle_tank_equipment_0:0 "2nd Generation Main Battle Tank"
+ #improved_main_battle_tank_equipment_0:0 "3rd Generation Main Battle Tank"
+ #advanced_main_batttle_tank_equipment_0:0 "4th Generation Main Battle Tank"
 
  ### Division Brigade Thingys
  nsb_modern_tank_destroyer_brigade:0 "Tank Destroyer"
  nsb_modern_armor:0 "Modern Tank"
  nsb_modern_spg_brigade:0 "SP Artillery"
  nsb_modern_assault_gun_brigade:0 "Assault Gun"
+ ### Support Company Versions
+
+ ### Country Specfic Names/Variant Equipment Names
+ ### Example BRT_main_battle_tank_equipment_0:0 "British Tank"
+ ### If no tag is in front, it will be applied to every countries tank that don't have a specfic tag like in the example above
+
+ ###########
+ ### MBT ###
+ ###########
+ main_battle_tank_equipment_0:0 "1st Generation Main Battle Tank"
+ main_battle_tank_equipment_1:0 "2nd Generation Main Battle Tank"
+ main_battle_tank_equipment_2:0 "3rd Generation Main Battle Tank"
+ main_battle_tank_equipment_3:0 "4th Generation Main Battle Tank"
+
+ ###########
+ ### SPG ###
+ ###########
+ main_battle_tank_artillery_equipment_0:0 "1st Generation SPG"
+ main_battle_tank_artillery_equipment_1:0 "2nd Generation SPG"
+ main_battle_tank_artillery_equipment_2:0 "3rd Generation SPG"
+ main_battle_tank_artillery_equipment_3:0 "4th Generation SPG"
+
+ ############
+ ### SPAA ###
+ ############
+ main_battle_tank_aa_equipment_0:0 "1st Genration SPAA"
+ main_battle_tank_aa_equipment_1:0 "2nd Generation SPAA"
+ main_battle_tank_aa_equipment_2:0 "3rd Generation SPAA"
+ main_battle_tank_aa_equipment_3:0 "4th Generation SPAA"
+
+ ####################
+ ### Rocket/HIMAR ###
+ ####################
+ main_battle_tank_rocket_equipment_0:0 "1st Generation HIMAR"
+ main_battle_tank_rocket_equipment_1:0 "2nd Generation HIMAR"
+ main_battle_tank_rocket_equipment_2:0 "3rd Generation HIMAR"
+ main_battle_tank_rocket_equipment_3:0 "4th Generation HIMAR"
