@@ -2789,6 +2789,7 @@ Modified_Knightmare_Simulations = {
 
 			modifier = {
 				political_power_gain = 0.25
+				master_build_autonomy_factor = -0.02
 			}
 		}
 
@@ -2852,7 +2853,7 @@ Modified_Knightmare_Simulations = {
 
 		### LUKAS POLITICAL IDEAS PHASE 2 ###
 
-		Sru_government_power_struggle = {
+		SRU_government_power_struggle = {
 			allowed = {
 				always = no
 			}
@@ -2867,6 +2868,71 @@ Modified_Knightmare_Simulations = {
 				stability_weekly_factor = -0.1
 				political_power_factor = -0.15
 				war_support_weekly = -0.01
+			}
+		}
+
+		SRU_prioritising_cheka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.04
+			}
+		}
+
+		SRU_integrating_the_apparatchiks = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly_factor = -0.04
+			}
+		}
+
+		SRU_fanaticism_embraced = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 1000
+				war_support_weekly = -0.02
+			}
+		}
+
+		SRU_assimilating_the_nomenklatura = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_weekly = -0.05
 			}
 		}
 

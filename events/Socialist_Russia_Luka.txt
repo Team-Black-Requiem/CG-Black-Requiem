@@ -1318,6 +1318,103 @@ country_event = { #operation red thunder
 
 #Political Struggle Events
 
+country_event = { #expand the councils emergency powers
+	id = SRU_Luka_Phase_Two.42
+	title = SRU_Luka_Phase_Two.42.t
+	desc = SRU_Luka_Phase_Two.42.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_timed_idea = {
+			idea = SRU_government_power_struggle
+			days = 160
+		}
+		name = SRU_Luka_Phase_Two.42.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #priortise cheka
+	id = SRU_Luka_Phase_Two.43
+	title = SRU_Luka_Phase_Two.43.t
+	desc = SRU_Luka_Phase_Two.43.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_timed_idea = {
+			idea = SRU_prioritising_cheka
+			days = 120
+		}
+		name = SRU_Luka_Phase_Two.43.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #integrating the apprathiks
+	id = SRU_Luka_Phase_Two.44
+	title = SRU_Luka_Phase_Two.44.t
+	desc = SRU_Luka_Phase_Two.44.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_timed_idea = {
+			idea = SRU_integrating_the_apparatchiks
+			days = 60
+		}
+		add_political_power = 50
+		name = SRU_Luka_Phase_Two.44.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #embrace fanaticism
+	id = SRU_Luka_Phase_Two.45
+	title = SRU_Luka_Phase_Two.45.t
+	desc = SRU_Luka_Phase_Two.45.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_timed_idea = {
+			idea = SRU_fanaticism_embraced
+			days = 120
+		}
+		name = SRU_Luka_Phase_Two.45.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #assimilate the nomenklatura
+	id = SRU_Luka_Phase_Two.46
+	title = SRU_Luka_Phase_Two.46.t
+	desc = SRU_Luka_Phase_Two.46.d
+
+	is_triggered_only = yes
+
+	option = {
+		add_timed_idea = {
+			idea = SRU_assimilating_the_nomenklatura
+			days = 60
+		}
+		add_political_power = 100
+		name = SRU_Luka_Phase_Two.46.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
 country_event = { #resolve the conflict
 	id = SRU_Luka_Phase_Two.19
 	title = SRU_Luka_Phase_Two.19.t
@@ -1356,6 +1453,8 @@ country_event = { #resolve the conflict
 	}
 }
 
+#Kulikova
+
 country_event = { #the blood soaked chekist
 	id = SRU_Luka_Phase_Two.20
 	title = SRU_Luka_Phase_Two.20.t
@@ -1391,6 +1490,8 @@ country_event = { #the vanguard strengthens
 	}
 }
 
+#Sorokina
+
 country_event = { #the red princess
 	id = SRU_Luka_Phase_Two.22
 	title = SRU_Luka_Phase_Two.22.t
@@ -1425,6 +1526,8 @@ country_event = { #the fervour grows
 		}
 	}
 }
+
+#Zaytsevs
 
 country_event = { #the unassuming choice
 	id = SRU_Luka_Phase_Two.24
