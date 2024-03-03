@@ -506,7 +506,7 @@ characters = {
 
 		advisor = {
 			slot = high_command
-			ledger = army
+			ledger = air
 			idea_token = SRU_shen_high_command
 			
 			allowed = {
@@ -514,7 +514,7 @@ characters = {
 			}
 
 			traits = { 
-				army_armored_2
+				air_air_superiority_2
 			}
 			
 			available = {
@@ -688,6 +688,29 @@ characters = {
 			defense_skill = 5
 			planning_skill = 6
 			logistics_skill = 4
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = SRU_sohei_high_command
+			
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				army_chief_offensive_3
+			}
+			
+			available = {
+				has_completed_focus = SRU_luka_takes_personal_command
+			}
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 

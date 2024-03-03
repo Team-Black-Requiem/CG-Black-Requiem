@@ -6244,6 +6244,7 @@
 		}
 	
 		completion_reward = {
+			
 		}
 	}
 
@@ -6268,6 +6269,13 @@
 		}
 	
 		completion_reward = {
+			SRU_sohei = {
+				add_attack = 2
+				add_defense = 1
+				add_logistics = 2
+				add_planning = 3
+			}
+			add_war_support = 0.1
 		}
 	}
 
@@ -6292,6 +6300,18 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 1
+				ahead_reduction = 1
+				uses = 2
+			}
+			add_tech_bonus = {
+				name = support_tech
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+			}
 		}
 	}
 
@@ -6316,6 +6336,8 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_enhanced_soldier_initiative
+			add_manpower = 50000
 		}
 	}
 
@@ -6340,6 +6362,12 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				name = MBT_armour
+				bonus = 1
+				ahead_reduction = 1
+				uses = 2
+			}
 		}
 	}
 
@@ -6364,6 +6392,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_lessons_from_the_revolution
 		}
 	}
 
@@ -6391,6 +6420,7 @@
 		}
 	
 		completion_reward = {
+			add_ideas = SRU_victory_no_matter_the_cost
 		}
 	}
 
@@ -6415,6 +6445,12 @@
 		}
 	
 		completion_reward = {
+			add_tech_bonus = {
+				name = light_fighter
+				bonus = 1
+				ahead_reduction = 1
+				uses = 2
+			}
 		}
 	}
 
@@ -6442,6 +6478,23 @@
 		}
 	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_weapons
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = mbt_2
+				amount = 350
+			}
+			hidden_effect = {
+				d_add_tech = infantry_equipment_2
+				d_add_tech = support_equipment
+				d_add_tech = mbt_2
+			}
 		}
 	}
 
@@ -6469,6 +6522,10 @@
 		}
 	
 		completion_reward = {
+			every_army_leader = {
+				add_planning = 2
+				add_logistics = 2
+			}
 		}
 	}
 
@@ -6496,6 +6553,8 @@
 		}
 	
 		completion_reward = {
+			remove_ideas = SRU_enhanced_soldier_initiative SRU_lessons_from_the_revolution SRU_victory_no_matter_the_cost
+			add_ideas = SRU_an_immortal_army
 		}
 	}
 }

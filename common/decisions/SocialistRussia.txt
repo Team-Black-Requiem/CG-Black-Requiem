@@ -243,7 +243,7 @@ SRU_lukas_new_army = {
 		}
 	}
 
-	SRU_immortal_soldiers = {
+	SRU_immortalise_soldiers = {
 		icon = GFX_EUR_gun_request_1_icon
 		available = { 
 			country_exists = SRU
@@ -266,7 +266,7 @@ SRU_lukas_new_army = {
 		}
 	}
 
-	SRU_the_new_jacobin_officers = {
+	SRU_praise_jacobin_officers = {
 		icon = GFX_EUR_gun_request_1_icon
 		available = { 
 			country_exists = SRU
@@ -289,7 +289,30 @@ SRU_lukas_new_army = {
 		}
 	}
 
-	SRU_the_one_true_power_of_the_gods = {
+	SRU_promote_sohei = {
+		icon = GFX_EUR_gun_request_1_icon
+		available = { 
+			country_exists = SRU
+		}
+		cost = 10
+		days_remove = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    country_exists = SRU
+		}
+		available = {
+		}
+		modifier = {
+		}
+		complete_effect = {
+		
+		}
+	}
+
+	SRU_the_true_power_of_the_gods = {
 		icon = "GFX_decision_category_A11_Geass_Research"
 		available = { 
 			country_exists = SRU
