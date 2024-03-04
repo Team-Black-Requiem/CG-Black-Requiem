@@ -2776,23 +2776,6 @@ Modified_Knightmare_Simulations = {
 			}
 		}
 
-		SRU_lukas_russia = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				political_power_gain = 0.25
-				subjects_autonomy_gain = -0.02
-			}
-		}
-
 		### LUKAS CHINESE IDEAS PHASE 2 ###
 
 		SRU_chinese_recognition = {
@@ -2813,9 +2796,20 @@ Modified_Knightmare_Simulations = {
 		}
 
 		SRU_chinese_companies = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
+				
 			}
 		}
 
@@ -3448,7 +3442,7 @@ Modified_Knightmare_Simulations = {
 			}
 		}
 
-		##Luka Takes Personal Command##
+		#Luka Takes Personal Command
 
 		SRU_enhanced_soldier_initiative = {
 			allowed = {
@@ -3525,6 +3519,317 @@ Modified_Knightmare_Simulations = {
 				breakthrough_factor = 0.1
 			}
 		}
+
+		### LUKAS END OF PATH PHASE 2 IDEAS ###
+
+		SRU_lukas_russia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				subjects_autonomy_gain = -2
+			}
+		}
+
+		SRU_russian_sabotage = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.3
+				weekly_manpower = -1000
+				production_speed_buildings_factor = -0.25
+				political_power_gain = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+
+		SRU_new_administration = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+		}
+
+		SRU_reeducating_the_populace = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = -500
+			}
+		}
+
+		SRU_policy_of_social_idealism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		SRU_chinese_support = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		SRU_great_march_forward = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				weekly_manpower = 250
+			}
+
+			equipment_bonus = {
+
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+	
+			}
+		}
+
+		SRU_hearted_state = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		SRU_old_out_in_new = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = 750
+				army_infantry_attack_factor = 0.1
+			}
+
+			equipment_bonus = {
+				
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+	
+			}
+
+		}
+
+		SRU_jacobin_russia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = 1000
+				army_infantry_attack_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.20
+				local_resources_factor = 0.20
+				consumer_goods_factor = -0.1
+				stability_factor = 0.01
+				war_support_factor = 0.1
+				political_power_gain = 0.30
+				subjects_autonomy_gain = -2
+				trade_opinion_factor = 0.35
+				industrial_capacity_factory = 0.15
+			}
+
+			equipment_bonus = {
+				
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+	
+			}
+
+		}
+
+	
+
+		
 
 		### END OF LUKAS IDEAS PHASE 2 ###
 

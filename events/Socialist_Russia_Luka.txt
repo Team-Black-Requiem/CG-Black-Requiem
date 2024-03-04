@@ -1583,6 +1583,157 @@ country_event = { #Forging the New Russia
 	}
 }
 
+#Lukas Final Path Events
+
+country_event = { #Luka Reigns Supreme
+	id = SRU_Luka_Phase_Two.47
+	title = SRU_Luka_Phase_Two.47.t
+	desc = SRU_Luka_Phase_Two.47.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.47.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_russian_sabotage
+	}
+}
+
+country_event = { #Policy of Social Idealism
+	id = SRU_Luka_Phase_Two.48
+	title = SRU_Luka_Phase_Two.48.t
+	desc = SRU_Luka_Phase_Two.48.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.48.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_policy_of_social_idealism
+	}
+}
+
+country_event = { #Reshuffle the Party
+	id = SRU_Luka_Phase_Two.49
+	title = SRU_Luka_Phase_Two.49.t
+	desc = SRU_Luka_Phase_Two.49.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.49.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_chinese_companies
+			add_idea = SRU_chinese_support
+		}
+		remove_ideas = SRU_chinese_recognition
+		remove_ideas = SRU_okhotsk_route
+	}
+}
+
+country_event = { #The Great March Forward
+	id = SRU_Luka_Phase_Two.50
+	title = SRU_Luka_Phase_Two.50.t
+	desc = SRU_Luka_Phase_Two.50.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.50.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_great_march_forward
+	}
+}
+
+country_event = { #Heart of the State
+	id = SRU_Luka_Phase_Two.51
+	title = SRU_Luka_Phase_Two.51.t
+	desc = SRU_Luka_Phase_Two.51.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.51.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_new_administration
+			add_idea = SRU_hearted_state
+		}
+		remove_ideas = SRU_policy_of_social_idealism
+	}
+}
+
+country_event = { #Out with the Old and In with the New
+	id = SRU_Luka_Phase_Two.52
+	title = SRU_Luka_Phase_Two.52.t
+	desc = SRU_Luka_Phase_Two.52.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.52.a
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_great_march_forward
+			add_idea = SRU_old_out_in_new
+		}
+		remove_ideas = SRU_reeducating_the_populace
+		add_tech_bonus = {
+			name = knightmare_frame_research
+			uses = 1
+			bonus = 2
+			category = knightmare_all
+		}
+	}
+}
+
+country_event = { #Cut Sonyas Strings
+	id = SRU_Luka_Phase_Two.53
+	title = SRU_Luka_Phase_Two.53.t
+	desc = SRU_Luka_Phase_Two.53.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Luka_Phase_Two.53.a
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = BR_vanguardist
+			elections_allowed = no
+			election_frequency = 0
+		}
+		add_popularity = {
+			ideology = BR_vanguardist
+			popularity = 0.8
+		}
+		retire_character = SRU_Bunina
+		swap_ideas = {
+			remove_idea = SRU_russian_sabotage
+			add_idea = SRU_jacobin_russia
+		}
+		remove_ideas = SRU_old_out_in_new 
+		remove_ideas = SRU_hearted_state
+		remove_ideas = SRU_chinese_support
+		remove_ideas = SRU_lukas_russia
+		remove_ideas = SRU_russian_rejuvination
+	}
+}
+
 ##Misc Socialist Events##
 
 country_event = { #Novosibirsk Massacre

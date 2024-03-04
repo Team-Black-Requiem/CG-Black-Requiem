@@ -3594,7 +3594,6 @@
 	
 		completion_reward = {
 			country_event = SRU_Luka_Phase_Two.6
-			research_speed_factor = 0.02
 		}
 	}
 
@@ -4421,6 +4420,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.47
 		}
 	}
 
@@ -4445,6 +4445,11 @@
 		}
 	
 		completion_reward = {
+			add_timed_idea = {
+				idea = SRU_new_administration
+				days = 70
+			}
+			add_political_power = 100
 		}
 	}
 
@@ -4493,6 +4498,12 @@
 		}
 	
 		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = SRU_novosibirsk_research
+				add_idea = SRU_reeducating_the_populace
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -4517,6 +4528,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.48
 		}
 	}
 
@@ -4541,6 +4553,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.49
 		}
 	}
 
@@ -4565,6 +4578,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.50
 		}
 	}
 
@@ -4592,6 +4606,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.51
 		}
 	}
 
@@ -4619,6 +4634,7 @@
 		}
 	
 		completion_reward = {
+			country_event = SRU_Luka_Phase_Two.52
 		}
 	}
 
@@ -4646,16 +4662,7 @@
 		}
 	
 		completion_reward = {
-			set_politics = {
-				ruling_party = BR_vanguardist
-				elections_allowed = no
-				election_frequency = 0
-			}
-			add_popularity = {
-				ideology = BR_vanguardist
-				popularity = 0.8
-			}
-			retire_character = SRU_Bunina
+			country_event = SRU_Luka_Phase_Two.53
 		}
 	}
 
