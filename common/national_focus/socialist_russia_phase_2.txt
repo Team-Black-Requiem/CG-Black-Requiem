@@ -3393,14 +3393,14 @@
 			country_event = SRU_Luka_Phase_Two.2
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 5000
+				amount = 8000
 			}
 			add_equipment_to_stockpile = {
-				type = MBT_armour
+				type = mbt_1
 				amount = 750
 			}
 			add_equipment_to_stockpile = {
-				type = cat_modern_artillery
+				type = sp_artillery_1
 				amount = 1500
 			}
 		}
@@ -3602,6 +3602,7 @@
 	
 		completion_reward = {
 			country_event = SRU_Luka_Phase_Two.6
+			##Recruit Isabella Schariac##
 		}
 	}
 
@@ -5543,7 +5544,7 @@
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 8000
+				amount = 10000
 			}
 			add_equipment_to_stockpile = {
 				type = mbt_1
@@ -6259,7 +6260,15 @@
 		}
 	
 		completion_reward = {
-			
+			SRU_sohei = {
+				add_field_marshal_role = {
+					skill = 6
+					attack_skill = 8
+					defense_skill = 6
+					planning_skill = 8
+					logistics_skill = 7
+				}
+			}
 		}
 	}
 
@@ -6316,16 +6325,14 @@
 	
 		completion_reward = {
 			add_tech_bonus = {
-				name = infantry_weapons
-				bonus = 1
-				ahead_reduction = 1
 				uses = 2
+				bonus = 1
+				category = infantry_weapons
 			}
 			add_tech_bonus = {
-				name = support_tech
-				bonus = 1
-				ahead_reduction = 1
 				uses = 1
+				bonus = 1
+				category = support_tech
 			}
 		}
 	}
@@ -6378,10 +6385,9 @@
 	
 		completion_reward = {
 			add_tech_bonus = {
-				name = MBT_armour
-				bonus = 1
-				ahead_reduction = 1
 				uses = 2
+				bonus = 1
+				category = MBT_armour
 			}
 		}
 	}
@@ -6461,10 +6467,9 @@
 	
 		completion_reward = {
 			add_tech_bonus = {
-				name = light_fighter
-				bonus = 1
-				ahead_reduction = 1
 				uses = 2
+				bonus = 1
+				category = light_air
 			}
 		}
 	}
@@ -6494,8 +6499,8 @@
 	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = infantry_weapons
-				amount = 10000
+				type = infantry_equipment
+				amount = 15000
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
@@ -6504,6 +6509,14 @@
 			add_equipment_to_stockpile = {
 				type = mbt_2
 				amount = 350
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_2
+				amount = 850
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment_2
+				amount = 650
 			}
 			hidden_effect = {
 				d_add_tech = infantry_equipment_2
@@ -6541,6 +6554,7 @@
 				add_planning = 2
 				add_logistics = 2
 			}
+			add_command_power = 0.5
 		}
 	}
 
@@ -6568,7 +6582,9 @@
 		}
 	
 		completion_reward = {
-			remove_ideas = SRU_enhanced_soldier_initiative SRU_lessons_from_the_revolution SRU_victory_no_matter_the_cost
+			remove_ideas = SRU_enhanced_soldier_initiative
+			remove_ideas = SRU_lessons_from_the_revolution
+			remove_ideas = SRU_victory_no_matter_the_cost
 			add_ideas = SRU_an_immortal_army
 		}
 	}
