@@ -1,4 +1,15 @@
 on_actions = {
+
+	on_startup = { #welcome screen
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { BR_welcome_screen = 1 }
+			}
+		}
+	}
 	
 	# Ace pilots
 	# country, FROM = ace
@@ -92,10 +103,10 @@ on_actions = {
 
 		effect = {
 			set_global_flag = first_nuke_dropped
-			if = {
-				limit = { NOT = { has_global_flag = first_nuke_dropped } }
-				country_event = { id = generic.8 }
-			}
+			#if = {
+			#	limit = { NOT = { has_global_flag = first_nuke_dropped } }
+			#	country_event = { id = generic.8 }
+			#}
 		}
 	}
 	# country random events
