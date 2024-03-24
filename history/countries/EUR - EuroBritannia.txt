@@ -1,24 +1,24 @@
-﻿capital = 562
+﻿capital = 863
 
 oob = "EUR_START"
 
 
 
 set_research_slots = 3
-set_stability = 0.45
+set_stability = 0.30
 set_war_support = 0.45
 
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	engineer_company_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	support_equip = 1
+	support_equip_tech = 1
 	motorised_infantry = 1
 }
 
@@ -44,109 +44,105 @@ if = {
 }
 
 
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 1000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 1000
+}
+
+add_equipment_to_stockpile = {
+	type = sp_artillery_1
+	amount = 500
+}
+
+add_equipment_to_stockpile = {
+	type = mechanized_equipment_1
+	amount = 250
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 20
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 1300
+}
 
 set_politics = {
-	ruling_party = autocracy
+	ruling_party = BR_autocracy
 	last_election = "2008.5.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	moderate_socialism = 4
-	moderate_conservatism = 6
-	moderate_liberalism = 5
-	autocracy = 36
-	totalitarian_socialism = 17
-	authoritarian_democracy = 19
-	ultra_nationalism =  13
+	BR_progressive = 5
+	BR_conservatism = 6
+	BR_liberalism = 5
+	BR_autocracy = 35
+	BR_vanguardist = 2
+	BR_authoritarian = 24
+	BR_supremacist =  13
+	BR_revolutionary = 3
+	BR_socialism = 7
 }
 
 
 
 
-set_convoys = 500
+set_convoys = 150
 
 
 
 add_ideas = {
-	EUR_poor_logistics
+    EUR_poor_logistics
+	EUR_underdeveloped_economy
 	EUR_legitimate_cause
-	EUR_crisis_authority
-	RUS_Corrupt_government_improved_2
-	RUS_low_level_education_improved_1 
-	RUS_Agrarian_economy_improved_2
+	EUR_national_militia
 }
 
 
-#### ARMY CHIEFS, NAVY CHIEFS, AIR CHIEFS
-recruit_character = EUR_generic_army_chief
-recruit_character = EUR_generic_navy_chief
-recruit_character = EUR_generic_air_chief
 #### CABINET
-recruit_character = EUR_generic_head_of_government
-recruit_character = EUR_generic_economy_minister
-recruit_character = EUR_generic_foreign_minister
-recruit_character = EUR_generic_minister_of_interior
-recruit_character = EUR_generic_intelligence
+recruit_character = EUR_BR_ref_socialism
+recruit_character = EUR_BR_supremacists
+recruit_character = EUR_BR_liberals
+recruit_character = EUR_BR_conservatives
+recruit_character = EUR_BR_oligarchy
+recruit_character = EUR_BR_paternalism
+recruit_character = EUR_BR_socialism
+recruit_character = EUR_BR_vanguardism
+recruit_character = EUR_BR_soc_dem
+recruit_character = EUR_Isaac_Orlov
+recruit_character = EUR_Michael_Windsor
+recruit_character = EUR_Aleksei_Fedorov
+recruit_character = EUR_Yasha_Antonov
+recruit_character = EUR_Laurence_Curry
+recruit_character = EUR_Fyodor_Korolev
+recruit_character = EUR_Leontiy_Novikov
 recruit_character = EUR_Mil_Coun
+recruit_character = EUR_Augusta_Henry
+############################# HIGH COMMAND AND CORPS COMMAND
+recruit_character = EUR_Anton_Kozlov
+recruit_character = EUR_Vyacheslav_Pushkin
+recruit_character = EUR_Aleksandr_Petrov
+recruit_character = EUR_Mikhail_Fedorov
+recruit_character = EUR_Fedor_Nikolaev
+recruit_character = EUR_Nikolay_Frolov
+recruit_character = EUR_Kumagai_Mitsuo
+recruit_character = EUR_Han_Jing
+recruit_character = EUR_Duncan_Holt
+recruit_character = EUR_Oriel_Griffith
+recruit_character = EUR_Ludmil_Tarasov
+recruit_character = EUR_Igor_Tarasov
+recruit_character = EUR_Vadim_Antonov
+recruit_character = EUR_Venedikt_Vinogradov
+##recruit_character = EUR_Stefan_Kuzmin
+##recruit_character = EUR_Naum_Nikolaev
 
-create_corps_commander = {
-	name = "Andrea Farnese"
-	portrait_path = "gfx\leaders\EUR\EUR_andrea_farnese.dds"
-			traits = {armor_officer}
-			skill = 4
-			attack_skill = 2
-			defense_skill = 5
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id=-1
-		}
 
 
-	create_corps_commander = {
-	name = "Raymond du Saint-Gillesr"
-	portrait_path = "gfx\leaders\EUR\EUR_raymond_de_saint_gilles.dds"
-			traits = {armor_officer}
-			skill = 5
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 5
-			logistics_skill = 6
-			legacy_id=-1
-		}
-
-		create_corps_commander = {
-	name = "Shin Hyuga Shaing"
-	portrait_path = "\gfx\leaders\EUR\EUR_Shin_Hyuga_Shaing.dds"
-			traits = {armor_officer winter_expert}
-			skill = 7
-			attack_skill = 6
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 5
-			legacy_id=-1
-		}
-
-		create_corps_commander = {
-	name = "Gaudefroy du Villon"
-	portrait_path = "gfx\leaders\EUR\EUR_gaudefroy_du_villon.dds"
-			traits = {infantry_leader}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id=-1
-		}
-
-		create_field_marshal= {
-	name = "Monica Krushevsky"
-	portrait_path = "gfx\leaders\EUR\EUR_Monica.dds"
-			traits = { armor_officer winter_expert }
-			skill = 5
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id=-1
-		}

@@ -7,24 +7,33 @@
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 0 y = 3  }
+		artillery_brigade = { x = 0 y = 3  }
 	}	
+	support = {
+		logistics_company = { x = 0 y = 0 }
+	}
 }
 
 division_template = {
-	name = "Kat-Yusha"	
+	name = "Kat_Yusha"	
 
 	division_names_group = "SOV_GAR_01"
 
 	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
-		motorized = { x = 0 y = 3 }
-		rocket_artillery_brigade = { x = 1 y = 0 }
-		rocket_artillery_brigade = { x = 1 y = 1 }
-		rocket_artillery_brigade = { x = 1 y = 2 }
-		rocket_artillery_brigade = { x = 2 y = 0 }
-		rocket_artillery_brigade = { x = 2 y = 1 }
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		light_sp_artillery_brigade = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 1 }
+		light_sp_artillery_brigade = { x = 2 y = 2 }
+	    
 	}
 	support = {
 		logistics_company = { x = 0 y = 0 }
@@ -34,7 +43,7 @@ division_template = {
 division_template = {
 	name = "Militia" 		
 
-	division_names_group = "SRU_GAR_01"
+	division_names_group = "SOV_GAR_01"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -45,8 +54,32 @@ division_template = {
 		infantry = { x = 1 y = 2 }
 	}
 	support = {
-		mot_recon = { x = 0 y = 0 } 		
+		recon = { x = 0 y = 0 } 		
 	}
+}
+
+division_template = {
+	name = "Motor Corps" 		
+
+	division_names_group = "SOV_MOT_01"
+	
+	regiments = {
+
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+
+	}	
+
+		
+	support = {
+		engineer = { x = 0 y = 0 }  
+        mot_recon = { x = 0 y = 1 }		
+	}
+
 }
 
 units = {
@@ -55,466 +88,8 @@ division = {
 		is_name_ordered = yes
 		name_order = 1
 	}
-	location = 12644
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 12644
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 12644
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 12644
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7835
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7835
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7835
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7835
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4797
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4724
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7789
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-
-division= {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 7822
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4800
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
 	location = 1794
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Socialist Militias"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -524,7 +99,7 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Socialist Militias"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -534,7 +109,7 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Socialist Militias"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -544,7 +119,7 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Socialist Militias"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -554,17 +129,7 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Socialist Militias"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -574,147 +139,7 @@ division = {
 		name_order = 1
 	}
 	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Socialist Militias"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 1794
-	division_template = "Kat-Yusha"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Kat-Yusha"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Kat-Yusha"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Kat-Yusha"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Kat-Yusha"
-	start_experience_factor = 0.1
-	start_equipment_factor = 0.6
-}
-division = {
-	division_name = {   
-		is_name_ordered = yes
-		name_order = 1
-	}
-	location = 4705
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -724,7 +149,7 @@ division = {
 		name_order = 1
 	}
 	location = 12644
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -734,7 +159,7 @@ division = {
 		name_order = 1
 	}
 	location = 12644
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -744,7 +169,7 @@ division = {
 		name_order = 1
 	}
 	location = 12644
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -754,7 +179,7 @@ division = {
 		name_order = 1
 	}
 	location = 12644
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
@@ -764,20 +189,103 @@ division = {
 		name_order = 1
 	}
 	location = 4800
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
+
 division = {
 	division_name = {   
 		is_name_ordered = yes
 		name_order = 1
 	}
 	location = 4800
-	division_template = "Kat-Yusha"
+	division_template = "Motor Corps"
 	start_experience_factor = 0.1
 	start_equipment_factor = 0.6
 }
+
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+division= {
+	division_name = {   
+		is_name_ordered = yes
+		name_order = 1
+	}
+	location = 12644
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 1
+}
+
 division= {
 	division_name = {   
 		is_name_ordered = yes

@@ -21,13 +21,27 @@ ideas = {
 		
 
       avoid_global_wars = {
+		allowed_civil_war = {
+			always = yes
+		}
            modifier = {
                 ai_join_ally_desire_factor = -1000
 				ai_call_ally_desire_factor = -1000
            }
       }
- 
 
+	  russian_civil_war = { ##Goes Away When The Russian Civil War Ends
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+           modifier = {
+               offensive_war_stability_factor = 0.3
+			   defensive_war_stability_factor = 0.3
+           }
+      }
 
 		continuous_air_production = {
 			allowed = {
@@ -41,31 +55,21 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				fighter_equipment = {
+				category_multirole = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				cv_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
+				
 				jet_fighter_equipment = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				cv_CAS_equipment = {
+			
+				category_cas = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				CAS_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				nav_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				cv_nav_bomber_equipment = {
+				category_nav_bomber = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
@@ -73,7 +77,7 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				tac_bomber_equipment = {
+				category_tac_bomber = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
@@ -85,11 +89,12 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				heavy_fighter_equipment = {
+				category_heavy_fighter = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				strat_bomber_equipment = {
+				category_strat_bomber = {
+					
 					instant = yes
 					build_cost_ic = -0.10
 				}
@@ -101,10 +106,7 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				scout_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.10	
-				}
+			
 			}		
 		}
 	}
@@ -183,24 +185,6 @@ ideas = {
 		}
 		
 		
-		
-		chief_of_staff = {	
-		}
-		
-				head_of_government = {	
-		}
-		
-				economy_minister = {	
-		}
-		
-				foreign_minister = {	
-		}
-		
-				minister_of_interior = {	
-		}
-		
-				intelligence = {	
-		}
 		
 		
 		

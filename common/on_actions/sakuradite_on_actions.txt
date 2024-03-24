@@ -1,0 +1,65 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+            #### sets initial country sakuradite surplus
+			set_variable = {sakuradite_fuel_gain = 0}
+			set_variable = {sakuradite_fuel_current = 0}
+		}
+	}
+
+	on_daily = {
+		effect = {
+
+
+			#### collects national sakuradite surplus daily
+
+			##### sets maximum sakuradite fuel
+
+			set_variable = { country_sakuradite = root.resource@sakuradite }
+			
+			set_variable = {sakuradite_capacity_var = modifier@sakuradite_capacity_k}
+			add_to_variable = {sakuradite_capacity_var = root.num_core_states}
+			multiply_variable = {sakuradite_capacity_var = 2500}
+			add_to_variable = {sakuradite_capacity_var = 50000}
+			
+
+
+			##### sets fuel gain
+			set_variable = {sakuradite_fuel_modifier = 100}
+			set_variable = {sakuradite_fuel_gain = country_sakuradite}
+			multiply_variable = {sakuradite_fuel_gain = sakuradite_fuel_modifier}
+
+
+
+
+			##### sets fuel current
+#			IF = {
+#				limit = {
+#					check_variable = {sakuradite_capacity_var > root.sakuradite_fuel_current}
+#				}
+			add_to_variable = {sakuradite_fuel_current = sakuradite_fuel_gain}
+#			}
+#			ELSE_IF = {
+#				limit = {
+#					check_variable = {sakuradite_capacity_var < root.sakuradite_fuel_current}
+#				}
+#				set_variable = {overflow_sakuradite = root.sakuradite_fuel_current}
+#				subtract_from_variable = {overflow_sakuradite = sakuradite_capacity_var}						
+#				subtract_from_variable = {sakuradite_fuel_current = overflow_sakuradite}
+#				clear_variable = overflow_sakuradite
+#			}
+
+			clamp_variable = {
+				var = sakuradite_fuel_current
+				min = 0
+				max = sakuradite_capacity_var
+			}
+
+			set_variable = { sakuradite_ratio_var = sakuradite_fuel_current}
+			divide_variable = { sakuradite_ratio_var = sakuradite_capacity_var }
+			multiply_variable = { sakuradite_ratio_var = 100 }
+
+        }
+    }
+}

@@ -1,6 +1,6 @@
 characters = {
 		
-		
+	##COUNTRY LEADERS
 	EUR_Mil_Coun = {
 		name="Military council"
 		portraits={
@@ -9,7 +9,7 @@ characters = {
 			}
 		}
 		country_leader={
-			desc = "	"
+			desc = ""
 			ideology=paternal_autocracy
 			traits={  }
 			expire="2020.1.1.1"
@@ -22,6 +22,129 @@ characters = {
 			civilian={
 				large="GFX_portrait_EUR_Highland"
 			}
+			army = {
+				large = "GFX_portrait_EUR_Highland"
+			}
+		}
+	}
+	
+	
+
+	EUR_BR_paternalism ={
+		name = "Unclear Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= aristocratic_paternalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	EUR_BR_liberals ={
+		name = "Delem Byamanovich"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_liberalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+
+	EUR_BR_conservatives ={
+		name = "Decentralized Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_conservatism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	EUR_BR_oligarchy ={
+		name = "Neryungri Senate"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= oligarchic_government
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	
+	EUR_BR_supremacists ={
+		name = "Decentralized Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology=purist_aristocracy
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	EUR_BR_socialism ={
+		name = "Socialist Partisans"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= left_libertarianism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	EUR_BR_vanguardism ={
+		name = "Socialist Partisans"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= military_bolshevism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	EUR_BR_ref_socialism ={
+		name = "Far Eastern Unions"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= trade_unionism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+	EUR_BR_soc_dem ={
+		name = "Decentralized Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_democracy
+			traits={ }
+			expire = "2020.1.1"
+			id=16
 		}
 	}
 	
@@ -29,22 +152,26 @@ characters = {
 
 	### CABINET & POLITICIANS
 
-	EUR_generic_head_of_government = {
-		name = "Head Of Government"
-		#portraits = {
-		#	
-		#}
+	EUR_Isaac_Orlov = {
+		name = "Isaac Orlov"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Isaac_Orlov"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = head_of_government
-			idea_token = EUR_generic_head_of_government_idea_1
+			idea_token = EUR_Isaac_Orlov_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				conservative_guy
+				autocracy_guy
+				lion_of_magadan
 			}
 
 			cost = 2000
@@ -54,22 +181,26 @@ characters = {
 		}
 	}
 
-	EUR_generic_economy_minister = {
-		name = "The Economy Minister"
-		#portraits = {
-		#	
-		#}
+	EUR_Michael_Windsor = {
+		name = "Michael Windsor"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Michael_Windsor"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = economy_minister
-			idea_token = EUR_generic_economy_minister_idea_1
+			idea_token = EUR_Michael_Windsor_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				conservative_guy
+				autocracy_guy
+				industralizer
 			}
 
 			cost = 2000
@@ -78,22 +209,27 @@ characters = {
 			}
 		}
 	}
-	EUR_Britannian_economy_minister = {
-		name = "Noble"
-		#portraits = {
-		#	
-		#}
+
+		EUR_Leontiy_Novikov = {
+		name = "Leontiy Novikov"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Leontiy_Novikov"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = economy_minister
-			idea_token = EUR_generic_economy_minister_idea_1
+			idea_token = EUR_Leontiy_Novikov_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				britannian_supplier
+				autocracy_guy
+				extraction_favoured
 			}
 
 			cost = 2000
@@ -103,22 +239,26 @@ characters = {
 		}
 	}
 
-	EUR_generic_foreign_minister = {
-		name = "The Foreign Minister"
-		#portraits = {
-		#	
-		#}
+	EUR_Aleksei_Fedorov = {
+		name = "Aleksei Fedorov"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Aleksei_Fedorov"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = foreign_minister
-			idea_token = EUR_generic_foreign_minister_idea_1
+			idea_token = EUR_Aleksei_Fedorov_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				conservative_guy
+				autocracy_guy
+				obscure_bureaucrat
 			}
 
 			cost = 2000
@@ -128,22 +268,26 @@ characters = {
 		}
 	}
 
-	EUR_generic_minister_of_interior = {
-		name = "The Minister Of The Interior"
-		#portraits = {
-		#	
-		#}
+	EUR_Yasha_Antonov = {
+		name = "Yasha Antonov"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Yasha_Antonov"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = minister_of_interior
-			idea_token = EUR_generic_minister_of_interior_idea_1
+			idea_token = EUR_Yasha_Antonov_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				conservative_guy
+				autocracy_guy
+				iron_fist
 			}
 
 			cost = 2000
@@ -153,22 +297,55 @@ characters = {
 		}
 	}
 
-	EUR_generic_intelligence = {
-		name = "The Intelligence Guy"
-		#portraits = {
-		#	
-		#}
+		EUR_Laurence_Curry = {
+		name = "Laurence Curry"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Laurence_Curry"
+			    }
+			
+		}
+		
+		advisor = {
+			slot = minister_of_interior
+			idea_token = EUR_Laurence_Curry_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				autocracy_guy
+				balanced_fist
+			}
+
+			cost = 2000
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EUR_Fyodor_Korolev = {
+		name = "Fyodor Korolev"
+		portraits = {
+				civilian = {
+				small = "GFX_idea_EUR_Fyodor_Korolev"
+			    }
+			
+		}
 		
 		advisor = {
 			slot = intelligence
-			idea_token = EUR_generic_intelligence_idea_1
+			idea_token = EUR_Fyodor_Korolev_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				conservative_guy
+				autocracy_guy
+				careful_agent
 			}
 
 			cost = 2000
@@ -178,55 +355,43 @@ characters = {
 		}
 	}
 
-
-
-
-
-	### ARMY - NAVY - AIR (CHIEFS)
-
-	EUR_generic_army_chief = {
-		name = "Generic Genericus"
-
-		#portraits = {
-		#	
-		#}
-
+	##HIGH COMMAND/RECRUITED LATER
+		EUR_Ivan_Solovev={
+		name= "Ivan Solovev"
+		portraits={army = {small = "GFX_idea_EUR_Ivan_Solovev"}}
 		advisor = {
 			slot = army_chief
-			idea_token = EUR_generic_army_chief_idea_1
-
-			allowed = {
-				tag = EUR
-			}
-
-			traits = { 
-				army_chief_defensive_1
-			}
-
+			idea_token = EUR_Ivan_Solovev_idea_1
+			allowed = {tag = EUR}
+			traits = {army_chief_defensive_3}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
+		    }
 		}
-	}
 
-	EUR_generic_navy_chief = {
-		name = "Generic Genericus"
 
-		#portraits = {
-		#	
-		#}
+		EUR_Isai_Kiselev={
+		name= "Isai Kiselev"
+		
+		portraits={
+		army = {
+							small =  "GFX_idea_EUR_Isai_Kiselev"
+			    
+			}}
+	
 
-		advisor = {
+			advisor = {
 			slot = navy_chief
-			idea_token = EUR_generic_navy_chief_idea_1
+			idea_token = EUR_Isai_Kiselev_idea_1
 
 			allowed = {
 				tag = EUR
 			}
 
 			traits = { 
-				navy_chief_decisive_battle_1
+				navy_naval_air_defense_3
 			}
 
 			cost = 100
@@ -236,15 +401,135 @@ characters = {
 		}
 	}
 
-	EUR_generic_air_chief = {
-		name = "Generic Genericus"
-		#portraits = {
-		#	
-		#}
+		EUR_Gogol_Bogdanov={
+		name= "Gogol Bogdanov"
+		
+		portraits={
+		army = {
+				small =  "GFX_idea_EUR_Gogol_Bogdanov"
+			    
+			}}
+	
 
-		advisor = {
+			advisor = {
 			slot = air_chief
-			idea_token = EUR_generic_air_chief_idea_1
+			idea_token = EUR_Gogol_Bogdanov_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				air_chief_night_operations_2
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+	### HIGH COMMAND
+	EUR_Anton_Kozlov={
+		name= "Anton Kozlov"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Anton_Kozlov" 
+				small =  "GFX_idea_EUR_Anton_Kozlov"
+			    
+			}}
+	
+			field_marshal = {
+				traits={infantry_leader unyielding_defender }
+				skill=4
+				attack_skill=4
+				defense_skill=2
+				planning_skill=4
+				logistics_skill=2
+		    }
+
+			advisor = {
+			slot = army_chief
+			idea_token = EUR_Anton_Kozlov_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				army_chief_offensive_2
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		    }
+	}
+	EUR_Vyacheslav_Pushkin={
+		name= "Vyacheslav Pushkin"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Vyacheslav_Pushkin"  
+				small =  "GFX_idea_EUR_Vyacheslav_Pushkin"
+			    
+			}}
+	
+            navy_leader = {
+                   skill = 3
+                   attack_skill = 1
+                   defense_skill = 3
+                   maneuvering_skill = 5
+                   coordination_skill = 4
+                   legacy_id = 10
+                   visible = { has_stability > 0.3 }
+             }
+
+			advisor = {
+			slot = navy_chief
+			idea_token = EUR_Vyacheslav_Pushkin_idea_1
+
+			allowed = {
+				tag = EUR
+			}
+
+			traits = { 
+				navy_chief_maneuver_1
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EUR_Aleksandr_Petrov={
+		name= "Aleksandr Petrov"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Aleksandr_Petrov" 
+				small =  "GFX_idea_EUR_Aleksandr_Petrov"
+			    
+			}}
+	
+			field_marshal = {
+				traits={ organisational_leader expert_delegator }
+				skill=4
+				attack_skill=2
+				defense_skill=5
+				planning_skill=2
+				logistics_skill=4
+		    }
+
+			advisor = {
+			slot = air_chief
+			idea_token = EUR_Aleksandr_Petrov_idea_1
 
 			allowed = {
 				tag = EUR
@@ -260,79 +545,461 @@ characters = {
 			}
 		}
 	}
+	EUR_Mikhail_Fedorov={
+		name= "Mikhail Fedorov"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Mikhail_Fedorov" 
+				small =  "GFX_idea_EUR_Mikhail_Fedorov"
+			    
+			}}
+	
+			field_marshal = {
+				traits={ infantry_leader winter_expert}
+				skill=4
+				attack_skill=4
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=1
+		    }
 
+			advisor = {
+			slot = army_chief
+			idea_token = EUR_Mikhail_Fedorov_idea_1
 
-
-	### HIGH COMMAND
-
-
-	EUR_generic_high_command = {
-		name = "High Command Feller"
-
-		#portraits = {
-		#	
-		#}
-
-		advisor = {
-			slot = high_command
-			ledger = army
-			idea_token = EUR_generic_high_command_1
-			traits = { 
-				army_artillery_1
-			}
 			allowed = {
 				tag = EUR
 			}
+
+			traits = { 
+				army_chief_defensive_2
+			}
+
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-
-		field_marshal = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
+		    }
 	}
 	EUR_Michele_Manfredi={
 		name= "Michele Manfredi"
 		
-	##	portraits={
-	##		army = {
-	##			large = 
-	##			small = 
-	##		}}
+		portraits={
+		
+		army = {
+				large = "GFX_portrait_EUR_Michele_Manfredi"
+			    small = "GFX_idea_EUR_Michele_Manfredi"
+			}}
+	
+		corps_commander = {
+			traits = { organizer }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	
+	EUR_Edward_Laurier={
+		name= "Edward R. Laurier"
+		
+		portraits={
+		     army = {
+				large="GFX_portrait_EUR_Edward_Laurier"
+			}
+			}
 	
 			field_marshal = {
 				traits={  }
-				skill=4
-				attack_skill=4
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=2
+				skill= 5
+				attack_skill=3
+				defense_skill=6
+				planning_skill=4
+				logistics_skill=4
+		    }
+	}
+
+	EUR_Vadim_Antonov={
+		name= "Vadim Antonov"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Vadim_Antonov"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Vadim_Antonov_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				army_chief_planning_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
 		}
 	}
+
+		EUR_Igor_Tarasov={
+		name= "Igor Tarasov"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Igor_Tarasov"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Igor_Tarasov_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+		EUR_Ludmil_Tarasov={
+		name= "Ludmil Tarasov"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Ludmil_Tarasov"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Ludmil_Tarasov_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				army_chief_maneuver_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+		EUR_Oriel_Griffith={
+		name= "Oriel Griffith"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Oriel_Griffith"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Oriel_Griffith_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				army_chief_organizational_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+		EUR_Duncan_Holt={
+		name= "Duncan Holt"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Duncan_Holt"
+			}
+			}
+	
+		advisor={	
+			slot = air_chief
+			idea_token = EUR_Duncan_Holt_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			available = {
+				has_completed_focus = EUR_Asking_Britannia_about_Air_Commander
+			} 
+			traits = {
+				air_chief_all_weather_3
+				
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+	EUR_Han_Jing={
+		name= "Han Jing"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Han_Jing"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Han_Jing_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			available = {
+				has_completed_focus = EUR_Finding_alternatives
+			} 
+			traits = {
+				army_chief_drill_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+	EUR_Kumagai_Mitsuo={
+		name= "Kumagai Mitsuo"
+		
+		portraits={
+		     army = {
+				small="GFX_idea_EUR_Kumagai_Mitsuo"
+			}
+			}
+	
+		advisor={	
+			slot = high_command
+			idea_token = EUR_Kumagai_Mitsuo_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			available = {
+				has_completed_focus = EUR_Finding_alternatives
+			} 
+			traits = {
+				army_chief_morale_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+
+	
 
 
 	### GENERALS
 
-	EUR_generic_corps_commander = {
-		name = "Corps Commander"
-		#portraits = {
-		#	
-		#}
+	EUR_Fedor_Nikolaev = {
+		name = "Fedor Nikolaev"
+		portraits = {
+				army = {
+				large="GFX_portrait_EUR_Fedor_Nikolaev"
+			    }
+			
+		}
 
 		corps_commander = {
+			traits = { infantry_leader winter_specialist }			
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	EUR_Nikolay_Frolov = {
+		name = "Nikolay Frolov"
+		portraits = {
+				army = {
+				large = "GFX_portrait_EUR_Nikolay_Frolov"
+			    }
+			
+		}
+
+		corps_commander = {
+			traits = { adaptable trait_engineer }
+			skill = 1
+			attack_skill = 3
 			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	EUR_Venedikt_Vinogradov = {
+		name = "Venedikt Vinogradov"
+		portraits = {
+				army = {
+				large = "GFX_portrait_EUR_Venedikt_Vinogradov"
+			    }
+			
+		}
+
+		corps_commander = {
+			traits = { trickster }			
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	EUR_Stefan_Kuzmin = {
+		name = "Stefan Kuzmin"
+		portraits = {
+				army = {
+				large = "GFX_portrait_EUR_Stefan_Kuzmin"
+			    }
+			
+		}
+
+		corps_commander = {
+			traits = { skilled_staffer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
 			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	EUR_Naum_Nikolaev = {
+		name = "Naum Nikolaev"
+		portraits = {
+				army = {
+				large = "GFX_portrait_EUR_Naum_Nikolaev"
+			    }
+			}
+			
+		
+
+		corps_commander = {
+			traits = { organizer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 	}
 
+	# OLD GUARD
+	EUR_Albert_Lancaster={
+		name= "Baron Albert Lancaster"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Albert_Lancaster"
+			    
+			}}
+	
+			field_marshal = {
+				traits={ winter_expert}
+				skill=5
+				attack_skill=5
+				defense_skill=4
+				planning_skill=4
+				logistics_skill=2
+		}
+	}
+	EUR_Edgar_Bailey={
+		name= "Lord Edgar Bailey"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Edgar_Bailey"	
+			    # to do: add gfx
+			}}
+	
+			corps_commander = {
+				traits={}
+				skill=4
+				attack_skill=4
+				defense_skill=3
+				planning_skill=1
+				logistics_skill=4
+		}
+	}
+	EUR_Elias_Anson={
+		name= "Lord Elias Anson"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Elias_Anson"
+			    # to do: add gfx
+			}}
+	
+			corps_commander = {
+				traits={}
+				skill=3
+				attack_skill=2
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=3
+		}
+	}
+	EUR_Elliot_Collins={
+		name= "Lord Elliot Collins"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Elliot_Collins"
+			    
+			}}
+	
+            navy_leader = {
+                   skill = 4
+                   attack_skill = 3
+                   defense_skill = 2
+                   maneuvering_skill = 3
+                   coordination_skill = 3
+                   legacy_id = 10
+             }
+	}
+	EUR_Samuel_Whitlock={
+		name= "Baron Samuel Whitlock"
+		
+		portraits={
+		army = {
+				large = "GFX_portrait_EUR_Samuel_Whitlock"
+			     # to do: add gfx
+			}}
+	
+            navy_leader = {
+                   skill = 5
+                   attack_skill = 4
+                   defense_skill = 3
+                   maneuvering_skill = 3
+                   coordination_skill = 4
+             }
+	}
 
 }

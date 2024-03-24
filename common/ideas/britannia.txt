@@ -319,7 +319,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			authoritarian_democracy_drift = 0.02
+			BR_authoritarian_drift = 0.02
 			stability_factor = -0.10
 			political_power_gain = -0.35
 			consumer_goods_factor = 0.05
@@ -578,7 +578,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = -0.15
-			totalitarian_socialism_drift = 0.025
+			BR_vanguardist_drift = 0.025
 		   }
 	    }
 
@@ -596,7 +596,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = -0.10
-			totalitarian_socialism_drift = 0.020
+			BR_vanguardist_drift = 0.020
 		   }
 	    }
 
@@ -614,7 +614,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = -0.08
-			totalitarian_socialism_drift = 0.015
+			BR_vanguardist_drift = 0.015
 		   }
 	    }
 
@@ -632,7 +632,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = -0.05
-			totalitarian_socialism_drift = 0.010
+			BR_vanguardist_drift = 0.010
 		   }
 	    }
 
@@ -650,7 +650,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = -0.03
-			totalitarian_socialism_drift = 0.050
+			BR_vanguardist_drift = 0.050
 		   }
 	    }
 
@@ -667,7 +667,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			totalitarian_socialism_drift = 0.020
+			BR_vanguardist_drift = 0.020
 		   }
 	    }
 		
@@ -685,7 +685,7 @@ ideas = {
 		   
 		   modifier = {
 			research_speed_factor = 0.15
-			autocracy_drift = 0.010
+			BR_autocracy_drift = 0.010
 			drift_defence_factor = 0.2
 		   }
 	    }
@@ -703,7 +703,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.025
+			BR_supremacist_drift = 0.025
 			experience_gain_army_factor = -0.15
 			army_org_factor = -0.15
 			army_attack_factor = -0.10
@@ -723,7 +723,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.020
+			BR_supremacist_drift = 0.020
 			experience_gain_army_factor = -0.12
 			army_org_factor = -0.12
 			army_attack_factor = -0.08
@@ -743,7 +743,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.015
+			BR_supremacist_drift = 0.015
 			experience_gain_army_factor = -0.09
 			army_org_factor = -0.09
 			army_attack_factor = -0.06
@@ -763,7 +763,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.010
+			BR_supremacist_drift = 0.010
 			experience_gain_army_factor = -0.07
 			army_org_factor = -0.07
 			army_attack_factor = -0.04
@@ -783,7 +783,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.05
+			BR_supremacist_drift = 0.05
 			experience_gain_army_factor = -0.05
 			army_org_factor = -0.05
 			army_attack_factor = -0.02
@@ -803,7 +803,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			ultra_nationalism_drift = 0.03
+			BR_supremacist_drift = 0.03
 			army_org_factor = -0.05
 		   }
 	    }
@@ -821,7 +821,7 @@ ideas = {
 		   removal_cost = -1
 		   
 		   modifier = {
-			autocracy_drift = 0.010
+			BR_autocracy_drift = 0.010
 			drift_defence_factor = 0.2
 		   }
 	    }
@@ -842,7 +842,7 @@ ideas = {
 			experience_gain_army_factor = 0.15
 			army_attack_factor = 0.10
 			army_org_factor = 0.10
-			autocracy_drift = 0.010
+			BR_autocracy_drift = 0.010
 			drift_defence_factor = 0.2
 		   }
 	    }
@@ -863,7 +863,7 @@ ideas = {
 			experience_gain_army_factor = 0.15
 			army_attack_factor = 0.10
 			army_org_factor = 0.15
-			autocracy_drift = 0.020
+			BR_autocracy_drift = 0.020
 			drift_defence_factor = 0.4
 			research_speed_factor = 0.15
 		   }
@@ -927,7 +927,7 @@ ideas = {
 		}
 	}
 
-		naval_manufacturer = { 
+		br_naval_manufacturer = { 
 		
 			designer = yes
 			
@@ -953,7 +953,7 @@ ideas = {
 		
 		}
 		
-		materiel_manufacturer = { 
+		br_materiel_manufacturer = { 
 				
 			designer = yes
 			
@@ -978,7 +978,7 @@ ideas = {
 		
 		}
 		
-		aircraft_manufacturer = { 
+		br_aircraft_manufacturer = { 
 				
 			designer = yes
 			
@@ -1030,7 +1030,7 @@ ideas = {
 		}
 		
 		
-			tank_manufacturer = { 
+			br_tank_manufacturer = { 
 				
 			designer = yes
 			
@@ -1042,7 +1042,7 @@ ideas = {
 					original_tag = BRT
 				  }
 				research_bonus = {
-					sakuradite = 0.02
+					nuclear  = 0.02
 					armor = 0.05
 				}
 				
@@ -1064,8 +1064,8 @@ ideas = {
 				
 
 					research_bonus = {
-						sakuradite = 0.05
-						knightmare_all_pur = 0.05
+						nuclear = 0.05
+						knightmare_mobile = 0.05
 					}
 				
 				
@@ -1076,16 +1076,5 @@ ideas = {
 			}
 		
 		 }
-		
-		
-		
-		
-				
-
-
-
-
-	
 	
 }	
-	

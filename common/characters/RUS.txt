@@ -13,10 +13,12 @@ characters={
 			ledger = civilian
 				allowed = {
 					original_tag = RUS
+				}
+				available = {
 					NOT = {has_completed_focus = RUS_Arrest_the_traitor}
 				}
 				traits = {
-					oligarchy_guy appointed_general
+					authoritarian_guy appointed_general
 				}
 				cost = 2000
 				ai_will_do = {
@@ -26,18 +28,17 @@ characters={
 	}
 
 	RUS_vladislav={
-		name="Vladislav Zakharov"
-		portraits={
-			civilian={
+		name = "Vladislav Zakharov"
+		portraits = {
+			civilian = {
 				large="GFX_portrait_RUS_vladislav"
 			}
 		}
-		country_leader={
-			desc = "	"
-			ideology=military_dictatorship
-			traits={  }
-			expire="2020.1.1.1"
-			id = -1
+		country_leader = {
+			desc = "POLITICS_ZAKHAROV_DESC"
+			ideology = conservative_one_party_democracy
+			traits={}
+			expire="2100.1.1.1"
 		}
 	}
 
@@ -158,9 +159,8 @@ characters={
 				allowed = {
 					original_tag = RUS
 				}
-				
 				traits = {
-					conservative_guy military_police
+					paternalist_guy military_police
 				}
 		}
 		name="Lavrentiy Smirnoff"
@@ -186,6 +186,11 @@ characters={
 			idea_token = RUS_generic_army_chief_idea_1
 			allowed = {
 				tag = RUS
+			}
+			visible = {
+				NOT = {
+					has_cosmetic_tag = EIZ
+				}
 			}
 			traits = { 
 				army_chief_offensive_2
@@ -313,7 +318,7 @@ characters={
 				}
 				
 				traits = {
-					conservative_guy balanced_budget
+					paternalist_guy balanced_budget
 				}
 		}
 		name="Matvei Conovalov"
@@ -333,7 +338,7 @@ characters={
 					original_tag = RUS
 				}
 				traits = {
-					oligarchy_guy expert_diplomat
+					authoritarian_guy expert_diplomat
 				}
 				ai_will_do = {
 					factor = 1.000
@@ -358,7 +363,7 @@ characters={
 					original_tag = RUS
 				}
 				traits = {
-					conservative_guy balanced_fist
+					paternalist_guy balanced_fist
 				}
 				ai_will_do = {
 					factor = 1.000

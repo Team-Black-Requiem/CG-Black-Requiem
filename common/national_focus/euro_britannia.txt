@@ -1,724 +1,4937 @@
-﻿#focus_tree = {
-id = euro_britannia_focus
-	
+﻿focus_tree = {
+	id = euro_britannia_focus
+	continuous_focus_position = { x = 20 y = 2500 }
 	country = {
 		factor = 0
 		modifier = {
-			add = 5
-			#tag = EUR
+			add = 10
+			tag = EUR
 		}
 	}
-	
-
-	default = no
-
-	continuous_focus_position = { x = 20 y = 2500 }
-
+	#Cold Pacific coast
 	focus = {
-		id = EUR_cold_far_east
-		icon = GFX_EUR_cold_far_east
-		cost = 3
-		x = 15
+		id = EUR_Cold_Pacific_coast
+		icon = GFX_EUR_cold_pacific_coast
+		cost = 1
+		x = 29
 		y = 0
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
-		add_ideas = {EUR_everything_for_new_life}
+		country_event = EUR.1
+		add_political_power = 10
 		}
-
-
 	}
-
+	#Digging Through The Rubble
 	focus = {
-		id = EUR_under_our_management
-		icon = GFX_EUR_under_our_management
-		relative_position_id = EUR_cold_far_east
-		prerequisite = {
-			focus = EUR_cold_far_east
-		}
-		cost = 3
+		id = EUR_Digging_Through_The_Rubble
+		icon = GFX_EUR_Digging_Through_The_Rubble
+		cost = 1
 		x = 0
 		y = 1
+		relative_position_id = EUR_Cold_Pacific_coast
+		prerequisite = {
+			focus = EUR_Cold_Pacific_coast
+		}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
-		add_political_power = 100
-		swap_ideas = {
-		remove_idea = EUR_crisis_authority
-		add_idea = EUR_crisis_authority_1 }
+		country_event = EUR.2
 		}
-
-
 	}
+	#Britannian Illusions
 	focus = {
-		id = EUR_defy_RUS_institutions
-		icon = GFX_EUR_defy_RUS_institutions
-		relative_position_id = EUR_under_our_management
-		prerequisite = {
-			focus = EUR_under_our_management
-		}
-		cost = 3
-		x = 3
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		remove_ideas = EUR_crisis_authority_1
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_centralize_government
-		icon = GFX_EUR_centralize_government
-		relative_position_id = EUR_defy_RUS_institutions
-		prerequisite = {
-			focus = EUR_defy_RUS_institutions
-		}
-		cost = 2
+		id = EUR_Britannian_Illusions
+		icon = GFX_EUR_Britannian_Illusions
+		cost = 1
 		x = 0
 		y = 1
+		relative_position_id = EUR_Digging_Through_The_Rubble
+		prerequisite = {
+			focus = EUR_Digging_Through_The_Rubble
+		}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_state_core = 574
-		add_state_core = 562
-		add_state_core = 637
-		}
-
-
-	}
-
-	focus = {
-		id = EUR_delegation_pendragon
-		icon = GFX_EUR_delegation_pendragon
-		relative_position_id = EUR_under_our_management
-		prerequisite = {
-			focus = EUR_under_our_management
-		}
-		cost = 3
-		x = -3
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		BRT = {country_event = EUR.1}
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_retreat_into_isolation
-		icon = GFX_EUR_retreat_into_isolation
-		relative_position_id = EUR_delegation_pendragon
-		prerequisite = {
-			focus = EUR_delegation_pendragon
-		}
-		cost = 2
-		x = -2
-		y = 1
-		available = {
-			country_exists = EUR
-			has_country_flag = EUR_help_NO
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = EUR_protect_arctic_routes
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		hidden_effect = {
-		remove_country_leader_role = {
-		character = EUR_Mil_Coun
-		ideology = paternal_autocracy}}
-			add_country_leader_role = {
-			character = EUR_Mil_Coun
-			country_leader = {
-				expire = "2020.1.1"
-				ideology = purist_aristocracy
-				traits = {
-					}
-				}
-			promote_leader = yes
-			}
-				EUR_Mil_Coun = {
-				set_portraits = {
-						civilian={
-							large="GFX_portrait_EUR_Mil_Coun_NO"}
-				}}
-				set_politics = {
-			ruling_party = ultra_nationalism
-			last_election = "2008.1.1"
-			election_frequency = 48
-			elections_allowed = no}
-			remove_ideas = EUR_everything_for_new_life
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_protect_arctic_routes
-		icon = GFX_EUR_protect_arctic_routes
-		relative_position_id = EUR_delegation_pendragon
-		prerequisite = {
-			focus = EUR_delegation_pendragon
-		}
-		cost = 2
-		x = 2
-		y = 1
-		available = {
-			country_exists = EUR
-			has_country_flag = EUR_help_YES
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-			focus = EUR_retreat_into_isolation
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		swap_ideas = {
-		remove_idea = EUR_poor_logistics
-		add_idea = EUR_poor_logistics_1}
-		574 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 4855
-					instant_build = yes
-				}
-			}
-		562 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 12518
-					instant_build = yes
-				}
-			}
-		build_railway = {
-				path = { 4855 1795 4726 7746 1878 12623 1714 12518 }
-			}
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_invite_BRT_advisers
-		icon = GFX_EUR_invite_BRT_advisers
-		relative_position_id = EUR_protect_arctic_routes
-		prerequisite = {
-			focus = EUR_protect_arctic_routes
-		}
-		cost = 2
-		x = 1
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		remove_ideas = EUR_poor_logistics_1
-		recruit_character = EUR_Britannian_economy_minister
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_beg_for_Knightmares
-		icon = GFX_EUR_beg_for_Knightmares
-		relative_position_id = EUR_invite_BRT_advisers
-		prerequisite = {
-			focus = EUR_invite_BRT_advisers
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		load_oob = EUR_beg_for_knightmares
-		country_event = EUR.4
-		}
-	}
-
-
-	focus = {
-		id = EUR_prepare_to_strike
-		icon = GFX_EUR_prepare_to_strike
-		relative_position_id = EUR_befriend_Bismark
-		prerequisite = {
-			focus = EUR_beg_for_Knightmares
-		}
-		prerequisite = {
-			focus = EUR_use_purist_militias
-		}
-		prerequisite = {
-			focus = EUR_secure_northen_loyalty
-		}
-		cost = 3
-		x = 3
-		y = 2
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		recruit_character = EUR_Michele_Manfredi
-		add_timed_idea = {
-			idea = EUR_fight_in_Siberia
-			days = 365}
-			hidden_effect = {
-			country_event = { days = 7 id = EUR.5}
-			}
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_magadan_declaration
-		icon = GFX_EUR_magadan_declaration
-		relative_position_id = EUR_prepare_to_strike
-
-		prerequisite = {
-			focus = EUR_prepare_to_strike
-		}
-		cost = 3
-		x = 0
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		EUR = {
-			declare_war_on = {
-			target = SRU
-			type = annex_everything
-						}
-		}
-	}
-	}
-
-
-	focus = {
-		id = EUR_befriend_Bismark
-		icon = GFX_EUR_befriend_Bismark
-		relative_position_id = EUR_protect_arctic_routes
-		prerequisite = {
-			focus = EUR_protect_arctic_routes
-		}
-		cost = 2
-		x = -1
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_opinion_modifier = { target = BRT modifier = friendly }
-		BRT = {
-		add_opinion_modifier = { target = EUR modifier = friendly }}
-		add_offsite_building  = {
-					type = arms_factory
-					level = 5
-				}
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_use_purist_militias
-		icon = GFX_EUR_use_purist_militias
-		relative_position_id = EUR_befriend_Bismark
-		prerequisite = {
-			focus = EUR_befriend_Bismark
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
 		country_event = EUR.3
+		army_experience = 5
+		}
+	}
+	#The Men From PENDRAGON
+	focus = {
+		id = EUR_The_Men_From_PENDRAGON
+		icon = GFX_EUR_The_Men_From_PENDRAGON
+		cost = 1
+		cancelable = no
+		x = 0
+		y = 1
+		relative_position_id = EUR_Britannian_Illusions
+		prerequisite = {
+			focus = EUR_Britannian_Illusions
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			country_event = EUR.5
+		}
+		completion_reward = {
+		country_event = EUR.5
+		army_experience = 10
+		}
+	}
+	focus = {
+		id = EUR_The_Space_Connection
+		icon = GFX_EUR_The_Space_Connection
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_The_Men_From_PENDRAGON
+		prerequisite = {
+			focus = EUR_The_Men_From_PENDRAGON
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = EUR.5
+		}
+	}
+	focus = {
+		id = EUR_Reeling_In_Their_Dirty_Laundry
+		icon = GFX_EUR_Reeling_In_Their_Dirty_Laundry
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_The_Men_From_PENDRAGON
+		prerequisite = {
+			focus = EUR_The_Men_From_PENDRAGON
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = EUR.6
+		}
+	}
+	focus = {
+		id = EUR_Ace_in_the_hole
+		icon = GFX_EUR_ace_in_the_hole
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reeling_In_Their_Dirty_Laundry
+		prerequisite = {
+			focus = EUR_Reeling_In_Their_Dirty_Laundry
+		}
+		prerequisite = {
+			focus = EUR_The_Space_Connection
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = EUR.7
+		}
+	}
+	focus = {
+		id = EUR_Britannians_proposal
+		icon = GFX_EUR_britannians_proposal
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ace_in_the_hole
+		prerequisite = {
+			focus = EUR_Ace_in_the_hole
+		}
+		mutually_exclusive = {
+			focus = EUR_Finding_alternatives
+		}
+		search_filters = {
+		}
+		
+		available = {
+		country_exists = EUR
+		has_country_flag = EUR_BRT_support
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.9
 		
 		}
-
-
 	}
 
 	focus = {
-		id = EUR_fortify_borders
-		icon = GFX_EUR_fortify_borders
-		relative_position_id = EUR_retreat_into_isolation
+		id = EUR_Finding_alternatives #(WIP)
+		icon = GFX_EUR_finding_alternatives
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Ace_in_the_hole
 		prerequisite = {
-			focus = EUR_retreat_into_isolation
+			focus = EUR_Ace_in_the_hole
 		}
-		cost = 2
+		mutually_exclusive = {
+			focus = EUR_Britannians_proposal
+		}
+		search_filters = {
+		}
+		
+		available = {
+		    country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 0 # to do: for the time being this is down to 0 to stop the ai going down this path.
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = EUR_WIP
+			#country_event = EUR.8.t
+		}
+	}
+	focus = {
+		id = EUR_Britannian_ultimatum
+		icon = GFX_EUR_britannian_ultimatum
+		cost = 3
+		x = 10
+		y = 2
+		relative_position_id = EUR_Britannians_proposal
+		prerequisite = {
+			focus = EUR_Britannians_proposal
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_cosmetic_tag = EUR_EB
+			country_event = EUR.10
+			add_political_power = -50
+			swap_ideas = {
+               remove_idea = EUR_poor_logistics
+               add_idea = EUR_poor_logistics_2
+               }
+
+			hidden_effect = {
+				country_event ={
+					id = EUR.11
+					days = 3
+				} 
+			}
+		}
+
+	}
+	focus = {
+		id = EUR_Expand_north_trading_routes
+		icon = GFX_EUR_expand_north_trading_routes
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = britannia_support_EUR_increase_tt
+		add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = BRT
+				}
+		add_equipment_to_stockpile = {
+                        type = knightmare_mass_prod_2
+                        amount = 200
+						producer = BRT
+                    }
+		hidden_effect = {
+		add_equipment_to_stockpile = {
+                        type = landspinner_equip
+                        amount = 200
+						producer = BRT
+                    }
+		add_equipment_to_stockpile = {
+                        type = factspheres_equip
+                        amount = 200
+						producer = BRT
+                    }
+		}
+		}
+	}
+	#Create special rights for Britannia soldiers
+	focus = {
+		id = EUR_Create_special_rights
+		icon = GFX_EUR_create_special_rights
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Britannian_ultimatum
+		prerequisite = {
+			focus = EUR_Britannian_ultimatum
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = EUR_BRT_First_Aid_tt
+			hidden_effect = {
+				load_oob = "EUR_Britannia_Aid_1"
+				
+		    }
+	    }
+	}	
+	focus = {
+		id = EUR_An_End_To_Madness
+		icon = GFX_EUR_an_end_to_madness
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Create_special_rights
+		prerequisite = {
+			focus = EUR_Create_special_rights
+		}
+		prerequisite = {
+			focus = EUR_Expand_north_trading_routes
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.07
+            add_command_power = 50
+			country_event = EUR.12
+
+	}
+	}
+##################################CALL UPON THE OSI
+	focus = {
+		id = EUR_Call_Upon_The_OSI
+		icon = GFX_EUR_call_upon_the_osi
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_An_End_To_Madness
+		prerequisite = {
+			focus = EUR_An_End_To_Madness
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Cast_Wide_Net
+		icon = GFX_EUR_cast_wide_net
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Numbers_Stations
+		icon = GFX_EUR_numbers_stations
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id =  EUR_Getting_Rid_Of_Troublemakers
+		icon = GFX_EUR_getting_rid_of_troublemakers
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = EUR_Call_Upon_The_OSI
+		prerequisite = {
+			focus = EUR_Call_Upon_The_OSI
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Bucket_and_Chair
+		icon = GFX_EUR_bucket_and_chair
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Getting_Rid_Of_Troublemakers
+		prerequisite = {
+			focus = EUR_Getting_Rid_Of_Troublemakers
+		}
+		prerequisite = {
+			focus = EUR_Numbers_Stations
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Hope_They_Like_Chocolate
+		icon = GFX_EUR_hope_they_like_chocolate
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Getting_Rid_Of_Troublemakers
+		prerequisite = {
+			focus = EUR_Getting_Rid_Of_Troublemakers
+		}
+		prerequisite = {
+			focus = EUR_Cast_Wide_Net
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Operation_Parasyte
+		icon = GFX_EUR_operation_parasyte
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Bucket_and_Chair
+		prerequisite = {
+			focus = EUR_Bucket_and_Chair
+		}
+		prerequisite = {
+			focus = EUR_Hope_They_Like_Chocolate
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#############################################Secure The First Site
+	focus = {
+		id = EUR_Secure_First_Site
+		icon = GFX_EUR_secure_first_site
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_An_End_To_Madness
+		prerequisite = {
+			focus = EUR_An_End_To_Madness
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Opening_Up_Data_Vaults
+		icon = GFX_EUR_opening_up_data_vaults
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Secure_First_Site
+		prerequisite = {
+			focus = EUR_Secure_First_Site
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Reengage_Cooling_Protocols
+		icon = GFX_EUR_reengage_cooling_protocols
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Secure_First_Site
+		prerequisite = {
+			focus = EUR_Secure_First_Site
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Research_Anomaly
+		icon = GFX_EUR_research_anomaly
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reengage_Cooling_Protocols
+		prerequisite = {
+			focus = EUR_Reengage_Cooling_Protocols
+		}
+		prerequisite = {
+			focus = EUR_Opening_Up_Data_Vaults
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+#########################################################Schnizel Support
+	focus = {
+		id = EUR_Schnizel_Support  ###IDEAS: Legitimate Cause (Muted), Army Without Commanders, Underdeveloped Economy, BRT Military Admn.
+		icon = GFX_EUR_schnizel_support
+		cost = 3
+		x = 26
+		y = 1
+		relative_position_id = EUR_An_End_To_Madness
+		prerequisite = {
+			focus = EUR_An_End_To_Madness
+		}
+		search_filters = {
+		}
+		
+		available = {
+			       custom_effect_tooltip = BRT_White_Prince_tt
+                   country_exists = EUR
+				   BRT = {
+					has_country_flag = BRT_White_Prince
+				   }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.13
+			remove_ideas = EUR_legitimate_cause
+		}
+	}
+	focus = {
+		id = EUR_By_Emperors_order
+		icon = GFX_EUR_by_emperors_order
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+		}
+		mutually_exclusive = { focus = EUR_In_memory_of_Russian_Empire}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.08
+			add_command_power = 50
+			set_country_flag = EUR_Schnizel_Harsh
+		}
+	}
+	focus = {
+		id = EUR_In_memory_of_Russian_Empire
+		icon = GFX_EUR_in_memory_of_russian_empire
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+		}
+		mutually_exclusive = { focus = EUR_By_Emperors_order}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 70
+			set_country_flag = EUR_Schnizel_Soft
+		}
+	}
+#############################################By Emperor's order Schneizel`s Playground
+	focus = {
+		id = EUR_Schneizels_Playground
+		icon = GFX_EUR_schneizels_playground
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_By_Emperors_order
+		prerequisite = {
+			focus = EUR_By_Emperors_order
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		country_event = EUR.25
+		britannia_support_EUR_setup= yes
+		#to do: starts favor mechanic still to be done.
+		}
+	}
+	focus = {
+		id = EUR_An_Area_in_All_but_Name
+		icon = GFX_EUR_an_area_in_all_but_name
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Schneizels_Playground
+		prerequisite = {
+			focus = EUR_Schneizels_Playground
+		}
+		mutually_exclusive = { focus = EUR_Pulling_From_Land}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.26
+			set_country_flag = Industry_Schnizel_3
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = EUR_Ensuring_material_transport
+		icon = GFX_EUR_ensuring_material_transport
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_An_Area_in_All_but_Name
+		prerequisite = {
+			focus = EUR_An_Area_in_All_but_Name
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13337 13333 1714 13329 12623 1878 }
+				start_province = 12551
+				target_province = 1878
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 13337 13332 13328 13327 4229 }
+				start_province = 13337
+				target_province = 4229
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13336 13341 12683 1865 }
+				start_province = 12551
+				target_province = 1865
+			}
+		}
+	}
+	focus = {
+		id = EUR_Britannia_Welfare_program
+		icon = GFX_EUR_britannia_welfare_program
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_An_Area_in_All_but_Name
+		prerequisite = {
+			focus = EUR_An_Area_in_All_but_Name
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = 0.10
+			574 = {
+				add_extra_state_shared_building_slots = 6
+				add_manpower = 178600
+			}
+		}
+	}
+	focus = {
+		id = EUR_Expanding_Neryungri_area
+		icon = GFX_EUR_expanding_neryungri_area
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Britannia_Welfare_program
+		prerequisite = {
+			focus = EUR_Britannia_Welfare_program
+		}
+		prerequisite = {
+			focus = EUR_Ensuring_material_transport
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+			574 = {
+				add_manpower = 125000
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Signs_of_growth
+		icon = GFX_EUR_signs_of_growth
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Expanding_Neryungri_area
+		prerequisite = {
+			focus = EUR_Expanding_Neryungri_area
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			574 = {
+				add_extra_state_shared_building_slots = 14
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 8
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Protect_our_investment
+		icon = GFX_EUR_protect_our_investment
+		cost = 3
 		x = 0
 		y = 1
+		relative_position_id = EUR_Signs_of_growth
+		prerequisite = {
+			focus = EUR_Signs_of_growth
+		}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
 		574 = {
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 4821
-							instant_build = yes
-						}
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 7785
-							instant_build = yes
-						}
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 7889
-							instant_build = yes
-						}
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 4855
-							instant_build = yes
-						}
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 12611
-							instant_build = yes
-						}
-		add_building_construction = {
-							type = bunker
-							level = 1
-							province = 1852
-							instant_build = yes
-						}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 7844
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 1748
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 10714
+			}
+			set_building_level = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 4821
+			}
+			set_building_level = {
+				type = anti_air_building
+				level = 4
+				instant_build = yes
+		}
 		}
 	}
 	}
-
-
 	focus = {
-		id = EUR_allow_Russian_battalions
-		icon = GFX_EUR_allow_Russian_battalions
-		relative_position_id = EUR_fortify_borders
-		prerequisite = {
-			focus = EUR_fortify_borders
-		}
-		cost = 2
-		x = 0
+		id = EUR_Revitalize_Neryungri_Airfields
+		icon = GFX_EUR_revitalize_neryungri_airfields
+		cost = 3
+		x = 1
 		y = 1
+		relative_position_id = EUR_Expanding_Neryungri_area
+		prerequisite = {
+			focus = EUR_Expanding_Neryungri_area
+		}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
-		load_oob = EUR_Rus_Battalions
-		}
-
-
-	}
-
-
-	focus = {
-		id = EUR_preserve_our_existence
-		icon = GFX_EUR_preserve_our_existence
-		relative_position_id = EUR_allow_Russian_battalions
-		prerequisite = {
-			focus = EUR_allow_Russian_battalions
-		}
-		cost = 2
-		x = 0
-		y = 1
-		available = {
-			country_exists = EUR
-		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
-		ai_will_do = {
-			factor = 10
-		}
-	
-		completion_reward = {
-		add_ideas = EUR_Waiting_for_the_future
-				add_offsite_building  = {
-					type = arms_factory
-					level = 2
+			574 = {
+				add_building_construction = {
+					type = 	air_base
+					level = 4
+					instant_build = yes
 				}
-				add_offsite_building = {
-				type = industrial_complex
-				level = 2
 			}
+			if = {
+				limit = {
+					NOT = {has_tech = early_jet_design_2}
+				}
+				set_technology = {early_jet_design_2 = 1}
+			}
+			if = {
+				limit = {
+					NOT = {has_tech = trans1}
+				}
+				set_technology = {trans1 = 1}
 			}
 		}
-
-
-
+	}
 	focus = {
-		id = EUR_provisional_senate
-		icon = GFX_EUR_provisional_senate
-		relative_position_id = EUR_centralize_government
-		prerequisite = {
-			focus = EUR_centralize_government
-		}
-		cost = 2
+		id = EUR_Leasing_to_Military
+		icon = GFX_EUR_leasing_to_military
+		cost = 3
 		x = 0
 		y = 1
+		relative_position_id = EUR_Revitalize_Neryungri_Airfields
+		prerequisite = {
+			focus = EUR_Revitalize_Neryungri_Airfields
+		}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
-		add_ideas = EUR_provisional_senate
-		country_event = EUR.2
+			add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1
+				amount = 260
+				producer = BRT
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 25
+				producer = BRT
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_Pulling_From_Land
+		icon = GFX_EUR_pulling_from_land
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Schneizels_Playground
+		prerequisite = {
+			focus = EUR_Schneizels_Playground
+			focus = EUR_Attract_investment_from_British_nobles
+
+		}
+		mutually_exclusive = { focus = EUR_Creating_trading_hub_port_in_Okhotsk}
+
+		mutually_exclusive = { focus = EUR_An_Area_in_All_but_Name}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.30
+			set_country_flag = Industry_Schnizel_2
+			add_political_power = 175
+			custom_effect_tooltip = BRT_EUR_Resources_tt
+			#to do: in the future will start a trade system to generate favor with
+			#with the empire.
+		}
+	}
+	focus = {
+		id = EUR_Focus_on_jewerly_industry
+		icon = GFX_EUR_focus_on_jewerly_industry
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Pulling_From_Land
+		prerequisite = {
+			focus = EUR_Pulling_From_Land
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_manpower = -4287
+
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 822
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 10
+				state = 644
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 863
+			}
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 574
+			}
+
+		}
+	}
+	focus = {
+		id = EUR_Reopening_old_mineshafts
+		icon = GFX_EUR_reopening_old_mineshafts
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Pulling_From_Land
+		prerequisite = {
+			focus = EUR_Pulling_From_Land
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_manpower = -945
+			add_resource = {
+				type = aluminium
+				amount = 3
+				state = 574
+			}
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 644
+			}
+			add_resource = {
+				type = tungsten
+				amount = 4
+				state = 722
+			}
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 917
+			}
+		}
+	}
+	focus = {
+		id = EUR_Establish_relations_with_Brittanian_nobles
+		icon = GFX_EUR_establish_relations_with_brittanian_nobles
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reopening_old_mineshafts
+		prerequisite = {
+			focus = EUR_Reopening_old_mineshafts
+		}
+		prerequisite = {
+			focus = EUR_Focus_on_jewerly_industry
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+            add_opinion_modifier = {
+                    target = BRT
+                     modifier = britannian_support
+                }
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	focus = {
+		id = EUR_Perfecting_our_Craft
+		icon = GFX_EUR_perfecting_our_craft
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+               remove_idea = EUR_underdeveloped_economy
+               add_idea = EUR_Economic_Stability_Almost_Secured
+            }
+			add_offsite_building = { type = industrial_complex level = 4 }
+		}
+	}
+	focus = {
+		id = EUR_Establishing_our_Brand
+		icon = GFX_EUR_establishing_our_brand
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Perfecting_our_Craft
+		prerequisite = {
+			focus = EUR_Perfecting_our_Craft
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment
+				amount = 1000
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = support_equipment
+				amount = 600
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = artillery_equipment
+				amount = 250
+				producer = BRT
+			}
+			add_equipment_to_stockpile ={
+				type = motorized_equipment
+				amount = 200
+				producer = BRT
+			}
+			add_ideas = EUR_Establishing_our_Brand
+			#to do: in the future add a lot of favor
+		}
+	}
+	focus = {
+		id = EUR_Oil_for_Britannia
+		icon = GFX_EUR_oil_for_britannia
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Establish_relations_with_Brittanian_nobles
+		prerequisite = {
+			focus = EUR_Establish_relations_with_Brittanian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_resource = {
+				type = Oil
+				amount = 8
+				state = 722
+			}
+			add_resource = {
+				type = Oil
+				amount = 10
+				state = 917
+			}
+		}
+	}
+	focus = {
+		id = EUR_Modernizing_to_Meet_Their_Needs
+		icon = GFX_EUR_modernizing_to_meet_their_needs
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Oil_for_Britannia
+		prerequisite = {
+			focus = EUR_Oil_for_Britannia
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.31
+             add_stability = -0.15
+			add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+	focus = {
+		id = EUR_Economic_Stability_Secured
+		icon = GFX_EUR_economic_stability_secured
+		cost = 3
+		x = 1
+		y = 1
+		
+		relative_position_id = EUR_Establishing_our_Brand
+		prerequisite = {
+			focus = EUR_Establishing_our_Brand
+			focus = EUR_Leasing_to_Military
+			focus = EUR_Form_the_TPTA
+		}
+		prerequisite = {
+			focus = EUR_Modernizing_to_Meet_Their_Needs
+			focus = EUR_Protect_our_investment
+			focus = EUR_Establish_the_Okhotsk_Drydocks
 		}
 
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.27
+			if = {
+                  limit = {
+                   has_idea = EUR_Economic_Stability_Almost_Secured
+               }   
+                swap_ideas = {
+				remove_idea = EUR_Economic_Stability_Almost_Secured
+				add_idea = EUR_Economic_Stability_Secured
+		        }
+            }
 
+			if = {
+                  limit = {
+                   has_idea = EUR_underdeveloped_economy
+               }   
+                swap_ideas = {
+				remove_idea = EUR_underdeveloped_economy
+				add_idea = EUR_Economic_Stability_Secured
+		        }
+            }
+		}
+	}
+#############################################By Emperor's order Restoring discipline in the army
+	focus = {
+		id = EUR_Restoring_discipline_in_army
+		icon = GFX_EUR_restoring_discipline_in_army
+		cost = 3
+		x = -13
+		y = 1
+		relative_position_id = EUR_By_Emperors_order
+		prerequisite = {
+			focus = EUR_By_Emperors_order
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_command_power = 50
+		    swap_ideas = {
+               remove_idea = EUR_national_militia_2
+               add_idea = EUR_national_militia_3
+           }
+		}
+	}
+	focus = {
+		id = EUR_New_officier_corps
+		icon = GFX_EUR_new_officier_corps
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Restoring_discipline_in_army
+		prerequisite = {
+			focus = EUR_Restoring_discipline_in_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			recruit_character = EUR_Ivan_Solovev
+			recruit_character = EUR_Isai_Kiselev
+			recruit_character = EUR_Gogol_Bogdanov	
+			custom_effect_tooltip = EUR_Manfredi_promotion_tt
+			
+			add_advisor_role = {
+		    character = EUR_Michele_Manfredi
+		    active = yes
+			advisor={	
+			slot = high_command
+			idea_token = EUR_Michele_Manfredi_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				knightmare_proponent_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	       }
+			hidden_effect = {
+			EUR_Michele_Manfredi = {
+				add_trait = { trait = panzer_expert }
+				add_trait = { trait = winter_expert	}
+				promote_leader = yes
+			}
+			}
+		}
 	}
 
-
+##########Ask more generals from Britannia
 	focus = {
-		id = EUR_secure_northern_loyalty
-		icon = GFX_EUR_secure_northern_loyalty
-		relative_position_id = EUR_provisional_senate
-		prerequisite = {
-			focus = EUR_provisional_senate
-		}
-		cost = 2
-		x = 0
+		id = EUR_Ask_more_generals
+		icon = GFX_EUR_ask_more_generals
+		cost = 3
+		x = -3
 		y = 1
+		relative_position_id = EUR_New_officier_corps
+		prerequisite = {
+			focus = EUR_New_officier_corps
+		}
+		mutually_exclusive = { focus = EUR_Replace_young_officers}
+		search_filters = {
+		}
+		
 		available = {
-			country_exists = EUR
+                   country_exists = EUR
 		}
-		bypass = { }
-	
-
-		mutually_exclusive = {
-		}
-
-
+		
 		ai_will_do = {
 			factor = 10
 		}
 	
 		completion_reward = {
-		add_political_power = -50
-		add_stability = 0.05
-		add_state_core = 644
-				644 = {
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-			  }
-		add_state_core = 822
-		822 = {
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-			  }
+			country_event = { id=EUR.19 days = 5 }
+			remove_ideas = EUR_shortage_of_trusted_officers
+		set_country_flag = EUR_Schnizel_Get_More_Officers
+		recruit_character = EUR_Albert_Lancaster
+		recruit_character = EUR_Elliot_Collins
+
+		}
+		# to do: add gfx for some generals, see character files.
+		# to do: add 0.5 support for 40 days when the support system is in place. 
+	}
+	focus = {
+		id = EUR_Using_Britannia_experience
+		icon = GFX_EUR_using_britannia_experience
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Ask_more_generals
+		prerequisite = {
+			focus = EUR_Ask_more_generals
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+#########################Invite Communications officers and  logistics officers from Britannia
+	focus = {
+		id = EUR_Invite_Communications_officers
+		icon = GFX_EUR_invite_communications_officers
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Using_Britannia_experience
+		prerequisite = {
+			focus = EUR_Using_Britannia_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = signal_company_tech
+			}
+			remove_ideas = EUR_national_militia_3
+		}
+	}
+	focus = {
+		id = EUR_Death_from_sky
+		icon = GFX_EUR_death_from_sky
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers
+		}
+		mutually_exclusive = { focus = EUR_Modern_vehicle_of_victory}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.23
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 500
+				producer = BRT
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 300
+				producer = BRT
+			}
+		}
+	}
+	focus = {
+		id = EUR_Learn_from_Brittanian_experience
+		icon = GFX_EUR_learn_from_brittanian_experience
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Death_from_sky
+		prerequisite = {
+			focus = EUR_Death_from_sky
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			air_experience = 100
+			add_ideas = EUR_Trained_Bombers
+		}
+	}
+	focus = {
+		id = EUR_Invite_Britannian_aces
+		icon = GFX_EUR_invite_britannian_aces
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Learn_from_Brittanian_experience
+		prerequisite = {
+			focus = EUR_Learn_from_Brittanian_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = EUR_BRT_Aces_tt
+			hidden_effect = {
+			load_oob = "EUR_Britannia_Air_Aces"
+			}
+			add_ace = {
+				name = "Francis"
+				surname = "Hamilton"
+				callsign = "Eagle"
+				type = fighter_unique
+				is_female = yes
+			}
+			add_ace = {
+				name = "Alastair"
+				surname = "Randolph"
+				callsign = "Rednose"
+				type = support_good
+			}
+			add_ace = {
+				name = "Louis"
+				surname = "Archibald"
+				callsign = "Brave"
+				type = support_good
+			}
+			add_ace = {
+				name = "Nicholas"
+				surname = "Albrecht"
+				callsign = "Bloody"
+				type = support_good
+			}
+			add_ace = {
+				name = "Edward"
+				surname = "Rothschild"
+				callsign = "Jester"
+				type = support_good
+				is_female = yes
+			}
+		}
+		# to do: actually name the aces XD.
+	}
+
+	focus = {
+		id = EUR_Develop_our_own_doctrine
+		icon = GFX_EUR_develop_our_own_doctrine
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Learn_from_Brittanian_experience
+		prerequisite = {
+			focus = EUR_Learn_from_Brittanian_experience
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EUR_Asking_Britannia_about_Air_Commander
+		icon = GFX_EUR_asking_britannia_about_air_commander
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Invite_Britannian_aces
+		prerequisite = {
+			focus = EUR_Invite_Britannian_aces
+		}
+		prerequisite = {
+			focus = EUR_Develop_our_own_doctrine
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.24
+			air_experience = 50
+			custom_effect_tooltip = EUR_BRT_Air_Chief
+			# to do: Cas advisor 10% ground attack factor 15% all weather
+		}
+	}
+	focus = {
+		id = EUR_Modern_vehicle_of_victory
+		icon = GFX_EUR_modern_vehicle_of_victory
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers
+		}
+		mutually_exclusive = { focus = EUR_Death_from_sky}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.10
+			set_technology = {
+				knightmare_frame_1 = 1
+				factspheres = 1
+				landspinner = 1
+				knightmare_frame_2 = 1
+				knightmare_frame_3 = 1
+			}
+		}
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael
+		icon = GFX_EUR_holy_order_of_michael
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Modern_vehicle_of_victory
+		prerequisite = {
+			focus = EUR_Modern_vehicle_of_victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+				load_oob = "EUR_Order_Of_Michael"
+			}	
+			country_event = EUR.20
+			EUR_Michele_Manfredi = {
+			add_trait = {
+                   slot = corps_commander
+                   trait = Holy_Knight
+             }
+			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
+		}
+		
+	}
+	focus = {
+		id = EUR_Conduct_grueling_exercises
+		icon = GFX_EUR_conduct_grueling_exercises
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+				 army_experience = 50
+               add_war_support = 0.02
+              add_command_power = 20
+		}
+	}
+	focus = {
+		id = EUR_Ask_homeland
+		icon = GFX_EUR_ask_homeland
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises
+		}
+		mutually_exclusive = { focus = EUR_Area_11_deposits}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 10
+				state = 917
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 9
+				state = 822
+			}
+			add_timed_idea = {
+				idea = EUR_Sakuradite_Extraction_Costs
+				days = 80
+			}
+		}
+		# to do: in economic update give brittania some of our gdp.
+	}
+	focus = {
+		id = EUR_Area_11_deposits
+		icon = GFX_EUR_area_11_deposits
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises
+		}
+		mutually_exclusive = { focus = EUR_Ask_homeland}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_political_power = -20
+			if = {
+               limit = {
+                   country_exists = A11
+                }   
+                   diplomatic_relation = {
+                    country = A11
+                    relation = docking_rights
+                    active = yes
+                   } 
+              }
+            else = {
+
+                   diplomatic_relation = {
+                    country = AR8
+                    relation = docking_rights
+                    active = yes
+                   } 
+             }
+ 
+
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 562
+			}
+			#to do: update during the economic update.
+		}
+	}
+	
+	
+	
+#########################Replace young officers with Britannias nobles
+	focus = {
+		id = EUR_Replace_young_officers
+		icon = GFX_EUR_replace_young_officers
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_New_officier_corps
+		prerequisite = {
+			focus = EUR_New_officier_corps
+		}
+		mutually_exclusive = { focus = EUR_Ask_more_generals}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_national_militia_3
+				add_idea = EUR_national_militia_4
+			}
+			set_country_flag = EUR_Schnizel_Replace_Young_Officers
+		}
+		# to do: add 0.5 support for 40 days when the support system is in place. 
+	}
+	focus = {
+		id = EUR_Mobilize_more_people
+		icon = GFX_EUR_mobilize_more_people
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = EUR_Replace_young_officers
+		prerequisite = {
+			focus = EUR_Replace_young_officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_manpower = 76000
+			add_ideas = EUR_Mobilize_more_people
+			add_stability = -0.10
+			add_war_support = 0.10
+		}
+	}
+	focus = {
+		id = EUR_Introduce_harsh_punishments_in_army
+		icon = GFX_EUR_introduce_harsh_punishments_in_army
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Mobilize_more_people
+		prerequisite = {
+			focus = EUR_Mobilize_more_people
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_command_power= 50
+			army_experience = 50
+			add_manpower = -15000
+			remove_ideas = EUR_national_militia_4
+		}
+	}
+	focus = {
+		id = EUR_Open_Britannian_academy_for_officers
+		icon = GFX_EUR_open_britannian_academy_for_officers
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Mobilize_more_people
+		prerequisite = {
+			focus = EUR_Mobilize_more_people
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Open_Britannian_academy_for_officers
+		}
+	}
+	focus = {
+		id = EUR_Restore_organisation_in_army
+		icon = GFX_EUR_restore_organisation_in_army
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Open_Britannian_academy_for_officers
+		prerequisite = {
+			focus = EUR_Open_Britannian_academy_for_officers
+		}
+		prerequisite = {
+			focus = EUR_Introduce_harsh_punishments_in_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+               remove_idea = EUR_Mobilize_more_people
+               add_idea = EUR_Modern_Doctrine
+            }
+		}
+	}
+	focus = {
+		id = EUR_Transfer_all_scientists_to_research_knightmares
+		icon = GFX_EUR_transfer_all_scientists_to_research_knightmares
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Restore_organisation_in_army
+		prerequisite = {
+			focus = EUR_Restore_organisation_in_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = knightmare_all
+			}
+		}
+		# to do: replace with sakuradite gain increase when sakuradite update.
+	}
+	focus = {
+		id = EUR_Focusing_on_knightmares_production
+		icon = GFX_EUR_focusing_on_knightmares_production
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Restore_organisation_in_army
+		prerequisite = {
+			focus = EUR_Restore_organisation_in_army
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Focusing_on_knightmares_production
+
+			# to do: ad and if limit with has knigtmare tech if not give up to glasgow and if they have glasgow give 2 0.5 research bonus
+		}
+	}
+	focus = {
+		id = EUR_Conduct_several_tests
+		icon = GFX_EUR_conduct_several_tests
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Focusing_on_knightmares_production
+		prerequisite = {
+			focus = EUR_Focusing_on_knightmares_production
+		}
+		prerequisite = {
+			focus = EUR_Transfer_all_scientists_to_research_knightmares
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = EUR_BRT_Test_Divisions_tt
+			hidden_effect = {
+			load_oob = "EUR_Testing_Divisions_Equipment"
+		    }
+		}
+	}
+	focus = {
+		id = EUR_Our_own_genius
+		icon = GFX_EUR_our_own_genius
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Conduct_several_tests
+		prerequisite = {
+			focus = EUR_Ask_homeland
+			focus = EUR_Area_11_deposits
+			focus = EUR_Conduct_several_tests
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.21
+			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
+			hidden_effect = {
+			load_oob = "EUR_second_knightmare_aid"
+			}
+			# to do: what type of advisor?
+		}
+	}
+#####################################In memory of Russian Empire Attract investment from British nobles
+	focus = {
+		id = EUR_Attract_investment_from_British_nobles
+		icon = GFX_EUR_attract_investment_from_british_nobles
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_In_memory_of_Russian_Empire
+		prerequisite = {
+			focus = EUR_In_memory_of_Russian_Empire
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.25
+		    britannia_support_EUR_setup= yes
+		}
+	}
+	focus = {
+		id = EUR_Creating_trading_hub_port_in_Okhotsk
+		icon = GFX_EUR_creating_trading_hub_port_in_okhotsk
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Attract_investment_from_British_nobles
+		prerequisite = {
+			focus = EUR_Attract_investment_from_British_nobles
+		}
+		mutually_exclusive = { focus = EUR_Pulling_From_Land}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_building_construction = {
+                     type = dockyard
+                     level = 4
+                    instant_build = yes
+                   }
+			set_country_flag = Industry_Schnizel_1
+		}
+	}
+	focus = {
+		id = EUR_Free_trade
+		icon = GFX_EUR_free_trade
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Creating_trading_hub_port_in_Okhotsk
+		prerequisite = {
+			focus = EUR_Creating_trading_hub_port_in_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Establish_The_Free_Port
+			863 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = 	dockyard
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Britannian_Urban_Planning
+		icon = GFX_EUR_britannian_urban_planning
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Creating_trading_hub_port_in_Okhotsk
+		prerequisite = {
+			focus = EUR_Creating_trading_hub_port_in_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			637 = {
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 23100
+			}
+			574 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 45700
+				
+			}
+			562 = {
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 27900
+			}
+			722 = {
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 84300
+			}
+		}
+		# to do: wait for rebalance of conscription law.
+	}
+	focus = {
+		id = EUR_Modernize_Okhotsk
+		icon = GFX_EUR_modernize_okhotsk
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Britannian_Urban_Planning
+		prerequisite = {
+			focus = EUR_Britannian_Urban_Planning
+		}
+		prerequisite = {
+			focus = EUR_Free_trade
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			863 = {
+				add_extra_state_shared_building_slots = 4
+				add_manpower = 225000
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		# to do: wait for rebalance of conscription law.
+	}
+	focus = {
+		id = EUR_Easing_of_customs_duties_from_Areas
+		icon = GFX_EUR_easing_of_customs_duties_from_areas
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Modernize_Okhotsk
+		prerequisite = {
+			focus = EUR_Modernize_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 822
+			}
+
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 917
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 562
+			}
+		}
+		# to do: revisit in economic update.
+	}
+	focus = {
+		id = EUR_Form_the_TPTA
+		icon = GFX_EUR_form_the_tpta
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Easing_of_customs_duties_from_Areas
+		prerequisite = {
+			focus = EUR_Easing_of_customs_duties_from_Areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		    country_event = EUR.28
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_offsite_building = { type = industrial_complex level = 4 }
+		}
+		# to do: revist in economic update.
+	}
+	focus = {
+		id = EUR_Leasing_out_our_coastline
+		icon = GFX_EUR_leasing_out_our_coastline
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Modernize_Okhotsk
+		prerequisite = {
+			focus = EUR_Modernize_Okhotsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_political_power = -50
+			BRT = {country_event = BRT.67}
+			diplomatic_relation = {
+                  country = BRT
+                   relation = docking_rights
+                  active = yes
+              }
+			863 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = 	dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Establish_the_Okhotsk_Drydocks
+		icon = GFX_EUR_establish_the_okhotsk_drydocks
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Leasing_out_our_coastline
+		prerequisite = {
+			focus = EUR_Leasing_out_our_coastline
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = BRT.29
+			swap_ideas = {
+                 remove_idea = EUR_Establish_The_Free_Port
+                 add_idea = EUR_Establish_The_Free_Port_2
+               } 
+			562 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = 	dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	
+
+
+
+#####################################In memory of Russian Empire Restoring discipline in the army
+	focus = {
+		id = EUR_Restoring_discipline_in_army1
+		icon = GFX_EUR_restoring_discipline_in_army
+		cost = 3
+		x = 13
+		y = 1
+		relative_position_id = EUR_In_memory_of_Russian_Empire
+		prerequisite = {
+			focus = EUR_In_memory_of_Russian_Empire
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		add_ideas = EUR_shortage_of_trusted_officers
+		swap_ideas = {
+               remove_idea = EUR_national_militia_2
+               add_idea = EUR_national_militia_3
+         }
+		}
+	}
+	## Don't know how and what officers to add
+	focus = {
+		id = EUR_New_officier_corps1
+		icon = GFX_EUR_new_officier_corps
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Restoring_discipline_in_army1
+		prerequisite = {
+			focus = EUR_Restoring_discipline_in_army1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			recruit_character = EUR_Ivan_Solovev
+			recruit_character = EUR_Isai_Kiselev
+			recruit_character = EUR_Gogol_Bogdanov	
+			custom_effect_tooltip = EUR_Manfredi_promotion_tt
+			
+			add_advisor_role = {
+		    character = EUR_Michele_Manfredi
+		    active = yes
+			advisor={	
+			slot = high_command
+			idea_token = EUR_Michele_Manfredi_idea
+			ledger = army
+			allowed = {
+				original_tag = EUR
+			}
+			traits = {
+				knightmare_proponent_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	       }
+			hidden_effect = {
+			EUR_Michele_Manfredi = {
+				add_trait = { trait = panzer_expert }
+				add_trait = { trait = winter_expert	}
+				promote_leader = yes
+			}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Rely_on_young_Russian_officers
+		icon = GFX_EUR_rely_on_young_russian_officers
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_New_officier_corps1
+		prerequisite = {
+			focus = EUR_New_officier_corps1
+		}
+		mutually_exclusive = { focus = EUR_Ask_more_generals1}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+			add_stability = -0.10
+			set_country_flag = EUR_Schnizel_Young_Officers
+			recruit_character = EUR_Stefan_Kuzmin
+            recruit_character = EUR_Naum_Nikolaev
+			remove_ideas = EUR_national_militia_3
+			custom_effect_tooltip = britannia_support_EUR_decrease_tt
+		}
+		# to do: add -0.5 support for 40 days when the support system is in place. 
+	}
+	focus = {
+		id = EUR_Our_own_tactics
+		icon = GFX_EUR_our_own_tactics
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rely_on_young_Russian_officers
+		prerequisite = {
+			focus = EUR_Rely_on_young_Russian_officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_command_power = 50
+			add_political_power = -20
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EUR_Rely_On_Infantrymen
+		icon = GFX_EUR_rely_on_infantrymen
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Our_own_tactics
+		prerequisite = {
+			focus = EUR_Our_own_tactics
+		}
+		search_filters = {
+		}
+		mutually_exclusive = { focus = EUR_Rely_On_Officers}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Siberian_Man
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = EUR_Rely_On_Officers
+		icon = GFX_EUR_rely_on_officers
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Our_own_tactics
+		prerequisite = {
+			focus = EUR_Our_own_tactics
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Siberian_Mind
+		}
+	}
+	focus = {
+		id = EUR_Improve_Army_Rations
+		icon = GFX_EUR_improve_army_rations
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rely_On_Infantrymen
+		prerequisite = {
+			focus = EUR_Rely_On_Infantrymen
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.10
+				swap_ideas = {
+					remove_idea = EUR_Siberian_Man
+					add_idea = EUR_Siberian_Man_2
+				}
+			
+		}
+	}
+	focus = {
+		id = EUR_Unified_Command
+		icon = GFX_EUR_unified_command
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rely_On_Officers
+		prerequisite = {
+			focus = EUR_Rely_On_Officers
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+			completion_reward = {
+				add_command_power = 50
+					swap_ideas = {
+						remove_idea = EUR_Siberian_Mind
+						add_idea = EUR_Siberian_Mind_2
+					}
+				
+			}
+		
+	}
+	focus = {
+		id = EUR_Reform_The_Hierarchy
+		icon = GFX_EUR_reform_the_hierarchy
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Improve_Army_Rations
+		prerequisite = {
+			focus = EUR_Improve_Army_Rations
+			focus = EUR_Unified_Command
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			remove_ideas = EUR_shortage_of_trusted_officers
+			load_oob = "EUR_Rus_Battalions"
+			
+		}
+	}
+	focus = {
+		id = EUR_Developing_Rifles
+		icon = GFX_EUR_developing_rifles
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Reform_The_Hierarchy
+		prerequisite = {
+			focus = EUR_Reform_The_Hierarchy
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = EUR_Artillery_Training
+		icon = GFX_EUR_artillery_training
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Reform_The_Hierarchy
+		prerequisite = {
+			focus = EUR_Reform_The_Hierarchy
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = modern_artillery_90
+				amount = 1200
+				producer = BRT
+			}
+		}
+	}
+	focus = {
+		id = EUR_A_New_Russian_Army
+		icon = GFX_EUR_a_new_russian_army
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Artillery_Training
+		prerequisite = {
+			focus = EUR_Artillery_Training
+		}
+		prerequisite = {
+			focus = EUR_Developing_Rifles
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_A_New_Russian_Army_Idea
+		}
+	}
+	
+	
+	focus = {
+		id = EUR_Ask_more_generals1
+		icon = GFX_EUR_ask_more_generals
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_New_officier_corps1
+		prerequisite = {
+			focus = EUR_New_officier_corps1
+		}
+		mutually_exclusive = { focus = EUR_Rely_on_young_Russian_officers}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = { id=EUR.19 days = 5 }
+		remove_ideas = EUR_shortage_of_trusted_officers
+		set_country_flag = EUR_Schnizel_Get_More_Officers
+		recruit_character = EUR_Albert_Lancaster
+		recruit_character = EUR_Elliot_Collins
+		}
+		# to do: add gfx for some generals, see character files.
+		# to do: add 0.5 support for 40 days when the support system is in place. 
+	}
+	focus = {
+		id = EUR_Using_Britannia_experience1
+		icon = GFX_EUR_using_britannia_experience
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Ask_more_generals1
+		prerequisite = {
+			focus = EUR_Ask_more_generals1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = EUR_Invite_Communications_officers1
+		icon = GFX_EUR_invite_communications_officers
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Using_Britannia_experience1
+		prerequisite = {
+			focus = EUR_Using_Britannia_experience1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = signal_company_tech
+			}
+			remove_ideas = EUR_national_militia_3
+		}
+	}
+	focus = {
+		id = EUR_Cheap_and_fast_firepower
+		icon = GFX_EUR_cheap_and_fast_firepower
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers1
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers1
+		}
+		mutually_exclusive = { focus = EUR_Modern_vehicle_of_victory1}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Cheap_and_fast_firepower
+		}
+	}
+	focus = {
+		id = EUR_Using_experience_of_the_Great_War
+		icon = GFX_EUR_using_experience_of_the_great_war
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Cheap_and_fast_firepower
+		prerequisite = {
+			focus = EUR_Cheap_and_fast_firepower
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
+			load_oob = "EUR_Veteran_Brittanian_Armor_Division"
+		    }
+		}
+		# to do: we should change the name of this focus correct? Note from fris: I have modified the template a bit because 7 tank battalions won't do much.
+	}
+	focus = {
+		id = EUR_Oil_for_our_maneuvers
+		icon = GFX_EUR_oil_for_our_maneuvers
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Cheap_and_fast_firepower
+		prerequisite = {
+			focus = EUR_Cheap_and_fast_firepower
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
+			load_oob = "EUR_Veteran_Mechanised"
+			}
+		}
+		# to do: we should change the name of this focus correct?
+	}
+	focus = {
+		id = EUR_Improve_outdated_recharge_system
+		icon = GFX_EUR_improve_outdated_recharge_system
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_Oil_for_our_maneuvers
+		prerequisite = {
+			focus = EUR_Oil_for_our_maneuvers
+			focus = EUR_Using_experience_of_the_Great_War
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Improve_outdated_recharge_system
+		}
+		# to do: change name of focus?
+	}
+	focus = {
+		id = EUR_Brittanian_Crew_Training_standards
+		icon = GFX_EUR_brittanian_crew_training_standards
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Oil_for_our_maneuvers
+		prerequisite = {
+			focus = EUR_Oil_for_our_maneuvers
+			focus = EUR_Using_experience_of_the_Great_War
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Surprise_Tactics
+		}
+	}
+	focus = {
+		id = EUR_Present_from_Britannia
+		icon = GFX_EUR_present_from_britannia
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Brittanian_Crew_Training_standards
+		prerequisite = {
+			focus = EUR_Brittanian_Crew_Training_standards
+		}
+		prerequisite = {
+			focus = EUR_Improve_outdated_recharge_system
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = EUR_BRT_Tank_Aid_tt
+			hidden_effect = {
+			load_oob = "EUR_Brittaninan_Veteran_Motorized"
+			}
+		}
+	}
+	
+	focus = {
+		id = EUR_Modern_vehicle_of_victory1
+		icon = GFX_EUR_modern_vehicle_of_victory
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Invite_Communications_officers1
+		prerequisite = {
+			focus = EUR_Invite_Communications_officers1
+		}
+		mutually_exclusive = { focus = EUR_Cheap_and_fast_firepower}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_war_support = 0.10
+			set_technology = {
+				knightmare_frame_1 = 1
+				factspheres = 1
+				landspinner = 1
+				knightmare_frame_2 = 1
+				knightmare_frame_3 = 1
+			}
+		}
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael1
+		icon = GFX_EUR_holy_order_of_michael
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Modern_vehicle_of_victory1
+		prerequisite = {
+			focus = EUR_Modern_vehicle_of_victory1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			hidden_effect = {
+				load_oob = "EUR_Order_Of_Michael"
+			}	
+			country_event = EUR.20
+			EUR_Michele_Manfredi = {
+			add_trait = {
+                   slot = corps_commander
+                   trait = Holy_Knight
+             }
+			}
+			# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
+		}
+	}
+	focus = {
+		id = EUR_Conduct_grueling_exercises1
+		icon = GFX_EUR_conduct_grueling_exercises
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael1
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			   army_experience = 50
+               add_war_support = 0.02
+              add_command_power = 20
+		}
+	}
+	focus = {
+		id = EUR_Ask_homeland1
+		icon = GFX_EUR_ask_homeland
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises1
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises1
+		}
+		mutually_exclusive = { focus = EUR_Area_11_deposits1}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_resource = {
+				type = sakuradite
+				amount = 10
+				state = 917
+			}
+			add_resource = {
+				type = sakuradite
+				amount = 9
+				state = 822
+			}
+			add_timed_idea = {
+				idea = EUR_Sakuradite_Extraction_Costs
+				days = 80
+			}
+		}
+		# to do: in economic update give brittania some of our gdp.
+	}
+	focus = {
+		id = EUR_Area_11_deposits1
+		icon = GFX_EUR_area_11_deposits
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Conduct_grueling_exercises1
+		prerequisite = {
+			focus = EUR_Conduct_grueling_exercises1
+		}
+		mutually_exclusive = { focus = EUR_Ask_homeland1}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+						add_political_power = -20
+			if = {
+               limit = {
+                   country_exists = A11
+                }   
+                   diplomatic_relation = {
+                    country = A11
+                    relation = docking_rights
+                    active = yes
+                   } 
+              }
+            else = {
+
+                   diplomatic_relation = {
+                    country = AR8
+                    relation = docking_rights
+                    active = yes
+                   } 
+             }
+ 
+
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 562
+			}
+		}
+	}
+	focus = {
+		id = EUR_Our_own_genius1
+		icon = GFX_EUR_our_own_genius
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ask_homeland1
+		prerequisite = {
+			focus = EUR_Ask_homeland1
+			focus = EUR_Area_11_deposits1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.21
+			custom_effect_tooltip = EUR_BRT_Second_Aid_tt
+			hidden_effect = {
+			load_oob = "EUR_second_knightmare_aid"
+			}
+		}
+	}
+####################################Guinevere Support
+	focus = {
+		id = EUR_Guinevere_Support
+		icon = GFX_EUR_guinevere_support
+		cost = 3
+		x = -26
+		y = 1
+		relative_position_id = EUR_An_End_To_Madness
+		prerequisite = {
+			focus = EUR_An_End_To_Madness
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event = EUR.14
+			remove_ideas = EUR_legitimate_cause
+		}
+	}
+	focus = {
+		id = EUR_Guinevere_Caring_Hand
+		icon = GFX_EUR_guinevere_caring_hand
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+		}
+		mutually_exclusive = { focus = EUR_Reach_Out_To_The_Proper_Areas}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
 		
 		}
+	}
+	focus = {
+		id = EUR_Reach_Out_To_The_Proper_Areas
+		icon = GFX_EUR_reach_out_to_the_proper_areas
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+		}
+		mutually_exclusive = { focus = EUR_Guinevere_Caring_Hand}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			
+		}
+	}
+####################################Guinevere Caring hand
+	focus = {
+		id = EUR_Prepare_for_prime_minister_visit
+		icon = GFX_EUR_prepare_for_prime_minister_visit
+		cost = 3
+		x = -10
+		y = 1
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = EUR_Using_All_Economic_Power
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = EUR_Creating_Okhotsk_settlement
+		icon = GFX_EUR_creating_okhotsk_settlement
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Using_All_Economic_Power}
+				   }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = EUR_Creating_Okhotsk_settlement
+				days = 120
+			}
+			add_political_power = 100
+			863 = {
+				add_manpower = 250000
+			}
+		}
+	}
+	focus = {
+		id = EUR_Expand_industrial_district
+		icon = GFX_EUR_expand_industrial_district
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Creating_Okhotsk_settlement
+		mutually_exclusive = { focus = EUR_Expand_administrative_district}
+		prerequisite = {
+			focus = EUR_Creating_Okhotsk_settlement
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Creating_Okhotsk_settlement}
+				   }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = EUR_Creating_Okhotsk_settlement_2
+		}
+		
+		# to do: ask Sidd, too many ideas, consolidate?
+	}
+	
+	focus = {
+		id = EUR_Support_open_britannian_labs
+		icon = GFX_EUR_support_open_britannian_labs
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Expand_industrial_district
+		prerequisite = {
+			focus = EUR_Expand_industrial_district
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_Creating_Okhotsk_settlement_2
+				add_idea = EUR_Creating_Okhotsk_settlement_4
+			}
+		}
+	}
+	
+	focus = {
+		id = EUR_Expand_administrative_district
+		icon = GFX_EUR_expand_administrative_district
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Creating_Okhotsk_settlement
+		mutually_exclusive = { focus = EUR_Expand_industrial_district}
+		prerequisite = {
+			focus = EUR_Creating_Okhotsk_settlement
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+				   EUR = {
+					NOT = {has_idea = EUR_Creating_Okhotsk_settlement}
+				   }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Creating_Okhotsk_settlement_3
+		}
+	}
+	
+	focus = {
+		id = EUR_Better_region_organisation
+		icon = GFX_EUR_nationalize_all_railroads_and_trains_in_region
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Expand_administrative_district
+		prerequisite = {
+			focus = EUR_Expand_administrative_district
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+				   
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			863 ={
+				add_extra_state_shared_building_slots = 9
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			644 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
+			574 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
+			917 = {
+				add_state_modifier = {
+					modifier = { 
+						local_resources_factor = 0.1
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Withdraw_all_lands_of_Russian_nobles
+		icon = GFX_EUR_withdraw_all_lands_of_russian_nobles
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = -0.05
+			# to do: where to add the factories? stability for only 90 days is not impactful.
+		}
+	}
+	focus = {
+		id = EUR_Nationalize_all_railroads_and_trains_in_region
+		icon = GFX_EUR_nationalize_all_railroads_and_trains_in_region
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Withdraw_all_lands_of_Russian_nobles
+		prerequisite = {
+			focus = EUR_Withdraw_all_lands_of_Russian_nobles
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12551 13337 13333 1714 13329 12623 1878 }
+				start_province = 12551
+				target_province = 1878
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 50
+			}
+		}
+		# to do: ask to Sidd where are the trains.
+	}
+	focus = {
+		id = EUR_Create_modern_excavation_company
+		icon = GFX_EUR_create_modern_excavation_company
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Nationalize_all_railroads_and_trains_in_region
+		prerequisite = {
+			focus = EUR_Nationalize_all_railroads_and_trains_in_region
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			# to do: where to put the factories.
+			add_ideas = EUR_Modern_Excavation_Company
+		}
+	}
+	focus = {
+		id = EUR_Strengthen_the_proBrittanian_police
+		icon = GFX_EUR_strengthen_the_probrittanian_police
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Prepare_for_prime_minister_visit
+		prerequisite = {
+			focus = EUR_Prepare_for_prime_minister_visit
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			863 = {
+				add_manpower = -10000	
+			}
+			add_ideas = EUR_Okhotsk_Police_Force
+		}
+	}
+	focus = {
+		id = EUR_Send_opposition_to_Kolima
+		icon = GFX_EUR_send_opposition_to_kolima
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Strengthen_the_proBrittanian_police
+		prerequisite = {
+			focus = EUR_Strengthen_the_proBrittanian_police
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_stability = -0.1
+			863 = {
+				add_manpower = -10000
+			}
+			562 = {
+				add_manpower = -10000
+			}
+			574 = {
+				add_manpower = -10000
+			}
+			637 = {
+				add_manpower = -10000
+			}
+			822 = {
+				add_manpower = -10000
+			}
+			917= {
+				add_manpower = 50000
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = 	industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = 	arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUR_Clear_all_administration_from_Russians
+		icon = GFX_EUR_clear_all_administration_from_russians
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Send_opposition_to_Kolima
+		prerequisite = {
+			focus = EUR_Send_opposition_to_Kolima
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			# to do: are the characters done? fill in later
+		}
+	}
+	focus = {
+		id = EUR_The_long_awaited_meeting
+		icon = GFX_EUR_the_long_awaited_meeting
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Clear_all_administration_from_Russians
+		prerequisite = {
+			focus = EUR_Clear_all_administration_from_Russians
+		}
+		prerequisite = {
+			focus = EUR_Create_modern_excavation_company
+		}
+		prerequisite = {
+			focus = EUR_Better_region_organisation
+			focus = EUR_Support_open_britannian_labs
+		}
+		
+		
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			remove_ideas = EUR_Okhotsk_Police_Force
+			if = {
+				limit = {
+					has_idea = EUR_Creating_Okhotsk_settlement_4
+				}
+				swap_ideas = {
+					remove_idea = EUR_Creating_Okhotsk_settlement_4
+					add_idea = EUR_The_okhotsk_settlement_1
+				}
+			}
 
+			if = {
+				limit = {
+					has_idea = EUR_Creating_Okhotsk_settlement_3
+				}
+				swap_ideas = {
+					remove_idea = EUR_Creating_Okhotsk_settlement_3
+					add_idea = EUR_The_okhotsk_settlement_2
+				}
+			}
 
+			swap_ideas = {
+				remove_idea = EUR_underdeveloped_economy
+				add_idea = EUR_Economic_Stability_Secured
+			}
+		}
+	}
+#########################################Guinevere Army (Use the doctrine of non-retreat at the front)
+	focus = {
+		id = EUR_Use_doctrine_of_non_retreat
+		icon = GFX_EUR_use_doctrine_of_non_retreat
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_national_militia_2
+				add_idea = EUR_Intimidated_soldiers
+			}
+			
+			# to do:this modifier seems really harsh, attack also influences how much dmg
+			# attackers get no matter how high your defence. 
+			# stability weekly never actually goes away before phase 2 no good.
+		}
+	}
+	focus = {
+		id = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		icon = GFX_EUR_develop_plan_together_with_brittanian_headquarters
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_doctrine_of_non_retreat
+		prerequisite = {
+			focus = EUR_Use_doctrine_of_non_retreat
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			country_event ={
+				id = EUR.15
+				days = 14
+			}
+			
+		# to do: 60 days seems to low for an ofensive what are the objectives we wish to secure with these? also we still have the -50% ofensive idea.
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		# mobile warfare is used in order to conserve soldiers trough the use of of material and combined arms how does this go with no retreat, this comes
+		# from the german doctrine of ww1 mobile warfare also asumes elastic defense.
+		}
+	}
+	focus = {
+		id = EUR_Propaganda_of_weakness_of_Socialists
+		icon = GFX_EUR_propaganda_of_weakness_of_socialists
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		prerequisite = {
+			focus = EUR_Develop_plan_together_with_Brittanian_Headquarters
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EUR_Intimidated_soldiers
+				add_idea = EUR_Intimidated_soldiers_2
+			}
+		}
+		
+			
+	}
+	focus = {
+		id = EUR_Holy_Order_of_Michael2
+		icon = GFX_EUR_holy_order_of_michael
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Propaganda_of_weakness_of_Socialists
+		prerequisite = {
+			focus = EUR_Propaganda_of_weakness_of_Socialists
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
+			EUR_Michele_Manfredi = {
+			add_trait = { trait = Holy_Knight }
+			}
+		# to do: trait not working as general, does the trait need to be on unit traits? bismarck can use his one but it isn't in unit traits.
+		}
+	}
+	focus = {
+		id = EUR_Our_own_genius2
+		icon = GFX_EUR_our_own_genius
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Holy_Order_of_Michael2
+		prerequisite = {
+			focus = EUR_Holy_Order_of_Michael2
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_oob = "EUR_second_knightmare_aid"
+			# to do: what type of advisor?
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_An_army_worth_of_duke
+		icon = GFX_EUR_an_army_worth_of_duke
+		cost = 3
+		x = -1
+		y = 3
+		relative_position_id = EUR_Guinevere_Caring_Hand
+		prerequisite = {
+			focus = EUR_Guinevere_Caring_Hand
+		}
+		mutually_exclusive = {focus = EUR_Recruit_honorable_britannians_from_areas}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			# to do: when support system is in add support for brittania.
+		}
+	}
+	focus = {
+		id = EUR_Claws_of_Britannia
+		icon = GFX_EUR_claws_of_britannia
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_An_army_worth_of_duke
+		prerequisite = {
+			focus = EUR_An_army_worth_of_duke
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_oob = "EUR_Order_Of_Michael"
+			# to do: ask sidd if he is okay with this oob.
+		}
+	}
+	focus = {
+		id = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		icon = GFX_EUR_teach_russians_to_cooperate_with_knightmer_troops
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Claws_of_Britannia
+		prerequisite = {
+			focus = EUR_Claws_of_Britannia
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Trained_Knightmare_Forces
+		# to do: what type of advisor? reduction in stability? nobles?
+		# how do we solve the knightmare connundrum?
+		# should we change knightmare bonuses to breakthrough?
+		
+		}
+	}
+	focus = {
+		id = EUR_Monthly_deliveries
+		icon = GFX_EUR_monthly_deliveries
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		prerequisite = {
+			focus = EUR_Teach_Russians_to_cooperate_with_Knightmer_troops
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			#to do: how do we implement this?
+		}
+	}
+	focus = {
+		id = EUR_Wings_of_Emperor
+		icon = GFX_EUR_wings_of_emperor
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = EUR_An_army_worth_of_duke
+		prerequisite = {
+			focus = EUR_An_army_worth_of_duke
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				producer = BRT
+				amount = 600
+			}
+			# to do: ask Sidd about the amount
+		}
+	}
+	focus = {
+		id = EUR_Best_aces
+		icon = GFX_EUR_best_aces
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Wings_of_Emperor
+		prerequisite = {
+			focus = EUR_Wings_of_Emperor
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+		}
+			add_ideas = EUR_Best_aces
+			# to do: which one do we use?
+		}
+	}
+	
+	
+	
+	focus = {
+		id = EUR_Recruit_honorable_britannians_from_areas
+		icon = GFX_EUR_recruit_honorable_britannians_from_areas
+		cost = 3
+		x = 1
+		y = 3
+		relative_position_id = EUR_Reach_Out_To_The_Proper_Areas
+		prerequisite = {
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		mutually_exclusive = {focus = EUR_An_army_worth_of_duke}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			# to do: deploy 5 infantry oob, which ones? From the areas.
+		}
+	}
+	focus = {
+		id = EUR_Asking_areas_for_help
+		icon = GFX_EUR_asking_areas_for_help
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = EUR_Recruit_honorable_britannians_from_areas
+		prerequisite = {
+			focus = EUR_Recruit_honorable_britannians_from_areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			# to do: add aid events of equipment and generals with the support system. Are the characters created?
+		}
+	}
+	focus = {
+		id = EUR_Invite_advisor
+		icon = GFX_EUR_invite_advisor
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Asking_areas_for_help
+		prerequisite = {
+			focus = EUR_Asking_areas_for_help
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		# to do: add advisor which uses noncore manpower. Is the character done? Why is the image diferent from the one on the mural? If it is suzaku 
+		# what of cannon and at what point in time does this happen must this be date restricted because of suzaku's age? What trait does he get after CW?
+		}
+	}
+	
+	focus = {
+		id = EUR_Use_experience_of_war_in_rough_terrain
+		icon = GFX_EUR_use_experience_of_war_in_rough_terrain
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Recruit_honorable_britannians_from_areas
+		prerequisite = {
+			focus = EUR_Recruit_honorable_britannians_from_areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			add_ideas = EUR_Use_experience_of_war_in_rough_terrain
+			# at most I can see making every comander get the hill fighter and ranger trait I think there is no way to apply these trhough modifiers.
+		}
+	}
+	focus = {
+		id = EUR_Invite_insructors_from_honorable_britannia_academies
+		icon = GFX_EUR_invite_insructors_from_honorable_britannia_academies
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_experience_of_war_in_rough_terrain
+		prerequisite = {
+			focus = EUR_Use_experience_of_war_in_rough_terrain
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			army_experience = 100
+			add_stability = -0.05
+			add_ideas= EUR_Trained_Army
+		}
+	}
+	focus = {
+		id = EUR_Invite_foreign_legion
+		icon = GFX_EUR_invite_foreign_legion
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Invite_insructors_from_honorable_britannia_academies
+		prerequisite = {
+			focus = EUR_Invite_insructors_from_honorable_britannia_academies
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			AR2 = {country_event = EUR.16}
+			AR3 = {country_event = EUR.16}
+			AR4 = {country_event = EUR.16}
+			AR5 = {country_event = EUR.16}
+			AR6 = {country_event = EUR.16}
+			AR7 = {country_event = EUR.16}
+			AR8 = {country_event = EUR.16}
+			AR9 = {country_event = EUR.16}
+
+		#to do: add oob to spawn. 
+
+		}
+	}
+#################################################
+focus = {
+		id = EUR_Scrapping_barrel
+		icon = GFX_EUR_scrapping_barrel
+		cost = 3
+		x = 10
+		y = 1
+		relative_position_id = EUR_Reach_Out_To_The_Proper_Areas
+		prerequisite = {
+			focus = EUR_Reach_Out_To_The_Proper_Areas
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		# to do: add localization to say we will be able to ask for help?
+		# only ask up to area 9? last 2 areas recently conquered, doesn't make much sense to ask for aid
+		}
+	}
+	focus = {
+		id = EUR_Organise_volunteers_from_Area_3_and_7
+		icon = GFX_EUR_organise_volunteers_from_area_4_and_8
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_them_in_factories
+		icon = GFX_EUR_use_them_in_factories
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = EUR_Organise_volunteers_from_Area_3_and_7
+		mutually_exclusive = { focus = EUR_Use_them_on_the_railroads}
+		prerequisite = {
+			focus = EUR_Organise_volunteers_from_Area_3_and_7
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Asking_for_more_factory_equipment
+		icon = GFX_EUR_asking_for_more_factory_equipment
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_them_in_factories
+		prerequisite = {
+			focus = EUR_Use_them_in_factories
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Use_them_on_the_railroads
+		icon = GFX_EUR_use_them_on_the_railroads
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = EUR_Organise_volunteers_from_Area_3_and_7
+		mutually_exclusive = { focus = EUR_Use_them_in_factories}
+		prerequisite = {
+			focus = EUR_Organise_volunteers_from_Area_3_and_7
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Improve_logistics_chains
+		icon = GFX_EUR_improve_logistics_chains
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_them_on_the_railroads
+		prerequisite = {
+			focus = EUR_Use_them_on_the_railroads
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Steel_of_Area_6
+		icon = GFX_EUR_steel_of_area_6
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_scientists_from_New_Anglia
+		icon = GFX_EUR_use_scientists_from_new_anglia
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Steel_of_Area_6
+		prerequisite = {
+			focus = EUR_Steel_of_Area_6
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Use_industry_of_Area_2
+		icon = GFX_EUR_use_industry_of_area_2
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Use_scientists_from_New_Anglia
+		prerequisite = {
+			focus = EUR_Use_scientists_from_New_Anglia
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Strengthen_the_proBrittanian_police1
+		icon = GFX_EUR_strengthen_the_probrittanian_police
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = EUR_Scrapping_barrel
+		prerequisite = {
+			focus = EUR_Scrapping_barrel
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Send_opposition_to_Kolima1
+		icon = GFX_EUR_send_opposition_to_kolima
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Strengthen_the_proBrittanian_police1
+		prerequisite = {
+			focus = EUR_Strengthen_the_proBrittanian_police1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Clear_all_administration_from_Russians1
+		icon = GFX_EUR_clear_all_administration_from_russians
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = EUR_Send_opposition_to_Kolima1
+		prerequisite = {
+			focus = EUR_Send_opposition_to_Kolima1
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Advance_our_own_economy
+		icon = GFX_EUR_advance_our_own_economy
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = EUR_Clear_all_administration_from_Russians1
+		prerequisite = {
+			focus = EUR_Clear_all_administration_from_Russians1
+		}
+		prerequisite = {
+			focus = EUR_Use_industry_of_Area_2
+		}
+		prerequisite = {
+			focus = EUR_Asking_for_more_factory_equipment
+			focus = EUR_Improve_logistics_chains
+		}
+		
+		
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = EUR_Schnizel_East_Secured
+		icon = GFX_EUR_schnizel_east_secured
+		cost = 3
+		x = 0
+		y = 11
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+			#set_country_flag = Russia_EIZ_Victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = Russia_EIZ_Victory
+			load_focus_tree = EUR_Schnizel_Phase_2
+		}
 	}
 
+	focus = {
+		id = EUR_Schnizel_East_Secured_2
+		icon = GFX_EUR_schnizel_east_secured_2
+		cost = 3
+		x = 2
+		y = 11
+		relative_position_id = EUR_Schnizel_Support
+		prerequisite = {
+			focus = EUR_Schnizel_Support
+			#set_country_flag = Russia_Monarchist_Victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = Russia_Monarchist_Victory
+			load_focus_tree = EUR_Schnizel_Phase_2
+		}
+	}
 
+	focus = {
+		id = EUR_guinevere_east_secured
+		icon = GFX_EUR_guinevere_east_secured
+		cost = 3
+		x = 0
+		y = 11
+		relative_position_id = EUR_Guinevere_Support
+		prerequisite = {
+			focus = EUR_Guinevere_Support
+			#set_country_flag = Russia_EIZ_Victory
+		}
+		search_filters = {
+		}
+		
+		available = {
+                   country_exists = EUR
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			load_focus_tree = EUR_guinevere_phase_2
+		}
+	}
 
-
-}	
+	
+	
+}

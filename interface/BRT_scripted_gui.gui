@@ -3,26 +3,26 @@ guiTypes = {
 			name = "BRT_post_war_struggle_gui_decision_ui_window"
 			position = { x = 0 y = 0 }
 			size = { width = 275 height = 450 }
-			
-			iconType = {
+			 
+			iconType = {                                ##Simpliest type of Window to create a static image
 				name = "BRT_post_war_struggle_gui_competitors"
 				orientation = upper_left
 				position = { x = 0 y = 0 }
 
 			}
 
-			instantTextboxType = {
-				name = "BRT_Schneizel_influence_big"
+			instantTextboxType = {                       ##This type of Window allows you to create custom text boxes 
+				name = "BRT_Schneizel_influence_big"     ##(which will be put over the image) 
 				position = { x = 30 y = 380 }
 				font = "hoi_30header"
-				text = BRT_Schneizel_influence_big_tt
+				text = BRT_Schneizel_influence_big_tt    ##Actual Text
 				format = left
 				maxWidth = 200
 				fixedsize = yes
 				maxHeight = 100
 			}
 
-			instantTextboxType = {
+			instantTextboxType = {                             
 				name = "BRT_Guinevere_influence_big"
 				position = { x = 270 y = 380 }
 				font = "hoi_30header"

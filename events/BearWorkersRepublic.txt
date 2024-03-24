@@ -1,0 +1,824 @@
+
+add_namespace = BWR
+
+#spawn country event
+country_event = {  
+	id = BWR.1
+	title = BWR.1.t
+	desc = BWR.1.d
+	#picture =
+	mean_time_to_happen = {
+        days = 1 }
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			TAG = RUS
+			has_game_rule = { rule = pukas_rise option = PUKAS_RISE }
+		}
+	}
+	
+	option = {
+		name = BWR.1.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		 BWR = {
+			annex_country = {target = RUS}
+			add_state_core = 637
+			add_state_core = 822
+			add_state_core = 562
+			add_state_core = 644
+			add_state_core = 574
+			add_state_core = 563
+			add_state_core = 565
+			add_state_core = 564
+			add_state_core = 566
+			add_state_core = 567
+			add_state_core = 568
+			add_state_core = 576
+			add_state_core = 516
+			add_state_core = 575
+			add_state_core = 40
+			add_state_core = 570
+			add_state_core = 578
+			add_state_core = 654
+			add_state_core = 569
+			add_state_core = 824
+			add_state_core = 577
+			add_state_core = 571
+			add_state_core = 579
+			add_state_core = 580
+			add_state_core = 653
+			add_state_core = 572
+			add_state_core = 652
+			add_state_core = 651
+			add_state_core = 581
+			add_state_core = 398
+			add_state_core = 399
+			add_state_core = 573
+			add_state_core = 905
+			add_state_core = 582
+			add_state_core = 403
+			add_state_core = 214
+			add_state_core = 923
+			add_state_core = 262
+			add_state_core = 825
+			add_state_core = 397
+			add_state_core = 924
+			add_state_core = 400
+			add_state_core = 833
+			add_state_core = 249
+			add_state_core = 251
+			add_state_core = 207
+			add_state_core = 213
+			add_state_core = 722
+			add_state_core = 215
+			add_state_core = 216
+			add_state_core = 351
+			add_state_core = 264
+			add_state_core = 244
+			add_state_core = 195
+			add_state_core = 208
+			add_state_core = 209
+			add_state_core = 263
+			add_state_core = 246
+			add_state_core = 247
+			add_state_core = 248
+			add_state_core = 925
+			add_state_core = 252
+			add_state_core = 253
+			add_state_core = 219
+			add_state_core = 242
+			add_state_core = 210
+			add_state_core = 886
+			add_state_core = 94
+			add_state_core = 95
+			add_state_core = 96
+			add_state_core = 206
+			add_state_core = 906
+			add_state_core = 204
+			add_state_core = 194
+			add_state_core = 241
+			add_state_core = 242
+			add_state_core = 243
+			add_state_core = 224
+			add_state_core = 205
+			add_state_core = 223
+			add_state_core = 254
+			add_state_core = 255
+			add_state_core = 926
+			add_state_core = 256
+			add_state_core = 250
+			add_state_core = 401
+			add_state_core = 829
+			add_state_core = 239
+			add_state_core = 257
+			add_state_core = 258
+			add_state_core = 222
+			add_state_core = 220
+			add_state_core = 240
+			add_state_core = 260
+			add_state_core = 265
+			add_state_core = 217
+			add_state_core = 245
+			add_state_core = 228
+			add_state_core = 227
+			add_state_core = 218
+			add_state_core = 238
+			add_state_core = 237
+			add_state_core = 236
+			add_state_core = 137
+			add_state_core = 234
+			add_state_core = 235
+			add_state_core = 232
+			add_state_core = 821
+			add_state_core = 827
+			add_state_core = 233
+			add_state_core = 826
+			add_state_core = 231
+			add_state_core = 828
+			add_state_core = 229
+			add_state_core = 230
+		    change_tag_from = RUS
+			set_capital = {
+				state = 570
+				remember_old_capital = no
+			}
+			inherit_technology = RUS
+			set_technology = { mbt_1 = 1 }
+				set_technology = { cold_war_tank = 1 }
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { modern_artillery_90 = 1 }
+				set_technology = { sp_artillery_1 = 1 }
+			load_oob = ""
+		
+			FRA = { puppet = UKR }
+		 }
+		}
+	}
+}
+
+###normal events
+country_event = {  
+	id = BWR.2
+	title = BWR.2.t
+	desc = BWR.2.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.2.a
+		ai_chance = {
+			factor = 100
+		}   
+			add_country_leader_trait = BWR_remember_sonya
+
+    }     
+}
+country_event = {  
+	id = BWR.3
+	title = BWR.3.t
+	desc = BWR.3.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.3.a
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_country_leader_trait = BWR_new_face_of_russia
+		
+
+    }     
+}
+country_event = {  
+	id = BWR.4
+	title = BWR.4.t
+	desc = BWR.4.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.4.a
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = BWR_Trained_Bears_Idea
+
+    }     
+}
+country_event = {  
+	id = BWR.5
+	title = BWR.5.t
+	desc = BWR.5.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.5.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		if = {
+			limit = {is_ai = yes}
+			load_oob = "BWR_armor"
+		}
+		else = {load_oob = "BWR"}
+		add_ideas = BWR_International_Bears
+    } 
+	}    
+}
+country_event = {  
+	id = BWR.6
+	title = BWR.6.t
+	desc = BWR.6.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.6.a
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = BWR_War_Bears
+		remove_ideas = BWR_Trained_Bears_Idea
+	    remove_ideas = BWR_International_Bears
+		remove_ideas = BWR_Weekly_Bears
+		hidden_effect = {
+		create_wargoal = { type = annex_everything target = JAP}
+		create_wargoal = { type = annex_everything target = AST}
+		create_wargoal = { type = annex_everything target = EUR}
+		create_wargoal = { type = annex_everything target = SRU}
+		create_wargoal = { type = annex_everything target = MRU}
+		create_wargoal = { type = annex_everything target = LRU}
+		create_wargoal = { type = annex_everything target = RUS}
+		create_wargoal = { type = annex_everything target = ARM}
+		create_wargoal = { type = annex_everything target = GEO}
+		create_wargoal = { type = annex_everything target = AZB}
+		create_wargoal = { type = annex_everything target = MCA}
+		create_wargoal = { type = annex_everything target = SMR}
+		create_wargoal = { type = annex_everything target = BRT}
+		create_wargoal = { type = annex_everything target = AR2}
+		create_wargoal = { type = annex_everything target = AR3}
+		create_wargoal = { type = annex_everything target = AR4}
+		create_wargoal = { type = annex_everything target = AR5}
+		create_wargoal = { type = annex_everything target = AR6}
+		create_wargoal = { type = annex_everything target = AR7}
+		create_wargoal = { type = annex_everything target = AR8}
+		create_wargoal = { type = annex_everything target = AR9}
+		create_wargoal = { type = annex_everything target = A10}
+		create_wargoal = { type = annex_everything target = A11}
+		create_wargoal = { type = annex_everything target = A12}
+		create_wargoal = { type = annex_everything target = A13}
+		create_wargoal = { type = annex_everything target = A13}
+		create_wargoal = { type = annex_everything target = A14}
+		create_wargoal = { type = annex_everything target = A15}
+		create_wargoal = { type = annex_everything target = A16}
+		create_wargoal = { type = annex_everything target = A17}
+		create_wargoal = { type = annex_everything target = A18}
+		create_wargoal = { type = annex_everything target = A19}
+		create_wargoal = { type = annex_everything target = A20}
+		create_wargoal = { type = annex_everything target = A21}
+		create_wargoal = { type = annex_everything target = A22}
+		create_wargoal = { type = annex_everything target = A23}
+		create_wargoal = { type = annex_everything target = A24}
+		create_wargoal = { type = annex_everything target = A25}
+		create_wargoal = { type = annex_everything target = NAN}
+		create_wargoal = { type = annex_everything target = DAR}
+		create_wargoal = { type = annex_everything target = ROY}
+		create_wargoal = { type = annex_everything target = ZIL}
+		create_wargoal = { type = annex_everything target = MJA}
+		create_wargoal = { type = annex_everything target = CHI}
+		create_wargoal = { type = annex_everything target = KOR}
+		create_wargoal = { type = annex_everything target = PHI}
+		create_wargoal = { type = annex_everything target = INS}
+		create_wargoal = { type = annex_everything target = VIN}
+		create_wargoal = { type = annex_everything target = LAO}
+		create_wargoal = { type = annex_everything target = CAM}
+		create_wargoal = { type = annex_everything target = THA}
+		create_wargoal = { type = annex_everything target = BRM}
+		create_wargoal = { type = annex_everything target = IND}
+		create_wargoal = { type = annex_everything target = BHU}
+		create_wargoal = { type = annex_everything target = NEP}
+		create_wargoal = { type = annex_everything target = BAL}
+		create_wargoal = { type = annex_everything target = AFG}
+		create_wargoal = { type = annex_everything target = KAZ}
+		create_wargoal = { type = annex_everything target = BUK}
+		create_wargoal = { type = annex_everything target = TAS}
+		create_wargoal = { type = annex_everything target = ALE}
+		create_wargoal = { type = annex_everything target = TMS}
+		create_wargoal = { type = annex_everything target = IRN}
+		create_wargoal = { type = annex_everything target = IRQ}
+		create_wargoal = { type = annex_everything target = LEB}
+		create_wargoal = { type = annex_everything target = HEZ}
+		create_wargoal = { type = annex_everything target = NEJ}
+		create_wargoal = { type = annex_everything target = RUB}
+		create_wargoal = { type = annex_everything target = YEM}
+		create_wargoal = { type = annex_everything target = OMA}
+		create_wargoal = { type = annex_everything target = UAE}
+		create_wargoal = { type = annex_everything target = NCA}
+		create_wargoal = { type = annex_everything target = ICA}
+		create_wargoal = { type = annex_everything target = PCA}
+		create_wargoal = { type = annex_everything target = FRA}
+		create_wargoal = { type = annex_everything target = RUS}
+		create_wargoal = { type = annex_everything target = OTT}
+		create_wargoal = { type = annex_everything target = FIN}
+		create_wargoal = { type = annex_everything target = KAL}
+		create_wargoal = { type = annex_everything target = ENG}
+		create_wargoal = { type = annex_everything target = IRE}
+		create_wargoal = { type = annex_everything target = SPR}
+		create_wargoal = { type = annex_everything target = POR}
+		create_wargoal = { type = annex_everything target = GER}
+		create_wargoal = { type = annex_everything target = ITA}
+		create_wargoal = { type = annex_everything target = ROM}
+		create_wargoal = { type = annex_everything target = DAN}
+		create_wargoal = { type = annex_everything target = SWI}
+		create_wargoal = { type = annex_everything target = POL}
+		create_wargoal = { type = annex_everything target = UKR}
+		create_wargoal = { type = annex_everything target = LIT}
+		create_wargoal = { type = annex_everything target = EST}
+		create_wargoal = { type = annex_everything target = LAT}
+		create_wargoal = { type = annex_everything target = BOS}
+		create_wargoal = { type = annex_everything target = GRE}
+		create_wargoal = { type = annex_everything target = ALB}
+		create_wargoal = { type = annex_everything target = YUG}
+		create_wargoal = { type = annex_everything target = PAL}
+		create_wargoal = { type = annex_everything target = MOR}
+		create_wargoal = { type = annex_everything target = LBA}
+		create_wargoal = { type = annex_everything target = EGY}
+		create_wargoal = { type = annex_everything target = WAF}
+		create_wargoal = { type = annex_everything target = NGA}
+		create_wargoal = { type = annex_everything target = COG}
+		create_wargoal = { type = annex_everything target = ANG}
+		create_wargoal = { type = annex_everything target = SAF}
+		create_wargoal = { type = annex_everything target = MZB}
+		create_wargoal = { type = annex_everything target = ZIM}
+		create_wargoal = { type = annex_everything target = EAU}
+		create_wargoal = { type = annex_everything target = SOM}
+		create_wargoal = { type = annex_everything target = ETH}
+		create_wargoal = { type = annex_everything target = KEN}
+		create_wargoal = { type = annex_everything target = JAP_PAR}
+		create_wargoal = { type = annex_everything target = JAP_KAN}
+		create_wargoal = { type = annex_everything target = RUS_CW}
+		create_wargoal = { type = annex_everything target = CHU}
+		create_wargoal = { type = annex_everything target = CHG}
+		create_wargoal = { type = annex_everything target = KYU}
+		create_wargoal = { type = annex_everything target = KAN}
+		create_wargoal = { type = annex_everything target = SHI}
+		create_wargoal = { type = annex_everything target = HOK}
+		create_wargoal = { type = annex_everything target = TOH}
+	}
+
+    }     
+}
+country_event = {  
+	id = BWR.7
+	title = BWR.7.t
+	desc = BWR.7.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.7.a
+		ai_chance = {
+			factor = 100
+		}
+		
+
+    }     
+}
+country_event = {  
+	id = BWR.8
+	title = BWR.8.t
+	desc = BWR.8.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.8.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+	
+						
+		if = {
+			limit = {is_ai = yes}
+			load_oob = "BWR_Knightmare_AI"
+			
+		}
+		else = {
+			load_oob = "BWR_knightmares"
+			load_oob = "BWR_knightmares"
+			load_oob = "BWR_knightmares"
+		}
+		}
+
+    }     
+}
+country_event = {  
+	id = BWR.9
+	title = BWR.9.t
+	desc = BWR.9.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = BWR.9.a
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = BWR_beartality_idea
+        hidden_effect = {
+			remove_ideas = BWR_bears_are_unpawable_idea
+		}
+    }     
+	
+}
+
+country_event = {
+	
+	id = BWR.10
+	title = BWR.10.t
+	desc = BWR.10.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+		
+		controls_province = 11931 
+		controls_province = 11506
+		controls_province = 10783
+	}
+	
+	option = {
+		name = BWR.10.a
+		ai_chance = {
+			factor = 100
+		}
+		
+	}     
+}
+
+country_event = {
+	
+	id = BWR.11
+	title = BWR.11.t
+	desc = BWR.11.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = BWR.11.a
+		ai_chance = {
+			factor = 100
+		}
+        hidden_effect = {
+			
+create_wargoal = { type = annex_everything target = IRN}
+create_wargoal = { type = annex_everything target = IRQ}
+create_wargoal = { type = annex_everything target = RUB}
+create_wargoal = { type = annex_everything target = YEM}
+create_wargoal = { type = annex_everything target = OMA}
+create_wargoal = { type = annex_everything target = LEB}
+create_wargoal = { type = annex_everything target = PAL}
+create_wargoal = { type = annex_everything target = NEJ}
+create_wargoal = { type = annex_everything target = HEZ}
+create_wargoal = { type = annex_everything target = UAE}
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 30000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 30000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_3
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 3000
+}
+
+add_equipment_to_stockpile = {
+	type = mbt_1
+		amount = 3000
+	}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 4000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 5000
+}
+load_oob = "BWR_ai_Humans"
+
+}
+	}     
+}
+
+event = {
+	
+	id = BWR.12
+	title = BWR.12.t
+	desc = BWR.12.d
+	#picture =
+	fire_only_once = yes
+
+	trigger = {
+        tag = BWR
+        BWR =    {owns_state = 678}
+        is_ai = yes
+		
+    }
+	
+
+	option = {
+		name = BWR.12.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+		
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_3
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_4
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+load_oob = "BWR_Knigtmare_AI"
+
+				}
+		
+			}
+		}
+			event = {
+	
+				id = BWR.16
+				title = BWR.16.t
+				desc = BWR.16.d
+				#picture =
+				fire_only_once = yes
+			
+				trigger = {
+					date = 2011.1.1
+				    is_ai = yes
+					tag = BWR
+				}
+			
+				option = {
+					name = BWR.16.a
+					ai_chance = {
+						factor = 100
+					}
+						hidden_effect = {
+							declare_war_on = {
+								target = FRA
+							 } 
+						}
+					}
+				}							
+
+event = {
+	
+	id = BWR.13
+	title = BWR.13.t
+	desc = BWR.13.d
+	#picture =
+	fire_only_once = yes
+
+
+	trigger = {
+		BWR = {owns_state = 16}
+	    is_ai = yes
+	  
+	}
+	option = {
+		name = BWR.13.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {		
+		
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_4
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_5
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+type = mechanized_equipment_1
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+load_oob = "Bear Knightmare AI"
+
+}
+		
+	}     
+}
+
+_event = {
+	
+	id = BWR.17
+	title = BWR.17.t
+	desc = BWR.17.d
+	#picture =
+	fire_only_once = yes
+
+
+	trigger = {
+		date = 2014.1.1
+	}
+	option = {
+		name = BWR.17.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+
+declare_war_on = {
+	target = CHI
+}				
+}
+}
+}
+
+country_event = {
+	
+	id = BWR.14
+	title = BWR.14.t
+	desc = BWR.14.d
+	#picture =
+	fire_only_once = yes
+	
+	trigger = {
+		BWR =	{controls_province = 7488}
+		  is_ai = yes
+	  
+	}
+	option = {
+		name = BWR.14.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+				
+		declare_war_on = {
+			target = BRT
+		} 
+
+add_equipment_to_stockpile = {
+	type = factspheres_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = landspinner_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = knightmare_mass_prod_5
+	amount = 50000
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment
+	amount = 40000
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 40000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 40000
+}
+load_oob = "Knightmare Bear Squadron AI"
+
+}     
+}
+}
+
+country_event = {
+	
+	id = BWR.14
+	title = BWR.14.t
+	desc = BWR.14.d
+	#picture =
+	fire_only_once = yes
+	
+	trigger = {
+		date = 2016.1.1
+	}
+	option = {
+		name = BWR.14.a
+		ai_chance = {
+			factor = 100
+		}
+		    hidden_effect = {
+				
+		declare_war_on = {
+			target = BRT
+		} 
+
+	}
+}
+}
+

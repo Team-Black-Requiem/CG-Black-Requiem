@@ -16,13 +16,21 @@ technologies = {
 	}
 
 	knightmare_frame_1 = { 
-		
+
         dependencies = {
             mbt_1 = 1
         }
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+
+			}
 		}
 		on_research_complete = {
 			custom_effect_tooltip = UNLOCK_KN_1
@@ -55,7 +63,7 @@ technologies = {
 			factor = 1.3
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2002.1.1"
 			}
 
@@ -69,9 +77,9 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
-
 
 	knightmare_police = { 
 
@@ -83,7 +91,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 	
@@ -99,7 +115,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2009.1.1"
 			}
 		}
@@ -107,7 +123,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_civilian
+			knightmare_all
 		}
 	}
 
@@ -121,7 +138,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 	
@@ -141,7 +166,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2005.1.1"
 			}
 
@@ -155,6 +180,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -166,7 +192,15 @@ technologies = {
 		}	
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 	
 		path = {
@@ -185,7 +219,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2005.1.1"
 			}
 
@@ -199,6 +233,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -211,7 +246,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -236,7 +279,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2006.1.1"
 			}
 
@@ -250,6 +293,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -265,7 +309,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 	
@@ -287,7 +339,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2008.1.1"
 			}
 
@@ -301,6 +353,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -314,7 +367,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 
@@ -339,7 +400,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2009.1.1"
 			}
 
@@ -353,13 +414,22 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
 	anti_knightmare_design = { 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 		on_research_complete = {
 			custom_effect_tooltip = UNLOCK_KN_3
@@ -389,7 +459,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2010.1.1"
 			}
 		}
@@ -398,6 +468,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -412,7 +483,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -442,7 +521,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2011.1.1"
 			}
 		}
@@ -450,7 +529,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_melee
+			knightmare_all
 		}
 	}
 
@@ -484,7 +564,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2012.1.1"
 			}
 		}
@@ -493,6 +573,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -530,7 +611,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2014.1.1"
 			}
 		}
@@ -538,7 +619,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_artillery
+			knightmare_all
 		}
 	}
 
@@ -565,7 +647,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2016.1.1"
 			}
 		}
@@ -573,7 +655,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_artillery
+			knightmare_all
 		}
 	}
 
@@ -587,7 +670,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -612,7 +703,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2014.1.1"
 			}
 		}
@@ -620,7 +711,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_melee
+			knightmare_all
 		}
 	}
 
@@ -633,7 +725,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -658,7 +758,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2015.1.1"
 			}
 		}
@@ -666,7 +766,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_melee
+			knightmare_all
 		}
 	}
 
@@ -678,7 +779,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -703,7 +812,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2016.1.1"
 			}
 		}
@@ -711,7 +820,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_melee
+			knightmare_all
 		}
 	}
 
@@ -724,7 +834,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -749,7 +867,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2011.1.1"
 			}
 		}
@@ -758,6 +876,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -770,7 +889,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -803,7 +930,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2012.1.1"
 			}
 		}
@@ -812,6 +939,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -827,7 +955,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -851,7 +987,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2012.1.1"
 			}
 		}
@@ -859,7 +995,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_mobile
+			knightmare_all
 		}
 	}
 
@@ -875,8 +1012,16 @@ technologies = {
 		
 
 
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+		 on_research_complete_limit = {
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 
@@ -900,7 +1045,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2012.1.1"
 			}
 		}
@@ -909,6 +1054,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -923,7 +1069,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 
@@ -947,7 +1101,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2014.1.1"
 			}
 		}
@@ -956,6 +1110,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -969,7 +1124,15 @@ technologies = {
 
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 
@@ -989,7 +1152,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2016.1.1"
 			}
 		}
@@ -998,6 +1161,7 @@ technologies = {
 		
 		categories = {
 			knightmare_mass_production
+			knightmare_all
 		}
 	}
 
@@ -1009,7 +1173,15 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -1032,7 +1204,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2014.1.1"
 			}
 		}
@@ -1040,7 +1212,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_mobile
+			knightmare_all
 		}
 	}
 
@@ -1057,7 +1230,15 @@ technologies = {
 		
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 
@@ -1081,7 +1262,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2016.1.1"
 			}
 		}
@@ -1089,7 +1270,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_fortress
+			knightmare_all
 		}
 	}
 
@@ -1100,16 +1282,17 @@ technologies = {
 			knightmare_fortress_2
 		}
 
-		
-
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
-
-
-
-
-
 		
 		research_cost = 2
 		start_year = 2018
@@ -1122,7 +1305,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2018.1.1"
 			}
 		}
@@ -1130,7 +1313,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_fortress
+			knightmare_all
 		}
 	}
 
@@ -1143,10 +1327,16 @@ technologies = {
 			reliability = 0.07
 	    }
 
-		
-
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -1169,7 +1359,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2017.1.1"
 			}
 		}
@@ -1177,7 +1367,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_fortress
+			knightmare_all
 		}
 	}
 
@@ -1189,11 +1380,16 @@ technologies = {
 			reliability = -0.10
 	    }
 
-
-		
-
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
 
 		path = {
@@ -1216,7 +1412,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2015.1.1"
 			}
 		}
@@ -1224,7 +1420,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_mobile
+			knightmare_all
 		}
 	}
 
@@ -1235,14 +1432,17 @@ technologies = {
 			knightmare_all_pur_3
 		}
 
-		
-
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = knightmare }
+			NOT = {	
+				has_template_containing_unit = knightmare_mass_prod_unit
+				has_template_containing_unit = knightmare_pol_unit
+				has_template_containing_unit = knightmare_all_pur_unit
+				has_template_containing_unit = knightmare_fortress_unit
+				has_template_containing_unit = knightmare_artillery_unit
+				has_template_containing_unit = knightmare_melee_unit
+				
+			}
 		}
-
-
-
 
 		
 		research_cost = 2
@@ -1256,7 +1456,7 @@ technologies = {
 			factor = 2
 			
 			modifier = {
-				factor = 5
+				factor = 10
 				date > "2017.1.1"
 			}
 		}
@@ -1264,7 +1464,8 @@ technologies = {
 		
 		
 		categories = {
-			knightmare_mass_production
+			knightmare_mobile
+			knightmare_all
 		}
 	}
 

@@ -9,15 +9,12 @@ country_event = {
 
 	option = {
 		name = MRU.1.a
-		add_country_leader_trait = Young_Tsar
-		
-		ai_chance = {
-			factor = 100
+
 		}
 		
     }
 
-}
+
 country_event = {
 	id = MRU.2
 	title = MRU.2.t
@@ -27,11 +24,6 @@ country_event = {
 
 	option = {
 		name = MRU.2.a
-		add_country_leader_trait = Marionette
-		
-		ai_chance = {
-			factor = 100
-		}
 		
     }
 
@@ -45,26 +37,6 @@ country_event = {
 
 	option = {
 		name = MRU.3.a
-			create_corps_commander = {
-				name = "Vladimir Vitkovsky"
-				gfx = ""
-				traits = { }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 2
-			}
-			create_corps_commander = {
-				name = "Mikhail Dieterichs"
-				gfx = ""
-				traits = { }
-				skill = 3
-				attack_skill = 1
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 1
-			}
 		
 		ai_chance = {
 			factor = 100
@@ -78,31 +50,16 @@ country_event = {
 	desc = MRU.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	
 	
 	option = {
 		name = MRU.4.a
-		add_opinion_modifier = { target = MRU modifier = friendly }
-		MRU = {
-		add_opinion_modifier = { target = LRU modifier = friendly }}
-		
 		
 		ai_chance = {
 			factor = 100
 		}
 		
     } 
-	option = {
-		name = MRU.4.b
-		add_political_power = -25
-		
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }	
+
 }
 country_event = {  
 	id = MRU.5
@@ -110,31 +67,15 @@ country_event = {
 	desc = MRU.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	
 	
 	option = {
 		name = MRU.5.a
-		add_opinion_modifier = { target = SRU modifier = friendly }
-		add_opinion_modifier = { target = MRU modifier = friendly }
-		add_stability = -0.2
-		add_political_power = -100
 		
 		ai_chance = {
 			factor = 100
 		}
 		
 	}
-	option = {
-		name = MRU.5.b
-		add_political_power = 25
-		
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }	
 }
 
 country_event = {
@@ -144,17 +85,905 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-        tag = MRU
-    }
 
 	option = {
 		name = MRU.6.a
-		add_ideas = MRU_Military_Bonds
-	}
-
-	option = {
-		name = MRU.6.b
-		add_ideas = MRU_Give_To_The_Tsar_in_Times_Of_Need
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
+
+
+
+ country_event = {  
+	id = MRU.7     ###USED FOR PARAMILITARY REVOLT'S EFFECTS
+	title = MRU.7.t
+	desc = MRU.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = MRU.7.a
+        653 = {
+			set_demilitarized_zone = yes
+		}
+        573 = {
+			set_demilitarized_zone = yes
+		}
+        398 = {
+			set_demilitarized_zone = yes
+		}				
+			swap_ideas = {
+				remove_idea = MRU_Right-Wing_Paramilitaries
+				add_idea = MRU_Right-Wing_Paramilitaries_2
+			}
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = Tzarist		
+		set_country_flag = MRU_Vesvelod_Restoration
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = MRU_The_Great_Restoration
+	}	
+}
+
+country_event = {
+	id = MRU.8
+	title = MRU.8.t
+	desc = MRU.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.8.a
+		MRU_Vsevolod_Romanov = {set_character_flag = {
+			flag = my_flag
+			value = 3
+		}
+	}
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+ 	
+country_event = {
+	id = MRU.9
+	title = MRU.9.t
+	desc = MRU.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.9.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.10
+	title = MRU.10.t
+	desc = MRU.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.10.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
+}
+
+
+
+country_event = {
+	id = MRU.11
+	title = MRU.11.t
+	desc = MRU.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.11.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+
+country_event = {
+	id = MRU.12
+	title = MRU.12.t
+	desc = MRU.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.12.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+
+country_event = {
+	id = MRU.13
+	title = MRU.13.t
+	desc = MRU.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.13.a
+		set_country_flag = MRU_Army_Plan
+		custom_effect_tooltip = MRU_Army_Plan_tt
+		add_political_power = -25
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
+	option = {
+		name = MRU.13.b
+		set_country_flag = MRU_Voronov_Plan	
+		add_political_power = -50
+		custom_effect_tooltip = MRU_Voronov_Plan_tt
+		ai_chance = {
+			factor = 100
+		}
+		
+    }	
+}
+
+
+country_event = {
+	id = MRU.14
+	title = MRU.14.t
+	desc = MRU.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.14.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		country_event = MRU.15
+    }
+}
+
+
+country_event = {
+	id = MRU.15
+	title = MRU.15.t
+	desc = MRU.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.15.a
+		
+		ai_chance = {
+			factor = 100
+		}
+
+
+		
+    }
+}
+
+
+country_event = {
+	id = MRU.16
+	title = MRU.16.t
+	desc = MRU.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.16.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+
+country_event = {
+	id = MRU.17
+	title = MRU.17.t
+	desc = MRU.17.d
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = MRU.17.a
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}
+		
+		add_offsite_building = { type = arms_factory level = 1 }
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
+	option = {
+		name = MRU.17.b
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}	
+		add_offsite_building = { type = industrial_complex level = 1 }
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+
+	option = {
+		name = MRU.17.c
+		hidden_effect = {
+			country_event = MRU.17
+			days = 25
+		}	
+		add_political_power = 25
+		ai_chance = {
+			factor = 100
+		}
+		
+    }	
+
+}
+
+country_event = {
+	id = MRU.18
+	title = MRU.18.t
+	desc = MRU.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.17.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.19
+	title = MRU.19.t
+	desc = MRU.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.19.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	
+		add_timed_idea = {
+			idea = MRU_Aristocratic_Militarism
+			days = 180
+		}
+    }
+	
+    option = {
+		name = MRU.19.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	
+		add_timed_idea = {
+			idea = MRU_Aristocratic_Intellectualism
+			days = 180
+		}
+    }
+	
+}
+
+
+country_event = {
+	id = MRU.20
+	title = MRU.20.t
+	desc = MRU.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.10.a
+		
+		ai_chance = {
+			factor = 100
+		}
+	    add_ideas = MRU_Speedbump_Duma
+    }
+
+	option = {
+		name = MRU.10.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = MRU_Respect_The_Process
+    }
+}
+
+
+country_event = {
+	id = MRU.21
+	title = MRU.21.t
+	desc = MRU.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.10.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.22
+	title = MRU.22.t
+	desc = MRU.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.22.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		SRU = {
+			give_resource_rights = {
+				receiver = MRU
+				state = 571
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 570
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 578
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 577
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 824
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 516
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 576
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 575
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 564
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 565
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 563
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 567
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 568
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 569
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 554
+			}
+			give_resource_rights = {
+				receiver = MRU
+				state = 40
+			}
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.23
+	title = MRU.23.t
+	desc = MRU.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.23.a
+		
+		ai_chance = {
+			factor = 100
+
+		}
+		KAZ ={
+			country_event = MRU.35
+		}
+		add_war_support = 0.1
+		army_experience = 50
+    }
+}
+
+country_event = {
+	id = MRU.24
+	title = MRU.24.t
+	desc = MRU.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.24.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.25
+	title = MRU.25.t
+	desc = MRU.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.25.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.26
+	title = MRU.26.t
+	desc = MRU.26.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MRU.25.a
+		add_ideas = Muddy_Ground_idea
+		ai_chance = {
+			factor = 100
+		}
+		
+    }
+}
+
+country_event = {
+	id = MRU.27
+	title = MRU.27.t
+	desc = MRU.27.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+	      
+		name = MRU.27.a
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+		SMR = {
+			
+			change_tag_from = MRU
+			
+		
+			annex_country = { target = MRU }
+			annex_country = { target = SRU }
+		}
+	}
+}
+
+country_event = {
+	id = MRU.28
+	title = MRU.28.t
+	desc = MRU.28.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = MRU.28.a 
+		ai_chance = {
+			factor = 100
+		}
+	SRU = {	country_event = SRU_Intro.28}
+	}
+	
+}
+
+country_event = {
+	id = MRU.29
+	title = MRU.29.t
+	desc = MRU.29.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = MRU.29.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+			
+		}
+	
+	SRU = {country_event = SRU_Intro.29}
+}
+	option = {
+
+		name = MRU.29.b
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		SRU = {country_event = SRU_Intro.29}
+}
+
+	option = {
+
+		name = MRU.29.c 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+		SRU = {country_event = SRU_Intro.29}
+}
+	
+}
+
+
+country_event = {
+	id = MRU.30
+	title = MRU.30.t
+	desc = MRU.30.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = MRU.30.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+		SRU = {country_event = SRU_Intro.30}
+}
+
+	option = {
+
+		name = MRU.30.b
+		ai_chance = {
+		    factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		SRU = {country_event = SRU_Intro.30}
+}
+
+	option = {
+
+		name = MRU.30.c 
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+		SRU = {country_event = SRU_Intro.30}
+}
+	
+}
+
+
+country_event = {
+	id = MRU.31
+	title = MRU.31.t
+	desc = MRU.31.d
+   
+	is_triggered_only = yes
+    
+	option = {
+
+		name = MRU.31.a 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+		SRU = {country_event = SRU_Intro.31}
+}
+
+	option = {
+
+		name = MRU.31.b
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		SRU = {country_event = SRU_Intro.31}
+}
+
+	option = {
+
+		name = MRU.31.c 
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+
+		SRU = {country_event = SRU_Intro.31}
+}
+}
+
+
+country_event = {
+	id = MRU.32
+	title = MRU.32.t
+	desc = MRU.32.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = MRU.32.a 
+		ai_chance = {
+			factor = 100
+		}
+	     modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+		SRU = {country_event = SRU_Intro.32}
+}
+
+	option = {
+
+		name = MRU.32.b
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+		SRU = {country_event = SRU_Intro.32}
+}
+
+	option = {
+
+		name = MRU.32.c 
+		ai_chance = {
+			factor = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		SRU = {country_event = SRU_Intro.32}
+}
+}
+
+
+country_event = {
+	id = MRU.33
+	title = MRU.33.t
+	desc = MRU.33.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = MRU.33.a 
+		ai_chance = {
+			factor = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		
+	}
+	SRU = {country_event = SRU_Intro.33}
+}
+
+	option = {
+
+		name = MRU.33.b
+		ai_chance = {
+			factor = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+		SRU = {country_event = SRU_Intro.33}
+}
+
+	option = {
+
+		name = MRU.33.c 
+		ai_chance = {
+			factor = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		SRU = {country_event = SRU_Intro.33}
+	}	
+	
+}
+
+
+country_event = {
+	id = MRU.34
+	title = MRU.34.t
+	desc = MRU.34.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = MRU.34.a 
+		ai_chance = {
+			factor = 100
+		}
+		SRU = {country_event = SRU_Luka_Phase_One.3}
+	}
+}
+
+country_event = {
+	id = MRU.35
+	title = MRU.35.t
+	desc = MRU.35.d
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = MRU.35
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = MRU.36
+	title = MRU.36.t 
+	desc = MRU.36.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = MRU.36.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+country_event = {
+	id = MRU.37
+	title = MRU.37.t 
+	desc = MRU.37.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = MRU.37.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = MRU.38
+	title = MRU.38.t 
+	desc = MRU.38.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = MRU.38.a 
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+

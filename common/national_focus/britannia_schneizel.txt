@@ -1002,8 +1002,11 @@ focus_tree = {
 		relative_position_id = BRT_buy_iceland
 
 		available = {		
-		country_exists = BRT
-		controls_state = 100
+		country_exists = AR2
+		AR2 = {
+			controls_state = 100
+		}
+		
 
 		}
 
@@ -1113,23 +1116,23 @@ focus_tree = {
 			country_event = BRT.64
 			NGA = {
 				add_popularity = {
-					ideology = autocracy
+					ideology = BR_autocracy
 					popularity = 0.08
 				}
 				add_popularity = {
-					ideology = ultra_nationalism
+					ideology = BR_supremacist
 					popularity = 0.10
 				}
 			}
 		  hidden_effect = {
 			NGA = {
 			set_party_name = {
-				ideology = ultra_nationalism
+				ideology = BR_supremacist
 				name = "ASN-Purist Leaning"
 				long_name = "Armée Secrète du Nigeria-Purist Leaning"
 			}
 			set_party_name = {
-				ideology = autocracy
+				ideology = BR_autocracy
 				name = "ASN-Schneizel Leaning"
 				long_name = "Armée Secrète du Nigeria-Schneizel Leaning"
 			}
@@ -1207,7 +1210,7 @@ focus_tree = {
 		completion_reward = {
 			NGA = {
 				add_popularity = {
-					ideology = ultra_nationalism
+					ideology = BR_supremacist
 					popularity = 0.05
 				}
 			}
@@ -1260,7 +1263,7 @@ focus_tree = {
 		completion_reward = {
 			NGA = {
 				add_popularity = {
-					ideology = ultra_nationalism
+					ideology = BR_supremacist
 					popularity = 0.05
 				}
 			}
@@ -1364,23 +1367,23 @@ focus_tree = {
 		completion_reward = {
 			SAF = {
 				add_popularity = {
-					ideology = autocracy
+					ideology = BR_autocracy
 					popularity = 0.10
 				}
 				add_popularity = {
-					ideology = ultra_nationalism
+					ideology = BR_supremacist
 					popularity = 0.15
 				}
 			}
 		  hidden_effect = {
 			SAF = {
 			set_party_name = {
-				ideology = ultra_nationalism
+				ideology = BR_supremacist
 				long_name = "New National Party-Right"
 				name = "NNP-Right"
 			}
 			set_party_name = {
-				ideology = autocracy
+				ideology = BR_autocracy
 				long_name = "New National Party-Left"
 				name = "NNP-Left"
 			}
@@ -1768,7 +1771,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_popularity = {
-				ideology = autocracy
+				ideology = BR_autocracy
 				popularity = 0.1
 			}
 		  hidden_effect = {
@@ -2599,8 +2602,10 @@ focus_tree = {
 		completion_reward = {
 			BRT = {
 				add_ideas = clean_administration
-				remove_ideas = brown_purists_part_8
-				remove_ideas = red_purists_part_7
+				remove_ideas = {
+					brown_purists_part_8
+					red_purists_part_7
+				}
 			}
 		  hidden_effect = {
 		}

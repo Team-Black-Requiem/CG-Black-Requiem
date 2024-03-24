@@ -9,134 +9,461 @@ characters = {
 				large="GFX_portrait_MRU_Vsevolod_Romanov"
 			}
 		}
+
+	}
+
+	MRU_BR_autocracy ={
+		name = "Romanov Loyalists"
+		portraits={
+		}
 		country_leader={
-			desc = " hey man	"
-			ideology= integralism
-			traits= { darwinist }
-			expire="2020.1.1.1"
+		     desc = "NULL"
+			ideology= paternal_autocracy
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}	
+	MRU_BR_paternalism ={
+		name = "Romanov Loyalists"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= aristocratic_paternalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+	MRU_BR_authoritarian ={
+		name = "Romanov Loyalists"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= oligarchic_government
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}	
+
+	MRU_Mikhail_Astakov = {
+		name= "Mikhail Astakov"
+		portraits={
+			civilian={
+				large=""
+			}
+		}
+		country_leader={
+			desc = "hey man"
+			ideology = ultra_nationalism
+			traits= {  }
+			expire="2023.1.1.1"
 			id = -1
 		}
 	}
 
-	MRU_generic_head_of_government = {
-		name = "Head Of Government"
-		#portraits = {
-		#	
-		#}
+
+
+	MRU_Vsevolod_Romanov_2 = {
+		name="Vsevolod Romanov"
+		portraits={
+			civilian={
+				large="GFX_portrait_MRU_Vsevolod_Romanov"
+			}
+		}
+
+	}
+
+	MRU_Vsevolod_Romanov_3 = {
+		name="Vsevolod Romanov"
+		portraits={
+			civilian={
+				large="GFX_portrait_MRU_Vsevolod_Romanov"
+			}
+		}
+
+	}	
+
+	##Party Leaders
+	
+
+	MRU_BR_liberals ={
+		name = "Absent Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_liberalism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+
+	MRU_BR_conservatives ={
+		name = "Absent Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_conservatism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+	MRU_BR_soc_dem ={
+		name = "Absent Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= social_democracy
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}	
+
+	MRU_BR_socialism ={
+		name = "Partisan Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= trade_unionism 
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	MRU_BR_vanguardism ={
+		name = "Partisan Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= military_bolshevism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}
+
+	MRU_BR_ref_socialism ={
+		name = "Partisan Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology= left_libertarianism
+			traits={ }
+			expire = "2020.1.1"
+			id=16
+		}
+	}	
+
+	##Prime Ministers
+
+	MRU_Maksim_Orlev = {
+		name = "Maksim Orlev"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Maksim_Orlev"
+			 }		
+		}
 		
 		advisor = {
 			slot = head_of_government
-			idea_token = MRU_generic_head_of_government_idea_1
+			idea_token = MRU_Maksim_Orlev_idea	
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+
+			}
+
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				tzar_dolphin
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_economy_minister = {
-		name = "The Economy Minister"
-		#portraits = {
-		#	
-		#}
+	MRU_Ilyana_Markov = {
+		name = "Ilyana Markov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Ilyana_Markov"
+			 }		
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = MRU_Ilyana_Markov_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+			    the_executioner	
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+    ##Economy Ministers
+	MRU_Mikhail_Yermolov = {
+		name = "Mikhail Yermolov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Mikhail_Yermolov"
+			 }		
+		}
 		
 		advisor = {
 			slot = economy_minister
-			idea_token = MRU_generic_economy_minister_idea_1
+			idea_token = MRU_Mikhail_Yermolov_idea	
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+
+			}
+
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				resource_extraction
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_foreign_minister = {
-		name = "The Foreign Minister"
-		#portraits = {
-		#	
-		#}
+	MRU_Boris_Zvyagintsev = {
+		name = "Boris Zvyagintsev"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Boris_Zvyagintsev"
+			 }		
+		}
+
+		advisor = {
+			slot = economy_minister
+			idea_token = MRU_Boris_Zvyagintsev_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+				industralizer
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+    ##Foreign Ministers
+	MRU_Danil_Smirnov = {
+		name = "Danil Smirnov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Danil_Smirnov"
+			 }		
+		}
 		
 		advisor = {
 			slot = foreign_minister
-			idea_token = MRU_generic_foreign_minister_idea_1
+			idea_token = MRU_Danil_Smirnov_idea	
 
 			allowed = {
 				tag = MRU
 			}
 
-			traits = { 
-				conservative_guy
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
-			cost = 2000
+			traits = { 
+				authoritarian_guy
+				great_compromiser
+			}
+
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_minister_of_interior = {
-		name = "The Minister Of The Interior"
-		#portraits = {
-		#	
-		#}
+	MRU_Nikita_Orlov = {
+		name = "Nikita Orlov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Nikita_Orlov"
+			 }		
+		}
+
+		advisor = {
+			slot = foreign_minister
+			idea_token = MRU_Nikita_Orlov_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+				has_country_flag = MRU_Supremacism
+			}
+
+			traits = { 
+				nationalist_guy
+				stone_head
+				
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+
+    ##Interior Ministers
+	MRU_Andrey_Voronin = {
+		name = "Andrey Voronin"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Andrey_Voronin"
+			 }		
+		}
 		
 		advisor = {
 			slot = minister_of_interior
-			idea_token = MRU_generic_minister_of_interior_idea_1
+			idea_token = MRU_Andrey_Voronin_idea	
 
 			allowed = {
 				tag = MRU
+				has_country_flag = MRU_Ministers_First_Unlock
+			}
+
+			available = {
+				has_country_flag = MRU_Authoritarianism
 			}
 
 			traits = { 
-				conservative_guy
+				authoritarian_guy
+				control_freak
 			}
 
-			cost = 2000
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_intelligence = {
-		name = "The Intelligence Guy"
-		#portraits = {
-		#	
-		#}
-		
+	MRU_Artyom_Volkov = {
+		name = "Artyom Volkov"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Artyom_Volkov"
+			 }		
+		}
+
 		advisor = {
-			slot = intelligence
-			idea_token = MRU_generic_intelligence_idea_1
+			slot = minister_of_interior
+			idea_token = MRU_Artyom_Volkov_idea	
 
 			allowed = {
 				tag = MRU
 			}
 
-			traits = { 
-				conservative_guy
+			available = {
+				has_country_flag = MRU_Supremacism
 			}
 
-			cost = 2000
+			traits = { 
+				nationalist_guy
+				balanced_fist
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	MRU_Maxim_Ivanovich = {
+		name = "Maxim Ivanovich"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_MRU_Maxim_Ivanovich"
+			 }		
+		}
+
+		advisor = {
+			slot = intelligence
+			idea_token = MRU_Maxim_Ivanovich_idea	
+
+			allowed = {
+				tag = MRU
+			}
+
+			available = {
+			}
+
+			traits = { 
+				careful_agent
+			}
+
+			cost = 75
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -147,43 +474,53 @@ characters = {
 
 	### ARMY - NAVY - AIR (CHIEFS)
 
-	MRU_generic_army_chief = {
-		name = "Generic Genericus"
+	MRU_Nikita_Yaroslavovich = {    ###Second Name becomes Voronov
+		name = "Nikita 'Voronov' Yaroslavovich"
 
-		#portraits = {
-		#	
-		#}
+		portraits = {
+				army = {
+				small = "GFX_idea_MRU_Nikita_Yaroslavovich"
+
+			}		
+		}
 
 		advisor = {
 			slot = army_chief
-			idea_token = MRU_generic_army_chief_idea_1
+			idea_token = MRU_Nikita_Yaroslavovich_idea
 			allowed = {
 				tag = MRU
 			}
+			available = {
+				has_country_flag = MRU_Voronov_Plan
+			}
 			traits = { 
-				army_chief_defensive_1
+				army_chief_offensive_3
 			}
 
-			cost = 100
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 	}
 
-	MRU_generic_navy_chief = {
-		name = "Generic Genericus"
+	MRU_Gavril_Mikhailovich = {
+		name = "Gavril Mikhailovich"
 
-		#portraits = {
-		#	
-		#}
+
+		portraits = {
+				army = {
+				small = "GFX_idea_MRU_Gavril_Mikhailovich"
+
+			}		
+		}
 
 		advisor = {
 			slot = navy_chief
 			allowed = {
 				tag = MRU
 			}
-			idea_token = MRU_generic_navy_chief_idea_1
+			idea_token = MRU_Gavril_Mikhailovich_idea
 			traits = { 
 				navy_chief_decisive_battle_1
 			}
@@ -195,18 +532,23 @@ characters = {
 		}
 	}
 
-	MRU_generic_air_chief = {
+	MRU_Vladislav_Adamovich = {
+	name = "Vladislav Adamovich"
 
-		#portraits = {
-		#	
-		#}
+
+		portraits = {
+				army = {
+				small = "GFX_idea_MRU_Vladislav_Adamovich"
+
+			}		
+		}
 
 		advisor = {
 			slot = air_chief
 			allowed = {
 				tag = MRU
 			}
-			idea_token = MRU_generic_air_chief_idea_1
+			idea_token = MRU_Vladislav_Adamovich_idea
 			traits = { 
 				air_chief_ground_support_1
 			}
@@ -223,19 +565,24 @@ characters = {
 	### HIGH COMMAND
 
 
-	MRU_generic_high_command = {
-		name = "High Command Feller"
+	MRU_gusev = {
+		name = "Aleksandr Gusev"
 
-		#portraits = {
-		#	
-		#}
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Aleksandr_Gusev.dds"
+				small = "GFX_idea_MRU_gusev"
 
+			}
+
+		}
+		
 		advisor = {
 			slot = high_command
 			ledger = army
-			idea_token = MRU_generic_high_command_1
+			idea_token = MRU_gusev_high_command_1
 			traits = { 
-				army_artillery_1
+			army_chief_reform_3	
 			}
 			allowed = {
 				tag = MRU
@@ -247,10 +594,86 @@ characters = {
 		}
 
 		field_marshal = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			traits = {brilliant_strategist trickster } #engineer
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	MRU_nikitin= {
+		name = "Viktor Nikitin"
+
+		portraits = {
+			army = {
+				large ="gfx/leaders/MRU/Viktor_Nikitin.dds"
+				small = "GFX_idea_MRU_nikitin"
+
+			}
+		}
+
+		
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = MRU_nikitin_high_command_1
+			traits = { 
+				army_chief_morale_3
+			}
+			allowed = {
+				tag = MRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {old_guard inflexible_strategist thorough_planner }
+			skill = 4
+			attack_skill = 2 
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+
+	MRU_Illin= {
+		name = "Rostislav Illin"
+
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Rostislav_Illin.dds"
+				small = "GFX_idea_MRU_Illin"
+			}
+		}
+
+		
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = MRU_Illin_high_command_1
+			traits = { 
+		        army_entrenchment_1
+			}
+			allowed = {
+				tag = MRU
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = { commando trait_mountaineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
 			logistics_skill = 1
 		}
 	}
@@ -258,21 +681,228 @@ characters = {
 
 	### GENERALS
 
-	MRU_generic_corps_commander = {
-		name = "Corps Commander"
-		#portraits = {
-		#	
-		#}
-
+	MRU_levin = {
+		name = "Valerian Levin"
+	portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Valerian_Levin.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Valerian_Levin.dds"
+			}
+		}
 		corps_commander = {
-			skill = 1
-			attack_skill = 1
+			traits = { infantry_officer}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 	}
 
+	MRU_grisha = {
+		name = "Grisha Sokolov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Grisha_Sokolov.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Grisha_Sokolov.dds"
+			}
+		}
+		corps_commander = {
+			traits = {infantry_officer}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 4
+}
+}
+
+MRU_morein = {
+		name = "Vladimir Morein"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Vladamir_Moren.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Vladamir_Moren.dds"
+			}
+		}
+		corps_commander = {
+			traits = {trait_reckless}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+}
+}
+
+MRU_samarin = {
+		name = "Anton Samarin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Anton_Samarin.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Anton_Samarin.dds"
+			}
+		}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+}
+}
+
+MRU_kuznetsov = {
+		name = "Vasili Kuznetsov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Vasili_Kuznetsov.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Vasili_Kuznetsov.dds"
+			}
+		}
+		corps_commander = {
+			traits = {trait_reckless old_guard}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+}
+}
+
+MRU_tasha = {
+		name = "Tasha Ostrovskya"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Tasha_Ostrovskya.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Tasha_Ostrovskya.dds"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+}
+}
+
+MRU_katerina = {
+		name = "Katerina Shubina"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MRU/Katerina_Shubina.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/MRU/Katerina_Shubina.dds"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+}
+}
 
 
+
+
+# Phase 2 CHARACTERS #
+
+# BRittania path #
+MRU_level_2_admiral_1 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_level_2_admiral_2 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+MRU_level_2_admiral_3 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_level_4_admiral_1 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_level_4_admiral_2 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_general_1 = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_general_2  = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_general_3  = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_general_4  = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
+
+MRU_general_5  = {
+	name="bro"
+	portraits={
+		
+	}
+	
+}
 }

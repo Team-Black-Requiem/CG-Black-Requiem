@@ -1,0 +1,100 @@
+add_namespace = WRD
+
+country_event = {  
+	id = WRD.1
+	title = WRD.1.t
+	desc = WRD.1.d
+	#picture =
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = WRD.1.a
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.2
+	}
+
+    option = {
+		name = WRD.1.b
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.3
+	}
+
+    option = {
+		name = WRD.1.c
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+	} 
+
+    country_event = {  
+	id = WRD.2
+	title = WRD.2.t
+	desc = WRD.2.d
+	#picture =
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = WRD.2.a
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.1
+	}
+
+    option = {
+		name = WRD.2.b
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.3
+	}
+
+    option = {
+		name = WRD.2.c
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+	} 
+
+    country_event = {  
+	id = WRD.3
+	title = WRD.3.t
+	desc = WRD.3.d
+	#picture =
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = WRD.3.a
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.1
+	}
+
+    option = {
+		name = WRD.3.b
+		ai_chance = {
+			factor = 100
+		}
+		country_event = WRD.2
+	}
+
+    option = {
+		name = WRD.3.c
+		ai_chance = {
+			factor = 100
+		}
+		
+	}
+	} 

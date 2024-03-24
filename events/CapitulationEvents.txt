@@ -13,26 +13,26 @@ news_event = {
 		text = country_capitulated.0.d_positive_collab_diff_ideology
 		trigger = {
 			NOT = { tag = ROOT }
-			NOT = {
-				OR = {
-					AND = {
-						ROOT = { has_government = fascism }
-						FROM.FROM = { has_government = fascism }
-					}
-					AND = {
-						ROOT = { has_government = democratic }
-						FROM.FROM = { has_government = democratic }
-					}
-					AND = {
-						ROOT = { has_government = communism }
-						FROM.FROM = { has_government = communism }
-					}
-					AND = {
-						ROOT = { has_government = neutrality }
-						FROM.FROM = { has_government = neutrality }
-					}
-				}
-			}
+			#NOT = {
+			#	OR = {
+			#		AND = {
+			#			ROOT = { has_government = fascism }
+			#			FROM.FROM = { has_government = fascism }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = democratic }
+			#			FROM.FROM = { has_government = democratic }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = communism }
+			#			FROM.FROM = { has_government = communism }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = neutrality }
+			#			FROM.FROM = { has_government = neutrality }
+			#		}
+			#	}
+			#}
 			FROM.FROM = {
 				has_collaboration = {
 					target = ROOT
@@ -44,16 +44,16 @@ news_event = {
 	desc = {
 		text = country_capitulated.0.d_positive_collab_invaded_same_ideology
 		trigger = {
-			OR = {
-				AND = {
-					ROOT = { has_government = fascism }
-					FROM.FROM = { has_government = fascism }
-				}
-				AND = {
-					ROOT = { has_government = communism }
-					FROM.FROM = { has_government = communism }
-				}
-			}
+			#OR = {
+			#	AND = {
+			#		ROOT = { has_government = fascism }
+			#		FROM.FROM = { has_government = fascism }
+			#	}
+			#	AND = {
+			#		ROOT = { has_government = communism }
+			#		FROM.FROM = { has_government = communism }
+			#	}
+			#}
 			FROM.FROM = {
 				has_collaboration = {
 					target = ROOT
@@ -124,26 +124,26 @@ news_event = {
 		text = country_capitulated.0.d_negative_collab_diff_ideology
 		trigger = {
 			tag = ROOT
-			NOT = {
-				OR = {
-					AND = {
-						ROOT = { has_government = fascism }
-						FROM.FROM = { has_government = fascism }
-					}
-					AND = {
-						ROOT = { has_government = democratic }
-						FROM.FROM = { has_government = democratic }
-					}
-					AND = {
-						ROOT = { has_government = communism }
-						FROM.FROM = { has_government = communism }
-					}
-					AND = {
-						ROOT = { has_government = neutrality }
-						FROM.FROM = { has_government = neutrality }
-					}
-				}
-			}
+			#NOT = {
+			#	OR = {
+			#		AND = {
+			#			ROOT = { has_government = fascism }
+			#			FROM.FROM = { has_government = fascism }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = democratic }
+			#			FROM.FROM = { has_government = democratic }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = communism }
+			#			FROM.FROM = { has_government = communism }
+			#		}
+			#		AND = {
+			#			ROOT = { has_government = neutrality }
+			#			FROM.FROM = { has_government = neutrality }
+			#		}
+			#	}
+			#}
 			FROM.FROM = {
 				has_collaboration = {
 					target = ROOT

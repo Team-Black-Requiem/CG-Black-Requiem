@@ -3,15 +3,16 @@ air_wings = {
 		CAS_equipment_1 = { 
 			owner = "JAP" 
 			amount = 300
-			start_experience_factor = 0.2 #optional, otherwise starts with 0 expereince
 		}
+		start_experience_factor = 0.2
 	}
 	282 = {
 		fighter_equipment_1 = { 
 			owner = "JAP"  
 			amount = 200 	
-			start_experience_factor = 0.5	
+		
 		}		
+		start_experience_factor = 0.2
 	}
 }
 
@@ -59,15 +60,12 @@ division_template = {
 
 
 	}	
-	support = {
-	}
+	
 	
 priority = 0	
 
 	
 }
-
-
 
 division_template = {
 	name = "Dendō no bunkatsu" 		
@@ -574,7 +572,7 @@ instant_effect = {
 	
 		add_equipment_production = {
 		equipment = {
-			type = motorised_infantry
+			type = mechanized_equipment_1
 			creator = "BRT"
 		}
 		requested_factories = 3
@@ -584,7 +582,7 @@ instant_effect = {
 	
 			add_equipment_production = {
 		equipment = {
-			type = sp_artillery
+			type = sp_artillery_1
 			creator = "BRT"
 		}
 		requested_factories = 3

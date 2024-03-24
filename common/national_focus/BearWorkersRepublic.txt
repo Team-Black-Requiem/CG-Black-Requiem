@@ -1,0 +1,584 @@
+focus_tree = {
+	id = BWR
+	continuous_focus_position = { x = 0 y = 2000}
+country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BWR
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = remember_sonya
+		icon = GFX_remember_sonya
+		prerequisite = {}
+		x = 10
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 300
+			country_event = BWR.2
+			
+			}
+	}
+
+    focus = {
+		id = the_new_face_of_russia
+		icon = GFX_the_new_face_of_russia
+		prerequisite = {focus = remember_sonya}
+		x = 10
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = BWR.3
+		}
+	}
+
+focus = {
+		id = bear_economy
+		icon =  GFX_bear_economy
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 7
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+			add_ideas = BWR_bear_economy_idea
+		}
+	}
+
+    focus = {
+		id = bear_market
+		icon = GFX_bear_market
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 9
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 60
+				}
+
+				add_resource = {
+					type = aluminium
+					amount = 60
+				}
+
+				add_resource = {
+					type = rubber
+					amount = 60
+				}
+
+				add_resource = {
+					type = tungsten
+					amount = 60
+				}
+
+				add_resource = {
+					type = steel
+					amount = 60
+				}
+
+				add_resource = {
+					type = chromium
+					amount = 60
+				}
+
+				add_resource = {
+					type = sakuradite
+					amount = 60
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = bear_necessities
+		icon = GFX_bear_necessities
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 11
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = BWR_bear_necessities_idea
+		}
+	}
+
+    focus = {
+		id = beary_good
+		icon = GFX_beary_good
+		prerequisite = {focus = the_new_face_of_russia}
+		x = 13
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+			add_ideas = BWR_Beary_good_idea
+		}
+	}
+
+     focus = {
+		id = train_the_bears_for_war
+		icon = GFX_train_the_bears_for_war
+		prerequisite = {focus = bear_economy}
+        prerequisite = { focus = bear_market}
+		x = 8
+		y = 6
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = 4_BWR.tt
+		    hidden_effect = {
+				country_event = BWR.4
+			}
+		}
+	}
+
+     focus = {
+		id = call_out_to_the_international_bears
+		icon = GFX_call_out_to_the_international_bears
+		prerequisite = {focus = bear_necessities}
+        prerequisite = {focus = beary_good}
+		x = 12
+		y = 6
+
+		cost = 3
+    
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = 3_BWR.tt
+			country_event = BWR.5
+        hidden_effect = {
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment_1
+				amount = 4000
+			}
+
+			add_equipment_to_stockpile = {
+				type = mbt_2
+				amount = 4000
+			}
+			recruit_character = BWR_oso
+			recruit_character = BWR_bearshev
+			recruit_character = BWR_bearkov
+			recruit_character = BWR_bearkkossky
+			recruit_character = BWR_wojtek
+			recruit_character = BWR_fur
+			recruit_character = BWR_beardolf
+			recruit_character = BWR_beartov
+			recruit_character = BWR_jean
+			recruit_character = BWR_beria
+			recruit_character = BWR_blaire
+			recruit_character = BWR_yogi
+			recruit_character = BWR_kuma
+			recruit_character = BWR_bearshev
+			if = {
+   			limit = {
+        		has_dlc = "La Resistance"
+    			}
+				recruit_character = BWR_intelligence
+			}
+
+		}
+		}
+	}
+
+    focus = {
+		id = bear_revolution
+		icon = GFX_bear_revolution
+		prerequisite = {focus = train_the_bears_for_war}
+		x = 9
+		y = 8
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = BWR_Weekly_Bears
+		}
+	}
+
+
+    focus = {
+		id = establish_the_polar_fleet
+		icon = GFX_establish_the_polar_fleet
+		prerequisite = {focus = bear_revolution}
+		x = 7
+		y = 10
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	    custom_effect_tooltip = 2_BWR.tt
+
+			hidden_effect = {
+				load_oob = "BWR_navy"
+			}
+		}
+	}
+
+    focus = {
+		id = beary_good_navy
+		icon = GFX_beary_good_navy
+		prerequisite = {focus = establish_the_polar_fleet}
+		x = 7
+		y = 12
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = BWR_Bear_Navy
+		}
+	}
+
+     focus = {
+		id = establish_knightbears
+		icon = GFX_establish_knightbears
+		prerequisite = {focus = call_out_to_the_international_bears}
+		x = 11
+		y = 8
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = 1_BWR.tt
+			add_ideas = BWR_Bear_Knightmares
+			load_oob = "BWR_Knightmare_AI"		
+			
+			hidden_effect = {
+			
+				add_equipment_to_stockpile = {
+					type = factspheres
+					amount = 15000
+				}
+
+				add_equipment_to_stockpile = {
+					type = landspinner
+					amount = 15000
+				}
+				add_equipment_to_stockpile = {
+					type = knightmare_mass_prod_1
+					amount = 15000
+				}
+				
+			 
+		    	
+			 
+			}
+		}
+	}
+
+     focus = {
+		id = getting_our_bearings
+		icon = GFX_getting_our_bearings
+		prerequisite = {focus = establish_knightbears}
+		x = 13
+		y = 10
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+		
+			add_ideas = BWR_air
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_fighter_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_CAS_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = strat_bomber_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_strat_bomber_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_naval_bomber_airframe_0
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = cv_small_plane_naval_bomber_airframe_0
+				amount = 200
+			}
+		}
+	}
+
+      focus = {
+		id = bear_force_one
+		icon = GFX_bear_force_one
+		prerequisite = {focus = getting_our_bearings}
+		x = 13
+		y = 12
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BWR_Bear_Air_Two
+
+			hidden_effect = {
+				remove_ideas = BWR_air
+			}
+		}
+	}
+
+     focus = {
+		id = release_the_war_bears
+		icon = GFX_release_the_war_bears
+		prerequisite = {focus = bear_force_one}
+        prerequisite = {focus = beary_good_navy}
+		x = 10
+		y = 13
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			 	
+		}
+
+		completion_reward = {
+			if = {
+					limit = {is_ai = yes}
+					country_event = BWR.11
+				}
+				else = {country_event = BWR.6}
+		}
+	}
+
+     focus = {
+		id = bears_are_unpawable
+		icon = GFX_bears_are_unpawable
+		prerequisite = {focus = release_the_war_bears}
+		x = 10
+		y = 15
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BWR_bears_are_unpawable_idea
+		
+		hidden_effect = {
+			remove_ideas = BWR_War_Bears
+		}
+		}
+	}
+
+       focus = {
+		id = beartial_law
+		icon = GFX_bertial_law
+		prerequisite = {focus = release_the_war_bears}
+		x = 12
+		y = 15
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = 8_BWR.tt
+		}
+	}
+        focus = {
+		id = sonya_will_be_avenged
+		icon = GFX_sonya_will_be_avenged
+		prerequisite = {focus = release_the_war_bears}
+		x = 8
+		y = 15
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BWR_sonya_will_be_avenged_idea
+			add_country_leader_trait = BWR_sonya_will_be_avanged
+			custom_effect_tooltip = 5_BWR.tt
+			hidden_effect = {
+				recruit_character = BWR_Puka_Pavlov_Marshall
+			}
+		}
+	}
+
+        focus = {
+		id = force_the_humans_to_fight 
+		icon = GFX_force_the_humans_to_fight
+		prerequisite = {focus = sonya_will_be_avenged}
+        prerequisite = {focus = beartial_law}
+        prerequisite = {focus = bears_are_unpawable}
+		x = 9
+		y = 17
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = 6_BWR.tt
+			country_event = BWR.7
+		}
+	}
+
+      focus = {
+		id = expand_the_knightbears
+		icon = GFX_expand_the_knightbears
+		prerequisite = {focus = sonya_will_be_avenged}
+        prerequisite = {focus = beartial_law}
+        prerequisite = {focus = bears_are_unpawable}
+		x = 11
+		y = 17
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = 7_BWR.tt
+			country_event = BWR.8
+		}
+	}
+
+     focus = {
+		id = beartality
+		icon = GFX_beartality
+		prerequisite = {focus = force_the_humans_to_fight}
+        prerequisite = {focus = expand_the_knightbears}
+
+		x = 10
+		y = 19
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = BWR.9
+			load_focus_tree = generic_focus
+		}
+	
+	}
+
+}

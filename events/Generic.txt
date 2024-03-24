@@ -1,0 +1,102 @@
+add_namespace = GEN
+
+country_event = {  
+	id = GEN.1
+	title = GEN.1.t
+	desc = GEN.1.d
+	#picture =
+	mean_time_to_happen = {
+        days = 1 }
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = GEN.1.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		create_equipment_variant = {
+			name = "Harbinger Class"
+			type = ship_hull_cruiser_1
+			name_group = JAP_BB_HISTORICAL
+			parent_version = 0
+			allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = ship_radar_1
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				front_1_custom_slot = ship_anti_air_1
+				front_2_custom_slot = empty
+				mid_1_custom_slot = ship_medium_battery_1
+				mid_2_custom_slot = ship_secondaries_1
+				mid_3_custom_slot = ship_secondaries_1
+				rear_1_custom_slot = ship_airplane_launcher_1
+				rear_2_custom_slot = empty
+			}
+		} 
+		add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_1
+					
+					version_name = "Harbinger Class"
+				}
+				name = "Harbinger" 
+				requested_factories = 1
+				progress = 1
+				amount = 1
+			}
+		} 
+
+
+	}
+
+    option = {
+		name = GEN.1.b
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			create_equipment_variant = {
+                name = "Ravenger Class"
+                type = ship_hull_carrier_1
+                name_group = JAP_BB_HISTORICAL
+                parent_version = 0
+                allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+                modules = {
+                    fixed_ship_deck_slot_1 = ship_deck_space
+                    fixed_ship_deck_slot_2 = ship_deck_space
+                    fixed_ship_anti_air_slot = ship_anti_air_1
+                    fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+                    fixed_ship_radar_slot = ship_radar_1
+                    fixed_ship_engine_slot = carrier_ship_engine_2
+                    fixed_ship_secondaries_slot = ship_secondaries_1
+                    fixed_ship_armor_slot = empty
+                    front_1_custom_slot = ship_armor_carrier_deck
+                    front_2_custom_slot = empty
+                    mid_1_custom_slot = ship_light_medium_battery_1
+                    mid_2_custom_slot = empty
+                    mid_3_custom_slot = empty
+                    rear_1_custom_slot = empty
+                    rear_2_custom_slot = empty
+                }
+            }
+			add_equipment_production = {
+                    equipment = {
+                        type = ship_hull_carrier_1
+                        
+                        version_name = "Ravenger Class"
+                    }
+                    name = "Ravenger" 
+                    requested_factories = 1
+                    progress = 1
+                    amount = 1
+                }
+		}
+	}
+	} 

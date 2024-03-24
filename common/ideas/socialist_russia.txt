@@ -1,133 +1,820 @@
 ideas = {
     country = {
 
-		#These are together with RUS_Agrarian_economy, RUS_low_level_education 
-	
-	    SRU_flame_socialism = {
+		#### SONYAS STARTING IDEAS ######
+
+		Independent_Military_Structure = {
 		
-		 	allowed = {
-				always = no
-			}
+			allowed = {
+			   always = no
+		   }
 
-			allowed_civil_war = {
-				always = yes
-			}
+		   allowed_civil_war = {
+			   always = yes
+		   }
 
-			removal_cost = -1
-			
-			modifier = {
-			stability_factor = 0.20
-			political_power_gain_factor = 0.20
-			drift_defence_factor = 0.40
-			}
-		}
-		
-		SRU_unstable_government = {
-		
-		 	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_factor = -0.05
-			totalitarian_socialism_drift = 0.003
-			ultra_nationalism_drift = 0.001
-			moderate_socialism_drift = 0.003
-			}
-		}
-			SRU_unstable_government_2 = {
-		
-		 	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			stability_factor = -0.1
-			totalitarian_socialism_drift = 0.003
-			ultra_nationalism_drift = 0.001
-			moderate_socialism_drift = 0.003
-			moderate_conservatism_drift = -0.01
-			moderate_liberalism_drift = -0.01
-			}
-		}
-		
-		SRU_unprofessional_army = {
-		
-		 	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			army_org_factor = -0.15
-			army_morale_factor = -0.15
-			army_core_attack_factor = 0.05
-			army_core_defence_factor = 0.05
-			}
-		}
-		SRU_unprofessional_army_2 = {
-		
-		 	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-			army_org_factor = -0.15
-			army_morale_factor = -0.15
-			army_core_attack_factor = 0.05
-			army_core_defence_factor = 0.05
-			conscription = 0.01
-			}
-		}
-			SRU_second_chance = {
-		
-		 	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
+		   removal_cost = -1
+		   
+		   modifier = {
+			command_power_gain_mult = -0.25
+			training_time_army_factor = 0.15
+			experience_gain_army_unit_factor = -0.05
+			experience_loss_factor = 0.1
 			army_org_factor = -0.05
-			army_morale_factor = -0.05
-			army_core_attack_factor = 0.1
-			army_core_defence_factor = 0.1
-			conscription = 0.01
-			hardline_socialism_drift = 0.01
-			totalitarian_socialism_drift = 0.01
-			moderate_socialism_drift = 0.01
+		   }
+
+	   }
+	   SRU_Resource_Economy = {
+		
+		allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+	   
+	   modifier = {
+		local_resources_factor = 0.25
+        production_oil_factor = 0.15
+        production_speed_buildings_factor = -0.15
+        industrial_capacity_factory = -0.1
+	   }
+
+   }
+   Democratic_Dissonance = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	political_power_factor = -0.25
+    drift_defence_factor = -0.15
+    stability_weekly = -0.002
+    BR_progressive_drift = 0.01
+    liberal_drift = 0.01
+   }
+}
+For_The_People_Of_Russia = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+	war_support_weekly = 0.002
+    conscription_factor = 0.15
+    army_morale_factor = 0.05
+    army_core_defence_factor = 0.1
+   }
+}
+
+Jacobin_Controlled_Cheka = {
+		
+	allowed = {
+	   always = no
+   }
+
+   allowed_civil_war = {
+	   always = yes
+   }
+
+   removal_cost = -1
+   
+   modifier = {
+   compliance_growth_on_our_occupied_states = 0.1
+   encryption_factor = 0.1
+   decryption_factor = 0.05
+   vanguardism_drift = 0.02
+   intelligence_agency_defense = 0.15
+   root_out_resistance_effectiveness_factor = 0.25
+   }
+}
+
+
+		#### STARTING IDEAS END ######
+
+
+		##### POLITICAL IDEAS START ######
+       
+		SRU_The_Peoples_Hearts = {
+		 
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+			
+			modifier = {
+			 stability_factor = 0.05
+			 war_support_factor = 0.1
 			}
 		}
-		SRU_their_small_help = {
+
+		SRU_The_Soldiers_Blood = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_infantry_defence_factor = 0.15
+			}
+
+		}
+
+		SRU_The_Workers_Toil = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		SRU_To_Grasp_The_Future = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+		 
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.02
+				army_morale_factor = 0.1
+				army_infantry_defence_factor = 0.15
+				stability_factor = 0.05
+			 	war_support_factor = 0.1
+			}
+		}
+
+
+
+		Politburo_War_Powers = {
 		
-		 	allowed = {
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			war_support_factor = 0.15
+            stability_factor = 0.1
+            drift_defence_factor = 0.25
+            resistance_activity = -0.15
+            trade_laws_cost_factor = -0.15
+            mobilization_laws_cost_factor = -0.15
+            economy_cost_factor = -0.15
+            head_of_government_cost_factor =-0.15
+			economy_minister_cost_factor =-0.15
+			foreign_minister_cost_factor =-0.15
+			minister_of_interior_cost_factor =-0.15
+			intelligence_cost_factor =-0.15
+		   }
+		}
+		
+		Limited_Opposition = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			political_power_factor = 0.05
+			drift_defence_factor = 0.05
+			stability_weekly = 0.05
+		   }
+		}
+		
+        Democratic_Opposition = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			political_power_factor = -0.05
+            drift_defence_factor = -0.10
+            stability_weekly = 0.05
+            BR_progressive_drift = 0.03
+            liberal_drift = 0.02
+			political_advisor_cost_factor = 0.1
+		   }
+		}
+
+		SRU_Support_The_State = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			stability_weekly = 0.0025
+		   }
+		}
+
+        SRU_Support_The_Party = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			socialist_drift = 0.02
+            political_power_factor = 0.05
+		   }
+		}
+
+		Apolitical_Education_Focus = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			research_speed_factor = 0.02
+            stability_weekly = 0.002
+            political_power_factor = -0.02
+		   }
+		}
+
+		Socialist_Education_Focus = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			war_support_weekly = 0.005
+            conscription_factor = 0.02
+            political_power_factor = 0.02
+
+		   }
+		}
+
+        Ministry_Of_Welfare = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			monthly_population = 0.02
+            stability_factor = 0.05
+            compliance_growth_on_our_occupied_states = 0.05
+		   }
+		}
+
+        Purged_Cheka = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			resistance_activity = 0.05
+			resistance_growth_on_our_occupied_states = 0.02
+			encryption_factor = -0.02
+			intelligence_agency_defense = -0.05
+		 }
+		}
+
+		SRU_Leonovas_MGB = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			political_power_factor = 0.05
+			war_support_factor = 0.1
+			drift_defence_factor = 0.10
+			BR_revolutionary_drift = 0.02
+			party_popularity_stability_factor = 0.25
+		 }
+		}
+
+		Ivanovs_MGB = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			compliance_growth_on_our_occupied_states = 0.15
+            encryption_factor = 0.1
+            decryption_factor = 0.25
+            intelligence_agency_defense = 0.1
+			intel_network_gain_factor = 0.15
+			foreign_subversive_activites = 0.1
+			agency_upgrade_time = -0.1
+		 }
+		
+		 }
+		
+
+		 State_Militsiyas = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			required_garrison_factor = -0.1
+            stability_factor = 0.05
+            stability_weekly = 0.02
+            compliance_growth_on_our_occupied_states = 0.05
+		   }
+		 
+		}
+		
+		SRU_Idealists_Media_Plan = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			stability_weekly = -0.005	
+			war_support_weekly = 0.005
+		}
+		 
+		}
+
+        SRU_Pragmatists_Media_Plan = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			drift_defence_factor = 0.15
+			stability_weekly = 0.005
+				
+		}
+		 
+		}
+
+		SRU_expel_the_foreigners = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			production_factory_efficiency_gain_factor = -0.15
+			monthly_population = -100
+			war_support_factor = 0.15
+			consumer_goods_factor = -0.02
+		}
+		 
+		}
+
+		SRU_hire_the_foreigners = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			political_power_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.25
+			research_speed_factor = 0.02
+			stability_factor = 0.05
+
+		}
+		 
+		}
+
+		Ministry_of_Information = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			drift_defence_factor = 0.02
+            stability_factor = 0.05
+            political_power_factor = 0.05
+
+		}
+		 
+		}
+
+	
+		####### ECONOMIC IDEAS END ########
+
+
+			### 2 Year Industrialization Plan START ####
+
+	  
+		Imported_Construction_Equipment = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			production_speed_buildings_factor = 0.15
+			consumer_goods_factor = 0.05
+		}
+		 
+		}
+
+		Re_Purposed_Extraction_Machinery = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			industrial_capacity_factory = -0.15
+            local_resources_factor = -0.1
+		}
+		 
+		}
+
+	    Rapid_Industrialization = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			local_resources_factor = 0.05
+            production_speed_buildings_factor = 0.1
+            industrial_capacity_factory = 0.1
+            production_factory_efficiency_gain_factor = 0.1
+
+		}
+		 
+		}
+
+		Industrial_Production_Economy = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.15
+            production_factory_efficiency_gain_factor = 0.15
+            global_building_slots_factor = 0.1
+		}
+		 
+		}
+ 
+		### 2 Year Industrialization Plan END ####
+
+
+        ### Expand The Tomsk University START ####
+
+
+		Tomsk_University = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			research_speed_factor = 0.05
+		}
+		 
+		}
+
+		Public_Healthcare = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			monthly_population = 0.1
+		}
+		on_add = {
+			set_technology = {
+				SRU_tech_trickleback = 1
+				popup = no
+			}
+		}
+		on_remove = {
+				set_technology = {
+				SRU_tech_trickleback = 0
+				popup = no
+			}
+		}
+		}
+	
+
+        Siberian_Roads_Program = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			production_speed_infrastructure_factor = 0.15
+		}
+		 
+		}
+
+         ### Expand The Tomsk University FIN ####
+
+
+
+		 
+         ### Resource Export Plan START ####
+
+         Kazakh_Trade_Economy = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			local_resources_factor = 0.35
+			production_oil_factor = 0.20
+			production_speed_buildings_factor = -0.10
+			industrial_capacity_factory = -0.05
+		}
+		 
+		}
+
+		oil_and_gas_exports = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			min_export = 0.1
+			consumer_goods_factor = -0.05
+		}
+		 
+		}
+
+		rare_earth_resource_exports = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			min_export = 0.1
+			consumer_goods_factor = -0.05
+		}
+		 
+		}
+
+		industrial_tool_imports = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			production_speed_buildings_factor = 0.10
+			industrial_capacity_factory = 0.1
+		}
+		 
+		}
+
+		Export_Oriented_Economy = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			local_resources_factor = 0.40
+			production_oil_factor = 0.25
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.1
+		}
+		 
+		}
+
+		Asian_Resource_Export_Contracts = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			min_export = 0.2
+			consumer_goods_factor = -0.15
+		}
+		 
+		}
+
+		SRU_wartime_chinese_shipments = {
+
+			allowed = {
 				always = no
 			}
 
@@ -136,15 +823,2869 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				local_resources_factor = 0.10
+			}
+		}
+
+		SRU_extraditing_criminals = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+
+
+         ### Resource Export Plan FIN ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		######## ECONOMIC END #########
+
+
+
+
+        ###### MILATARY START #######
+		
+		   Partisan_Army_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		
 			
 			modifier = {
-				attrition = -0.1
-				unit_upkeep_attrition_factor = -0.1
+				experience_gain_army_factor = 0.05
+				training_time_factor = -0.1
+				max_dig_in_factor = 0.1
+				pocket_penalty = -0.15
+				experience_gain_army_unit_factor = 0.15
+			}
+	   }
+	
+
+	   Rocket_Propelled_Grenade = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			anti_tank_equipment = {
+				instant = yes
+				build_cost_ic = -0.25
+                soft_attack = 0.15
+                hard_attack = 0.15
+			}
+		}
+	}
+
+	Ambush_Strategies = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			anti_tank_equipment = {
+				instant = yes
+				build_cost_ic = -0.20
+                soft_attack = 0.1
+                hard_attack = 0.1
+			}
+			infantry_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                defence = 0.15
+			}
+		}
+	}
+        SRU_Fast_Raiding_Jeeps = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			armored_car_equipment = {
+			instant = yes
+            maximum_speed = 0.25
+            breakthrough = 0.15
+            soft_attack = 0.1
+			}
+		}
+	   }
+
+	   SRU_Jump_Start_Jeep_Production = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			armored_car_equipment = {
+			instant = yes
+            build_cost_ic = -0.2
+			}
+		}
+	   }
+	   SRU_Strike_And_Disperse_Doctrine = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+
+		}
+		equipment_bonus = {
+			
+			motorized_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption_factor = -0.1 
+			}
+			armored_car_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption_factor = -0.1
+			}
+        }
+	}
+	Asymmetrical_Warfare_Plan = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+			experience_gain_army_factor = 0.1
+            training_time_factor = -0.15
+            max_dig_in_factor = 0.15
+            pocket_penalty = -0.25
+            experience_gain_army_unit_factor = 0.20
+            army_speed_factor = 0.1
+		}
+
+		equipment_bonus = {
+			
+			motorized_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption_factor = -0.1 
+			}
+			armored_car_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                maximum_speed = 0.15
+                supply_consumption_factor = -0.1
+			}
+			anti_tank_equipment = {
+				instant = yes
+				build_cost_ic = -0.25
+                soft_attack = 0.15
+                hard_attack = 0.15
+			}
+			infantry_equipment = {
+				instant = yes
+				breakthrough = 0.1
+                defense = 0.1
+			}
+        }
+	
+}
+   SRU_cleaning_up_knightmare_production = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+
+			knightmare_pol = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+		
+			knightmare_all_pur = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_artillery = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_fortress = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_mass_prod = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+			}
+
+			knightmare_melee = {
+				instant = yes
+				build_cost_ic = -0.05
+				reliability = -0.2
+       }
+	}
+}
+SRU_Red_Army_Plans= {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		modifier = {
+			experience_gain_army_factor = 0.1
+            training_time_factor = 0.1
+            army_org_factor = 0.1
+		}
+   }
+   SRU_Emergency_Truck_Procurment = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				build_cost_ic = -0.15
+			}
+		}
+	}
+
+	SRU_Red_Rockets_Glare = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		equipment_bonus = {
+			rocket_artillery_equipment = {
+				instant = yes
+				breakthrough = 0.15
+                defense = 0.15
+                soft_attack = 0.15
+			}
+		}
+	   }
+	
+   
+   
+	   SRU_Tank_Production_Drive = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			cold_war_tank_equip = {
+			instant = yes
+			build_cost_ic = -0.25
+		   }
+
+		}
+   }
+   SRU_Improved_T_70s = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		equipment_bonus = {
+			cold_war_tank_equip = {
+			instant = yes
+			soft_attack = 0.05
+            hard_attack = 0.15
+            ap_attack = 0.1
+            max_strength = 0.1
+            reliability = 0.1
+		 }
+		}
+   }
+   Red_Army_Foundations = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.20
+				training_time_factor = 0.15
+				land_reinforce_rate = 0.15
+				command_power_gain_mult = 0.15
+				army_org_factor = 0.15
+			}
+	   }
+
+#Military phase 2 Sonya#
+
+Red_Army_Quantity_Plan = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			experience_gain_army_factor = 0.20
+			training_time_factor = 0.15
+			land_reinforce_rate = 0.15
+			command_power_gain_mult = 0.15
+			army_org_factor = 0.15
+			max_planning_factor = 0.1
+		}
+   }
+   Red_Army_Quantity_Plan_2 = {
+
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		experience_gain_army_factor = 0.20
+		land_reinforce_rate = 0.15
+		command_power_gain_mult = 0.15
+		army_org_factor = 0.15
+		max_planning_factor = 0.1
+		conscription_factor = 0.02
+	}
+}
+Red_Army_Quantity_Plan_3 = {
+
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		experience_gain_army_factor = 0.20
+		land_reinforce_rate = 0.15
+		command_power_gain_mult = 0.15
+		army_org_factor = 0.15
+		max_planning_factor = 0.1
+		conscription_factor = 0.1
+		experience_loss_factor = -0.05
+
+	}
+}
+T70_Mass_Production= {
+	equipment_bonus = {
+		cold_war_tank_equip = {
+			build_cost_ic = -0.25
+			reliability = -0.1
+			instant = yes
+		}
+	}
+	}
+Motorization_Push = {
+equipment_bonus = {
+	motorized_equipment = {
+		build_cost_ic = -0.3
+		reliability = -0.1
+		instant = yes
+	}
+}
+}
+Symphony_Of_Rocket_Artillery = {
+	equipment_bonus = {
+		rocket_artillery_equipment = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+			breakthrough = 0.05
+			build_cost_ic = -0.1
+			instant = yes
+		} 
+	}
+}
+Anti_Tank_Launchers = {
+	equipment_bonus = {
+		infantry_equipment = {
+			ap_attack = 0.25
+			hard_attack =  0.15
+			breakthrough = 0.05
+			instant = yes
+		}
+	}
+}
+Overwhelming_Firepower_Doctrine = {
+	modifier = {
+		army_artillery_attack_factor = 0.25
+		army_armor_attack_factor = 0.05
+	}
+}
+The_Inumerable_Red_Army ={
+	modifier = {
+		experience_gain_army_factor = 0.25
+		land_reinforce_rate = 0.20
+		command_power_gain_mult = 0.20
+		army_org_factor = 0.15
+		max_planning_factor = 0.1
+		conscription_factor = 0.15
+		experience_loss_factor = -0.1
+		army_artillery_attack_factor = 0.25
+		army_armor_attack_factor = 0.12
+
+	}
+}
+Red_Army_Quality_Plan = {
+
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		experience_gain_army_factor = 0.25	
+		training_time_factor = 0.15
+		land_reinforce_rate = 0.15
+		command_power_gain_mult = 0.15
+		max_command_power_mult = 0.1
+		army_org_factor = 0.15
+		max_planning_factor = 0.15
+	}
+}
+Red_Army_Quality_Plan_2 = {
+
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		experience_gain_army_factor = 0.35	
+		training_time_factor = 0.15
+		land_reinforce_rate = 0.15
+		command_power_gain_mult = 0.15
+		max_command_power_mult = 0.1
+		army_org_factor = 0.15
+		max_planning_factor = 0.15
+		army_org_regain = 0.05
+		max_training = 0.05
+	}
+}
+Red_Army_Quality_Plan_3 = {
+
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		experience_gain_army_factor = 0.45	
+		training_time_factor = 0.15
+		land_reinforce_rate = 0.15
+		command_power_gain_mult = 0.15
+		max_command_power_mult = 0.1
+		army_org_factor = 0.15
+		max_planning_factor = 0.15
+		army_org_regain = 0.1
+		max_training = 0.08
+	}
+}
+
+Modified_Knightmare_Simulations = {
+	modifier = {
+		experience_gain_army = 0.25
+	}
+	research_bonus = {
+		knightmare_all = 0.25
+	}
+}
+
+
+#### Milatary end #############
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	     SRU_tankovyy_desent = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			
+            equipment_bonus = {
+				cold_war_tank_equip = {
+					instant = yes
+			defense = 0.05
+				}
+			}
+			
+	   }
+
+	   	   SRU_danger_close = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+				}
+			}
+	   }
+	   SRU_through_blood_and_iron = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+            modifier = {
+				war_support_weekly = 0.2
+				recruitable_population_factor = 0.1
+
+			}
+	   }
+
+	   SRU_the_politburo = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+	   		}
+   		}
+
+		SRU_Cheka = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				non_core_manpower = 0.1
+	   		}
+   		}
+
+		SRU_Socialist_Agents = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.1
+				enemy_operative_detection_chance_factor = 0.1
+	   		}
+   		}
+
+		SRU_Socialist_Agents_1 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.1
+				enemy_operative_detection_chance_factor = 0.1
+				intelligence_agency_defense = 0.1
+	   		}
+   		}
+
+		SRU_Secure_The_State = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				revisionist_socialism_drift = 0.01
+				intelligence_agency_defense = 0.1
+	   		}
+   		}
+
+		SRU_Peoples_Congress = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+	   		}
+   		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		####LUKA IDEAS FROM NOW ON!!!!!!!####
+
+		#### LUKA'S MILITARY IDEAS PHASE 1 #####
+
+		SRU_An_Independent_Military = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_org = 10
+	   		}
+   		}
+
+		SRU_Political_Loyalty = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = -0.5
+				army_attack_factor = -0.1
+	   		}
+   		}
+
+		SRU_Rapid_Modernisation_Of_The_Airforce = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				category_cas = {
+					instant = yes
+					air_attack = 0.15
+				}
+			}
+   		}
+
+		SRU_Punch_Harder = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 500
+				political_power_gain_factor = -0.1
+	   		}
+			   equipment_bonus = {
+					motorized_equipment = {
+						instant = yes
+						hard_attack = 0.1
+					}
+					mechanized_equipment = {
+						hard_attack = 0.1
+					}
+				}
+   		}
+
+		SRU_Red_Blitz = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
+				mechanized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
+			}
+   		}
+
+		   SRU_an_invincible_army = { ##Modify this to be different later
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
+				mechanized_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					soft_attack = 0.1
+					ap_attack = 0.1
+					defense = 0.15
+				}
+			}
+   		}
+
+		##Bombs Away Idea
+
+		##Red Thunder Idea
+
+		SRU_skies_of_crimson = {
+			
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				air_agility_factor = 0.2
+				ground_attack_factor = 0.1
+	   		}
+		}
+
+		SRU_enforced_martial_law = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.15
+				compliance_gain = 0.05
+	   		}
+   		}
+
+		SRU_Purge_Resistance_Fighters = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				resistance_growth_on_our_occupied_states = 0.25
+				compliance_gain = 0.25
+	   		}
+   		}
+
+		SRU_Rely_On_Cheka = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.25
+				enemy_operative_detection_chance_factor = 0.2
+	   		}
+   		}
+
+		SRU_Strike_The_Leader = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = EUR
+				stability_factor = -0.4
+				war_support_factor = -0.4
+			}
+   		}
+
+		   SRU_operation_red_awakening = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = EUR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+   		}
+
+		#### LUKA'S ECONOMIC IDEAS PHASE 1 #####
+
+		SRU_Zaytsev_Vision = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+	   		}
+   		}
+
+		SRU_Zaytsev_Vision_2 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.05
+	   		}
+   		}
+
+		SRU_The_War_Machine = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.1
+	   		}
+   		}
+		
+		SRU_The_War_Machine1 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.1
+	   		}
+			equipment_bonus = {
+				fighter = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_cas = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_tac_bomber = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_multirole = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+			}
+   		}
+
+		SRU_The_War_Machine2 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.25
+	   		}
+			equipment_bonus = {
+				category_multirole = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_cas = {
+			
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_tac_bomber = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_heavy_fighter = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				
+			}
+   		}
+
+		SRU_The_War_Machine3 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.25
+	   		}
+			equipment_bonus = {
+				category_multirole = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_cas = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_tac_bomber = {
+	
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_heavy_fighter = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+   		}
+
+		SRU_The_War_Machine4 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.25
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				line_change_production_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+	   		}
+			equipment_bonus = {
+				    category_multirole = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_cas = {
+		
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_tac_bomber = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+				category_heavy_fighter = {
+					
+					instant = yes
+					reliability = 0.15
+					air_attack_factor = 0.1
+				}
+			
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				category_all_infantry = {
+					instant = yes
+					reliability = -0.1
+					combat_width = -0.1
+				}
+			}
+   		}
+
+		SRU_The_War_Machine5 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				mobilization_speed = 0.3
+				production_speed_buildings_factor = 0.25
+				production_factory_max_efficiency_factor = 0.4
+				production_factory_efficiency_gain_factor = 0.2
+				line_change_production_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+	   		}
+			equipment_bonus = {
+				category_multirole = {
+		
+					instant = yes
+					reliability = 0.15
+				}
+				category_multirole = {
+					instant = yes
+					reliability = 0.15
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				category_all_infantry = {
+					instant = yes
+					reliability = -0.1
+					combat_width = -0.1
+				}
+			}
+   		}
+
+		SRU_Implement_A_Forced_Labour_Program = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				mobilization_speed = 0.1
+	   		}
+   		}
+
+		SRU_Penal_Battallions_In_The_Army = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				mobilization_speed = 0.1
+				weekly_manpower = 500
+	   		}
+   		}
+
+		SRU_Establish_The_Gulag = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				mobilization_speed = 0.1
+				weekly_manpower = 2500
+	   		}
+   		}
+
+		SRU_The_Economic_Heart = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+	   		}
+   		}
+		
+		SRU_The_Economic_Heart1 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				mobilization_speed = 0.1
+	   		}
+   		}
+
+		SRU_The_Economic_Heart2 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.15
+	   		}
+   		}
+
+		SRU_The_Economic_Heart3 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+	   		}
+   		}
+
+		SRU_The_Economic_Heart4 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				mobilization_speed = 0.1
+				production_speed_buildings_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				consumer_goods_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.4
+	   		}
+   		}
+
+		SRU_Zaytsev_Economic_Miracle = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+			allowed_civil_war = {
+		   		always = yes
+	   		}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.25
+				war_support_factor = 0.1
+	   		}
+   		}
+
+		#### LUKA'S POLITICAL IDEAS PHASE 1 #####
+
+		SRU_russian_jacobin_council = {
+		
+			modifier = {
+				army_attack_factor = 0.1
+				command_power_gain_mult = 0.1
+				political_power_gain_factor = 0.1
+			}
+		
+		}
+		
+		SRU_the_eternal_revolution = {
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		SRU_trade_unions_reined_in = {
+
+			removal_cost = -1
+
+			modifier = {
+				BR_socialism_drift = -0.02
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		SRU_isolate_the_liberals = {
+
+			removal_cost = -1
+
+			modifier = {
+				liberalism_drift = -0.02
+				political_power_gain = 0.1
+			}
+		}
+		
+		SRU_opposition_purged = {
+		
+			allowed = {
+			   always = no
+		   }
+		
+		   allowed_civil_war = {
+			   always = yes
+		   }
+		
+		   removal_cost = -1
+		   
+		   modifier = {
+			vanguardism_drift = 0.02
+			war_support_weekly = 0.02
+		   }
+		}
+		SRU_dystopian_propaganda = {
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		SRU_red_terror = {
+
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+		SRU_cheka_lists = {
+
+			removal_cost = -1
+
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.15
+				operative_slot = 1
+			}
+		}
+		SRU_luka_new_order = {
+
+			removal_cost = -1
+
+			modifier = {
+				vanguardism_drift = 0.02
+				add_stability = 0.2
+				add_war_support = 0.1
+			}
+		}
+
+		SRU_concessions_to_congress = {
+
+			removal_cost = 1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = 0.25
+			}
+		}
+		SRU_intraparty_cooperation = {
+
+			removal_cost = 1
+
+			modifier = {
+				political_power_gain = -0.1
+				war_support_weekly = 0.02
+			}
+		}
+		SRU_backed_out = {
+
+			removal_cost = 1
+
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+		SRU_great_russian_lie = {
+
+			removal_cost = 1
+
+			modifier = {
+				recruitable_population_factor = 0.15
+				offensive_war_stability_factor = 0.3
+			}
+		}
+		SRU_war_measures_act = {
+
+			removal_cost = 1
+
+			modifier = {
+				recruitable_population_factor = 0.1
+				mobilization_speed = 0.2
+				consumer_goods_factor = -0.15
+			}
+		}
+		SRU_revolutionary_zealotry = {
+		
+			modifier = {
+				army_attack_factor = 0.1
+				command_power_gain_mult = 0.1
+				soft_attack = 0.5
+			}
+		
+		}
+
+		#### LUKA'S IDEAS PHASE 2 #####
+
+		SRU_Ashes_Of_The_East = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		### LUKAS ECONOMY IDEAS PHASE 2 ###
+
+		SRU_siberian_rejuvination_project = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		SRU_novosibirsk_research = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.08
+			}
+		}
+
+		SRU_wiping_poverty = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		SRU_reconstruct_the_east = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		SRU_industrial_heartland = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SRU_the_industrial_automation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+
+		SRU_expanding_the_ports = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		SRU_industrialise_northern_wastes = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SRU_russian_rejuvination = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.25
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+
+		### LUKAS CHINESE IDEAS PHASE 2 ###
+
+		SRU_chinese_recognition = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				trade_opinion_factor = 1
+			}
+		}
+
+		SRU_chinese_companies = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				
+			}
+		}
+
+		SRU_okhotsk_route = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.30
+			}
+		}
+
+		SRU_visit_to_haishenwai = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				BR_socialism_drift = 0.5
+			}
+		}
+
+		### LUKAS POLITICAL IDEAS PHASE 2 ###
+
+		SRU_government_power_struggle = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.06
+				political_power_factor = -0.15
+				war_support_weekly = -0.02
+			}
+		}
+
+		SRU_prioritising_cheka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.04
+			}
+		}
+
+		SRU_integrating_the_apparatchiks = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.04
+			}
+		}
+
+		SRU_fanaticism_embraced = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 1000
+				war_support_weekly = -0.02
+			}
+		}
+
+		SRU_assimilating_the_nomenklatura = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_weekly = -0.04
+			}
+		}
+
+		# Kulikova
+
+		SRU_emboldened_cheka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.1
+				war_support_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		SRU_repressed_academia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.25
+				party_popularity_stability_factor = 0.15
+				research_speed_factor = -0.05
+			}
+		}
+
+		SRU_powerful_cheka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.1
+				war_support_factor = -0.1
+				stability_factor = 0.1
+			}
+		}
+
+		SRU_dominant_cheka = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.25
+				war_support_factor = -0.1
+				stability_factor = 0.15
+			}
+		}
+
+		# Sorokina
+
+		SRU_emboldened_revolutionary_guards = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		SRU_fight_against_bourgeois_culture = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.20
+				stability_weekly_factor = -0.1
+				war_support_weekly = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+
+		SRU_powerful_revolutionary_guards = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				drift_defence_factor = 0.15
+				war_support_factor = 0.1
+			}
+		}
+
+		SRU_fanatic_revolutionary_guards = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				drift_defence_factor = 0.25
+				war_support_factor = 0.15
+			}
+		}
+
+		# Zatysev
+
+		SRU_emboldened_gosplan = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods = 0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+
+		SRU_controlled_academia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				research_speed_factor = 0.05
+			}
+		}
+
+		SRU_powerful_gosplan = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods = 0.1
+				production_speed_buildings_factor = 0.10
+				local_resources_factor = 0.10
+			}
+		}
+
+		SRU_dominant_gosplan = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods = 0.15
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.15
+			}
+		}
+
+		### LUKAS MILITARY PATH IDEAS PHASE 2 ###
+
+		SRU_ghost_signal = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		SRU_crimson_mountain_message = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		# Makarov
+
+		SRU_land_war_path = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = 0.05
+			}
+		}
+
+		SRU_the_red_wave = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		SRU_military_drafting = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				recruitable_population_factor = 0.04
+			}
+		}
+
+		SRU_bloody_airforce = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_attack_factor = 0.1
+				air_org_factor = 0.05
+				air_defence_factor = 0.04
+			}
+		}
+
+		SRU_operation_wonderland1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.15
+				army_defence_factor = 0.1
+				recruitable_population_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		# Kovalev
+
+		SRU_discontent_in_the_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+
+		SRU_kovalevs_command = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				command_power_gain_mult = 0.15
+				land_reinforce_rate = 0.1
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		SRU_red_army_training = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.25
+				minimum_training_level = 0.10
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		SRU_modern_red_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.25
+				minimum_training_level = 0.10
+				experience_gain_factor = 0.1
+				army_org_regain = 0.1
+				army_morale_factor = 0.15
+				breakthrough_factor = 0.2
+				command_power_gain_mult = 0.15
+				land_reinforce_rate = 0.1
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		SRU_layered_battle_theory_1 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mbt_1 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_2 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_3 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+			}
+		}
+
+		SRU_layered_battle_theory_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_artillery_attack_factor = 0.15
+				army_artillery_breakthrough_factor = 0.2
+				army_infantry_defence_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mbt_1 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_2 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+	
+				mbt_3 = {
+					breakthrough = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+				}
+
+				sp_artillery_1 = {
+					breakthrough = 0.2
+				}
+
+				sp_artillery_2 = {
+					breakthrough = 0.2
+				}
+
+				sp_artillery_3 = {
+					breakthrough = 0.2
+				}
+			}
+		}
+
+		#Luka Takes Personal Command
+
+		SRU_enhanced_soldier_initiative = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.3
+				army_infantry_defence_factor = 0.15
+			}
+		}
+
+		SRU_lessons_from_the_revolution = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_morale_factor = 0.15
+			}
+		}
+
+		SRU_victory_no_matter_the_cost = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_speed_factor = 0.15
+			}
+		}
+
+		SRU_an_immortal_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.3
+				army_infantry_defence_factor = 0.15
+				supply_consumption_factor = -0.1
+				army_morale_factor = 0.15
+				army_infantry_attack_factor = 0.1
+				army_speed_factor = 0.15
+				army_org_factor = 0.15
+				breakthrough_factor = 0.1
+			}
+		}
+
+		### LUKAS END OF PATH PHASE 2 IDEAS ###
+
+		SRU_lukas_russia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				subjects_autonomy_gain = -2
+			}
+		}
+
+		SRU_russian_sabotage = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.3
+				weekly_manpower = -1000
+				production_speed_buildings_factor = -0.25
+				political_power_gain = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+
+		SRU_new_administration = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+		}
+
+		SRU_reeducating_the_populace = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = -500
+			}
+		}
+
+		SRU_policy_of_social_idealism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		SRU_chinese_support = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		SRU_great_march_forward = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
 				weekly_manpower = 250
 			}
+
+			equipment_bonus = {
+
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.05
+				}
+	
+			}
 		}
-		EUR_sabotage =	{	
-		 	allowed = {
+
+		SRU_hearted_state = {
+			allowed = {
 				always = no
 			}
 
@@ -153,18 +3694,486 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
-			production_speed_infrastructure_factor = -0.1
-			industry_repair_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
 			}
+		}
+
+		SRU_old_out_in_new = {
+			allowed = {
+				always = no
 			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = 750
+				army_infantry_attack_factor = 0.1
+			}
+
+			equipment_bonus = {
+				
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+				}
+	
+			}
+
+		}
+
+		SRU_jacobin_russia = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				weekly_manpower = 1000
+				army_infantry_attack_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.20
+				local_resources_factor = 0.20
+				consumer_goods_factor = -0.1
+				stability_factor = 0.01
+				war_support_factor = 0.1
+				political_power_gain = 0.30
+				subjects_autonomy_gain = -2
+				trade_opinion_factor = 0.35
+				industrial_capacity_factory = 0.15
+			}
+
+			equipment_bonus = {
+				
+				infantry_equipment_0 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_1 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_2 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_3 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_4 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+
+				infantry_equipment_5 = {
+					breakthrough = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.05
+				}
+	
+			}
+
+		}
+
+	
+
+		
+
+		### END OF LUKAS IDEAS PHASE 2 ###
+
+
+
+
+		### SONYA'S IDEAS 2 PHASE ###
+
+		SRU_Economic_Cadres = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		SRU_Increased_Railway_Budget = {
+			modifier = {
+				production_speed_rail_way_factor = 0.35
+				production_speed_supply_node_factor = 0.15
+			}
+		}
+
+		SRU_Higway_Building_Focus = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.35
+			}
+		}
+
+		SRU_Private_Property_Abolished = {
+			modifier = {
+				global_building_slots_factor = 0.15
+				consumer_goods_factor = -0.03
+				stability_factor = -0.15
+			}
+		}
+
+		SRU_Cadre_Led_Communes = {
+			modifier = {
+				global_building_slots_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		SRU_Workers_Propaganda = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		SRU_Anti_Market_Campaign = {
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.1
+				weekly_manpower = -250
+			}
+		}
+
+		SRU_Market_Investigations = {
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_factor = -0.05
+			}
+		}
+
+		SRU_Communist_Economy = {
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = -0.05
+				war_support_factor = 0.1
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		SRU_Anti_Apathy_Campaigns = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		SRU_Socialisation_of_Education = {
+			modifier = {
+				research_speed_factor = 0.08
+				political_power_factor = 0.05
+			}
+		}
+
+		SRU_Communist_Education = {
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		
+		SRU_Increased_Quota = {
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.05
+			}
+		}
+
+		SRU_Accelerating_Plans = {
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.25
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1
+				political_power_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+
+		SRU_Utopian_Economic_Drive = {
+			modifier = {
+				industrial_capacity_factory = 0.25
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.25
+				war_support_factor = 0.1
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.1
+				research_speed_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		SRU_State_Enterprise_System = {
+			modifier = {
+				consumer_goods_factor = 0.02
+				line_change_production_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.02
+			}
+		}
+
+		SRU_Risky_Gosbank_Investments = {
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.01
+			}
+		}
+
+		SRU_Managerial_Autonomy = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.02
+				production_factory_max_efficiency_factor = 0.02
+			}
+		}
+
+		SRU_Decentralized_Managment = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		SRU_Profit_Incentive = {
+			modifier = {
+				consumer_goods_factor = 0.01
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		SRU_Deregulated_Pay_Levels = {
+			modifier = {
+				industrial_capacity_factory = 0.12
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		SRU_Pay_Incentive = {
+			modifier = {
+				industrial_capacity_factory = 0.08
+				consumer_goods_factor = 0.01
+			}
+		}
+
+		SRU_Leonova_Economic_Reforms = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		SRU_Capital_Investments = {
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				production_speed_industrial_complex_factor = 0.02
+			}
+		}
+
+		SRU_Technical_Universities = {
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		SRU_Scientific_and_Technical_Universities = {
+			modifier = {
+				research_speed_factor = 0.12
+			}
+			research_bonus = {
+				electronics = 0.05
+				industry =  0.05
+			}
+		}
+
+		SRU_Workers_Advisory_Boards = {
+			modifier = {
+				production_factory_start_efficiency_factor = 0.01
+				line_change_production_efficiency_factor = 0.02
+			}
+		}
+
+		SRU_Democratic_Advisory_Structure = {
+			modifier = {
+				production_factory_start_efficiency_factor = 0.02
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		SRU_Leonova_Economic_System = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.12
+				production_factory_start_efficiency_factor = 0.02
+				line_change_production_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.02
+				research_speed_factor = 0.12
+			}
+			research_bonus = {
+				electronics = 0.05
+				industry =  0.05
+			}
+		}
+
+		##### Sonya Phase 2 Politics
+
+		SRU_jacobin_remission = {
+			modifier = {
+				political_power_factor = -0.15
+     		    stability_factor = -0.1
+    		    war_support_factor = -0.05
+			}
+		}
+
+		SRU_mgb_emergency_powers = {
+			modifier = {
+				political_power_factor = 0.1
+      			stability_factor = 0.1
+      			war_support_factor = -0.05
+			}
+		}
+
+		SRU_revolutionary_tribunals = {
+			modifier = {
+				political_power_factor = 0.1
+       		 	stability_factor = -0.05
+        		war_support_factor = -0.1
+			}
+		}
+
+		### END OF SONYA'S IDEAS 2 PHASE ###
+
+
+	}# this is the end of the country scope DO NOT REMOVE OR CHANGE
+
+
+	
+
+
+	
+	#### DESIGNERS #####
+	
+	br_materiel_manufacturer = {
+		designer = yes
+		Tomsk_Electronics_Bureau = {
+			#picture =
+
+			allowed = {
+				original_tag = SRU
+				has_completed_focus = Tomsk_Electronics_Bureau
+			}
+		}
+	}
+
+	 br_materiel_manufacturer = {
+		designer = yes
+
+		Omsk_arms_complex = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+				has_completed_focus = Omsk_Arms_Complex
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				infantry_equipment_manufacturer
+			}
+
+		}
+
     }
-	
-	
-	
-		tank_manufacturer = {
+
+	br_tank_manufacturer = {
+		designer = yes
+
+		Omsk_Tank_complex = {
+			# picture = 
+
+			allowed = {
+				original_tag = SRU
+				has_completed_focus = Kemerovo_Tank_Factory
+			}
+
+			research_bonus = {
+				armor = 0.05
+			}
+
+			traits = {
+				fast_tank_manufacturer
+			}
+
+		}
+
+    }
+	br_tank_manufacturer = {
 		designer = yes
 
 		SOC_SIB_gen_tank_man = {
@@ -183,7 +4192,8 @@ ideas = {
 			}
 
 		}
-	}
+
+    }
 
 	industrial_concern = {
 		designer = yes
@@ -205,9 +4215,50 @@ ideas = {
 
 
 		}
+
+		SOC_Tomsk_Industrial_Zone = {
+			# picture = 
+
+			allowed ={
+				has_completed_focus = SRU_State_Production_Companies
+			} 
+			research_bonus = {
+				industry = 0.10
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+
+			traits = {
+				industrial_manufacturer
+			}
+
+
+		}
+
+		SOC_Novosibirsk_Technical_Institute = {
+			# picture = 
+
+			allowed ={
+				has_completed_focus = SRU_State_Production_Companies
+			} 
+			research_bonus = {
+				electronics = 0.10
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+			}
+
+			traits = {
+				electronics_concern
+			}
+		}
+		
 	}
 
-	materiel_manufacturer = {
+	br_materiel_manufacturer = {
 		designer = yes
 
 		SOC_SIB_gen_mater_man = {
@@ -218,7 +4269,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				infantry_equipment = 0.05
+				infantry_tech = 0.05
 			}
 
 			traits = {
@@ -227,7 +4278,7 @@ ideas = {
 		}
 	}
 
-	naval_manufacturer = {
+	br_naval_manufacturer = {
 		designer = yes
 
 		SOC_SIB_gen_naval_man = {
@@ -246,7 +4297,7 @@ ideas = {
 		}
 	}
 
-	aircraft_manufacturer = {
+	br_aircraft_manufacturer = {
 		designer = yes
 
 		SOC_SIB_gen_air_man = {
@@ -264,4 +4315,75 @@ ideas = {
 			}
 		}
 	}
+
+	industrial_concern = { 
+			
+		designer = yes
+		
+		SRU_State_Production_Company_Industrial = {
+			picture = arthur_the_generic
+			
+			allowed = {
+				original_tag = SRU
+			}
+	
+			
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+		
+						
+			traits = { industrial_manufacturer }
+			
+		}
+
+		SRU_State_Production_Company_Railway = {
+			picture = arthur_the_generic
+	
+			
+			allowed = {
+				original_tag = SRU
+			}
+	
+			available = {
+				has_completed_focus = SRU_State_Production_Companies
+			}
+			
+			research_bonus = {
+				train_tech = 0.1
+			}
+			
+		
+						
+			traits = { railway_company }
+			
+		}
+
+		SRU_State_Production_Company_Electorics = {
+			picture = arthur_the_generic
+	
+			
+			allowed = {
+				original_tag = SRU
+			}
+	
+			available = {
+				has_completed_focus = SRU_State_Production_Companies
+			}
+			
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+		
+						
+			traits = { electronics_concern }
+			
+		}
+	
+	}
+
 }
+

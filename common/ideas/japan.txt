@@ -609,7 +609,7 @@ ideas = {
 
 
 
-naval_manufacturer = { 
+br_naval_manufacturer = { 
 		
 	designer = yes
 	
@@ -623,7 +623,10 @@ naval_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			 OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+			}
 		}
 		
 		research_bonus = {
@@ -638,7 +641,7 @@ naval_manufacturer = {
 
 }
 
-materiel_manufacturer = { 
+br_materiel_manufacturer = { 
 		
 	designer = yes
 	
@@ -651,9 +654,11 @@ materiel_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
-		}
-		
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
+	    }
 		research_bonus = {
 			artillery = 0.10
 		}
@@ -666,7 +671,7 @@ materiel_manufacturer = {
 
 }
 
-aircraft_manufacturer = { 
+br_aircraft_manufacturer = { 
 		
 	designer = yes
 	
@@ -679,7 +684,10 @@ aircraft_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
@@ -706,7 +714,10 @@ industrial_concern = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
@@ -722,7 +733,7 @@ industrial_concern = {
 }
 
 
-tank_manufacturer = { 
+br_tank_manufacturer = { 
 		
 	designer = yes
 	
@@ -735,11 +746,14 @@ tank_manufacturer = {
 		}
 
 		available = {
-			has_idea = industrial_corporations
+			OR = {
+				has_idea = industrial_corporations
+				has_idea = industrial_corporations_2
+		    }
 		}
 		
 		research_bonus = {
-			sakuradite = 0.05
+			nuclear  = 0.05
 			armor = 0.10
 		}
 		

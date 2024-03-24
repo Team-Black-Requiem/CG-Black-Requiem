@@ -1,28 +1,20 @@
 ideologies = {
 	
-    ultra_nationalism = {
+    BR_supremacist = {
 		
 		types = {
 		
-			geass_cult = {
+			geass_cult = {   ##Britannia-Specific
 			}
-
-			
-			jupiter_cult = {			
-			}
-
 			integralism = {
 			}
-
-			ultra_spartanism = {
+			ultra_nationalism = {
 			}
-			
 			national_syndacalism = {
 			}
-
-			yamato_militarism = {
+			japanese_militarism = {  ##Japan-Specific
 			}
-			purist_aristocracy = {
+			purist_aristocracy = {   ##Britannia-Specific
 			}
 		}
 		
@@ -66,26 +58,24 @@ ideologies = {
 	}
 
 	
-	autocracy = {
+	BR_autocracy = {
 	
 		types = {
 		
 			paternal_autocracy = {
 			}
 			
-			absolute_monarchy = {
+			absolute_monarchy = {  
 			}
-            britannian_con = {
+			britannian_vic = { ##Britannia-Specific
 			}
-			imperial_cult = {
+			imperial_cult = {  ##Britannia-Specific (Lelouch)
 			}
-			yamato_statism = {
+			genbuism = {  ##Japan-Specific ##
 			}
-			spartanism = {
+			imperial_absolutism = {  ##
 			}
-			romano_brit = {
-			}
-			genbuism = {
+			military_autocracy = { ##
 			}
 		}
 
@@ -130,15 +120,29 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	authoritarian_democracy = {
+	BR_authoritarian = {
 	
 		types = {
 		
+			oligarchic_government = {  ##
+			}
 			military_dictatorship = {
 			}
-			oligarchic_government = {
+			transitional_regime = {  ##
 			}
-			jap_neo_feudalism = {
+			colonial_regime = {  ##
+			}
+			semi_constitutional_monarchy = {
+			}
+			authoritarian_sub = { ##
+			}
+			brit_aristocracy = {  ##Britannia-Specific
+			}
+
+			brit_reformism = {  ##Britannia-Specific (Schneizel)
+			}
+
+			one_party_democracy = { ##
 			}
 			
 		}
@@ -182,9 +186,68 @@ ideologies = {
 
 		ai_fascist = yes # 
 	}
+
+	BR_paternalism = {
+	
+		types = {
+		
+			pat_conservatism = {
+			}
+
+			aristocratic_paternalism = {
+			}
+
+		    britannian_con = { ##Britannia-Specific
+			}
+
+			conservative_one_party_democracy = {
+			}
+
+			
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+		
+		color = { 0 7 76 }
+		
+		
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_send_volunteers = no
+		}
+		
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.05
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.4
+			send_volunteers_tension = 0.4
+			guarantee_tension = 0.4
+			drift_defence_factor = -0.3	
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 10.0
+		}
+		
+		faction_modifiers = {
+		}
+
+		ai_fascist = yes # 
+	}
 	
 	
-	moderate_conservatism = {
+	BR_conservatism = {
 	
 		types = {
 		
@@ -192,6 +255,10 @@ ideologies = {
 			}
 
 			national_conservatism = {
+			}
+
+
+			liberal_conservatism = {
 			}
 			
 		}
@@ -236,7 +303,7 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	moderate_liberalism = {
+	BR_liberalism = {
 	
 		types = {
 		
@@ -246,9 +313,12 @@ ideologies = {
 			market_liberalism = {
 			}
 
-			
-			ancap = {
+			radical_liberalism = {
 			}
+
+			anarcho_capitalism = {
+			}
+
 			
 		}
 
@@ -260,7 +330,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 255 219 77 }
+		color = { 255 162 0 }
 		
 		
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -292,16 +362,15 @@ ideologies = {
 		ai_fascist = yes # 
 	}
 	
-	moderate_socialism = {
+	BR_progressive = {
 	
 		types = {
 			
 			social_democracy = {
 			}
-			
 			reformist_socialism = {
 			}
-			
+		
 		}
 
 		dynamic_faction_names = {
@@ -312,7 +381,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 204 0 102 }
+		color = { 233 58 58 } 
 		
 		
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -343,32 +412,22 @@ ideologies = {
 
 		ai_fascist = yes # 
 	}
-	
-	
-	hardline_socialism = {
+
+	BR_socialism = {
+
 		
 		types = {
 		
-			anarcho_pacifism = {
+			trade_unionism = {
 			}
-			
-			anarcho_communism = {
-			}
-			
-            left_libertarianism = {
-			}
-
 			agrarian_socialism = {
+			}		
+			social_monarchism = {
 			}
-
-			lincolnite_socialism = {
+			revisionist_communism = {
 			}
-
-			syndacalism = {
-			}
-
-			neo_menshevism = {
-			}
+			
+	
 		}
 		
 		dynamic_faction_names = {
@@ -379,7 +438,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_5"
 		}
 		
-		color = { 255 0 0 }
+		color = { 199 0 66 }
 		
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -410,26 +469,93 @@ ideologies = {
 
 	}
 	
-	totalitarian_socialism = {
+	
+	BR_revolutionary = {
+
 		
 		types = {
 		
-			molotovism = {
+			anarcho_pacifism = {  ##Done
+			}
+
+			anarcho_communism = { ##Done
+			}
+
+			revolutionary_front = { ##Done
 			}
 			
-			national_bolshevism = {
+            left_libertarianism = { ##Done
 			}
 
-			kalininism = {
+			utopian_communism = {
 			}
 
-			monarcho_bolshevism = {
+			syndacalism = {
 			}
 
-			illyrian_socialism = {
+			neo_menshevism = {   ##Russia-Specific
+			} 
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 164 26 26 }
+		
+		war_impact_on_world_tension = 0.75		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+		
+		ai_fascist = yes# uses the commie AI behaviour
+		
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+		generate_wargoal_tension = 0.05
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		
+		faction_modifiers = {
+			
+		}
+
+	}
+	
+	BR_vanguardist = {
+		
+		types = {
+		
+			technocratic_communism = {   ##Done
+			}
+			
+			national_bolshevism = {  ##Done
 			}
 
-			marxist_lincolnism = {
+			centralist_communism = {    
+			}
+
+			balkan_socialism = {   ##Yugoslavia-Specific ##Done
+			}
+
+			military_bolshevism = {  ##Done
+			}
+
+			revolutionary_jacobinism = {
 			}
 		}
 		

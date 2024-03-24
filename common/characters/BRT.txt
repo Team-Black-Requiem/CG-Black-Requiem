@@ -9,7 +9,7 @@ characters={
 		}
 		country_leader={
 		     desc = "POLITICS_CHARLES_BRTT_DESC"
-			ideology=britannian_con
+			ideology=absolute_monarchy
 			traits={ darwinist }
 			expire = "2020.1.1"
 			id=15
@@ -39,6 +39,19 @@ characters={
 			traits={ }
 			expire = "2020.1.1"
 			id=17
+		}
+	}
+
+	brt_reformists = {
+		name = "Unknown Leadership"
+		portraits={
+		}
+		country_leader={
+		     desc = "NULL"
+			ideology = britannian_con
+			traits={ }
+			expire = "2020.1.1"
+			id=16
 		}
 	}
 
@@ -87,7 +100,7 @@ characters={
 		}
 		country_leader={
 		     desc = "NULL"
-			ideology = lincolnite_socialism
+			ideology = trade_unionism
 			traits={ }
 			expire = "2020.1.1"
 			id=20
@@ -100,7 +113,7 @@ characters={
 		}
 		country_leader={
 		     desc = "NULL"
-			ideology = marxist_lincolnism
+			ideology = military_bolshevism
 			traits={ }
 			expire = "2020.1.1"
 			id=21
@@ -426,7 +439,7 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				autocracy_guy iron_fist
 			}
@@ -453,7 +466,7 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				autocracy_guy mediocre_prince
 			}
@@ -480,9 +493,9 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				conservative_guy white_prince
+				paternalist_guy white_prince
 			}
 		}
 	}
@@ -507,7 +520,7 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				nationalist_guy marie_antoniette
 			}
@@ -534,9 +547,9 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				oligarchy_guy corrupt_kleptocrat
+				authoritarian_guy corrupt_kleptocrat
 			}
 		}
 	}
@@ -561,9 +574,9 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				oligarchy_guy purist_simpaty
+				authoritarian_guy purist_simpaty
 			}
 		}
 	}
@@ -593,7 +606,7 @@ characters={
 			    }
 				original_tag  = BRT
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 		}
 	}
 }

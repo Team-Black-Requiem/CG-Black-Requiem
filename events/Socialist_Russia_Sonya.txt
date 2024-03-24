@@ -1,0 +1,532 @@
+﻿add_namespace = SRU_Sonya_Phase_One
+add_namespace = SRU_Sonya_Socialist_Flavour
+
+country_event = { #March of the Revolution
+	id = SRU_Sonya_Phase_One.1
+	title = SRU_Sonya_Phase_One.1.t
+	desc = SRU_Sonya_Phase_One.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.1.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Politburo War Powers Enactment
+	id = SRU_Sonya_Phase_One.2
+	title = SRU_Sonya_Phase_One.2.t
+	desc = SRU_Sonya_Phase_One.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.2.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Establishing the Peoples Congress
+	id = SRU_Sonya_Phase_One.3
+	title = SRU_Sonya_Phase_One.3.t
+	desc = SRU_Sonya_Phase_One.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.3.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = Minority_Seat_Elections
+    } 
+	option = {
+		name = SRU_Sonya_Phase_One.3.b 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = Full_Congress_Elections
+    } 
+}
+
+country_event = { #Minority Seat Elections
+	id = SRU_Sonya_Phase_One.4
+	title = SRU_Sonya_Phase_One.4.t
+	desc = SRU_Sonya_Phase_One.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Sonya_Phase_One.4.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Full Congress Elections
+	id = SRU_Sonya_Phase_One.5
+	title = SRU_Sonya_Phase_One.5.t
+	desc = SRU_Sonya_Phase_One.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Sonya_Phase_One.5.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #The_Party_Or_The_State?
+	id = SRU_Sonya_Phase_One.6
+	title = SRU_Sonya_Phase_One.6.t
+	desc = SRU_Sonya_Phase_One.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.6.a 
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SRU_Support_The_State
+			days = 180
+		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+    } 
+	option = {
+		name = SRU_Sonya_Phase_One.6.b
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 50
+		add_timed_idea = {
+			idea = SRU_Support_The_Party
+			days = 180
+		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+    } 
+}
+
+country_event = { #Removing Jacobin Chekists
+	id = SRU_Sonya_Phase_One.7
+	title = SRU_Sonya_Phase_One.7.t
+	desc = SRU_Sonya_Phase_One.7.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.7.a 
+		ai_chance = {
+			base = 100
+		}
+	 swap_ideas = {
+		remove_idea = Jacobin_Controlled_Cheka
+		add_idea = Purged_Cheka
+	 }
+	}
+
+}
+
+country_event = { #The power of the media
+	id = SRU_Sonya_Phase_One.8
+	title = SRU_Sonya_Phase_One.8.t
+	desc = SRU_Sonya_Phase_One.8.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.8.a 
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -100
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_timed_idea = {
+			idea = SRU_Idealists_Media_Plan
+			days = 180
+		}
+	}
+
+	option = {
+		name = SRU_Sonya_Phase_One.8.b
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_timed_idea = {
+			idea = SRU_Pragmatists_Media_Plan
+			days = 180
+		}
+	}
+}
+
+country_event = {
+	id = SRU_Sonya_Phase_One.9
+	title = SRU_Sonya_Phase_One.9.t
+	desc = SRU_Sonya_Phase_One.9.d
+    is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.9.a
+        ai_chance = {
+			base = 100
+		}
+		add_political_power = -100
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_timed_idea = {
+			idea = Apolitical_Education_Focus
+			days = 200
+		}
+	}
+	option = {
+		name = SRU_Sonya_Phase_One.9.b
+        ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = 1
+		}
+		add_timed_idea = {
+			idea = Socialist_Education_Focus
+			days = 200
+		}
+	}
+}
+
+country_event = { #Chairwoman Ivanova
+	id = SRU_Sonya_Phase_One.10
+	title = SRU_Sonya_Phase_One.10.t
+	desc = SRU_Sonya_Phase_One.10.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.10.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #Chairman Ivanov
+	id = SRU_Sonya_Phase_One.11
+	title = SRU_Sonya_Phase_One.11.t
+	desc = SRU_Sonya_Phase_One.11.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.11.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #foreigners Loyalties
+	id = SRU_Sonya_Phase_One.12
+	title = SRU_Sonya_Phase_One.12.t
+	desc = SRU_Sonya_Phase_One.12.d
+    is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.12.a
+        ai_chance = {
+			base = 100
+		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_timed_idea = {
+			idea = SRU_expel_the_foreigners
+			days = 180
+		}
+		
+	}
+	option = {
+		name = SRU_Sonya_Phase_One.12.b
+        ai_chance = {
+			base = 100
+		}
+		modify_country_flag = {
+			flag = SRU_idealist_pragmatist_balance
+			value = -1
+		}
+		add_timed_idea = {
+			idea = SRU_hire_the_foreigners
+			days = 180
+		}
+	}
+}
+
+country_event = { #Groundwork Of The Revolution
+	id = SRU_Sonya_Phase_One.13
+	title = SRU_Sonya_Phase_One.13.t
+	desc = SRU_Sonya_Phase_One.13.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.13.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+######### Economic Planning Phase 1 #########
+#########                           #########
+
+country_event = { #Siberian Economics Matters
+	id = SRU_Sonya_Phase_One.14
+	title = SRU_Sonya_Phase_One.14.t
+	desc = SRU_Sonya_Phase_One.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Sonya_Phase_One.14.a 
+		ai_chance = {
+			base = 100
+		}
+		complete_national_focus = Two_Year_Industrialization_Plan
+    } 
+	option = {
+		name = SRU_Sonya_Phase_One.14.b
+		ai_chance = {
+			base = 100
+		}
+		complete_national_focus = Resource_Export_Plan
+    } 
+}
+
+country_event = { #Two year industrialization plan
+	id = SRU_Sonya_Phase_One.15
+	title = SRU_Sonya_Phase_One.15.t
+	desc = SRU_Sonya_Phase_One.15.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.15.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #Resource_Export_Plan
+	id = SRU_Sonya_Phase_One.16
+	title = SRU_Sonya_Phase_One.16.t
+	desc = SRU_Sonya_Phase_One.16.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.16.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #Long Road To Communism
+	id = SRU_Sonya_Phase_One.17
+	title = SRU_Sonya_Phase_One.17.t
+	desc = SRU_Sonya_Phase_One.17.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.17.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+######### Military Planning Phase 1 #########
+#########                           #########
+
+country_event = { #Failures of the Great Peoples War
+	id = SRU_Sonya_Phase_One.18
+	title = SRU_Sonya_Phase_One.18.t
+	desc = SRU_Sonya_Phase_One.18.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_One.18.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_partisans_army_plan
+	}
+
+	option = {		 
+		name = SRU_Sonya_Phase_One.18.b 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_military_council_army_plan		
+	}
+}
+
+country_event = { #The Partisans Ideas
+	id = SRU_Sonya_Phase_One.19
+	title = SRU_Sonya_Phase_One.19.t
+	desc = SRU_Sonya_Phase_One.19.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.19.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #Military Council plan
+	id = SRU_Sonya_Phase_One.20
+	title = SRU_Sonya_Phase_One.20.t
+	desc = SRU_Sonya_Phase_One.20.d
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Sonya_Phase_One.20.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #The Knightmare Problem
+	id = SRU_Sonya_Phase_One.21
+	title = SRU_Sonya_Phase_One.21.t
+	desc = SRU_Sonya_Phase_One.21.d
+
+	is_triggered_only = yes
+    	
+	option = {		 
+		name = SRU_Sonya_Phase_One.21.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #Raiding Their Depots
+	id = SRU_Sonya_Phase_One.22
+	title = SRU_Sonya_Phase_One.22.t
+	desc = SRU_Sonya_Phase_One.22.d
+	is_triggered_only = yes
+    
+	option = {		 
+		name = SRU_Sonya_Phase_One.22.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #Fielding The Vanguard Brigade
+	id = SRU_Sonya_Phase_One.23
+	title = SRU_Sonya_Phase_One.23.t
+	desc = SRU_Sonya_Phase_One.23.d
+	is_triggered_only = yes
+    
+	option = {		 
+		name = SRU_Sonya_Phase_One.23.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #Push Out The Invaders
+	id = SRU_Sonya_Phase_One.24
+	title = SRU_Sonya_Phase_One.24.t
+	desc = SRU_Sonya_Phase_One.24.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_One.24.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+#########  Phase 1 Flavour Events   #########
+#########                           #########
+
+country_event = { #Expanding Tomsk University
+	id = SRU_Sonya_Socialist_Flavour.1
+	title = SRU_Sonya_Socialist_Flavour.1.t
+	desc = SRU_Sonya_Socialist_Flavour.1.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Socialist_Flavour.1.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #Opening Public Hospitals
+	id = SRU_Sonya_Socialist_Flavour.2
+	title = SRU_Sonya_Socialist_Flavour.2.t
+	desc = SRU_Sonya_Socialist_Flavour.2.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Socialist_Flavour.2.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+
+country_event = { #The Jacobin Cancer
+	id = SRU_Sonya_Phase_Two.1
+	title = SRU_Sonya_Phase_Two.1.t
+	desc = SRU_Sonya_Phase_Two.1.d
+	is_triggered_only = yes
+    	
+	option = {	 
+		name = SRU_Sonya_Phase_Two.1.a 
+		ai_chance = {
+			base = 100
+		}		
+	}
+}

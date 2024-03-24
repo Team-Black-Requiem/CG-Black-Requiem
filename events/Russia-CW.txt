@@ -26,12 +26,19 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			EUR = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 637
 				transfer_state = 822
 				transfer_state = 562
 				transfer_state = 644
 				transfer_state = 574
+				transfer_state = 863
+				transfer_state = 722
+				transfer_state = 917
 
+				add_state_core = 917
+				add_state_core = 722
+				add_state_core = 863
 				add_state_core = 637
 				add_state_core = 822
 				add_state_core = 562
@@ -97,12 +104,19 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			EUR = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 637
 				transfer_state = 822
 				transfer_state = 562
 				transfer_state = 644
 				transfer_state = 574
+				transfer_state = 863
+				transfer_state = 722
+				transfer_state = 917
 
+				add_state_core = 917
+				add_state_core = 722
+				add_state_core = 863
 				add_state_core = 637
 				add_state_core = 822
 				add_state_core = 562
@@ -179,6 +193,7 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			SRU = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 563
 				transfer_state = 565
 				transfer_state = 564
@@ -272,6 +287,7 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			SRU = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 563
 				transfer_state = 565
 				transfer_state = 564
@@ -463,6 +479,7 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			MRU = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 579
 				transfer_state = 580
 				transfer_state = 653
@@ -486,7 +503,9 @@ country_event = {
 				transfer_state = 833
 				transfer_state = 249
 				transfer_state = 251
-
+				transfer_state = 919
+				
+				add_state_core = 919
 				add_state_core = 579
 				add_state_core = 580
 				add_state_core = 653
@@ -512,11 +531,6 @@ country_event = {
 				add_state_core = 251
 
 				inherit_technology = RUS
-				set_technology = { mbt_1 = 1 }
-				set_technology = { cold_war_tank = 1 }
-				set_technology = { mechanised_infantry = 1 }
-				set_technology = { modern_artillery_90 = 1 }
-				set_technology = { sp_artillery_1 = 1 }
 				load_oob = "IMPERIAL_RUSSIA"
 
 				add_equipment_to_stockpile = {
@@ -545,12 +559,7 @@ country_event = {
 				}
 			}	
 		}
-		RUS = {	
-			set_technology = { mechanised_infantry = 1 }
-			set_technology = { mbt_1 = 1 }
-			set_technology = { cold_war_tank = 1 }
-			}
-			RUS = {	load_oob = "Prov_RUS" }
+		RUS = {	load_oob = "Prov_RUS" }
 		#####country_event = { id = russiaCW.6 days = 4 }		
 		
 		ai_chance = {
@@ -576,6 +585,7 @@ country_event = {
 				disband = no #will refund equipment and manpower
 			}
 			MRU = {
+				add_country_flag = RUS_Warlord
 				transfer_state = 579
 				transfer_state = 580
 				transfer_state = 653
@@ -626,11 +636,6 @@ country_event = {
 				add_state_core = 251
 			
 				inherit_technology = RUS
-				set_technology = { mbt_1 = 1 }
-				set_technology = { cold_war_tank = 1 }
-				set_technology = { mechanised_infantry = 1 }
-				set_technology = { modern_artillery_90 = 1 }
-				set_technology = { sp_artillery_1 = 1 }
 				load_oob = "IMPERIAL_RUSSIA"
 
 				add_equipment_to_stockpile = {
@@ -658,213 +663,10 @@ country_event = {
 					amount = 350
 				}
 			}	
-			RUS = {	
-				set_technology = { mechanised_infantry = 1 }
-				set_technology = { mbt_1 = 1 }
-				set_technology = { cold_war_tank = 1 }
-				}
-				RUS = {	load_oob = "Prov_RUS" }
+			RUS = {	load_oob = "Prov_RUS" }
 			MRU = { change_tag_from = RUS }
 		}
 		####country_event = { id = russiaCW.6 days = 4 }		
-		
-		ai_chance = {
-			factor = 20
-		}
-	}
-
-}
-
-
-country_event = {
-	id = russiaCW.6
-	title = russiaCW.6.t
-	desc = russiaCW.6.d
-	#picture = GFX_event_picture
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = { #West Russia Blows Up
-		name = russiaCW.6.a
-		hidden_effect = {
-			delete_unit_template_and_units  = {
-				division_template = "Russian Garrison"
-				disband = no #will refund equipment and manpower
-			}
-			delete_unit_template_and_units  = {
-				division_template = "Russian Light Infantry"
-				disband = no #will refund equipment and manpower
-			}
-			delete_unit_template_and_units  = {
-				division_template = "Russian Infantry Division"
-				disband = no #will refund equipment and manpower
-			}
-			WR1 = {
-				inherit_technology = RUS
-            	transfer_state = 825
-				transfer_state = 262
-				transfer_state = 397
-            	transfer_state = 923
-
-            	add_state_core = 825
-				add_state_core = 262
-				add_state_core = 397
-            	add_state_core = 923
-			}
-
-			WR3 = {
-				inherit_technology = RUS
-				transfer_state = 265
-				transfer_state = 829
-				transfer_state = 239
-				transfer_state = 401
-
-				add_state_core = 265
-				add_state_core = 829
-				add_state_core = 239
-				add_state_core = 401
-			}
-
-			WR6 = {
-				inherit_technology = RUS
-				transfer_state = 251
-				transfer_state = 249
-				transfer_state = 250
-				transfer_state = 256
-
-				add_state_core = 251
-				add_state_core = 249
-				add_state_core = 250
-				add_state_core = 256
-			}
-
-			
-			WR5 = {
-				inherit_technology = RUS
-				transfer_state = 255
-				transfer_state = 926
-				transfer_state = 250
-				transfer_state = 256
-
-				add_state_core = 255
-				add_state_core = 926
-				add_state_core = 250
-				add_state_core = 256
-			}
-
-			WR4 = {
-				inherit_technology = RUS
-				transfer_state = 252
-				transfer_state = 925
-
-				add_state_core = 252
-				add_state_core = 925
-
-			}
-
-			WR7 = {
-				inherit_technology = RUS
-				transfer_state = 833
-
-				add_state_core = 833
-			}
-			
-			WR2 = {
-				inherit_technology = RUS
-				transfer_state = 400
-				transfer_state = 924
-
-				add_state_core = 400
-				add_state_core = 924
-			}
-		}
-		country_event = { id = russiaCW.5 days = 4 }		
-		
-		ai_chance = {
-			factor = 20
-		}
-	}
-
-}
-
-
-country_event = {
-	id = russiaCW.5
-	title = russiaCW.5.t
-	desc = russiaCW.5.d
-	#picture = GFX_event_picture
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = { #Kaukasus Blows Up
-		name = russiaCW.5.a
-		set_cosmetic_tag = RUS_CW
-		hidden_effect = {
-			KW1 = {
-				inherit_technology = RUS
-				transfer_state = 217
-				transfer_state = 237
-				transfer_state = 236
-
-				add_state_core = 217
-				add_state_core = 237
-				add_state_core = 236
-			}
-
-			KW2 = {
-				inherit_technology = RUS
-				transfer_state = 218
-				transfer_state = 245
-
-				add_state_core = 218
-				add_state_core = 245
-			}	
-			
-			KW3 = {
-				inherit_technology = RUS
-				transfer_state = 232
-				transfer_state = 821	
-				transfer_state = 827	
-				
-				add_state_core = 232
-				add_state_core = 821	
-				add_state_core = 827
-		    }
-			KW4 = {
-				inherit_technology = RUS
-				transfer_state = 234
-				transfer_state = 235	
-				transfer_state = 233
-				transfer_state = 238
-				
-				add_state_core = 234
-				add_state_core = 235	
-				add_state_core = 233
-				add_state_core = 238
-		    }
-			ARM = {
-            	transfer_state = 230
-
-				add_state_core = 230
-			}
-			AZB = {
-				transfer_state = 229
-
-				add_state_core = 229
-			}
-			GEO = {
-				transfer_state = 231
-				transfer_state = 828
-				transfer_state = 826
-
-				add_state_core = 231
-				add_state_core = 828
-				add_state_core = 826
-			}		
-		}
-		country_event = { id = russiaCW.4 days = 4 }		
 		
 		ai_chance = {
 			factor = 20
@@ -884,15 +686,54 @@ country_event = {
 
 	option = {
 		name = russiaCW.7.a
-		hidden_effect = {
-			country_event = {id = russiaCW.9 hours = 1}
-			EIZ = {
+			#country_event = {id = russiaCW.9 hours = 1}
+				ROOT = {set_cosmetic_tag = EIZ}
+				load_oob = "Prov_RUS"
+				leave_faction = yes
+				end_puppet = UKR
+				delete_unit = {
+					template = "Police Garrison"
+				}
+				delete_unit = {
+					template = "Russian Garrison"
+				}
+				delete_unit = {
+					template = "Russian Light Infantry"
+				}
+				delete_unit = {
+					template = "Russian Infantry Division"
+				}
 				load_focus_tree = EUIZ_Opening_Moves
-				transfer_state = 886
-				change_tag_from = RUS
-				inherit_technology = RUS
-			}
-		}
+				set_politics = {
+					ruling_party = BR_authoritarian
+					last_election = "2008.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					BR_autocracy = 32
+					BR_supremacist  = 24
+					BR_authoritarian = 42
+					BR_progressive = 2
+				}
+				remove_country_leader_role = {
+					character = RUS_vladislav
+					ideology = military_dictatorship
+				}
+				add_country_leader_role = {
+					character = EIZ_military_council
+					promote_leader = yes
+					country_leader = {
+					ideology = military_dictatorship
+					expire = "3000.01.01.01"
+					traits = { }
+					}
+				}
+				load_oob = "EIZ_Starting_Units"
+				#transfer_state = 886
+				#change_tag_from = RUS
+				#inherit_technology = RUS
+			
 		ai_chance = {
 			factor = 20
 		}
@@ -924,13 +765,13 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		EIZ = {
+		#EIZ = {
 			annex_country = {target = RUS}
 			set_capital = {
 				state = 206
 				remember_old_capital = no
 			}
 			load_oob = "EIZ_Starting_Units"
-		}
+		#}
 	}
 }

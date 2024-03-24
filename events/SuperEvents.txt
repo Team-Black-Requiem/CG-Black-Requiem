@@ -8,10 +8,12 @@ news_event = { #Fall of Japan
 	id = super.1
 	hidden = yes
 	is_triggered_only = yes
+	major = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = JAP_invasion
+			set_country_flag = SUPER_JAP_invasion							#country flag that carries title localization - should always be prefixed with SUPER_
+			set_country_flag = SUPER_JAP_invasion_TEXT						#country flag that carries description localization should always be identical to the previous flag, but suffixed with _TEXT
+			set_variable = {BR_Super_Event_Var = token:SUPER_JAP_invasion}  #BR_Super_Event_Var stores the token ID of the title country flag so we can do some voodoo
 		}
 }
 
@@ -19,21 +21,37 @@ news_event = { #Russia CW Start
 	id = super.2
 	hidden = yes	
 	is_triggered_only = yes
+	major = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = RUS_Civil_War_Start
+		set_country_flag = SUPER_RCW_start
+		set_country_flag = SUPER_RCW_start_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_start}
 		}
 }
 
-news_event = { #Russia CW End
+news_event = { #Russia CW End Eurobritannia
 	id = super.3
 	hidden = yes	
 	is_triggered_only = yes
+	major = yes
 	timeout_days = 1
 	option = {
-       		set_country_flag = Super_Event_Visible
-        	set_country_flag = RUS_Civil_War_End
+		set_country_flag = SUPER_RCW_end_eurobritannia
+		set_country_flag = SUPER_RCW_end_eurobritannia_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_end_eurobritannia}
 		}
 }
 
+news_event = { #Russia CW End Luka
+	id = super.4
+	hidden = yes	
+	is_triggered_only = yes
+	major = yes
+	timeout_days = 1
+	option = {
+		set_country_flag = SUPER_RCW_end_luka
+		set_country_flag = SUPER_RCW_end_luka_TEXT
+		set_variable = {BR_Super_Event_Var = token:SUPER_RCW_end_luka}
+		}
+}

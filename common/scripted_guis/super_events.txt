@@ -1,64 +1,26 @@
 scripted_gui = {
 
-	Pax_Super_Event_Window = {
+	BR_Super_Event_Window = {
 		context_type = player_context
 		window_name = "Super_Event_Window"
 
 		visible = {
-			has_country_flag  = Super_Event_Visible
+			is_ai = no								#AI cannot get superevents
+			has_variable = BR_Super_Event_Var		#so long as voodoo variable exists, the window is visible. Gonna probably setup a timer for this thing so it goes away.
 		}
 
-		#triggers = {
-		#	Super_Event_Image_japan_invasion = {
-		#		has_country_flag  = JAP_invasion
-		#	}
-		#}
-
-		properties = {								#dynamically looks for the event picture from Super_Event_Scripted_Loc.txt
+		properties = {								#dynamically looks for the event picture using Super_Event_Scripted_Loc.txt
 			Super_Event_Image = {
 				image = "[get_superevent_texture]"
 			}
 		}
 
-		ai_enabled = {								 #Enables GUI AI is the country is a non-player and the window is visible
-			AND = {
-				is_AI = yes
-				has_country_flag = Super_Event_Visible
-			}	
-		}
-		ai_test_interval = 1						#AI will check hourly to close the window
-		ai_weights = {
+		effects = {									#clears country flags and the variable on window close so things don't get confused
 			Super_Event_Close_click = {
-				ai_will_do = {
-					base = 1
-					add = 1
-				}
+				clr_country_flag = "[?BR_Super_Event_Var.GetTokenKey]_TEXT"
+				clr_country_flag = "[?BR_Super_Event_Var.GetTokenKey]"
+				clear_variable = BR_Super_Event_Var
 			}
-		}
-		
-
-		effects = {									#clears country flags on window close so things don't get confused
-			Super_Event_Close_click = {
-				clr_country_flag = Super_Event_Visible
-
-				if = {
-					limit = {	
-						has_country_flag = JAP_invasion
-					}
-					clr_country_flag  = JAP_invasion
-				}
-				else_if = {
-					limit = {
-						has_country_flag = RUS_Civil_War_Start
-					}
-					clr_country_flag  = RUS_Civil_War_Start
-				}
-				else_if = {
-					limit = {
-						has_country_flag = RUS_Civil_War_End		
-					}
-					clr_country_flag = RUS_Civil_War_End
-				}
 		}
 	}
 }

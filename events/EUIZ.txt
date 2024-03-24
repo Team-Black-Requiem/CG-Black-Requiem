@@ -1,9 +1,5 @@
 add_namespace = EIZ
 
-set_variable = {FrenchInfluence = 0}
-set_variable = {GermanInfluence = 0}
-set_variable = {AustrianInfluence = 0}
-
 country_event = {
     id = EIZ.1
     title = EIZ.1.t
@@ -15,12 +11,12 @@ country_event = {
     option = {
 	   
 		name = EIZ.1.a
-
         
 		ai_chance = {
 			factor = 33
 		}
-		
+
+    add_ideas = Economic_shables
     } 
 }
 
@@ -35,7 +31,9 @@ is_triggered_only = yes
   option = {
    
   name = EIZ.2.a
-  set_stability = -0.4
+  add_stability = -0.4 #Guys, please use add_stability, add_war_support, etc, instead of set_stability
+                       #Using set_stability sets the base stability, whereas add_stability just adds or removes, also looks significantly better
+                       #If you want to decrease stability, just do "add_stability = -0.4" for -40% stability for example.  - Ruskie
 
   ai_chance = {
     factor = 33
@@ -54,7 +52,7 @@ is_triggered_only = yes
   option = {
    
   name = EIZ.3.a
-  set_war_support = -0.4
+ add_war_support = -0.4
 
   ai_chance = {
     factor = 33
@@ -78,15 +76,18 @@ is_triggered_only = yes
       add_state_core = 242
       add_state_core = 223
       
-      EIZ = {
+      RUS = {
         set_capital = {
           state = 219
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = 3
+        }
       }
 
-      add_to_variable = {FrenchInfluence = 1}
-  
+ 
   ai_chance = {
     factor = 33
   }
@@ -102,14 +103,17 @@ is_triggered_only = yes
       add_state_core = 209
       add_state_core = 263
 
-      EIZ = {
+      RUS = {
         set_capital = {
           state = 195
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = 0
+        }
       }
-  add_to_variable = {GermanInfluence = 1}
-
+ 
   ai_chance = {
     factor = 33
   }
@@ -125,14 +129,17 @@ is_triggered_only = yes
       add_state_core = 238
       add_state_core = 235
 
-      EIZ = {
+      RUS = {
         set_capital = {
           state = 137
           remember_old_capital = no
         }
+        modify_country_flag = {
+          flag = eiz_leadership 
+          value = -3
+        }
       }
-  add_to_variable = {AustrianInfluence = 1}
-
+ 
   ai_chance = {
     factor = 33
   }
@@ -150,8 +157,24 @@ country_event = {
 
   option = {
     name = EIZ.5.a
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 3
+    }
+  }
+  option = {
     name = EIZ.5.b
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 0
+    }
+  }
+  option = {
     name = EIZ.5.c
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = -3
+    }
   }
 
 }
@@ -164,10 +187,26 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes
 
-  option = {
-    name = EIZ.6.a
-    name = EIZ.6.b
-    name = EIZ.6.c
+   option = {
+      name = EIZ.6.a
+      modify_country_flag = {
+        flag = eiz_leadership 
+        value = 3
+      }
+    }
+     option = {
+       name = EIZ.6.b
+       modify_country_flag = {
+        flag = eiz_leadership 
+        value = 0
+      }
+   }
+   option = {
+       name = EIZ.6.c
+       modify_country_flag = {
+        flag = eiz_leadership 
+        value = -3
+      }
   }
 
 }
@@ -182,8 +221,24 @@ country_event = {
 
   option = {
     name = EIZ.7.a
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 3
+    }
+  }
+  option = {
     name = EIZ.7.b
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = 0
+    }
+  }
+  option = {
     name = EIZ.7.c
+    modify_country_flag = {
+      flag = eiz_leadership 
+      value = -3
+    }
   }
 
 }
@@ -212,6 +267,8 @@ country_event = {
 
   option = {
     name = EIZ.9.a
+	set_politics = {
+	ruling_party = BR_autocracy}
   }
 
 }
@@ -226,6 +283,13 @@ country_event = {
 
   option = {
     name = EIZ.10.a
+	add_popularity = {
+    ideology = BR_liberalism
+    popularity = 0.24
+}
+	promote_character = EIZ_frederica
+	set_politics = {
+	ruling_party = BR_liberalism}
   }
 
 }
@@ -240,6 +304,12 @@ country_event = {
 
   option = {
     name = EIZ.11.a
+	add_popularity = {
+    ideology = BR_conservatism
+    popularity = 0.09
+}
+	set_politics = {
+	ruling_party = BR_conservatism}
   }
 
 }
@@ -254,6 +324,82 @@ country_event = {
 
   option = {
     name = EIZ.12.a
+	ai_chance = {
+    factor = 50
+  }
+	add_manpower = -29100
+	add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2100
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -252
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -951
+					producer = FRA
+				}
+	RUS = {
+	load_oob = "EIZ_French_Volunteers3"}
+  }
+  option = {
+    name = EIZ.12.b
+	ai_chance = {
+    factor = 20
+  }
+	add_manpower = -58200
+	add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -4200
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -504
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -1902
+					producer = FRA
+				}
+	RUS = {
+	load_oob = "EIZ_French_Volunteers6"}
+  }
+  option = {
+    name = EIZ.12.c
+	ai_chance = {
+    factor = 10
+  }
+	add_manpower = -87300
+	add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -6300
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -756
+					producer = FRA
+				}
+	add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -2853
+					producer = FRA
+				} 
+	RUS = {
+	load_oob = "EIZ_French_Volunteers9"}
+  }
+   option = {
+    name = EIZ.12.d
+	ai_chance = {
+    factor = 20
+  }
+	
   }
 }
 
@@ -268,7 +414,7 @@ country_event = {
   option = {
    
   name = EIZ.13.a
-  EIZ = {
+  RUS = {
     declare_war_on = {
     target = MRU
     type = annex_everything
@@ -305,11 +451,13 @@ country_event = {
 
   option = {
     name = EIZ.15.a
-    EIZ = { country_event = EIZ.16 }
+    RUS = { country_event = EIZ.16 }
+  }
+  option = {
     name = EIZ.15.b
-    EIZ = { country_event = EIZ.17 }
+    RUS = { country_event = EIZ.17 }
     name = EIZ.15.c
-    EIZ = { country_event = EIZ.46 }
+    RUS = { country_event = EIZ.46 }
   }
 }
 
@@ -323,7 +471,7 @@ country_event = {
 
   option = {
     name = EIZ.16.a
-    EIZ = {
+    RUS = {
       add_offsite_building = { type = arms_factory level = 2 }
       add_offsite_building = { type = industrial_complex level = 3 }
     }
@@ -340,11 +488,10 @@ country_event = {
 
   option = {
     name = EIZ.17.a
-    EIZ = {
+    RUS = {
       add_offsite_building = { type = arms_factory level = 2 }
       add_offsite_building = { type = industrial_complex level = 3 }
-      production_speed_industrial_complex_factor = 1.05
-      production_speed_arms_factory_factor = 1.05
+      add_ideas = Economic_board
     }
   }
 }
@@ -385,9 +532,11 @@ country_event = {
 
   option = {
     name = EIZ.20.a
-    EIZ = { country_event = EIZ.21 }
+    RUS = { country_event = EIZ.21 }
+  }
+  option = {  
     name = EIZ.20.b
-    EIZ = { country_event = EIZ.22 }
+    RUS = { country_event = EIZ.22 }
   }
 }
 
@@ -401,6 +550,10 @@ country_event = {
 
   option = {
     name = EIZ.21.a
+    RUS = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+    }
   }
 }
 
@@ -440,9 +593,11 @@ country_event = {
 
   option = {
     name = EIZ.24.a
-    EIZ = { country_event = EIZ.25 }
+    RUS = { country_event = EIZ.25 }
+  }
+  option = {  
     name = EIZ.24.b
-    EIZ = { country_event = EIZ.26 }
+    RUS = { country_event = EIZ.26 }
   }
 }
 
@@ -456,6 +611,11 @@ country_event = {
 
   option = {
     name = EIZ.25.a
+    RUS = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      add_ideas = Appease_german_pride
+    }
   }
 }
 
@@ -493,13 +653,16 @@ country_event = {
   fire_only_once = yes
   is_triggered_only = yes
 
-  option = {
-    name = EIZ.28.a
-    EIZ = { country_event = EIZ.29 }
-    name = EIZ.28.b
-    EIZ = { country_event = EIZ.30 }
-  }
-}
+    option = {
+      name = EIZ.28.a
+      RUS = { country_event = EIZ.29 }
+    }
+    option = {
+      name = EIZ.28.b
+      RUS = { country_event = EIZ.30 }
+    }
+ }
+
 
 country_event = {
   id = EIZ.29
@@ -511,6 +674,11 @@ country_event = {
 
   option = {
     name = EIZ.29.a
+    RUS = {
+      add_offsite_building = { type = arms_factory level = 2 }
+      add_offsite_building = { type = industrial_complex level = 3 }
+      add_ideas = preassure_the_Danubians
+    }
   }
 }
 
@@ -563,6 +731,16 @@ country_event = {
 
   option = {
     name = EIZ.33.a
+    RUS = {
+      add_equipment_to_stockpile = {
+        type = convoy
+        amount = 500
+      }
+      add_timed_idea = {
+        idea = Casablanca_Proposal
+        days = 180
+      }
+    }
   }
 }
 
@@ -589,6 +767,9 @@ country_event = {
 
   option = {
     name = EIZ.35.a
+    RUS = {
+      add_ideas = Calling_The_Pale_Jewel
+    }
   }
 }
 
@@ -615,6 +796,18 @@ country_event = {
 
   option = {
     name = EIZ.37.a
+    RUS = {
+      add_equipment_to_stockpile = {
+        type = transport_plane_equipment
+        amount = 500
+      }
+      add_tech_bonus = {
+        name = paratroopers
+        bonus = 0.75
+        uses = 1
+        category = infantry_tech
+      }
+    }
   }
 }
 
@@ -641,6 +834,29 @@ country_event = {
 
   option = {
     name = EIZ.39.a
+    RUS = {
+      random_owned_controlled_state = {
+                
+        add_resource = {
+            type = steel
+            amount = 20
+        }
+      }
+      random_owned_controlled_state = {
+    
+        add_resource = {
+            type = aluminium
+            amount = 20
+        }
+      }
+      random_owned_controlled_state = {
+    
+        add_resource = {
+          type = tungsten
+          amount = 20
+        }
+      }
+    }
   }
 }
 
@@ -667,6 +883,15 @@ country_event = {
 
   option = {
     name = EIZ.41.a
+    RUS = {
+      random_owned_controlled_state = {
+                
+        add_resource = {
+            type = sakuradite
+            amount = 20
+        }
+      }
+    }
   }
 }
 
@@ -680,6 +905,7 @@ country_event = {
 
   option = {
     name = EIZ.42.a
+    add_ideas = Magnum_Opus
   }
 }
 
@@ -688,38 +914,38 @@ news_event = {
   title = {
       text = EIZ.43.t.a
       trigger = {
-          tag = EIZ
+          tag = RUS
       }
   }
   title = {
-      text = EIZ.43.t
+      text = EIZ.43.t.b
   }
   desc = {
-      text = EIZ.43.desc.a
+      text = EIZ.43.d.a
       trigger = {
-          tag = EIZ
+          tag = RUS
       }
   }
   desc = {
-      text = EIZ.43.desc
+      text = EIZ.43.d.b
   }
   
-  picture = GFX_my_news_event_picture
+  #picture = GFX_my_news_event_picture
   
   is_triggered_only = yes
   major = yes
   
   option = {
-      name = EIZ.43.1.a
+      name = EIZ.43.a
       trigger = {
-          tag = EIZ
+          tag = RUS
       }
   }
   
   option = {
-      name = EIZ.43.1.b
+      name = EIZ.43.b
       trigger = {
-          NOT = { tag = EIZ }
+          NOT = { tag = RUS }
       }
   }
   
@@ -770,11 +996,1322 @@ country_event = { #option for Lyon Economic Board
 
   option = {
     name = EIZ.46.a
-    EIZ = {
+    RUS = {
       add_offsite_building = { type = arms_factory level = 2 }
       add_offsite_building = { type = industrial_complex level = 3 }
-      production_speed_industrial_complex_factor = 1.05
-      production_speed_arms_factory_factor = 1.05
+      add_ideas = Economic_board
+      # and this new focus tree
     }
   }
 }
+
+country_event = { #Lyon Eco Stability
+  id = EIZ.47
+  title = EIZ.47.t
+  desc = EIZ.47.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.47.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Frederica Mech Army
+  id = EIZ.48
+  title = EIZ.48.t
+  desc = EIZ.48.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.48.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Call Young Fox
+  id = EIZ.49
+  title = EIZ.49.t
+  desc = EIZ.49.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.49.a
+      RUS = {
+        recruit_character = EIZ_rommel
+      }
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #EIZ_frederica_economic_board
+  id = EIZ.50
+  title = EIZ.50.t
+  desc = EIZ.50.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.50.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Reach out to EU
+  id = EIZ.51
+  title = EIZ.51.t
+  desc = EIZ.51.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.51.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #German Charity
+  id = EIZ.52
+  title = EIZ.52.t
+  desc = EIZ.52.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.52.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Shame French
+  id = EIZ.53
+  title = EIZ.53.t
+  desc = EIZ.53.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.53.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Annoy Hapsburgs
+  id = EIZ.54
+  title = EIZ.54.t
+  desc = EIZ.54.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.54.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Frederica Eco Stability
+  id = EIZ.55
+  title = EIZ.55.t
+  desc = EIZ.55.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.55.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #German Morality
+  id = EIZ.56
+  title = EIZ.56.t
+  desc = EIZ.56.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.56.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #German Hearts
+  id = EIZ.57
+  title = EIZ.57.t
+  desc = EIZ.57.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.57.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #German Minds
+  id = EIZ.58
+  title = EIZ.58.t
+  desc = EIZ.58.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.58.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Russian Self Fulfillment
+  id = EIZ.59
+  title = EIZ.59.t
+  desc = EIZ.59.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.59.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Accepting Help
+  id = EIZ.60
+  title = EIZ.60.t
+  desc = EIZ.60.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.60.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Foreign Engineers
+  id = EIZ.61
+  title = EIZ.61.t
+  desc = EIZ.61.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.61.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Russian Welfare
+  id = EIZ.62
+  title = EIZ.62.t
+  desc = EIZ.62.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.62.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Panic Staff Office
+  id = EIZ.63
+  title = EIZ.63.t
+  desc = EIZ.63.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.63.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Exploring Structures
+  id = EIZ.64
+  title = EIZ.64.t
+  desc = EIZ.64.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.64.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Presidential Bunker
+  id = EIZ.65
+  title = EIZ.65.t
+  desc = EIZ.65.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.65.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #They Won't See it Coming
+  id = EIZ.66
+  title = EIZ.66.t
+  desc = EIZ.66.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.66.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Using What we have
+  id = EIZ.67
+  title = EIZ.67.t
+  desc = EIZ.67.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.67.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Stand Firm
+  id = EIZ.68
+  title = EIZ.68.t
+  desc = EIZ.68.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.68.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Every Peak A Bunker
+  id = EIZ.69
+  title = EIZ.69.t
+  desc = EIZ.69.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.69.a
+
+      ai_chance = {
+          factor = 100
+      }
+   modifier = {
+    add_building_construction = {
+      type = bunker
+      level = 1
+      instant_build = yes
+      province = 13353
+  }
+  add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 13076
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 12502
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 10677
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 10551
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 7824
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 12659
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 4874
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 10216
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 11307
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 278
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 237
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 7320
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 11223
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 10529
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 10185
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 12117
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 4265
+}
+
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 4311
+}
+
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 905
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 7373
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 12200
+}
+add_building_construction = {
+  type = bunker
+  level = 1
+  instant_build = yes
+  province = 4383
+}
+   }  
+  }
+  
+}
+
+country_event = { #Oskar's Gamble
+  id = EIZ.70
+  title = EIZ.70.t
+  desc = EIZ.70.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.70.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Russia For Russians
+  id = EIZ.71
+  title = EIZ.71.t
+  desc = EIZ.71.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.71.a
+
+      add_country_leader_trait = oskar_trait
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #It Won't Be Enough
+  id = EIZ.72
+  title = EIZ.72.t
+  desc = EIZ.72.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.72.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Let them build roads
+  id = EIZ.73
+  title = EIZ.73.t
+  desc = EIZ.73.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.73.a
+
+      add_ideas = EIZ_Let_Them_Build_Roads_idea
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #We need more
+  id = EIZ.74
+  title = EIZ.74.t
+  desc = EIZ.74.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.74.a
+
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #It might be enough
+  id = EIZ.75
+  title = EIZ.75.t
+  desc = EIZ.75.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.75.a
+
+      ai_chance = {
+          factor = 100
+      }
+      add_ideas = Economic_shables
+  }
+}
+
+country_event = { #Tehran Proposal
+  id = EIZ.76
+  title = EIZ.76.t
+  desc = EIZ.76.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.76.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Hapsburgs First Step
+  id = EIZ.77
+  title = EIZ.77.t
+  desc = EIZ.77.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.77.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Arms Trade
+  id = EIZ.78
+  title = EIZ.78.t
+  desc = EIZ.78.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.78.a
+      #Make a company later
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Our Special Relationship
+  id = EIZ.79
+  title = EIZ.79.t
+  desc = EIZ.79.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.79.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Foreign Relations Secured
+  id = EIZ.80
+  title = EIZ.80.t
+  desc = EIZ.80.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.80.a
+
+      ai_chance = {
+          factor = 100
+      }
+      remove_ideas = Economic_shables
+  }
+}
+
+country_event = { #Halfway There
+  id = EIZ.81
+  title = EIZ.81.t
+  desc = EIZ.81.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.81.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event ={ #Frederica_Oil_Focused
+  id  = EIZ.82
+  title =  EIZ.82.t
+  desc =  EIZ.82.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+    name = "PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+  }
+}
+
+country_event ={ #Frederica Sakuradite Focused
+  id  = EIZ.83
+  title =  EIZ_83.t
+  desc =  EIZ_83.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+    name = "PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+  }
+}
+
+country_event = {
+  id =EIZ.84
+  title = EIZ.84.t
+  desc = EIZ.84.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+
+    ## SPAWNS 6 DIVISIONS IN OKHOTSK
+    
+    name = "PLACEHOLDER"
+
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 3000
+    }
+    add_equipment_to_stockpile = {
+      type = support_equipment
+      amount = 1500
+    }
+  }
+}
+
+country_event ={ #Bundeswehr Model
+  id  = EIZ.85
+  title =  EIZ_85.t
+  desc =  EIZ_85.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+    name = EIZ.85.a
+    RUS = {
+      add_ideas = A_Mobile_Front
+    }
+    ai_chance = {
+      factor = 100
+    }
+  }
+}
+
+country_event = {
+  id = EIZ.86
+  title = EIZ.86.t
+  desc = EIZ.86.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+ 
+  option = {
+    name = "PLACEHOLDER Is Getting Backed By the EIZ PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+
+    EUR = {
+      add_ideas = EIZ_Lyon_Backing_The_Euro_Britannians_idea1
+    }
+  }
+}
+
+country_event = {
+  id = EIZ.87
+  title = EIZ.87.t
+  desc = EIZ.87.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+ 
+  option = {
+    name = "PLACEHOLDER Is Getting Backed By the EIZ PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+    SRU = {
+      add_ideas = EIZ_Lyon_Backing_The_Socialists_buffs_idea1
+    }
+   
+  }
+}
+
+country_event = {
+  id = EIZ.88
+  title = EIZ.88.t
+  desc = EIZ.88.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+ 
+  option = {
+    name = "PLACEHOLDER 6 armor divions have been spawned in Chita PLACEHOLDER"
+
+    ai_chance = {
+      factor = 100
+    }
+  }
+}
+
+country_event = { #A_Hapsburg_And_A_Monarch
+  id = EIZ.89
+  title = EIZ.89.t
+  desc = EIZ.89.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.89.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Inviting_The_Iranians
+  id = EIZ.90
+  title = EIZ.90.t
+  desc = EIZ.90.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.90.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Iraq_Crashes_The_Meeting
+  id = EIZ.91
+  title = EIZ.91.t
+  desc = EIZ.91.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.91.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Calling old friends
+  id = EIZ.92
+  title = EIZ.92.t
+  desc = EIZ.92.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  days = 7
+
+  option = {
+      name = EIZ.92.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Breaking the mold
+  id = EIZ.93
+  title = EIZ.93.t
+  desc = EIZ.93.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.93.a
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #Lyon Ground Support
+  id = EIZ.94
+  title = EIZ.94.t
+  desc = EIZ.94.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.94.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+
+country_event = { #EIZ_Request_Economic_Support_V2
+  id = EIZ.95
+  title = EIZ.95.t
+  desc = EIZ.95.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.95.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Request_Unoffical_Renforcements
+  id = EIZ.96
+  title = EIZ.96.t
+  desc = EIZ.96.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.96.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Lyons_Air_Force
+  id = EIZ.97
+  title = EIZ.97.t
+  desc = EIZ.97.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.97.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Learn_From_Experience
+  id = EIZ.98
+  title = EIZ.98.t
+  desc = EIZ.98.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.98.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Gain_Academy_Support
+  id = EIZ.99
+  title = EIZ.99.t
+  desc = EIZ.99.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.99.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Frederikas_New_Warfare
+  id = EIZ.100
+  title = EIZ.100.t
+  desc = EIZ.100.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.100.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Strategic_And_Tactical_Study_Group
+  id = EIZ.101
+  title = EIZ.101.t
+  desc = EIZ.101.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.101.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Frederica_Found_The_Special_Project_Core
+  id = EIZ.102
+  title = EIZ.102.t
+  desc = EIZ.102.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    hidden_effect = {
+    RUS = {
+    country_event ={
+     id = EIZ.103
+     days = 7
+    } 
+  }
+}
+}
+
+  option = {
+      name = EIZ.102.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+country_event = { #EIZ_Project: Crimson Shield
+  id = EIZ.103
+  title = EIZ.103.t
+  desc = EIZ.103.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    RUS = {
+    hidden_effect = {
+    country_event ={
+     id = EIZ.104
+     days = 7
+    } 
+  } 
+}
+}
+
+  option = {
+      name = EIZ.103.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+country_event = { #Project: Reactive
+  id = EIZ.104
+  title = EIZ.104.t
+  desc = EIZ.104.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    hidden_effect = {
+      RUS = {
+    country_event ={
+     id = EIZ.105
+     days = 7
+    } 
+  } 
+}
+}
+
+  option = {
+      name = EIZ.104.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+country_event = { #EIZ Project: Lancer
+  id = EIZ.105
+  title = EIZ.105.t
+  desc = EIZ.105.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    hidden_effect = {
+      RUS = {
+    country_event ={
+     id = EIZ.106
+     days = 7
+    } 
+  } 
+}
+}
+
+  option = {
+      name = EIZ.105.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+country_event = { #EIZ Project: Geek
+  id = EIZ.106
+  title = EIZ.106.t
+  desc = EIZ.106.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    hidden_effect = {
+      RUS = {
+    country_event ={
+     id = EIZ.107
+     days = 7
+    } 
+  } 
+}
+}
+
+  option = {
+      name = EIZ.106.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+country_event = { #Project: Behemoth
+  id = EIZ.107
+  title = EIZ.107.t
+  desc = EIZ.107.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.107.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Codify_Rules_Of_Engagement
+  id = EIZ.108
+  title = EIZ.108.t
+  desc = EIZ.108.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.108.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Request_Economic_Support_V3
+  id = EIZ.109
+  title = EIZ.109.t
+  desc = EIZ.109.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.109.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_Force_Russians_To_War
+  id = EIZ.110
+  title = EIZ.110.t
+  desc = EIZ.110.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+      name = EIZ.110.a
+
+      ai_chance = {
+          factor = 100
+      }
+
+  }
+}
+country_event = { #EIZ_A_Desperate_War
+  id = EIZ.111
+  title = EIZ.111.t
+  desc = EIZ.111.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    RUS = {
+      declare_war_on = {
+      target = MRU
+      type = annex_everything
+                  }
+  }
+  }
+
+  option = {
+      name = EIZ.111.a
+
+      ai_chance = {
+          factor = 100
+      }
+  }
+}
+### INTERVENE IN THE EAST EVENTS
+

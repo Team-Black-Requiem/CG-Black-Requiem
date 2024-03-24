@@ -1,42 +1,12 @@
 ﻿division_template = {
-	name = "Rubian Cavalry Division"
-
-	division_names_group = "ALB_CAV_01"
-
-	regiments = {
-		Cavalry = { x = 0 y = 0 }
-		Cavalry = { x = 0 y = 1 }	
-		Cavalry = { x = 0 y = 2 }
-		Cavalry = { x = 1 y = 0 }
-		Cavalry = { x = 1 y = 1 }
-		Cavalry = { x = 1 y = 2 }
-		Cavalry = { x = 2 y = 0 }
-		Cavalry = { x = 2 y = 1 }
-		Cavalry = { x = 2 y = 2 }
-	}	
-
-}
-
-
-division_template = {
 	name = "Rubian Infantry Division" 		
 
 	division_names_group = "ALB_INF_01"
 
     regiments = {
 		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
     }
-	support = {
-		engineer = { x = 0 y = 0 } 
-	}
+	
 
 }
 
@@ -69,5 +39,18 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.85
 		efficiency = 50
+    }
+}
+
+units = {
+    division = {
+        division_name = {   
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 2097
+        division_template = "Rubian Infantry Division"
+        start_experience_factor = 1
+        start_equipment_factor = 1
     }
 }

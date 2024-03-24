@@ -521,8 +521,6 @@ equipment_modules = {
 	########################
 
 	cannon_1 = { # Early SPG MBT
-		allow_equipment_type = artillery
-		forbid_equipment_type_exact_match = armor
 		abbreviation = "c203"
 		category = artillery_weapon
 
@@ -537,8 +535,6 @@ equipment_modules = {
 	}
 
 	cannon_2 = { # Basic SPG MBT
-		allow_equipment_type = artillery
-		forbid_equipment_type_exact_match = armor
 		abbreviation = "c155"
 		category = artillery_weapon
 
@@ -553,8 +549,6 @@ equipment_modules = {
 	}
 
 	cannon_3 = { # Improved SPG MBT
-		allow_equipment_type = artillery
-		forbid_equipment_type_exact_match = armor
 		abbreviation = "c152"
 		category = artillery_weapon
 
@@ -569,8 +563,6 @@ equipment_modules = {
 	}
 
 	cannon_4 = { # Advanced SPG MBT
-		allow_equipment_type = artillery
-		forbid_equipment_type_exact_match = armor
 		abbreviation = "u155"
 		category = artillery_weapon
 
@@ -590,9 +582,6 @@ equipment_modules = {
 	################
 
 	small_cailber_aa_1 = { ### Medium Air Attack, slightly less expensive then large caliber, limited to no acess to different shells, probably effective in cities against infantry
-		allow_equipment_type = anti_air 
-		forbid_equipment_type_exact_match = armor
-
 		category = nsb_anti_air
 		allowed_module_categories = {
 			ammunition_type = {
@@ -604,9 +593,6 @@ equipment_modules = {
 	}
 
 	large_caliber_aa_1 = { ### Medium Air Attack, somewhat expensive, acesss to various shell types to specialize if wanted
-		allow_equipment_type = anti_air 
-		forbid_equipment_type_exact_match = armor
-
 		category = nsb_anti_air
 		allowed_module_categories = {
 			ammunition_type = {
@@ -620,9 +606,7 @@ equipment_modules = {
 	}
 
 	missile_aa_1 = { ### Highest Air Attack, expensive, acess to limited ammo can't do anything else basically
-		allow_equipment_type = anti_air ### Could be Rocket, may confuse people though
-		forbid_equipment_type_exact_match = armor
-		
+		#allow_equipment_type = anti_air ### Could be Rocket, may confuse people though
 		category = nsb_anti_air
 		allowed_module_categories = {
 			ammunition_type = {

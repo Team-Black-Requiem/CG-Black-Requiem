@@ -1,10 +1,10 @@
 characters = {
 	
-
-	### CABINET & POLITICIANS
+	### LEADERS ###
 
 	SRU_Bunina = {
 		name="Sonya Bunina"
+		gender = female
 		portraits={
 			civilian={
 				large="GFX_portrait_SRU_Bunina"
@@ -12,12 +12,66 @@ characters = {
 		}
 		country_leader={
 			desc = "	"
-			ideology=left_libertarianism
+			ideology = utopian_communism
 			traits={  }
 			expire="2020.1.1.1"
-			id = -1
 		}
 	}
+
+	SRU_Kulakov = {
+		name="Mikhail Kulakov"
+		portraits={
+			civilian={
+				large="GFX_portrait_SRU_Bunina"
+			}
+		}
+		country_leader={
+			desc = "	"
+			ideology = revisionist_communism
+			traits={  }
+			expire="2020.1.1.1"
+		}
+	}
+
+	SRU_Luka_Zhukov = {
+		name="Luka Zhukov"
+		portraits={
+			civilian={
+				large = "GFX_portrait_SRU_Luka_Zhukov"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_LUKA_ZHUKOV_DESC"
+			ideology = revolutionary_jacobinism
+			traits = { never_surrender the_monster_of_astana }
+			expire = "2020.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SRU_luka_zhukov_idea
+			
+
+			allowed = {
+				tag = SRU
+			}
+
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+			}
+
+			traits = { jacobin_prime_minister }
+
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	### END OF LEADERS ###
+
+
+	### CABINET ###
 
 	SRU_generic_head_of_government = {
 		name = "Head Of Government"
@@ -119,33 +173,206 @@ characters = {
 		}
 	}
 
-	SRU_generic_intelligence = {
-		name = "The Intelligence Guy"
+	Tatiyana_Leonova = {
+		name = "Vladimir Bakatin"
+		#portraits = {
+		#	
+		#}
+		
+		# Note from Fris: I removed the role and added it to the focus SRU_chairwoman_leonova
+		}
+	
+
+	Chairman_Ivanov = {
+		name = "Zhakar Ivanov"
+		#portraits = {
+		#	
+		#}
+		# Note from Fris: I removed the role and added it to the focus Chairman_Ivanov
+	}
+
+	SRU_andrei_smirnov = {
+		name = "Andrei Smirnov"
 		#portraits = {
 		#	
 		#}
 		
 		advisor = {
-			slot = intelligence
-			idea_token = SRU_generic_intelligence_idea_1
+			slot = head_of_government
+			idea_token = SRU_andrei_smirnov_idea_1
 
 			allowed = {
 				tag = SRU
 			}
 
 			traits = { 
-				conservative_guy
+				politburo_co_chairman
 			}
 
-			cost = 2000
+			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 	}
 
+	SRU_tatyana_kuznetsova = {
+		name = "Tatyana Kuznetsova"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = minister_of_interior
+			idea_token = SRU_tatyana_kuznetsova_idea_1
 
-	### ARMY - NAVY - AIR (CHIEFS)
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				social_propagandist
+			}
+
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	####Jacobins####
+
+	SRU_marianna_sorokina = {
+		name = "Marianna Sorokina"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = intelligence
+			idea_token = SRU_marianna_sorokina_idea
+
+			allowed = {
+				tag = SRU
+			}
+
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+			}
+
+			traits = { 
+				director_of_gru
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_tasha_kulikova = {
+		name = "Tasha Kulikova"
+		#portraits = {
+		#	
+		#}
+		
+		advisor = {
+			slot = minister_of_interior
+			idea_token = SRU_tasha_kulikova_idea
+
+			allowed = {
+				tag = SRU
+			}
+
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+			}
+
+			traits = { 
+				director_of_cheka
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_leonid_zaytsev = {
+		name = "Leonid Zaytsev"
+		portraits = {
+			civilian={
+				large = "GFX_portrait_SRU_Leonid_Zaytsev"
+			}
+		}
+		
+		advisor = {
+			slot = economy_minister
+			idea_token = SRU_leonid_zaytsev_idea
+
+			allowed = {
+				tag = SRU
+			}
+
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+			}
+
+			traits = { 
+				economic_visionary
+			}
+
+			cost = 75
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_viktor_makarov = {
+		name = "Viktor Makarov"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = SRU_viktor_makarov_idea
+
+			allowed = {
+				tag = SRU
+			}
+
+			available = {
+				has_country_flag = SRU_Luka_In_Control
+				has_completed_focus = SRU_makarovs_army
+			}
+
+			traits = { 
+				army_chief_offensive_2
+			}
+
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	####End Of Jacobins####
+
+	### END OF CABINET ###
+
+
+	### ARMY - NAVY - AIR (CHIEFS) ###
 
 	SRU_generic_army_chief = {
 		name = "Generic Genericus"
@@ -223,23 +450,27 @@ characters = {
 		}
 	}
 
+	### END OF ARMY - NAVY - AIR (CHIEFS) ###
+
 	
+	### HIGH COMMAND ###
 
-
-	### HIGH COMMAND
-
-
-	SRU_generic_high_command = {
-		name = "High Command Feller"
-
-		#portraits = {
-		#	
-		#}
+	SRU_ostrova = {
+		name = "Natasha Ostrova"
+		gender = female
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
 
 		advisor = {
 			slot = high_command
 			ledger = army
-			idea_token = SRU_generic_high_command_1
+			idea_token = SRU_ostrova_high_command
 			traits = { 
 				army_artillery_1
 			}
@@ -251,50 +482,237 @@ characters = {
 				factor = 1.000
 			}
 		}
-
+	
 		field_marshal = {
-			skill = 1
+			traits = { brilliant_strategist }
+			skill = 5
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 5
+		}
+	}
+
+	SRU_shen = {
+		name = "Shen Jianyu"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = air
+			idea_token = SRU_shen_high_command
+			
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				air_air_superiority_2
+			}
+			
+			available = {
+				has_completed_focus = SRU_an_envoy_from_china
+			}
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	SRU_timur_antonov = {
+		name = "Timur Antonov"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/SRU/SRU_natasha_ostrava.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = SRU_shen_high_command
+			
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				technocrat
+			}
+			
+			available = {
+				has_completed_focus = SRU_develop_the_super_soldat
+			}
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	### END OF HIGH COMMAND ###
+
+
+	### GENERALS ###
+
+	SRU_panteleyev = {
+		name = "Sergej Panteleyev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRU/SRU_sergej_panteleyev.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_sergej_panteleyev.dds"
+			}
+		}
+
+		corps_commander = {
+		traits = {winter_specialist}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	SRU_nemov = {
+		name = "Alexander Nemov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRU/SRU_alexander_nemov.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_alexander_nemov.dds"
+			}
+		}
+
+		corps_commander = {
+		traits = { infantry_officer}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 	}
 
-
-	### GENERALS
-
-	SRU_generic_corps_commander = {
-		name = "Corps Commander"
-		#portraits = {
-		#	
-		#}
+	SRU_belov = {
+		name = "Anton Belov"
+		portraits = {
+			civilian = {
+				large = "/gfx/leaders/SRU/SRU_Anton_Belov.dds"
+			}
+			army = {
+				large = "/gfx/leaders/SRU/SRU_Anton_Belov.dds"
+			}
+		}
 
 		corps_commander = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {infantry_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 	}
-	SRU_Mongol_commander = {
-		name = "Sangiin Dumpil"
-		#portraits = {
-		#	
-		#}
+
+	SRU_kirova = {
+		name = "Maria Kirova"
+		portraits = {
+			civilian = {
+				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
+			}
+			army = {
+				large = "/gfx/leaders/SRU/SRU_Maria_Kirov.dds"
+			}
+		}
 
 		corps_commander = {
-		traits = {}
+			traits = {panzer_leader}
 			skill = 3
-			attack_skill = 4
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
 		}
 	}
 
+	SRU_sonin = {
+		name = "Dmitri Sonin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
+			}
+			army = {
+			large = "gfx/leaders/SRU/SRU_dmitri_sonin.dds"
+			}
+		}
 
+		corps_commander = {
+		traits = {} #engineer
+			skill = 4
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
 
+	SRU_sohei = {
+		name = "Tatsuki Sohei"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SRU/SRU_sohei.dds"
+			}
+			army = {
+				large = "gfx/leaders/SRU/SRU_sohei.dds"
+			}
+		}
 
+		corps_commander = {
+		traits = { infantry_officer gentlemanly }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 4
+		}
+
+		advisor = {
+			slot = army_chief
+			ledger = army
+			idea_token = SRU_sohei_army_idea
+			
+			allowed = {
+				tag = SRU
+			}
+
+			traits = { 
+				army_chief_offensive_3
+			}
+			
+			available = {
+				has_completed_focus = SRU_luka_takes_personal_command
+			}
+			cost = 100
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	### END OF GENERALS ###
 }

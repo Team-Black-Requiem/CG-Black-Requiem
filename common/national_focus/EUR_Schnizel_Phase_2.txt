@@ -1,0 +1,3191 @@
+focus_tree = {
+	id = EUR_Schnizel_Phase_2
+	continuous_focus_position = { x = 20 y = 2500 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 8
+			tag = EUR
+		}
+	}
+
+    focus = {
+		id = EUR_An_End_To_Parasites
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 10
+		y = 0
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = EUR_The_False_Monarchy
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_An_End_To_Parasites
+		prerequisite = {
+			focus = EUR_An_End_To_Parasites
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+        allow_branch = {has_country_flag = Russia_Monarchist_Victory}
+
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = EUR_The_European_Puppet
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_An_End_To_Parasites
+		prerequisite = {
+			focus = EUR_An_End_To_Parasites
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+        allow_branch = {has_country_flag = Russia_EIZ_Victory}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+    focus = {
+		id = EUR_Second_Wave_Of_Shipments
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_The_European_Puppet
+		prerequisite = {
+			focus = EUR_The_False_Monarchy
+            focus = EUR_The_European_Puppet
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Send_The_OSI_West
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Second_Wave_Of_Shipments
+		prerequisite = {
+			focus = EUR_Second_Wave_Of_Shipments
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Prepare_Front_For_War
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Second_Wave_Of_Shipments
+		prerequisite = {
+			focus = EUR_Second_Wave_Of_Shipments
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Beginning_Of_The_End
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Prepare_Front_For_War
+		prerequisite = {
+			focus = EUR_Prepare_Front_For_War
+		}
+		prerequisite = {
+			focus = EUR_Send_The_OSI_West
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {country_exists = RUS}
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {country_exists = MRU}
+				declare_war_on = {
+					target = MRU
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_An_Imperial_Storm
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 2
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		mutually_exclusive = {
+			focus = EUR_Shadow_Warfare_Schnizel
+		}
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Force_Military_1
+		}
+	}
+
+	focus = {
+		id = EUR_Shadow_Warfare_Schnizel
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -3
+		y = 2
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		mutually_exclusive = {
+			focus = EUR_An_Imperial_Storm
+		}
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Spy_Military_1
+		}
+	}
+
+	focus = {
+		id = EUR_Clearing_The_Path
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Shadow_Warfare_Schnizel
+
+		prerequisite = {
+			focus = EUR_Shadow_Warfare_Schnizel
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Integrate_OSI_Commandos
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Shadow_Warfare_Schnizel
+
+		prerequisite = {
+			focus = EUR_Shadow_Warfare_Schnizel
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Operation_Decapitation
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = EUR_Shadow_Warfare_Schnizel
+
+		prerequisite = {
+			focus = EUR_Integrate_OSI_Commandos
+		}
+		prerequisite = {
+			focus = EUR_Clearing_The_Path
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+				has_country_flag = {
+					flag = EUR_Schnizel_Spy_Military_1
+					days > 100
+				}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Spy_Military_2
+		}
+	}
+
+	focus = {
+		id = EUR_Interconnected_Communications
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Operation_Decapitation
+
+		prerequisite = {
+			focus = EUR_Operation_Decapitation
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Acquisition_Methods
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Operation_Decapitation
+
+		prerequisite = {
+			focus = EUR_Operation_Decapitation
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Lights_Out
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 4
+		relative_position_id = EUR_Shadow_Warfare_Schnizel
+
+		prerequisite = {
+			focus = EUR_Interconnected_Communications
+		}
+		prerequisite = {
+			focus = EUR_Acquisition_Methods
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = {
+				flag = EUR_Schnizel_Spy_Military_2
+				days > 100
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Spy_Military_3
+		}
+	}
+
+	focus = {
+		id = EUR_Coercing_Local_Guides
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Lights_Out
+
+		prerequisite = {
+			focus = EUR_Lights_Out
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Target_Painting
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Lights_Out
+
+		prerequisite = {
+			focus = EUR_Lights_Out
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Aid_From_Our_Benifactors
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = EUR_Lights_Out
+
+		prerequisite = {
+			focus = EUR_Target_Painting
+		}
+		prerequisite = {
+			focus = EUR_Coercing_Local_Guides
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = {
+				flag = EUR_Schnizel_Spy_Military_3
+				days > 100
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Deploy_Imperial_Engineers
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_An_Imperial_Storm
+
+		prerequisite = {
+			focus = EUR_An_Imperial_Storm
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Sky_Is_Ours
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_An_Imperial_Storm
+
+		prerequisite = {
+			focus = EUR_An_Imperial_Storm
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_First_Offensive
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_The_Sky_Is_Ours
+
+		prerequisite = {
+			focus = EUR_The_Sky_Is_Ours
+		}
+		prerequisite = {
+			focus = EUR_Deploy_Imperial_Engineers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = {
+				flag = EUR_Schnizel_Force_Military_1
+				days > 100
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Force_Military_2
+		}
+	}
+
+	focus = {
+		id = EUR_Airial_Resupply
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_The_First_Offensive
+
+		prerequisite = {
+			focus = EUR_The_First_Offensive
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Break_Open_The_Stockpiles
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_The_First_Offensive
+
+		prerequisite = {
+			focus = EUR_The_First_Offensive
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Bringing_In_The_Experts
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Break_Open_The_Stockpiles
+
+		prerequisite = {
+			focus = EUR_Break_Open_The_Stockpiles
+		}
+		prerequisite = {
+			focus = EUR_Airial_Resupply
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = {
+				flag = EUR_Schnizel_Force_Military_2
+				days > 100
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+			set_country_flag = EUR_Schnizel_Force_Military_3
+		}
+	}
+
+	focus = {
+		id = EUR_Loyalty_Officers
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Bringing_In_The_Experts
+
+		prerequisite = {
+			focus = EUR_Bringing_In_The_Experts
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Recon_In_Force
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Bringing_In_The_Experts
+
+		prerequisite = {
+			focus = EUR_Bringing_In_The_Experts
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Mother_Russia_Burns
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Recon_In_Force
+
+		prerequisite = {
+			focus = EUR_Loyalty_Officers
+		}
+		prerequisite = {
+			focus = EUR_Recon_In_Force
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = {
+				flag = EUR_Schnizel_Force_Military_1
+				days > 100
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Logistics_Supercapital_Of_The_East
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 10
+		y = 1
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		allow_branch = {has_country_flag = Industry_Schnizel_1}
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Modernizing_Our_Exports
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_The_Logistics_Supercapital_Of_The_East
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_World_Wide_Advertising_Campaign
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_The_Logistics_Supercapital_Of_The_East
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Negotiate_With_The_Britannian_Navy
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_The_Logistics_Supercapital_Of_The_East
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_International_Trade_And_Immunity_Organization
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 2
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_Modernizing_Our_Exports
+		}
+		prerequisite = {
+			focus = EUR_World_Wide_Advertising_Campaign
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Bases_For_Support
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 2
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_Negotiate_With_The_Britannian_Navy
+		}
+		prerequisite = {
+			focus = EUR_World_Wide_Advertising_Campaign
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Special_Administrative_City_Of_Okhosk
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = EUR_The_Logistics_Supercapital_Of_The_East
+
+		prerequisite = {
+			focus = EUR_The_International_Trade_And_Immunity_Organization
+		}
+		prerequisite = {
+			focus = EUR_Bases_For_Support
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Trans_Pacific_Lifeline
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 10
+		y = 1
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		allow_branch = {has_country_flag = Industry_Schnizel_2}
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Case_For_The_Ages
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_The_Trans_Pacific_Lifeline
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Bounty_of_the_Far_East
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_The_Trans_Pacific_Lifeline
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_From_Metals_to_Microprocessors
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_The_Trans_Pacific_Lifeline
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Signing_Better_Contracts
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 2
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_A_Case_For_The_Ages
+		}
+		prerequisite = {
+			focus = EUR_The_Bounty_of_the_Far_East
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Buy_Eurobrittanian
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 2
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_The_Bounty_of_the_Far_East
+		}
+		prerequisite = {
+			focus = EUR_From_Metals_to_Microprocessors
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Pillar_of_Britannian_Industry
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = EUR_The_Trans_Pacific_Lifeline
+
+		prerequisite = {
+			focus = EUR_Signing_Better_Contracts
+		}
+		prerequisite = {
+			focus = EUR_Buy_Eurobrittanian
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = Corden_off_Novosibirsk
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 10
+		y = 1
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		allow_branch = {has_country_flag = Industry_Schnizel_3}
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Relocate_The_Numbers
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = Corden_off_Novosibirsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Raise_The_City
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = Corden_off_Novosibirsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Begin_Renewal_Efforts
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = Corden_off_Novosibirsk
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Implement_Personal_Quotas
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 2
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = EUR_Relocate_The_Numbers
+		}
+		prerequisite = {
+			focus = EUR_Raise_The_City
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = EUR_Introduce_Britannian_Settlers
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 2
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = EUR_Raise_The_City
+		}
+		prerequisite = {
+			focus = EUR_Begin_Renewal_Efforts
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Rise_of_a_Phoenix
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = Corden_off_Novosibirsk
+
+		prerequisite = {
+			focus = EUR_Implement_Personal_Quotas
+		}
+		prerequisite = {
+			focus = EUR_Introduce_Britannian_Settlers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Britannian_Administration
+		icon = GFX_EUR_A_Britannian_Administration
+		cost = 1
+		x = -14
+		y = 1
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		allow_branch = {has_country_flag = EUR_Schnizel_Harsh}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Ship_In_The_Bureaucrats
+		icon = GFX_EUR_Ship_In_The_Bureaucrats
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_A_Britannian_Administration
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Clean_Out_The_Russians
+		icon = GFX_EUR_Clean_Out_The_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Britannian_Administration
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Our_Administrations_Future
+		icon = GFX_EUR_Our_Administrations_Future
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ship_In_The_Bureaucrats
+
+		prerequisite = {
+			focus = EUR_Ship_In_The_Bureaucrats
+		}
+		prerequisite = {
+			focus = EUR_Clean_Out_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Schnizels_Technocracy
+		icon = GFX_EUR_Schnizels_Technocracy
+		cost = 1
+		x = 4
+		y = 1
+		relative_position_id = EUR_Our_Administrations_Future
+
+		mutually_exclusive = {
+			focus = EUR_A_Britannian_Aristocracy
+		}
+
+		prerequisite = {
+			focus = EUR_Our_Administrations_Future
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Ship_In_Scientists_And_Engineers
+		icon = GFX_EUR_Ship_In_Scientists_And_Engineers
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Schnizels_Technocracy
+
+		prerequisite = {
+			focus = EUR_Schnizels_Technocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Encourage_Research_Institutions
+		icon = GFX_EUR_Encourage_Research_Institutions
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_Schnizels_Technocracy
+
+		prerequisite = {
+			focus = EUR_Schnizels_Technocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Districts_For_Professionals
+		icon = GFX_EUR_Districts_For_Professionals
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Encourage_Research_Institutions
+
+		prerequisite = {
+			focus = EUR_Encourage_Research_Institutions
+		}
+		prerequisite = {
+			focus = EUR_Ship_In_Scientists_And_Engineers
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Research_Sites_In_The_Arctic
+		icon = GFX_EUR_Research_Sites_In_The_Arctic
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Districts_For_Professionals
+
+		prerequisite = {
+			focus = EUR_Districts_For_Professionals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Open_The_Schnizel_Institute
+		icon = GFX_EUR_Open_The_Schnizel_Institute
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Districts_For_Professionals
+
+		prerequisite = {
+			focus = EUR_Districts_For_Professionals
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Open_The_Bureaucracy_To_The_Middle_Class
+		icon = GFX_EUR_Open_The_Bureaucracy_To_The_Middle_Class
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Research_Sites_In_The_Arctic
+
+		prerequisite = {
+			focus = EUR_Research_Sites_In_The_Arctic
+		}
+		prerequisite = {
+			focus = EUR_Open_The_Schnizel_Institute
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Britannian_Meritocracy
+		icon = GFX_EUR_Britannian_Meritocracy
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_Open_The_Bureaucracy_To_The_Middle_Class
+
+		prerequisite = {
+			focus = EUR_Open_The_Bureaucracy_To_The_Middle_Class
+		}
+		prerequisite = {
+			focus = EUR_An_End_To_Incompetence
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Rational_Culture
+		icon = GFX_EUR_Rational_Culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Schnizels_Technocracy
+
+		mutually_exclusive = {
+			focus = EUR_Technocratic_Darwinism
+		}
+
+		prerequisite = {
+			focus = EUR_Schnizels_Technocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Curb_Aristocratic_Privelage
+		icon = GFX_EUR_Curb_Aristocratic_Privelage
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Rational_Culture
+
+		prerequisite = {
+			focus = EUR_Rational_Culture
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Promote_The_Intelligent
+		icon = GFX_EUR_Promote_The_Intelligent
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Curb_Aristocratic_Privelage
+
+		prerequisite = {
+			focus = EUR_Curb_Aristocratic_Privelage
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_An_End_To_Incompetence
+		icon = GFX_EUR_An_End_To_Incompetence
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Promote_The_Intelligent
+
+		prerequisite = {
+			focus = EUR_Promote_The_Intelligent
+			focus = EUR_Paradise_For_Great_Men
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Technocratic_Darwinism
+		icon = GFX_EUR_Technocratic_Darwinism
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_Schnizels_Technocracy
+
+		mutually_exclusive = {
+			focus = EUR_Technocratic_Darwinism
+		}
+
+		prerequisite = {
+			focus = EUR_Schnizels_Technocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Replace_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Purge_The_Parasites_High_And_Low
+		icon = EUR_Purge_The_Parasites_High_And_Low
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Technocratic_Darwinism
+
+		prerequisite = {
+			focus = EUR_Technocratic_Darwinism
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Purge_The_Parasites_High_And_Low
+		icon = GFX_EUR_Purge_The_Parasites_High_And_Low
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Technocratic_Darwinism
+
+		prerequisite = {
+			focus = EUR_Technocratic_Darwinism
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Paradise_For_Great_Men
+		icon = GFX_EUR_Paradise_For_Great_Men
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Purge_The_Parasites_High_And_Low
+
+		prerequisite = {
+			focus = EUR_Purge_The_Parasites_High_And_Low
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Britannian_Aristocracy
+		icon = GFX_EUR_A_Britannian_Aristocracy
+		cost = 1
+		x = -4
+		y = 1
+		relative_position_id = EUR_Our_Administrations_Future
+
+		mutually_exclusive = {
+			focus = EUR_Schnizels_Technocracy
+		}
+
+		prerequisite = {
+			focus = EUR_Our_Administrations_Future
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Ship_In_Britannian_Nobles
+		icon = GFX_EUR_Ship_In_Britannian_Nobles
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Britannian_Aristocracy
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Aristocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Entice_The_Corporations
+		icon = GFX_EUR_Entice_The_Corporations
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_A_Britannian_Aristocracy
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Aristocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Resort_Construction_Boom
+		icon = GFX_EUR_Resort_Construction_Boom
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Ship_In_Britannian_Nobles
+
+		prerequisite = {
+			focus = EUR_Ship_In_Britannian_Nobles
+		}
+		prerequisite = {
+			focus = EUR_Entice_The_Corporations
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Luxury_Service_Investments
+		icon = GFX_EUR_Luxury_Service_Investments
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Resort_Construction_Boom
+
+		prerequisite = {
+			focus = EUR_Resort_Construction_Boom
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Open_The_Highland_Academy
+		icon = GFX_EUR_Open_The_Highland_Academy
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Resort_Construction_Boom
+
+		prerequisite = {
+			focus = EUR_Resort_Construction_Boom
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Aristocratic_Exchange_Programme
+		icon = GFX_EUR_Aristocratic_Exchange_Programme
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Luxury_Service_Investments
+
+		prerequisite = {
+			focus = EUR_Luxury_Service_Investments
+		}
+		prerequisite = {
+			focus = EUR_Open_The_Highland_Academy
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Darwinist_Principles
+		icon = GFX_EUR_Darwinist_Principles
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_A_Britannian_Aristocracy
+
+		mutually_exclusive = {
+			focus = EUR_Aristocratic_Principles
+		}
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Aristocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Replace_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Encourage_Ruthless_Competition
+		icon = GFX_EUR_Encourage_Ruthless_Competition
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Darwinist_Principles
+
+		prerequisite = {
+			focus = EUR_Darwinist_Principles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Rule_Of_The_Strong
+		icon = GFX_EUR_Rule_Of_The_Strong
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Encourage_Ruthless_Competition
+
+		prerequisite = {
+			focus = EUR_Encourage_Ruthless_Competition
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Aristocratic_Principles
+		icon = GFX_EUR_Aristocratic_Principles
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_A_Britannian_Aristocracy
+
+		mutually_exclusive = {
+			focus = EUR_Darwinist_Principles
+		}
+
+		prerequisite = {
+			focus = EUR_A_Britannian_Aristocracy
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Let_Everyone_Know_Their_Place
+		icon = GFX_EUR_Let_Everyone_Know_Their_Place
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Aristocratic_Principles
+
+		prerequisite = {
+			focus = EUR_Aristocratic_Principles
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Rule_Of_The_Entitled
+		icon = GFX_EUR_Rule_Of_The_Entitled
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Let_Everyone_Know_Their_Place
+
+		prerequisite = {
+			focus = EUR_Let_Everyone_Know_Their_Place
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Clean_Out_Russian_Culture
+		icon = GFX_EUR_Clean_Out_Russian_Culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Rule_Of_The_Strong
+
+		prerequisite = {
+			focus = EUR_Rule_Of_The_Strong
+			focus = EUR_Rule_Of_The_Entitled
+		}
+		
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Aristocratic_Dominance
+		icon = GFX_EUR_Aristocratic_Dominance
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_Clean_Out_Russian_Culture
+
+		prerequisite = {
+			focus = EUR_Clean_Out_Russian_Culture
+			focus = EUR_Aristocratic_Exchange_Programme
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Hybrid_Administration
+		icon = GFX_EUR_A_Hybrid_Administration
+		cost = 1
+		x = -14
+		y = 1
+		relative_position_id = EUR_Beginning_Of_The_End
+
+		prerequisite = {
+			focus = EUR_Beginning_Of_The_End
+		}
+		search_filters = {
+		}
+		allow_branch = {has_country_flag = EUR_Schnizel_Soft}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Transfer_Power_To_Civilian_Authorities
+		icon = GFX_EUR_Transfer_Power_To_Civilian_Authorities
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_A_Hybrid_Administration
+
+		prerequisite = {
+			focus = EUR_A_Hybrid_Administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Intergrate_The_Russians
+		icon = GFX_EUR_Intergrate_The_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Hybrid_Administration
+
+		prerequisite = {
+			focus = EUR_A_Hybrid_Administration
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Directional_Question
+		icon = GFX_EUR_A_Directional_Question
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Transfer_Power_To_Civilian_Authorities
+
+		prerequisite = {
+			focus = EUR_Transfer_Power_To_Civilian_Authorities
+		}
+		prerequisite = {
+			focus = EUR_Intergrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Integrate_The_Russians
+		icon = GFX_EUR_Integrate_The_Russians
+		cost = 1
+		x = -4
+		y = 1
+		relative_position_id = EUR_A_Directional_Question
+
+		mutually_exclusive = {
+			focus = EUR_A_Place_For_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_A_Directional_Question
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Open_Up_More_Jobs_To_Russians
+		icon = GFX_EUR_Open_Up_More_Jobs_To_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Company_Mergers
+		icon = GFX_EUR_Company_Mergers
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_More_Than_Just_Numbers
+		icon = GFX_EUR_More_Than_Just_Numbers
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Open_Up_More_Jobs_To_Russians
+
+		prerequisite = {
+			focus = EUR_Open_Up_More_Jobs_To_Russians
+		}
+		prerequisite = {
+			focus = EUR_Company_Mergers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Increasing_Russian_Living_Standards
+		icon = GFX_EUR_Increasing_Russian_Living_Standards
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_More_Than_Just_Numbers
+
+		prerequisite = {
+			focus = EUR_More_Than_Just_Numbers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Promote_Russian_Scientists
+		icon = GFX_EUR_Promote_Russian_Scientists
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_More_Than_Just_Numbers
+
+		prerequisite = {
+			focus = EUR_More_Than_Just_Numbers
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Highlight_The_Partnership
+		icon = GFX_EUR_Highlight_The_Partnership
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Increasing_Russian_Living_Standards
+
+		prerequisite = {
+			focus = EUR_Increasing_Russian_Living_Standards
+		}
+
+		prerequisite = {
+			focus = EUR_Promote_Russian_Scientists
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Enlighten_The_Russians
+		icon = GFX_EUR_Enlighten_The_Russians
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Show_The_Toil_Of_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Britannian_Culture_Classes
+		icon = GFX_EUR_Britannian_Culture_Classes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Enlighten_The_Russians
+
+		prerequisite = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Britannian_Culture_Classes
+		icon = GFX_EUR_Britannian_Culture_Classes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Enlighten_The_Russians
+
+		prerequisite = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Uplift_The_Russians
+		icon = GFX_EUR_Uplift_The_Russians
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Britannian_Culture_Classes
+
+		prerequisite = {
+			focus = EUR_Britannian_Culture_Classes
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Show_The_Toil_Of_The_Russians
+		icon = GFX_EUR_Show_The_Toil_Of_The_Russians
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_Integrate_The_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Enlighten_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Disregard_The_Honourary_Process
+		icon = GFX_EUR_Disregard_The_Honourary_Process
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Show_The_Toil_Of_The_Russians
+
+		prerequisite = {
+			focus = EUR_Show_The_Toil_Of_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+		icon = GFX_EUR_The_Beginning_Of_A_Wonderfull_Partnership
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Disregard_The_Honourary_Process
+
+		prerequisite = {
+			focus = EUR_Disregard_The_Honourary_Process
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Towards_Cultural_Harmony
+		icon = GFX_EUR_Towards_Cultural_Harmony
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+
+		prerequisite = {
+			focus = EUR_The_Beginning_Of_A_Wonderfull_Partnership
+			focus = EUR_Uplift_The_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Our_Russian_Brothers
+		icon = GFX_EUR_Our_Russian_Brothers
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_Towards_Cultural_Harmony
+
+		prerequisite = {
+			focus = EUR_Towards_Cultural_Harmony
+		}
+		prerequisite = {
+			focus = EUR_Highlight_The_Partnership
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_A_Place_For_Russians
+		icon = GFX_EUR_A_Place_For_Russians
+		cost = 1
+		x = 4 
+		y = 1
+		relative_position_id = EUR_A_Directional_Question
+
+		mutually_exclusive = {
+			focus = EUR_Integrate_The_Russians
+		}
+
+		prerequisite = {
+			focus = EUR_A_Directional_Question
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Promote_Domestic_Industry
+		icon = GFX_EUR_Promote_Domestic_Industry
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Integrate_Russian_Bureaucrats
+		icon = GFX_EUR_Integrate_Russian_Bureaucrats
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Legal_Protections_For_Russians
+		icon = GFX_EUR_Legal_Protections_For_Russians
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Promote_Domestic_Industry
+
+		prerequisite = {
+			focus = EUR_Promote_Domestic_Industry
+		}
+		prerequisite = {
+			focus = EUR_Integrate_Russian_Bureaucrats
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Fund_Russian_Settlements
+		icon = GFX_EUR_Fund_Russian_Settlements
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = EUR_Legal_Protections_For_Russians
+
+		prerequisite = {
+			focus = EUR_Legal_Protections_For_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Russian_Education_Drive
+		icon = GFX_EUR_Russian_Education_Drive
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Legal_Protections_For_Russians
+
+		prerequisite = {
+			focus = EUR_Legal_Protections_For_Russians
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_An_End_To_Segregation
+		icon = GFX_EUR_An_End_To_Segregation
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Fund_Russian_Settlements
+
+		prerequisite = {
+			focus = EUR_Fund_Russian_Settlements
+		}
+
+		prerequisite = {
+			focus = EUR_Russian_Education_Drive
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Allow_Russian_Culture
+		icon = GFX_EUR_Allow_Russian_Culture
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Young_Officers_Culture_Plan
+		}
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Get_More_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Stop_Cultural_Conversion_Plans
+		icon = GFX_EUR_Stop_Cultural_Conversion_Plans
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Allow_Russian_Culture
+
+		prerequisite = {
+			focus = EUR_Allow_Russian_Culture
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Leave_Them_Alone
+		icon = GFX_EUR_Leave_Them_Alone
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Stop_Cultural_Conversion_Plans
+
+		prerequisite = {
+			focus = EUR_Stop_Cultural_Conversion_Plans
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Young_Officers_Culture_Plan
+		icon = GFX_EUR_Young_Officers_Culture_Plan
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = EUR_A_Place_For_Russians
+
+		mutually_exclusive = {
+			focus = EUR_Allow_Russian_Culture
+		}
+
+		prerequisite = {
+			focus = EUR_A_Place_For_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+			has_country_flag = EUR_Schnizel_Young_Officers
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Hand_Local_Government_To_Russians
+		icon = GFX_EUR_Hand_Local_Government_To_Russians
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Young_Officers_Culture_Plan
+
+		prerequisite = {
+			focus = EUR_Young_Officers_Culture_Plan
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_The_National_Representation_Council
+		icon = GFX_EUR_The_National_Representation_Council
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = EUR_Hand_Local_Government_To_Russians
+
+		prerequisite = {
+			focus = EUR_Hand_Local_Government_To_Russians
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_No_Longer_Second_Class_Citizens
+		icon = GFX_EUR_No_Longer_Second_Class_Citizens
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = EUR_Leave_Them_Alone
+
+		prerequisite = {
+			focus = EUR_Leave_Them_Alone
+			focus = EUR_The_National_Representation_Council
+		}
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EUR_Russia_For_Russians
+		icon = GFX_EUR_Russia_For_Russians
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = EUR_An_End_To_Segregation
+
+		prerequisite = {
+			focus = EUR_An_End_To_Segregation
+		}
+		prerequisite = {
+			focus = EUR_No_Longer_Second_Class_Citizens
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	
+		completion_reward = {
+		}
+	}
+}

@@ -7,7 +7,7 @@ characters={
 		}
 		country_leader={
 		     desc = ""
-			ideology=marxist_lincolnism
+			ideology=technocratic_communism
 			traits={ }
 			expire = "2020.1.1"
 		}
@@ -20,7 +20,7 @@ characters={
 		}
 		country_leader={
 		     desc = ""
-			ideology=left_libertarianism
+			ideology=revolutionary_front
 			traits={ }
 			expire = "2020.1.1"
 		}
@@ -32,7 +32,7 @@ characters={
 		}
 		country_leader={
 		     desc = ""
-			ideology=social_democracy
+			ideology=trade_unionism
 			traits={ }
 			expire = "2020.1.1"
 		}
@@ -69,6 +69,18 @@ characters={
 		country_leader={
 		     desc = ""
 			ideology=national_conservatism
+			traits={ }
+			expire = "2020.1.1"
+		}
+	}
+
+	ind_groups={
+		name = "Industrial Groups (Kyoto Family)"
+		portraits={
+		}
+		country_leader={
+		     desc = ""
+			ideology=pat_conservatism
 			traits={ }
 			expire = "2020.1.1"
 		}
@@ -125,7 +137,7 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				autocracy_guy artist_prince
 			}
@@ -159,7 +171,7 @@ characters={
 		}
 		country_leader={
 		     desc = "POLITICS_AREA_DESC"
-			ideology=paternal_autocracy
+			ideology=britannian_vic
 			traits={ }
 			expire = "2020.1.1"
 		}
@@ -205,7 +217,7 @@ characters={
 			traits = {
 				autocracy_guy knight_one
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -240,7 +252,7 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				geass_connections
 			}
@@ -267,9 +279,9 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				oligarchy_guy corrupt_kleptocrat
+				authoritarian_guy corrupt_kleptocrat
 			}
 		}
 	}
@@ -293,9 +305,9 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				oligarchy_guy kyoto_house
+				authoritarian_guy kyoto_house
 			}
 		}
 	}
@@ -320,7 +332,7 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				autocracy_guy iron_fist
 			}
@@ -347,7 +359,7 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
 				autocracy_guy balanced_fist
 			}
@@ -374,9 +386,9 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 			traits  = {
-				oligarchy_guy purist_simpaty
+				authoritarian_guy purist_simpaty
 			}
 		}
 	}
@@ -404,7 +416,7 @@ characters={
 			    }
 				original_tag  = A11
 			}
-			cancel_if_invalid = no
+			#cancel_if_invalid = no
 		}
 	}
 
@@ -552,6 +564,26 @@ characters={
 			}
 		}
 	}
+
+	A11_admiral = {
+		name = "Pedro Sotomayor"
+		portraits = {
+			army = {
+				large = "gfx/leaders/A11/Portrait_Albania_King_Zog.dds"
+			}
+			civilian = {
+				large =  "gfx/leaders/A11/Portrait_Albania_King_Zog.dds"
+			}
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+		}
 	
 
+}
 }

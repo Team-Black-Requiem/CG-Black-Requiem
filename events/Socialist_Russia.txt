@@ -1,165 +1,1104 @@
+#NOTE Anything not Listed as these namespaces are either phase 2 events not sorted or old events I have yet to remove because I am not sure if they are vital
+add_namespace = SRU_Intro
+add_namespace = SRU_Sonya
+add_namespace = SRU_Luka
+add_namespace = SRU_Flavour
 add_namespace = SRU
 
-country_event = {  
-	id = SRU.1
-	title = SRU.1.t
-	desc = SRU.1.d
+country_event = { #The Revolutionaries Return To Russia 
+	id = SRU_Intro.1
+	title = SRU_Intro.1.t
+	desc = SRU_Intro.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
 	option = {
-		name = SRU.1.a
-		add_country_leader_trait = Daughter_of_communism
-		
+		name = SRU_Intro.1.a	
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		
     }     
 }
-country_event = {  
-	id = SRU.2
-	title = SRU.2.t
-	desc = SRU.2.d
+country_event = { #Luka Fuels Their Hate
+	id = SRU_Intro.2
+	title = SRU_Intro.2.t
+	desc = SRU_Intro.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
 	option = {
-		name = SRU.2.a
-		add_opinion_modifier = { target = LRU modifier = friendly }
-		LRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		
-		
+		name = SRU_Intro.2.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		
     } 
-	option = {
-		name = SRU.2.b
-		add_opinion_modifier = { target = LRU modifier = friendly }
-		LRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		add_opinion_modifier = { target = MRU modifier = friendly }
-		MRU = {
-		add_opinion_modifier = { target = SRU modifier = friendly }}
-		add_political_power = -20
-		
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-    }     
+   
 }
-country_event = {  
-	id = SRU.3
-	title = SRU.3.t
-	desc = SRU.3.d
+country_event = { #Sonya Promises The Future
+	id = SRU_Intro.3
+	title = SRU_Intro.3.t
+	desc = SRU_Intro.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = SRU.3.a
-		RUS = {
-		add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
-			}}
+		name = SRU_Intro.3.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		
     } 
-	option = {
-		name = SRU.3.b
-		add_political_power = -50
-		ai_chance = {
-			factor = 0
-		}
-		
-    }         
+
 }
 country_event = {  
-	id = SRU.4
-	title = SRU.4.t
-	desc = SRU.4.d
+	id = SRU_Intro.4
+	title = SRU_Intro.4.t
+	desc = SRU_Intro.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	option = {
-		name = SRU.4.a
-		RUS = {
-		add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 5000
-			}
-		add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 1000
-			}}
+	option = { #Sonya's Solution
+		name = SRU_Intro.4.a
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = 1
+		}
+		add_political_power = 50
+		add_stability = 0.02
 		
     } 
-	option = {
-		name = SRU.4.b
-		add_political_power = -50
+	option = { #Luka's Solution
+		name = SRU_Intro.4.b
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
-		
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = -1
+		}
+		570 ={
+			add_manpower = -1500
+		}
+		add_stability = -0.02
+		add_war_support = 0.05
     }         
 }
 country_event = {  
-	id = SRU.5
-	title = SRU.5.t
-	desc = SRU.5.d
+	id = SRU_Intro.5
+	title = SRU_Intro.5.t
+	desc = SRU_Intro.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
-	option = {
-		name = SRU.5.a ####Yes
-		SRU = { country_event = SRU.501 }
-		
+	option = { #Sonya's Solution
+		name = SRU_Intro.5.a 
 		ai_chance = {
-			factor = 100
+			base = 100
+		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = 1
+		}
+		country_event = {
+			id = SRU.84
+			days = 3 # Note from fri: pending days decided by User
 		}
 		
     } 
-	option = {
-		name = SRU.5.B 
-		
+	option = { #Luka's Solution
+		name = SRU_Intro.5.b		
 		ai_chance = {
-			factor = 0
+			base = 0
+		}
+		modify_country_flag = {
+			flag = SRU_sonya_vs_luka
+			value = -1
+		}
+		country_event = {
+			id = SRU.85
+			days = 3 # Note from fri: pending days decided by User
 		}
 		
     }    
 }
+country_event = { #Luka Politburo Victory 
+	id = SRU_Intro.6
+	title = SRU_Intro.6.t
+	desc = SRU_Intro.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Intro.6.a
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_Luka_In_Control
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_chekhovs_gun 
+		add_advisor_role = {
+				character = SRU_Luka_Zhukov
+				activate = yes
+				advisor = {
+					slot = head_of_government
+					cost = 150
+					idea_token = GFX # to add later
+				}
+			}
+    }     
+}
+country_event = { #Sonya Politburo Victory   
+	id = SRU_Intro.7
+	title = SRU_Intro.7.t
+	desc = SRU_Intro.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SRU_Intro.7.a 
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SRU_Sonya_In_Control
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SRU_to_grasp_the_future
+    } 
+}
+
+
+
+### Luka's Focus Tree
+country_event = { #Chekhov's gun
+	id = SRU_Intro.11
+	title = SRU_Intro.11.t
+	desc = SRU_Intro.11.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Intro.11.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { #Total War
+	id = SRU_Intro.14
+	title = SRU_Intro.14.t
+	desc = SRU_Intro.14.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Intro.14.a 
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -150
+		add_timed_idea = {
+			idea = SRU_expel_the_foreigners
+			days = 180
+		}
+	}
+	option = {
+		name = SRU_Intro.14.a 
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 150
+		add_timed_idea = {
+			idea = SRU_hire_the_foreigners
+			days = 180
+		}
+	}
+}
+
+country_event = { #Insanity in congress
+	id = SRU_Intro.21
+	title = SRU_Intro.21.t
+	desc = SRU_Intro.21.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU_Intro.21.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+#mending internal Divisions
+
+country_event = { #Mend Internal Divisions
+    id = SRU_Intro.52
+    title = SRU_Intro.52.t
+    desc = SRU_Intro.52.d
+
+    is_triggered_only = yes
+
+
+    option = {
+
+        name = SRU_Intro.52.a 
+        ai_chance = {
+            base = 100
+        }
+
+    }
+}
+
+country_event = { #Concessions to the Peoples Congress
+    id = SRU_Intro.53
+    title = SRU_Intro.53.t
+    desc = SRU_Intro.53.d
+
+    is_triggered_only = yes
+
+
+    option = {
+
+        name = SRU_Intro.53.a 
+        ai_chance = {
+            base = 100
+        }
+
+    }
+}
+country_event = { # We Might Find a Middle Ground
+    id = SRU_Intro.54
+    title = SRU_Intro.54.t
+    desc = SRU_Intro.54.d
+
+    is_triggered_only = yes
+
+
+    option = {
+
+        name = SRU_Intro.54.a 
+        ai_chance = {
+            base = 100
+        }
+
+    }
+}
+
+country_event = { # United We Stand
+    id = SRU_Intro.55
+    title = SRU_Intro.55.t
+    desc = SRU_Intro.55.d
+
+    is_triggered_only = yes
+
+
+    option = {
+
+        name = SRU_Intro.55.a 
+        ai_chance = {
+            base = 100
+        }
+
+    }
+}
+
+### GRAND EMBASSY EVENT CHAIN ###
+
+country_event = {
+	id = SRU_Intro.28
+	title = SRU_Intro.28.t
+	desc = SRU_Intro.28.d
+
+	is_triggered_only = yes
+   
+	option = {
+
+		name = SRU_Intro.28.a 
+		ai_chance = {
+			base = 100
+		}
+	MRU = {country_event = MRU.29}
+	}
+	
+}
+
+country_event = {
+	id = SRU_Intro.29
+	title = SRU_Intro.29.t
+	desc = SRU_Intro.29.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU_Intro.29.a 
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+			
+		}
+	
+		MRU = {country_event = MRU.30}
+}
+	option = {
+
+		name = SRU_Intro.29.b
+		ai_chance = {
+			base = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		MRU = {country_event = MRU.30}
+}
+
+	option = {
+
+		name = SRU_Intro.29.c 
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+		MRU = {country_event = MRU.30}
+}
+	
+}
+
+
+country_event = {
+	id = SRU_Intro.30
+	title = SRU_Intro.30.t
+	desc = SRU_Intro.30.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU_Intro.30.a 
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+		MRU = {country_event = MRU.31}
+}
+
+	option = {
+
+		name = SRU_Intro.30.b
+		ai_chance = {
+		    base = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		MRU = {country_event = MRU.31}
+}
+
+	option = {
+
+		name = SRU_Intro.30.c 
+		ai_chance = {
+			base = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+	
+		MRU = {country_event = MRU.31}
+}
+	
+}
+
+
+country_event = {
+	id = SRU_Intro.31
+	title = SRU_Intro.31.t
+	desc = SRU_Intro.31.d
+   
+	is_triggered_only = yes
+    
+	option = {
+
+		name = SRU_Intro.31.a 
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+	
+		MRU = {country_event = MRU.32}
+}
+
+	option = {
+
+		name = SRU_Intro.31.b
+		ai_chance = {
+			base = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+	
+		MRU = {country_event = MRU.32}
+}
+
+	option = {
+
+		name = SRU_Intro.31.c 
+		ai_chance = {
+			base = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+
+		MRU = {country_event = MRU.32}
+}
+}
+
+
+country_event = {
+	id = SRU_Intro.32
+	title = SRU_Intro.32.t
+	desc = SRU_Intro.32.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU_Intro.32.a 
+		ai_chance = {
+			base = 100
+		}
+	     modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		}
+		MRU = {country_event = MRU.33}
+}
+
+	option = {
+
+		name = SRU_Intro.32.b
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+		MRU = {country_event = MRU.33}
+}
+
+	option = {
+
+		name = SRU_Intro.32.c 
+		ai_chance = {
+			base = 100
+		}
+	 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		MRU = {country_event = MRU.33}
+}
+}
+
+
+country_event = {
+	id = SRU_Intro.33
+	title = SRU_Intro.33.t
+	desc = SRU_Intro.33.d
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = SRU_Intro.33.a 
+		ai_chance = {
+			base = 100
+		}
+	    modify_country_flag = {
+			flag = Grand_Embassy
+			value = 3
+		
+	}
+	MRU = {country_event = MRU.34}
+}
+
+	option = {
+
+		name = SRU_Intro.33.b
+		ai_chance = {
+			base = 100
+		}
+		modify_country_flag = {
+			flag = Grand_Embassy
+			value = 0
+		}
+		MRU = {country_event = MRU.34}
+}
+
+	option = {
+
+		name = SRU_Intro.33.c 
+		ai_chance = {
+			base = 100
+		}
+		 modify_country_flag = {
+			flag = Grand_Embassy
+			value = -3
+		}
+		MRU = {country_event = MRU.34}
+	}	
+	
+}
+
+
+### Sonya Military Events ###
+
+country_event = { #Peasant Militias
+	id = SRU_Intro.44
+	title = SRU_Intro.44.t
+	desc = SRU_Intro.44.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.44.a 
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Spirit of the People
+	id = SRU_Intro.45
+	title = SRU_Intro.45.t
+	desc = SRU_Intro.45.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.45.a 
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Mastering Knightmare Production
+	id = SRU_Intro.48
+	title = SRU_Intro.48.t
+	desc = SRU_Intro.48.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.48.a 
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Red Army
+	id = SRU_Intro.49
+	title = SRU_Intro.49.t
+	desc = SRU_Intro.49.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.49.a 
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+country_event = { #Red War Machine
+	id = SRU_Intro.50
+	title = SRU_Intro.50.t
+	desc = SRU_Intro.50.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.50.a 
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+
+### Politburo Events ###
+
+country_event = { #Establish The Political Commissariat
+	id = SRU_Intro.52
+	title = SRU_Intro.52.t
+	desc = SRU_Intro.52.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.52.a 
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.15
+	}
+}
+
+country_event = { #Establish The C.S.S
+	id = SRU_Intro.53
+	title = SRU_Intro.53.t
+	desc = SRU_Intro.53.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.53.a 
+		ai_chance = {
+			base = 100
+		}
+		create_intelligence_agency = {
+			name = "Committe for State Security"
+			icon = GFX_intelligence_agency_logo_agency
+		}
+	}
+}
+
+country_event = { #Establish The Cheka
+	id = SRU_Intro.54
+	title = SRU_Intro.54.t
+	desc = SRU_Intro.54.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.54.a 
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = SRU_Cheka
+	}
+}
+
+country_event = { #Peoples Congress
+	id = SRU_Intro.55
+	title = SRU_Intro.55.t
+	desc = SRU_Intro.55.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.55.a 
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.15
+		add_ideas = SRU_Peoples_Congress
+	}
+}
+
+### The Jacobin Army Events ###
+
+
+### Zaytsev Vision Events ###
+
+country_event = { #The Economic Heart
+	id = SRU_Intro.69
+	title = SRU_Intro.69.t
+	desc = SRU_Intro.69.d
+
+	is_triggered_only = yes
+    
+	
+	option = {
+		 
+		name = SRU_Intro.69.a 
+		ai_chance = {
+			base = 100
+		}
+		swap_ideas = {
+			remove_idea = SRU_Zaytsev_Vision_2
+			add_idea = SRU_The_Economic_Heart
+		}
+	}
+}
+
+### Socialist Leadup Focuses (Yes I know these should be at the begining but changing numbers mid way is not worth it) 
+# Note from fris: Isn't this the same as event 1? also the focus still leads to event 1
+
+country_event = { #Revolution Once More
+	id = SRU.83
+	title = SRU.83.t
+	desc = SRU.83.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.81.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
 country_event = {  
-	id = SRU.501
-	title = SRU.501.t
-	desc = SRU.501.d
+	id = SRU.84
+	title = SRU.84.t
+	desc = SRU.84.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	
 	
-	option = {
-		name = SRU.501.a
-		diplomatic_relation = { country = LRU relation = non_aggression_pact }
-		
+	option = { #Sonya's Event
+		name = SRU.84.a 
 		ai_chance = {
-			factor = 100
+			base = 100
+		}
+    } 
+}
+country_event = {  
+	id = SRU.85
+	title = SRU.85.t
+	desc = SRU.85.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Luka's Event
+		name = SRU.85.a		
+		ai_chance = {
+			base = 0
+		}
+    }    
+}
+
+#old events that user slaughtered for the revolution >:C
+
+country_event = { #March of the Revolution
+	id = SRU_Sonya_Phase_One.1
+	title = SRU_Sonya_Phase_One.1.t
+	desc = SRU_Sonya_Phase_One.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU_Sonya_Phase_One.1.a
+		ai_chance = {
+			base = 100
 		}
 		
-    }     
+	}
+}
+
+country_event = { #Politburo War Powers
+	id = SRU.87
+	title = SRU.87.t
+	desc = SRU.87.d
+
+	is_triggered_only = yes
+
+	option = {
+		
+		name = SRU.87.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+
+
+### Sonya Economic Events Phase 2###
+
+country_event = { #SRU_transforming_the_economy
+	id = SRU.104
+	title = SRU.104.t
+	desc = SRU.104.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.104.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_utopian_economic_push
+	id = SRU.105
+	title = SRU.105.t
+	desc = SRU.105.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.105.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_the_revisionists_reforms
+	id = SRU.106
+	title = SRU.106.t
+	desc = SRU.106.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.106.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #SRU_infastructure_for_the_future
+	id = SRU.107
+	title = SRU.107.t
+	desc = SRU.107.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Increase railway budget"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Increased_Railway_Budget
+			days = 365
+		}
+	}
+	option = {
+		name = "Focus on building highways"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Higway_Building_Focus
+			days = 365
+		}
+	}
+}
+country_event = { #SRU_dealing_with_the_hidden_market
+	id = SRU.108
+	title = SRU.108.t
+	desc = SRU.108.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Undertake violent campaigns against marketeers"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Anti_Market_Campaign
+			days = 180
+		}
+	}
+	option = {
+		name = "Let the Militsiya take the lead"
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = SRU_Market_Investigations
+			days = 180
+		}
+	}	
+	option = {
+		name = "Keep it this way for now, less of a hassle..."
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+country_event = { #SRU_investment_guidelines
+	id = SRU.109
+	title = SRU.109.t
+	desc = SRU.109.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Keep the guidelines unchanged"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
+	}
+	option = {
+		name = "Loosen Risk Criteria"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SRU_Risky_Gosbank_Investments
+			days = 200
+		}
+	}
+}
+country_event = { #SRU_profit_incentives
+	id = SRU.110
+	title = SRU.110.t
+	desc = SRU.110.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = "Allow certain institutions to remove pay caps"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -150
+		add_timed_idea = {
+			idea = SRU_Deregulated_Pay_Levels
+			days = 250
+		}
+	}
+	option = {
+		name = "Push through a trial of the idea"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SRU_Pay_Incentive
+			days = 250
+		}
+	}	
+	option = {
+		name = "Let's not try this idea"
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 50
+	}
+}
+
+### Sonya Economic Events Phase 2###
+
+country_event = { #The Red Army Plan
+	id = SRU.111
+	title = SRU.111.t
+	desc = SRU.111.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.111.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Quantity Has It's Own Quality
+	id = SRU.112
+	title = SRU.112.t
+	desc = SRU.112.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.112.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Founding The Knightmare Corp
+	id = SRU.113
+	title = SRU.113.t
+	desc = SRU.113.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.113.a 
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #Military Perfectionism
+	id = SRU.114
+	title = SRU.114.t
+	desc = SRU.114.d
+
+	is_triggered_only = yes
+   
+	option = {
+		name = SRU.114.a 
+		ai_chance = {
+			base = 100
+		}
+	}
 }

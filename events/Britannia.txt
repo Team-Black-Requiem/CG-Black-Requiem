@@ -75,7 +75,7 @@ country_event = {  #death of Marianne
 		add_political_power = -50
 		add_manpower = -1
 				add_popularity = {
-    ideology = ultra_nationalism
+    ideology = BR_supremacist
     popularity = 0.03
 	}
 		
@@ -115,7 +115,10 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		
+		create_intelligence_agency = {
+			name = "OSI"
+			icon = GFX_intelligence_agency_logo_agency
+		}
     } 
 }      
 
@@ -221,74 +224,7 @@ country_event = {
 	
 }
 
-country_event = {  
-	id = BRT.6
-	title = BRT.6.t
-	desc = BRT.6.d
-	picture = GFX_BRT_chi_flag
-	fire_only_once = yes
-	is_triggered_only = yes
 
-    mean_time_to_happen = { days = 1 }
-	 
-	
-	
-		option = {	
-		name = BRT.6.b
-		add_political_power = -50
-		add_popularity = {
-    ideology = autocracy
-    popularity = -0.10
-	}
-		white_peace = PHI
-				 						hidden_effect = {
-	     CHI = {
-         puppet = PHI
-          }
-		  PHI = {
-    add_popularity = { ideology = autocracy popularity = 0.80 }
-    add_popularity = { ideology = authoritarian_democracy popularity = 0.25 }
-	add_popularity = { ideology = ultra_nationalism popularity = 0.10 }
-	add_popularity = { ideology = moderate_liberalism popularity = 0.03 }
-	add_popularity = { ideology = moderate_socialism popularity = 0.02 }
-
-    set_politics = {
-        ruling_party = autocracy
-        last_election = "1936.5.16"
-        election_frequency = 48
-        elections_allowed = no
-    }
- }
-
-        }
-		
-		ai_chance = {
-			factor = 80
-		}
-		
-		
-    }
-
-	option = {	
-		name = BRT.6.a
-		add_political_power = 50
-		add_popularity = {
-    ideology = autocracy
-    popularity = 0.05
-	}
-	declare_war_on = {
-		target = CHI
-		type = annex_everything
-	}
-		
-		ai_chance = {
-			factor = 0
-		}
-		
-		
-    }
-	
-}
 
 country_event = {  
 	id = BRT.7
@@ -438,8 +374,6 @@ country_event = {  #Total victory against Japan - Establish Area
 		option = {
 		name = BRT.10.a
 		load_focus_tree = britannia_focus_2
-
-	
 		
 
 		ai_chance = {
@@ -454,24 +388,22 @@ country_event = {  #Total victory against Japan - Establish Area
 			inherit_technology = BRT
 			set_variable = { A11_Chosen_State = 1 }
 			BRT = {
-	set_autonomy = {
-		target = A11
-		autonomous_state = area_reformation
-	}
-	}
+				set_autonomy = {
+				target = A11
+				autonomous_state = area_reformation
+				}
+			}
 		##Dynamic Initial Modifiers
 		set_variable = {
 			var = post_war_chaos
 			value = 0
 		}
-
 		A11_resistance_setup = yes
-		
+	
 		set_variable = {
 			var = economic_slump
 			value = 0
 		}	
-
 		set_variable = {
 			var = demographic_chaos
 			value = 0
@@ -479,7 +411,6 @@ country_event = {  #Total victory against Japan - Establish Area
 		add_dynamic_modifier = { modifier = rampant_chaos_area_11 scope = A11 }
 		add_dynamic_modifier = { modifier = economic_collapse_area_11 scope = A11 }
 		add_dynamic_modifier = { modifier = demographic_death_area_11 scope = A11 }
-
 		########
 		transfer_state = 555
 		transfer_state = 536
@@ -498,6 +429,7 @@ country_event = {  #Total victory against Japan - Establish Area
 		transfer_state = 942
 		load_oob = "A11_START"
 		load_oob = "A11_NAVAL"
+		change_tag_from = JAP 	#this should kick a Japan player into A11, might cause a false game-over
 		}
 		
 	}	
@@ -505,6 +437,9 @@ country_event = {  #Total victory against Japan - Establish Area
     }
 	option = {	
 		name = BRT.10.b
+		trigger = {
+			JAP = {is_ai = yes}
+		}
 		load_focus_tree = britannia_focus_2
 
 		ai_chance = {
@@ -631,7 +566,7 @@ country_event = { #VV Things
 	option = {
 		name = BRT.13.a
 		BRT = {
-			activate_advisor = BRT_VV_Exotic
+			activate_advisor = BRT_VV_idea
 		}
 	}
 }
@@ -647,10 +582,10 @@ fire_only_once = yes
 option = {
 	name = BRT.14.a
 	BRT = {
-		activate_advisor = BRT_exotic_interior_1
+		activate_advisor = BRT_generic_general_1_idea
 	}
 	BRT = {
-		activate_advisor = BRT_odysseus_Exotic
+		activate_advisor = BRT_odysseus_idea
 	}
 }
 }
@@ -665,25 +600,18 @@ country_event = {  #Odysseus is no more
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	 
-	
-	
-		option = {	
-		name = BRT.15.a
-		completion_reward = {
-			BRT = {
-				retire_character = BRT_odysseus_Exotic
-			}
+	option = {	
+	name = BRT.15.a
+
+		BRT = {
+			deactivate_advisor = BRT_odysseus_idea
+		}
 		add_stability = -0.05
 		add_political_power = -30
 
 		ai_chance = {
 			factor = 20
 		}
-		
-		
-    }
-
 	}	
 	
 }
@@ -811,7 +739,7 @@ country_event = {  #Paris Meeting
 		name = BRT.20.a
 		add_command_power = 50	
 		add_popularity = {
-			ideology = moderate_conservatism
+			ideology = BR_conservatism
 			popularity = 0.02
 		}
 
@@ -853,7 +781,7 @@ country_event = {  #Luoyang Meeting
 		name = BRT.21.a
 
 		add_popularity = {
-			ideology = authoritarian_democracy
+			ideology = BR_authoritarian
 			popularity = 0.02
 		}
    
@@ -895,7 +823,7 @@ is_triggered_only = yes
 
 	BRT_schneizel_influence_low = yes
 	add_popularity = {
-		ideology = ultra_nationalism
+		ideology = BR_supremacist
 		popularity = -0.02
 	}
 	add_stability = 0.01
@@ -915,7 +843,7 @@ option = {
 	BRT_guinevere_influence_low = yes
 
 	add_popularity = {
-		ideology = ultra_nationalism
+		ideology = BR_supremacist
 		popularity = 0.02
 	}
 	add_war_support = 0.01
@@ -1244,6 +1172,7 @@ country_event = {   #Schneizel Wins
 
 	option = {
 		name = BRT.30.a	
+		set_country_flag = BRT_White_Prince
 
 		ai_chance = {
 			factor = 70
@@ -1767,8 +1696,10 @@ is_triggered_only = yes
 option = {
 	name = BRT.59.a
 	BRT = {
-		remove_idea = BRT_Purge_Navy_Phase_5
-		remove_idea = BRT_Purge_Army_Phase_4
+		remove_ideas = {
+			BRT_Purge_Navy_Phase_5
+			BRT_Purge_Army_Phase_4
+		}
 	}
 	ai_chance = {
 		factor = 70
@@ -1955,4 +1886,72 @@ country_event = {
 	}
 }
 	
+country_event = {  
+	id = BRT.67 ####Leasing our coastline from the EUR
+	title = BRT.67.t
+	desc = BRT.67.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = BRT.67.a
+		ai_chance = {
+			factor = 100
+        } 	
+        BRT ={
+			diplomatic_relation = {
+			country = EUR
+			relation = docking_rights
+			active = yes
+		}
+	    }
+		EUR = {
+		863 = {
+		set_building_level ={
+		type = naval_base
+		level = 10
+		instant_build = yes
+		   province = 12551
+	}
+		set_building_level ={
+		type = coastal_bunker
+		level = 5
+		instant_build = yes
+		   province = 12551
+	}
+	}
+	}
+	}
+	option = {
+		name = BRT.67.b
+		ai_chance = {
+			factor = 0 # 0 for testing have to talk to sidd for the odds.
+			# the code could be:
+
+			#ai_chance = {
+				#base = 100
+				#modifier = {
+					#factor = 0.5
+					#has_opinion = {
+						#target = EUR
+						#value > 50
+					#}
+				#}
+			#	modifier = {
+			#		factor = 0.3
+			#		has_opinion = {
+			#			target = EUR
+			#			value > 80
+			#		}
+			#	}
+			#	modifier = {
+			#		factor = 0.1
+			#		has_opinion = {
+			#			target = EUR
+			#			value = 100
+			#		}
+			#	}
+			}
+			
+		}
+	}
 

@@ -10,14 +10,14 @@ set_stability = 0.5
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	engineer_company_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	support_equip = 1
+	support_equip_tech = 1
 }
 
 if = {
@@ -41,30 +41,26 @@ if = {
 	}
 }
 
-FRA = {
-	set_autonomy = {
-		target = RUS
-		autonomous_state = eu_inner_sphere
-	}
-}
-
 set_convoys = 700
 
-
+recruit_character = RUS_vladislav
 set_politics = {
-	ruling_party = authoritarian_democracy
+	ruling_party = BR_paternalism
 	last_election = "2008.5.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	moderate_socialism = 11
-	moderate_conservatism = 17
-	moderate_liberalism = 11
-	authoritarian_democracy = 21
-	totalitarian_socialism = 17
-	hardline_socialism = 10
-	ultra_nationalism =  13
+	BR_progressive = 11
+	BR_conservatism = 18
+	BR_liberalism = 6
+	BR_authoritarian = 15
+	BR_paternalism = 32
+	BR_vanguardist = 4
+	BR_revolutionary = 4
+	BR_socialism = 5
+	BR_supremacist =  4
+	BR_autocracy = 1
 }
 
 add_ideas = {
@@ -75,7 +71,7 @@ RUS_Corrupt_government
 RUS_Russian_nationalism
 RUS_low_level_education
 RUS_Economical_crisis
-#RUS_EU_loans
+RUS_EU_loans
 }
 
 
@@ -86,7 +82,7 @@ create_country_leader = {
 	desc = "POLITICS_CHARLES_DESC"
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
-	ideology = social_conservatism
+	ideology = social_democracy
 	traits = {
 	}
 }
@@ -111,11 +107,22 @@ create_country_leader = {
 	}
 }
 
+#create_country_leader = {
+#	name = "Vladislav Zakharov"
+#	desc = "POLITICS_ZAKHAROV_DESC"
+#	picture = "GFX_portrait_RUS_vladislav"
+#	expire = "2030.1.1"
+#	ideology = military_dictatorship
+#	traits = {
+#	}
+#}
+
 
 recruit_character = RUS_officer_2
 recruit_character = RUS_Chernov
 recruit_character = RUS_Bulganin
 recruit_character = RUS_Conovalovs
+recruit_character = RUS_generic_army_chief_2
 recruit_character = RUS_gen_intelligence
 recruit_character = RUS_generic_general_3
 recruit_character = RUS_generic_general_1
@@ -128,7 +135,28 @@ recruit_character = RUS_generic_army_chief_3
 recruit_character = RUS_generic_navy_chief
 recruit_character = RUS_generic_air_chief
 recruit_character = RUS_vladislav
+recruit_character = RUS_schmo
+recruit_character = RUS_Jschmo
+recruit_character = RUS_JJschmo
+recruit_character = EIZ_Steel_Fox
+recruit_character = EIZ_Lieutenant_Colonel_Rikkert_Durenik
 
-
-
-
+recruit_character = EIZ_military_council
+recruit_character = EIZ_otto_van_hollen
+recruit_character = EIZ_vlad_soyus
+recruit_character = EIZ_philipie_allard
+recruit_character = EIZ_chapelle
+recruit_character = EIZ_generic_air
+recruit_character = EIZ_natasha
+recruit_character = EIZ_allard
+recruit_character = EIZ_chapelle
+recruit_character = EIZ_horthy
+recruit_character = EIZ_pierre
+recruit_character = EIZ_oskar
+recruit_character = EIZ_frederica
+recruit_character = EIZ_lyon
+recruit_character = EIZ_conroy
+recruit_character = EIZ_pablo
+recruit_character = EIZ_wanda
+recruit_character = EIZ_martin
+recruit_character = EIZ_Right_Man_For_The_Job

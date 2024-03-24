@@ -1,35 +1,255 @@
 characters = {
 
-	EIZ_Military_Council={
-		name="Council for Russian Liberation"
+	EIZ_military_council = {
+		name= "Council for Russian Liberation"
 		portraits={
-			civilian={
-				large="GFX_portrait_EIZ_"
+			civilian = {
+				large="GFX_portrait_EIZ_Military_Council"
+			}
+
+		army = {
+				large = "GFX_portrait_EIZ_Military_Council"
 			}
 		}
-		country_leader={
-			desc = "When the Russian Civil War began, the collective body of the EU rushed to the aid of their friends in the Government. This body is comprised of Generals and Politicians united towards the goal of liberating Russia!	"
-			ideology=military_dictatorship
-			traits={  }
-			expire="2020.1.1.1"
-			id = -1
+		
+		country_leader = {
+			desc = "When the Russian Civil War began, the collective body of the EU rushed to the aid of their friends in the Government. This body is comprised of Generals and Politicians united towards the goal of liberating Russia!"
+			ideology = military_dictatorship
+			traits={}
+			expire= "3000.01.01.01"
 		}
 	}
 
+	EIZ_lyon = {
+        name= "Alexander C. Lyon"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EIZ/Alexander_Lyon.dds"
+			}
+			army = {
+				large = "gfx/leaders/EIZ/Alexander_Lyon.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALEXANDER_LYON_DESC"
+			ideology = paternal_autocracy
+			traits = {
+			}
+			expire = "3000.01.01.01"
+		}
+	}
+
+	EIZ_oskar = {
+        name= "Oskar Von Mendel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EIZ/Oskar_Mendel.dds"
+			}
+			army = {
+				large = "gfx/leaders/EIZ/Oskar_Mendel.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_OSKAR_MENDEL_DESC"
+			ideology = social_conservatism
+			traits = {
+			}
+			expire = "3000.01.01.01"
+		}
+	}
+
+	EIZ_frederica = {
+        name= "Frederica Schröder"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EIZ/fredericka.dds"
+			}
+			army = {
+				large = "gfx/leaders/EIZ/fredericka.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FREDERICA_SCHRODER_DESC"
+			ideology = market_liberalism
+			traits = {
+			}
+			expire = "3000.01.01.01"
+		}
+	}
+	
+
+EIZ_natasha= {
+		name = "Natasha Soronova"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Natasha_Soronova.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Natasha_Soronova.dds"
+			}
+		}
+		corps_commander = {
+		
+			traits = { infantry_officer}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+}
+EIZ_allard = {
+		name = "Philipie Allard"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Philipie_Allard.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Philipie_Allard.dds"
+			}
+		}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+}
 }
 
-EIZ_generic_air={
-		name=Air Marshal Zastrov 
+EIZ_chapelle = {
+		name = "Aloïs Chapelle"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Alois_Chappelle.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Alois_Chappelle.dds"
+			}
+		}
+		corps_commander = {
+			traits = {panzer_leader}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+}
+}
+
+EIZ_horthy = {
+		name = "Alberd Von Horthy"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Alberd_Von_Horthy.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Alberd_Von_Horthy.dds"
+			}
+		}
+		corps_commander = {
+			traits = {infantry_officer}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+}
+}
+
+EIZ_pierre = {
+		name = "Charlotte Pierre"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Charlotte_Pierre.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Charlotte_Pierre.dds"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+}
+}
+
+EIZ_conroy = {
+		name = "Kevin Conroy"
+		portraits = {
+			army = {
+				large = "gfx/leaders/EIZ/Kevin_Conroy.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/EIZ/Kevin_Conroy.dds"
+			}
+		}
+			navy_leader={
+			traits={ gentlemanly naval_lineage}
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = EIZ_generic_navy_idea
+			allowed = {
+				country_exists = RUS has_cosmetic_tag = EIZ
+			}
+			traits = {
+				decisive_battle_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+EIZ_pablo={
+		name = "Juan Pablo"
 		portraits={
 			army={
-				small="GFX_idea_BRT_generic_air"
+				small="gfx/interface/ideas/EIZ/EIZ_advisor.dds"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = EIZ_pablo_idea
+			ledger = air
+			allowed = {
+				country_exists = RUS has_cosmetic_tag = EIZ
+			}
+			traits = {
+				static_defence_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+}
+	
+
+     EIZ_wanda= {
+		name= "Wanda Broz"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
 			}
 		}
 		advisor={
 			slot = air_chief
-			idea_token = BRT_generic_air_idea
+			idea_token = EIZ_generic_air_idea
 			allowed = {
-				original_tag = BRT
+				country_exists = RUS has_cosmetic_tag = EIZ
 			}
 			traits = {
 				naval_aviation_doctrine
@@ -40,3 +260,201 @@ EIZ_generic_air={
 			}
 		}
 	}
+
+	EIZ_martin={
+		name= "Martin Kristiansen"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = army_chief
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				country_exists = RUS has_cosmetic_tag = EIZ
+			}
+			traits = {
+				armoured_spearhead_doctrine
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+    
+	EIZ_martin={
+		name= "User"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = minister_of_interior
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EIZ_martin={
+		name= "Bob"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+			slot = economy_minister
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	EIZ_German_Minds={
+		name= "Sidd"
+		portraits={
+			army={
+				small= "gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+		advisor ={
+		slot = economy_minister
+			idea_token = EIZ_generic_army_chief
+			allowed = {
+				has_completed_focus = EIZ_german_minds
+			}
+			traits = {
+				German_minds_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	EIZ_Hatem_Ganim = {
+		name = EIZ_Hatem_Ganim
+		portraits = {
+			civilian = {
+				small=""
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			idea_token = EIZ_generic_minister
+			allowed  = {
+				original_tag  = RUS has_cosmetic_tag = EIZ
+			}
+			
+			traits  = {
+			
+			}
+		}
+	}
+
+	EIZ_Nasr_Au = {
+		name = EIZ_Nasr_Au
+		portraits = {
+			civilian = {
+				small=""
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = minister_of_interior
+			idea_token = EIZ_generic_minister
+			allowed  = {
+				original_tag  = RUS has_cosmetic_tag = EIZ
+			}
+		
+			traits  = {
+			
+			}
+		}
+	}
+
+	EIZ_Steel_Fox={
+		name= "Steel fox"
+		portraits={
+			army={
+				large="gfx/interface/ideas/arthur_the_generic.dds"
+			}
+		}
+	}
+	EIZ_Right_Man_For_The_Job = {
+		name = "PLACEHOLDER"
+		portraits = {
+			#
+		}
+		navy_leader = {
+			traits = {
+				ground_pounder
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+			visible = {
+				has_completed_focus = EIZ_Right_Man_For_The_Job
+			}
+		}
+		## Is hidden on purpose, gets Admiral role added on focus. - Ruskie
+	}
+	EIZ_Lieutenant_Colonel_Rikkert_Durenik={
+		name="Rikkert_Durenik"
+		portraits={
+			army={
+				large="GFX_portrait_Lieutenant_Colonel_Rikkert_Durenik.dds" 
+			}
+		}
+	}
+
+	EIZ_Wittmann ={
+		name="Hans_Wittmann"
+		portraits={
+			army={
+				large="GFX_portrait_Lieutenant_Colonel_Rikkert_Durenik.dds" 
+			}
+		}
+		corps_commander = {
+			visible = {
+				has_completed_focus = EIZ_Advanced_Tank_Warfare
+			}
+			traits = {
+				panzer_leader
+				combined_arms_expert
+				panzer_expert
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+		}
+	
+	}
+
+
+}

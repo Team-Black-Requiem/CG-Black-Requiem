@@ -1,6 +1,8 @@
 technologies = {
 
 	tank_design = { 
+
+
 		on_research_complete = {
 			custom_effect_tooltip = UNLOCK_DIVISION_TANK_TEMPLATE
 		}
@@ -26,9 +28,9 @@ technologies = {
 			}
 		}
 
-		categories = {
-			MBT_armour
-		}
+		
+		
+		categories = { MBT_armour }
 	}
 
 
@@ -86,7 +88,7 @@ technologies = {
 
 	
 		path = {
-			leads_to_tech = impr_base_1 
+			leads_to_tech = impr_base_1
 			research_cost_coeff = 1
 		}
 
@@ -108,10 +110,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = -10
 			
 			modifier = {
-				factor = 5
+				factor = 2
 				date > "2011.1.1"
 			}
 		}
@@ -121,7 +123,7 @@ technologies = {
 		}
 	}
 
-	impr_base_1 = { # Improved Mobility
+	impr_base_1 = {
 
 		category_all_armor = {
 			maximum_speed = 0.05
@@ -137,7 +139,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
 		}
 		
 		categories = {
@@ -145,13 +147,15 @@ technologies = {
 		}
 	}
 
-	impr_base_2 = { # Additional Machine Guns
+	impr_base_2 = {
 
 		category_all_armor = {
 			soft_attack = 0.03
 			breakthrough = 0.01
 		}
 
+
+		
 		research_cost = 2
 		start_year = 2011
 		folder = {
@@ -160,7 +164,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = -10
 		}
 		
 		categories = {
@@ -168,7 +172,7 @@ technologies = {
 		}
 	}
 
-	impr_base_3 = { # Reinforced Structure
+	impr_base_3 = {
 
 
 		category_all_armor = {
@@ -185,7 +189,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = -10
 		}
 		
 		categories = {
@@ -254,7 +258,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {
@@ -278,7 +286,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {
@@ -348,7 +360,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {
@@ -373,6 +389,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 50
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {
@@ -437,7 +457,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {
@@ -461,7 +485,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 2
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
 		}
 		
 		categories = {

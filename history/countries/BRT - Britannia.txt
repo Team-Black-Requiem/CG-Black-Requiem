@@ -1,8 +1,5 @@
 ﻿capital = 483
 
-oob = "BRITANNIA"
-
-
 set_research_slots = 4
 set_stability = 0.58
 set_war_support = 0.40
@@ -12,14 +9,13 @@ set_technology = {
 	eu_war_anti_air = 1
 	modern_spaa_1 = 1
 	infantry_weapons = 1
-	support_equip = 1
+	support_equip_tech = 1
 	infantry_weapons1 = 1
 	motorised_infantry = 1
 	armored_car1 = 1
 	mechanised_infantry = 1
 	marines = 1
 	mbt_1 = 1
-	early_frigate = 1
 	tank_design = 1
 	cold_war_tank = 1
 	eu_war_artillery = 1
@@ -27,9 +23,17 @@ set_technology = {
 	early_jet_design = 1
 	early_jet_design_2 = 1
 	fighter1 = 1
+	cv_early_fighter = 1
 	g_support1 = 1
+	cv_CAS1 = 1
 	bomber1 = 1
+	trans1 = 1
 	transport = 1
+	landing_craft = 1
+	tank_landing_craft = 1
+	mtg_transport = 1
+	mtg_landing_craft = 1
+	mtg_tank_landing_craft = 1
 }
 
 if = {
@@ -40,6 +44,10 @@ if = {
 		early_ship_hull_carrier = 1
 		early_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
+		early_ship_hull_frigate = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
 	}
 }
 
@@ -50,11 +58,98 @@ if = {
 		early_carrier = 1
 		early_destroyer = 1
 		early_light_cruiser = 1
+		early_frigate = 1
 	}
 }
 
 
 	### Ship Variants ###
+if = {
+	limit = {has_dlc = "Man the Guns"}
+		create_equipment_variant = {
+		name = "Edward Class"
+		type = ship_hull_light_1
+		name_group = JAP_BB_HISTORICAL
+		parent_version = 0
+		allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Salomon Class"
+		type = ship_hull_cruiser_1
+		name_group = JAP_BB_HISTORICAL
+		parent_version = 0
+		allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Darwin Class"
+		type = ship_hull_submarine_1
+		name_group = JAP_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+
+		}
+	}
+
+	create_equipment_variant = {
+                name = "Charles Class"
+                type = ship_hull_carrier_1
+                name_group = JAP_BB_HISTORICAL
+                parent_version = 0
+                allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+                modules = {
+                    fixed_ship_deck_slot_1 = ship_deck_space
+                    fixed_ship_deck_slot_2 = ship_deck_space
+                    fixed_ship_anti_air_slot = ship_anti_air_1
+                    fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+                    fixed_ship_radar_slot = ship_radar_1
+                    fixed_ship_engine_slot = carrier_ship_engine_2
+                    fixed_ship_secondaries_slot = ship_secondaries_1
+                    fixed_ship_armor_slot = empty
+                    front_1_custom_slot = ship_armor_carrier_deck
+                    front_2_custom_slot = empty
+                    mid_1_custom_slot = ship_light_medium_battery_1
+                    mid_2_custom_slot = empty
+                    mid_3_custom_slot = empty
+                    rear_1_custom_slot = empty
+                    rear_2_custom_slot = empty
+                }
+            }
+	set_oob = "BRITANNIA_Starting_Army"
+}
+
+if = {
+	limit = {has_dlc = "Man the Guns"}
+	set_naval_oob = "Britannia_Navy_MTG"
+}
+
+if = {
+	limit = {NOT = {has_dlc = "Man the Guns"}}
 	create_equipment_variant = {
 		name = "Darwin Class"
 		type = submarine_1
@@ -78,6 +173,12 @@ if = {
 		}
 	}
 
+	create_equipment_variant = {
+		name = "Salomon Class"
+		type = light_cruiser_1
+		name_group = JAP_BB_HISTORICAL
+	}
+
 
 	create_equipment_variant = {
 		name = "Charles Class"
@@ -89,7 +190,14 @@ if = {
 			ship_reliability_upgrade = 1
 		}
 	}
+	set_oob = "BRITANNIA_Starting_Army"
+	
+}
 
+if = {
+	limit = {NOT = {has_dlc = "Man the Guns"}}
+	set_naval_oob = "Britannia_Navy_NoMTG"
+}
 
 
 
@@ -106,14 +214,14 @@ add_opinion_modifier = {
 }
 }
 NAN = {
-    add_popularity = { ideology = autocracy popularity = 0.80 }
-    add_popularity = { ideology = authoritarian_democracy popularity = 0.25 }
-	add_popularity = { ideology = ultra_nationalism popularity = 0.10 }
-	add_popularity = { ideology = moderate_liberalism popularity = 0.03 }
-	add_popularity = { ideology = moderate_socialism popularity = 0.02 }
+    add_popularity = { ideology = BR_autocracy popularity = 0.80 }
+    add_popularity = { ideology = BR_authoritarian popularity = 0.25 }
+	add_popularity = { ideology = BR_supremacist popularity = 0.10 }
+	add_popularity = { ideology = BR_liberalism popularity = 0.03 }
+	add_popularity = { ideology = BR_progressive popularity = 0.02 }
 
     set_politics = {
-        ruling_party = autocracy
+        ruling_party = BR_autocracy
         last_election = "1936.5.16"
         election_frequency = 48
         elections_allowed = no
@@ -225,20 +333,20 @@ set_convoys = 500
 
 
 set_politics = {
-	ruling_party = autocracy
+	ruling_party = BR_autocracy
 	last_election = "1990.11.8"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	autocracy = 41
-	ultra_nationalism = 18
-	authoritarian_democracy = 22
-	moderate_conservatism = 10
-	moderate_liberalism = 2
-	moderate_socialism = 1
-	hardline_socialism = 0
-	totalitarian_socialism = 6
+	BR_autocracy = 41
+	BR_supremacist = 18
+	BR_authoritarian = 22
+	BR_conservatism = 10
+	BR_liberalism = 2
+	BR_progressive = 1
+	BR_revolutionary = 0
+	BR_vanguardist = 6
 }
 
 add_ideas = {
@@ -284,6 +392,8 @@ recruit_character = BRT_generic_army_1
 recruit_character = BRT_monica
 recruit_character = BRT_luciano
 recruit_character = BRT_ernst
+recruit_character = BRT_schmo
+recruit_character = brt_reformists
 
 
 create_navy_leader = {

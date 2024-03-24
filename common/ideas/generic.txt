@@ -1,0 +1,1072 @@
+ideas = {
+    country = { 
+
+		GEN_Navy_Development = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = 0.05
+			}
+		}
+
+		GEN_Lessons_Learned = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   production_speed_dockyard_factor = 0.1
+			   industrial_capacity_dockyard = 0.05
+		   }
+	   }
+
+	   GEN_Naval_Academy = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+		   		production_speed_dockyard_factor = 0.1
+		   		industrial_capacity_dockyard = 0.05
+		   		navy_leader_start_level = 2
+	   		}
+   		}
+		
+		GEN_The_New_Front_Of_Warfare = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+			}
+		}
+
+		GEN_Cutting_Corners = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+			   naval_torpedo_screen_penetration_factor = 0.05
+		   }
+		   equipment_bonus = { submarine = { instant = yes build_cost_ic = -0.10 } }
+	   }
+
+	   GEN_Dreadnaught = {
+		
+			allowed = {
+			   always = no
+		   	}
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+		   }
+		   equipment_bonus = { battleship_1 = {
+			
+		   instant = yes build_cost_ic = -0.10 
+	   }
+	}
+}
+
+	   GEN_The_future_of_warfare = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+	   		}
+	   		equipment_bonus = { carrier = { instant = yes build_cost_ic = -0.10 } }
+   		}
+
+		GEN_Used_Ships = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+	   		}
+	   		equipment_bonus = { submarine = { instant = yes build_cost_ic = -0.20 } }
+   		}
+
+		GEN_New_Technical_Institute = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		GEN_Prosperus_Nation = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.025
+		   }
+	   }
+
+	   GEN_New_Railways = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+			}
+		}
+
+		GEN_Military_Industrial_Complex = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+		   }
+	   }
+
+	   GEN_Advanced_Technical_Institute = {
+		
+		 	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GEN_Fighter_Focus = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				
+		   }
+		   equipment_bonus = {
+				category_multirole = { 
+					instant = yes 
+					build_cost_ic = -0.15 
+				}
+		   }
+	   }
+
+	   GEN_Close_Air_Support = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				
+		   }
+		   equipment_bonus = {
+				category_multirole = { 
+					instant = yes 
+					build_cost_ic = -0.15 
+				}
+				category_cas = {
+					
+					instant = yes 
+					build_cost_ic = -0.15 
+				}
+		   }
+	   }
+
+	   GEN_Bomber_Focus = {
+		
+			allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+		   
+		   modifier = {
+				
+		   }
+		   equipment_bonus = {
+			category_strat_bomber = {
+					
+					instant = yes 
+					build_cost_ic = -0.15 
+				}
+		   }
+	   }
+
+	   GEN_Nothing_But_Ash = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				air_bombing_targetting = 0.15
+	   		}
+	   		equipment_bonus = {
+				category_strat_bomber = {
+					
+					instant = yes 
+					build_cost_ic = -0.15 
+					air_bombing = 0.10
+				}
+	   		}
+   		}
+
+		GEN_Air_Development = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				experience_gain_air_factor = 0.05
+	   		}
+	   		
+   		}
+
+		GEN_Air_Academy = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				experience_gain_air_factor = 0.15
+				air_ace_generation_chance_factor = 0.1
+	   		}
+   		}
+
+		GEN_Transport_Supplies = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				experience_gain_air_factor = 0.15
+				air_ace_generation_chance_factor = 0.1
+	   		}
+	   		equipment_bonus = {
+				transport_plane_equipment = { 
+					instant = yes 
+					build_cost_ic = -0.2
+				}
+	   		}
+   		}
+
+		GEN_Install_the_Repair_Yards = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				repair_speed_factor = 0.1
+				refit_speed = 0.1
+				refit_ic_cost = -0.1
+	   		}
+   		}
+
+		GEN_Standardized_Designs = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				
+	   		}
+	   		equipment_bonus = {
+				ship_hull_light = { 
+					instant = yes 
+					build_cost_ic = -0.25
+				}
+	   		}
+   		}
+
+		GEN_Fear_the_Unseen = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				naval_torpedo_screen_penetration_factor = 0.05
+	   		}
+   		}
+
+		GEN_Mass_Produce_Parts = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+
+	   		}
+
+			equipment_bonus = {
+				submarine = { 
+					instant = yes 
+					build_cost_ic = -0.1
+				}
+	   		}
+   		}
+
+		GEN_New_RND_Department = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				research_speed_factor = 0.15
+	   		}
+   		}
+
+		GEN_Knightmared_Police = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+
+	   		}
+
+			equipment_bonus = {
+				knightmare_mass_prod = {
+					 
+					instant = yes 
+					build_cost_ic = -0.15
+					suppression = 20
+				}
+	   		}
+   		}
+
+		GEN_Our_Own_Roundtable = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = -0.05
+	   		}
+
+			equipment_bonus = {
+				knightmare_mass_prod = { 
+					instant = yes 
+					build_cost_ic = -0.25
+				suppression = 0.3
+				
+				}
+	   		}
+   		}
+
+		GEN_Conventional_Warfare = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+            equipment_bonus = {
+				knightmare_mass_prod = {
+					build_cost_ic = 0.45
+				}
+			
+			
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.2
+				}
+	   		
+   		}
+	}
+
+		GEN_The_Real_Engines_of_war = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+			  
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.2
+				}
+				armor = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				knightmare_mass_prod = {
+					build_cost_ic = 0.45
+				}
+	   		}
+   		}
+
+		GEN_The_Stuff_That_Matters = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				
+				army_org = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.3
+				}
+			
+				category_all_armor = {
+			
+					instant = yes
+					soft_attack = 0.15
+					hard_attack = 0.10
+				}
+
+				anti_tank = {
+					hard_attack = 0.15
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				knightmare_mass_prod = {
+					build_cost_ic = 0.45
+				}
+	   		}
+   		}
+
+		GEN_The_Drums_Of_War = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   
+	   		modifier = {
+				knightmare_cost_factor = 0.45
+				army_org = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+	   		}
+
+			equipment_bonus = {
+				infantry_equipment = { 
+					instant = yes 
+					soft_attack = 0.4
+					build_cost_ic = -0.05
+				}
+				category_all_armor = {
+					
+					instant = yes
+					soft_attack = 0.20
+					hard_attack = 0.15
+					build_cost_ic = -0.05
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				knightmare_mass_prod = { 
+					instant = yes 
+					build_cost_ic = 0.45
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_tank = {
+					hard_attack = 0.2
+				}
+				anti_kn_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+	   		}
+   		}
+
+		   GEN_supremacist_1 = {
+		
+			allowed = {
+		   		always = no
+	   		}
+
+	   		allowed_civil_war = {
+		   		always = yes
+	   		}
+
+	   		removal_cost = -1
+	   modifier = {
+		
+	   
+	   		recruitable_population = 0.03
+			mobilization_speed = 0.05
+		
+		}
+	}
+
+	GEN_supremacist_2 = {
+		
+		allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+   modifier = {
+	
+   
+		   recruitable_population = 0.03
+		mobilization_speed = 0.05
+		production_speed_arms_factory_factor = 0.05
+	}
+}
+
+     
+	GEN_autocracy_idea_1 = {
+		
+		allowed = {
+			   always = no
+		   }
+
+		   allowed_civil_war = {
+			   always = yes
+		   }
+
+		   removal_cost = -1
+   modifier = {
+	
+     economy_cost_factor = -0.1
+	 mobilization_laws_cost_factor = -0.1
+	 trade_laws_cost_factor = -0.1
+
+	}
+}
+
+GEN_autocracy_idea_2 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+economy_cost_factor = -0.1
+ mobilization_laws_cost_factor = -0.1
+ trade_laws_cost_factor = -0.1
+ political_advisor_cost_factor  = -0.2
+ air_advisor_cost_factor = -0.15
+ navy_advisor_cost_factor = -0.15
+ army_advisor_cost_factor = -0.15 
+
+}
+}
+
+GEN_vanguardist_1 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+ resistance_growth = -0.05
+ compliance_growth = -0.05
+}
+}
+
+GEN_vanguardist_2 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+	resistance_growth = -0.05
+	compliance_growth = -0.05
+	consumer_goods_factor = 0.03
+	production_factory_efficiency_gain_factor = 0.05
+	production_factory_max_efficiency_factor = 0.05
+}
+}
+
+GEN_revolutionary_idea_1 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+	}
+}
+GEN_revolutionary_idea_2 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.03
+	}
+}
+GEN_revolutionary_idea_3 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.03
+		industrial_capacity_factory = 0.05
+	}
+}
+GEN_auth_dem_idea_1 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		stability_factor = 0.05
+	}
+}
+GEN_auth_dem_idea_2 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		decryption_power_factor = 0.05
+		operative_slot = 1	
+		decryption_factor = 0.05
+		stability_factor = 0.05
+	}
+}
+GEN_auth_dem_idea_3 = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		crypto_strength = 0.5
+		decryption_power_factor = 0.05
+		operative_slot = 2
+		encryption_factor = 0.1
+		stability_factor = 0.05
+	}
+}
+GEN_our_own_bloc_idea = {
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	modifier = {
+		compliance_growth = 0.05
+		resistance_activity = 0.05
+		resistance_growth_on_our_occupied_states = -0.05
+	}
+}
+GEN_Conservative_1 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+encryption = 0.05
+drift_defence_factor = 0.1
+
+}
+}
+
+GEN_Conservative_2 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+army_core_defence_factor = 0.05
+encryption = 0.05
+drift_defence_factor = 0.1
+
+}
+}
+
+GEN_liberalism_1 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+trade_laws_cost_factor =  -0.15
+political_advisor_cost_factor = -0.15 
+economy_cost_factor = -0.15
+mobilization_laws_cost_factor = -0.15
+  
+}
+}
+
+GEN_liberalism_2 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+	trade_laws_cost_factor =  -0.15
+political_advisor_cost_factor = -0.15 
+economy_cost_factor = -0.15
+mobilization_laws_cost_factor = -0.15
+recruitable_population_factor = 0.05
+consumer_goods_factor = -0.05
+}
+}
+
+
+GEN_liberalism_3 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+	trade_laws_cost_factor =  -0.15
+political_advisor_cost_factor = -0.15 
+economy_cost_factor = -0.15
+mobilization_laws_cost_factor = -0.15
+recruitable_population_factor = -0.05
+consumer_goods_factor = -0.05
+air_advisor_cost_factor = -0.15
+navy_advisor_cost_factor = -0.15
+   
+army_advisor_cost_factor = -0.15
+  
+}
+}
+
+GEN_liberalism_4 = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+party_popularity_stability_factor = 0.10
+political_power_gain = 0.2
+						   
+   
+						 
+  
+}
+}
+
+gen_individual_rights_idea = {
+		
+	allowed = {
+		   always = no
+	   }
+
+	   allowed_civil_war = {
+		   always = yes
+	   }
+
+	   removal_cost = -1
+modifier = {
+
+stability_weekly = 0.01
+
+}
+}
+}
+}

@@ -1,4 +1,4 @@
-﻿capital = 16
+﻿capital = 112
 
 oob = "POR"
 
@@ -7,14 +7,14 @@ set_stability = 0.5
 
 set_technology = {
 	infantry_weapons = 1
-	tech_engineers = 1
+	engineer_company_tech = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	eu_war_artillery = 1
-	support_equip = 1
+	support_equip_tech = 1
 	tank_design = 1
 }
 
@@ -43,13 +43,13 @@ FRA = {
 }
 
 ANG = {
-    add_popularity = { ideology = autocracy popularity = 0.80 }
-    add_popularity = { ideology = authoritarian_democracy popularity = 0.45 }
-	add_popularity = { ideology = moderate_liberalism popularity = 0.11 }
-	add_popularity = { ideology = moderate_socialism popularity = 0.12 }
+    add_popularity = { ideology = BR_autocracy popularity = 0.80 }
+    add_popularity = { ideology = BR_authoritarian popularity = 0.45 }
+	add_popularity = { ideology = BR_liberalism popularity = 0.11 }
+	add_popularity = { ideology = BR_progressive popularity = 0.12 }
 
     set_politics = {
-        ruling_party = autocracy
+        ruling_party = BR_autocracy
         last_election = "1936.5.16"
         election_frequency = 48
         elections_allowed = no
@@ -59,19 +59,19 @@ ANG = {
 set_convoys = 300
 
 set_politics = {
-	ruling_party = moderate_liberalism
+	ruling_party = BR_liberalism
 	last_election = "2008.5.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
 
-	moderate_socialism = 21
-	moderate_conservatism = 27
-	moderate_liberalism = 31
-	totalitarian_socialism = 5
-	authoritarian_democracy = 11
-	autocracy = 5
+	BR_progressive = 21
+	BR_conservatism = 27
+	BR_liberalism = 31
+	BR_vanguardist = 5
+	BR_authoritarian = 11
+	BR_autocracy = 5
 }
 
 #add_ideas = {
@@ -102,7 +102,7 @@ create_country_leader = {
 	desc = "POLITICS_CHARLES_DESC"
 	picture = "Portrait_Forty.dds"
 	expire = "2030.1.1"
-	ideology = social-capitalism
+	ideology = social_democracy
 	traits = {
 	}
 }

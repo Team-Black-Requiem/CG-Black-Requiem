@@ -1,0 +1,254 @@
+guiTypes = {
+	containerWindowType = {
+		name = "EUR_site_decision_ui_window"
+		position = { x = 0 y = -10 }
+		size = { width = 481 height = 302 }
+		background = {
+			name = "EUR_background"
+			quadTextureSprite ="GFX_EUR_Background"
+		}
+
+        buttonType = {
+			name = "First_Site_button"
+			orientation = upper_left
+			position = { x = 10 y = 12 }
+            clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "First_Site_button"
+			pdx_tooltip = "EUR_First_Site"
+			pdx_tooltip_delayed = "EUR_First_Site_Add_Info"
+		}
+        buttonType = {
+			name = "Second_Site_button"
+			orientation = upper_left
+			position = { x = 128 y = 12 }
+            clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Second_Site_button"
+			pdx_tooltip = "EUR_Second_Site"
+			pdx_tooltip_delayed = "EUR_Second_Site_Add_Info"
+		}
+        buttonType = {
+			name = "Third_Site_button"
+			orientation = upper_left
+			position = { x = 244 y = 12 }
+            clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Third_Site_button"
+			pdx_tooltip = "EUR_Third_Site"
+			pdx_tooltip_delayed = "EUR_Third_Site_Add_Info"
+		}
+        buttonType = {
+			name = "Fourth_Site_button"
+			orientation = upper_left
+			position = { x = 360 y = 12 }
+            clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Fourth_Site_button"
+			pdx_tooltip = "EUR_Fourth_Site"
+			pdx_tooltip_delayed = "EUR_Fourth_Site_Add_Info"
+		}
+        buttonType = {
+			name = "Complete_Site_button"
+			orientation = upper_left
+			position = { x = 3 y = 262 }
+            clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Complete_Site_button"
+			pdx_tooltip = "EUR_Complete_Site"
+		}
+
+		instantTextboxType = {
+			name = "EUR_Complete_Site"
+			position = { x = 15 y = 270 }
+			font = "hoi_20header"
+			text = EUR_Complete_Site_tt
+			format = left
+			maxWidth = 400
+			fixedsize = yes
+			maxHeight = 30
+			pdx_tooltip = "EUR_Complete_Site"
+		}
+
+		buttonType = { 
+			name = "Site_Component1"
+			orientation = upper_left
+			position = {x = 30 y = 112}
+		    clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Site_Component_1"
+			pdx_tooltip_delayed = "EUR_Site_Component1"
+			pdx_tooltip = "EUR_Component_Status_1_loc"
+		}
+
+		instantTextboxType = {
+			name = "EUR_Complete_Site_Component1"
+			position = { x = 38 y = 125 }
+			font = "hoi_25header"
+			text = EUR_Complete_Site_Component1_tt
+			pdx_tooltip_delayed = "EUR_Site_Component1"
+			pdx_tooltip = "EUR_Component_Status_1_loc"		
+			format = left
+			maxWidth = 104
+			fixedsize = yes
+			maxHeight = 30
+		}
+		buttonType = {
+			name = "Site_Component2"
+			orientation = upper_left
+			position = {x = 70 y = 200}
+			clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Site_Component_1"
+			pdx_tooltip_delayed = "EUR_Site_Component2"
+			pdx_tooltip = "EUR_Component_Status_2_loc"
+
+		}
+
+		instantTextboxType = {
+			name = "EUR_Complete_Site_Component2"
+			position = { x = 80 y = 215 }
+			font = "hoi_25header"
+			text = EUR_Complete_Site_Component2_tt
+			pdx_tooltip_delayed = "EUR_Site_Component2"
+			pdx_tooltip = "EUR_Component_Status_2_loc"		
+			format = left
+			maxWidth = 104
+			fixedsize = yes
+			maxHeight = 30
+		}
+		buttonType = {
+			name = "Site_Component3"
+			orientation = upper_left
+			position = {x = 340 y = 112}
+			clicksound = click_scroll
+			oversound = ui_menu_over
+			spriteType = "Site_Component_1"
+			pdx_tooltip_delayed = "EUR_Site_Component3"			
+			pdx_tooltip = "EUR_Component_Status_3_loc"
+
+
+		}
+
+		instantTextboxType = {
+			name = "EUR_Complete_Site_Component3"
+			position = { x = 350 y = 125 }
+			font = "hoi_25header"
+			text = EUR_Complete_Site_Component3_tt
+			pdx_tooltip_delayed = "EUR_Site_Component3"			
+			pdx_tooltip = "EUR_Component_Status_3_loc"			
+			format = left
+			maxWidth = 104
+			fixedsize = yes
+			maxHeight = 30
+		}
+		buttonType = {
+			name = "Site_Component4"
+			orientation = upper_left
+			clicksound = click_scroll
+			oversound = ui_menu_over
+			position = {x = 300 y = 200}
+			spriteType = "Site_Component_1"
+			pdx_tooltip_delayed = "EUR_Site_Component4"
+			pdx_tooltip = "EUR_Component_Status_4_loc"
+
+		}
+		
+		instantTextboxType = {
+			name = "EUR_Complete_Site_Component4"
+			position = { x = 310 y = 215 }
+			font = "hoi_25header"
+			text = EUR_Complete_Site_Component4_tt
+			pdx_tooltip_delayed = "EUR_Site_Component4"
+			pdx_tooltip = "EUR_Component_Status_4_loc"
+			format = left
+			maxWidth = 104
+			fixedsize = yes
+			maxHeight = 30
+		}
+    }
+
+	containerWindowType = {
+			name = "EUR_favors_decision_ui_window"
+			position = { x = 0 y = 0 }
+			size = { width = 490 height = 259 }
+		background = {
+			name = "EUR_Favors_Background"
+			quadTextureSprite ="GFX_EUR_Favors_Background"
+		}
+
+		instantTextboxType = {
+			name = "EUR_BRT_Influence"
+			position = { x = 30 y = 206 }
+			font = "hoi_20header"
+			text = EUR_BRT_Influence_tt
+			format = left
+			maxWidth = 200
+			fixedsize = yes
+			maxHeight = 70
+		}
+
+		buttonType = {
+				name = "Siberia_Map"
+				orientation = center
+				position = { x = -258 y = -138 }
+				spriteType = "GFX_decision_EUR_Siberia"
+				pdx_tooltip = "EUR_Siberia"
+				pdx_tooltip_delayed = "EUR_desc_Siberia"
+	
+		}
+
+				buttonType = {
+				name = "Chukotka_Map"
+				orientation = center
+				position = { x = 80 y = -128 }
+				spriteType = "GFX_decision_EUR_Chukotka"
+				pdx_tooltip = "EUR_Chukotka"
+				pdx_tooltip_delayed = "EUR_desc_Chukotka"
+	
+		}
+
+				buttonType = {
+				name = "Magadan_Map"
+				orientation = center
+				position = { x = 22 y = -92 }
+				spriteType = "GFX_decision_EUR_Magadan"
+				pdx_tooltip = "EUR_Magadan"
+				pdx_tooltip_delayed = "EUR_desc_Magadan"
+	
+		}
+
+				buttonType = {
+				name = "Okhotsk_Map"
+				orientation = center
+				position = { x = -99 y = -60 }
+				spriteType = "GFX_decision_EUR_Okhotsk"
+				pdx_tooltip = "EUR_Okhotsk"
+				pdx_tooltip_delayed = "EUR_desc_Okhotsk"
+	
+		}
+
+				buttonType = {
+				name = "Kamkatcha_Map"
+				orientation = center
+				position = { x = 49 y = -50 }
+				spriteType = "GFX_decision_EUR_Kamkatcha"
+				pdx_tooltip = "EUR_Kamkatcha"
+				pdx_tooltip_delayed = "EUR_desc_Kamkatcha"
+	
+		}
+
+				buttonType = {
+				name = "Yakutsk_Map"
+				orientation = center
+				position = { x = -188 y = -58 }
+				spriteType = "GFX_decision_EUR_Yakutsk"
+				pdx_tooltip = "EUR_Yakutsk"
+				pdx_tooltip_delayed = "EUR_desc_Yakutsk"
+	
+		}
+
+
+
+	}
+}
