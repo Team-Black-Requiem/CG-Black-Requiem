@@ -1,0 +1,229 @@
+
+add_namespace = ORG
+
+#spawn country event
+country_event = {  
+	id = ORG.1
+	title = ORG.1.t
+	desc = ORG.1.d
+	#picture =
+	mean_time_to_happen = {
+        days = 1 }
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			TAG = AR5
+			has_game_rule = { rule = orange_boy_returns option = ORANGE_BOY_RETURNS }
+		}
+	}
+	
+	option = {
+		name = ORG.1.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			ORG = {
+				annex_country = {target = AR5}
+				add_state_core = 486
+				add_state_core = 306
+				add_state_core = 493
+				add_state_core = 489
+				add_state_core = 307
+				add_state_core = 488
+
+		    	change_tag_from = AR5
+				set_capital = {
+					state = 307
+					remember_old_capital = no
+				}
+
+				inherit_technology = AR5
+				set_technology = { mbt_1 = 1 }
+				set_technology = { cold_war_tank = 1 }
+				set_technology = { mechanised_infantry = 1 }
+				set_technology = { modern_artillery_90 = 1 }
+				set_technology = { sp_artillery_1 = 1 }
+
+				leave_faction = yes
+
+				load_oob = ""
+		 	}
+		}
+	}
+
+	option = {
+		name = ORG.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.20
+	}
+}
+
+###normal events
+country_event = {  
+	id = ORG.2
+	title = ORG.2.t
+	desc = ORG.2.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.2.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}
+
+country_event = {  
+	id = ORG.3
+	title = ORG.3.t
+	desc = ORG.3.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.3.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}
+
+country_event = {  
+	id = ORG.4
+	title = ORG.4.t
+	desc = ORG.4.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.4.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}
+
+country_event = {  
+	id = ORG.5
+	title = ORG.5.t
+	desc = ORG.5.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.5.a
+		ai_chance = {
+			factor = 100
+		}  
+		AR3 = {
+			leave_faction = yes
+		} 
+		AR8 = {
+			leave_faction = yes
+		}
+		AR6 = {
+			leave_faction = yes
+		}
+		AR7 = {
+			leave_faction = yes
+		}
+    }     
+}
+
+country_event = {  
+	id = ORG.6
+	title = ORG.6.t
+	desc = ORG.6.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.6.a
+		ai_chance = {
+			factor = 100
+		}   
+		AR7 = { every_controlled_state = { add_core_of = ORG} }
+		AR3 = { every_controlled_state = { add_core_of = ORG} }
+		AR6 = { every_controlled_state = { add_core_of = ORG} }
+		AR8 = { every_controlled_state = { add_core_of = ORG} }
+		create_wargoal = { type = annex_everything target = AR3 }
+		create_wargoal = { type = annex_everything target = AR7 }			
+		create_wargoal = { type = annex_everything target = AR6 }
+		create_wargoal = { type = annex_everything target = AR8 }
+    }     
+}
+
+country_event = {  
+	id = ORG.7
+	title = ORG.7.t
+	desc = ORG.7.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.7.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}
+
+country_event = {  
+	id = ORG.8
+	title = ORG.8.t
+	desc = ORG.8.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.8.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}
+
+country_event = {  
+	id = ORG.9
+	title = ORG.9.t
+	desc = ORG.9.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.9.a
+		ai_chance = {
+			factor = 100
+		}   
+		BRT = { every_controlled_state = { add_core_of = ORG} }
+		create_wargoal = { type = annex_everything target = BRT }
+    }     
+}
+
+country_event = {  
+	id = ORG.10
+	title = ORG.10.t
+	desc = ORG.10.d
+	#picture =
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ORG.10.a
+		ai_chance = {
+			factor = 100
+		}   
+    }     
+}

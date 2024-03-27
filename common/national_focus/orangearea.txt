@@ -1,0 +1,658 @@
+﻿focus_tree = {
+	id = ORG
+	continuous_focus_position = { x = 0 y = 2000}
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = ORG
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = ORG_orange_boy
+		icon = GFX_ORG_orange_boy
+		cost = 1
+		x = 10
+		y = 1
+		#relative_position_id
+		prerequisite = {
+			
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.2	
+		}
+	}
+
+	focus = {
+		id = ORG_i_am_an_orange_dr_hans
+		icon = GFX_ORG_i_am_an_orange_dr_hans
+		cost = 2
+		x = -1
+		y = 1
+		relative_position_id = ORG_orange_boy
+		prerequisite = {
+			focus = ORG_orange_boy
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.3	
+		}
+	}
+
+	focus = {
+		id = ORG_orange_tinted_loyalty
+		icon = GFX_ORG_orange_tinted_loyalty
+		cost = 2
+		x = 1
+		y = 1
+		relative_position_id = ORG_orange_boy
+		prerequisite = {
+			focus = ORG_orange_boy
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.4	
+		}
+	}
+
+	focus = {
+		id = ORG_eternal_loyalty
+		icon = GFX_ORG_eternal_loyalty
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = ORG_i_am_an_orange_dr_hans
+		prerequisite = {
+			focus = ORG_i_am_an_orange_dr_hans
+		}
+		prerequisite = {
+			focus = ORG_orange_tinted_loyalty
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.5	
+		}
+	}
+
+	focus = {
+		id = ORG_ethylene_powered_air_fleet
+		icon = GFX_ORG_ethylene_powered_air_fleet
+		cost = 2
+		x = -2
+		y = 1
+		relative_position_id = ORG_eternal_loyalty
+		prerequisite = {
+			focus = ORG_eternal_loyalty
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_orange_you_glad_to_see_me
+		icon = GFX_ORG_orange_you_glad_to_see_me
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = ORG_eternal_loyalty
+		prerequisite = {
+			focus = ORG_eternal_loyalty
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.6
+		}
+	}
+
+	focus = {
+		id = ORG_the_citrus_fleet
+		icon = GFX_ORG_the_citrus_fleet
+		cost = 2
+		x = 2
+		y = 1
+		relative_position_id = ORG_eternal_loyalty
+		prerequisite = {
+			focus = ORG_eternal_loyalty
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_assembling_orange_airforce
+		icon = GFX_ORG_assembling_orange_airforce
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = ORG_ethylene_powered_air_fleet
+		prerequisite = {
+			focus = ORG_ethylene_powered_air_fleet
+		}
+		prerequisite = {
+			focus = ORG_orange_you_glad_to_see_me
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_orange_the_fleet
+		icon = GFX_ORG_orange_the_fleet
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id =  ORG_the_citrus_fleet
+		prerequisite = {
+			focus =  ORG_the_citrus_fleet
+		}
+		prerequisite = {
+			focus = ORG_orange_you_glad_to_see_me
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_maximum_orange_efficiency 
+		icon = GFX_ORG_maximum_orange_efficiency
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  ORG_assembling_orange_airforce
+		prerequisite = {
+			focus =  ORG_assembling_orange_airforce
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_orange_coast
+		icon = GFX_ORG_orange_coast
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id =  ORG_orange_the_fleet
+		prerequisite = {
+			focus =  ORG_orange_the_fleet
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_oranges_the_finest_in_cybernetics
+		icon = GFX_ORG_oranges_the_finest_in_cybernetics
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = ORG_maximum_orange_efficiency
+		prerequisite = {
+			focus = ORG_maximum_orange_efficiency
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.7
+		}
+	}
+
+	focus = {
+		id = ORG_a_superior_orange_army
+		icon = GFX_ORG_a_superior_orange_army
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = ORG_maximum_orange_efficiency
+		prerequisite = {
+			focus = ORG_maximum_orange_efficiency
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_construction_of_the_knightmares
+		icon = GFX_ORG_construction_of_the_knightmares
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = ORG_orange_coast
+		prerequisite = {
+			focus = ORG_orange_coast
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_ultimate_knightmare_the_or1
+		icon = GFX_ORG_ultimate_knightmare_the_or1
+		cost = 3
+		x = 3
+		y = 1
+		relative_position_id = ORG_orange_coast
+		prerequisite = {
+			focus = ORG_orange_coast
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.8
+		}
+	}
+
+	focus = {
+		id = ORG_god_is_an_orange
+		icon = GFX_ORG_god_is_an_orange
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = ORG_a_superior_orange_army
+		prerequisite = {
+			focus = ORG_oranges_the_finest_in_cybernetics
+		}
+		prerequisite = {
+			focus = ORG_a_superior_orange_army
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_knights_of_orange
+		icon = GFX_ORG_knights_of_orange
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = ORG_construction_of_the_knightmares
+		prerequisite = {
+			focus = ORG_construction_of_the_knightmares
+		}
+		prerequisite = {
+			focus = ORG_ultimate_knightmare_the_or1
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_we_can_orange_the_price
+		icon = GFX_ORG_we_can_orange_the_price
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = ORG_god_is_an_orange
+		prerequisite = {
+			focus = ORG_god_is_an_orange
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			annex_country = {target = SAF}
+
+			annex_country = {target = MZB}
+
+			annex_country = {target = ZIM}
+
+			annex_country = {target = ANG}
+
+			annex_country = {target = EAU}
+
+			annex_country = {target = COG}
+
+			annex_country = {target = KEN}
+
+			annex_country = {target = SOM}
+
+			annex_country = {target = ETH}
+			
+			annex_country = {target = EGY}
+
+			annex_country = {target = WAF}
+
+			annex_country = {target = NGA}
+
+			annex_country = {target = MOR}
+
+			annex_country = {target = LBA}
+		}
+	}
+
+	focus = {
+		id = ORG_an_orange_earth
+		icon = GFX_ORG_an_orange_earth
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ORG_god_is_an_orange
+		prerequisite = {
+			focus = ORG_god_is_an_orange
+		}
+		prerequisite = {
+			focus = ORG_knights_of_orange
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.9
+		}
+	}
+
+	focus = {
+		id = ORG_the_orange_council
+		icon = GFX_ORG_the_orange_council
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = ORG_knights_of_orange
+		prerequisite = {
+			focus = ORG_knights_of_orange
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ORG_united_they_fall
+		icon = GFX_ORG_united_they_fall
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ORG_we_can_orange_the_price
+		prerequisite = {
+			focus = ORG_we_can_orange_the_price
+		}
+		prerequisite = {
+			focus = ORG_an_orange_earth
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			FRA = { every_controlled_state = { add_core_of = ORG} }
+			create_wargoal = { type = annex_everything target = FRA }
+		}
+	}
+	
+	focus = {
+		id = ORG_from_desert_to_sea
+		icon = GFX_ORG_from_desert_to_sea
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ORG_an_orange_earth
+		prerequisite = {
+			focus = ORG_the_orange_council
+		}
+		prerequisite = {
+			focus = ORG_an_orange_earth
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			CHI = { every_controlled_state = { add_core_of = ORG} }
+			create_wargoal = { type = annex_everything target = CHI }
+			IRN = { every_controlled_state = { add_core_of = ORG} }
+			create_wargoal = { type = annex_everything target = IRN }
+		}
+	}
+
+	focus = {
+		id = ORG_orange_requiem
+		icon = GFX_ORG_orange_requiem
+		cost = 2
+		x = 1
+		y = 1
+		relative_position_id = ORG_united_they_fall
+		prerequisite = {
+			focus = ORG_united_they_fall
+		}
+		prerequisite = {
+			focus = ORG_from_desert_to_sea
+		}
+
+		search_filters = {
+		}
+		
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			country_event = ORG.10
+		}
+	}
+}

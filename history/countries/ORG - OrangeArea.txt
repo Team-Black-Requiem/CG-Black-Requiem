@@ -1,0 +1,65 @@
+﻿capital = 306
+
+oob = " "
+
+set_research_slots = 4
+set_stability = 0.45
+set_war_support = 0.45
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	recon_company_tech = 1
+	support_equip_tech = 1		
+	engineer_company_tech = 1
+}
+
+set_politics = {
+	ruling_party = BR_autocracy
+	last_election = "1936.5.16"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_popularity = { ideology = BR_autocracy popularity = 0.80 }
+add_popularity = { ideology = BR_authoritarian popularity = 0.25 }
+add_popularity = { ideology = BR_supremacist popularity = 0.10 }
+add_popularity = { ideology = BR_liberalism popularity = 0.03 }
+add_popularity = { ideology = BR_progressive popularity = 0.02 }
+
+
+
+add_ideas = {
+
+quota_level_3
+}
+
+create_country_leader = {
+	name = "Britannian Viceroy"
+	desc = "POLITICS_AREA_DESC"
+	picture = "Portrait_Viceroy.dds"
+	expire = "2020.1.1"
+	ideology = britannian_vic
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Britannian Test"
+	desc = "POLITICS_AREA_DESC"
+	picture = "Portrait_Viceroy.dds"
+	expire = "2020.1.1"
+	ideology = purist_aristocracy
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Britannian Test V2"
+	desc = "POLITICS_AREA_DESC"
+	picture = "Portrait_Viceroy.dds"
+	expire = "2020.1.1"
+	ideology = oligarchic_government
+	traits = {
+	}
+}
+
+set_convoys = 100
+
