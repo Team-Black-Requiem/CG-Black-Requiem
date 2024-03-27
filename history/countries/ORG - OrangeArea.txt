@@ -14,6 +14,15 @@ set_technology = {
 	engineer_company_tech = 1
 }
 
+BRT = {
+	set_autonomy = {
+		target = ORG
+		autonomous_state = area_satellite
+		freedom_level = 0.7
+	
+	}
+}
+
 set_politics = {
 	ruling_party = BR_autocracy
 	last_election = "1936.5.16"
@@ -24,42 +33,7 @@ add_popularity = { ideology = BR_autocracy popularity = 0.75 }
 add_popularity = { ideology = BR_authoritarian popularity = 0.10 }
 add_popularity = { ideology = BR_supremacist popularity = 0.15 }
 
-
-
-add_ideas = {
-
-quota_level_3
-}
-
-create_country_leader = {
-	name = "Britannian Viceroy"
-	desc = "POLITICS_AREA_DESC"
-	picture = "Portrait_Viceroy.dds"
-	expire = "2020.1.1"
-	ideology = britannian_vic
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Jeremiah Gottwald"
-	desc = "jeremiah_gottwald_desc"
-	picture = "Portrait_Viceroy.dds"
-	expire = "2020.1.1"
-	ideology = purist_aristocracy
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Britannian Aristocracy"
-	desc = "POLITICS_AREA_DESC"
-	picture = "Portrait_Viceroy.dds"
-	expire = "2020.1.1"
-	ideology = oligarchic_government
-	traits = {
-	}
-}
+recruit_character = ORG_jeremiah_gottwald
 
 set_convoys = 100
 
