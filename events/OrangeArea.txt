@@ -126,14 +126,22 @@ country_event = {
 		AR3 = {
 			leave_faction = yes
 		} 
-		AR8 = {
-			leave_faction = yes
-		}
 		AR6 = {
 			leave_faction = yes
+			set_cosmetic_tag = PEE
 		}
 		AR7 = {
 			leave_faction = yes
+			set_cosmetic_tag = CAV
+		}
+		AR8 = {
+			leave_faction = yes
+			set_cosmetic_tag = LEM
+		}
+		remove_ideas = quota_level_3
+		set_politics = {
+			ruling_party = BR_supremacist
+			elections_allowed = no
 		}
     }     
 }
@@ -151,13 +159,13 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}   
-		AR7 = { every_controlled_state = { add_core_of = ORG} }
 		AR3 = { every_controlled_state = { add_core_of = ORG} }
 		AR6 = { every_controlled_state = { add_core_of = ORG} }
+		AR7 = { every_controlled_state = { add_core_of = ORG} }
 		AR8 = { every_controlled_state = { add_core_of = ORG} }
-		create_wargoal = { type = annex_everything target = AR3 }
-		create_wargoal = { type = annex_everything target = AR7 }			
+		create_wargoal = { type = annex_everything target = AR3 }		
 		create_wargoal = { type = annex_everything target = AR6 }
+		create_wargoal = { type = annex_everything target = AR7 }	
 		create_wargoal = { type = annex_everything target = AR8 }
     }     
 }
