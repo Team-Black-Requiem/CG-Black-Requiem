@@ -7,11 +7,15 @@ set_stability = 0.50
 set_war_support = 0.45
 
 set_technology = {
+	mechanised_infantry = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	motorised_infantry = 1
 	recon_company_tech = 1
 	support_equip_tech = 1		
 	engineer_company_tech = 1
+	fighter1 = 1
+	bomber1 = 1
 }
 
 BRT = {
@@ -19,7 +23,6 @@ BRT = {
 		target = ORG
 		autonomous_state = area_satellite
 		freedom_level = 0.7
-	
 	}
 }
 
@@ -32,6 +35,12 @@ set_politics = {
 add_popularity = { ideology = BR_autocracy popularity = 0.75 }
 add_popularity = { ideology = BR_authoritarian popularity = 0.10 }
 add_popularity = { ideology = BR_supremacist popularity = 0.15 }
+
+add_ideas = {
+	ORG_rising_orange_international_stock_value
+	ORG_industrial_orangelands
+	ORG_heart_of_orange_science
+}
 
 recruit_character = ORG_jeremiah_gottwald
 recruit_character = ORG_britannian_viceroy

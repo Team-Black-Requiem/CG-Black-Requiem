@@ -31,17 +31,17 @@ country_event = {
 				add_state_core = 489
 				add_state_core = 307
 				add_state_core = 488
+				add_state_core = 695
 
 		    	change_tag_from = AR5
 				set_capital = {
-					state = 307
+					state = 306
 					remember_old_capital = no
 				}
 
 				inherit_technology = AR5
 				set_technology = { mbt_1 = 1 }
 				set_technology = { cold_war_tank = 1 }
-				set_technology = { mechanised_infantry = 1 }
 				set_technology = { modern_artillery_90 = 1 }
 				set_technology = { sp_artillery_1 = 1 }
 
@@ -55,7 +55,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		add_stability = -0.20
+		add_country_leader_trait = chaos
 	}
 }
 
@@ -104,7 +104,20 @@ country_event = {
 		name = ORG.4.a
 		ai_chance = {
 			factor = 100
-		}   
+		} 
+		end_puppet = BRT
+		AR3 = {
+			end_puppet = BRT
+		}
+		AR6 = {
+			end_puppet = BRT
+		}
+		AR7 = {
+			end_puppet = BRT
+		}
+		AR8 = {
+			end_puppet = BRT
+		}
     }     
 }
 
@@ -136,10 +149,12 @@ country_event = {
 			leave_faction = yes
 			set_cosmetic_tag = LEM
 		}
+		leave_faction = yes
 		set_politics = {
 			ruling_party = BR_supremacist
 			elections_allowed = no
 		}
+		add_country_leader_trait = knight_one
     }     
 }
 
@@ -180,6 +195,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}   
+		add_ideas = ORG_orange_cybernetics
     }     
 }
 
@@ -196,6 +212,8 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}   
+		load_oob = "ORG_or1_squadron"
+		add_ideas = ORG_the_or1
     }     
 }
 
